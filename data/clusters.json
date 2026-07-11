@@ -2,51 +2,59 @@
   "clusters": [
     {
       "cluster_id": "cluster-1",
-      "topic_title": "2026 신한 SOL KBO 올스타전 및 허인서 MVP 수상",
+      "topic_title": "토다 나츠키의 휴가 소식",
       "article_indexes": [
-        2,
-        6
+        1
       ]
     },
     {
       "cluster_id": "cluster-2",
-      "topic_title": "중국 AI 기업의 무료 서비스 확산 전략",
+      "topic_title": "박유천의 일본 방문 근황 공개",
+      "article_indexes": [
+        2
+      ]
+    },
+    {
+      "cluster_id": "cluster-3",
+      "topic_title": "신한투자증권 온라인 전용 펀드 '신한 라이트' 출시",
       "article_indexes": [
         3
       ]
     },
     {
-      "cluster_id": "cluster-3",
-      "topic_title": "잠실야구장 이색 퍼포먼스",
+      "cluster_id": "cluster-4",
+      "topic_title": "이란 핵협상 휴전 파탄과 호르무즈 봉쇄",
       "article_indexes": [
-        4
+        4,
+        6
       ]
     },
     {
-      "cluster_id": "cluster-4",
-      "topic_title": "가수 혜은이의 어려운 성장기 고백",
+      "cluster_id": "cluster-5",
+      "topic_title": "6·25 전쟁 미군 띤 소장의 포로 생활과 한국인 영웅으로서의 평가",
       "article_indexes": [
         5
       ]
     },
     {
-      "cluster_id": "cluster-5",
-      "topic_title": "스페인 남부 역대 최악 산불 발생",
+      "cluster_id": "cluster-6",
+      "topic_title": "한국인 연애·적성 판단 무속인 의존 현상",
+      "article_indexes": [
+        7
+      ]
+    },
+    {
+      "cluster_id": "cluster-7",
+      "topic_title": "일요일 전국 폭염특보와 찜통더위 전망",
       "article_indexes": [
         8
       ]
     },
     {
-      "cluster_id": "cluster-6",
-      "topic_title": "경산 지역 폭염 기록",
+      "cluster_id": "cluster-8",
+      "topic_title": "허인서의 올스타전 MVP 수상 및 홈런 더비 만회",
       "article_indexes": [
-        9
-      ]
-    },
-    {
-      "cluster_id": "cluster-7",
-      "topic_title": "이 대통령의 몽골 방문 및 조랑말 선물",
-      "article_indexes": [
+        9,
         10
       ]
     }
