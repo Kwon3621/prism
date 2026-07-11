@@ -124,7 +124,46 @@ function renderSaved() {
   }
   root.innerHTML = saved.map(issueCardMarkup).join('');
 }
+async function renderLiveNews() {
+  const root = document.querySelector('[data-live-news]');
+  if (!root) return;
 
+  try {
+    const response = await fetch('./data/news.json');
+
+    if (!response.ok) {
+      throw new Error(`HTTP 오류: ${response.status}`);
+    }
+
+    const newsItems = await response.json();
+
+    root.innerHTML = newsItems.map(item => `
+      <article class="card">
+        <span class="eyebrow">${item.publisher}</span>
+        <h3>${item.title}</h3>
+        <div class="card-footer">
+          <small>RSS 수집 기사</small>
+          <a
+            class="btn btn-secondary"
+            href="${item.link}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            원문 보기
+          </a>
+        </div>
+      </article>
+    `).join('');
+  } catch (error) {
+    console.error(error);
+    root.innerHTML = `
+      <div class="empty-state">
+        <h3>뉴스를 불러오지 못했습니다.</h3>
+        <p>잠시 후 다시 확인해 주세요.</p>
+      </div>
+    `;
+  }
+}
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
@@ -132,4 +171,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initShare();
   renderSearchResults();
   renderSaved();
+  renderLiveNews();
 });
