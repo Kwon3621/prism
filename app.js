@@ -261,6 +261,33 @@ async function renderIssuePage() {
       '잠시 후 다시 확인해 주세요.';
   }
 }
+async function renderFeaturedIssue() {
+  const card = document.querySelector('[data-featured-issue]');
+  if (!card) return;
+
+  try {
+    const response = await fetch('./data/issue.json');
+
+    if (!response.ok) {
+      throw new Error(`HTTP 오류: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    const title = card.querySelector('[data-featured-title]');
+    const summary = card.querySelector('[data-featured-summary]');
+
+    if (title) {
+      title.textContent = data.title || '자동 비교 이슈';
+    }
+
+    if (summary) {
+      summary.textContent = data.summary || '';
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
@@ -270,4 +297,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSaved();
   renderLiveNews();
   renderIssuePage();
+  renderFeaturedIssue();
 });
