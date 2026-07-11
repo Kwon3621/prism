@@ -1,0 +1,56 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "cluster-0",
+      "topic_title": "2026 신한 SOL KBO 올스타전 잠실야구장 개최 및 이색 퍼포먼스",
+      "article_indexes": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "cluster_id": "cluster-1",
+      "topic_title": "tvN '도깨비' 10주년 기념 방송 및 공유 비주얼 언급",
+      "article_indexes": [
+        3
+      ]
+    },
+    {
+      "cluster_id": "cluster-2",
+      "topic_title": "이 대통령 몽골 방문 및 귀국",
+      "article_indexes": [
+        5,
+        9
+      ]
+    },
+    {
+      "cluster_id": "cluster-3",
+      "topic_title": "이란 하메네이 복수 발언",
+      "article_indexes": [
+        6
+      ]
+    },
+    {
+      "cluster_id": "cluster-4",
+      "topic_title": "스페인 남부 역대 최악 산불 발생",
+      "article_indexes": [
+        7
+      ]
+    },
+    {
+      "cluster_id": "cluster-5",
+      "topic_title": "경산 폭염 40도 기록 및 찜통 더위 전망",
+      "article_indexes": [
+        8
+      ]
+    },
+    {
+      "cluster_id": "cluster-6",
+      "topic_title": "이케아 육아휴직 불이익 의혹 및 누리꾼 비판",
+      "article_indexes": [
+        10
+      ]
+    }
+  ]
+}

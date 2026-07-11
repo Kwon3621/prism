@@ -1,0 +1,45 @@
+{
+  "issue_id": "cluster-2",
+  "category": "정치",
+  "title": "이 대통령 몽골 방문 및 귀국",
+  "summary": "이 대통령은 활 시위를 당긴 상태로 몽골 방문 일정을 마치고 귀국 길에 올랐으며, 마지막 날 게르 오찬에서 조랑말을 선물받았다.",
+  "common_facts": [
+    "이 대통령이 몽골 방문 일정을 마치고 귀국 길에 올랐다",
+    "방문 마지막 날 현지에서 오찬 행사가 있었다"
+  ],
+  "articles": [
+    {
+      "publisher": "조선일보",
+      "title": "활 시위 당긴 李대통령... 몽골 방문 마치고 귀국길",
+      "link": "https://www.chosun.com/politics/politics_general/2026/07/11/BPCE4VDEIBDO5NRIPX2ZX5RBI4/",
+      "keywords": [
+        "활 시위",
+        "몽골 방문",
+        "귀국길",
+        "양국 협력 강화"
+      ],
+      "people": [
+        "이 대통령"
+      ],
+      "focus": "방문 종료 및 귀국",
+      "expression_summary": "활 시위를 당긴 상태로 일정을 마치고 귀국 길에 올랐다. 양국 간 협력 강화를 위한 방문으로 묘사",
+      "evidence_limit": "활 시위를 당긴 상태의 구체적 의미 및 양국 협력 강화의 상세 내용은 확인할 수 없음"
+    },
+    {
+      "publisher": "한겨레",
+      "title": "이 대통령, 몽골 방문 마지막 날 게르 오찬…조랑말 선물 받아",
+      "link": "https://www.hani.co.kr/arti/politics/bluehouse/1267802.html",
+      "keywords": [
+        "게르 오찬",
+        "조랑말 선물",
+        "마지막 날"
+      ],
+      "people": [
+        "이 대통령"
+      ],
+      "focus": "현지 전통 게르에서의 오찬 행사와 조랑말 선물 수령",
+      "expression_summary": "몽골 방문 마지막 날 게르에서 오찬을 갖고 조랑말을 직접 선물받았다. 현지 전통 게르에서 진행된 행사임을 강조",
+      "evidence_limit": "오찬의 구체적 내용 및 조랑말 선물의 상세 의미, 방문 목적 등은 확인할 수 없음"
+    }
+  ]
+}

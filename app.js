@@ -165,6 +165,102 @@ async function renderLiveNews() {
     `;
   }
 }
+async function renderIssuePage() {
+  const page = document.querySelector('[data-issue-page]');
+  if (!page) return;
+
+  try {
+    const response = await fetch('./data/issue.json');
+
+    if (!response.ok) {
+      throw new Error(`HTTP 오류: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    document.querySelector('[data-issue-category]').textContent =
+      data.category || '자동 분석';
+
+    document.querySelector('[data-issue-title]').textContent =
+      data.title || '이슈 제목 없음';
+
+    document.querySelector('[data-issue-summary]').textContent =
+      data.summary || '';
+
+    const commonFacts = document.querySelector('[data-common-facts]');
+    commonFacts.innerHTML = `
+      <strong>공통으로 확인된 사실</strong><br>
+      ${(data.common_facts || []).join('<br>')}
+    `;
+
+    const articlesRoot = document.querySelector('[data-issue-articles]');
+
+    articlesRoot.innerHTML = (data.articles || []).map(article => `
+      <article class="card media-card">
+        <div class="media-name">
+          <strong>${article.publisher}</strong>
+        </div>
+
+        <div class="compare-block">
+          <span class="compare-label">핵심 키워드</span>
+          <div class="meta">
+            ${(article.keywords || []).map(keyword =>
+              `<span class="badge blue">${keyword}</span>`
+            ).join('')}
+          </div>
+        </div>
+
+        <div class="compare-block">
+          <span class="compare-label">주요 인물 및 기관</span>
+          <div class="meta">
+            ${(article.people || []).map(person =>
+              `<span class="badge purple">${person}</span>`
+            ).join('')}
+          </div>
+        </div>
+
+        <div class="compare-block">
+          <span class="compare-label">강조된 내용</span>
+          <p class="compare-text">${article.focus || '명확한 차이를 확인하기 어려움'}</p>
+        </div>
+
+        <div class="compare-block">
+          <span class="compare-label">표현 요약</span>
+          <p class="compare-text">${article.expression_summary || ''}</p>
+        </div>
+
+        <div class="compare-block">
+          <span class="compare-label">분석 한계</span>
+          <p class="compare-text">${article.evidence_limit || ''}</p>
+        </div>
+      </article>
+    `).join('');
+
+    const sourcesRoot = document.querySelector('[data-issue-sources]');
+
+    sourcesRoot.innerHTML = (data.articles || []).map(article => `
+      <div class="source-item">
+        <strong>${article.publisher}</strong>
+        <a
+          href="${article.link}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${article.title}
+        </a>
+      </div>
+    `).join('');
+
+  } catch (error) {
+    console.error(error);
+
+    document.querySelector('[data-issue-title]').textContent =
+      '비교 결과를 불러오지 못했습니다.';
+
+    document.querySelector('[data-common-facts]').textContent =
+      '잠시 후 다시 확인해 주세요.';
+  }
+}
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
@@ -173,4 +269,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSearchResults();
   renderSaved();
   renderLiveNews();
+  renderIssuePage();
 });
