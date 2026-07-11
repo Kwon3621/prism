@@ -141,7 +141,8 @@ async function renderLiveNews() {
       <article class="card">
         <span class="eyebrow">${item.publisher}</span>
         <h3>${item.title}</h3>
-        <div class="card-footer">
+        <p>${item.description}</p>
+	<div class="card-footer">
           <small>RSS 수집 기사</small>
           <a
             class="btn btn-secondary"

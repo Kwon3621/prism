@@ -11,11 +11,13 @@ feed = feedparser.parse(RSS_URL)
 news_items = []
 
 for entry in feed.entries[:5]:
-    news_items.append(
+       news_items.append(
         {
             "publisher": "조선일보",
             "title": entry.get("title", "제목 없음"),
             "link": entry.get("link", "링크 없음"),
+            "published": entry.get("published", "발행 시각 없음"),
+            "description": entry.get("summary", "설명 없음"),
         }
     )
 
