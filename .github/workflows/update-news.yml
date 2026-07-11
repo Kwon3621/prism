@@ -24,15 +24,18 @@ jobs:
       - name: 패키지 설치
         run: pip install -r scripts/requirements.txt
 
-      - name: RSS 수집 및 Solar 요약
+      - name: RSS 수집 및 Solar 분석
         env:
           UPSTAGE_API_KEY: ${{ secrets.UPSTAGE_API_KEY }}
-        run: python scripts/generate_news.py
+        run: |
+          python scripts/generate_news.py
+          python scripts/cluster_news.py
+          python scripts/compare_cluster.py
 
       - name: 변경된 뉴스 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news.json
+          git add data/news.json data/clusters.json data/issue.json
           git diff --cached --quiet || git commit -m "auto update RSS news"
           git push
