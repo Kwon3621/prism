@@ -7,9 +7,18 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 
-RSS_URL = "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml"
-PUBLISHER = "조선일보"
-ARTICLE_LIMIT = 5
+RSS_FEEDS = [
+    {
+        "publisher": "조선일보",
+        "url": "https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+    },
+    {
+        "publisher": "한겨레",
+        "url": "https://www.hani.co.kr/rss/",
+    },
+]
+
+ARTICLE_LIMIT_PER_PUBLISHER = 5
 
 
 load_dotenv()
@@ -52,32 +61,34 @@ def summarize_article(title, description):
     return response.choices[0].message.content.strip()
 
 
-feed = feedparser.parse(RSS_URL)
-
 news_items = []
 
-for entry in feed.entries[:ARTICLE_LIMIT]:
-    title = entry.get("title", "제목 없음")
-    description = entry.get("summary", "설명 없음")
+for feed_info in RSS_FEEDS:
+    publisher = feed_info["publisher"]
+    feed = feedparser.parse(feed_info["url"])
 
-    print(f"요약 중: {title}")
+    for entry in feed.entries[:ARTICLE_LIMIT_PER_PUBLISHER]:
+        title = entry.get("title", "제목 없음")
+        description = entry.get("summary", "설명 없음")
 
-    try:
-        summary = summarize_article(title, description)
-    except Exception as error:
-        print(f"요약 실패: {error}")
-        summary = "요약을 생성하지 못했습니다."
+        print(f"요약 중: {title}")
 
-    news_items.append(
-        {
-            "publisher": PUBLISHER,
-            "title": title,
-            "link": entry.get("link", "링크 없음"),
-            "published": entry.get("published", "발행 시각 없음"),
-            "description": description,
-            "summary": summary,
-        }
-    )
+        try:
+            summary = summarize_article(title, description)
+        except Exception as error:
+            print(f"요약 실패: {error}")
+            summary = "요약을 생성하지 못했습니다."
+
+        news_items.append(
+            {
+                "publisher": publisher,
+                "title": title,
+                "link": entry.get("link", "링크 없음"),
+                "published": entry.get("published", "발행 시각 없음"),
+                "description": description,
+                "summary": summary,
+            }
+        )
 
 output_path = Path("data/news.json")
 output_path.parent.mkdir(exist_ok=True)
