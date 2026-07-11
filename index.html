@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="같은 사건을 다룬 여러 언론사의 보도 방식을 비교하는 Prism" />
+  <title>Prism | 뉴스 프레임 비교</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
+    <nav class="nav" data-nav aria-label="주요 메뉴">
+      <a href="#topics">이슈 둘러보기</a><a href="methodology.html">분석 방식</a><a href="saved.html">저장한 이슈</a>
+    </nav>
+    <div class="header-actions"><a class="btn btn-secondary" href="#">로그인</a><button class="menu-toggle" data-menu-toggle aria-label="메뉴 열기" aria-expanded="false">☰</button></div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">See every side</span>
+      <h1>같은 사건, 서로 다른 보도 방식을 한눈에 비교하세요.</h1>
+      <p>여러 언론사의 기사를 모아 공통 사실과 핵심 키워드, 인용 대상, 강조 맥락의 차이를 보여드립니다.</p>
+      <form class="search-panel" data-search-form>
+        <div class="search-row"><input class="search-input" aria-label="이슈 검색어 입력" placeholder="비교하고 싶은 이슈나 키워드를 검색하세요" /><button class="btn btn-primary" type="submit">이슈 검색</button></div>
+        <div class="search-help">예: 축구협회 청문회, 손흥민 참고인, 임오경</div>
+      </form>
+      <div class="hero-actions" style="margin-top:16px"><a class="btn btn-secondary" href="issue.html">비교 예시 보기</a></div>
+    </div>
+    <div class="hero-preview" aria-label="Prism 비교 화면 미리보기">
+      <div class="preview-top"><strong>프레임 비교 미리보기</strong><span class="preview-chip">AI 분석</span></div>
+      <div class="preview-item"><strong>핵심 키워드</strong><div class="preview-bars"><div class="preview-bar keyword"><span></span></div></div></div>
+      <div class="preview-item"><strong>주요 인물·인용 대상</strong><div class="preview-bars"><div class="preview-bar person"><span></span></div></div></div>
+      <div class="preview-item"><strong>강조된 쟁점</strong><div class="preview-bars"><div class="preview-bar context"><span></span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="topics" class="section">
+  <div class="container">
+    <span class="eyebrow">Featured issue</span><h2 class="section-title">이슈 비교 예시</h2><p class="section-desc">Prism이 하나의 사건을 어떻게 비교하는지 확인해 보세요.</p>
+    <div class="grid-2">
+      <article class="card">
+        <span class="eyebrow">스포츠 · 정치</span>
+        <h3>축구협회 청문회 참고인 선정 논란</h3>
+        <p>임오경 의원이 손흥민·황희찬 선수를 참고인으로 신청한 뒤 철회한 사건을 다룬 기사들을 비교합니다.</p>
+        <div class="meta"><span class="badge blue">참고인 선정</span><span class="badge blue">청문회 적절성</span><span class="badge orange">정치적 비판</span><span class="badge teal">선수 일정</span></div>
+        <div class="card-footer"><small>연합뉴스 · SBS 뉴스 · 세계일보</small><a class="btn btn-primary" href="issue.html">프레임 비교 보기</a></div>
+      </article>
+      <article class="card">
+        <span class="eyebrow">Prism 안내</span>
+        <h3>기사의 차이를 평가가 아닌 근거로 보여드립니다</h3>
+        <p>특정 언론사가 옳거나 편향되었다고 판단하지 않고, 기사에 실제로 나타난 단어·인용 대상·강조 맥락을 기준으로 비교합니다.</p>
+        <div class="card-footer"><small>분석 기준 확인</small><a class="btn btn-secondary" href="methodology.html">분석 방식 보기</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <span class="eyebrow">Comparison preview</span><h2 class="section-title">같은 사건도 이렇게 다르게 보도됩니다</h2><p class="section-desc">기사의 핵심 표현과 인용 대상, 강조된 쟁점을 기준으로 차이를 비교합니다.</p>
+    <div class="common-fact"><strong>공통으로 확인된 내용</strong><br>임오경 의원이 손흥민·황희찬 선수를 축구협회 관련 청문회의 참고인으로 신청한 뒤 철회한 사건입니다.</div>
+    <div class="grid-3">
+      <article class="card media-card"><div class="media-name"><strong>연합뉴스</strong><span class="badge gray">절차·적절성</span></div><div class="meta"><span class="badge blue">임오경</span><span class="badge blue">경기 일정</span><span class="badge purple">정몽규</span><span class="badge purple">홍명보</span></div><div class="compare-block"><span class="compare-label">강조된 쟁점</span><p class="compare-text">청문회 목적과 참고인 선정의 적절성을 주요 맥락으로 다룹니다.</p></div></article>
+      <article class="card media-card"><div class="media-name"><strong>SBS 뉴스</strong><span class="badge orange">정치적 비판</span></div><div class="meta"><span class="badge blue">정치적 쇼</span><span class="badge purple">진종오</span><span class="badge purple">천하람</span></div><div class="compare-block"><span class="compare-label">강조된 쟁점</span><p class="compare-text">현역 선수 출석 요구를 둘러싼 정치적 비판을 주요 맥락으로 다룹니다.</p></div></article>
+      <article class="card media-card"><div class="media-name"><strong>세계일보</strong><span class="badge teal">사과·선수 의견</span></div><div class="meta"><span class="badge blue">사과</span><span class="badge blue">신청 철회</span><span class="badge purple">임오경</span></div><div class="compare-block"><span class="compare-label">강조된 쟁점</span><p class="compare-text">참고인 신청 철회와 사과, 선수 의견을 반영해야 한다는 내용을 함께 다룹니다.</p></div></article>
+    </div>
+    <div style="margin-top:28px;text-align:center"><a class="btn btn-primary" href="issue.html">전체 비교 결과 보기</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">How it works</span><h2 class="section-title">Prism은 어떻게 비교하나요?</h2><p class="section-desc">기사의 사실과 표현을 기준으로 공통점과 차이점을 단계별로 정리합니다.</p>
+    <div class="grid-4 steps"><article class="card step-card"><h3>기사 수집</h3><p>동일한 사건을 다룬 여러 언론사의 기사를 수집합니다.</p></article><article class="card step-card"><h3>동일 사건 분류</h3><p>같은 사건을 다룬 기사들을 하나의 이슈로 묶습니다.</p></article><article class="card step-card"><h3>핵심 정보 추출</h3><p>핵심 키워드, 주요 인물, 인용 대상과 강조된 쟁점을 추출합니다.</p></article><article class="card step-card"><h3>매체별 차이 비교</h3><p>매체별로 어떤 내용을 더 강조했는지 나란히 보여드립니다.</p></article></div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <span class="eyebrow">Features</span><h2 class="section-title">Prism이 비교하는 요소</h2>
+    <div class="grid-3"><article class="card"><h3>핵심 키워드</h3><p>기사 제목과 본문에서 반복되거나 주요 위치에 등장한 단어를 비교합니다.</p></article><article class="card"><h3>주요 인물 및 기관</h3><p>기사에서 언급되거나 직접·간접 인용된 인물과 기관을 정리합니다.</p></article><article class="card"><h3>주요 발언</h3><p>누가 어떤 입장이나 주장을 제시했는지 요약합니다.</p></article><article class="card"><h3>강조된 쟁점</h3><p>제목, 리드문과 반복 표현에서 상대적으로 강조된 내용을 비교합니다.</p></article><article class="card"><h3>추가 맥락</h3><p>특정 기사에만 포함된 일정, 절차, 사과와 배경 정보를 보여드립니다.</p></article><article class="card"><h3>표현 차이</h3><p>같은 사건을 설명하기 위해 각 기사에서 사용한 핵심 표현의 차이를 보여드립니다.</p></article></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container"><span class="eyebrow">Principles</span><h2 class="section-title">Prism의 분석 원칙</h2><div class="principle-list"><div class="principle"><div class="principle-icon">1</div><div><strong>기사에 근거합니다</strong><p>기사에 실제로 나타난 단어, 인용 대상과 강조 맥락을 바탕으로 분석합니다.</p></div></div><div class="principle"><div class="principle-icon">2</div><div><strong>옳고 그름을 판단하지 않습니다</strong><p>특정 언론사가 옳거나 편향되었다고 단정하지 않습니다.</p></div></div><div class="principle"><div class="principle-icon">3</div><div><strong>기사에 없는 의도를 추정하지 않습니다</strong><p>기자나 언론사의 정치적 의도와 성향을 임의로 해석하지 않습니다.</p></div></div><div class="principle"><div class="principle-icon">4</div><div><strong>원문을 함께 제공합니다</strong><p>사용자가 직접 확인할 수 있도록 기사 제목과 원문 링크를 제공합니다.</p></div></div></div><div class="notice">이 분석은 기사 표현을 바탕으로 AI가 정리한 결과입니다. 명확한 차이가 확인되지 않는 경우에는 차이가 없다고 표시합니다.</div></div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Prism</div><p class="footer-desc">같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.</p></div><div class="footer-links"><a href="index.html">서비스 소개</a><a href="methodology.html">분석 방식</a><a href="#">이용 안내</a><a href="#">개인정보처리방침</a><a href="#">문의</a></div></div><div class="footer-bottom">© 2026 Prism. All rights reserved.</div></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
