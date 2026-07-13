@@ -3,44 +3,18 @@
   "clusters": [
     {
       "cluster_id": "cluster-1",
-      "topic_title": "軍 “동해서 해군 함정 승조원 1명 실종…수색 중”",
+      "topic_title": "정청래 “당대표직 이용해 대선 출마 생각 없어”...대표 재출마",
       "article_indexes": [
-        7,
-        22
-      ]
-    },
-    {
-      "cluster_id": "cluster-2",
-      "topic_title": "안철수 “한동훈 복당 반대…국민의힘에 얼씬도 하지 말라”",
-      "article_indexes": [
-        12,
-        24
-      ]
-    },
-    {
-      "cluster_id": "cluster-3",
-      "topic_title": "“리센느 야호!” 외친 조국 “리센느 일베라 한 적 없어”",
-      "article_indexes": [
-        14,
-        21
+        5,
+        30
       ]
     }
   ],
   "matched_pairs": [
     {
-      "first_index": 7,
-      "second_index": 22,
-      "similarity": 0.466
-    },
-    {
-      "first_index": 12,
-      "second_index": 24,
-      "similarity": 0.374
-    },
-    {
-      "first_index": 14,
-      "second_index": 21,
-      "similarity": 0.431
+      "first_index": 5,
+      "second_index": 30,
+      "similarity": 0.516
     }
   ]
 }

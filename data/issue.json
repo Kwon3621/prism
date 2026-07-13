@@ -2,150 +2,47 @@
   "issues": [
     {
       "issue_id": "cluster-1",
-      "category": "국방/해군 사고",
-      "title": "동해에서 해군 함정 승조원 1명 실종 소식",
-      "summary": "조선일보는 동해에서 해군 함정 승조원 1명이 실종되어 수색 중이라고 보도했으며, 한겨레는 실종자가 동해 거진 50㎞ 해상에서 발생했다고 보도했다. 구체적인 실종 경위와 추가 정보는 제공되지 않았다.",
-      "common_facts": [
-        "동해에서 해군 함정 승조원 1명이 실종됨",
-        "실종자에 대한 수색이 진행 중임",
-        "두 언론사 모두 군사/국방 관련 기사임"
-      ],
-      "articles": [
-        {
-          "publisher": "조선일보",
-          "title": "軍 “동해서 해군 함정 승조원 1명 실종…수색 중”",
-          "link": "https://www.chosun.com/politics/diplomacy-defense/2026/07/12/AISOEBLSQRFTBL4QNFL6LEIXTY/",
-          "keywords": [
-            "해군 함정",
-            "승조원 실종",
-            "수색",
-            "동해"
-          ],
-          "people": [
-            "군"
-          ],
-          "focus": "실종 발생 및 수색 진행",
-          "expression_summary": "군이 실종 사실을 확인하고 수색 중인 상황을 직접 전달",
-          "evidence_limit": "실종 경위에 대한 구체적 정보 부재"
-        },
-        {
-          "publisher": "한겨레",
-          "title": "해군 함정 승조원 1명 실종…동해 거진 50㎞ 해상",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1267843.html",
-          "keywords": [
-            "해군 함정",
-            "승조원 실종",
-            "동해",
-            "거진 50㎞"
-          ],
-          "people": [
-            "해군"
-          ],
-          "focus": "실종 발생 위치(동해 거진 50㎞ 해상)",
-          "expression_summary": "실종자가 동해 거진 50㎞ 해상에서 발생했음을 명시하며 사고 위치 강조",
-          "evidence_limit": "실종 경위에 대한 구체적 정보 부재"
-        }
-      ]
-    },
-    {
-      "issue_id": "cluster-2",
       "category": "정치",
-      "title": "안철수, 한동훈 복당 반대 및 국민의힘 관련 입장 표명",
-      "summary": "안철수 의원이 기자회견을 열고 한동훈 전 법무부장관의 국민의힘 복당을 반대하며 국민의힘에 접근하지 말라고 발언했다.",
+      "title": "정청래 당대표 출마 선언",
+      "summary": "정청래 의원이 차기 당대표 선거에 출마하겠다는 입장을 밝혔다.",
       "common_facts": [
-        "안철수 의원의 기자회견 개최",
-        "한동훈 전 법무부장관의 국민의힘 복당 반대 언급",
-        "국민의힘에 대한 접근 금지 요청"
+        "정청래 의원이 당대표 선거에 출마할 의사를 표현했다.",
+        "정청래 의원은 당대표직을 이용해 대선 출마를 고려하지 않는다고 밝혔다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
-          "title": "안철수 “한동훈 복당 반대…국민의힘에 얼씬도 하지 말라”",
-          "link": "https://www.chosun.com/politics/assembly/2026/07/12/G27OCPDCVRB3HBMDRKDDPVFAK4/",
+          "title": "정청래 “당대표직 이용해 대선 출마 생각 없어”...대표 재출마",
+          "link": "https://www.chosun.com/politics/assembly/2026/07/13/XHQO3HSXCFETTIL2ZH66456AQ4/",
           "keywords": [
-            "안철수",
-            "한동훈",
-            "복당",
-            "반대",
-            "국민의힘",
-            "회견"
+            "정청래",
+            "당대표직",
+            "대선 출마",
+            "대표 재출마"
           ],
           "people": [
-            "안철수",
-            "한동훈"
+            "정청래"
           ],
-          "focus": "한동훈의 국민의힘 복당 반대 및 국민의힘에 대한 접근 금지",
-          "expression_summary": "강한 어조로 한동훈의 복당을 반대하며 국민의힘에 접근하지 말 것을 경고",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
+          "focus": "당대표직에 집중해 재출마 의사를 강조",
+          "expression_summary": "인용구를 사용해 당대표직 전념 의지를 명확히 표현",
+          "evidence_limit": "정청래 의원의 구체적인 출마 전략 또는 향후 계획"
         },
         {
           "publisher": "한겨레",
-          "title": "회견까지 연 안철수 “한동훈 복당 반대, 얼씬 말라…창당한다면 응원”",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1267823.html",
+          "title": "정청래 당권 도전 선언…“당대표직 이용해 대선 출마 생각 없다”",
+          "link": "https://www.hani.co.kr/arti/politics/politics_general/1267982.html",
           "keywords": [
-            "안철수",
-            "한동훈",
-            "복당",
-            "반대",
-            "국민의힘",
-            "창당",
-            "응원"
+            "정청래",
+            "당권 도전",
+            "당대표직",
+            "대선 출마"
           ],
           "people": [
-            "안철수",
-            "한동훈"
+            "정청래"
           ],
-          "focus": "한동훈의 복당 반대와 국민의힘 접근 금지, 더불어 창당 시 응원 언급",
-          "expression_summary": "복당 반대와 함께 국민의힘 접근 금지를 언급하되 창당 시 응원 가능성을 열어둠",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
-        }
-      ]
-    },
-    {
-      "issue_id": "cluster-3",
-      "category": "정치",
-      "title": "조국, ‘리센느 야호!’ 발언에 대한 입장 표명",
-      "summary": "조국 전 장관이 리센느를 향해 ‘노’ 발언을 했던 것이 아니라 ‘리센느 야호!’라고 외쳤다고 해명하며 특정 의도를 가지고 리센느를 겨냥하지 않았다고 밝혔다.",
-      "common_facts": [
-        "조국 전 장관이 리센느에 대해 ‘야호!’라고 외쳤다는 진술",
-        "리센느를 겨냥한 적 없다는 해명",
-        "리센느를 일베라 한 적 없다는 해명"
-      ],
-      "articles": [
-        {
-          "publisher": "조선일보",
-          "title": "조국 “‘노’ 사용 리센느 겨냥한 적 없어… 리센느 야호!”",
-          "link": "https://www.chosun.com/politics/assembly/2026/07/12/W4UUCL54GJGGNOUR3FFDMFPJRA/",
-          "keywords": [
-            "조국",
-            "리센느",
-            "야호",
-            "노",
-            "표적"
-          ],
-          "people": [
-            "조국"
-          ],
-          "focus": "조국 전 장관이 리센느를 겨냥한 ‘노’ 발언 부정과 ‘리센느 야호!’ 주장",
-          "expression_summary": "“‘노’ 사용 리센느 겨냥한 적 없어… 리센느 야호!”",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
-        },
-        {
-          "publisher": "한겨레",
-          "title": "“리센느 야호!” 외친 조국 “리센느 일베라 한 적 없어”",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1267851.html",
-          "keywords": [
-            "조국",
-            "리센느",
-            "야호",
-            "일베"
-          ],
-          "people": [
-            "조국"
-          ],
-          "focus": "조국 전 장관의 ‘리센느 야호!’ 발언 및 리센느를 일베라 부른 것에 대한 부인",
-          "expression_summary": "“리센느 야호!” 외친 조국 “리센느 일베라 한 적 없어”",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
+          "focus": "당권 도전에 초점을 맞추고 대선 불출마 의사를 설명",
+          "expression_summary": "선언 형식을 사용해 당권 도전 의사를 공식적으로 표명",
+          "evidence_limit": "정청래 의원의 과거 정치 활동 이력이나 당내 구체적 지지 기반 정보에 대한 내용 부재"
         }
       ]
     }
