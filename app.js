@@ -83,25 +83,102 @@ function initShare() {
   });
 }
 
-function renderSearchResults() {
-  const root = document.querySelector('[data-search-results]');
+async function renderSearchResults() {
+  const root = document.querySelector("[data-search-results]");
   if (!root) return;
-  const params = new URLSearchParams(window.location.search);
-  const q = (params.get('q') || '').trim();
-  const title = document.querySelector('[data-search-title]');
-  if (title) title.textContent = q ? `“${q}” 검색 결과` : '검색 결과';
 
-  const haystack = `${issue.title} ${issue.summary} ${issue.tags.join(' ')}`;
-  const matched = q && haystack.includes(q);
+  const params = new URLSearchParams(window.location.search);
+  const q = (params.get("q") || "").trim();
+
+  const title = document.querySelector("[data-search-title]");
+  if (title) {
+    title.textContent = q ? `“${q}” 검색 결과` : "검색 결과";
+  }
+
   if (!q) {
-    root.innerHTML = `<div class="empty-state"><h3>검색어를 입력해 주세요.</h3><p>비교하고 싶은 이슈나 키워드를 입력하면 관련 이슈를 보여드립니다.</p></div>`;
+    root.innerHTML = `
+      <div class="empty-state">
+        <h3>검색어를 입력해 주세요.</h3>
+        <p>비교하고 싶은 이슈나 키워드를 입력하면 관련 이슈를 보여드립니다.</p>
+      </div>
+    `;
     return;
   }
-  if (!matched && !['축구','청문회','임오경','손흥민','황희찬','참고인','정치'].some(k => q.includes(k))) {
-    root.innerHTML = `<div class="empty-state"><h3>검색 결과가 없습니다.</h3><p>다른 키워드로 시도해 보세요.</p><a class="btn btn-secondary" href="index.html">메인으로 돌아가기</a></div>`;
-    return;
+
+  try {
+    const response = await fetch("./data/issue.json");
+
+    if (!response.ok) {
+      throw new Error("issue.json을 불러오지 못했습니다.");
+    }
+
+    const data = await response.json();
+
+    const keyword = q.toLowerCase();
+
+    const results = (data.issues || []).filter(issue => {
+      const text = [
+        issue.title,
+        issue.category,
+        issue.summary,
+        ...(issue.common_facts || []),
+        ...(issue.articles || []).flatMap(article => [
+          article.title,
+          ...(article.keywords || []),
+          ...(article.people || [])
+        ])
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return text.includes(keyword);
+    });
+
+    if (!results.length) {
+      root.innerHTML = `
+        <div class="empty-state">
+          <h3>검색 결과가 없습니다.</h3>
+          <p>다른 키워드로 검색해 보세요.</p>
+          <a class="btn btn-secondary" href="index.html">
+            메인으로 돌아가기
+          </a>
+        </div>
+      `;
+      return;
+    }
+
+    root.innerHTML = results.map(issue => `
+      <article class="card">
+        <span class="eyebrow">${issue.category}</span>
+
+        <h3>${issue.title}</h3>
+
+        <p>${issue.summary}</p>
+
+        <div class="card-footer">
+          <small>
+            ${issue.articles.map(a => a.publisher).join(" · ")}
+          </small>
+
+          <a
+            class="btn btn-primary"
+            href="issue.html?id=${issue.issue_id}"
+          >
+            비교 보기
+          </a>
+        </div>
+      </article>
+    `).join("");
+
+  } catch (err) {
+    console.error(err);
+
+    root.innerHTML = `
+      <div class="empty-state">
+        <h3>검색 결과를 불러오지 못했습니다.</h3>
+      </div>
+    `;
   }
-  root.innerHTML = issueCardMarkup(issue);
 }
 
 function issueCardMarkup(data) {
@@ -125,11 +202,11 @@ function renderSaved() {
   root.innerHTML = saved.map(issueCardMarkup).join('');
 }
 async function renderLiveNews() {
-  const root = document.querySelector('[data-live-news]');
+  const root = document.querySelector("[data-live-news]");
   if (!root) return;
 
   try {
-    const response = await fetch('./data/news.json');
+    const response = await fetch("./data/news.json");
 
     if (!response.ok) {
       throw new Error(`HTTP 오류: ${response.status}`);
@@ -137,26 +214,61 @@ async function renderLiveNews() {
 
     const newsItems = await response.json();
 
-    root.innerHTML = newsItems.map(item => `
-      <article class="card">
-        <span class="eyebrow">${item.publisher}</span>
-        <h3>${item.title}</h3>
-        <p>${item.summary || item.description}</p>
-	<div class="card-footer">
-          <small>RSS 수집 기사</small>
-          <a
-            class="btn btn-secondary"
-            href="${item.link}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            원문 보기
-          </a>
-        </div>
-      </article>
-    `).join('');
+    let visibleCount = 4;
+
+    function render() {
+      const visibleNews = newsItems.slice(0, visibleCount);
+
+      root.innerHTML = visibleNews
+        .map(
+          (item) => `
+        <article class="card">
+          <span class="eyebrow">${item.publisher}</span>
+          <h3>${item.title}</h3>
+          <p>${item.summary || item.description || ""}</p>
+
+          <div class="card-footer">
+            <small>RSS 수집 기사</small>
+
+            <a
+              class="btn btn-secondary"
+              href="${item.link}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              원문 보기
+            </a>
+          </div>
+        </article>
+      `
+        )
+        .join("");
+
+      if (visibleCount < newsItems.length) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "load-more-wrap";
+        wrapper.style.gridColumn = "1 / -1";
+        wrapper.style.textAlign = "center";
+        wrapper.style.marginTop = "24px";
+
+        const button = document.createElement("button");
+        button.className = "btn btn-primary";
+        button.textContent = "더보기";
+
+        button.addEventListener("click", () => {
+          visibleCount += 4;
+          render();
+        });
+
+        wrapper.appendChild(button);
+        root.appendChild(wrapper);
+      }
+    }
+
+    render();
   } catch (error) {
     console.error(error);
+
     root.innerHTML = `
       <div class="empty-state">
         <h3>뉴스를 불러오지 못했습니다.</h3>
@@ -176,7 +288,20 @@ async function renderIssuePage() {
       throw new Error(`HTTP 오류: ${response.status}`);
     }
 
-    const data = await response.json();
+    const issueData = await response.json();
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedIssueId = params.get('id');
+
+    const data =
+      issueData.issues?.find(
+      item => item.issue_id === requestedIssueId
+      ) ||
+      issueData.issues?.[0];
+
+    if (!data) {
+      throw new Error('표시할 이슈가 없습니다.');
+    }
 
     document.querySelector('[data-issue-category]').textContent =
       data.category || '자동 분석';
@@ -261,39 +386,145 @@ async function renderIssuePage() {
       '잠시 후 다시 확인해 주세요.';
   }
 }
+
 async function renderFeaturedIssue() {
-  const card = document.querySelector('[data-featured-issue]');
-  if (!card) return;
+  const root = document.querySelector("[data-featured-issues]");
+  if (!root) return;
 
   try {
-    const response = await fetch('./data/issue.json');
+    const response = await fetch("./data/issue.json");
 
     if (!response.ok) {
-      throw new Error(`HTTP 오류: ${response.status}`);
+      throw new Error("issue.json을 불러오지 못했습니다.");
+    }
+
+    const issueData = await response.json();
+
+    const issues = issueData.issues || [];
+
+    if (!issues.length) {
+      root.innerHTML = `
+        <div class="empty-state">
+          <h3>비교 가능한 이슈가 없습니다.</h3>
+        </div>
+      `;
+      return;
+    }
+
+    root.innerHTML = issues.map(issue => `
+      <article class="card">
+
+        <span class="eyebrow">${issue.category}</span>
+
+        <h3>${issue.title}</h3>
+
+        <p>${issue.summary}</p>
+
+        <div class="meta">
+          <span class="badge blue">
+            ${issue.articles.length}개 기사 비교
+          </span>
+        </div>
+
+        <div class="card-footer">
+          <small>${issue.issue_id}</small>
+
+          <a
+            class="btn btn-primary"
+            href="issue.html?id=${issue.issue_id}"
+          >
+            프레임 비교 보기
+          </a>
+
+        </div>
+
+      </article>
+    `).join("");
+
+  } catch (error) {
+    console.error(error);
+
+    root.innerHTML = `
+      <div class="empty-state">
+        <h3>이슈를 불러오지 못했습니다.</h3>
+      </div>
+    `;
+  }
+}
+
+async function renderSearchSuggestions() {
+  const targets = document.querySelectorAll("[data-search-help]");
+  if (!targets.length) return;
+
+  try {
+    const response = await fetch("./data/issue.json");
+
+    if (!response.ok) {
+      throw new Error("issue.json을 불러오지 못했습니다.");
     }
 
     const data = await response.json();
 
-    const title = card.querySelector('[data-featured-title]');
-    const summary = card.querySelector('[data-featured-summary]');
+    const keywords = (data.issues || [])
+      .flatMap(issue =>
+        (issue.articles || []).flatMap(article => article.keywords || [])
+      )
+      .map(keyword => String(keyword).trim())
+      .filter(Boolean);
 
-    if (title) {
-      title.textContent = data.title || '자동 비교 이슈';
+    const uniqueKeywords = [...new Set(keywords)].slice(0, 5);
+
+    if (!uniqueKeywords.length) {
+      targets.forEach(target => {
+        target.textContent = "추천 검색어가 없습니다.";
+      });
+      return;
     }
 
-    if (summary) {
-      summary.textContent = data.summary || '';
-    }
+    targets.forEach(target => {
+      target.innerHTML = `
+        <span class="search-suggestion-label">추천 검색어</span>
+
+        <div class="search-suggestion-list">
+          ${uniqueKeywords.map(keyword => `
+            <button
+              type="button"
+              class="search-suggestion-chip"
+              data-search-keyword="${keyword}"
+            >
+              ${keyword}
+            </button>
+          `).join("")}
+        </div>
+      `;
+    });
+
+    document.querySelectorAll("[data-search-keyword]").forEach(button => {
+      button.addEventListener("click", () => {
+        const keyword = button.dataset.searchKeyword;
+        if (!keyword) return;
+
+        window.location.href =
+          `search.html?q=${encodeURIComponent(keyword)}`;
+      });
+    });
+
   } catch (error) {
     console.error(error);
+
+    targets.forEach(target => {
+      target.textContent = "추천 검색어를 불러오지 못했습니다.";
+    });
   }
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
   initSaveButtons();
   initShare();
   renderSearchResults();
+  renderSearchSuggestions();
   renderSaved();
   renderLiveNews();
   renderIssuePage();
