@@ -1,62 +1,46 @@
 {
+  "similarity_threshold": 0.28,
   "clusters": [
     {
       "cluster_id": "cluster-1",
-      "topic_title": "토다 나츠키의 휴가 소식",
+      "topic_title": "軍 “동해서 해군 함정 승조원 1명 실종…수색 중”",
       "article_indexes": [
-        1
+        7,
+        22
       ]
     },
     {
       "cluster_id": "cluster-2",
-      "topic_title": "박유천의 일본 방문 근황 공개",
+      "topic_title": "안철수 “한동훈 복당 반대…국민의힘에 얼씬도 하지 말라”",
       "article_indexes": [
-        2
+        12,
+        24
       ]
     },
     {
       "cluster_id": "cluster-3",
-      "topic_title": "신한투자증권 온라인 전용 펀드 '신한 라이트' 출시",
+      "topic_title": "“리센느 야호!” 외친 조국 “리센느 일베라 한 적 없어”",
       "article_indexes": [
-        3
+        14,
+        21
       ]
+    }
+  ],
+  "matched_pairs": [
+    {
+      "first_index": 7,
+      "second_index": 22,
+      "similarity": 0.466
     },
     {
-      "cluster_id": "cluster-4",
-      "topic_title": "이란 핵협상 휴전 파탄과 호르무즈 봉쇄",
-      "article_indexes": [
-        4,
-        6
-      ]
+      "first_index": 12,
+      "second_index": 24,
+      "similarity": 0.374
     },
     {
-      "cluster_id": "cluster-5",
-      "topic_title": "6·25 전쟁 미군 띤 소장의 포로 생활과 한국인 영웅으로서의 평가",
-      "article_indexes": [
-        5
-      ]
-    },
-    {
-      "cluster_id": "cluster-6",
-      "topic_title": "한국인 연애·적성 판단 무속인 의존 현상",
-      "article_indexes": [
-        7
-      ]
-    },
-    {
-      "cluster_id": "cluster-7",
-      "topic_title": "일요일 전국 폭염특보와 찜통더위 전망",
-      "article_indexes": [
-        8
-      ]
-    },
-    {
-      "cluster_id": "cluster-8",
-      "topic_title": "허인서의 올스타전 MVP 수상 및 홈런 더비 만회",
-      "article_indexes": [
-        9,
-        10
-      ]
+      "first_index": 14,
+      "second_index": 21,
+      "similarity": 0.431
     }
   ]
 }
