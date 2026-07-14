@@ -39,8 +39,8 @@ RSS_FEEDS = [
     },
 ]
 
-# 언론사별로 수집할 최대 기사 수
-ARTICLE_LIMIT_PER_PUBLISHER = 20
+# 언론사·카테고리(RSS)별로 수집할 최대 기사 수
+ARTICLE_LIMIT_PER_FEED = 20
 
 
 def clean_html_text(text):
@@ -60,36 +60,42 @@ def clean_html_text(text):
 def collect_articles():
     news_items = []
 
-    # 언론사별 수집 개수를 따로 관리
-    publisher_counts = {}
+    # 언론사·카테고리별 수집 개수를 관리
+    feed_counts = {}
 
     for feed_info in RSS_FEEDS:
         publisher = feed_info["publisher"]
         category = feed_info["category"]
         feed_url = feed_info["url"]
 
-        # 해당 언론사가 이미 20개를 채웠다면 다음 RSS로 넘어감
-        if publisher_counts.get(publisher, 0) >= ARTICLE_LIMIT_PER_PUBLISHER:
-            continue
+        # 예: ("조선일보", "정치")
+        feed_key = (publisher, category)
+        feed_counts[feed_key] = 0
 
         print(f"\n{publisher} - {category} RSS 수집 중...")
         feed = feedparser.parse(feed_url)
 
         if feed.bozo:
-            print(f"{publisher} {category} RSS 파싱 경고: {feed.bozo_exception}")
+            print(
+                f"{publisher} {category} RSS 파싱 경고: "
+                f"{feed.bozo_exception}"
+            )
 
         for entry in feed.entries:
-            # 언론사별 총 20개를 채우면 중단
-            if publisher_counts.get(publisher, 0) >= ARTICLE_LIMIT_PER_PUBLISHER:
+            # 해당 언론사·카테고리에서 20개를 채우면 중단
+            if feed_counts[feed_key] >= ARTICLE_LIMIT_PER_FEED:
                 break
 
             title = clean_html_text(entry.get("title", ""))
+
             description = clean_html_text(
                 entry.get("summary")
                 or entry.get("description")
                 or ""
             )
+
             link = entry.get("link", "")
+
             published = (
                 entry.get("published")
                 or entry.get("updated")
@@ -114,18 +120,18 @@ def collect_articles():
                 }
             )
 
-            publisher_counts[publisher] = (
-                publisher_counts.get(publisher, 0) + 1
-            )
+            feed_counts[feed_key] += 1
 
             print(
-                f"[{publisher_counts[publisher]}/"
-                f"{ARTICLE_LIMIT_PER_PUBLISHER}] "
+                f"[{feed_counts[feed_key]}/"
+                f"{ARTICLE_LIMIT_PER_FEED}] "
                 f"{title}"
             )
 
-    for publisher, count in publisher_counts.items():
-        print(f"{publisher}: 총 {count}개 수집 완료")
+    print("\n카테고리별 수집 결과")
+
+    for (publisher, category), count in feed_counts.items():
+        print(f"{publisher} - {category}: 총 {count}개 수집 완료")
 
     return news_items
 
