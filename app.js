@@ -226,15 +226,6 @@ async function renderSearchResults() {
   }
 }
 
-function issueCardMarkup(data) {
-  return `<article class="card">
-    <span class="eyebrow">${data.category}</span>
-    <h3>${data.title}</h3>
-    <p>${data.summary}</p>
-    <div class="meta">${data.tags.map(t => `<span class="badge blue">${t}</span>`).join('')}</div>
-    <div class="card-footer"><small>${data.mediaNames.join(' · ')}</small><a class="btn btn-primary" href="issue.html">프레임 비교 보기</a></div>
-  </article>`;
-}
 
 // 렌더링 타겟을 정확히 짚어 상태별(미로그인 / 데이터 없음 / 리스트 출력) 분기를 수행합니다.
 function renderSaved() {
