@@ -79,6 +79,15 @@ img { max-width: 100%; display: block; }
 .hero p { margin: 0 0 28px; font-size: 19px; color: var(--text-2); max-width: 720px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .search-panel { margin-top: 30px; padding: 16px; border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: var(--shadow); }
+.search-panel--trim {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.search-panel--trim .search-row {
+  width: 100%;
+  grid-template-columns: 1fr auto;
+}
 .search-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
 .search-input { width: 100%; height: 52px; border: 1px solid var(--border); border-radius: 11px; padding: 0 16px; outline: none; }
 .search-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(0, 102, 204, .11); }
