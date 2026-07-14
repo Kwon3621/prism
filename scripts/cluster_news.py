@@ -322,8 +322,8 @@ def main():
         )
 
     print(f"전체 기사 수: {len(news_items)}개")
-    print(f"유사 기사 쌍: {len(matched_pairs)}개")
-    print(f"비교 가능한 클러스터: {len(clusters)}개")
+    print(f"언론사 내부 유사 기사 쌍: {len(matched_pairs)}개")
+    print(f"언론사 내부 클러스터: {len(clusters)}개")
     print(f"결과 저장 위치: {OUTPUT_PATH}")
 
     for cluster in clusters:

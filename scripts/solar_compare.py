@@ -191,6 +191,99 @@ def build_prompt(matched_issue):
 {issue_text}
 """.strip()
 
+def complete_articles(result, matched_issue):
+    """
+    Solar가 누락한 언론사를 원본 클러스터 데이터로 보완하고,
+    article_count, titles, links, title, link는 원본 기준으로 고정한다.
+    """
+    solar_articles = result.get("articles", [])
+
+    solar_by_publisher = {
+        article.get("publisher"): article
+        for article in solar_articles
+        if article.get("publisher")
+    }
+
+    completed_articles = []
+
+    for cluster in matched_issue.get("clusters", []):
+        publisher = cluster.get(
+            "publisher",
+            "언론사 미상",
+        )
+
+        original_articles = cluster.get(
+            "articles",
+            [],
+        )
+
+        titles = [
+            article.get("title", "")
+            for article in original_articles
+            if article.get("title")
+        ]
+
+        links = [
+            article.get("link", "")
+            for article in original_articles
+            if article.get("link")
+        ]
+
+        solar_article = solar_by_publisher.get(
+            publisher,
+            {},
+        )
+
+        completed_articles.append(
+            {
+                "publisher": publisher,
+                "article_count": len(
+                    original_articles
+                ),
+                "titles": titles,
+                "links": links,
+                "title": (
+                    titles[0]
+                    if titles
+                    else cluster.get(
+                        "topic_title",
+                        "",
+                    )
+                ),
+                "link": (
+                    links[0]
+                    if links
+                    else ""
+                ),
+                "keywords": solar_article.get(
+                    "keywords",
+                    [],
+                ),
+                "people": solar_article.get(
+                    "people",
+                    [],
+                ),
+                "focus": solar_article.get(
+                    "focus",
+                    "명확한 차이를 확인하기 어려움",
+                ),
+                "expression_summary": (
+                    solar_article.get(
+                        "expression_summary",
+                        "명확한 차이를 확인하기 어려움",
+                    )
+                ),
+                "evidence_limit": solar_article.get(
+                    "evidence_limit",
+                    "현재 제공된 자료만으로는 "
+                    "구체적인 차이를 판단하기 어려움",
+                ),
+            }
+        )
+
+    result["articles"] = completed_articles
+
+    return result
 
 def create_client():
     """
@@ -267,15 +360,16 @@ def analyze_issue(
         ) from error
 
     # 모델이 값을 누락하더라도 기본 식별자는 유지한다.
-    result["issue_id"] = result.get(
-        "issue_id"
-    ) or match_id
-
     result["category"] = result.get(
         "category"
     ) or matched_issue.get(
         "category",
-        "기타",
+        "기타"
+    )
+
+    result = complete_articles(
+        result,
+        matched_issue,
     )
 
     print(f"분석 완료: {match_id}")

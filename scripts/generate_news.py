@@ -5,6 +5,8 @@ from pathlib import Path
 
 import feedparser
 
+import requests
+
 
 RSS_FEEDS = [
     {
@@ -37,6 +39,21 @@ RSS_FEEDS = [
         "category": "사회",
         "url": "https://www.hani.co.kr/rss/society/",
     },
+        {
+        "publisher": "한국경제",
+        "category": "정치",
+        "url": "https://www.hankyung.com/feed/politics",
+    },
+    {
+        "publisher": "한국경제",
+        "category": "경제",
+        "url": "https://www.hankyung.com/feed/economy",
+    },
+    {
+        "publisher": "한국경제",
+        "category": "사회",
+        "url": "https://www.hankyung.com/feed/society",
+    },
 ]
 
 # 언론사·카테고리(RSS)별로 수집할 최대 기사 수
@@ -56,6 +73,64 @@ def clean_html_text(text):
 
     return text.strip()
 
+def sanitize_rss_xml(xml_text):
+    """
+    XML에서 기본적으로 허용되지 않는 HTML 이름 엔티티를
+    실제 문자로 변환한다.
+
+    XML 기본 엔티티인 amp, lt, gt, quot, apos는 그대로 유지한다.
+    """
+    xml_entities = {"amp", "lt", "gt", "quot", "apos"}
+
+    def replace_entity(match):
+        entity_name = match.group(1)
+        original_entity = match.group(0)
+
+        if entity_name in xml_entities:
+            return original_entity
+
+        decoded_entity = html.unescape(original_entity)
+
+        # Python이 인식하는 HTML 엔티티라면 실제 문자로 변환
+        if decoded_entity != original_entity:
+            return decoded_entity
+
+        # 알 수 없는 엔티티는 일반 문자열로 처리
+        return f"&amp;{entity_name};"
+
+    return re.sub(
+        r"&([A-Za-z][A-Za-z0-9]+);",
+        replace_entity,
+        xml_text,
+    )
+
+
+def parse_rss_feed(feed_url):
+    """
+    RSS 원문을 직접 요청한 뒤 XML 엔티티를 정리해서 파싱한다.
+    """
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 Chrome/150.0.0.0 Safari/537.36"
+        )
+    }
+
+    response = requests.get(
+        feed_url,
+        headers=headers,
+        timeout=20,
+    )
+    response.raise_for_status()
+
+    # 서버가 제공한 인코딩을 우선 사용하고,
+    # 없으면 requests가 추정한 인코딩을 사용
+    if not response.encoding:
+        response.encoding = response.apparent_encoding
+
+    cleaned_xml = sanitize_rss_xml(response.text)
+
+    return feedparser.parse(cleaned_xml)
 
 def collect_articles():
     news_items = []
@@ -73,7 +148,14 @@ def collect_articles():
         feed_counts[feed_key] = 0
 
         print(f"\n{publisher} - {category} RSS 수집 중...")
-        feed = feedparser.parse(feed_url)
+        try:
+            feed = parse_rss_feed(feed_url)
+        except requests.RequestException as error:
+            print(
+                f"{publisher} {category} RSS 요청 실패: "
+                f"{error}"
+            )
+            continue
 
         if feed.bozo:
             print(

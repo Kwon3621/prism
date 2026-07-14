@@ -366,6 +366,104 @@ def compare_clusters_in_category(
             )
         ]
 
+        # 같은 언론사의 클러스터가 여러 개 포함되면,
+        # 다른 언론사 클러스터들과의 유사도 합계가
+        # 가장 높은 클러스터 하나만 남긴다.
+        clusters_by_publisher = defaultdict(list)
+
+        for cluster in clusters:
+            clusters_by_publisher[
+                cluster["publisher"]
+            ].append(cluster)
+
+        selected_clusters = []
+
+        for publisher, publisher_clusters in (
+            clusters_by_publisher.items()
+        ):
+            if len(publisher_clusters) == 1:
+                selected_clusters.append(
+                    publisher_clusters[0]
+                )
+                continue
+
+            cluster_scores = {}
+
+            for cluster in publisher_clusters:
+                cluster_id = cluster["cluster_id"]
+                score = 0.0
+
+                for pair in group_pair_matches:
+                    if (
+                        pair["first_cluster_id"]
+                        == cluster_id
+                        or pair["second_cluster_id"]
+                        == cluster_id
+                    ):
+                        score += pair["similarity"]
+
+                cluster_scores[cluster_id] = score
+
+            selected_cluster = max(
+                publisher_clusters,
+                key=lambda cluster: (
+                    cluster_scores.get(
+                        cluster["cluster_id"],
+                        0.0,
+                    ),
+                    cluster["article_count"],
+                ),
+            )
+
+            selected_clusters.append(
+                selected_cluster
+            )
+
+            removed_cluster_ids = [
+                cluster["cluster_id"]
+                for cluster in publisher_clusters
+                if (
+                    cluster["cluster_id"]
+                    != selected_cluster["cluster_id"]
+                )
+            ]
+
+            print(
+                f"\n[중복 정리] {category} / {publisher}"
+            )
+            print(
+                f"유지: {selected_cluster['cluster_id']} / "
+                f"{selected_cluster['topic_title']}"
+            )
+            print(
+                f"제외: {removed_cluster_ids}"
+            )
+
+        clusters = selected_clusters
+
+        publishers = sorted(
+            {
+                cluster["publisher"]
+                for cluster in clusters
+            }
+        )
+
+        cluster_ids = {
+            cluster["cluster_id"]
+            for cluster in clusters
+        }
+
+        group_pair_matches = [
+            pair
+            for pair in group_pair_matches
+            if (
+                pair["first_cluster_id"]
+                in cluster_ids
+                and pair["second_cluster_id"]
+                in cluster_ids
+            )
+        ]
+
         matched_groups.append(
             {
                 "category": category,
