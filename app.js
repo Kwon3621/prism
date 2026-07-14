@@ -52,36 +52,20 @@ function initSaveButtons() {
   const key = 'prism-saved-issues';
   const read = () => JSON.parse(localStorage.getItem(key) || '[]');
   const write = data => localStorage.setItem(key, JSON.stringify(data));
-  
   document.querySelectorAll('[data-save-issue]').forEach(btn => {
     const sync = () => {
-      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-      const saved = isLoggedIn && read().some(item => item.id === issue.id);
+      const saved = read().some(item => item.id === issue.id);
       btn.dataset.saved = String(saved);
       btn.textContent = saved ? '저장됨' : '이 이슈 저장';
     };
-    
     sync();
-    
     btn.addEventListener('click', () => {
-      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-      if (!isLoggedIn) {
-        alert("로그인이 필요한 서비스입니다. 로그인 후 이용해 주세요.");
-        const loginModal = document.getElementById("login-modal");
-        if (loginModal) {
-          loginModal.style.display = "flex";
-        }
-        return; 
-      }
-
       const saved = read();
       const exists = saved.some(item => item.id === issue.id);
       const next = exists ? saved.filter(item => item.id !== issue.id) : [...saved, issue];
       write(next);
       sync();
       showToast(exists ? '저장을 취소했습니다.' : '이슈를 저장했습니다.');
-      
-      renderSaved();
     });
   });
 }
@@ -207,16 +191,52 @@ function issueCardMarkup(data) {
   </article>`;
 }
 
+// 렌더링 타겟을 정확히 짚어 상태별(미로그인 / 데이터 없음 / 리스트 출력) 분기를 수행합니다.
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
-  if (!root) return;
-  const saved = JSON.parse(localStorage.getItem('prism-saved-issues') || '[]');
-  if (!saved.length) {
-    root.innerHTML = `<div class="saved-empty"><div class="empty-state"><h3>저장한 이슈가 없습니다.</h3><p>관심 있는 이슈를 저장하면 이곳에서 다시 볼 수 있습니다.</p><a class="btn btn-primary" href="index.html#topics">이슈 둘러보기</a></div></div>`;
+  if (!root) return; 
+  
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  
+  // 1. 로그인이 안 되어 있는 경우
+  if (!isLoggedIn) {
+    root.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px dashed #ddd;">
+        <h3 style="margin-bottom: 8px; color: #333;">로그인이 필요합니다.</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">로그인하시면 내가 저장한 이슈들을 이곳에서 모아볼 수 있습니다.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('login-modal').style.display='flex'">로그인하기</button>
+      </div>`;
     return;
   }
-  root.innerHTML = saved.map(issueCardMarkup).join('');
+
+  // 2. 로그인은 했으나 저장한 이슈가 없는 경우
+  const saved = JSON.parse(localStorage.getItem('prism-saved-issues') || '[]');
+  if (!saved.length) {
+    root.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px dashed #ddd;">
+        <h3 style="margin-bottom: 8px; color: #333;">저장한 이슈가 없습니다.</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">관심 있는 이슈를 저장하면 이곳에서 편리하게 모아볼 수 있습니다.</p>
+        <a class="btn btn-primary" href="#topics">이슈 둘러보기</a>
+      </div>`;
+    return;
+  }
+
+  root.innerHTML = saved.map(item => `
+    <article class="card">
+      <span class="eyebrow">${item.category}</span>
+      <h3>${item.title}</h3>
+      <p>${item.summary}</p>
+      <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+        ${item.tags.map(t => `<span class="badge blue">#${t}</span>`).join('')}
+      </div>
+      <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <small style="color: #94a3b8;">분석 매체: ${item.mediaNames.join(', ')}</small>
+        <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
+      </div>
+    </article>
+  `).join('');
 }
+
 async function renderLiveNews() {
   const root = document.querySelector("[data-live-news]");
   if (!root) return;
@@ -573,8 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFeaturedIssue();
 });
 
-
-
+//로그인/회원가입
 document.addEventListener("DOMContentLoaded", () => {
   const loginNavBtn = document.getElementById("btn-login-nav");
   const loginModal = document.getElementById("login-modal");
@@ -591,96 +610,119 @@ document.addEventListener("DOMContentLoaded", () => {
   const switchText = document.getElementById("switch-text");
   const linkSwitchAuth = document.getElementById("link-switch-auth");
 
-  if (!loginNavBtn || !loginModal) return;
+  if (!loginModal) return;
 
-  let isLoginMode = true; 
+  let isLoginMode = true;
   let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   updateLoginUI();
 
-  loginNavBtn.addEventListener("click", () => {
-    if (isLoggedIn) {
-      localStorage.removeItem("isLoggedIn");
-      isLoggedIn = false;
-      alert("로그아웃 되었습니다.");
-      updateLoginUI();
-    } else {
-      setAuthMode(true);
-      loginModal.style.display = "flex";
+  if (loginNavBtn) {
+    loginNavBtn.addEventListener("click", () => {
+      if (isLoggedIn) {
+        localStorage.removeItem("isLoggedIn");
+        isLoggedIn = false;
+        alert("로그아웃 되었습니다.");
+        updateLoginUI();
+        
+        if (window.location.pathname.includes("issue.html")) {
+          location.reload();
+        }
+      } else {
+  
+        setAuthMode(true);
+        loginModal.style.display = "flex";
+      }
+    });
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", () => {
+      loginModal.style.display = "none";
+    });
+  }
+
+  loginModal.addEventListener("click", (e) => {
+    if (e.target === loginModal) {
+      loginModal.style.display = "none";
     }
   });
 
-  linkSwitchAuth.addEventListener("click", (e) => {
-    e.preventDefault();
-    setAuthMode(!isLoginMode);
-  });
+  if (linkSwitchAuth) {
+    linkSwitchAuth.addEventListener("click", (e) => {
+      e.preventDefault();
+      setAuthMode(!isLoginMode);
+    });
+  }
 
   function setAuthMode(toLoginMode) {
     isLoginMode = toLoginMode;
-    authForm.reset(); 
+    if (authForm) authForm.reset();
 
     if (isLoginMode) {
-      modalTitle.textContent = "Prism 로그인";
-      modalDesc.textContent = "서비스 이용을 위해 로그인을 진행해 주세요.";
-      fieldName.style.display = "none";
-      authNameInput.removeAttribute("required");
-      btnAuthSubmit.textContent = "로그인";
-      switchText.textContent = "아직 계정이 없으신가요?";
-      linkSwitchAuth.textContent = "회원가입";
+      if (modalTitle) modalTitle.textContent = "Prism 로그인";
+      if (modalDesc) modalDesc.textContent = "서비스 이용을 위해 로그인을 진행해 주세요.";
+      if (fieldName) fieldName.style.display = "none";
+      if (authNameInput) authNameInput.removeAttribute("required");
+      if (btnAuthSubmit) btnAuthSubmit.textContent = "로그인";
+      if (switchText) switchText.textContent = "아직 계정이 없으신가요?";
+      if (linkSwitchAuth) linkSwitchAuth.textContent = "회원가입";
     } else {
-      modalTitle.textContent = "Prism 회원가입";
-      modalDesc.textContent = "계정을 생성하고 나만의 이슈를 저장해 보세요.";
-      fieldName.style.display = "block";
-      authNameInput.setAttribute("required", "required");
-      btnAuthSubmit.textContent = "회원가입 완료";
-      switchText.textContent = "이미 계정이 있으신가요?";
-      linkSwitchAuth.textContent = "로그인";
+      if (modalTitle) modalTitle.textContent = "Prism 회원가입";
+      if (modalDesc) modalDesc.textContent = "계정을 생성하고 나만의 이슈를 저장해 보세요.";
+      if (fieldName) fieldName.style.display = "block";
+      if (authNameInput) authNameInput.setAttribute("required", "required");
+      if (btnAuthSubmit) btnAuthSubmit.textContent = "회원가입 완료";
+      if (switchText) switchText.textContent = "이미 계정이 있으신가요?";
+      if (linkSwitchAuth) linkSwitchAuth.textContent = "로그인";
     }
   }
 
-  closeModalBtn.addEventListener("click", () => loginModal.style.display = "none");
-  loginModal.addEventListener("click", (e) => {
-    if (e.target === loginModal) loginModal.style.display = "none";
-  });
+  if (authForm) {
+    authForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
+      const email = authEmailInput ? authEmailInput.value.trim() : "";
+      const password = authPasswordInput ? authPasswordInput.value.trim() : "";
 
-  authForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+      if (!isLoginMode) {
+        const name = authNameInput ? authNameInput.value.trim() : "";
+        
+        localStorage.setItem("user_email", email);
+        localStorage.setItem("user_password", password);
+        localStorage.setItem("user_name", name);
 
-    const email = authEmailInput.value;
-    const password = authPasswordInput.value;
-
-    if (!isLoginMode) {
-      const name = authNameInput.value;
-      
-    
-      localStorage.setItem("user_email", email);
-      localStorage.setItem("user_password", password);
-      localStorage.setItem("user_name", name);
-
-      alert(`${name}님, 회원가입이 완료되었습니다! 로그인해 주세요.`);
-      setAuthMode(true); 
-    } else {
-    
-      const savedEmail = localStorage.getItem("user_email");
-      const savedPassword = localStorage.getItem("user_password");
-      const savedName = localStorage.getItem("user_name");
-
-    
-      if (email === savedEmail && password === savedPassword) {
-        localStorage.setItem("isLoggedIn", "true");
-        isLoggedIn = true;
-        alert(`반갑습니다, ${savedName || '사용자'}님! 성공적으로 로그인되었습니다.`);
-        loginModal.style.display = "none";
-        updateLoginUI();
+        alert(`${name}님, 회원가입이 완료되었습니다! 로그인해 주세요.`);
+        setAuthMode(true);
       } else {
-        alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다. 먼저 회원가입을 해주세요!");
+        const savedEmail = localStorage.getItem("user_email");
+        const savedPassword = localStorage.getItem("user_password");
+        const savedName = localStorage.getItem("user_name") || "사용자";
+
+        if (email === savedEmail && password === savedPassword) {
+          localStorage.setItem("isLoggedIn", "true");
+          isLoggedIn = true;
+          alert(`반갑습니다, ${savedName}님! 성공적으로 로그인되었습니다.`);
+          loginModal.style.display = "none";
+          updateLoginUI();
+          
+          renderSaved();
+          
+          if (window.location.pathname.includes("issue.html")) {
+            location.reload(); 
+          }
+        } else {
+          alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다. 회원가입 정보를 확인하거나 가입을 먼저 진행해 주세요!");
+        }
       }
-    }
-  });
+    });
+  }
 
   function updateLoginUI() {
-    if (isLoggedIn) {
+    if (!loginNavBtn) return;
+    
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (loggedIn) {
       const savedName = localStorage.getItem("user_name") || "사용자";
       loginNavBtn.textContent = `${savedName}님 (로그아웃)`;
       loginNavBtn.classList.remove("btn-secondary");
@@ -690,23 +732,23 @@ document.addEventListener("DOMContentLoaded", () => {
       loginNavBtn.classList.remove("btn-primary");
       loginNavBtn.classList.add("btn-secondary");
     }
+    
     renderSaved();
-
   }
 });
 
 function renderSaved() {
-  const root = document.querySelector('[data-saved-list]');
+  const root = document.getElementById('saved-issues-root');
   if (!root) return; 
-  
-  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-  
+
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
   if (!isLoggedIn) {
     root.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: #fff; border-radius: 8px; border: 1px dashed #ddd;">
-        <h3 style="margin-bottom: 8px; color: #333;">로그인이 필요합니다.</h3>
-        <p style="color: #666; font-size: 14px; margin-bottom: 16px;">로그인하시면 내가 저장한 이슈들을 이곳에서 모아볼 수 있습니다.</p>
-        <button class="btn btn-primary" onclick="document.getElementById('login-modal').style.display='flex'">로그인하기</button>
+        <h3 style="margin-bottom: 8px; color: #333;">저장한 이슈가 없습니다.</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 16px;">내가 저장한 프레임 비교 분석을 보려면 로그인이 필요합니다.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('btn-login-nav').click()">로그인하기</button>
       </div>`;
     return;
   }
@@ -729,12 +771,13 @@ function renderSaved() {
         <h3 class="card-title">${item.title}</h3>
         <p class="card-desc">${item.summary}</p>
         <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-          ${item.tags.map(t => `<span class="badge" style="background: #eef2f6; color: #475569; font-size: 11px; padding: 4px 8px; border-radius: 4px;">#${t}</span>`).join('')}
+          ${item.tags.map(t => `<span class="badge" style="background: #eef2f6; color: #4b5563;">#${t}</span>`).join('')}
         </div>
-        <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center;">
-          <span style="font-size: 12px; color: #94a3b8;">분석 언론사 ${item.mediaNames.length}개</span>
-          <a class="btn btn-secondary btn-sm" href="issue.html">분석 보기</a>
+        <div style="display: flex; gap: 8px; font-size: 12px; color: #888; margin-bottom: 20px;">
+          <span>비교 언론사:</span>
+          <strong>${item.mediaNames ? item.mediaNames.join(', ') : ''}</strong>
         </div>
+        <a class="btn btn-secondary" style="width: 100%; text-align: center; display: inline-block; box-sizing: border-box;" href="issue.html">자세히 보기</a>
       </div>
     </article>
   `).join('');
