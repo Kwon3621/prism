@@ -34,6 +34,33 @@ def make_article_text(article):
 
     return f"{title} {title} {description}"
 
+def group_articles_by_category_and_publisher(news_items):
+    """
+    기사를 카테고리와 언론사 기준으로 나눈다.
+
+    결과 예시:
+    {
+        "정치": {
+            "조선일보": [...],
+            "한겨레": [...]
+        },
+        "경제": {
+            "조선일보": [...],
+            "한겨레": [...]
+        }
+    }
+    """
+    grouped_articles = defaultdict(
+        lambda: defaultdict(list)
+    )
+
+    for article in news_items:
+        category = article.get("category", "기타")
+        publisher = article.get("publisher", "언론사 미상")
+
+        grouped_articles[category][publisher].append(article)
+
+    return grouped_articles
 
 class UnionFind:
     """
@@ -199,6 +226,19 @@ def main():
 
     with NEWS_PATH.open("r", encoding="utf-8") as file:
         news_items = json.load(file)
+
+    grouped_articles = group_articles_by_category_and_publisher(
+        news_items
+    )
+
+    print("\n카테고리·언론사별 기사 수")
+
+    for category, publishers in grouped_articles.items():
+        for publisher, articles in publishers.items():
+            print(
+                f"{category} - {publisher}: "
+                f"{len(articles)}개"
+            )
 
     clusters, matched_pairs = cluster_articles(news_items)
 

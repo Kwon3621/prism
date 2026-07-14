@@ -3,18 +3,96 @@
   "clusters": [
     {
       "cluster_id": "cluster-1",
-      "topic_title": "정청래 “당대표직 이용해 대선 출마 생각 없어”...대표 재출마",
+      "topic_title": "송영길 “정청래, 李 대통령 스토커 수준…대선 불출마도 뜬금없더라”",
       "article_indexes": [
-        5,
-        30
+        1,
+        68
+      ]
+    },
+    {
+      "cluster_id": "cluster-2",
+      "topic_title": "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결",
+      "article_indexes": [
+        15,
+        71
+      ]
+    },
+    {
+      "cluster_id": "cluster-3",
+      "topic_title": "노경필 신임 법원행정처장 “법원에 대한 외부의 압력과 부담 커져”",
+      "article_indexes": [
+        44,
+        114
+      ]
+    },
+    {
+      "cluster_id": "cluster-4",
+      "topic_title": "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고",
+      "article_indexes": [
+        45,
+        116
+      ]
+    },
+    {
+      "cluster_id": "cluster-5",
+      "topic_title": "[속보] 법원, 쿠팡 김범석 ‘총수 지정’ 효력정지",
+      "article_indexes": [
+        47,
+        102
+      ]
+    },
+    {
+      "cluster_id": "cluster-6",
+      "topic_title": "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구",
+      "article_indexes": [
+        48,
+        117
+      ]
+    },
+    {
+      "cluster_id": "cluster-7",
+      "topic_title": "檢, 김가네 회장 횡령 의혹 보완수사 요구",
+      "article_indexes": [
+        51,
+        106
       ]
     }
   ],
   "matched_pairs": [
     {
-      "first_index": 5,
-      "second_index": 30,
-      "similarity": 0.516
+      "first_index": 1,
+      "second_index": 68,
+      "similarity": 0.291
+    },
+    {
+      "first_index": 15,
+      "second_index": 71,
+      "similarity": 0.292
+    },
+    {
+      "first_index": 44,
+      "second_index": 114,
+      "similarity": 0.319
+    },
+    {
+      "first_index": 45,
+      "second_index": 116,
+      "similarity": 0.317
+    },
+    {
+      "first_index": 47,
+      "second_index": 102,
+      "similarity": 0.338
+    },
+    {
+      "first_index": 48,
+      "second_index": 117,
+      "similarity": 0.47
+    },
+    {
+      "first_index": 51,
+      "second_index": 106,
+      "similarity": 0.456
     }
   ]
 }
