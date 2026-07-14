@@ -52,20 +52,36 @@ function initSaveButtons() {
   const key = 'prism-saved-issues';
   const read = () => JSON.parse(localStorage.getItem(key) || '[]');
   const write = data => localStorage.setItem(key, JSON.stringify(data));
+  
   document.querySelectorAll('[data-save-issue]').forEach(btn => {
     const sync = () => {
-      const saved = read().some(item => item.id === issue.id);
+      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+      const saved = isLoggedIn && read().some(item => item.id === issue.id);
       btn.dataset.saved = String(saved);
       btn.textContent = saved ? '저장됨' : '이 이슈 저장';
     };
+    
     sync();
+    
     btn.addEventListener('click', () => {
+      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+      if (!isLoggedIn) {
+        alert("로그인이 필요한 서비스입니다. 로그인 후 이용해 주세요.");
+        const loginModal = document.getElementById("login-modal");
+        if (loginModal) {
+          loginModal.style.display = "flex";
+        }
+        return; 
+      }
+
       const saved = read();
       const exists = saved.some(item => item.id === issue.id);
       const next = exists ? saved.filter(item => item.id !== issue.id) : [...saved, issue];
       write(next);
       sync();
       showToast(exists ? '저장을 취소했습니다.' : '이슈를 저장했습니다.');
+      
+      renderSaved();
     });
   });
 }
@@ -674,5 +690,52 @@ document.addEventListener("DOMContentLoaded", () => {
       loginNavBtn.classList.remove("btn-primary");
       loginNavBtn.classList.add("btn-secondary");
     }
+    renderSaved();
+
   }
 });
+
+function renderSaved() {
+  const root = document.querySelector('[data-saved-list]');
+  if (!root) return; 
+  
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  
+  if (!isLoggedIn) {
+    root.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: #fff; border-radius: 8px; border: 1px dashed #ddd;">
+        <h3 style="margin-bottom: 8px; color: #333;">로그인이 필요합니다.</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 16px;">로그인하시면 내가 저장한 이슈들을 이곳에서 모아볼 수 있습니다.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('login-modal').style.display='flex'">로그인하기</button>
+      </div>`;
+    return;
+  }
+
+  const saved = JSON.parse(localStorage.getItem('prism-saved-issues') || '[]');
+  if (!saved.length) {
+    root.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: #fff; border-radius: 8px; border: 1px dashed #ddd;">
+        <h3 style="margin-bottom: 8px; color: #333;">저장한 이슈가 없습니다.</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 16px;">관심 있는 이슈를 저장하면 이곳에서 다시 볼 수 있습니다.</p>
+        <a class="btn btn-primary" href="#live-news">이슈 둘러보기</a>
+      </div>`;
+    return;
+  }
+
+  root.innerHTML = saved.map(item => `
+    <article class="issue-card">
+      <div class="card-body">
+        <span class="category">${item.category}</span>
+        <h3 class="card-title">${item.title}</h3>
+        <p class="card-desc">${item.summary}</p>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+          ${item.tags.map(t => `<span class="badge" style="background: #eef2f6; color: #475569; font-size: 11px; padding: 4px 8px; border-radius: 4px;">#${t}</span>`).join('')}
+        </div>
+        <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 12px; color: #94a3b8;">분석 언론사 ${item.mediaNames.length}개</span>
+          <a class="btn btn-secondary btn-sm" href="issue.html">분석 보기</a>
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
