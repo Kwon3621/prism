@@ -1,48 +1,456 @@
 {
   "issues": [
     {
-      "issue_id": "cluster-1",
+      "issue_id": "match-1",
       "category": "정치",
-      "title": "정청래 당대표 출마 선언",
-      "summary": "정청래 의원이 차기 당대표 선거에 출마하겠다는 입장을 밝혔다.",
+      "title": "송영길, 정청래 발언에 대한 비판 및 정치적 논쟁",
+      "summary": "송영길 전 대표가 정청래 의원의 특정 발언을 비판하며, 그의 대선 불출마 선언과 관련한 정치적 입장을 언급하였다.",
       "common_facts": [
-        "정청래 의원이 당대표 선거에 출마할 의사를 표현했다.",
-        "정청래 의원은 당대표직을 이용해 대선 출마를 고려하지 않는다고 밝혔다."
+        "송영길 전 대표가 정청래 의원의 발언에 대해 비판함",
+        "정청래 의원의 대선 불출마 관련 언급이 포함됨"
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/politics/politics_general/1268144.html"
+          ],
+          "title": "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”",
+          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268144.html",
+          "keywords": [
+            "송영길",
+            "정청래",
+            "4년 남은 정권",
+            "대선 얘기",
+            "선청후당"
+          ],
+          "people": [
+            "송영길",
+            "정청래"
+          ],
+          "focus": "정청래 의원의 대선 관련 발언을 비판하며 프레임 분석",
+          "expression_summary": "송영길의 발언을 인용한 제목, '선청후당' 표현 사용",
+          "evidence_limit": "해당"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-2",
+      "category": "정치",
+      "title": "민주당 당대표 선거 및 청년최고위원 관련 논란",
+      "summary": "민주당 당대표 선거에서 선호투표제 도입 논의가 이루어졌으며, 선출직 청년최고위원 안건은 부결된 것으로 보도되었다.",
+      "common_facts": [
+        "민주당 당대표 선거에서 선호투표제 도입이 논의되었다.",
+        "선출직 청년최고위원 안건이 부결되었다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
-          "title": "정청래 “당대표직 이용해 대선 출마 생각 없어”...대표 재출마",
-          "link": "https://www.chosun.com/politics/assembly/2026/07/13/XHQO3HSXCFETTIL2ZH66456AQ4/",
+          "article_count": 1,
+          "titles": [
+            "與 당대표 선거 ‘선호투표제’로...친청 이성윤, 최고위원 사퇴 “용납 못해”"
+          ],
+          "links": [
+            "https://www.chosun.com/politics/assembly/2026/07/14/NRHZML52KVEC5D57ODYCDQ2JFM/"
+          ],
+          "title": "與 당대표 선거 ‘선호투표제’로...친청 이성윤, 최고위원 사퇴 “용납 못해”",
+          "link": "https://www.chosun.com/politics/assembly/2026/07/14/NRHZML52KVEC5D57ODYCDQ2JFM/",
           "keywords": [
-            "정청래",
-            "당대표직",
-            "대선 출마",
-            "대표 재출마"
+            "선호투표제",
+            "민주당 당대표 선거",
+            "청년최고위원",
+            "이성윤"
           ],
           "people": [
-            "정청래"
+            "이성윤"
           ],
-          "focus": "당대표직에 집중해 재출마 의사를 강조",
-          "expression_summary": "인용구를 사용해 당대표직 전념 의지를 명확히 표현",
-          "evidence_limit": "정청래 의원의 구체적인 출마 전략 또는 향후 계획"
+          "focus": "선호투표제에 대한 반대 입장 및 최고위원 사퇴의 '용납 못함' 주장",
+          "expression_summary": "제목에서 선호투표제 도입과 함께 청년최고위원 이성윤의 사퇴 및 반발 감정을 강조",
+          "evidence_limit": "청년최고위원 사퇴의 구체적인 배경과 상황에 대한 상세 내용 확인 불가"
         },
         {
           "publisher": "한겨레",
-          "title": "정청래 당권 도전 선언…“당대표직 이용해 대선 출마 생각 없다”",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1267982.html",
+          "article_count": 1,
+          "titles": [
+            "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/politics/assembly/1268124.html"
+          ],
+          "title": "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결",
+          "link": "https://www.hani.co.kr/arti/politics/assembly/1268124.html",
           "keywords": [
-            "정청래",
-            "당권 도전",
-            "당대표직",
-            "대선 출마"
+            "선호투표제",
+            "민주당 당대표",
+            "선출직 청년최고위원",
+            "부결"
+          ],
+          "people": [],
+          "focus": "선호투표제 도입 결정과 청년최고위원 안건 부결",
+          "expression_summary": "제목에서 선호투표제 도입 결정과 청년최고위원 부결이라는 결과를 중립적으로 전달",
+          "evidence_limit": "선출직 청년최고위원 부결에 대한 논의 과정 및 표결 결과에 대한 구체적 정보 확인 불가"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-3",
+      "category": "경제",
+      "title": "정부, 채무상담 대표전화 '1375' 신설…빚으로 인한 삶 포기 방지 및 채무조정 안내",
+      "summary": "정부가 채무 부담을 겪는 국민들을 위해 24시간 상담 가능한 대표전화 '1375'를 신설하고, 채무조정 및 개인회생 절차 등에 대한 안내를 제공합니다.",
+      "common_facts": [
+        "정부가 채무 상담을 위한 대표전화 '1375'를 신설했습니다",
+        "전화를 통해 채무조정 및 개인회생 절차에 대한 안내를 받을 수 있습니다",
+        "이 서비스는 빚으로 인해 삶의 포기를 선택하려는 사람들을 방지하기 위한 목적입니다"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "빚 때문에 삶 포기 막는다…정부, 채무상담 대표전화 ‘1375’ 신설"
+          ],
+          "links": [
+            "https://www.chosun.com/economy/economy_general/2026/07/14/EXNPL3XAHBAILEA4VAEMZOLLNI/"
+          ],
+          "title": "빚 때문에 삶 포기 막는다…정부, 채무상담 대표전화 ‘1375’ 신설",
+          "link": "https://www.chosun.com/economy/economy_general/2026/07/14/EXNPL3XAHBAILEA4VAEMZOLLNI/",
+          "keywords": [
+            "1375",
+            "채무상담",
+            "채무조정",
+            "개인회생",
+            "빚"
           ],
           "people": [
-            "정청래"
+            "정부"
           ],
-          "focus": "당권 도전에 초점을 맞추고 대선 불출마 의사를 설명",
-          "expression_summary": "선언 형식을 사용해 당권 도전 의사를 공식적으로 표명",
-          "evidence_limit": "정청래 의원의 과거 정치 활동 이력이나 당내 구체적 지지 기반 정보에 대한 내용 부재"
+          "focus": "빚으로 인한 삶 포기 방지",
+          "expression_summary": "제목과 RSS 설명에서는 '1375' 번호 신설 및 채무상담 서비스 제공에 초점을 맞췄습니다",
+          "evidence_limit": "현재 제공된 자료만으로는 서비스의 구체적인 운영 방식이나 적용 범위 등 상세한 내용을 확인하기 어렵습니다"
+        },
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "빚 때문에 힘들면 ‘1375’로 전화해요…채무조정·개인회생 등 안내"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/economy/finance/1268179.html"
+          ],
+          "title": "빚 때문에 힘들면 ‘1375’로 전화해요…채무조정·개인회생 등 안내",
+          "link": "https://www.hani.co.kr/arti/economy/finance/1268179.html",
+          "keywords": [
+            "1375",
+            "채무상담",
+            "전화",
+            "채무조정",
+            "개인회생"
+          ],
+          "people": [
+            "정부"
+          ],
+          "focus": "채무상담 전화 서비스 안내 및 접근성 강조",
+          "expression_summary": "제목과 RSS 설명에서는 '1375' 번호를 통해 채무조정 및 개인회생 안내를 받는다는 점을 강조했습니다",
+          "evidence_limit": "현재 제공된 자료만으로는 서비스 이용자의 구체적인 조건이나 지원 범위 등 상세 내용을 확인하기 어렵습니다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-4",
+      "category": "사회",
+      "title": "노경필 신임 법원행정처장 임명 및 취임 연설",
+      "summary": "노경필 신임 법원행정처장이 공석 발생 약 넉달 만에 임명되어 취임했으며, 법원 내외 압력과 부담에 대한 우려를 표명하고 구성원들의 든든한 울타리가 되겠다는 포부를 밝혔다.",
+      "common_facts": [
+        "노경필 신임 법원행정처장 취임",
+        "법원 외부 압력과 부담 증가 언급",
+        "구성원 든든한 울타리 역할 다짐"
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "넉달 만에 공석 채운 노경필 법원행정처장 “구성원 든든한 울타리 되겠다”"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/society/society_general/1268156.html"
+          ],
+          "title": "넉달 만에 공석 채운 노경필 법원행정처장 “구성원 든든한 울타리 되겠다”",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268156.html",
+          "keywords": [
+            "노경필",
+            "법원행정처장",
+            "공석 충원",
+            "구성원 울타리"
+          ],
+          "people": [
+            "노경필"
+          ],
+          "focus": "구성원 지원 및 든든한 울타리 역할 다짐 강조",
+          "expression_summary": "공석 충원 상황(넉달 만에)과 구성원 지원 의지 언급",
+          "evidence_limit": "명확"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-5",
+      "category": "사회",
+      "title": "촉법소년 연령 하향 방안 검토",
+      "summary": "정부가 강력·중대·반복 범죄에 한해 촉법소년 연령을 기존 14세에서 13세로 하향 조정하는 방안을 검토하고 있으며, 이 내용이 국무회의에 보고된 것으로 알려짐.",
+      "common_facts": [
+        "정부가 촉법소년 연령 하향 방안을 검토 중",
+        "강력한 범죄와 중대·반복 범죄에 한해 적용 대상",
+        "연령 기준을 14세에서 13세로 낮추는 방안",
+        "국무회의에서 관련 내용이 보고된 것으로 알려짐"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "촉법소년 연령 하향 추진…“강력·중대·반복범죄 연령 14세→13세 검토"
+          ],
+          "links": [
+            "https://www.chosun.com/national/education/2026/07/14/6A2SKJHJRRCADL52XUKT4H32GY/"
+          ],
+          "title": "촉법소년 연령 하향 추진…“강력·중대·반복범죄 연령 14세→13세 검토",
+          "link": "https://www.chosun.com/national/education/2026/07/14/6A2SKJHJRRCADL52XUKT4H32GY/",
+          "keywords": [
+            "촉법소년",
+            "연령 하향",
+            "강력범죄",
+            "중대범죄",
+            "반복범죄",
+            "국무회의"
+          ],
+          "people": [],
+          "focus": "강력·중대·반복 범죄에 대한 촉법소년 연령 하향 검토",
+          "expression_summary": "‘강력·중대·반복범죄 연령 14세→13세 검토’라는 표현을 사용하여 구체적인 범죄 유형과 연령 변경 방향을 제시",
+          "evidence_limit": "국무회의 보고 시점에 대한 구체적 언급 없음"
+        },
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/society/society_general/1268131.html"
+          ],
+          "title": "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268131.html",
+          "keywords": [
+            "촉법소년",
+            "연령 하향",
+            "강력범죄",
+            "반복범죄",
+            "국무회의"
+          ],
+          "people": [],
+          "focus": "강력·반복 범죄 한정에 초점을 둔 연령 하향 방안 국무회의 보고",
+          "expression_summary": "‘강력·반복 범죄 한해 13살로 하향’이라는 표현을 사용하여 적용 범위를 강조",
+          "evidence_limit": "국무회의 보고 내용에 대한 구체적 세부 정보 없음"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-6",
+      "category": "사회",
+      "title": "쿠팡 김범석 총수 지정 관련 법원 효력정지 결정",
+      "summary": "서울지방법원이 공정위가 쿠팡의 동일인으로 지정한 김범석 총수 지정 처분의 효력정지를 결정한 사건에 관한 보도입니다.",
+      "common_facts": [
+        "공정위가 쿠팡의 동일인으로 김범석을 지정한 처분에 대해 법원이 효력정지를 결정",
+        "법원의 결정은 쿠팡의 총수 지정과 관련된 행정처분의 효력을 일시적으로 중단"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "법원 “쿠팡 ‘동일인’ 김범석 지정한 공정위 처분 효력정지"
+          ],
+          "links": [
+            "https://www.chosun.com/national/court_law/2026/07/14/JPSEBG3Z3RB7BEO45CXRZFFTZ4/"
+          ],
+          "title": "법원 “쿠팡 ‘동일인’ 김범석 지정한 공정위 처분 효력정지",
+          "link": "https://www.chosun.com/national/court_law/2026/07/14/JPSEBG3Z3RB76BEO45CXRZFFTZ4/",
+          "keywords": [
+            "쿠팡",
+            "김범석",
+            "동일인",
+            "공정거래위원회",
+            "처분",
+            "효력정지",
+            "법원",
+            "총수 지정"
+          ],
+          "people": [
+            "김범석"
+          ],
+          "focus": "쿠팡에 대한 공정위의 동일인 지정 처분 자체의 효력정지",
+          "expression_summary": "법원 판결 내용을 직접적으로 인용한 뉴스 기사로, 공정위의 처분에 대한 법원의 효력정지 결정을 공지",
+          "evidence_limit": "쿠팡 처분의 정확한 법적 근거와 효력정지 범위가 구체적으로 확인되지 않음"
+        },
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "[속보] 법원, 쿠팡 김범석 ‘총수 지정’ 효력정지"
+          ],
+          "links": [
+            "https://www.s.journalism/history/1268182.html"
+          ],
+          "title": "[속보] 법원, 쿠팡 김범석 '총수 지정' 효력정지",
+          "link": "https://www.s.journalism/history/1268182.html",
+          "keywords": [
+            "쿠팡",
+            "김범석",
+            "총수 지정",
+            "동일인",
+            "공정거래위원회",
+            "처분",
+            "효력정지",
+            "법원",
+            "속보"
+          ],
+          "people": [
+            "김범석"
+          ],
+          "focus": "김범석을 총수로 지정한 공정위의 조치에 대한 효력정지",
+          "expression_summary": "[속보]를 강조한 빠른 뉴스 형식으로, 법원의 효력정지 결정을 전달",
+          "evidence_limit": "기사 제목 외의 추가 설명이나 배경 정보가 제공되지 않아 법적 판단의 구체적 내용을 파악하기 어려움"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-7",
+      "category": "사회",
+      "title": "종합특검, 심우정 전 검찰총장과 전무곤 전 기조부장 구속영장 청구",
+      "summary": "종합특검이 심우정 전 검찰총장과 전무곤 전 기조부장에게 구속영장을 청구하였다.",
+      "common_facts": [
+        "종합특검이 심우정 전 검찰총장과 전무곤 전 기조부장에게 구속영장을 청구함",
+        "심우정 전 검찰총장은 '내란 가담' 의혹의 대상임"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "종합특검, 심우정 前 검찰총장·전무곤 前 기조부장 구속영장 청구"
+          ],
+          "links": [
+            "https://www.chosun.com/national/court_law/2026/07/14/XI6HUBD5DRCAFCLBWHMMNML6E4/"
+          ],
+          "title": "종합특검, 심우정 前 검찰총장·전무곤 前 기조부장 구속영장 청구",
+          "link": "https://www.chosun.com/national/court_law/2026/07/14/XI6HUBD5DRCAFCLBWHMMNML6E4/",
+          "keywords": [
+            "종합특검",
+            "심우정",
+            "전 검찰총장",
+            "전무곤",
+            "전 기조부장",
+            "구속영장",
+            "청구"
+          ],
+          "people": [
+            "심우정",
+            "전무곤"
+          ],
+          "focus": "심우정 전 검찰총장과 전무곤 전 기조부장 모두에 대한 구속영장 청구",
+          "expression_summary": "종합특검이 심우정 전 검찰총장과 전무곤 전 기조부장에게 구속영장을 청구했다는 사실을 중립적으로 보도",
+          "evidence_limit": "전무곤 전 기조부장의 구속영장 청구와 관련된 구체적 내용 및 근거는 현재 자료만으로는 확인되지 않음"
+        },
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/society/society_general/1268125.html"
+          ],
+          "title": "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268125.html",
+          "keywords": [
+            "특검",
+            "심우정",
+            "전 검찰총장",
+            "내란 가담",
+            "구속영장",
+            "청구"
+          ],
+          "people": [
+            "심우정"
+          ],
+          "focus": "심우정 전 검찰총장의 '내란 가담' 의혹에 초점을 맞춘 구속영장 청구 내용",
+          "expression_summary": "특검의 심우정 전 검찰총장 구속영장 청구 사실을 보도하면서 '내란 가담' 의혹을 강조",
+          "evidence_limit": "전무곤 전 기조부장과의 관련성 및 구속영장 청구 결정 과정은 현재 자료만으로는 구체적으로 확인되지 않음"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-8",
+      "category": "사회",
+      "title": "김가네 회장 횡령 의혹 관련 검찰 보완수사 요청",
+      "summary": "검찰이 김가네 회장의 횡령 의혹을 확인하기 위해 경찰에 보완수사를 요청한 사건.",
+      "common_facts": [
+        "검찰이 김가네 회장의 횡령 의혹에 대해 보완수사를 요청",
+        "경찰서는 해당 보완수사에 대한 구체적 조치를 진행"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "檢, 김가네 회장 횡령 의혹 보완수사 요구"
+          ],
+          "links": [
+            "https://www.chosun.com/national/national_general/2026/07/14/ZC4OTHT3B5DCNIQFO2FMIDHHLU/"
+          ],
+          "title": "檢, 김가네 회장 횡령 의혹 보완수사 요구",
+          "link": "https://www.chosun.com/national/national_general/2026/07/14/ZC4OTHT3B5DCNIQFO2FMIDHHLU/",
+          "keywords": [
+            "김가네 회장",
+            "횡령 의혹",
+            "보완수사",
+            "검찰",
+            "경찰"
+          ],
+          "people": [
+            "김가네 회장"
+          ],
+          "focus": "검찰의 보완수사 요구",
+          "expression_summary": "제목에서 '檢(검찰)'과 '김가네 회장 횡령 의혹 보완수사 요구'로 사건을 명확히 제시",
+          "evidence_limit": "수사 진행 상황, 구체적 혐의 금액, 김가네 회장에 대한 추가 정보는 미확인"
+        },
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "김가네 회장 ‘6억 횡령’ 혐의…검찰, 경찰에 보완수사 요청"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/society/society_general/1268172.html"
+          ],
+          "title": "김가네 회장 ‘6억 횡령’ 혐의…검찰, 경찰에 보완수사 요청",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268172.html",
+          "keywords": [
+            "김가네 회장",
+            "6억 횡령",
+            "보완수사",
+            "검찰",
+            "경찰"
+          ],
+          "people": [
+            "김가네 회장"
+          ],
+          "focus": "구체적 횡령 혐의 금액(6억)과 보완수사 요청",
+          "expression_summary": "제목에 구체적인 금액(6억)을 포함하여 혐의 내용을 강조",
+          "evidence_limit": "6억이라는 구체적인 금액의 확인 여부 또는 수사 진행 상황에 대한 상세 내용은 미확인"
         }
       ]
     }
