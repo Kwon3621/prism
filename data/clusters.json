@@ -3,96 +3,1201 @@
   "clusters": [
     {
       "cluster_id": "cluster-1",
+      "category": "정치",
+      "publisher": "조선일보",
       "topic_title": "송영길 “정청래, 李 대통령 스토커 수준…대선 불출마도 뜬금없더라”",
+      "article_count": 1,
       "article_indexes": [
-        1,
-        68
+        1
       ]
     },
     {
       "cluster_id": "cluster-2",
-      "topic_title": "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "장동혁 “보완수사권 폐지 땐 괴물 경찰 탄생”",
+      "article_count": 1,
       "article_indexes": [
-        15,
-        71
+        2
       ]
     },
     {
       "cluster_id": "cluster-3",
-      "topic_title": "노경필 신임 법원행정처장 “법원에 대한 외부의 압력과 부담 커져”",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "오세훈 “부동산 한 말씀만”… 李대통령 “그 얘기는 나중에”",
+      "article_count": 1,
       "article_indexes": [
-        44,
-        114
+        3
       ]
     },
     {
       "cluster_id": "cluster-4",
-      "topic_title": "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "정청래, 선호투표제 도입에 “쿨하게 수용…할말 많으나 않겠다”",
+      "article_count": 1,
       "article_indexes": [
-        45,
-        116
+        4
       ]
     },
     {
       "cluster_id": "cluster-5",
-      "topic_title": "[속보] 법원, 쿠팡 김범석 ‘총수 지정’ 효력정지",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "李대통령 “잠재성장률 3%·무역 4강·국민소득 5만불 도약 원년”",
+      "article_count": 1,
       "article_indexes": [
-        47,
-        102
+        5
       ]
     },
     {
       "cluster_id": "cluster-6",
-      "topic_title": "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "‘연 100만건’ 인감 변경 신고, 주소지 아닌 주민센터에서도 가능해진다",
+      "article_count": 1,
       "article_indexes": [
-        48,
-        117
+        6
       ]
     },
     {
       "cluster_id": "cluster-7",
-      "topic_title": "檢, 김가네 회장 횡령 의혹 보완수사 요구",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "‘보완수사권 완전 폐지 반대’ 與 의원 11명 개정안 발의",
+      "article_count": 1,
       "article_indexes": [
-        51,
+        7
+      ]
+    },
+    {
+      "cluster_id": "cluster-8",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "주진우 “선관위, 전관 가족회사에 170억원대 일감 몰아줘...‘선피아 카르텔’”",
+      "article_count": 1,
+      "article_indexes": [
+        8
+      ]
+    },
+    {
+      "cluster_id": "cluster-9",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "강경화 대사, 이례적 일시 귀국… “한미관계 전반 업무 협의”",
+      "article_count": 1,
+      "article_indexes": [
+        9
+      ]
+    },
+    {
+      "cluster_id": "cluster-10",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "정부, 베네수엘라 강진 피해에 350만달러 추가 인도적 지원",
+      "article_count": 1,
+      "article_indexes": [
+        10
+      ]
+    },
+    {
+      "cluster_id": "cluster-11",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "정청래 “조국 키운다 공격 받았겠지만, 평택乙 후보 안 냈어야”",
+      "article_count": 1,
+      "article_indexes": [
+        11
+      ]
+    },
+    {
+      "cluster_id": "cluster-12",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "부정부패 신고자에게 신고액 30% 보상금으로 준다",
+      "article_count": 1,
+      "article_indexes": [
+        12
+      ]
+    },
+    {
+      "cluster_id": "cluster-13",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "정점식 “與, 상임위 독식 협박...원하면 국회법 개정해 가져가라”",
+      "article_count": 1,
+      "article_indexes": [
+        13
+      ]
+    },
+    {
+      "cluster_id": "cluster-14",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "李대통령, 내일부터 국민참여 업무보고",
+      "article_count": 1,
+      "article_indexes": [
+        14
+      ]
+    },
+    {
+      "cluster_id": "cluster-15",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "與 당대표 선거 ‘선호투표제’로...친청 이성윤, 최고위원 사퇴 “용납 못해”",
+      "article_count": 1,
+      "article_indexes": [
+        15
+      ]
+    },
+    {
+      "cluster_id": "cluster-16",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "李대통령, 임신중지약물 처방 관련 “의사 재량에 맡기는 것도 방법”",
+      "article_count": 1,
+      "article_indexes": [
+        16
+      ]
+    },
+    {
+      "cluster_id": "cluster-17",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "[단독] 美 싱크탱크 “이재명 정부 핵 전략, 소극적이지만 야망 품어”",
+      "article_count": 1,
+      "article_indexes": [
+        17
+      ]
+    },
+    {
+      "cluster_id": "cluster-18",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "2차례 TF에도 ‘文 통계조작 감사’ 문제 못 찾자… 될 때까지 조사한다는 감사원",
+      "article_count": 1,
+      "article_indexes": [
+        18
+      ]
+    },
+    {
+      "cluster_id": "cluster-19",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "美 육군 권장 도서는 ‘국제정치·작전’… 한국은 논어·맹자",
+      "article_count": 1,
+      "article_indexes": [
+        19
+      ]
+    },
+    {
+      "cluster_id": "cluster-20",
+      "category": "정치",
+      "publisher": "조선일보",
+      "topic_title": "여성 6단체 “피해자에 개악… 보완수사권 폐지 반대”",
+      "article_count": 1,
+      "article_indexes": [
+        20
+      ]
+    },
+    {
+      "cluster_id": "cluster-21",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "북 총리 방중 이어…‘중국 서열 4위’ 왕후닝 15∼17일 방북",
+      "article_count": 1,
+      "article_indexes": [
+        61
+      ]
+    },
+    {
+      "cluster_id": "cluster-22",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령 “임신중단약 도입 방치 무책임…투약할 수 있게 해야”",
+      "article_count": 1,
+      "article_indexes": [
+        62
+      ]
+    },
+    {
+      "cluster_id": "cluster-23",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령, 오세훈 시장에 “재건축·재개발 지연 이유 보고해달라”",
+      "article_count": 1,
+      "article_indexes": [
+        63
+      ]
+    },
+    {
+      "cluster_id": "cluster-24",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령 “개혁, 요란하면 멋있어도 저항 강해져…성과내기 어렵다”",
+      "article_count": 1,
+      "article_indexes": [
+        64
+      ]
+    },
+    {
+      "cluster_id": "cluster-25",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "[포토] 이게 얼마 만?…국무회의 참석한 오세훈 서울시장",
+      "article_count": 1,
+      "article_indexes": [
+        65
+      ]
+    },
+    {
+      "cluster_id": "cluster-26",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령 “촉법소년 1살만 낮추는 건 미약…오늘 최종 결정 안 해”",
+      "article_count": 1,
+      "article_indexes": [
+        66
+      ]
+    },
+    {
+      "cluster_id": "cluster-27",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "국무회의서 ‘초고가 1주택' 깜짝 투표…‘30억 이상’ 여론에 이 대통령 “의외네”",
+      "article_count": 1,
+      "article_indexes": [
+        67
+      ]
+    },
+    {
+      "cluster_id": "cluster-28",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”",
+      "article_count": 1,
+      "article_indexes": [
+        68
+      ]
+    },
+    {
+      "cluster_id": "cluster-29",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령 “물가·부동산 안정 총력…잠재성장률 3%까지 높여야”",
+      "article_count": 1,
+      "article_indexes": [
+        69
+      ]
+    },
+    {
+      "cluster_id": "cluster-30",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "민주 “오세훈도 명태균 수혜자…법의 철퇴 내려져야”",
+      "article_count": 1,
+      "article_indexes": [
+        70
+      ]
+    },
+    {
+      "cluster_id": "cluster-31",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결",
+      "article_count": 1,
+      "article_indexes": [
+        71
+      ]
+    },
+    {
+      "cluster_id": "cluster-32",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "[뷰리핑] 정청래 “대표직 이용해 대선 출마 안 해”",
+      "article_count": 2,
+      "article_indexes": [
+        72,
+        76
+      ]
+    },
+    {
+      "cluster_id": "cluster-33",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "국힘 정점식 “다선 의원들 강경…17일 원 구성 물 건너갔다”",
+      "article_count": 1,
+      "article_indexes": [
+        73
+      ]
+    },
+    {
+      "cluster_id": "cluster-34",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령 ‘병사들 본 적 없는 총’ 보도에 “조작 기초한 정치 공격”",
+      "article_count": 1,
+      "article_indexes": [
+        74
+      ]
+    },
+    {
+      "cluster_id": "cluster-35",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "민주 ‘선출직 청년 최고위원 부활’…당권 주자들 엇갈린 속셈",
+      "article_count": 1,
+      "article_indexes": [
+        75
+      ]
+    },
+    {
+      "cluster_id": "cluster-36",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "한·미·일 ‘SMR 협력’에…“중·러 ‘원전 굴기’ 견제 전략적 동맹”",
+      "article_count": 1,
+      "article_indexes": [
+        77
+      ]
+    },
+    {
+      "cluster_id": "cluster-37",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "김민석 “대표 교체 못 하면 당 흔들려”…송영길 “정청래 체제 정리해야”",
+      "article_count": 1,
+      "article_indexes": [
+        78
+      ]
+    },
+    {
+      "cluster_id": "cluster-38",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "이 대통령 “가정용 전력도 남아돌 땐 싸게, 피크타임엔 비싸게 바꿔야”",
+      "article_count": 1,
+      "article_indexes": [
+        79
+      ]
+    },
+    {
+      "cluster_id": "cluster-39",
+      "category": "정치",
+      "publisher": "한겨레",
+      "topic_title": "민주당서 ‘보완수사 존치’ 목소리…홍기원, 14일 형소법 발의",
+      "article_count": 1,
+      "article_indexes": [
+        80
+      ]
+    },
+    {
+      "cluster_id": "cluster-40",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "“단일종목 레버리지 상품, 금융시스템 위험 키운다”…미국 증권거래위원회(SEC), 수년 전부터 공개 경고",
+      "article_count": 1,
+      "article_indexes": [
+        21
+      ]
+    },
+    {
+      "cluster_id": "cluster-41",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "성장률 3%로 높여잡고... 고용 전망은 낮춘 정부",
+      "article_count": 2,
+      "article_indexes": [
+        22,
+        23
+      ]
+    },
+    {
+      "cluster_id": "cluster-42",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "“산업혁명보다 빠르고 거대한 쓰나미 온다”… 노벨상 수상자 등 200명, AI 경고",
+      "article_count": 1,
+      "article_indexes": [
+        24
+      ]
+    },
+    {
+      "cluster_id": "cluster-43",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "‘S KHY’가 뭐길래? 하닉 급락 속 논란만 부른 회장님의 SNS",
+      "article_count": 1,
+      "article_indexes": [
+        25
+      ]
+    },
+    {
+      "cluster_id": "cluster-44",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "얼라인 “JB·BNK 지주 합병 검토해야”…총 자산 234조 ‘국내 최대 지방금융 지주’ 제안",
+      "article_count": 1,
+      "article_indexes": [
+        26
+      ]
+    },
+    {
+      "cluster_id": "cluster-45",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "메모리 공급 부족에 스마트폰 출하량 13년 만에 최저치",
+      "article_count": 1,
+      "article_indexes": [
+        27
+      ]
+    },
+    {
+      "cluster_id": "cluster-46",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "빚 때문에 삶 포기 막는다…정부, 채무상담 대표전화 ‘1375’ 신설",
+      "article_count": 1,
+      "article_indexes": [
+        28
+      ]
+    },
+    {
+      "cluster_id": "cluster-47",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "호르무즈 ’20% 통행료' 현실화되면... 한국, 年 최대 17조원 부담",
+      "article_count": 1,
+      "article_indexes": [
+        29
+      ]
+    },
+    {
+      "cluster_id": "cluster-48",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "현대로템 K2 전차, 국내 최초 ‘나토 품질보증시스템’ 획득",
+      "article_count": 1,
+      "article_indexes": [
+        30
+      ]
+    },
+    {
+      "cluster_id": "cluster-49",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "수소차 ‘2027 넥쏘’ 출시…보조금 받으면 3697만원부터",
+      "article_count": 1,
+      "article_indexes": [
+        31
+      ]
+    },
+    {
+      "cluster_id": "cluster-50",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "삼성전자, 애플 제치고 글로벌 스마트폰 1위 탈환",
+      "article_count": 1,
+      "article_indexes": [
+        32
+      ]
+    },
+    {
+      "cluster_id": "cluster-51",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "프로티나, ABX 바이오사이언스에 34억원 출자… 최대주주로 참여",
+      "article_count": 1,
+      "article_indexes": [
+        33
+      ]
+    },
+    {
+      "cluster_id": "cluster-52",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "현대차 노조 “사측 추가 제시안 없으면 파업 수위 높인다”",
+      "article_count": 1,
+      "article_indexes": [
+        34
+      ]
+    },
+    {
+      "cluster_id": "cluster-53",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "국대 AI 2차 평가 한 달 앞… SKT, 컨소시엄에 SK AX·테크노매트릭스 합류",
+      "article_count": 1,
+      "article_indexes": [
+        35
+      ]
+    },
+    {
+      "cluster_id": "cluster-54",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "홈플러스 노조, MBK 막판 면담 불발…“일방 통보” 규탄",
+      "article_count": 1,
+      "article_indexes": [
+        36
+      ]
+    },
+    {
+      "cluster_id": "cluster-55",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "영국 공주, 울산 조선소 찾았다는데... 500원 지폐에서 시작된 56년 인연은?",
+      "article_count": 1,
+      "article_indexes": [
+        37
+      ]
+    },
+    {
+      "cluster_id": "cluster-56",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "극동건설, LH 소규모 정비사업 수주 도전…서울 서남권도 노린다",
+      "article_count": 1,
+      "article_indexes": [
+        38
+      ]
+    },
+    {
+      "cluster_id": "cluster-57",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "올 2분기 총수 주식재산 29조 증가?... 이재용·최태원 빼면 6조 줄었다",
+      "article_count": 1,
+      "article_indexes": [
+        39
+      ]
+    },
+    {
+      "cluster_id": "cluster-58",
+      "category": "경제",
+      "publisher": "조선일보",
+      "topic_title": "글로벌 반도체 시장 흔드는 주범으로 지적 받는 삼전 하닉 레버리지 상품",
+      "article_count": 1,
+      "article_indexes": [
+        40
+      ]
+    },
+    {
+      "cluster_id": "cluster-59",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "전세사기 ‘위험진단’ 서비스, 민간 부동산 플랫폼서도 만난다",
+      "article_count": 1,
+      "article_indexes": [
+        81
+      ]
+    },
+    {
+      "cluster_id": "cluster-60",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "빚 때문에 힘들면 ‘1375’로 전화해요…채무조정·개인회생 등 안내",
+      "article_count": 1,
+      "article_indexes": [
+        82
+      ]
+    },
+    {
+      "cluster_id": "cluster-61",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "하도급 대금 ‘늑장 지급’ 1위는 이랜드…공정위 “추가 감시”",
+      "article_count": 1,
+      "article_indexes": [
+        83
+      ]
+    },
+    {
+      "cluster_id": "cluster-62",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "부동산 정책대출 문턱↑…정부 “관리 강화·전세대출보증 축소”",
+      "article_count": 1,
+      "article_indexes": [
+        84
+      ]
+    },
+    {
+      "cluster_id": "cluster-63",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "6월 외국인 주식자금 순유출 324억달러…5월 이어 ‘역대 최고’",
+      "article_count": 1,
+      "article_indexes": [
+        85
+      ]
+    },
+    {
+      "cluster_id": "cluster-64",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "올해 ‘3% 성장’ 정부 전망에도…고용은 뒷걸음질",
+      "article_count": 1,
+      "article_indexes": [
+        86
+      ]
+    },
+    {
+      "cluster_id": "cluster-65",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "호르무즈해협 재봉쇄 위기…정부 “7~8월 원유 100% 이상 확보”",
+      "article_count": 1,
+      "article_indexes": [
+        87
+      ]
+    },
+    {
+      "cluster_id": "cluster-66",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "서강대학교 기계공학과,2026년 기초연구실지원사업(심화형) 2개 동시 선정",
+      "article_count": 1,
+      "article_indexes": [
+        88
+      ]
+    },
+    {
+      "cluster_id": "cluster-67",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "명지대 일어일문학전공, 도쿠시마현 4개 대학과 소비자정책 의견 교류회 개최",
+      "article_count": 1,
+      "article_indexes": [
+        89
+      ]
+    },
+    {
+      "cluster_id": "cluster-68",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "명지대 전자공학전공 연구팀, KIST와 손잡고 ‘휴머노이드 로봇’ 핵심 기술 확보 나선다",
+      "article_count": 1,
+      "article_indexes": [
+        90
+      ]
+    },
+    {
+      "cluster_id": "cluster-69",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "연세대 화학과 심은지 교수팀, 고체 재료 계산의 새로운 오차 원인 규명",
+      "article_count": 1,
+      "article_indexes": [
+        91
+      ]
+    },
+    {
+      "cluster_id": "cluster-70",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "연세대, 교육부 ‘인문사회 융합인재양성사업(HUSS)’ 선정",
+      "article_count": 1,
+      "article_indexes": [
+        92
+      ]
+    },
+    {
+      "cluster_id": "cluster-71",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "채권운용·분석가 66% “16일 금통위 금리 인상할 듯”",
+      "article_count": 1,
+      "article_indexes": [
+        93
+      ]
+    },
+    {
+      "cluster_id": "cluster-72",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "서울시립대 김동현 석박사통합과정생, ESTIV 2026 국제학술대회 Toxicology-Elsevier 우수발표상 및 EPAA Travel Grant 수상",
+      "article_count": 1,
+      "article_indexes": [
+        94
+      ]
+    },
+    {
+      "cluster_id": "cluster-73",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "삼육대, ‘美 글로벌 CEO 과정’ 출범… 첫 수료생 20명 배출",
+      "article_count": 1,
+      "article_indexes": [
+        95
+      ]
+    },
+    {
+      "cluster_id": "cluster-74",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "덕성여대, ‘2026 HUSS 융합캠프 AI 경진대회’ 최우수상 수상",
+      "article_count": 1,
+      "article_indexes": [
+        96
+      ]
+    },
+    {
+      "cluster_id": "cluster-75",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "연세대, 대학원 항공우주공학과 출범…산·학·연이 함께하는 대한민국 우주항공 미래 비전 제시",
+      "article_count": 1,
+      "article_indexes": [
+        97
+      ]
+    },
+    {
+      "cluster_id": "cluster-76",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "경희대 물리학과 손석균 교수, ‘2026 양자과학기술발전 유공’ 부총리 겸 과기정통부 장관 표창 수상",
+      "article_count": 1,
+      "article_indexes": [
+        98
+      ]
+    },
+    {
+      "cluster_id": "cluster-77",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "“세계 축산인 사로잡은 K-한우” 한우자조금, 한국축산학회 국제학술대회서 한우 우수성 알려",
+      "article_count": 1,
+      "article_indexes": [
+        99
+      ]
+    },
+    {
+      "cluster_id": "cluster-78",
+      "category": "경제",
+      "publisher": "한겨레",
+      "topic_title": "사이버한국외국어대학교 영어학부, 美 괌 대학교서 단기어학연수 성료",
+      "article_count": 1,
+      "article_indexes": [
+        100
+      ]
+    },
+    {
+      "cluster_id": "cluster-79",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "노동부 “호남 반도체 투자 노조 교섭 대상 아니야”",
+      "article_count": 1,
+      "article_indexes": [
+        41
+      ]
+    },
+    {
+      "cluster_id": "cluster-80",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "경찰, 윤재순·강의구 검찰에 불구속 송치",
+      "article_count": 1,
+      "article_indexes": [
+        42
+      ]
+    },
+    {
+      "cluster_id": "cluster-81",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "무인점포서 제품 뜯고, 스프레이 뿌린 촉법 소년들… 가정법원 송치",
+      "article_count": 1,
+      "article_indexes": [
+        43
+      ]
+    },
+    {
+      "cluster_id": "cluster-82",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "노경필 신임 법원행정처장 “법원에 대한 외부의 압력과 부담 커져”",
+      "article_count": 1,
+      "article_indexes": [
+        44
+      ]
+    },
+    {
+      "cluster_id": "cluster-83",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "촉법소년 연령 하향 추진…“강력·중대·반복범죄 연령 14세→13세 검토\"",
+      "article_count": 1,
+      "article_indexes": [
+        45
+      ]
+    },
+    {
+      "cluster_id": "cluster-84",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "위성곤 제주지사 “대규모 육상 우주센터보다 소형 위성 해상발사 적합”",
+      "article_count": 1,
+      "article_indexes": [
+        46
+      ]
+    },
+    {
+      "cluster_id": "cluster-85",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "법원 “쿠팡 ‘동일인’ 김범석 지정한 공정위 처분 효력정지”",
+      "article_count": 1,
+      "article_indexes": [
+        47
+      ]
+    },
+    {
+      "cluster_id": "cluster-86",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "종합특검, 심우정 前 검찰총장·전무곤 前 기조부장 구속영장 청구",
+      "article_count": 1,
+      "article_indexes": [
+        48
+      ]
+    },
+    {
+      "cluster_id": "cluster-87",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "세균 검출된 中 마라맛 곤약, 판매 중단 권고 후에도 버젓이 판매",
+      "article_count": 1,
+      "article_indexes": [
+        49
+      ]
+    },
+    {
+      "cluster_id": "cluster-88",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "의뢰인 선임료·합의금 2억4000만원 가로채 도박한 변호사",
+      "article_count": 1,
+      "article_indexes": [
+        50
+      ]
+    },
+    {
+      "cluster_id": "cluster-89",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "檢, 김가네 회장 횡령 의혹 보완수사 요구",
+      "article_count": 1,
+      "article_indexes": [
+        51
+      ]
+    },
+    {
+      "cluster_id": "cluster-90",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "‘파충류 키우겠다’며 빌린 농작물 가공 공장서 대마 재배한 40대 男",
+      "article_count": 1,
+      "article_indexes": [
+        52
+      ]
+    },
+    {
+      "cluster_id": "cluster-91",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "춘천서 오물 더미 속 개 52마리 방치한 60대 구속",
+      "article_count": 1,
+      "article_indexes": [
+        53
+      ]
+    },
+    {
+      "cluster_id": "cluster-92",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "[단독] MS 오픈소스 플랫폼 ‘깃허브’ 계정 500여개 대량 유출... 한국 경찰이 최초 포착",
+      "article_count": 1,
+      "article_indexes": [
+        54
+      ]
+    },
+    {
+      "cluster_id": "cluster-93",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "경찰, 장윤기 증거인멸 의혹 광산경찰서장·형사과장 직권남용 혐의 입건",
+      "article_count": 1,
+      "article_indexes": [
+        55
+      ]
+    },
+    {
+      "cluster_id": "cluster-94",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "1500원 아이스크림 나눠 먹고… ‘특수절도범’ 된 발달장애인들",
+      "article_count": 1,
+      "article_indexes": [
+        56
+      ]
+    },
+    {
+      "cluster_id": "cluster-95",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "특검, 김건희 대법 선고 연기 신청…“尹 유죄 판결 반영해달라”",
+      "article_count": 1,
+      "article_indexes": [
+        57
+      ]
+    },
+    {
+      "cluster_id": "cluster-96",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "김포 차량서 50대 여성 시신 발견…피의자 60대 男, 파주서 극단 선택",
+      "article_count": 1,
+      "article_indexes": [
+        58
+      ]
+    },
+    {
+      "cluster_id": "cluster-97",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "“교육감 선거, 인기 투표로 변질… 학교가 공약 도구 돼버렸다”",
+      "article_count": 1,
+      "article_indexes": [
+        59
+      ]
+    },
+    {
+      "cluster_id": "cluster-98",
+      "category": "사회",
+      "publisher": "조선일보",
+      "topic_title": "일본은 지자체장이 의회 동의하에 임명",
+      "article_count": 1,
+      "article_indexes": [
+        60
+      ]
+    },
+    {
+      "cluster_id": "cluster-99",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "[포토] “나를 찾다, 미래를 열다”…청소년 맞춤 서울진로직업박람회 개막",
+      "article_count": 1,
+      "article_indexes": [
+        101
+      ]
+    },
+    {
+      "cluster_id": "cluster-100",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "[속보] 법원, 쿠팡 김범석 ‘총수 지정’ 효력정지",
+      "article_count": 1,
+      "article_indexes": [
+        102
+      ]
+    },
+    {
+      "cluster_id": "cluster-101",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "‘하층제트’ 효과 경기·강원 북부, 밤사이 강풍 동반 시간당 50㎜ 폭우",
+      "article_count": 1,
+      "article_indexes": [
+        103
+      ]
+    },
+    {
+      "cluster_id": "cluster-102",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "‘지역필수공공의료실’ 신설…의료인력양성과·국립대병원과 눈길",
+      "article_count": 1,
+      "article_indexes": [
+        104
+      ]
+    },
+    {
+      "cluster_id": "cluster-103",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "‘입학사정관에 입시정보 청탁’은 입학취소 사유, 법에 명시한다",
+      "article_count": 1,
+      "article_indexes": [
+        105
+      ]
+    },
+    {
+      "cluster_id": "cluster-104",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "김가네 회장 ‘6억 횡령’ 혐의…검찰, 경찰에 보완수사 요청",
+      "article_count": 1,
+      "article_indexes": [
         106
+      ]
+    },
+    {
+      "cluster_id": "cluster-105",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "인권위, ‘북한이탈주민의 날’ 성명…“북한이탈주민 인권 보호 민주주의 척도”",
+      "article_count": 1,
+      "article_indexes": [
+        107
+      ]
+    },
+    {
+      "cluster_id": "cluster-106",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "시민들이 바라는 의료정책 1위…“응급실 뺑뺑이 없애주세요”",
+      "article_count": 1,
+      "article_indexes": [
+        108
+      ]
+    },
+    {
+      "cluster_id": "cluster-107",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "[단독] “강호필, 포고령 위반하면 전시엔 사형 발언”…특검, 진술 확보",
+      "article_count": 1,
+      "article_indexes": [
+        109
+      ]
+    },
+    {
+      "cluster_id": "cluster-108",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "예술이 된 ‘헌법’ [포토]",
+      "article_count": 1,
+      "article_indexes": [
+        110
+      ]
+    },
+    {
+      "cluster_id": "cluster-109",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "기업·개발자 ‘깃허브 접속 권한’ 유출 비상…경찰 “재발급해야”",
+      "article_count": 1,
+      "article_indexes": [
+        111
+      ]
+    },
+    {
+      "cluster_id": "cluster-110",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "국내 중·대형차, 2030년까지 온실가스 배출량 30% 줄여야 한다",
+      "article_count": 1,
+      "article_indexes": [
+        112
+      ]
+    },
+    {
+      "cluster_id": "cluster-111",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "공동정범 김건희, 모친 구속날 “흉재인가요?”…명태균 게이트 판결문",
+      "article_count": 1,
+      "article_indexes": [
+        113
+      ]
+    },
+    {
+      "cluster_id": "cluster-112",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "넉달 만에 공석 채운 노경필 법원행정처장 “구성원 든든한 울타리 되겠다”",
+      "article_count": 1,
+      "article_indexes": [
+        114
+      ]
+    },
+    {
+      "cluster_id": "cluster-113",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "‘홍명보 감독 선임 공개 비판’ 박주호, 경찰 참고인 조사",
+      "article_count": 1,
+      "article_indexes": [
+        115
+      ]
+    },
+    {
+      "cluster_id": "cluster-114",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고",
+      "article_count": 1,
+      "article_indexes": [
+        116
+      ]
+    },
+    {
+      "cluster_id": "cluster-115",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구",
+      "article_count": 1,
+      "article_indexes": [
+        117
+      ]
+    },
+    {
+      "cluster_id": "cluster-116",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "내일까지 전국에 ‘비 소식’…무더위는 계속돼 ‘잠 못 드는 밤’",
+      "article_count": 1,
+      "article_indexes": [
+        118
+      ]
+    },
+    {
+      "cluster_id": "cluster-117",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "“국가보안법 정면 마주할 때…베트남전 사건 각하는 재고 필요” [안녕 진화위㉜]",
+      "article_count": 1,
+      "article_indexes": [
+        119
+      ]
+    },
+    {
+      "cluster_id": "cluster-118",
+      "category": "사회",
+      "publisher": "한겨레",
+      "topic_title": "[단독] 감사원 미리 써둔 ‘윤석열 관저 보고서’ 정황…진술도 조작했나",
+      "article_count": 1,
+      "article_indexes": [
+        120
       ]
     }
   ],
   "matched_pairs": [
     {
-      "first_index": 1,
-      "second_index": 68,
-      "similarity": 0.291
+      "category": "정치",
+      "publisher": "한겨레",
+      "first_index": 72,
+      "second_index": 76,
+      "similarity": 0.555
     },
     {
-      "first_index": 15,
-      "second_index": 71,
-      "similarity": 0.292
-    },
-    {
-      "first_index": 44,
-      "second_index": 114,
-      "similarity": 0.319
-    },
-    {
-      "first_index": 45,
-      "second_index": 116,
-      "similarity": 0.317
-    },
-    {
-      "first_index": 47,
-      "second_index": 102,
-      "similarity": 0.338
-    },
-    {
-      "first_index": 48,
-      "second_index": 117,
-      "similarity": 0.47
-    },
-    {
-      "first_index": 51,
-      "second_index": 106,
-      "similarity": 0.456
+      "category": "경제",
+      "publisher": "조선일보",
+      "first_index": 22,
+      "second_index": 23,
+      "similarity": 0.339
     }
   ]
 }
