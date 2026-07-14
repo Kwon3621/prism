@@ -1,0 +1,585 @@
+{
+  "cluster_similarity_threshold": 0.22,
+  "matched_issue_count": 8,
+  "matched_pair_count": 8,
+  "matched_issues": [
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-1",
+        "cluster-28"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-1",
+          "publisher": "조선일보",
+          "topic_title": "송영길 “정청래, 李 대통령 스토커 수준…대선 불출마도 뜬금없더라”",
+          "article_count": 1,
+          "article_indexes": [
+            1
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "송영길 “정청래, 李 대통령 스토커 수준…대선 불출마도 뜬금없더라”",
+              "link": "https://www.chosun.com/politics/assembly/2026/07/14/WQY4NHKGSVE6HHIYPKVDOABFWI/",
+              "published": "Tue, 14 Jul 2026 02:51:22 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-28",
+          "publisher": "한겨레",
+          "topic_title": "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”",
+          "article_count": 1,
+          "article_indexes": [
+            68
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "정치",
+              "title": "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1268144.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-1",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-28",
+          "second_publisher": "한겨레",
+          "similarity": 0.277
+        }
+      ],
+      "match_id": "match-1"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-15",
+        "cluster-31"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-15",
+          "publisher": "조선일보",
+          "topic_title": "與 당대표 선거 ‘선호투표제’로...친청 이성윤, 최고위원 사퇴 “용납 못해”",
+          "article_count": 1,
+          "article_indexes": [
+            15
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "與 당대표 선거 ‘선호투표제’로...친청 이성윤, 최고위원 사퇴 “용납 못해”",
+              "link": "https://www.chosun.com/politics/assembly/2026/07/14/NRHZML52KVEC5D57ODYCDQ2JFM/",
+              "published": "Tue, 14 Jul 2026 00:35:00 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-31",
+          "publisher": "한겨레",
+          "topic_title": "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결",
+          "article_count": 1,
+          "article_indexes": [
+            71
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "정치",
+              "title": "민주 당대표 ‘선호투표제’ 도입키로…‘선출직 청년최고위원’은 부결",
+              "link": "https://www.hani.co.kr/arti/politics/assembly/1268124.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-15",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-31",
+          "second_publisher": "한겨레",
+          "similarity": 0.277
+        }
+      ],
+      "match_id": "match-2"
+    },
+    {
+      "category": "경제",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-46",
+        "cluster-60"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-46",
+          "publisher": "조선일보",
+          "topic_title": "빚 때문에 삶 포기 막는다…정부, 채무상담 대표전화 ‘1375’ 신설",
+          "article_count": 1,
+          "article_indexes": [
+            28
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "경제",
+              "title": "빚 때문에 삶 포기 막는다…정부, 채무상담 대표전화 ‘1375’ 신설",
+              "link": "https://www.chosun.com/economy/economy_general/2026/07/14/EXNPL3XAHBAILEA4VAEMZOLLNI/",
+              "published": "Tue, 14 Jul 2026 05:14:32 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-60",
+          "publisher": "한겨레",
+          "topic_title": "빚 때문에 힘들면 ‘1375’로 전화해요…채무조정·개인회생 등 안내",
+          "article_count": 1,
+          "article_indexes": [
+            82
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "경제",
+              "title": "빚 때문에 힘들면 ‘1375’로 전화해요…채무조정·개인회생 등 안내",
+              "link": "https://www.hani.co.kr/arti/economy/finance/1268179.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "경제",
+          "first_cluster_id": "cluster-46",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-60",
+          "second_publisher": "한겨레",
+          "similarity": 0.267
+        }
+      ],
+      "match_id": "match-3"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-82",
+        "cluster-112"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-82",
+          "publisher": "조선일보",
+          "topic_title": "노경필 신임 법원행정처장 “법원에 대한 외부의 압력과 부담 커져”",
+          "article_count": 1,
+          "article_indexes": [
+            44
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "노경필 신임 법원행정처장 “법원에 대한 외부의 압력과 부담 커져”",
+              "link": "https://www.chosun.com/national/court_law/2026/07/14/24XBTH6S5JE6POGSZG34D5UI5I/",
+              "published": "Tue, 14 Jul 2026 01:40:52 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-112",
+          "publisher": "한겨레",
+          "topic_title": "넉달 만에 공석 채운 노경필 법원행정처장 “구성원 든든한 울타리 되겠다”",
+          "article_count": 1,
+          "article_indexes": [
+            114
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "넉달 만에 공석 채운 노경필 법원행정처장 “구성원 든든한 울타리 되겠다”",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268156.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-82",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-112",
+          "second_publisher": "한겨레",
+          "similarity": 0.303
+        }
+      ],
+      "match_id": "match-4"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-83",
+        "cluster-114"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-83",
+          "publisher": "조선일보",
+          "topic_title": "촉법소년 연령 하향 추진…“강력·중대·반복범죄 연령 14세→13세 검토\"",
+          "article_count": 1,
+          "article_indexes": [
+            45
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "촉법소년 연령 하향 추진…“강력·중대·반복범죄 연령 14세→13세 검토\"",
+              "link": "https://www.chosun.com/national/education/2026/07/14/6A2SKJHJRRCADL52XUKT4H32GY/",
+              "published": "Tue, 14 Jul 2026 01:38:50 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-114",
+          "publisher": "한겨레",
+          "topic_title": "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고",
+          "article_count": 1,
+          "article_indexes": [
+            116
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "정부, 촉법소년 연령 강력·반복 범죄 한해 13살로 하향 국무회의 보고",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268131.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-83",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-114",
+          "second_publisher": "한겨레",
+          "similarity": 0.304
+        }
+      ],
+      "match_id": "match-5"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-85",
+        "cluster-100"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-85",
+          "publisher": "조선일보",
+          "topic_title": "법원 “쿠팡 ‘동일인’ 김범석 지정한 공정위 처분 효력정지”",
+          "article_count": 1,
+          "article_indexes": [
+            47
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "법원 “쿠팡 ‘동일인’ 김범석 지정한 공정위 처분 효력정지”",
+              "link": "https://www.chosun.com/national/court_law/2026/07/14/JPSEBG3Z3RB7BEO45CXRZFFTZ4/",
+              "published": "Tue, 14 Jul 2026 04:45:14 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-100",
+          "publisher": "한겨레",
+          "topic_title": "[속보] 법원, 쿠팡 김범석 ‘총수 지정’ 효력정지",
+          "article_count": 1,
+          "article_indexes": [
+            102
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "[속보] 법원, 쿠팡 김범석 ‘총수 지정’ 효력정지",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268182.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-85",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-100",
+          "second_publisher": "한겨레",
+          "similarity": 0.323
+        }
+      ],
+      "match_id": "match-6"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-86",
+        "cluster-115"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-86",
+          "publisher": "조선일보",
+          "topic_title": "종합특검, 심우정 前 검찰총장·전무곤 前 기조부장 구속영장 청구",
+          "article_count": 1,
+          "article_indexes": [
+            48
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "종합특검, 심우정 前 검찰총장·전무곤 前 기조부장 구속영장 청구",
+              "link": "https://www.chosun.com/national/court_law/2026/07/14/XI6HUBD5DRCAFCLBWHMMNML6E4/",
+              "published": "Tue, 14 Jul 2026 00:43:16 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-115",
+          "publisher": "한겨레",
+          "topic_title": "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구",
+          "article_count": 1,
+          "article_indexes": [
+            117
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "특검, ‘내란 가담’ 의혹 심우정 전 검찰총장 구속영장 청구",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268125.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-86",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-115",
+          "second_publisher": "한겨레",
+          "similarity": 0.459
+        }
+      ],
+      "match_id": "match-7"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-89",
+        "cluster-104"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-89",
+          "publisher": "조선일보",
+          "topic_title": "檢, 김가네 회장 횡령 의혹 보완수사 요구",
+          "article_count": 1,
+          "article_indexes": [
+            51
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "檢, 김가네 회장 횡령 의혹 보완수사 요구",
+              "link": "https://www.chosun.com/national/national_general/2026/07/14/ZC4OTHT3B5DCNIQFO2FMIDHHLU/",
+              "published": "Tue, 14 Jul 2026 04:37:28 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-104",
+          "publisher": "한겨레",
+          "topic_title": "김가네 회장 ‘6억 횡령’ 혐의…검찰, 경찰에 보완수사 요청",
+          "article_count": 1,
+          "article_indexes": [
+            106
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "김가네 회장 ‘6억 횡령’ 혐의…검찰, 경찰에 보완수사 요청",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268172.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-89",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-104",
+          "second_publisher": "한겨레",
+          "similarity": 0.471
+        }
+      ],
+      "match_id": "match-8"
+    }
+  ],
+  "matched_pairs": [
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-1",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-28",
+      "second_publisher": "한겨레",
+      "similarity": 0.277
+    },
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-15",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-31",
+      "second_publisher": "한겨레",
+      "similarity": 0.277
+    },
+    {
+      "category": "경제",
+      "first_cluster_id": "cluster-46",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-60",
+      "second_publisher": "한겨레",
+      "similarity": 0.267
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-82",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-112",
+      "second_publisher": "한겨레",
+      "similarity": 0.303
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-83",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-114",
+      "second_publisher": "한겨레",
+      "similarity": 0.304
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-85",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-100",
+      "second_publisher": "한겨레",
+      "similarity": 0.323
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-86",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-115",
+      "second_publisher": "한겨레",
+      "similarity": 0.459
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-89",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-104",
+      "second_publisher": "한겨레",
+      "similarity": 0.471
+    }
+  ]
+}
