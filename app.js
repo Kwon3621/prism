@@ -592,7 +592,7 @@ async function renderSearchSuggestions() {
       .map(keyword => String(keyword).trim())
       .filter(Boolean);
 
-    const uniqueKeywords = [...new Set(keywords)].slice(0, 5);
+    const uniqueKeywords = [...new Set(keywords)].slice(0, 3);
 
     if (!uniqueKeywords.length) {
       targets.forEach(target => {
