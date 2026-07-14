@@ -1,0 +1,619 @@
+{
+  "cluster_similarity_threshold": 0.22,
+  "matched_issue_count": 7,
+  "matched_pair_count": 12,
+  "matched_issues": [
+    {
+      "category": "정치",
+      "publisher_count": 3,
+      "publishers": [
+        "조선일보",
+        "한겨레",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-12",
+        "cluster-24",
+        "cluster-52"
+      ],
+      "total_article_count": 3,
+      "clusters": [
+        {
+          "cluster_id": "cluster-12",
+          "publisher": "조선일보",
+          "topic_title": "주진우 “선관위, 전관 가족회사에 170억원대 일감 몰아줘...‘선피아 카르텔’”",
+          "article_count": 1,
+          "article_indexes": [
+            12
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "주진우 “선관위, 전관 가족회사에 170억원대 일감 몰아줘...‘선피아 카르텔’”",
+              "link": "https://www.chosun.com/politics/assembly/2026/07/14/SQY7DJJDBVADFMAYMJ3G3YQG6U/",
+              "published": "Tue, 14 Jul 2026 05:02:09 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-24",
+          "publisher": "한겨레",
+          "topic_title": "선관위, 전관·아내 회사에 ‘175억 일감’ 몰아줘…반투명 투표함 납품도",
+          "article_count": 1,
+          "article_indexes": [
+            64
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "정치",
+              "title": "선관위, 전관·아내 회사에 ‘175억 일감’ 몰아줘…반투명 투표함 납품도",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1268208.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-52",
+          "publisher": "한국경제",
+          "topic_title": "주진우 \"선관위, 전관·가족회사에 175억원 일감 몰아줬다\"",
+          "article_count": 1,
+          "article_indexes": [
+            133
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "정치",
+              "title": "주진우 \"선관위, 전관·가족회사에 175억원 일감 몰아줬다\"",
+              "link": "https://www.hankyung.com/article/202607144733H",
+              "published": "Tue, 14 Jul 2026 16:27:40 +0900",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-12",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-52",
+          "second_publisher": "한국경제",
+          "similarity": 0.362
+        },
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-24",
+          "first_publisher": "한겨레",
+          "second_cluster_id": "cluster-52",
+          "second_publisher": "한국경제",
+          "similarity": 0.254
+        }
+      ],
+      "match_id": "match-1"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 3,
+      "publishers": [
+        "조선일보",
+        "한겨레",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-120",
+        "cluster-138",
+        "cluster-170"
+      ],
+      "total_article_count": 3,
+      "clusters": [
+        {
+          "cluster_id": "cluster-120",
+          "publisher": "조선일보",
+          "topic_title": "[속보] 2차 특검 ‘관저 이전 부실 감사’ 유병호 감사위원 구속영장 청구...수사 막바지 영장 ‘몰아치기’",
+          "article_count": 1,
+          "article_indexes": [
+            44
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "[속보] 2차 특검 ‘관저 이전 부실 감사’ 유병호 감사위원 구속영장 청구...수사 막바지 영장 ‘몰아치기’",
+              "link": "https://www.chosun.com/national/court_law/2026/07/14/KQA4UHXC5NDAFN6GDITMJ3MN4Y/",
+              "published": "Tue, 14 Jul 2026 07:48:59 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-138",
+          "publisher": "한겨레",
+          "topic_title": "종합특검, ‘관저 이전 위법 감사’ 의혹 유병호 구속영장 청구",
+          "article_count": 1,
+          "article_indexes": [
+            102
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "종합특검, ‘관저 이전 위법 감사’ 의혹 유병호 구속영장 청구",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268239.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-170",
+          "publisher": "한국경제",
+          "topic_title": "[속보] 종합특검, '관저 이전 부실 감사' 유병호 구속영장 청구",
+          "article_count": 1,
+          "article_indexes": [
+            175
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "사회",
+              "title": "[속보] 종합특검, '관저 이전 부실 감사' 유병호 구속영장 청구",
+              "link": "https://www.hankyung.com/article/2026071448157",
+              "published": "Tue, 14 Jul 2026 16:44:16 +0900",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-120",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-138",
+          "second_publisher": "한겨레",
+          "similarity": 0.423
+        },
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-120",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-170",
+          "second_publisher": "한국경제",
+          "similarity": 0.446
+        },
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-138",
+          "first_publisher": "한겨레",
+          "second_cluster_id": "cluster-170",
+          "second_publisher": "한국경제",
+          "similarity": 0.617
+        }
+      ],
+      "match_id": "match-2"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-8",
+        "cluster-44"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-8",
+          "publisher": "조선일보",
+          "topic_title": "‘보완수사권 완전 폐지 반대’ 與 의원 11명 개정안 발의",
+          "article_count": 1,
+          "article_indexes": [
+            8
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "‘보완수사권 완전 폐지 반대’ 與 의원 11명 개정안 발의",
+              "link": "https://www.chosun.com/politics/assembly/2026/07/14/6GYSAKPFIVCKFGQNSBFXCKW7GI/",
+              "published": "Tue, 14 Jul 2026 00:59:59 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-44",
+          "publisher": "한국경제",
+          "topic_title": "與 의원 11명 '檢 보완수사권 일부 허용' 개정안 발의",
+          "article_count": 1,
+          "article_indexes": [
+            125
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "정치",
+              "title": "與 의원 11명 '檢 보완수사권 일부 허용' 개정안 발의",
+              "link": "https://www.hankyung.com/article/2026071449311",
+              "published": "Tue, 14 Jul 2026 17:12:17 +0900",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-8",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-44",
+          "second_publisher": "한국경제",
+          "similarity": 0.575
+        }
+      ],
+      "match_id": "match-3"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-14",
+        "cluster-57"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-14",
+          "publisher": "조선일보",
+          "topic_title": "李, 촉법소년 연령 “낮추긴 낮춰야, 한살은 부족한것 같기도...”",
+          "article_count": 1,
+          "article_indexes": [
+            14
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "李, 촉법소년 연령 “낮추긴 낮춰야, 한살은 부족한것 같기도...”",
+              "link": "https://www.chosun.com/politics/politics_general/2026/07/14/2INKNG3RAJHUDNZTUYXDHPX55Y/",
+              "published": "Tue, 14 Jul 2026 03:06:27 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-57",
+          "publisher": "한국경제",
+          "topic_title": "이 대통령 \"촉법소년 기준, 낮추긴 낮춰야\"",
+          "article_count": 1,
+          "article_indexes": [
+            140
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "정치",
+              "title": "이 대통령 \"촉법소년 기준, 낮추긴 낮춰야\"",
+              "link": "https://www.hankyung.com/article/2026071439787",
+              "published": "Tue, 14 Jul 2026 11:47:52 +0900",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-14",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-57",
+          "second_publisher": "한국경제",
+          "similarity": 0.276
+        }
+      ],
+      "match_id": "match-4"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-15",
+        "cluster-33"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-15",
+          "publisher": "조선일보",
+          "topic_title": "송영길 “정청래, 李 대통령 스토커 수준…대선 불출마도 뜬금없더라”",
+          "article_count": 1,
+          "article_indexes": [
+            15
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "송영길 “정청래, 李 대통령 스토커 수준…대선 불출마도 뜬금없더라”",
+              "link": "https://www.chosun.com/politics/assembly/2026/07/14/WQY4NHKGSVE6HHIYPKVDOABFWI/",
+              "published": "Tue, 14 Jul 2026 02:51:22 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-33",
+          "publisher": "한겨레",
+          "topic_title": "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”",
+          "article_count": 1,
+          "article_indexes": [
+            73
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "정치",
+              "title": "송영길 “정청래, 4년 남은 정권에서 뜬금없이 대선 얘기…모든 게 ‘선청후당’”",
+              "link": "https://www.hani.co.kr/arti/politics/politics_general/1268144.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-15",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-33",
+          "second_publisher": "한겨레",
+          "similarity": 0.289
+        }
+      ],
+      "match_id": "match-5"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-19",
+        "cluster-45"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-19",
+          "publisher": "조선일보",
+          "topic_title": "강경화 대사, 이례적 일시 귀국… “한미관계 전반 업무 협의”",
+          "article_count": 1,
+          "article_indexes": [
+            19
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "강경화 대사, 이례적 일시 귀국… “한미관계 전반 업무 협의”",
+              "link": "https://www.chosun.com/international/us/2026/07/14/YMXQWH3T7JGXJMPRRNSSBM2QGY/",
+              "published": "Tue, 14 Jul 2026 01:55:12 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-45",
+          "publisher": "한국경제",
+          "topic_title": "강경화 일시 귀국…대미투자·쿠팡 현안 논의하나",
+          "article_count": 1,
+          "article_indexes": [
+            126
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "정치",
+              "title": "강경화 일시 귀국…대미투자·쿠팡 현안 논의하나",
+              "link": "https://www.hankyung.com/article/2026071449321",
+              "published": "Tue, 14 Jul 2026 17:11:20 +0900",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-19",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-45",
+          "second_publisher": "한국경제",
+          "similarity": 0.239
+        }
+      ],
+      "match_id": "match-6"
+    },
+    {
+      "category": "사회",
+      "publisher_count": 2,
+      "publishers": [
+        "조선일보",
+        "한겨레"
+      ],
+      "cluster_ids": [
+        "cluster-121",
+        "cluster-139"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-121",
+          "publisher": "조선일보",
+          "topic_title": "자진 출석 피의자 긴급체포에 허위 영장까지...현직 경찰관 재판行",
+          "article_count": 1,
+          "article_indexes": [
+            45
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "사회",
+              "title": "자진 출석 피의자 긴급체포에 허위 영장까지...현직 경찰관 재판行",
+              "link": "https://www.chosun.com/national/national_general/2026/07/14/ZLDJU74XNZAD7CG2IFG7ZK6RYE/",
+              "published": "Tue, 14 Jul 2026 08:16:01 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-139",
+          "publisher": "한겨레",
+          "topic_title": "밖으로 나오라더니…‘자진 출석’ 피의자 긴급체포한 경찰관 기소",
+          "article_count": 1,
+          "article_indexes": [
+            103
+          ],
+          "articles": [
+            {
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "밖으로 나오라더니…‘자진 출석’ 피의자 긴급체포한 경찰관 기소",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1268236.html",
+              "published": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "사회",
+          "first_cluster_id": "cluster-121",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-139",
+          "second_publisher": "한겨레",
+          "similarity": 0.328
+        }
+      ],
+      "match_id": "match-7"
+    }
+  ],
+  "matched_pairs": [
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-8",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-44",
+      "second_publisher": "한국경제",
+      "similarity": 0.575
+    },
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-12",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-52",
+      "second_publisher": "한국경제",
+      "similarity": 0.362
+    },
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-14",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-57",
+      "second_publisher": "한국경제",
+      "similarity": 0.276
+    },
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-15",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-33",
+      "second_publisher": "한겨레",
+      "similarity": 0.289
+    },
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-19",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-45",
+      "second_publisher": "한국경제",
+      "similarity": 0.239
+    },
+    {
+      "category": "정치",
+      "first_cluster_id": "cluster-24",
+      "first_publisher": "한겨레",
+      "second_cluster_id": "cluster-52",
+      "second_publisher": "한국경제",
+      "similarity": 0.254
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-120",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-138",
+      "second_publisher": "한겨레",
+      "similarity": 0.423
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-120",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-170",
+      "second_publisher": "한국경제",
+      "similarity": 0.446
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-121",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-139",
+      "second_publisher": "한겨레",
+      "similarity": 0.328
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-130",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-138",
+      "second_publisher": "한겨레",
+      "similarity": 0.343
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-130",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-170",
+      "second_publisher": "한국경제",
+      "similarity": 0.329
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-138",
+      "first_publisher": "한겨레",
+      "second_cluster_id": "cluster-170",
+      "second_publisher": "한국경제",
+      "similarity": 0.617
+    }
+  ]
+}
