@@ -214,7 +214,8 @@ async function renderLiveNews() {
 
     const newsItems = await response.json();
 
-    let visibleCount = 4;
+    const INITIAL_COUNT = 4; 
+    let visibleCount = INITIAL_COUNT;
 
     function render() {
       const visibleNews = newsItems.slice(0, visibleCount);
@@ -244,23 +245,48 @@ async function renderLiveNews() {
         )
         .join("");
 
-      if (visibleCount < newsItems.length) {
+      
+      if (newsItems.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
         wrapper.style.gridColumn = "1 / -1";
         wrapper.style.textAlign = "center";
         wrapper.style.marginTop = "24px";
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+        wrapper.style.gap = "12px";
 
-        const button = document.createElement("button");
-        button.className = "btn btn-primary";
-        button.textContent = "더보기";
+      
+        if (visibleCount < newsItems.length) {
+          const loadMoreBtn = document.createElement("button");
+          loadMoreBtn.className = "btn btn-primary";
+          loadMoreBtn.textContent = "더보기 ▾";
+          
+          loadMoreBtn.addEventListener("click", () => {
+            visibleCount += 4;
+            render();
+          });
+          
+          wrapper.appendChild(loadMoreBtn);
+        }
 
-        button.addEventListener("click", () => {
-          visibleCount += 4;
-          render();
-        });
+        
+        if (visibleCount > INITIAL_COUNT) {
+          const shrinkBtn = document.createElement("button");
+          shrinkBtn.className = "btn btn-secondary";
+          shrinkBtn.textContent = "줄이기 ▴";
+          
+          shrinkBtn.addEventListener("click", () => {
+            visibleCount = INITIAL_COUNT;
+            render();
+            
+            
+            root.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+          
+          wrapper.appendChild(shrinkBtn);
+        }
 
-        wrapper.appendChild(button);
         root.appendChild(wrapper);
       }
     }
@@ -529,4 +555,124 @@ document.addEventListener('DOMContentLoaded', () => {
   renderLiveNews();
   renderIssuePage();
   renderFeaturedIssue();
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginNavBtn = document.getElementById("btn-login-nav");
+  const loginModal = document.getElementById("login-modal");
+  const closeModalBtn = document.getElementById("btn-close-modal");
+  const authForm = document.getElementById("auth-form");
+  
+  const modalTitle = document.getElementById("modal-title");
+  const modalDesc = document.getElementById("modal-desc");
+  const fieldName = document.getElementById("field-name");
+  const authNameInput = document.getElementById("auth-name");
+  const authEmailInput = document.getElementById("auth-email");
+  const authPasswordInput = document.getElementById("auth-password");
+  const btnAuthSubmit = document.getElementById("btn-auth-submit");
+  const switchText = document.getElementById("switch-text");
+  const linkSwitchAuth = document.getElementById("link-switch-auth");
+
+  if (!loginNavBtn || !loginModal) return;
+
+  let isLoginMode = true; 
+  let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  updateLoginUI();
+
+  loginNavBtn.addEventListener("click", () => {
+    if (isLoggedIn) {
+      localStorage.removeItem("isLoggedIn");
+      isLoggedIn = false;
+      alert("로그아웃 되었습니다.");
+      updateLoginUI();
+    } else {
+      setAuthMode(true);
+      loginModal.style.display = "flex";
+    }
+  });
+
+  linkSwitchAuth.addEventListener("click", (e) => {
+    e.preventDefault();
+    setAuthMode(!isLoginMode);
+  });
+
+  function setAuthMode(toLoginMode) {
+    isLoginMode = toLoginMode;
+    authForm.reset(); 
+
+    if (isLoginMode) {
+      modalTitle.textContent = "Prism 로그인";
+      modalDesc.textContent = "서비스 이용을 위해 로그인을 진행해 주세요.";
+      fieldName.style.display = "none";
+      authNameInput.removeAttribute("required");
+      btnAuthSubmit.textContent = "로그인";
+      switchText.textContent = "아직 계정이 없으신가요?";
+      linkSwitchAuth.textContent = "회원가입";
+    } else {
+      modalTitle.textContent = "Prism 회원가입";
+      modalDesc.textContent = "계정을 생성하고 나만의 이슈를 저장해 보세요.";
+      fieldName.style.display = "block";
+      authNameInput.setAttribute("required", "required");
+      btnAuthSubmit.textContent = "회원가입 완료";
+      switchText.textContent = "이미 계정이 있으신가요?";
+      linkSwitchAuth.textContent = "로그인";
+    }
+  }
+
+  closeModalBtn.addEventListener("click", () => loginModal.style.display = "none");
+  loginModal.addEventListener("click", (e) => {
+    if (e.target === loginModal) loginModal.style.display = "none";
+  });
+
+
+  authForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = authEmailInput.value;
+    const password = authPasswordInput.value;
+
+    if (!isLoginMode) {
+      const name = authNameInput.value;
+      
+    
+      localStorage.setItem("user_email", email);
+      localStorage.setItem("user_password", password);
+      localStorage.setItem("user_name", name);
+
+      alert(`${name}님, 회원가입이 완료되었습니다! 로그인해 주세요.`);
+      setAuthMode(true); 
+    } else {
+    
+      const savedEmail = localStorage.getItem("user_email");
+      const savedPassword = localStorage.getItem("user_password");
+      const savedName = localStorage.getItem("user_name");
+
+    
+      if (email === savedEmail && password === savedPassword) {
+        localStorage.setItem("isLoggedIn", "true");
+        isLoggedIn = true;
+        alert(`반갑습니다, ${savedName || '사용자'}님! 성공적으로 로그인되었습니다.`);
+        loginModal.style.display = "none";
+        updateLoginUI();
+      } else {
+        alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다. 먼저 회원가입을 해주세요!");
+      }
+    }
+  });
+
+  function updateLoginUI() {
+    if (isLoggedIn) {
+      const savedName = localStorage.getItem("user_name") || "사용자";
+      loginNavBtn.textContent = `${savedName}님 (로그아웃)`;
+      loginNavBtn.classList.remove("btn-secondary");
+      loginNavBtn.classList.add("btn-primary");
+    } else {
+      loginNavBtn.textContent = "로그인";
+      loginNavBtn.classList.remove("btn-primary");
+      loginNavBtn.classList.add("btn-secondary");
+    }
+  }
 });
