@@ -1,5 +1,13 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>축구협회 청문회 참고인 선정 논란 | Prism</title><link rel="stylesheet" href="./styles.css"></head><body>
-<header class="site-header"><div class="container header-inner"><a class="logo" href="index.html">Prism</a><nav class="nav" data-nav><a href="index.html#topics">이슈 둘러보기</a><a href="methodology.html">분석 방식</a><a href="saved.html">저장한 이슈</a></nav><div class="header-actions"><a class="btn btn-secondary" href="#">로그인</a><button class="menu-toggle" data-menu-toggle aria-label="메뉴 열기" aria-expanded="false">☰</button></div></div></header>
+<header class="site-header"><div class="container header-inner"><a class="logo" href="index.html">Prism</a>
+<nav class="nav" data-nav>
+  <a href="index.html#live-news">이슈 둘러보기</a>
+  <a href="index.html#saved-section">저장한 이슈</a>
+  <a href="index.html#how-it-works">분석 방식</a>
+</nav>
+<div class="header-actions"><button class="btn btn-secondary" id="btn-login-nav" type="button">
+  로그인
+</button><button class="menu-toggle" data-menu-toggle aria-label="메뉴 열기" aria-expanded="false">☰</button></div></div></header>
 <main data-issue-page>
   <section class="page-hero">
     <div class="container">
@@ -45,4 +53,157 @@
     </div>
   </section>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Prism</div><p class="footer-desc">같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.</p></div><div class="footer-links"><a href="index.html">서비스 소개</a><a href="methodology.html">분석 방식</a><a href="saved.html">저장한 이슈</a></div></div><div class="footer-bottom">© 2026 Prism. All rights reserved.</div></div></footer><script src="./app.js"></script></body></html>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Prism</div>
+        <p class="footer-desc">
+          같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">서비스 소개</a>
+        <a href="index.html#how-it-works">분석 방식</a>
+        <a href="index.html#saved-section">저장한 이슈</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Prism. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div
+  id="login-modal"
+  style="
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div
+    style="
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      width: calc(100% - 40px);
+      max-width: 380px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    "
+  >
+    <h3
+      id="modal-title"
+      style="margin: 0 0 8px; font-size: 20px;"
+    >
+      Prism 로그인
+    </h3>
+
+    <p
+      id="modal-desc"
+      style="color: #666; font-size: 14px; margin-bottom: 24px;"
+    >
+      서비스 이용을 위해 로그인을 진행해 주세요.
+    </p>
+
+    <form id="auth-form">
+      <div
+        id="field-name"
+        style="margin-bottom: 16px; display: none;"
+      >
+        <label
+          for="auth-name"
+          style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;"
+        >
+          이름
+        </label>
+
+        <input
+          type="text"
+          id="auth-name"
+          placeholder="홍길동"
+          style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;"
+        />
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label
+          for="auth-email"
+          style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;"
+        >
+          아이디 (이메일)
+        </label>
+
+        <input
+          type="email"
+          id="auth-email"
+          placeholder="example@email.com"
+          required
+          style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;"
+        />
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <label
+          for="auth-password"
+          style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;"
+        >
+          비밀번호
+        </label>
+
+        <input
+          type="password"
+          id="auth-password"
+          placeholder="••••••••"
+          required
+          style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;"
+        />
+      </div>
+
+      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+        <button
+          type="button"
+          id="btn-close-modal"
+          class="btn btn-secondary"
+          style="flex: 1;"
+        >
+          취소
+        </button>
+
+        <button
+          type="submit"
+          id="btn-auth-submit"
+          class="btn btn-primary"
+          style="flex: 1;"
+        >
+          로그인
+        </button>
+      </div>
+
+      <div style="text-align: center; font-size: 13px; color: #666;">
+        <span id="switch-text">아직 계정이 없으신가요?</span>
+
+        <a
+          href="#"
+          id="link-switch-auth"
+          style="color: #007bff; text-decoration: none; margin-left: 4px; font-weight: bold;"
+        >
+          회원가입
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
