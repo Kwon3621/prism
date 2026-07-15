@@ -54,6 +54,21 @@ RSS_FEEDS = [
         "category": "사회",
         "url": "https://www.hankyung.com/feed/society",
     },
+    {
+        "publisher": "동아일보",
+        "category": "정치",
+        "url": "https://rss.donga.com/politics.xml",
+    },
+    {
+        "publisher": "동아일보",
+        "category": "경제",
+        "url": "https://rss.donga.com/economy.xml",
+    },
+    {
+        "publisher": "동아일보",
+        "category": "사회",
+        "url": "https://rss.donga.com/national.xml",
+    },
 ]
 
 # 언론사·카테고리(RSS)별로 수집할 최대 기사 수
