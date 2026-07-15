@@ -256,6 +256,74 @@ function renderSaved() {
       </div>`;
     return;
   }
+  // 더보기 제어를 위한 로직 구현
+  const INITIAL_COUNT = 4;
+  
+  // 이전에 저장되어 실행 중이던 visibleCount 상태가 없다면 초기값(4)으로 지정합니다.
+  if (typeof window.savedVisibleCount === 'undefined') {
+    window.savedVisibleCount = INITIAL_COUNT;
+  }
+
+  const renderSavedCards = () => {
+    const visibleSaved = saved.slice(0, window.savedVisibleCount);
+
+    root.innerHTML = visibleSaved.map(item => `
+      <article class="card">
+        <span class="eyebrow">${item.category}</span>
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+        <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+          ${(item.tags || []).map(t => `<span class="badge blue">#${t}</span>`).join('')}
+        </div>
+        <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+          <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
+          <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
+        </div>
+      </article>
+    `).join('');
+
+    // 수집뉴스 영역처럼 4개를 초과하는 경우 동적 버튼 인터페이스 생성
+    if (saved.length > INITIAL_COUNT) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "load-more-wrap";
+      wrapper.style.gridColumn = "1 / -1";
+      wrapper.style.textAlign = "center";
+      wrapper.style.marginTop = "24px";
+      wrapper.style.display = "flex";
+      wrapper.style.justifyContent = "center";
+      wrapper.style.gap = "12px";
+
+      // 더보기 버튼
+      if (window.savedVisibleCount < saved.length) {
+        const loadMoreBtn = document.createElement("button");
+        loadMoreBtn.className = "btn btn-primary";
+        loadMoreBtn.textContent = "더보기 ▾";
+        loadMoreBtn.addEventListener("click", () => {
+          window.savedVisibleCount += 4;
+          renderSavedCards();
+        });
+        wrapper.appendChild(loadMoreBtn);
+      }
+
+      // 줄이기 버튼
+      if (window.savedVisibleCount > INITIAL_COUNT) {
+        const shrinkBtn = document.createElement("button");
+        shrinkBtn.className = "btn btn-secondary";
+        shrinkBtn.textContent = "줄이기 ▴";
+        shrinkBtn.addEventListener("click", () => {
+          window.savedVisibleCount = INITIAL_COUNT;
+          renderSavedCards();
+          root.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        wrapper.appendChild(shrinkBtn);
+      }
+
+      root.appendChild(wrapper);
+    }
+  };
+
+  renderSavedCards();
+}
 
   root.innerHTML = saved.map(item => `
     <article class="card">
@@ -560,7 +628,46 @@ async function renderFeaturedIssue() {
 
       </article>
     `).join("");
+    if (issues.length > INITIAL_COUNT) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "load-more-wrap";
+      wrapper.style.gridColumn = "1 / -1";
+      wrapper.style.textAlign = "center";
+      wrapper.style.marginTop = "24px";
+      wrapper.style.display = "flex";
+      wrapper.style.justifyContent = "center";
+      wrapper.style.gap = "12px";
 
+      // 더보기 버튼
+      if (window.featuredVisibleCount < issues.length) {
+        const loadMoreBtn = document.createElement("button");
+        loadMoreBtn.className = "btn btn-primary";
+        loadMoreBtn.textContent = "더보기 ▾";
+        loadMoreBtn.addEventListener("click", () => {
+          window.featuredVisibleCount += 4;
+          renderFeaturedCards();
+        });
+        wrapper.appendChild(loadMoreBtn);
+      }
+
+      // 줄이기 버튼
+      if (window.featuredVisibleCount > INITIAL_COUNT) {
+        const shrinkBtn = document.createElement("button");
+        shrinkBtn.className = "btn btn-secondary";
+        shrinkBtn.textContent = "줄이기 ▴";
+        shrinkBtn.addEventListener("click", () => {
+          window.featuredVisibleCount = INITIAL_COUNT;
+          renderFeaturedCards();
+          root.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        wrapper.appendChild(shrinkBtn);
+      }
+
+      root.appendChild(wrapper);
+    }
+  };
+
+  renderFeaturedCards();
   } catch (error) {
     console.error(error);
 
