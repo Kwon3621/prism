@@ -639,14 +639,24 @@ async function renderSearchSuggestions() {
 
     const data = await response.json();
 
-    const keywords = (data.issues || [])
-      .flatMap(issue =>
-        (issue.articles || []).flatMap(article => article.keywords || [])
-      )
-      .map(keyword => String(keyword).trim())
-      .filter(Boolean);
+    const usedKeywords = new Set();
+    const uniqueKeywords = [];
 
-    const uniqueKeywords = [...new Set(keywords)].slice(0, 3);
+    for (const issue of (data.issues || [])) {
+      const issueKeywords = (issue.articles || [])
+        .flatMap(article => article.keywords || [])
+        .map(keyword => String(keyword).trim())
+        .filter(Boolean);
+
+      const pick = issueKeywords.find(keyword => !usedKeywords.has(keyword));
+
+      if (pick) {
+        usedKeywords.add(pick);
+        uniqueKeywords.push(pick);
+      }
+
+      if (uniqueKeywords.length >= 3) break;
+    }
 
     if (!uniqueKeywords.length) {
       targets.forEach(target => {
