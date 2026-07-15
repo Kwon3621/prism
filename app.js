@@ -1,11 +1,33 @@
-const issue = {
-  id: 'football-hearing',
-  category: '스포츠 · 정치',
-  title: '축구협회 청문회 참고인 선정 논란',
-  summary: '임오경 의원이 손흥민·황희찬 선수를 참고인으로 신청한 뒤 철회한 사건을 다룬 기사들을 비교합니다.',
-  tags: ['참고인 선정', '청문회 적절성', '정치적 비판', '선수 일정'],
-  mediaNames: ['연합뉴스', 'SBS 뉴스', '세계일보']
-};
+let currentIssue = null;
+
+const SAVED_ISSUES_KEY = 'prism-saved-issues';
+
+function readSavedIssues() {
+  try {
+    return JSON.parse(localStorage.getItem(SAVED_ISSUES_KEY) || '[]');
+  } catch (error) {
+    console.error('저장된 이슈를 읽지 못했습니다.', error);
+    return [];
+  }
+}
+
+function syncSaveButtons() {
+  document.querySelectorAll('[data-save-issue]').forEach(btn => {
+    if (!currentIssue) {
+      btn.disabled = true;
+      btn.textContent = '이슈 불러오는 중';
+      return;
+    }
+
+    const isSaved = readSavedIssues().some(
+      item => item.id === currentIssue.id
+    );
+
+    btn.disabled = false;
+    btn.dataset.saved = String(isSaved);
+    btn.textContent = isSaved ? '저장됨' : '이 이슈 저장';
+  });
+}
 
 function initMenu() {
   const toggle = document.querySelector('[data-menu-toggle]');
@@ -49,25 +71,48 @@ function showToast(message) {
 }
 
 function initSaveButtons() {
-  const key = 'prism-saved-issues';
-  const read = () => JSON.parse(localStorage.getItem(key) || '[]');
-  const write = data => localStorage.setItem(key, JSON.stringify(data));
   document.querySelectorAll('[data-save-issue]').forEach(btn => {
-    const sync = () => {
-      const saved = read().some(item => item.id === issue.id);
-      btn.dataset.saved = String(saved);
-      btn.textContent = saved ? '저장됨' : '이 이슈 저장';
-    };
-    sync();
     btn.addEventListener('click', () => {
-      const saved = read();
-      const exists = saved.some(item => item.id === issue.id);
-      const next = exists ? saved.filter(item => item.id !== issue.id) : [...saved, issue];
-      write(next);
-      sync();
-      showToast(exists ? '저장을 취소했습니다.' : '이슈를 저장했습니다.');
+      if (!currentIssue) {
+        showToast('이슈 정보를 아직 불러오고 있습니다.');
+        return;
+      }
+
+      const isLoggedIn =
+        localStorage.getItem('isLoggedIn') === 'true';
+
+      if (!isLoggedIn) {
+        showToast('로그인 후 이슈를 저장할 수 있습니다.');
+        return;
+      }
+
+      const savedIssues = readSavedIssues();
+
+      const alreadySaved = savedIssues.some(
+        item => item.id === currentIssue.id
+      );
+
+      const nextSavedIssues = alreadySaved
+        ? savedIssues.filter(item => item.id !== currentIssue.id)
+        : [...savedIssues, currentIssue];
+
+      localStorage.setItem(
+        SAVED_ISSUES_KEY,
+        JSON.stringify(nextSavedIssues)
+      );
+
+      syncSaveButtons();
+      renderSaved();
+
+      showToast(
+        alreadySaved
+          ? '저장을 취소했습니다.'
+          : '이슈를 저장했습니다.'
+      );
     });
   });
+
+  syncSaveButtons();
 }
 
 function initShare() {
@@ -181,15 +226,6 @@ async function renderSearchResults() {
   }
 }
 
-function issueCardMarkup(data) {
-  return `<article class="card">
-    <span class="eyebrow">${data.category}</span>
-    <h3>${data.title}</h3>
-    <p>${data.summary}</p>
-    <div class="meta">${data.tags.map(t => `<span class="badge blue">${t}</span>`).join('')}</div>
-    <div class="card-footer"><small>${data.mediaNames.join(' · ')}</small><a class="btn btn-primary" href="issue.html">프레임 비교 보기</a></div>
-  </article>`;
-}
 
 // 렌더링 타겟을 정확히 짚어 상태별(미로그인 / 데이터 없음 / 리스트 출력) 분기를 수행합니다.
 function renderSaved() {
@@ -220,6 +256,74 @@ function renderSaved() {
       </div>`;
     return;
   }
+  // 더보기 제어를 위한 로직 구현
+  const INITIAL_COUNT = 4;
+  
+  // 이전에 저장되어 실행 중이던 visibleCount 상태가 없다면 초기값(4)으로 지정합니다.
+  if (typeof window.savedVisibleCount === 'undefined') {
+    window.savedVisibleCount = INITIAL_COUNT;
+  }
+
+  const renderSavedCards = () => {
+    const visibleSaved = saved.slice(0, window.savedVisibleCount);
+
+    root.innerHTML = visibleSaved.map(item => `
+      <article class="card">
+        <span class="eyebrow">${item.category}</span>
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+        <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+          ${(item.tags || []).map(t => `<span class="badge blue">#${t}</span>`).join('')}
+        </div>
+        <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+          <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
+          <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
+        </div>
+      </article>
+    `).join('');
+
+    // 수집뉴스 영역처럼 4개를 초과하는 경우 동적 버튼 인터페이스 생성
+    if (saved.length > INITIAL_COUNT) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "load-more-wrap";
+      wrapper.style.gridColumn = "1 / -1";
+      wrapper.style.textAlign = "center";
+      wrapper.style.marginTop = "24px";
+      wrapper.style.display = "flex";
+      wrapper.style.justifyContent = "center";
+      wrapper.style.gap = "12px";
+
+      // 더보기 버튼
+      if (window.savedVisibleCount < saved.length) {
+        const loadMoreBtn = document.createElement("button");
+        loadMoreBtn.className = "btn btn-primary";
+        loadMoreBtn.textContent = "더보기 ▾";
+        loadMoreBtn.addEventListener("click", () => {
+          window.savedVisibleCount += 4;
+          renderSavedCards();
+        });
+        wrapper.appendChild(loadMoreBtn);
+      }
+
+      // 줄이기 버튼
+      if (window.savedVisibleCount > INITIAL_COUNT) {
+        const shrinkBtn = document.createElement("button");
+        shrinkBtn.className = "btn btn-secondary";
+        shrinkBtn.textContent = "줄이기 ▴";
+        shrinkBtn.addEventListener("click", () => {
+          window.savedVisibleCount = INITIAL_COUNT;
+          renderSavedCards();
+          root.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        wrapper.appendChild(shrinkBtn);
+      }
+
+      root.appendChild(wrapper);
+    }
+  };
+
+  renderSavedCards();
+}
 
   root.innerHTML = saved.map(item => `
     <article class="card">
@@ -364,6 +468,28 @@ async function renderIssuePage() {
     if (!data) {
       throw new Error('표시할 이슈가 없습니다.');
     }
+    currentIssue = {
+      id: data.issue_id,
+      category: data.category || '자동 분석',
+      title: data.title || '이슈 제목 없음',
+      summary: data.summary || '',
+      tags: [
+        ...new Set(
+          (data.articles || []).flatMap(
+            article => article.keywords || []
+          )
+        )
+      ].slice(0, 6),
+      mediaNames: [
+        ...new Set(
+          (data.articles || [])
+            .map(article => article.publisher)
+            .filter(Boolean)
+        )
+      ]
+    };
+    
+    syncSaveButtons();
 
     document.querySelector('[data-issue-category]').textContent =
       data.category || '자동 분석';
@@ -502,7 +628,46 @@ async function renderFeaturedIssue() {
 
       </article>
     `).join("");
+    if (issues.length > INITIAL_COUNT) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "load-more-wrap";
+      wrapper.style.gridColumn = "1 / -1";
+      wrapper.style.textAlign = "center";
+      wrapper.style.marginTop = "24px";
+      wrapper.style.display = "flex";
+      wrapper.style.justifyContent = "center";
+      wrapper.style.gap = "12px";
 
+      // 더보기 버튼
+      if (window.featuredVisibleCount < issues.length) {
+        const loadMoreBtn = document.createElement("button");
+        loadMoreBtn.className = "btn btn-primary";
+        loadMoreBtn.textContent = "더보기 ▾";
+        loadMoreBtn.addEventListener("click", () => {
+          window.featuredVisibleCount += 4;
+          renderFeaturedCards();
+        });
+        wrapper.appendChild(loadMoreBtn);
+      }
+
+      // 줄이기 버튼
+      if (window.featuredVisibleCount > INITIAL_COUNT) {
+        const shrinkBtn = document.createElement("button");
+        shrinkBtn.className = "btn btn-secondary";
+        shrinkBtn.textContent = "줄이기 ▴";
+        shrinkBtn.addEventListener("click", () => {
+          window.featuredVisibleCount = INITIAL_COUNT;
+          renderFeaturedCards();
+          root.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        wrapper.appendChild(shrinkBtn);
+      }
+
+      root.appendChild(wrapper);
+    }
+  };
+
+  renderFeaturedCards();
   } catch (error) {
     console.error(error);
 
@@ -534,7 +699,7 @@ async function renderSearchSuggestions() {
       .map(keyword => String(keyword).trim())
       .filter(Boolean);
 
-    const uniqueKeywords = [...new Set(keywords)].slice(0, 5);
+    const uniqueKeywords = [...new Set(keywords)].slice(0, 3);
 
     if (!uniqueKeywords.length) {
       targets.forEach(target => {
@@ -737,48 +902,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function renderSaved() {
-  const root = document.getElementById('saved-issues-root');
-  if (!root) return; 
+// 뒤로 가기 또는 캐시된 페이지 복원 시 저장 목록을 최신 상태로 갱신
+window.addEventListener('pageshow', () => {
+  renderSaved();
+  syncSaveButtons();
+});
 
-  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-
-  if (!isLoggedIn) {
-    root.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: #fff; border-radius: 8px; border: 1px dashed #ddd;">
-        <h3 style="margin-bottom: 8px; color: #333;">저장한 이슈가 없습니다.</h3>
-        <p style="color: #666; font-size: 14px; margin-bottom: 16px;">내가 저장한 프레임 비교 분석을 보려면 로그인이 필요합니다.</p>
-        <button class="btn btn-primary" onclick="document.getElementById('btn-login-nav').click()">로그인하기</button>
-      </div>`;
-    return;
+// 다른 탭에서 로그인 상태나 저장 이슈가 변경된 경우 갱신
+window.addEventListener('storage', event => {
+  if (
+    event.key === 'prism-saved-issues' ||
+    event.key === 'isLoggedIn'
+  ) {
+    renderSaved();
+    syncSaveButtons();
   }
-
-  const saved = JSON.parse(localStorage.getItem('prism-saved-issues') || '[]');
-  if (!saved.length) {
-    root.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: #fff; border-radius: 8px; border: 1px dashed #ddd;">
-        <h3 style="margin-bottom: 8px; color: #333;">저장한 이슈가 없습니다.</h3>
-        <p style="color: #666; font-size: 14px; margin-bottom: 16px;">관심 있는 이슈를 저장하면 이곳에서 다시 볼 수 있습니다.</p>
-        <a class="btn btn-primary" href="#live-news">이슈 둘러보기</a>
-      </div>`;
-    return;
-  }
-
-  root.innerHTML = saved.map(item => `
-    <article class="issue-card">
-      <div class="card-body">
-        <span class="category">${item.category}</span>
-        <h3 class="card-title">${item.title}</h3>
-        <p class="card-desc">${item.summary}</p>
-        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-          ${item.tags.map(t => `<span class="badge" style="background: #eef2f6; color: #4b5563;">#${t}</span>`).join('')}
-        </div>
-        <div style="display: flex; gap: 8px; font-size: 12px; color: #888; margin-bottom: 20px;">
-          <span>비교 언론사:</span>
-          <strong>${item.mediaNames ? item.mediaNames.join(', ') : ''}</strong>
-        </div>
-        <a class="btn btn-secondary" style="width: 100%; text-align: center; display: inline-block; box-sizing: border-box;" href="issue.html">자세히 보기</a>
-      </div>
-    </article>
-  `).join('');
-}
+});

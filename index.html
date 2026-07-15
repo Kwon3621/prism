@@ -12,7 +12,9 @@
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
     <nav class="nav" data-nav aria-label="주요 메뉴">
-      <a href="#live-news">이슈 둘러보기</a><a href="#how-it-works">분석 방식</a><a href="#saved-section">저장한 이슈</a>
+      <a href="#live-news">이슈 둘러보기</a>
+      <a href="#saved-section">저장한 이슈</a>
+      <a href="#how-it-works">분석 방식</a>
     </nav>
     <div class="header-actions">
       <button class="btn btn-secondary" id="btn-login-nav">로그인</button>
@@ -22,36 +24,41 @@
 </header>
 
 <main>
-  <section id="saved-section" class="section soft" style="background-color: #f8f9fa; border-top: 1px solid #eef2f6; border-bottom: 1px solid #eef2f6; padding: 60px 0;">
-    <div class="container">
-      <span class="eyebrow" style="color: #2563eb; font-weight: bold; display: block; margin-bottom: 8px;">My Saved Issues</span>
-      <h2 class="section-title" style="margin-bottom: 12px;">내가 저장한 이슈</h2>
-      <p class="section-desc" style="color: #666; margin-bottom: 30px;">관심 있게 지켜보기 위해 저장해 둔 이슈 목록입니다.</p>
-      
-      <div class="grid-3" data-saved-list style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
-        <p style="color: #666;">저장된 이슈를 불러오는 중입니다...</p>
-      </div>
-    </div>
-  </section>
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">See every side</span>
-      <h1>같은 사건, 서로 다른 보도 방식을 한눈에 비교하세요.</h1>
-      <p>여러 언론사의 기사를 모아 공통 사실과 핵심 키워드, 인용 대상, 강조 맥락의 차이를 보여드립니다.</p>
-      <form class="search-panel search-panel--trim" data-search-form>
-        <div class="search-row"><input class="search-input" aria-label="이슈 검색어 입력" placeholder="비교하고 싶은 이슈나 키워드를 검색하세요" /><button class="btn btn-primary" type="submit">이슈 검색</button></div>
-        <div class="search-help" data-search-help>
+
+<section class="hero hero-centered">
+  <div class="container">
+    <div class="hero-content">
+  
+      <span class="eyebrow hero-eyebrow">SEE EVERY SIDE</span>
+  
+      <h1>
+        같은 이슈,<br>
+        <span>다른 시선</span>을 비교하세요
+      </h1>
+  
+      <p class="hero-description">
+        여러 언론사의 공통 사실과 보도 차이를 한눈에 확인하세요.
+      </p>
+  
+      <form class="search-panel hero-search" data-search-form>
+        <div class="search-row">
+          <input
+            class="search-input"
+            type="search"
+             aria-label="이슈 검색어 입력"
+             placeholder="궁금한 이슈나 키워드를 검색하세요"
+          />
+  
+          <button class="btn btn-primary hero-search-button" type="submit">
+            검색
+          </button>
+        </div>
+  
+        <div class="search-help hero-keywords" data-search-help>
           기사 키워드를 불러오는 중...
         </div>
       </form>
-      <div class="hero-actions" style="margin-top:16px"><a class="btn btn-secondary" href="issue.html">비교 예시 보기</a></div>
-    </div>
-    <div class="hero-preview" aria-label="Prism 비교 화면 미리보기">
-      <div class="preview-top"><strong>프레임 비교 미리보기</strong><span class="preview-chip">AI 분석</span></div>
-      <div class="preview-item"><strong>핵심 키워드</strong><div class="preview-bars"><div class="preview-bar keyword"><span></span></div></div></div>
-      <div class="preview-item"><strong>주요 인물·인용 대상</strong><div class="preview-bars"><div class="preview-bar person"><span></span></div></div></div>
-      <div class="preview-item"><strong>강조된 쟁점</strong><div class="preview-bars"><div class="preview-bar context"><span></span></div></div></div>
+  
     </div>
   </div>
 </section>
@@ -74,11 +81,10 @@
 <section id="topics" class="section">
   <div class="container">
     <span class="eyebrow">Featured issue</span>
-    <h2 class="section-title">이슈 비교 예시</h2>
-    <p class="section-desc">
-      Prism이 하나의 사건을 어떻게 비교하는지 확인해 보세요.
-    </p>
+    <h2 class="section-title">이슈 비교</h2>
 
+    <p class="section-desc">같은 이슈를 다룬 여러 언론사의 보도 방식을 비교해 보세요.</p>
+    
     <div class="grid-3" data-featured-issues>
       <p>비교 가능한 이슈를 불러오는 중입니다.</p>
     </div>
@@ -86,6 +92,17 @@
   </div>
 </section>
 
+<section id="saved-section" class="section soft" style="background-color: #f8f9fa; border-top: 1px solid #eef2f6; border-bottom: 1px solid #eef2f6; padding: 60px 0;">
+  <div class="container">
+    <span class="eyebrow" style="color: #2563eb; font-weight: bold; display: block; margin-bottom: 8px;">My Saved Issues</span>
+    <h2 class="section-title" style="margin-bottom: 12px;">내가 저장한 이슈</h2>
+    <p class="section-desc" style="color: #666; margin-bottom: 30px;">관심 있게 지켜보기 위해 저장해 둔 이슈 목록입니다.</p>
+    
+    <div class="grid-3" data-saved-list style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
+      <p style="color: #666;">저장된 이슈를 불러오는 중입니다...</p>
+    </div>
+  </div>
+</section>
 
 <section id="how-it-works" class="section">
   <div class="container">
