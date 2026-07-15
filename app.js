@@ -576,46 +576,84 @@ async function renderIssuePage() {
 
     const articlesRoot = document.querySelector('[data-issue-articles]');
 
-    articlesRoot.innerHTML = (data.articles || []).map(article => `
-      <article class="card media-card">
-        <div class="media-name">
-          <strong>${article.publisher}</strong>
-        </div>
+    articlesRoot.innerHTML = (data.articles || []).map(article => {
+      // 1. 클러스터링된 모든 분석 대상 기사들을 수집합니다.
+      // 데이터 구조에 related_articles가 존재하면 그것을 쓰고, 없으면 단일 기사(article 자체)를 배열로 감쌉니다.
+      const clusteredArticles = article.related_articles || 
+                                (article.title && article.link ? [{ title: article.title, link: article.link }] : []);
 
-        <div class="compare-block">
-          <span class="compare-label">핵심 키워드</span>
-          <div class="meta">
-            ${(article.keywords || []).map(keyword =>
-              `<span class="badge blue">${keyword}</span>`
-            ).join('')}
+      return `
+      <article class="card media-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="media-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 16px;">
+            <div class="media-name" style="margin: 0;">
+              <strong style="font-size: 18px; color: #1e293b;">${article.publisher}</strong>
+            </div>
+            <span style="font-size: 11px; background: #f1f5f9; color: #64748b; padding: 2px 8px; border-radius: 99px; font-weight: 500;">
+              ${clusteredArticles.length}개 기사 분석됨
+            </span>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">핵심 키워드</span>
+            <div class="meta">
+              ${(article.keywords || []).map(keyword =>
+                `<span class="badge blue">${keyword}</span>`
+              ).join('')}
+            </div>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">주요 인물 및 기관</span>
+            <div class="meta">
+              ${(article.people || []).map(person =>
+                `<span class="badge purple">${person}</span>`
+              ).join('')}
+            </div>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">강조된 내용</span>
+            <p class="compare-text">${article.focus || '명확한 차이를 확인하기 어려움'}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">표현 요약</span>
+            <p class="compare-text">${article.expression_summary || ''}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">분석 한계</span>
+            <p class="compare-text">${article.evidence_limit || ''}</p>
           </div>
         </div>
 
-        <div class="compare-block">
-          <span class="compare-label">주요 인물 및 기관</span>
-          <div class="meta">
-            ${(article.people || []).map(person =>
-              `<span class="badge purple">${person}</span>`
-            ).join('')}
+        <!-- 2. 신규 추가: 클러스터링 분석 대상 기사 목록 노출 구역 -->
+        <div class="compare-block source-links-block" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #e2e8f0;">
+          <span class="compare-label" style="display: block; font-weight: bold; font-size: 12px; color: #475569; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
+            분석 대상 원문 기사 리스트
+          </span>
+          <div class="source-links-list" style="display: flex; flex-direction: column; gap: 8px;">
+            ${clusteredArticles.length > 0 ? clusteredArticles.map((item, idx) => `
+              <div style="display: flex; align-items: flex-start; gap: 6px; font-size: 13px;">
+                <span style="color: #3b82f6; font-weight: bold; flex-shrink: 0; min-width: 14px;">${idx + 1}.</span>
+                <a 
+                  href="${item.link}" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style="color: #2563eb; text-decoration: none; font-weight: 500; word-break: break-all; transition: color 0.15s ease-in-out;"
+                  onmouseover="this.style.color='#1d4ed8'; this.style.textDecoration='underline';"
+                  onmouseout="this.style.color='#2563eb'; this.style.textDecoration='none';"
+                >
+                  ${item.title}
+                </a>
+              </div>
+            `).join('') : '<p style="font-size: 12px; color: #94a3b8; margin: 0;">포함된 원문 기사 정보가 없습니다.</p>'}
           </div>
-        </div>
-
-        <div class="compare-block">
-          <span class="compare-label">강조된 내용</span>
-          <p class="compare-text">${article.focus || '명확한 차이를 확인하기 어려움'}</p>
-        </div>
-
-        <div class="compare-block">
-          <span class="compare-label">표현 요약</span>
-          <p class="compare-text">${article.expression_summary || ''}</p>
-        </div>
-
-        <div class="compare-block">
-          <span class="compare-label">분석 한계</span>
-          <p class="compare-text">${article.evidence_limit || ''}</p>
         </div>
       </article>
-    `).join('');
+    `;
+    }).join('');
 
     const sourcesRoot = document.querySelector('[data-issue-sources]');
 
