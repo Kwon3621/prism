@@ -579,19 +579,14 @@ async function renderFeaturedIssue() {
           <span class="eyebrow">${issue.category}</span>
           <h3>${issue.title}</h3>
           <p>${issue.summary}</p>
-          <div class="meta">
-            <span class="badge blue">
-              ${issue.articles ? issue.articles.length : 0}개 기사 비교
-            </span>
-          </div>
           <div class="card-footer">
-            <small>${issue.issue_id}</small>
             <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
               프레임 비교 보기
             </a>
           </div>
         </article>
       `).join("");
+        
 
       if (issues.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
