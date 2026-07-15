@@ -2,6 +2,15 @@ let currentIssue = null;
 
 const SAVED_ISSUES_KEY = 'prism-saved-issues';
 
+function shuffleArray(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 function readSavedIssues() {
   try {
     return JSON.parse(localStorage.getItem(SAVED_ISSUES_KEY) || '[]');
@@ -327,7 +336,8 @@ async function renderLiveNews() {
       throw new Error(`HTTP 오류: ${response.status}`);
     }
 
-    const newsItems = await response.json();
+    const rawNewsItems = await response.json();
+    const newsItems = shuffleArray(rawNewsItems);
 
     const INITIAL_COUNT = 4; 
     let visibleCount = INITIAL_COUNT;
