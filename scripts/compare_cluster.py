@@ -89,6 +89,59 @@ def get_cluster_articles(cluster, news_items):
 
     return articles
 
+def has_shared_core_terms(first_cluster, second_cluster):
+    """
+    두 클러스터 대표 제목에 공통 핵심어가 있는지 확인한다.
+    조사·일반 보도어를 제외한 2글자 이상 단어를 비교한다.
+    """
+    first_title = clean_text(
+        first_cluster.get("topic_title", "")
+    )
+    second_title = clean_text(
+        second_cluster.get("topic_title", "")
+    )
+
+    stopwords = {
+        "대통령",
+        "정부",
+        "국민",
+        "관련",
+        "논란",
+        "발언",
+        "주문",
+        "대책",
+        "정치",
+        "사회",
+        "경제",
+        "속보",
+        "기자",
+        "뉴스",
+        "대한",
+        "위해",
+        "통해",
+        "에서",
+        "으로",
+        "한다",
+        "했다",
+    }
+
+    first_terms = {
+        word
+        for word in first_title.split()
+        if len(word) >= 2
+        and word not in stopwords
+    }
+
+    second_terms = {
+        word
+        for word in second_title.split()
+        if len(word) >= 2
+        and word not in stopwords
+    }
+
+    shared_terms = first_terms & second_terms
+
+    return len(shared_terms) >= 1
 
 def make_cluster_text(cluster, articles):
     """

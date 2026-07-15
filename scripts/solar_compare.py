@@ -104,6 +104,55 @@ RSS 설명: {description}
         cluster_sections
     )
 
+def clean_entity_list(values, max_items=6, max_length=30):
+    """
+    Solar가 반환한 키워드·인물·기관 배열을 정리한다.
+    긴 문장, 중복, 비정상 값을 제거한다.
+    """
+    if not isinstance(values, list):
+        return []
+
+    cleaned = []
+    seen = set()
+
+    sentence_endings = (
+        "했다",
+        "이다",
+        "됐다",
+        "밝혔다",
+        "말했다",
+        "전했다",
+        "나타났다",
+        "보도했다",
+    )
+
+    for value in values:
+        if not isinstance(value, str):
+            continue
+
+        value = value.strip(" \t\n,.-·")
+
+        if not value:
+            continue
+
+        if len(value) > max_length:
+            continue
+
+        if value.endswith(sentence_endings):
+            continue
+
+        normalized = value.replace(" ", "")
+
+        if normalized in seen:
+            continue
+
+        seen.add(normalized)
+        cleaned.append(value)
+
+        if len(cleaned) >= max_items:
+            break
+
+    return cleaned
 
 def build_prompt(matched_issue):
     """
@@ -148,8 +197,25 @@ def build_prompt(matched_issue):
   단정하지 마세요.
 - 차이가 명확하지 않다면
   "명확한 차이를 확인하기 어려움"이라고 작성하세요.
-- 핵심 키워드와 주요 인물·기관은 제공된 자료에 등장한 것만
-  사용하세요.
+- keywords는 사건을 이해하는 데 반드시 필요한 핵심 개념만
+  3~6개 추출하세요.
+- keywords는 명사 또는 짧은 명사구로 작성하세요.
+- keywords에는 완전한 문장, 조사, 서술어, 언론사명,
+  일반적인 보도 표현을 넣지 마세요.
+- 제목과 RSS 설명에서 반복되거나 사건의 주체·행동·쟁점을
+  설명하는 단어에 우선순위를 부여하세요.
+- 단순히 한 번 등장했거나 사건을 구분하는 데 도움이 되지
+  않는 단어는 제외하세요.
+- people에는 기사 제목 또는 RSS 설명에서 실명이 확인되는
+  사람만 0~5명 작성하세요.
+- 기관, 정당, 기업, 정부 부처는 people에 넣지 마세요.
+- organizations에는 사건에서 실질적인 역할을 한 기관만
+  0~5개 작성하세요.
+- 인물이나 기관이 확인되지 않으면 빈 배열을 반환하세요.
+- keywords, people, organizations의 각 항목은 중복 없이
+  작성하세요.
+- 배열 항목에는 설명을 붙이지 말고 이름이나 핵심 명사구만
+  작성하세요.
 - 모든 언론사를 빠짐없이 articles 배열에 포함하세요.
 - **[중요] 생성되는 모든 한국어 문장(summary, focus, expression_summary, evidence_limit 등)은 반드시 문장 끝을 '-했다.', '-이다.' 톤의 평서문으로 일관되게 종결하세요. (~하며, ~함, ~합니다, ~해요 등의 종결 어미는 절대 사용하지 마세요.)**
 - JSON 이외의 문장은 출력하지 마세요.
@@ -180,7 +246,10 @@ def build_prompt(matched_issue):
         "기사 묶음에서 확인되는 핵심 키워드"
       ],
       "people": [
-        "기사 묶음에 등장한 주요 인물 또는 기관"
+        "기사 제목 또는 RSS 설명에서 실명이 확인된 주요 인물"
+      ],
+      "organizations": [
+        "사건에 직접 관련된 정당·기업·정부 기관·단체"
       ],
       "focus": "해당 언론사 기사 묶음에서 상대적으로 강조된 내용 (반드시 '-했다.', '-이다.'로 끝낼 것)",
       "expression_summary": "제목과 RSS 설명에서 확인되는 표현 방식 (반드시 '-했다.', '-이다.'로 끝낼 것)",
@@ -300,14 +369,12 @@ def complete_articles(result, matched_issue):
 
     solar_articles = result.get("articles", [])
 
-    # Solar가 예상과 다른 형식을 반환하는 경우를 대비
     if not isinstance(solar_articles, list):
         solar_articles = []
 
     solar_by_publisher = {}
 
     for article in solar_articles:
-        # 문자열 등 잘못된 형식은 건너뛴다.
         if not isinstance(article, dict):
             continue
 
@@ -348,6 +415,56 @@ def complete_articles(result, matched_issue):
             {},
         )
 
+        people = clean_entity_list(
+            solar_article.get("people", []),
+            max_items=5,
+            max_length=15,
+        )
+
+        organizations = clean_entity_list(
+            solar_article.get("organizations", []),
+            max_items=5,
+            max_length=25,
+        )
+
+        keywords = clean_entity_list(
+            solar_article.get("keywords", []),
+            max_items=6,
+            max_length=25,
+        )
+
+        normalized_people = {
+            person.replace(" ", "")
+            for person in people
+        }
+
+        normalized_organizations = {
+            organization.replace(" ", "")
+            for organization in organizations
+        }
+
+        filtered_keywords = []
+
+        for keyword in keywords:
+            normalized_keyword = keyword.replace(" ", "")
+
+            is_person = any(
+                person in normalized_keyword
+                or normalized_keyword in person
+                for person in normalized_people
+            )
+
+            is_organization = any(
+                organization in normalized_keyword
+                or normalized_keyword in organization
+                for organization in normalized_organizations
+            )
+
+            if is_person or is_organization:
+                continue
+
+            filtered_keywords.append(keyword)
+
         completed_articles.append(
             {
                 "publisher": publisher,
@@ -369,14 +486,9 @@ def complete_articles(result, matched_issue):
                     if links
                     else ""
                 ),
-                "keywords": solar_article.get(
-                    "keywords",
-                    [],
-                ),
-                "people": solar_article.get(
-                    "people",
-                    [],
-                ),
+                "keywords": filtered_keywords,
+                "people": people,
+                "organizations": organizations,
                 "focus": solar_article.get(
                     "focus",
                     "명확한 차이를 확인하기 어려움",

@@ -447,3 +447,43 @@ img { max-width: 100%; display: block; }
     margin-left: 6px;
   }
 }
+
+/* =========================
+   Main issue cards
+   메인 페이지 이슈 설명을 3줄로 제한
+========================= */
+
+[data-featured-issues] .card {
+  min-height: 390px;
+}
+
+/* 제목 아래 회색 이슈 요약문만 3줄로 제한한다. */
+[data-featured-issues] .card > p {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--text-2);
+  line-height: 1.7;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+
+  /* 카드마다 버튼 위치가 일정하게 보이도록 3줄 높이를 확보한다. */
+  min-height: calc(1.7em * 3);
+  max-height: calc(1.7em * 3);
+}
+
+/* 요약문 길이가 달라도 비교 버튼은 카드 하단에 정렬한다. */
+[data-featured-issues] .card .card-footer {
+  margin-top: auto;
+}
+
+/* 모바일에서는 카드가 불필요하게 길어지지 않도록 높이를 자동 조절한다. */
+@media (max-width: 760px) {
+  [data-featured-issues] .card {
+    min-height: auto;
+  }
+}

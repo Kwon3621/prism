@@ -15,17 +15,17 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-266",
-        "cluster-287",
-        "cluster-307",
-        "cluster-326",
-        "cluster-365",
-        "cluster-386"
+        "cluster-267",
+        "cluster-288",
+        "cluster-308",
+        "cluster-327",
+        "cluster-366",
+        "cluster-387"
       ],
       "total_article_count": 6,
       "clusters": [
         {
-          "cluster_id": "cluster-266",
+          "cluster_id": "cluster-267",
           "publisher": "조선일보",
           "topic_title": "2차 특검 ‘양평고속道 노선 변경 의혹’ 원희룡 전 장관 압수수색",
           "article_count": 1,
@@ -44,7 +44,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-287",
+          "cluster_id": "cluster-288",
           "publisher": "한겨레",
           "topic_title": "종합특검, ‘양평고속도로 특혜 의혹’ 원희룡 전 장관 압수수색",
           "article_count": 1,
@@ -63,7 +63,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-307",
+          "cluster_id": "cluster-308",
           "publisher": "한국경제",
           "topic_title": "[속보] 종합특검, '직권남용' 원희룡 압수수색…출석일자 조율",
           "article_count": 1,
@@ -82,7 +82,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-326",
+          "cluster_id": "cluster-327",
           "publisher": "동아일보",
           "topic_title": "종합특검, ‘양평 의혹’ 원희룡 前장관 압수수색…출석일자 조율",
           "article_count": 1,
@@ -101,7 +101,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-365",
+          "cluster_id": "cluster-366",
           "publisher": "매일경제",
           "topic_title": "[속보] 종합특검, ‘양평고속道’ 원희룡 압수수색…출석일자 조율",
           "article_count": 1,
@@ -120,7 +120,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-386",
+          "cluster_id": "cluster-387",
           "publisher": "SBS",
           "topic_title": "특검, '양평 의혹' 원희룡 휴대전화 압수수색…소환일자 협의",
           "article_count": 1,
@@ -142,113 +142,113 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-266",
+          "first_cluster_id": "cluster-267",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-287",
+          "second_cluster_id": "cluster-288",
           "second_publisher": "한겨레",
           "similarity": 0.588
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-266",
+          "first_cluster_id": "cluster-267",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-326",
+          "second_cluster_id": "cluster-327",
           "second_publisher": "동아일보",
           "similarity": 0.34
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-266",
+          "first_cluster_id": "cluster-267",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-365",
+          "second_cluster_id": "cluster-366",
           "second_publisher": "매일경제",
           "similarity": 0.374
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-266",
+          "first_cluster_id": "cluster-267",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-386",
+          "second_cluster_id": "cluster-387",
           "second_publisher": "SBS",
           "similarity": 0.31
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-287",
+          "first_cluster_id": "cluster-288",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-307",
+          "second_cluster_id": "cluster-308",
           "second_publisher": "한국경제",
           "similarity": 0.341
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-287",
+          "first_cluster_id": "cluster-288",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-326",
+          "second_cluster_id": "cluster-327",
           "second_publisher": "동아일보",
           "similarity": 0.464
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-287",
+          "first_cluster_id": "cluster-288",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-365",
+          "second_cluster_id": "cluster-366",
           "second_publisher": "매일경제",
           "similarity": 0.464
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-287",
+          "first_cluster_id": "cluster-288",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-386",
+          "second_cluster_id": "cluster-387",
           "second_publisher": "SBS",
           "similarity": 0.333
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-307",
+          "first_cluster_id": "cluster-308",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-326",
+          "second_cluster_id": "cluster-327",
           "second_publisher": "동아일보",
           "similarity": 0.376
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-307",
+          "first_cluster_id": "cluster-308",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-365",
+          "second_cluster_id": "cluster-366",
           "second_publisher": "매일경제",
           "similarity": 0.586
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-307",
+          "first_cluster_id": "cluster-308",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-386",
+          "second_cluster_id": "cluster-387",
           "second_publisher": "SBS",
           "similarity": 0.252
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-326",
+          "first_cluster_id": "cluster-327",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-365",
+          "second_cluster_id": "cluster-366",
           "second_publisher": "매일경제",
           "similarity": 0.486
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-326",
+          "first_cluster_id": "cluster-327",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-386",
+          "second_cluster_id": "cluster-387",
           "second_publisher": "SBS",
           "similarity": 0.3
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-365",
+          "first_cluster_id": "cluster-366",
           "first_publisher": "매일경제",
-          "second_cluster_id": "cluster-386",
+          "second_cluster_id": "cluster-387",
           "second_publisher": "SBS",
           "similarity": 0.305
         }
@@ -266,16 +266,16 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-153",
-        "cluster-175",
-        "cluster-212",
-        "cluster-230",
-        "cluster-252"
+        "cluster-154",
+        "cluster-176",
+        "cluster-213",
+        "cluster-231",
+        "cluster-253"
       ],
       "total_article_count": 5,
       "clusters": [
         {
-          "cluster_id": "cluster-153",
+          "cluster_id": "cluster-154",
           "publisher": "한겨레",
           "topic_title": "주담대 금리 또 오른다…신규 코픽스 1년5개월 만에 3%대",
           "article_count": 1,
@@ -294,7 +294,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-175",
+          "cluster_id": "cluster-176",
           "publisher": "한국경제",
           "topic_title": "코픽스 3%대로…변동형 주담대 금리 또 오른다",
           "article_count": 1,
@@ -313,7 +313,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-212",
+          "cluster_id": "cluster-213",
           "publisher": "동아일보",
           "topic_title": "주담대 변동금리 뛴다…6월 코픽스 1년5개월 만에 3%대로",
           "article_count": 1,
@@ -332,7 +332,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-230",
+          "cluster_id": "cluster-231",
           "publisher": "매일경제",
           "topic_title": "코픽스 3%대 재진입 … 주담대 이자 또 오른다",
           "article_count": 1,
@@ -351,7 +351,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-252",
+          "cluster_id": "cluster-253",
           "publisher": "SBS",
           "topic_title": "주담대 변동금리 기준 코픽스, 석 달째 상승…1년 5개월 만 3%대 진입",
           "article_count": 1,
@@ -373,73 +373,73 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-153",
+          "first_cluster_id": "cluster-154",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-175",
+          "second_cluster_id": "cluster-176",
           "second_publisher": "한국경제",
           "similarity": 0.451
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-153",
+          "first_cluster_id": "cluster-154",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-212",
+          "second_cluster_id": "cluster-213",
           "second_publisher": "동아일보",
           "similarity": 0.283
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-153",
+          "first_cluster_id": "cluster-154",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-230",
+          "second_cluster_id": "cluster-231",
           "second_publisher": "매일경제",
           "similarity": 0.405
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-153",
+          "first_cluster_id": "cluster-154",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-252",
+          "second_cluster_id": "cluster-253",
           "second_publisher": "SBS",
           "similarity": 0.304
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-175",
+          "first_cluster_id": "cluster-176",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-230",
+          "second_cluster_id": "cluster-231",
           "second_publisher": "매일경제",
           "similarity": 0.408
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-175",
+          "first_cluster_id": "cluster-176",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-252",
+          "second_cluster_id": "cluster-253",
           "second_publisher": "SBS",
           "similarity": 0.24
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-212",
+          "first_cluster_id": "cluster-213",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-230",
+          "second_cluster_id": "cluster-231",
           "second_publisher": "매일경제",
           "similarity": 0.27
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-212",
+          "first_cluster_id": "cluster-213",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-252",
+          "second_cluster_id": "cluster-253",
           "second_publisher": "SBS",
           "similarity": 0.329
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-230",
+          "first_cluster_id": "cluster-231",
           "first_publisher": "매일경제",
-          "second_cluster_id": "cluster-252",
+          "second_cluster_id": "cluster-253",
           "second_publisher": "SBS",
           "similarity": 0.371
         }
@@ -459,7 +459,7 @@
         "cluster-6",
         "cluster-30",
         "cluster-65",
-        "cluster-115"
+        "cluster-114"
       ],
       "total_article_count": 5,
       "clusters": [
@@ -521,7 +521,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-115",
+          "cluster_id": "cluster-114",
           "publisher": "SBS",
           "topic_title": "청와대 \"강경화 일시 귀국, 공관장 건의·의견 청취 목적\"",
           "article_count": 2,
@@ -556,7 +556,7 @@
           "first_publisher": "조선일보",
           "second_cluster_id": "cluster-30",
           "second_publisher": "한겨레",
-          "similarity": 0.648
+          "similarity": 0.649
         },
         {
           "category": "정치",
@@ -570,9 +570,9 @@
           "category": "정치",
           "first_cluster_id": "cluster-6",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-115",
+          "second_cluster_id": "cluster-114",
           "second_publisher": "SBS",
-          "similarity": 0.314
+          "similarity": 0.315
         },
         {
           "category": "정치",
@@ -586,7 +586,7 @@
           "category": "정치",
           "first_cluster_id": "cluster-30",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-115",
+          "second_cluster_id": "cluster-114",
           "second_publisher": "SBS",
           "similarity": 0.298
         },
@@ -594,9 +594,9 @@
           "category": "정치",
           "first_cluster_id": "cluster-65",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-115",
+          "second_cluster_id": "cluster-114",
           "second_publisher": "SBS",
-          "similarity": 0.227
+          "similarity": 0.228
         }
       ],
       "match_id": "match-3"
@@ -611,15 +611,15 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-273",
-        "cluster-299",
-        "cluster-313",
-        "cluster-384"
+        "cluster-274",
+        "cluster-300",
+        "cluster-314",
+        "cluster-385"
       ],
       "total_article_count": 5,
       "clusters": [
         {
-          "cluster_id": "cluster-273",
+          "cluster_id": "cluster-274",
           "publisher": "조선일보",
           "topic_title": "대법원, 24일 김건희 상고심 선고 생중계",
           "article_count": 1,
@@ -638,7 +638,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-299",
+          "cluster_id": "cluster-300",
           "publisher": "한겨레",
           "topic_title": "대법, 김건희 ‘주가조작·무상 여론조사’ 선고 24일로 연기",
           "article_count": 1,
@@ -657,7 +657,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-313",
+          "cluster_id": "cluster-314",
           "publisher": "한국경제",
           "topic_title": "대법, 김건희 '주가조작 등' 상고심 선고 24일로 연기",
           "article_count": 2,
@@ -685,7 +685,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-384",
+          "cluster_id": "cluster-385",
           "publisher": "SBS",
           "topic_title": "대법, 김건희 '주가조작·통일교 금품' 24일 선고 생중계",
           "article_count": 1,
@@ -707,49 +707,49 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-273",
+          "first_cluster_id": "cluster-274",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-299",
+          "second_cluster_id": "cluster-300",
           "second_publisher": "한겨레",
           "similarity": 0.255
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-273",
+          "first_cluster_id": "cluster-274",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-313",
+          "second_cluster_id": "cluster-314",
           "second_publisher": "한국경제",
           "similarity": 0.487
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-273",
+          "first_cluster_id": "cluster-274",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-384",
+          "second_cluster_id": "cluster-385",
           "second_publisher": "SBS",
           "similarity": 0.455
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-299",
+          "first_cluster_id": "cluster-300",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-313",
+          "second_cluster_id": "cluster-314",
           "second_publisher": "한국경제",
           "similarity": 0.493
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-299",
+          "first_cluster_id": "cluster-300",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-384",
+          "second_cluster_id": "cluster-385",
           "second_publisher": "SBS",
           "similarity": 0.38
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-313",
+          "first_cluster_id": "cluster-314",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-384",
+          "second_cluster_id": "cluster-385",
           "second_publisher": "SBS",
           "similarity": 0.476
         }
@@ -769,7 +769,7 @@
         "cluster-11",
         "cluster-32",
         "cluster-54",
-        "cluster-81"
+        "cluster-80"
       ],
       "total_article_count": 4,
       "clusters": [
@@ -831,7 +831,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-81",
+          "cluster_id": "cluster-80",
           "publisher": "동아일보",
           "topic_title": "李 “부정부패 신고, 업으로 할수도…전문 신고꾼 불이익 없어야”",
           "article_count": 1,
@@ -871,9 +871,9 @@
           "category": "정치",
           "first_cluster_id": "cluster-11",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-81",
+          "second_cluster_id": "cluster-80",
           "second_publisher": "동아일보",
-          "similarity": 0.319
+          "similarity": 0.32
         }
       ],
       "match_id": "match-5"
@@ -889,7 +889,7 @@
       "cluster_ids": [
         "cluster-2",
         "cluster-31",
-        "cluster-75"
+        "cluster-74"
       ],
       "total_article_count": 4,
       "clusters": [
@@ -932,7 +932,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-75",
+          "cluster_id": "cluster-74",
           "publisher": "동아일보",
           "topic_title": "李 “금감원장 많이 당하고 계셔”…삼전닉스 레버리지 대책 주문",
           "article_count": 2,
@@ -967,13 +967,13 @@
           "first_publisher": "조선일보",
           "second_cluster_id": "cluster-31",
           "second_publisher": "한겨레",
-          "similarity": 0.521
+          "similarity": 0.522
         },
         {
           "category": "정치",
           "first_cluster_id": "cluster-2",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-75",
+          "second_cluster_id": "cluster-74",
           "second_publisher": "동아일보",
           "similarity": 0.288
         },
@@ -981,7 +981,7 @@
           "category": "정치",
           "first_cluster_id": "cluster-31",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-75",
+          "second_cluster_id": "cluster-74",
           "second_publisher": "동아일보",
           "similarity": 0.36
         }
@@ -997,14 +997,14 @@
         "조선일보"
       ],
       "cluster_ids": [
-        "cluster-132",
-        "cluster-226",
-        "cluster-262"
+        "cluster-133",
+        "cluster-227",
+        "cluster-263"
       ],
       "total_article_count": 4,
       "clusters": [
         {
-          "cluster_id": "cluster-132",
+          "cluster_id": "cluster-133",
           "publisher": "조선일보",
           "topic_title": "6월 서울 매매·전세·월세 다 올라…월세 상승률 역대 최고",
           "article_count": 2,
@@ -1032,7 +1032,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-226",
+          "cluster_id": "cluster-227",
           "publisher": "동아일보",
           "topic_title": "서울 월셋값 상승률 또 최고치 갈아치워…평균 128만원",
           "article_count": 1,
@@ -1051,7 +1051,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-262",
+          "cluster_id": "cluster-263",
           "publisher": "SBS",
           "topic_title": "6월 서울 주택 매매·전세·월세 상승률 동반 확대…'3중 강세'",
           "article_count": 1,
@@ -1073,22 +1073,115 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-132",
+          "first_cluster_id": "cluster-133",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-226",
+          "second_cluster_id": "cluster-227",
           "second_publisher": "동아일보",
           "similarity": 0.267
         },
         {
           "category": "경제",
-          "first_cluster_id": "cluster-132",
+          "first_cluster_id": "cluster-133",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-262",
+          "second_cluster_id": "cluster-263",
           "second_publisher": "SBS",
           "similarity": 0.434
         }
       ],
       "match_id": "match-7"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 3,
+      "publishers": [
+        "SBS",
+        "조선일보",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-5",
+        "cluster-47",
+        "cluster-122"
+      ],
+      "total_article_count": 3,
+      "clusters": [
+        {
+          "cluster_id": "cluster-5",
+          "publisher": "조선일보",
+          "topic_title": "李 “술자리 옆에 젊은 이성 앉히지 마라…사소해 보이지만 세상이 안 그래”",
+          "article_count": 1,
+          "article_indexes": [
+            5
+          ],
+          "articles": [
+            {
+              "publisher": "조선일보",
+              "category": "정치",
+              "title": "李 “술자리 옆에 젊은 이성 앉히지 마라…사소해 보이지만 세상이 안 그래”",
+              "link": "https://www.chosun.com/politics/blue_house/2026/07/15/YE4MLGOQMJFERJCRL3CF3IUCVA/",
+              "published": "Wed, 15 Jul 2026 06:48:41 +0000",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-47",
+          "publisher": "한국경제",
+          "topic_title": "李 대통령 \"옆자리에 젊은 이성 앉히지 마라, 꼭 사고 난다\"",
+          "article_count": 1,
+          "article_indexes": [
+            127
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "정치",
+              "title": "李 대통령 \"옆자리에 젊은 이성 앉히지 마라, 꼭 사고 난다\"",
+              "link": "https://www.hankyung.com/article/202607157083H",
+              "published": "Wed, 15 Jul 2026 15:26:26 +0900",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-122",
+          "publisher": "SBS",
+          "topic_title": "이 대통령, 여성 소방관 사망 언급…\"옆자리 젊은 이성 앉히지 말라\"",
+          "article_count": 1,
+          "article_indexes": [
+            372
+          ],
+          "articles": [
+            {
+              "publisher": "SBS",
+              "category": "정치",
+              "title": "이 대통령, 여성 소방관 사망 언급…\"옆자리 젊은 이성 앉히지 말라\"",
+              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659387&plink=RSSLINK&cooper=RSSREADER",
+              "published": "Wed, 15 Jul 2026 15:55:00 +0900",
+              "description": "▲ 이재명 대통령이 15일 청와대 영빈관에서 열린 부처 업무보고에서 보고 내용을 경청하고 있다.이재명 대통령은 오늘 공직자들을 향해 …"
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-5",
+          "first_publisher": "조선일보",
+          "second_cluster_id": "cluster-47",
+          "second_publisher": "한국경제",
+          "similarity": 0.221
+        },
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-47",
+          "first_publisher": "한국경제",
+          "second_cluster_id": "cluster-122",
+          "second_publisher": "SBS",
+          "similarity": 0.281
+        }
+      ],
+      "match_id": "match-8"
     },
     {
       "category": "정치",
@@ -1101,7 +1194,7 @@
       "cluster_ids": [
         "cluster-7",
         "cluster-48",
-        "cluster-70"
+        "cluster-69"
       ],
       "total_article_count": 3,
       "clusters": [
@@ -1144,7 +1237,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-70",
+          "cluster_id": "cluster-69",
           "publisher": "동아일보",
           "topic_title": "종합특검 3차 연장 법안, 與 주도로 법사위 통과",
           "article_count": 1,
@@ -1176,7 +1269,7 @@
           "category": "정치",
           "first_cluster_id": "cluster-7",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-70",
+          "second_cluster_id": "cluster-69",
           "second_publisher": "동아일보",
           "similarity": 0.312
         },
@@ -1184,102 +1277,9 @@
           "category": "정치",
           "first_cluster_id": "cluster-48",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-70",
+          "second_cluster_id": "cluster-69",
           "second_publisher": "동아일보",
           "similarity": 0.27
-        }
-      ],
-      "match_id": "match-8"
-    },
-    {
-      "category": "정치",
-      "publisher_count": 3,
-      "publishers": [
-        "SBS",
-        "동아일보",
-        "한국경제"
-      ],
-      "cluster_ids": [
-        "cluster-52",
-        "cluster-78",
-        "cluster-116"
-      ],
-      "total_article_count": 3,
-      "clusters": [
-        {
-          "cluster_id": "cluster-52",
-          "publisher": "한국경제",
-          "topic_title": "李대통령 \"빚 못 갚으면 면책해야…도덕적 해이 지적은 선동\"",
-          "article_count": 1,
-          "article_indexes": [
-            132
-          ],
-          "articles": [
-            {
-              "publisher": "한국경제",
-              "category": "정치",
-              "title": "李대통령 \"빚 못 갚으면 면책해야…도덕적 해이 지적은 선동\"",
-              "link": "https://www.hankyung.com/article/2026071567097",
-              "published": "Wed, 15 Jul 2026 12:55:00 +0900",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "cluster_id": "cluster-78",
-          "publisher": "동아일보",
-          "topic_title": "李 “빚 탕감이 도덕적 해이?…되레 금융기관 가혹한 관리가 문제”",
-          "article_count": 1,
-          "article_indexes": [
-            200
-          ],
-          "articles": [
-            {
-              "publisher": "동아일보",
-              "category": "정치",
-              "title": "李 “빚 탕감이 도덕적 해이?…되레 금융기관 가혹한 관리가 문제”",
-              "link": "https://www.donga.com/news/Politics/article/all/20260715/134303546/1",
-              "published": "Wed, 15 Jul 2026 14:02:00 +0900",
-              "description": "이재명 대통령이 갚을 능력이 없는 장기 연체 채무자에 대해 적극적인 채무 탕감이 필요하다고 밝혔다. 빚을 갚을 수 없는 사람을 계속 묶어두기보다 파산·면책 등을 통해 다시 경제활동을 할 수 있도록 해야 사회 전체에도 도움이 된다는 취지다.이 대통령은 15일 청와대 영빈관에서 열린 금융위원회 업무보고에서 “빚을 졌는데 갚을 능력이 없으면 파산·면책하고 다시 재출발시키는 게 사회적으로 도움이 된다”고 말했다. 이어 “빨리 탕감해줘야 그 사람이 정상적으로 경제 활동을 하고, 그래야 경제가 정상적으로 잘 돌아가지 않느냐”며 “못 갚는 빚 때문에 사람이 죽거나 사회로부터 격리돼 경제활동을 못 하는 일이 없어야 한다”고 강조했다.채무 탕감이 도덕적 해이를 부를 수 있다는 비판에는 강하게 반박했다. 이 대통령은 “누가 몇천만원 때문에 신용불량자가 돼서 취직도 못 하고, 예금계좌도 개설 못 하고 집도 못 얻고 압류당하고 그러고 살겠느냐”고 말했다. 장기 연체 채무자의 불이익이 크기 때문에 제도"
-            }
-          ]
-        },
-        {
-          "cluster_id": "cluster-116",
-          "publisher": "SBS",
-          "topic_title": "이 대통령 \"적극적 탕감이 도덕적 해이 유발? 무책임한 선동\"",
-          "article_count": 1,
-          "article_indexes": [
-            365
-          ],
-          "articles": [
-            {
-              "publisher": "SBS",
-              "category": "정치",
-              "title": "이 대통령 \"적극적 탕감이 도덕적 해이 유발? 무책임한 선동\"",
-              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659503&plink=RSSLINK&cooper=RSSREADER",
-              "published": "Wed, 15 Jul 2026 16:34:00 +0900",
-              "description": "▲ 이재명 대통령이 15일 청와대 영빈관에서 열린 부처 업무보고에서 발언하고 있다.이재명 대통령이 적극적인 탕감 정책이 사회 전체적으…"
-            }
-          ]
-        }
-      ],
-      "pair_matches": [
-        {
-          "category": "정치",
-          "first_cluster_id": "cluster-52",
-          "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-116",
-          "second_publisher": "SBS",
-          "similarity": 0.234
-        },
-        {
-          "category": "정치",
-          "first_cluster_id": "cluster-78",
-          "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-116",
-          "second_publisher": "SBS",
-          "similarity": 0.221
         }
       ],
       "match_id": "match-9"
@@ -1293,14 +1293,14 @@
         "조선일보"
       ],
       "cluster_ids": [
-        "cluster-278",
-        "cluster-347",
-        "cluster-395"
+        "cluster-279",
+        "cluster-348",
+        "cluster-396"
       ],
       "total_article_count": 3,
       "clusters": [
         {
-          "cluster_id": "cluster-278",
+          "cluster_id": "cluster-279",
           "publisher": "조선일보",
           "topic_title": "동국제강 인천공장 고철 더미서 화재… 20시간여 만에 진화",
           "article_count": 1,
@@ -1319,7 +1319,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-347",
+          "cluster_id": "cluster-348",
           "publisher": "동아일보",
           "topic_title": "인천 동국제강 야적장 화재…18시간 만에 초진",
           "article_count": 1,
@@ -1338,7 +1338,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-395",
+          "cluster_id": "cluster-396",
           "publisher": "SBS",
           "topic_title": "동국제강 인천공장 고철더미서 불…20시간여 만에 완진",
           "article_count": 1,
@@ -1360,25 +1360,25 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-278",
+          "first_cluster_id": "cluster-279",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-347",
+          "second_cluster_id": "cluster-348",
           "second_publisher": "동아일보",
           "similarity": 0.307
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-278",
+          "first_cluster_id": "cluster-279",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-395",
+          "second_cluster_id": "cluster-396",
           "second_publisher": "SBS",
           "similarity": 0.586
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-347",
+          "first_cluster_id": "cluster-348",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-395",
+          "second_cluster_id": "cluster-396",
           "second_publisher": "SBS",
           "similarity": 0.265
         }
@@ -1394,14 +1394,14 @@
         "한겨레"
       ],
       "cluster_ids": [
-        "cluster-281",
-        "cluster-289",
-        "cluster-387"
+        "cluster-282",
+        "cluster-290",
+        "cluster-388"
       ],
       "total_article_count": 3,
       "clusters": [
         {
-          "cluster_id": "cluster-281",
+          "cluster_id": "cluster-282",
           "publisher": "조선일보",
           "topic_title": "경찰, ‘법왜곡죄 1호’ 조희대 대법원장 사건 각하",
           "article_count": 1,
@@ -1420,7 +1420,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-289",
+          "cluster_id": "cluster-290",
           "publisher": "한겨레",
           "topic_title": "경찰, ‘법왜곡죄 1호’ 조희대 사건 불송치…“법 시행 전 판결 적용 안 돼”",
           "article_count": 1,
@@ -1439,7 +1439,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-387",
+          "cluster_id": "cluster-388",
           "publisher": "SBS",
           "topic_title": "[자막뉴스] '법왜곡죄 1호' 수사 결과 나왔다…\"7만쪽 이틀 만에\" 경찰 판단은",
           "article_count": 1,
@@ -1461,17 +1461,17 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-281",
+          "first_cluster_id": "cluster-282",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-289",
+          "second_cluster_id": "cluster-290",
           "second_publisher": "한겨레",
           "similarity": 0.571
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-281",
+          "first_cluster_id": "cluster-282",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-387",
+          "second_cluster_id": "cluster-388",
           "second_publisher": "SBS",
           "similarity": 0.263
         }
@@ -1487,14 +1487,14 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-284",
-        "cluster-319",
-        "cluster-351"
+        "cluster-285",
+        "cluster-320",
+        "cluster-352"
       ],
       "total_article_count": 3,
       "clusters": [
         {
-          "cluster_id": "cluster-284",
+          "cluster_id": "cluster-285",
           "publisher": "조선일보",
           "topic_title": "장윤기, 피해 여고생 몰랐다더니... 경찰 “미리 파악후 범행했을 정황”",
           "article_count": 1,
@@ -1513,7 +1513,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-319",
+          "cluster_id": "cluster-320",
           "publisher": "한국경제",
           "topic_title": "장윤기, 피해 여고생 계획적으로 노렸나…휴대폰서 정황 발견",
           "article_count": 1,
@@ -1532,7 +1532,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-351",
+          "cluster_id": "cluster-352",
           "publisher": "동아일보",
           "topic_title": "장윤기, 피해 여고생 일면식 없다더니…휴대폰에 인지 정황",
           "article_count": 1,
@@ -1554,104 +1554,22 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-284",
+          "first_cluster_id": "cluster-285",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-319",
+          "second_cluster_id": "cluster-320",
           "second_publisher": "한국경제",
           "similarity": 0.247
         },
         {
           "category": "사회",
-          "first_cluster_id": "cluster-319",
+          "first_cluster_id": "cluster-320",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-351",
+          "second_cluster_id": "cluster-352",
           "second_publisher": "동아일보",
           "similarity": 0.246
         }
       ],
       "match_id": "match-12"
-    },
-    {
-      "category": "정치",
-      "publisher_count": 2,
-      "publishers": [
-        "SBS",
-        "동아일보"
-      ],
-      "cluster_ids": [
-        "cluster-77",
-        "cluster-120"
-      ],
-      "total_article_count": 4,
-      "clusters": [
-        {
-          "cluster_id": "cluster-77",
-          "publisher": "동아일보",
-          "topic_title": "李 “공직자 술자리서 옆에 젊은 이성 앉히지 마라…큰일 난다”",
-          "article_count": 1,
-          "article_indexes": [
-            199
-          ],
-          "articles": [
-            {
-              "publisher": "동아일보",
-              "category": "정치",
-              "title": "李 “공직자 술자리서 옆에 젊은 이성 앉히지 마라…큰일 난다”",
-              "link": "https://www.donga.com/news/Politics/article/all/20260715/134303576/1",
-              "published": "Wed, 15 Jul 2026 14:06:00 +0900",
-              "description": "이재명 대통령이 15일 “술 먹고 노는 거 다 좋은데, 옆자리에 젊은 이성을 앉히거나 그런 거 하지 말라“며 공직자들에게 성 비위에 각별한 주의를 기울이라고 지시했다.이 대통령은 15일 청와대에서 열린 2차 생중계 업무보고 마무리 발언에서 “대한민국 모든 공직자가 다 들으면 좋겠다”며 이렇게 말했다.이 대통령은 “아직 그러는 경우가 가끔씩 있는 것 같다. 대체적으로 안 그러는데”라며 “젊은 이성 직원이 노리개감이 아니지 않느냐”고 말했다. 이 대통령은 이어 “그렇게 취급을 당하는 자체가 엄청나게 격분할 상황”이라며 “전에는 다 수용하고 감수했다. 그런데 (이제는) 그런 태도, 그런 마인드 자체가 인격 모독”이라고 말했다. 또 “(그런 취급이) 동등한 인격적 주체로 대하는 것은 아니지 않느냐”면서 “대상으로, 수단으로 (여기는 것이다) 그 생각 자체가 이제는 없어야 된다”고 강조했다.이어 “얼마 전에도 그런 사고가 좀 난 것 같아서 제가 드린 말씀”이라며 “옛날에는 아무 문제가"
-            }
-          ]
-        },
-        {
-          "cluster_id": "cluster-120",
-          "publisher": "SBS",
-          "topic_title": "이 대통령, 가짜뉴스 실시간 대응 주문…\"공동체 파괴할 정도\"",
-          "article_count": 3,
-          "article_indexes": [
-            369,
-            372,
-            378
-          ],
-          "articles": [
-            {
-              "publisher": "SBS",
-              "category": "정치",
-              "title": "[바로이뉴스] 이 대통령 \"술자리서 젊은 이성 옆에 앉히지 마라\"…'모든 공직자들' 향해 경고한 이유?",
-              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659344&plink=RSSLINK&cooper=RSSREADER",
-              "published": "Wed, 15 Jul 2026 16:10:00 +0900",
-              "description": "이재명 대통령은 오늘 청와대에서 열린 업무보고에서 \"대한민국 모든 공직자가 다 들으면 좋겠다\"면서 \"술 먹고 노는 거 다 …"
-            },
-            {
-              "publisher": "SBS",
-              "category": "정치",
-              "title": "이 대통령, 여성 소방관 사망 언급…\"옆자리 젊은 이성 앉히지 말라\"",
-              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659387&plink=RSSLINK&cooper=RSSREADER",
-              "published": "Wed, 15 Jul 2026 15:55:00 +0900",
-              "description": "▲ 이재명 대통령이 15일 청와대 영빈관에서 열린 부처 업무보고에서 보고 내용을 경청하고 있다.이재명 대통령은 오늘 공직자들을 향해 …"
-            },
-            {
-              "publisher": "SBS",
-              "category": "정치",
-              "title": "이 대통령, 가짜뉴스 실시간 대응 주문…\"공동체 파괴할 정도\"",
-              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659255&plink=RSSLINK&cooper=RSSREADER",
-              "published": "Wed, 15 Jul 2026 15:20:00 +0900",
-              "description": "▲ 이재명 대통령이 15일 청와대 영빈관에서 열린 부처 업무보고에서 보고 내용을 경청하고 있다.이재명 대통령은 오늘 \"지금 가…"
-            }
-          ]
-        }
-      ],
-      "pair_matches": [
-        {
-          "category": "정치",
-          "first_cluster_id": "cluster-77",
-          "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-120",
-          "second_publisher": "SBS",
-          "similarity": 0.227
-        }
-      ],
-      "match_id": "match-13"
     },
     {
       "category": "정치",
@@ -1724,71 +1642,7 @@
           "similarity": 0.308
         }
       ],
-      "match_id": "match-14"
-    },
-    {
-      "category": "정치",
-      "publisher_count": 2,
-      "publishers": [
-        "조선일보",
-        "한국경제"
-      ],
-      "cluster_ids": [
-        "cluster-5",
-        "cluster-47"
-      ],
-      "total_article_count": 2,
-      "clusters": [
-        {
-          "cluster_id": "cluster-5",
-          "publisher": "조선일보",
-          "topic_title": "李 “술자리 옆에 젊은 이성 앉히지 마라…사소해 보이지만 세상이 안 그래”",
-          "article_count": 1,
-          "article_indexes": [
-            5
-          ],
-          "articles": [
-            {
-              "publisher": "조선일보",
-              "category": "정치",
-              "title": "李 “술자리 옆에 젊은 이성 앉히지 마라…사소해 보이지만 세상이 안 그래”",
-              "link": "https://www.chosun.com/politics/blue_house/2026/07/15/YE4MLGOQMJFERJCRL3CF3IUCVA/",
-              "published": "Wed, 15 Jul 2026 06:48:41 +0000",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "cluster_id": "cluster-47",
-          "publisher": "한국경제",
-          "topic_title": "李 대통령 \"옆자리에 젊은 이성 앉히지 마라, 꼭 사고 난다\"",
-          "article_count": 1,
-          "article_indexes": [
-            127
-          ],
-          "articles": [
-            {
-              "publisher": "한국경제",
-              "category": "정치",
-              "title": "李 대통령 \"옆자리에 젊은 이성 앉히지 마라, 꼭 사고 난다\"",
-              "link": "https://www.hankyung.com/article/202607157083H",
-              "published": "Wed, 15 Jul 2026 15:26:26 +0900",
-              "description": ""
-            }
-          ]
-        }
-      ],
-      "pair_matches": [
-        {
-          "category": "정치",
-          "first_cluster_id": "cluster-5",
-          "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-47",
-          "second_publisher": "한국경제",
-          "similarity": 0.232
-        }
-      ],
-      "match_id": "match-15"
+      "match_id": "match-13"
     },
     {
       "category": "정치",
@@ -1852,7 +1706,7 @@
           "similarity": 0.237
         }
       ],
-      "match_id": "match-16"
+      "match_id": "match-14"
     },
     {
       "category": "정치",
@@ -1863,7 +1717,7 @@
       ],
       "cluster_ids": [
         "cluster-36",
-        "cluster-69"
+        "cluster-68"
       ],
       "total_article_count": 2,
       "clusters": [
@@ -1887,7 +1741,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-69",
+          "cluster_id": "cluster-68",
           "publisher": "동아일보",
           "topic_title": "與, 홈플러스 청문회 추진…“MBK·메리츠 기만적 태도에 국민 분노”",
           "article_count": 1,
@@ -1911,12 +1765,12 @@
           "category": "정치",
           "first_cluster_id": "cluster-36",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-69",
+          "second_cluster_id": "cluster-68",
           "second_publisher": "동아일보",
           "similarity": 0.331
         }
       ],
-      "match_id": "match-17"
+      "match_id": "match-15"
     },
     {
       "category": "정치",
@@ -1980,7 +1834,7 @@
           "similarity": 0.24
         }
       ],
-      "match_id": "match-18"
+      "match_id": "match-16"
     },
     {
       "category": "정치",
@@ -1991,7 +1845,7 @@
       ],
       "cluster_ids": [
         "cluster-49",
-        "cluster-127"
+        "cluster-128"
       ],
       "total_article_count": 2,
       "clusters": [
@@ -2015,7 +1869,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-127",
+          "cluster_id": "cluster-128",
           "publisher": "SBS",
           "topic_title": "오세훈, '부동산 일타강사' 자처…정부 '수요 억제' 정책 지적",
           "article_count": 1,
@@ -2039,12 +1893,12 @@
           "category": "정치",
           "first_cluster_id": "cluster-49",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-127",
+          "second_cluster_id": "cluster-128",
           "second_publisher": "SBS",
-          "similarity": 0.601
+          "similarity": 0.602
         }
       ],
-      "match_id": "match-19"
+      "match_id": "match-17"
     },
     {
       "category": "정치",
@@ -2055,7 +1909,7 @@
       ],
       "cluster_ids": [
         "cluster-50",
-        "cluster-117"
+        "cluster-116"
       ],
       "total_article_count": 2,
       "clusters": [
@@ -2079,7 +1933,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-117",
+          "cluster_id": "cluster-116",
           "publisher": "SBS",
           "topic_title": "[여담야담] \"보완수사권 폐지, 당론 아니다\" 수석 대변인 공개 확인 파장",
           "article_count": 1,
@@ -2103,9 +1957,137 @@
           "category": "정치",
           "first_cluster_id": "cluster-50",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-117",
+          "second_cluster_id": "cluster-116",
           "second_publisher": "SBS",
           "similarity": 0.375
+        }
+      ],
+      "match_id": "match-18"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "SBS",
+        "한국경제"
+      ],
+      "cluster_ids": [
+        "cluster-52",
+        "cluster-115"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-52",
+          "publisher": "한국경제",
+          "topic_title": "李대통령 \"빚 못 갚으면 면책해야…도덕적 해이 지적은 선동\"",
+          "article_count": 1,
+          "article_indexes": [
+            132
+          ],
+          "articles": [
+            {
+              "publisher": "한국경제",
+              "category": "정치",
+              "title": "李대통령 \"빚 못 갚으면 면책해야…도덕적 해이 지적은 선동\"",
+              "link": "https://www.hankyung.com/article/2026071567097",
+              "published": "Wed, 15 Jul 2026 12:55:00 +0900",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-115",
+          "publisher": "SBS",
+          "topic_title": "이 대통령 \"적극적 탕감이 도덕적 해이 유발? 무책임한 선동\"",
+          "article_count": 1,
+          "article_indexes": [
+            365
+          ],
+          "articles": [
+            {
+              "publisher": "SBS",
+              "category": "정치",
+              "title": "이 대통령 \"적극적 탕감이 도덕적 해이 유발? 무책임한 선동\"",
+              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659503&plink=RSSLINK&cooper=RSSREADER",
+              "published": "Wed, 15 Jul 2026 16:34:00 +0900",
+              "description": "▲ 이재명 대통령이 15일 청와대 영빈관에서 열린 부처 업무보고에서 발언하고 있다.이재명 대통령이 적극적인 탕감 정책이 사회 전체적으…"
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-52",
+          "first_publisher": "한국경제",
+          "second_cluster_id": "cluster-115",
+          "second_publisher": "SBS",
+          "similarity": 0.234
+        }
+      ],
+      "match_id": "match-19"
+    },
+    {
+      "category": "정치",
+      "publisher_count": 2,
+      "publishers": [
+        "SBS",
+        "동아일보"
+      ],
+      "cluster_ids": [
+        "cluster-76",
+        "cluster-119"
+      ],
+      "total_article_count": 2,
+      "clusters": [
+        {
+          "cluster_id": "cluster-76",
+          "publisher": "동아일보",
+          "topic_title": "李 “공직자 술자리서 옆에 젊은 이성 앉히지 마라…큰일 난다”",
+          "article_count": 1,
+          "article_indexes": [
+            199
+          ],
+          "articles": [
+            {
+              "publisher": "동아일보",
+              "category": "정치",
+              "title": "李 “공직자 술자리서 옆에 젊은 이성 앉히지 마라…큰일 난다”",
+              "link": "https://www.donga.com/news/Politics/article/all/20260715/134303576/1",
+              "published": "Wed, 15 Jul 2026 14:06:00 +0900",
+              "description": "이재명 대통령이 15일 “술 먹고 노는 거 다 좋은데, 옆자리에 젊은 이성을 앉히거나 그런 거 하지 말라“며 공직자들에게 성 비위에 각별한 주의를 기울이라고 지시했다.이 대통령은 15일 청와대에서 열린 2차 생중계 업무보고 마무리 발언에서 “대한민국 모든 공직자가 다 들으면 좋겠다”며 이렇게 말했다.이 대통령은 “아직 그러는 경우가 가끔씩 있는 것 같다. 대체적으로 안 그러는데”라며 “젊은 이성 직원이 노리개감이 아니지 않느냐”고 말했다. 이 대통령은 이어 “그렇게 취급을 당하는 자체가 엄청나게 격분할 상황”이라며 “전에는 다 수용하고 감수했다. 그런데 (이제는) 그런 태도, 그런 마인드 자체가 인격 모독”이라고 말했다. 또 “(그런 취급이) 동등한 인격적 주체로 대하는 것은 아니지 않느냐”면서 “대상으로, 수단으로 (여기는 것이다) 그 생각 자체가 이제는 없어야 된다”고 강조했다.이어 “얼마 전에도 그런 사고가 좀 난 것 같아서 제가 드린 말씀”이라며 “옛날에는 아무 문제가"
+            }
+          ]
+        },
+        {
+          "cluster_id": "cluster-119",
+          "publisher": "SBS",
+          "topic_title": "[바로이뉴스] 이 대통령 \"술자리서 젊은 이성 옆에 앉히지 마라\"…'모든 공직자들' 향해 경고한 이유?",
+          "article_count": 1,
+          "article_indexes": [
+            369
+          ],
+          "articles": [
+            {
+              "publisher": "SBS",
+              "category": "정치",
+              "title": "[바로이뉴스] 이 대통령 \"술자리서 젊은 이성 옆에 앉히지 마라\"…'모든 공직자들' 향해 경고한 이유?",
+              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659344&plink=RSSLINK&cooper=RSSREADER",
+              "published": "Wed, 15 Jul 2026 16:10:00 +0900",
+              "description": "이재명 대통령은 오늘 청와대에서 열린 업무보고에서 \"대한민국 모든 공직자가 다 들으면 좋겠다\"면서 \"술 먹고 노는 거 다 …"
+            }
+          ]
+        }
+      ],
+      "pair_matches": [
+        {
+          "category": "정치",
+          "first_cluster_id": "cluster-76",
+          "first_publisher": "동아일보",
+          "second_cluster_id": "cluster-119",
+          "second_publisher": "SBS",
+          "similarity": 0.258
         }
       ],
       "match_id": "match-20"
@@ -2118,13 +2100,13 @@
         "조선일보"
       ],
       "cluster_ids": [
-        "cluster-133",
-        "cluster-216"
+        "cluster-134",
+        "cluster-217"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-133",
+          "cluster_id": "cluster-134",
           "publisher": "조선일보",
           "topic_title": "삼성전자, 폴더블 신제품 주름 개선한 ‘플렉스 티타늄’ 기술 공개",
           "article_count": 1,
@@ -2143,7 +2125,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-216",
+          "cluster_id": "cluster-217",
           "publisher": "동아일보",
           "topic_title": "갤럭시 폴더블 주름 줄였다…‘플렉스 티타늄’ 새기술 공개",
           "article_count": 1,
@@ -2165,9 +2147,9 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-133",
+          "first_cluster_id": "cluster-134",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-216",
+          "second_cluster_id": "cluster-217",
           "second_publisher": "동아일보",
           "similarity": 0.359
         }
@@ -2182,13 +2164,13 @@
         "조선일보"
       ],
       "cluster_ids": [
-        "cluster-134",
-        "cluster-256"
+        "cluster-135",
+        "cluster-257"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-134",
+          "cluster_id": "cluster-135",
           "publisher": "조선일보",
           "topic_title": "李 “술 자리에서 옆에 젊은 이성 앉히지 말라”",
           "article_count": 1,
@@ -2207,7 +2189,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-256",
+          "cluster_id": "cluster-257",
           "publisher": "SBS",
           "topic_title": "이 대통령 \"공직자 술자리서 옆에 젊은 이성 앉히지 마라\"",
           "article_count": 1,
@@ -2229,9 +2211,9 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-134",
+          "first_cluster_id": "cluster-135",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-256",
+          "second_cluster_id": "cluster-257",
           "second_publisher": "SBS",
           "similarity": 0.374
         }
@@ -2246,13 +2228,13 @@
         "조선일보"
       ],
       "cluster_ids": [
-        "cluster-137",
-        "cluster-248"
+        "cluster-138",
+        "cluster-249"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-137",
+          "cluster_id": "cluster-138",
           "publisher": "조선일보",
           "topic_title": "“원청, 하청과 직접 교섭하라” 민주노총 총파업… 1만명 광화문서 청와대 행진",
           "article_count": 1,
@@ -2271,7 +2253,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-248",
+          "cluster_id": "cluster-249",
           "publisher": "SBS",
           "topic_title": "\"원청교섭 쟁취\"…민주노총 서울 도심서 총파업대회",
           "article_count": 1,
@@ -2293,9 +2275,9 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-137",
+          "first_cluster_id": "cluster-138",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-248",
+          "second_cluster_id": "cluster-249",
           "second_publisher": "SBS",
           "similarity": 0.284
         }
@@ -2310,13 +2292,13 @@
         "매일경제"
       ],
       "cluster_ids": [
-        "cluster-190",
-        "cluster-237"
+        "cluster-191",
+        "cluster-238"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-190",
+          "cluster_id": "cluster-191",
           "publisher": "동아일보",
           "topic_title": "李 지시에 단일종목 레버리지 ETF 손본다…변동성 대책 마련",
           "article_count": 1,
@@ -2335,7 +2317,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-237",
+          "cluster_id": "cluster-238",
           "publisher": "매일경제",
           "topic_title": "李 대통령 “2배 ETF 많이 당하고 계신데”…보완대책 마련 주문",
           "article_count": 1,
@@ -2357,9 +2339,9 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-190",
+          "first_cluster_id": "cluster-191",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-237",
+          "second_cluster_id": "cluster-238",
           "second_publisher": "매일경제",
           "similarity": 0.244
         }
@@ -2374,13 +2356,13 @@
         "매일경제"
       ],
       "cluster_ids": [
-        "cluster-236",
-        "cluster-263"
+        "cluster-237",
+        "cluster-264"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-236",
+          "cluster_id": "cluster-237",
           "publisher": "매일경제",
           "topic_title": "“이러니 여기저기서 버블 걱정”…반도체 기업 자금 몰리며 통화량 32조 급증",
           "article_count": 1,
@@ -2399,7 +2381,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-263",
+          "cluster_id": "cluster-264",
           "publisher": "SBS",
           "topic_title": "삼전·닉스 등 투자에…5월 통화량 32조 증가, 9개월 만에 최대폭",
           "article_count": 1,
@@ -2421,9 +2403,9 @@
       "pair_matches": [
         {
           "category": "경제",
-          "first_cluster_id": "cluster-236",
+          "first_cluster_id": "cluster-237",
           "first_publisher": "매일경제",
-          "second_cluster_id": "cluster-263",
+          "second_cluster_id": "cluster-264",
           "second_publisher": "SBS",
           "similarity": 0.313
         }
@@ -2438,13 +2420,13 @@
         "조선일보"
       ],
       "cluster_ids": [
-        "cluster-271",
-        "cluster-399"
+        "cluster-272",
+        "cluster-400"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-271",
+          "cluster_id": "cluster-272",
           "publisher": "조선일보",
           "topic_title": "경찰, 암 환자 진료비 ‘페이백’ 의혹 병·의원 12곳 수사 착수",
           "article_count": 1,
@@ -2463,7 +2445,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-399",
+          "cluster_id": "cluster-400",
           "publisher": "SBS",
           "topic_title": "경찰, 암환자 진료비 '페이백' 의심 병원 12곳 수사 착수",
           "article_count": 1,
@@ -2485,9 +2467,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-271",
+          "first_cluster_id": "cluster-272",
           "first_publisher": "조선일보",
-          "second_cluster_id": "cluster-399",
+          "second_cluster_id": "cluster-400",
           "second_publisher": "SBS",
           "similarity": 0.483
         }
@@ -2502,13 +2484,13 @@
         "한겨레"
       ],
       "cluster_ids": [
-        "cluster-295",
-        "cluster-380"
+        "cluster-296",
+        "cluster-381"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-295",
+          "cluster_id": "cluster-296",
           "publisher": "한겨레",
           "topic_title": "회식 중 부적절 행위 의혹 프로배구단 코치 자진 사퇴…스포츠윤리센터 조사 중",
           "article_count": 1,
@@ -2527,7 +2509,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-380",
+          "cluster_id": "cluster-381",
           "publisher": "매일경제",
           "topic_title": "성적 수치심 느꼈다…회식서 부적절한 행위 의혹 女배구 코치, 자진 사퇴",
           "article_count": 1,
@@ -2549,9 +2531,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-295",
+          "first_cluster_id": "cluster-296",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-380",
+          "second_cluster_id": "cluster-381",
           "second_publisher": "매일경제",
           "similarity": 0.345
         }
@@ -2566,13 +2548,13 @@
         "한겨레"
       ],
       "cluster_ids": [
-        "cluster-296",
-        "cluster-352"
+        "cluster-297",
+        "cluster-353"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-296",
+          "cluster_id": "cluster-297",
           "publisher": "한겨레",
           "topic_title": "생년월일 ‘2014년 4월 16일’ 병원 앱 개발사 “세월호 유족께 사과”",
           "article_count": 1,
@@ -2591,7 +2573,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-352",
+          "cluster_id": "cluster-353",
           "publisher": "동아일보",
           "topic_title": "병원앱 예시문에 세월호 참사 날짜가…제작업체 “사과”",
           "article_count": 1,
@@ -2613,9 +2595,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-296",
+          "first_cluster_id": "cluster-297",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-352",
+          "second_cluster_id": "cluster-353",
           "second_publisher": "동아일보",
           "similarity": 0.257
         }
@@ -2630,13 +2612,13 @@
         "한겨레"
       ],
       "cluster_ids": [
-        "cluster-301",
-        "cluster-350"
+        "cluster-302",
+        "cluster-351"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-301",
+          "cluster_id": "cluster-302",
           "publisher": "한겨레",
           "topic_title": "오후까지 곳곳에 비…강원 동해안·영남 체감온도 33도 무더위",
           "article_count": 1,
@@ -2655,7 +2637,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-350",
+          "cluster_id": "cluster-351",
           "publisher": "동아일보",
           "topic_title": "호남·제주 내일도 비…수도권·충청·영남은 무더위",
           "article_count": 1,
@@ -2677,9 +2659,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-301",
+          "first_cluster_id": "cluster-302",
           "first_publisher": "한겨레",
-          "second_cluster_id": "cluster-350",
+          "second_cluster_id": "cluster-351",
           "second_publisher": "동아일보",
           "similarity": 0.263
         }
@@ -2694,13 +2676,13 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-308",
-        "cluster-396"
+        "cluster-309",
+        "cluster-397"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-308",
+          "cluster_id": "cluster-309",
           "publisher": "한국경제",
           "topic_title": "담당 팀장이 증거 묵살 지시…장윤기 수사 '의도적 부실' 확인",
           "article_count": 1,
@@ -2719,7 +2701,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-396",
+          "cluster_id": "cluster-397",
           "publisher": "SBS",
           "topic_title": "증거, 놓친 게 아니라 묵살…장윤기 수사 '의도적 부실' 드러나",
           "article_count": 1,
@@ -2741,9 +2723,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-308",
+          "first_cluster_id": "cluster-309",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-396",
+          "second_cluster_id": "cluster-397",
           "second_publisher": "SBS",
           "similarity": 0.48
         }
@@ -2758,13 +2740,13 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-311",
-        "cluster-397"
+        "cluster-312",
+        "cluster-398"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-311",
+          "cluster_id": "cluster-312",
           "publisher": "한국경제",
           "topic_title": "[속보] 민주노총 집회 후 청와대 방향 행진…도심 교통 혼잡",
           "article_count": 1,
@@ -2783,7 +2765,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-397",
+          "cluster_id": "cluster-398",
           "publisher": "SBS",
           "topic_title": "[속보] 민주노총 집회 후 청와대 방향 행진…도심 교통 혼잡",
           "article_count": 1,
@@ -2805,9 +2787,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-311",
+          "first_cluster_id": "cluster-312",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-397",
+          "second_cluster_id": "cluster-398",
           "second_publisher": "SBS",
           "similarity": 0.841
         }
@@ -2822,13 +2804,13 @@
         "한국경제"
       ],
       "cluster_ids": [
-        "cluster-316",
-        "cluster-344"
+        "cluster-317",
+        "cluster-345"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-316",
+          "cluster_id": "cluster-317",
           "publisher": "한국경제",
           "topic_title": "경찰, 홍명보 선임 의혹 관련 참고인 조사…정몽규 재소환 검토",
           "article_count": 1,
@@ -2847,7 +2829,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-344",
+          "cluster_id": "cluster-345",
           "publisher": "동아일보",
           "topic_title": "‘홍명보 선임 의혹’ 수사 속도…정몽규·이임생 재소환 가능성",
           "article_count": 1,
@@ -2869,9 +2851,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-316",
+          "first_cluster_id": "cluster-317",
           "first_publisher": "한국경제",
-          "second_cluster_id": "cluster-344",
+          "second_cluster_id": "cluster-345",
           "second_publisher": "동아일보",
           "similarity": 0.287
         }
@@ -2886,13 +2868,13 @@
         "동아일보"
       ],
       "cluster_ids": [
-        "cluster-325",
-        "cluster-393"
+        "cluster-326",
+        "cluster-394"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-325",
+          "cluster_id": "cluster-326",
           "publisher": "동아일보",
           "topic_title": "가짜 양주 먹인 손님 9시간 방치 사망…주점 업주 2명 실형",
           "article_count": 1,
@@ -2911,7 +2893,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-393",
+          "cluster_id": "cluster-394",
           "publisher": "SBS",
           "topic_title": "'후카시 양주' 마시고 의식 잃었는데… 소파에 9시간 방치해 숨졌다",
           "article_count": 1,
@@ -2933,9 +2915,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-325",
+          "first_cluster_id": "cluster-326",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-393",
+          "second_cluster_id": "cluster-394",
           "second_publisher": "SBS",
           "similarity": 0.314
         }
@@ -2950,13 +2932,13 @@
         "동아일보"
       ],
       "cluster_ids": [
-        "cluster-330",
-        "cluster-385"
+        "cluster-331",
+        "cluster-386"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-330",
+          "cluster_id": "cluster-331",
           "publisher": "동아일보",
           "topic_title": "3년전 ‘불법촬영’ 중징계 경찰간부, 이번엔 미성년 성범죄 혐의 입건",
           "article_count": 1,
@@ -2975,7 +2957,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-385",
+          "cluster_id": "cluster-386",
           "publisher": "SBS",
           "topic_title": "'성범죄 전력' 부산 경찰관, 이번엔 미성년자 준강간 혐의 입건",
           "article_count": 1,
@@ -2997,9 +2979,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-330",
+          "first_cluster_id": "cluster-331",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-385",
+          "second_cluster_id": "cluster-386",
           "second_publisher": "SBS",
           "similarity": 0.325
         }
@@ -3014,13 +2996,13 @@
         "매일경제"
       ],
       "cluster_ids": [
-        "cluster-336",
-        "cluster-377"
+        "cluster-337",
+        "cluster-378"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-336",
+          "cluster_id": "cluster-337",
           "publisher": "동아일보",
           "topic_title": "英 앤 공주, 고려대 방문…로봇·HBM 연구 현장 둘러봐",
           "article_count": 1,
@@ -3039,7 +3021,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-377",
+          "cluster_id": "cluster-378",
           "publisher": "매일경제",
           "topic_title": "고려대 찾은 英 앤 공주 “IT기술 발전 놀라워…웨어러블 로봇 써보길 기대”",
           "article_count": 1,
@@ -3061,9 +3043,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-336",
+          "first_cluster_id": "cluster-337",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-377",
+          "second_cluster_id": "cluster-378",
           "second_publisher": "매일경제",
           "similarity": 0.235
         }
@@ -3078,13 +3060,13 @@
         "동아일보"
       ],
       "cluster_ids": [
-        "cluster-359",
-        "cluster-383"
+        "cluster-360",
+        "cluster-384"
       ],
       "total_article_count": 2,
       "clusters": [
         {
-          "cluster_id": "cluster-359",
+          "cluster_id": "cluster-360",
           "publisher": "동아일보",
           "topic_title": "‘대변 실수’ 97세 노모 때려 숨지게 한 60대 아들 ‘징역 5년’",
           "article_count": 1,
@@ -3103,7 +3085,7 @@
           ]
         },
         {
-          "cluster_id": "cluster-383",
+          "cluster_id": "cluster-384",
           "publisher": "SBS",
           "topic_title": "'대변 실수' 90대 노모 때려 숨지게 한 아들 징역 5년 선고",
           "article_count": 1,
@@ -3125,9 +3107,9 @@
       "pair_matches": [
         {
           "category": "사회",
-          "first_cluster_id": "cluster-359",
+          "first_cluster_id": "cluster-360",
           "first_publisher": "동아일보",
-          "second_cluster_id": "cluster-383",
+          "second_cluster_id": "cluster-384",
           "second_publisher": "SBS",
           "similarity": 0.376
         }
@@ -3142,13 +3124,13 @@
       "first_publisher": "조선일보",
       "second_cluster_id": "cluster-31",
       "second_publisher": "한겨레",
-      "similarity": 0.521
+      "similarity": 0.522
     },
     {
       "category": "정치",
       "first_cluster_id": "cluster-2",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-75",
+      "second_cluster_id": "cluster-74",
       "second_publisher": "동아일보",
       "similarity": 0.288
     },
@@ -3158,7 +3140,7 @@
       "first_publisher": "조선일보",
       "second_cluster_id": "cluster-47",
       "second_publisher": "한국경제",
-      "similarity": 0.232
+      "similarity": 0.221
     },
     {
       "category": "정치",
@@ -3166,7 +3148,7 @@
       "first_publisher": "조선일보",
       "second_cluster_id": "cluster-30",
       "second_publisher": "한겨레",
-      "similarity": 0.648
+      "similarity": 0.649
     },
     {
       "category": "정치",
@@ -3180,9 +3162,9 @@
       "category": "정치",
       "first_cluster_id": "cluster-6",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-115",
+      "second_cluster_id": "cluster-114",
       "second_publisher": "SBS",
-      "similarity": 0.314
+      "similarity": 0.315
     },
     {
       "category": "정치",
@@ -3196,7 +3178,7 @@
       "category": "정치",
       "first_cluster_id": "cluster-7",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-70",
+      "second_cluster_id": "cluster-69",
       "second_publisher": "동아일보",
       "similarity": 0.312
     },
@@ -3228,9 +3210,9 @@
       "category": "정치",
       "first_cluster_id": "cluster-11",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-81",
+      "second_cluster_id": "cluster-80",
       "second_publisher": "동아일보",
-      "similarity": 0.319
+      "similarity": 0.32
     },
     {
       "category": "정치",
@@ -3244,7 +3226,7 @@
       "category": "정치",
       "first_cluster_id": "cluster-30",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-115",
+      "second_cluster_id": "cluster-114",
       "second_publisher": "SBS",
       "similarity": 0.298
     },
@@ -3252,7 +3234,7 @@
       "category": "정치",
       "first_cluster_id": "cluster-31",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-75",
+      "second_cluster_id": "cluster-74",
       "second_publisher": "동아일보",
       "similarity": 0.36
     },
@@ -3260,7 +3242,7 @@
       "category": "정치",
       "first_cluster_id": "cluster-36",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-69",
+      "second_cluster_id": "cluster-68",
       "second_publisher": "동아일보",
       "similarity": 0.331
     },
@@ -3282,9 +3264,17 @@
     },
     {
       "category": "정치",
+      "first_cluster_id": "cluster-47",
+      "first_publisher": "한국경제",
+      "second_cluster_id": "cluster-122",
+      "second_publisher": "SBS",
+      "similarity": 0.281
+    },
+    {
+      "category": "정치",
       "first_cluster_id": "cluster-48",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-70",
+      "second_cluster_id": "cluster-69",
       "second_publisher": "동아일보",
       "similarity": 0.27
     },
@@ -3292,15 +3282,15 @@
       "category": "정치",
       "first_cluster_id": "cluster-49",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-127",
+      "second_cluster_id": "cluster-128",
       "second_publisher": "SBS",
-      "similarity": 0.601
+      "similarity": 0.602
     },
     {
       "category": "정치",
       "first_cluster_id": "cluster-50",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-117",
+      "second_cluster_id": "cluster-116",
       "second_publisher": "SBS",
       "similarity": 0.375
     },
@@ -3308,7 +3298,7 @@
       "category": "정치",
       "first_cluster_id": "cluster-52",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-116",
+      "second_cluster_id": "cluster-115",
       "second_publisher": "SBS",
       "similarity": 0.234
     },
@@ -3316,455 +3306,447 @@
       "category": "정치",
       "first_cluster_id": "cluster-65",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-115",
+      "second_cluster_id": "cluster-114",
       "second_publisher": "SBS",
-      "similarity": 0.227
+      "similarity": 0.228
     },
     {
       "category": "정치",
-      "first_cluster_id": "cluster-77",
+      "first_cluster_id": "cluster-76",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-120",
+      "second_cluster_id": "cluster-119",
       "second_publisher": "SBS",
-      "similarity": 0.227
-    },
-    {
-      "category": "정치",
-      "first_cluster_id": "cluster-78",
-      "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-116",
-      "second_publisher": "SBS",
-      "similarity": 0.221
-    },
-    {
-      "category": "경제",
-      "first_cluster_id": "cluster-132",
-      "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-226",
-      "second_publisher": "동아일보",
-      "similarity": 0.267
-    },
-    {
-      "category": "경제",
-      "first_cluster_id": "cluster-132",
-      "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-262",
-      "second_publisher": "SBS",
-      "similarity": 0.434
+      "similarity": 0.258
     },
     {
       "category": "경제",
       "first_cluster_id": "cluster-133",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-216",
+      "second_cluster_id": "cluster-227",
       "second_publisher": "동아일보",
-      "similarity": 0.359
+      "similarity": 0.267
+    },
+    {
+      "category": "경제",
+      "first_cluster_id": "cluster-133",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-263",
+      "second_publisher": "SBS",
+      "similarity": 0.434
     },
     {
       "category": "경제",
       "first_cluster_id": "cluster-134",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-256",
+      "second_cluster_id": "cluster-217",
+      "second_publisher": "동아일보",
+      "similarity": 0.359
+    },
+    {
+      "category": "경제",
+      "first_cluster_id": "cluster-135",
+      "first_publisher": "조선일보",
+      "second_cluster_id": "cluster-257",
       "second_publisher": "SBS",
       "similarity": 0.374
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-137",
+      "first_cluster_id": "cluster-138",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-248",
+      "second_cluster_id": "cluster-249",
       "second_publisher": "SBS",
       "similarity": 0.284
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-153",
+      "first_cluster_id": "cluster-154",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-175",
+      "second_cluster_id": "cluster-176",
       "second_publisher": "한국경제",
       "similarity": 0.451
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-153",
+      "first_cluster_id": "cluster-154",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-212",
+      "second_cluster_id": "cluster-213",
       "second_publisher": "동아일보",
       "similarity": 0.283
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-153",
+      "first_cluster_id": "cluster-154",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-230",
+      "second_cluster_id": "cluster-231",
       "second_publisher": "매일경제",
       "similarity": 0.405
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-153",
+      "first_cluster_id": "cluster-154",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-252",
+      "second_cluster_id": "cluster-253",
       "second_publisher": "SBS",
       "similarity": 0.304
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-175",
+      "first_cluster_id": "cluster-176",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-230",
+      "second_cluster_id": "cluster-231",
       "second_publisher": "매일경제",
       "similarity": 0.408
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-175",
+      "first_cluster_id": "cluster-176",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-252",
+      "second_cluster_id": "cluster-253",
       "second_publisher": "SBS",
       "similarity": 0.24
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-190",
+      "first_cluster_id": "cluster-191",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-237",
+      "second_cluster_id": "cluster-238",
       "second_publisher": "매일경제",
       "similarity": 0.244
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-212",
+      "first_cluster_id": "cluster-213",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-230",
+      "second_cluster_id": "cluster-231",
       "second_publisher": "매일경제",
       "similarity": 0.27
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-212",
+      "first_cluster_id": "cluster-213",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-252",
+      "second_cluster_id": "cluster-253",
       "second_publisher": "SBS",
       "similarity": 0.329
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-230",
+      "first_cluster_id": "cluster-231",
       "first_publisher": "매일경제",
-      "second_cluster_id": "cluster-252",
+      "second_cluster_id": "cluster-253",
       "second_publisher": "SBS",
       "similarity": 0.371
     },
     {
       "category": "경제",
-      "first_cluster_id": "cluster-236",
+      "first_cluster_id": "cluster-237",
       "first_publisher": "매일경제",
-      "second_cluster_id": "cluster-263",
+      "second_cluster_id": "cluster-264",
       "second_publisher": "SBS",
       "similarity": 0.313
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-266",
+      "first_cluster_id": "cluster-267",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-287",
+      "second_cluster_id": "cluster-288",
       "second_publisher": "한겨레",
       "similarity": 0.588
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-266",
+      "first_cluster_id": "cluster-267",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-326",
+      "second_cluster_id": "cluster-327",
       "second_publisher": "동아일보",
       "similarity": 0.34
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-266",
+      "first_cluster_id": "cluster-267",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-365",
+      "second_cluster_id": "cluster-366",
       "second_publisher": "매일경제",
       "similarity": 0.374
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-266",
+      "first_cluster_id": "cluster-267",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-386",
+      "second_cluster_id": "cluster-387",
       "second_publisher": "SBS",
       "similarity": 0.31
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-271",
+      "first_cluster_id": "cluster-272",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-399",
+      "second_cluster_id": "cluster-400",
       "second_publisher": "SBS",
       "similarity": 0.483
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-273",
+      "first_cluster_id": "cluster-274",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-299",
+      "second_cluster_id": "cluster-300",
       "second_publisher": "한겨레",
       "similarity": 0.255
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-273",
+      "first_cluster_id": "cluster-274",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-313",
+      "second_cluster_id": "cluster-314",
       "second_publisher": "한국경제",
       "similarity": 0.487
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-273",
+      "first_cluster_id": "cluster-274",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-384",
+      "second_cluster_id": "cluster-385",
       "second_publisher": "SBS",
       "similarity": 0.455
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-278",
+      "first_cluster_id": "cluster-279",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-347",
+      "second_cluster_id": "cluster-348",
       "second_publisher": "동아일보",
       "similarity": 0.307
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-278",
+      "first_cluster_id": "cluster-279",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-395",
+      "second_cluster_id": "cluster-396",
       "second_publisher": "SBS",
       "similarity": 0.586
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-281",
+      "first_cluster_id": "cluster-282",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-289",
+      "second_cluster_id": "cluster-290",
       "second_publisher": "한겨레",
       "similarity": 0.571
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-281",
+      "first_cluster_id": "cluster-282",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-387",
+      "second_cluster_id": "cluster-388",
       "second_publisher": "SBS",
       "similarity": 0.263
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-284",
+      "first_cluster_id": "cluster-285",
       "first_publisher": "조선일보",
-      "second_cluster_id": "cluster-319",
+      "second_cluster_id": "cluster-320",
       "second_publisher": "한국경제",
       "similarity": 0.247
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-287",
+      "first_cluster_id": "cluster-288",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-307",
+      "second_cluster_id": "cluster-308",
       "second_publisher": "한국경제",
       "similarity": 0.341
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-287",
+      "first_cluster_id": "cluster-288",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-326",
+      "second_cluster_id": "cluster-327",
       "second_publisher": "동아일보",
       "similarity": 0.464
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-287",
+      "first_cluster_id": "cluster-288",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-365",
+      "second_cluster_id": "cluster-366",
       "second_publisher": "매일경제",
       "similarity": 0.464
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-287",
+      "first_cluster_id": "cluster-288",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-386",
+      "second_cluster_id": "cluster-387",
       "second_publisher": "SBS",
       "similarity": 0.333
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-295",
+      "first_cluster_id": "cluster-296",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-380",
+      "second_cluster_id": "cluster-381",
       "second_publisher": "매일경제",
       "similarity": 0.345
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-296",
+      "first_cluster_id": "cluster-297",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-352",
+      "second_cluster_id": "cluster-353",
       "second_publisher": "동아일보",
       "similarity": 0.257
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-299",
+      "first_cluster_id": "cluster-300",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-313",
+      "second_cluster_id": "cluster-314",
       "second_publisher": "한국경제",
       "similarity": 0.493
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-299",
+      "first_cluster_id": "cluster-300",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-384",
+      "second_cluster_id": "cluster-385",
       "second_publisher": "SBS",
       "similarity": 0.38
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-301",
+      "first_cluster_id": "cluster-302",
       "first_publisher": "한겨레",
-      "second_cluster_id": "cluster-350",
+      "second_cluster_id": "cluster-351",
       "second_publisher": "동아일보",
       "similarity": 0.263
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-307",
+      "first_cluster_id": "cluster-308",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-326",
+      "second_cluster_id": "cluster-327",
       "second_publisher": "동아일보",
       "similarity": 0.376
-    },
-    {
-      "category": "사회",
-      "first_cluster_id": "cluster-307",
-      "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-365",
-      "second_publisher": "매일경제",
-      "similarity": 0.586
-    },
-    {
-      "category": "사회",
-      "first_cluster_id": "cluster-307",
-      "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-386",
-      "second_publisher": "SBS",
-      "similarity": 0.252
     },
     {
       "category": "사회",
       "first_cluster_id": "cluster-308",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-396",
+      "second_cluster_id": "cluster-366",
+      "second_publisher": "매일경제",
+      "similarity": 0.586
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-308",
+      "first_publisher": "한국경제",
+      "second_cluster_id": "cluster-387",
+      "second_publisher": "SBS",
+      "similarity": 0.252
+    },
+    {
+      "category": "사회",
+      "first_cluster_id": "cluster-309",
+      "first_publisher": "한국경제",
+      "second_cluster_id": "cluster-397",
       "second_publisher": "SBS",
       "similarity": 0.48
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-311",
+      "first_cluster_id": "cluster-312",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-397",
+      "second_cluster_id": "cluster-398",
       "second_publisher": "SBS",
       "similarity": 0.841
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-313",
+      "first_cluster_id": "cluster-314",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-384",
+      "second_cluster_id": "cluster-385",
       "second_publisher": "SBS",
       "similarity": 0.476
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-316",
+      "first_cluster_id": "cluster-317",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-344",
+      "second_cluster_id": "cluster-345",
       "second_publisher": "동아일보",
       "similarity": 0.287
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-319",
+      "first_cluster_id": "cluster-320",
       "first_publisher": "한국경제",
-      "second_cluster_id": "cluster-351",
+      "second_cluster_id": "cluster-352",
       "second_publisher": "동아일보",
       "similarity": 0.246
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-325",
+      "first_cluster_id": "cluster-326",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-393",
+      "second_cluster_id": "cluster-394",
       "second_publisher": "SBS",
       "similarity": 0.314
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-326",
+      "first_cluster_id": "cluster-327",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-365",
+      "second_cluster_id": "cluster-366",
       "second_publisher": "매일경제",
       "similarity": 0.486
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-326",
+      "first_cluster_id": "cluster-327",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-386",
+      "second_cluster_id": "cluster-387",
       "second_publisher": "SBS",
       "similarity": 0.3
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-330",
+      "first_cluster_id": "cluster-331",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-385",
+      "second_cluster_id": "cluster-386",
       "second_publisher": "SBS",
       "similarity": 0.325
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-336",
+      "first_cluster_id": "cluster-337",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-377",
+      "second_cluster_id": "cluster-378",
       "second_publisher": "매일경제",
       "similarity": 0.235
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-347",
+      "first_cluster_id": "cluster-348",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-395",
+      "second_cluster_id": "cluster-396",
       "second_publisher": "SBS",
       "similarity": 0.265
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-359",
+      "first_cluster_id": "cluster-360",
       "first_publisher": "동아일보",
-      "second_cluster_id": "cluster-383",
+      "second_cluster_id": "cluster-384",
       "second_publisher": "SBS",
       "similarity": 0.376
     },
     {
       "category": "사회",
-      "first_cluster_id": "cluster-365",
+      "first_cluster_id": "cluster-366",
       "first_publisher": "매일경제",
-      "second_cluster_id": "cluster-386",
+      "second_cluster_id": "cluster-387",
       "second_publisher": "SBS",
       "similarity": 0.305
     }
