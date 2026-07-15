@@ -120,9 +120,12 @@ function initShare() {
     btn.addEventListener('click', async () => {
       const url = window.location.href;
       try {
-        if (navigator.share) await navigator.share({ title: issue.title, url });
-        else await navigator.clipboard.writeText(url);
-        if (!navigator.share) showToast('링크가 복사되었습니다.');
+        if (navigator.share) {
+          await navigator.share({ title: document.title, url });
+        } else {
+          await navigator.clipboard.writeText(url);
+          showToast('링크가 복사되었습니다.');
+        }
       } catch (_) {}
     });
   });
@@ -158,7 +161,6 @@ async function renderSearchResults() {
     }
 
     const data = await response.json();
-
     const keyword = q.toLowerCase();
 
     const results = (data.issues || []).filter(issue => {
@@ -195,20 +197,13 @@ async function renderSearchResults() {
     root.innerHTML = results.map(issue => `
       <article class="card">
         <span class="eyebrow">${issue.category}</span>
-
         <h3>${issue.title}</h3>
-
         <p>${issue.summary}</p>
-
         <div class="card-footer">
           <small>
             ${issue.articles.map(a => a.publisher).join(" · ")}
           </small>
-
-          <a
-            class="btn btn-primary"
-            href="issue.html?id=${issue.issue_id}"
-          >
+          <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
             비교 보기
           </a>
         </div>
@@ -217,7 +212,6 @@ async function renderSearchResults() {
 
   } catch (err) {
     console.error(err);
-
     root.innerHTML = `
       <div class="empty-state">
         <h3>검색 결과를 불러오지 못했습니다.</h3>
@@ -226,15 +220,14 @@ async function renderSearchResults() {
   }
 }
 
-
-// 렌더링 타겟을 정확히 짚어 상태별(미로그인 / 데이터 없음 / 리스트 출력) 분기를 수행합니다.
+// 1. [내가 저장한 이슈] 렌더링 함수 - 더보기/줄이기 완벽 적용 및 괄호 에러 해결
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
   if (!root) return; 
   
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   
-  // 1. 로그인이 안 되어 있는 경우
+  // 미로그인 상태 처리
   if (!isLoggedIn) {
     root.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px dashed #ddd;">
@@ -245,8 +238,9 @@ function renderSaved() {
     return;
   }
 
-  // 2. 로그인은 했으나 저장한 이슈가 없는 경우
   const saved = JSON.parse(localStorage.getItem('prism-saved-issues') || '[]');
+  
+  // 저장된 리스트가 없는 경우 처리
   if (!saved.length) {
     root.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px dashed #ddd;">
@@ -256,10 +250,8 @@ function renderSaved() {
       </div>`;
     return;
   }
-  // 더보기 제어를 위한 로직 구현
+
   const INITIAL_COUNT = 4;
-  
-  // 이전에 저장되어 실행 중이던 visibleCount 상태가 없다면 초기값(4)으로 지정합니다.
   if (typeof window.savedVisibleCount === 'undefined') {
     window.savedVisibleCount = INITIAL_COUNT;
   }
@@ -282,7 +274,7 @@ function renderSaved() {
       </article>
     `).join('');
 
-    // 수집뉴스 영역처럼 4개를 초과하는 경우 동적 버튼 인터페이스 생성
+    // 더보기 / 줄이기 버튼 마크업
     if (saved.length > INITIAL_COUNT) {
       const wrapper = document.createElement("div");
       wrapper.className = "load-more-wrap";
@@ -293,7 +285,6 @@ function renderSaved() {
       wrapper.style.justifyContent = "center";
       wrapper.style.gap = "12px";
 
-      // 더보기 버튼
       if (window.savedVisibleCount < saved.length) {
         const loadMoreBtn = document.createElement("button");
         loadMoreBtn.className = "btn btn-primary";
@@ -305,7 +296,6 @@ function renderSaved() {
         wrapper.appendChild(loadMoreBtn);
       }
 
-      // 줄이기 버튼
       if (window.savedVisibleCount > INITIAL_COUNT) {
         const shrinkBtn = document.createElement("button");
         shrinkBtn.className = "btn btn-secondary";
@@ -325,22 +315,7 @@ function renderSaved() {
   renderSavedCards();
 }
 
-  root.innerHTML = saved.map(item => `
-    <article class="card">
-      <span class="eyebrow">${item.category}</span>
-      <h3>${item.title}</h3>
-      <p>${item.summary}</p>
-      <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-        ${item.tags.map(t => `<span class="badge blue">#${t}</span>`).join('')}
-      </div>
-      <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-        <small style="color: #94a3b8;">분석 매체: ${item.mediaNames.join(', ')}</small>
-        <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
-      </div>
-    </article>
-  `).join('');
-}
-
+// 2. [실시간 수집 뉴스] 렌더링 함수
 async function renderLiveNews() {
   const root = document.querySelector("[data-live-news]");
   if (!root) return;
@@ -367,10 +342,8 @@ async function renderLiveNews() {
           <span class="eyebrow">${item.publisher}</span>
           <h3>${item.title}</h3>
           <p>${item.summary || item.description || ""}</p>
-
           <div class="card-footer">
             <small>RSS 수집 기사</small>
-
             <a
               class="btn btn-secondary"
               href="${item.link}"
@@ -385,7 +358,6 @@ async function renderLiveNews() {
         )
         .join("");
 
-      
       if (newsItems.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
@@ -396,7 +368,6 @@ async function renderLiveNews() {
         wrapper.style.justifyContent = "center";
         wrapper.style.gap = "12px";
 
-      
         if (visibleCount < newsItems.length) {
           const loadMoreBtn = document.createElement("button");
           loadMoreBtn.className = "btn btn-primary";
@@ -410,7 +381,6 @@ async function renderLiveNews() {
           wrapper.appendChild(loadMoreBtn);
         }
 
-        
         if (visibleCount > INITIAL_COUNT) {
           const shrinkBtn = document.createElement("button");
           shrinkBtn.className = "btn btn-secondary";
@@ -419,8 +389,6 @@ async function renderLiveNews() {
           shrinkBtn.addEventListener("click", () => {
             visibleCount = INITIAL_COUNT;
             render();
-            
-            
             root.scrollIntoView({ behavior: "smooth", block: "start" });
           });
           
@@ -434,7 +402,6 @@ async function renderLiveNews() {
     render();
   } catch (error) {
     console.error(error);
-
     root.innerHTML = `
       <div class="empty-state">
         <h3>뉴스를 불러오지 못했습니다.</h3>
@@ -443,6 +410,8 @@ async function renderLiveNews() {
     `;
   }
 }
+
+// 3. [이슈 비교 결과 페이지] 렌더링 함수
 async function renderIssuePage() {
   const page = document.querySelector('[data-issue-page]');
   if (!page) return;
@@ -566,15 +535,14 @@ async function renderIssuePage() {
 
   } catch (error) {
     console.error(error);
-
     document.querySelector('[data-issue-title]').textContent =
       '비교 결과를 불러오지 못했습니다.';
-
     document.querySelector('[data-common-facts]').textContent =
       '잠시 후 다시 확인해 주세요.';
   }
 }
 
+// 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
   if (!root) return;
@@ -587,7 +555,6 @@ async function renderFeaturedIssue() {
     }
 
     const issueData = await response.json();
-
     const issues = issueData.issues || [];
 
     if (!issues.length) {
@@ -599,78 +566,74 @@ async function renderFeaturedIssue() {
       return;
     }
 
-    root.innerHTML = issues.map(issue => `
-      <article class="card">
-
-        <span class="eyebrow">${issue.category}</span>
-
-        <h3>${issue.title}</h3>
-
-        <p>${issue.summary}</p>
-
-        <div class="meta">
-          <span class="badge blue">
-            ${issue.articles.length}개 기사 비교
-          </span>
-        </div>
-
-        <div class="card-footer">
-          <small>${issue.issue_id}</small>
-
-          <a
-            class="btn btn-primary"
-            href="issue.html?id=${issue.issue_id}"
-          >
-            프레임 비교 보기
-          </a>
-
-        </div>
-
-      </article>
-    `).join("");
-    if (issues.length > INITIAL_COUNT) {
-      const wrapper = document.createElement("div");
-      wrapper.className = "load-more-wrap";
-      wrapper.style.gridColumn = "1 / -1";
-      wrapper.style.textAlign = "center";
-      wrapper.style.marginTop = "24px";
-      wrapper.style.display = "flex";
-      wrapper.style.justifyContent = "center";
-      wrapper.style.gap = "12px";
-
-      // 더보기 버튼
-      if (window.featuredVisibleCount < issues.length) {
-        const loadMoreBtn = document.createElement("button");
-        loadMoreBtn.className = "btn btn-primary";
-        loadMoreBtn.textContent = "더보기 ▾";
-        loadMoreBtn.addEventListener("click", () => {
-          window.featuredVisibleCount += 4;
-          renderFeaturedCards();
-        });
-        wrapper.appendChild(loadMoreBtn);
-      }
-
-      // 줄이기 버튼
-      if (window.featuredVisibleCount > INITIAL_COUNT) {
-        const shrinkBtn = document.createElement("button");
-        shrinkBtn.className = "btn btn-secondary";
-        shrinkBtn.textContent = "줄이기 ▴";
-        shrinkBtn.addEventListener("click", () => {
-          window.featuredVisibleCount = INITIAL_COUNT;
-          renderFeaturedCards();
-          root.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-        wrapper.appendChild(shrinkBtn);
-      }
-
-      root.appendChild(wrapper);
+    const INITIAL_COUNT = 4;
+    if (typeof window.featuredVisibleCount === 'undefined') {
+      window.featuredVisibleCount = INITIAL_COUNT;
     }
-  };
 
-  renderFeaturedCards();
+    const renderFeaturedCards = () => {
+      const visibleIssues = issues.slice(0, window.featuredVisibleCount);
+
+      root.innerHTML = visibleIssues.map(issue => `
+        <article class="card">
+          <span class="eyebrow">${issue.category}</span>
+          <h3>${issue.title}</h3>
+          <p>${issue.summary}</p>
+          <div class="meta">
+            <span class="badge blue">
+              ${issue.articles ? issue.articles.length : 0}개 기사 비교
+            </span>
+          </div>
+          <div class="card-footer">
+            <small>${issue.issue_id}</small>
+            <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
+              프레임 비교 보기
+            </a>
+          </div>
+        </article>
+      `).join("");
+
+      if (issues.length > INITIAL_COUNT) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "load-more-wrap";
+        wrapper.style.gridColumn = "1 / -1";
+        wrapper.style.textAlign = "center";
+        wrapper.style.marginTop = "24px";
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+        wrapper.style.gap = "12px";
+
+        if (window.featuredVisibleCount < issues.length) {
+          const loadMoreBtn = document.createElement("button");
+          loadMoreBtn.className = "btn btn-primary";
+          loadMoreBtn.textContent = "더보기 ▾";
+          loadMoreBtn.addEventListener("click", () => {
+            window.featuredVisibleCount += 4;
+            renderFeaturedCards();
+          });
+          wrapper.appendChild(loadMoreBtn);
+        }
+
+        if (window.featuredVisibleCount > INITIAL_COUNT) {
+          const shrinkBtn = document.createElement("button");
+          shrinkBtn.className = "btn btn-secondary";
+          shrinkBtn.textContent = "줄이기 ▴";
+          shrinkBtn.addEventListener("click", () => {
+            window.featuredVisibleCount = INITIAL_COUNT;
+            renderFeaturedCards();
+            root.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+          wrapper.appendChild(shrinkBtn);
+        }
+
+        root.appendChild(wrapper);
+      }
+    };
+
+    renderFeaturedCards();
+
   } catch (error) {
     console.error(error);
-
     root.innerHTML = `
       <div class="empty-state">
         <h3>이슈를 불러오지 못했습니다.</h3>
@@ -711,7 +674,6 @@ async function renderSearchSuggestions() {
     targets.forEach(target => {
       target.innerHTML = `
         <span class="search-suggestion-label">추천 검색어</span>
-
         <div class="search-suggestion-list">
           ${uniqueKeywords.map(keyword => `
             <button
@@ -730,15 +692,12 @@ async function renderSearchSuggestions() {
       button.addEventListener("click", () => {
         const keyword = button.dataset.searchKeyword;
         if (!keyword) return;
-
-        window.location.href =
-          `search.html?q=${encodeURIComponent(keyword)}`;
+        window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
       });
     });
 
   } catch (error) {
     console.error(error);
-
     targets.forEach(target => {
       target.textContent = "추천 검색어를 불러오지 못했습니다.";
     });
@@ -758,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderFeaturedIssue();
 });
 
-//로그인/회원가입
+// 로그인/회원가입 기능 바인딩
 document.addEventListener("DOMContentLoaded", () => {
   const loginNavBtn = document.getElementById("btn-login-nav");
   const loginModal = document.getElementById("login-modal");
@@ -794,7 +753,6 @@ document.addEventListener("DOMContentLoaded", () => {
           location.reload();
         }
       } else {
-  
         setAuthMode(true);
         loginModal.style.display = "flex";
       }
@@ -902,13 +860,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// 뒤로 가기 또는 캐시된 페이지 복원 시 저장 목록을 최신 상태로 갱신
+// 뒤로 가기 및 캐시 복원 대응
 window.addEventListener('pageshow', () => {
   renderSaved();
   syncSaveButtons();
 });
 
-// 다른 탭에서 로그인 상태나 저장 이슈가 변경된 경우 갱신
+// 데이터 변화 모니터링 대응
 window.addEventListener('storage', event => {
   if (
     event.key === 'prism-saved-issues' ||
