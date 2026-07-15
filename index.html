@@ -128,101 +128,157 @@
   </div>
 </section>
 
-<section id="how-it-works" class="section">
-  <div class="container">
-    <span class="eyebrow">How it works</span><h2 class="section-title">Prism은 어떻게 비교하나요?</h2><p class="section-desc">기사의 사실과 표현을 기준으로 공통점과 차이점을 단계별로 정리합니다.</p>
-    <div class="grid-4 steps"><article class="card step-card"><h3>기사 수집</h3><p>동일한 사건을 다룬 여러 언론사의 기사를 수집합니다.</p></article><article class="card step-card"><h3>동일 사건 분류</h3><p>같은 사건을 다룬 기사들을 하나의 이슈로 묶습니다.</p></article><article class="card step-card"><h3>핵심 정보 추출</h3><p>핵심 키워드, 주요 인물, 인용 대상과 강조된 쟁점을 추출합니다.</p></article><article class="card step-card"><h3>매체별 차이 비교</h3><p>매체별로 어떤 내용을 더 강조했는지 나란히 보여드립니다.</p></article></div>
+
+<section id="how-it-works" class="section" style="padding: 80px 0; background: #fff;">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <span class="eyebrow" style="color: #2563eb; font-weight: bold; display: block; margin-bottom: 12px; text-align: center;">OUR JOURNEY</span>
+    <h2 class="section-title" style="text-align: center; font-size: 32px; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.03em;">
+      하나의 사건, 수많은 시선<br><span style="color: #2563eb;">Prism은 이렇게 세상에 나옵니다</span>
+    </h2>
+    <p class="section-desc" style="text-align: center; color: #64748b; font-size: 16px; line-height: 1.6; max-width: 600px; margin: 0 auto 60px auto;">
+      정보가 범람하는 시대, Prism은 가치 판단을 내리기 전에 세상의 모든 뉴스를 있는 그대로 모으고 분석하는 기술적 정교함에서 출발합니다.
+    </p>
+
+    <div class="timeline-flow" style="display: flex; flex-direction: column; gap: 40px; position: relative;">
+      <!-- 점선 세로축 (데스크탑 뷰 최적화) -->
+      <div style="position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: repeating-linear-gradient(to bottom, #cbd5e1 0px, #cbd5e1 8px, transparent 8px, transparent 16px); z-index: 1;"></div>
+
+      <!-- Step 1 -->
+      <div style="display: flex; gap: 24px; position: relative; z-index: 2;">
+        <div style="width: 50px; height: 50px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(37,99,235,0.2);">1</div>
+        <div style="padding-top: 4px;">
+          <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 8px;">실시간 뉴스 수집 및 클러스터링</h3>
+          <p style="color: #475569; line-height: 1.6; font-size: 15px;">
+            여러 매체에서 실시간으로 쏟아지는 방대한 뉴스 데이터를 가공하여, 동일한 사건이나 주제를 다룬 기사들을 인공지능이 유사도 기반으로 식별해 하나의 '이슈 그룹(Cluster)'으로 정밀하게 묶어냅니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="display: flex; gap: 24px; position: relative; z-index: 2;">
+        <div style="width: 50px; height: 50px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(37,99,235,0.2);">2</div>
+        <div style="padding-top: 4px;">
+          <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 8px;">언론사별 보도 데이터 다각도 분석</h3>
+          <p style="color: #475569; line-height: 1.6; font-size: 15px;">
+            분류가 끝난 그룹 속에서 각 매체가 서술한 본문 텍스트를 심층 탐색합니다. 기사가 어떠한 관점을 취하고 있는지, 어조와 쟁점은 어떻게 흘러가는지 등 인공지능이 핵심 정보들을 세밀하게 추출합니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="display: flex; gap: 24px; position: relative; z-index: 2;">
+        <div style="width: 50px; height: 50px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; flex-shrink: 0; box-shadow: 0 4px 12px rgba(37,99,235,0.2);">3</div>
+        <div style="padding-top: 4px;">
+          <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 8px;">비교 데이터 대조 및 프레임 매핑</h3>
+          <p style="color: #475569; line-height: 1.6; font-size: 15px;">
+            추출된 결과를 나란히 늘어놓아 공통으로 확인된 팩트와 매체별 강조 영역의 미세한 틈새를 매핑합니다. 이를 직관적이고 비교하기 쉬운 카드 및 목록 구조로 설계하여 독자에게 제공합니다.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section soft">
+<section class="section soft" style="background-color: #f8f9fa; border-top: 1px solid #eef2f6; border-bottom: 1px solid #eef2f6; padding: 80px 0;">
   <div class="container">
-    <span class="eyebrow">Features</span>
-    <h2 class="section-title">Prism이 비교하는 요소</h2>
-    <p class="section-desc">다각도로 분석된 핵심 데이터를 바탕으로 매체별 보도 프레임의 차이를 투명하게 보여드립니다.</p>
-    
-    <div class="grid-3">
-      <!-- 1. 뉴스 클러스터링 -->
-      <article class="card">
-        <h3>다차원 뉴스 클러스터링</h3>
-        <p>동일한 사건이나 주제를 다룬 여러 언론사의 수많은 기사들을 AI가 유사도 분석을 거쳐 하나의 '이슈 클러스터'로 정밀하게 묶어냅니다.</p>
+    <span class="eyebrow" style="color: #2563eb; font-weight: bold; display: block; margin-bottom: 12px; text-align: center;">OUR VALUES</span>
+    <h2 class="section-title" style="text-align: center; font-size: 32px; margin-bottom: 16px; font-weight: 800;">
+      프리즘의 시선으로 바라보는<br><span style="color: #2563eb;">4가지 보도 지표</span>
+    </h2>
+    <p class="section-desc" style="text-align: center; color: #64748b; font-size: 16px; max-width: 600px; margin: 0 auto 50px auto;">
+      우리는 뉴스 기사 전반에 숨겨진 뉘앙스와 강조 구도를 시각화하여, 독자가 편향되지 않고 스스로 온전한 결론에 도달할 수 있도록 돕습니다.
+    </p>
+
+    <div class="grid-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+      <!-- 가치 1 -->
+      <article class="card" style="background: #fff; padding: 32px; border-radius: 12px; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+        <div style="font-size: 28px; margin-bottom: 16px;">🎯</div>
+        <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">보도 프레임 & 강조점</h3>
+        <p style="color: #475569; line-height: 1.6; font-size: 14px; margin: 0;">
+          하나의 사회적 현상을 대할 때 매체가 제목이나 첫 문장(리드문)에서 적극적으로 부각시킨 핵심 논조와 사건을 바라보는 관점의 뚜렷한 온도 차를 정밀하게 대조합니다.
+        </p>
       </article>
 
-      <!-- 2. 분석 대상 원문 투명성 -->
-      <article class="card">
-        <h3>분석 대상 원문 투명성</h3>
-        <p>추출된 결과에 신뢰도를 더할 수 있도록, 각 언론사별 비교 카드 내에 분석의 근거가 된 모든 실제 기사의 제목과 원문 링크 리스트를 명확히 공개합니다.</p>
+      <!-- 가치 2 -->
+      <article class="card" style="background: #fff; padding: 32px; border-radius: 12px; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+        <div style="font-size: 28px; margin-bottom: 16px;">🏷️</div>
+        <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">어젠다 키워드</h3>
+        <p style="color: #475569; line-height: 1.6; font-size: 14px; margin: 0;">
+          기사 본문에서 단순히 기계적으로 반복된 단어가 아닌, 여론을 주도하고 사회적 프레임을 견인하기 위해 의도적으로 배치된 영향력 높은 주제어를 선별해 보여드립니다.
+        </p>
       </article>
 
-      <!-- 3. 핵심 키워드 비교 -->
-      <article class="card">
-        <h3>핵심 키워드 추출</h3>
-        <p>각 언론사 클러스터 내부에서 가장 빈번하게 등장하거나 제목 등 핵심 위치에 노출되어 어젠다를 이끄는 대표 키워드들을 추출하여 비교합니다.</p>
+      <!-- 가치 3 -->
+      <article class="card" style="background: #fff; padding: 32px; border-radius: 12px; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+        <div style="font-size: 28px; margin-bottom: 16px;">👥</div>
+        <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">관계 인물 및 기관</h3>
+        <p style="color: #475569; line-height: 1.6; font-size: 14px; margin: 0;">
+          본문 속에 인용되거나 핵심 당사자로 다루어진 관계자 그룹과 핵심 기관들을 일목요연하게 맵핑하여, 매체가 과연 누구의 목소리에 집중하고 있는지 그 내막을 밝힙니다.
+        </p>
       </article>
 
-      <!-- 4. 주요 인물 및 기관 -->
-      <article class="card">
-        <h3>인물 및 기관 맵핑</h3>
-        <p>기사 내에서 주요하게 언급되거나 인터뷰 대상이 된 인물, 그리고 사건 관계 기관들을 분석하여 매체별로 누구의 시각에 힘을 실었는지 정리합니다.</p>
-      </article>
-
-      <!-- 5. 강조된 내용 & 프레임 -->
-      <article class="card">
-        <h3>강조된 내용과 프레임</h3>
-        <p>제목과 리드문, 본문의 흐름 속에서 각 언론사가 상대적으로 더 집중하여 전달하고자 하는 보도 방향(프레임)과 핵심 쟁점의 차이를 요약해 드립니다.</p>
-      </article>
-
-      <!-- 6. 분석 한계 제시 -->
-      <article class="card">
-        <h3>객관적 분석의 한계</h3>
-        <p>어느 한쪽으로 편향되지 않도록 특정 기사군에서 누락된 입장이나 추가 파악이 필요한 맥락, 분석상의 정량적 한계점까지 숨김없이 기록합니다.</p>
+      <!-- 가치 4 -->
+      <article class="card" style="background: #fff; padding: 32px; border-radius: 12px; border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s;">
+        <div style="font-size: 28px; margin-bottom: 16px;">💬</div>
+        <h3 style="font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">매체별 표현 요약</h3>
+        <p style="color: #475569; line-height: 1.6; font-size: 14px; margin: 0;">
+          특정 사건을 묘사하는 어휘, 감정이 섞인 수식어, 주관성이 배어나는 동사 등의 패턴 차이를 정밀 요약해 사건을 바라보는 언론사 고유의 시선과 호흡을 드러냅니다.
+        </p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container"><span class="eyebrow">Principles</span><h2 class="section-title">Prism의 분석 원칙</h2><div class="principle-list"><div class="principle"><div class="principle-icon">1</div><div><strong>기사에 근거합니다</strong><p>기사에 실제로 나타난 단어, 인용 대상과 강조 맥락을 바탕으로 분석합니다.</p></div></div><div class="principle"><div class="principle-icon">2</div><div><strong>옳고 그름을 판단하지 않습니다</strong><p>특정 언론사가 옳거나 편향되었다고 단정하지 않습니다.</p></div></div><div class="principle"><div class="principle-icon">3</div><div><strong>기사에 없는 의도를 추정하지 않습니다</strong><p>기자나 언론사의 정치적 의도와 성향을 임의로 해석하지 않습니다.</p></div></div><div class="principle"><div class="principle-icon">4</div><div><strong>원문을 함께 제공합니다</strong><p>사용자가 직접 확인할 수 있도록 기사 제목과 원문 링크를 제공합니다.</p></div></div></div><div class="notice">이 분석은 기사 표현을 바탕으로 AI가 정리한 결과입니다. 명확한 차이가 확인되지 않는 경우에는 차이가 없다고 표시합니다.</div></div>
-</section>
-</main>
+<section class="section" style="padding: 80px 0; background: #fff;">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <span class="eyebrow" style="color: #2563eb; font-weight: bold; display: block; margin-bottom: 12px; text-align: center;">OUR PROMISE</span>
+    <h2 class="section-title" style="text-align: center; font-size: 32px; margin-bottom: 16px; font-weight: 800;">
+      객관적인 시선을 보장하는<br><span style="color: #2563eb;">Prism의 3대 신뢰 원칙</span>
+    </h2>
+    <p class="section-desc" style="text-align: center; color: #64748b; font-size: 16px; max-width: 600px; margin: 0 auto 50px auto;">
+      데이터를 다루는 인공지능은 편향이 없어야 합니다. Prism은 분석의 전 과정에서 투명성과 기술 윤리를 실천합니다.
+    </p>
 
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Prism</div><p class="footer-desc">같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.</p></div><div class="footer-links"><a href="index.html">서비스 소개</a><a href="methodology.html">분석 방식</a><a href="#">이용 안내</a><a href="#">개인정보처리방침</a><a href="#">문의</a></div></div><div class="footer-bottom">© 2026 Prism. All rights reserved.</div></div></footer>
-<script src="./app.js"></script>
+    <div class="principle-list" style="display: flex; flex-direction: column; gap: 24px;">
+      <!-- 원칙 1 -->
+      <div class="principle" style="display: flex; gap: 20px; background: #f8f9fa; padding: 24px; border-radius: 12px; border-left: 4px solid #2563eb;">
+        <div class="principle-icon" style="width: 40px; height: 40px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 16px;">1</div>
+        <div>
+          <strong style="font-size: 18px; color: #1e293b; display: block; margin-bottom: 6px;">100% 기사 텍스트 근거 (Fact-Based)</strong>
+          <p style="color: #475569; line-height: 1.6; font-size: 14.5px; margin: 0;">
+            임의의 추측이나 기사 너머의 숨은 의도를 지레짐작하지 않습니다. 오직 각 언론사가 공식 발행한 기사 본문에 수록된 단어, 실제 인용문, 문맥적 증거만을 토대로 분석을 정량적으로 수행합니다.
+          </p>
+        </div>
+      </div>
 
-<div id="login-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
-  <div style="background: white; padding: 32px; border-radius: 12px; width: 100%; max-width: 380px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); position: relative;">
+      <!-- 원칙 2 -->
+      <div class="principle" style="display: flex; gap: 20px; background: #f8f9fa; padding: 24px; border-radius: 12px; border-left: 4px solid #2563eb;">
+        <div class="principle-icon" style="width: 40px; height: 40px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 16px;">2</div>
+        <div>
+          <strong style="font-size: 18px; color: #1e293b; display: block; margin-bottom: 6px;">엄격한 가치판단 배제 (Neutrality)</strong>
+          <p style="color: #475569; line-height: 1.6; font-size: 14.5px; margin: 0;">
+            특정 언론사가 잘못되었다거나 옳다는 식의 정치적·윤리적 편향 판정을 유도하지 않습니다. Prism은 오로지 서로 다른 방향성을 투명하게 대조해 줄 뿐이며, 최종 평가는 오롯이 독자 여러분의 통찰에 맡깁니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 원칙 3 -->
+      <div class="principle" style="display: flex; gap: 20px; background: #f8f9fa; padding: 24px; border-radius: 12px; border-left: 4px solid #2563eb;">
+        <div class="principle-icon" style="width: 40px; height: 40px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 16px;">3</div>
+        <div>
+          <strong style="font-size: 18px; color: #1e293b; display: block; margin-bottom: 6px;">출처 공개를 통한 검증 투명성 (Transparency)</strong>
+          <p style="color: #475569; line-height: 1.6; font-size: 14.5px; margin: 0;">
+            AI가 내놓은 정량적 분석의 정확도를 독자가 스스로 상호 대조해볼 수 있도록, 분석 자료의 뼈대가 된 실제 클러스터 내의 기사 제목과 직접 원문으로 향하는 아웃링크를 한 치의 가림 없이 정직하게 노출합니다.
+          </p>
+        </div>
+      </div>
+    </div>
     
-    <h3 id="modal-title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px;">Prism 로그인</h3>
-    <p id="modal-desc" style="color: #666; font-size: 14px; margin-bottom: 24px;">서비스 이용을 위해 로그인을 진행해 주세요.</p>
-    
-    <form id="auth-form">
-      <div id="field-name" style="margin-bottom: 16px; display: none;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">이름</label>
-        <input type="text" id="auth-name" placeholder="홍길동" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
-      </div>
-
-      <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">아이디 (이메일)</label>
-        <input type="email" id="auth-email" placeholder="example@email.com" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
-      </div>
-
-      <div style="margin-bottom: 24px;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">비밀번호</label>
-        <input type="password" id="auth-password" placeholder="••••••••" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
-      </div>
-      
-      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
-        <button type="button" id="btn-close-modal" class="btn btn-secondary" style="flex: 1; padding: 10px 0;">취소</button>
-        <button type="submit" id="btn-auth-submit" class="btn btn-primary" style="flex: 1; padding: 10px 0; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">로그인</button>
-      </div>
-
-      <div style="text-align: center; font-size: 13px; color: #666;">
-        <span id="switch-text">아직 계정이 없으신가요?</span>
-        <a href="#" id="link-switch-auth" style="color: #007bff; text-decoration: none; margin-left: 4px; font-weight: bold;">회원가입</a>
-      </div>
-    </form>
+    <div class="notice" style="margin-top: 40px; padding: 20px; background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; font-size: 13.5px; color: #1e40af; text-align: center; line-height: 1.5; font-weight: 500;">
+      ※ 본 분석은 실제 보도 자료의 언어적 특징과 구조적 형태를 기반으로 인공지능이 정량화한 지표입니다. 수집된 기사 내에 뚜렷한 논조나 비교 가능한 핵심 단어 차이가 발견되지 않을 시에는 수집 중인 상태로 정직하게 출력됩니다.
+    </div>
   </div>
-</div>
+</section>
 
 </body>
 </html>
