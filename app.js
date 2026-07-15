@@ -628,7 +628,7 @@ async function renderIssuePage() {
           </div>
         </div>
 
-        <!-- 2. 신규 추가: 클러스터링 분석 대상 기사 목록 노출 구역 -->
+        <!--  클러스터링 분석 대상 기사 목록 노출 구역 -->
         <div class="compare-block source-links-block" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #e2e8f0;">
           <span class="compare-label" style="display: block; font-weight: bold; font-size: 12px; color: #475569; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
             분석 대상 원문 기사 리스트
@@ -655,20 +655,6 @@ async function renderIssuePage() {
     `;
     }).join('');
 
-    const sourcesRoot = document.querySelector('[data-issue-sources]');
-
-    sourcesRoot.innerHTML = (data.articles || []).map(article => `
-      <div class="source-item">
-        <strong>${article.publisher}</strong>
-        <a
-          href="${article.link}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ${article.title}
-        </a>
-      </div>
-    `).join('');
 
   } catch (error) {
     console.error(error);
@@ -679,7 +665,6 @@ async function renderIssuePage() {
   }
 }
 
-// 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
 // 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
