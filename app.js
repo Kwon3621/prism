@@ -2,13 +2,21 @@ let currentIssue = null;
 
 const SAVED_ISSUES_KEY = 'prism-saved-issues';
 
+function shuffleArray(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 // 뷰 스타일 상태 관리 (기본값은 'card')
 const viewModes = {
   liveNews: 'card',
   featured: 'card',
   saved: 'card'
 };
-
 // 뷰 토글 버튼 바인딩 함수
 function initViewToggles() {
   document.querySelectorAll('[data-view-toggle]').forEach(group => {
@@ -30,7 +38,6 @@ function initViewToggles() {
           viewModes.saved = selectedView;
           renderSaved();
         }
-
         // 활성화 스타일 클래스 업데이트
         buttons.forEach(b => {
           if (b === btn) {
@@ -411,7 +418,8 @@ async function renderLiveNews() {
       throw new Error(`HTTP 오류: ${response.status}`);
     }
 
-    const newsItems = await response.json();
+    const rawNewsItems = await response.json();
+    const newsItems = shuffleArray(rawNewsItems);
 
     const INITIAL_COUNT = 4; 
     let visibleCount = INITIAL_COUNT;
@@ -529,13 +537,17 @@ async function renderIssuePage() {
 
     const data =
       issueData.issues?.find(
-      item => item.issue_id === requestedIssueId
+        item => item.issue_id === requestedIssueId
       ) ||
       issueData.issues?.[0];
 
     if (!data) {
       throw new Error('표시할 이슈가 없습니다.');
     }
+
+    // matched_clusters.json/issue.json의 최신 구조(clusters)를 최우선으로 매핑합니다.
+    const mediaClusters = data.clusters || data.articles || [];
+
     currentIssue = {
       id: data.issue_id,
       category: data.category || '자동 분석',
@@ -543,15 +555,15 @@ async function renderIssuePage() {
       summary: data.summary || '',
       tags: [
         ...new Set(
-          (data.articles || []).flatMap(
-            article => article.keywords || []
+          mediaClusters.flatMap(
+            cluster => cluster.keywords || []
           )
         )
       ].slice(0, 6),
       mediaNames: [
         ...new Set(
-          (data.articles || [])
-            .map(article => article.publisher)
+          mediaClusters
+            .map(cluster => cluster.publisher)
             .filter(Boolean)
         )
       ]
@@ -576,61 +588,102 @@ async function renderIssuePage() {
 
     const articlesRoot = document.querySelector('[data-issue-articles]');
 
-    articlesRoot.innerHTML = (data.articles || []).map(article => `
-      <article class="card media-card">
-        <div class="media-name">
-          <strong>${article.publisher}</strong>
-        </div>
+    // 최신 클러스터 데이터를 바탕으로 각 언론사별 카드를 동적 빌드합니다.
+    articlesRoot.innerHTML = mediaClusters.map(cluster => {
+      // 1. 클러스터 내에 포함된 실제 뉴스 기사들의 배열(articles)을 바인딩합니다.
+      const clusteredArticles = cluster.articles || 
+                                (cluster.title && cluster.link ? [{ title: cluster.title, link: cluster.link }] : []);
 
-        <div class="compare-block">
-          <span class="compare-label">핵심 키워드</span>
-          <div class="meta">
-            ${(article.keywords || []).map(keyword =>
-              `<span class="badge blue">${keyword}</span>`
-            ).join('')}
+      return `
+      <article class="card media-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
+        <div>
+          <div class="media-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 16px;">
+            <div class="media-name" style="margin: 0;">
+              <strong style="font-size: 18px; color: #1e293b;">${cluster.publisher}</strong>
+            </div>
+            <span style="font-size: 11px; background: #eff6ff; color: #2563eb; padding: 3px 10px; border-radius: 99px; font-weight: bold; border: 1px solid #dbeafe;">
+              ${clusteredArticles.length}개 기사 분석됨
+            </span>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">대표 토픽</span>
+            <p class="compare-text" style="font-weight: 600; color: #334155;">${cluster.topic_title || cluster.title || '주제 요약 없음'}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">핵심 키워드</span>
+            <div class="meta">
+              ${(cluster.keywords || []).map(keyword =>
+                `<span class="badge blue">${keyword}</span>`
+              ).join('')}
+              ${(cluster.keywords || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 키워드 없음</span>' : ''}
+            </div>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">주요 인물 및 기관</span>
+            <div class="meta">
+              ${(cluster.people || []).map(person =>
+                `<span class="badge purple">${person}</span>`
+              ).join('')}
+              ${(cluster.people || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 인물 정보 없음</span>' : ''}
+            </div>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">강조된 내용 / 프레임</span>
+            <p class="compare-text">${cluster.focus || '실시간 기사 수집 및 클러스터 구성 단계입니다.'}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">표현 요약</span>
+            <p class="compare-text">${cluster.expression_summary || '분석 진행 중'}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">분석 한계</span>
+            <p class="compare-text">${cluster.evidence_limit || '수집 자료 분석 중'}</p>
           </div>
         </div>
 
-        <div class="compare-block">
-          <span class="compare-label">주요 인물 및 기관</span>
-          <div class="meta">
-            ${(article.people || []).map(person =>
-              `<span class="badge purple">${person}</span>`
-            ).join('')}
+        <div class="compare-block source-links-block" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #e2e8f0;">
+          <span class="compare-label" style="display: block; font-weight: bold; font-size: 12px; color: #475569; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
+            분석 대상 원문 기사 리스트
+          </span>
+          <div class="source-links-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px;">
+            ${clusteredArticles.length > 0 ? clusteredArticles.map((article, idx) => `
+              <div style="display: flex; align-items: flex-start; gap: 6px; font-size: 13px; line-height: 1.4;">
+                <span style="color: #3b82f6; font-weight: bold; flex-shrink: 0; min-width: 14px;">${idx + 1}.</span>
+                <a 
+                  href="${article.link}" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style="color: #2563eb; text-decoration: none; font-weight: 500; word-break: break-all; transition: color 0.15s ease-in-out;"
+                  onmouseover="this.style.color='#1d4ed8'; this.style.textDecoration='underline';"
+                  onmouseout="this.style.color='#2563eb'; this.style.textDecoration='none';"
+                >
+                  ${article.title}
+                </a>
+              </div>
+            `).join('') : '<p style="font-size: 12px; color: #94a3b8; margin: 0;">포함된 원문 기사가 없습니다.</p>'}
           </div>
-        </div>
-
-        <div class="compare-block">
-          <span class="compare-label">강조된 내용</span>
-          <p class="compare-text">${article.focus || '명확한 차이를 확인하기 어려움'}</p>
-        </div>
-
-        <div class="compare-block">
-          <span class="compare-label">표현 요약</span>
-          <p class="compare-text">${article.expression_summary || ''}</p>
-        </div>
-
-        <div class="compare-block">
-          <span class="compare-label">분석 한계</span>
-          <p class="compare-text">${article.evidence_limit || ''}</p>
         </div>
       </article>
-    `).join('');
+    `;
+    }).join('');
 
+    // 3. 하단부 기사 원문 중복 출력 영역 및 부모 컨테이너(공간) 완전히 가리기
     const sourcesRoot = document.querySelector('[data-issue-sources]');
-
-    sourcesRoot.innerHTML = (data.articles || []).map(article => `
-      <div class="source-item">
-        <strong>${article.publisher}</strong>
-        <a
-          href="${article.link}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ${article.title}
-        </a>
-      </div>
-    `).join('');
+    if (sourcesRoot) {
+      sourcesRoot.innerHTML = '';
+      
+      // data-issue-sources가 담긴 부모 section이나 div 레이아웃을 찾아 완전히 숨김 처리하여 공백을 없앱니다.
+      const parentLayout = sourcesRoot.closest('section') || sourcesRoot.parentElement;
+      if (parentLayout) {
+        parentLayout.style.display = 'none';
+      }
+    }
 
   } catch (error) {
     console.error(error);
@@ -641,7 +694,6 @@ async function renderIssuePage() {
   }
 }
 
-// 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
 // 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
@@ -847,6 +899,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderLiveNews();
   renderIssuePage();
   renderFeaturedIssue();
+  initViewToggles();
 });
 
 // 로그인/회원가입 기능 바인딩

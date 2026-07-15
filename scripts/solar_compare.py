@@ -263,6 +263,104 @@ def build_prompt(matched_issue):
 {issue_text}
 """.strip()
 
+def validate_solar_response(
+    result,
+    matched_issue,
+):
+    """
+    Solar 응답의 articles 구조와 언론사 목록을 검증한다.
+    """
+    match_id = matched_issue.get(
+        "match_id",
+        "match-unknown",
+    )
+
+    expected_publishers = [
+        cluster.get("publisher")
+        for cluster in matched_issue.get(
+            "clusters",
+            [],
+        )
+        if cluster.get("publisher")
+    ]
+
+    articles = result.get("articles")
+
+    if not isinstance(articles, list):
+        raise ValueError(
+            f"{match_id} articles가 리스트가 아닙니다."
+        )
+
+    returned_publishers = []
+    seen_publishers = set()
+
+    for index, article in enumerate(articles):
+        if not isinstance(article, dict):
+            raise ValueError(
+                f"{match_id} articles[{index}]가 "
+                f"객체(dict)가 아닙니다: "
+                f"{repr(article)}"
+            )
+
+        publisher = article.get("publisher")
+
+        if not isinstance(publisher, str):
+            raise ValueError(
+                f"{match_id} articles[{index}]의 "
+                "publisher가 문자열이 아닙니다."
+            )
+
+        publisher = publisher.strip()
+
+        if not publisher:
+            raise ValueError(
+                f"{match_id} articles[{index}]에 "
+                "publisher가 없습니다."
+            )
+
+        if publisher in seen_publishers:
+            raise ValueError(
+                f"{match_id} publisher가 중복되었습니다: "
+                f"{publisher}"
+            )
+
+        if publisher not in expected_publishers:
+            raise ValueError(
+                f"{match_id} 예상하지 않은 언론사입니다: "
+                f"{publisher}"
+            )
+
+        article["publisher"] = publisher
+        seen_publishers.add(publisher)
+        returned_publishers.append(publisher)
+
+    missing_publishers = [
+        publisher
+        for publisher in expected_publishers
+        if publisher not in returned_publishers
+    ]
+
+    if missing_publishers:
+        raise ValueError(
+            f"{match_id} Solar가 언론사를 누락했습니다: "
+            f"{missing_publishers}"
+        )
+
+    if len(returned_publishers) != len(
+        expected_publishers
+    ):
+        raise ValueError(
+            f"{match_id} 언론사 개수가 일치하지 않습니다. "
+            f"원본 {len(expected_publishers)}개 / "
+            f"Solar {len(returned_publishers)}개"
+        )
+
+    return (
+        expected_publishers,
+        returned_publishers,
+    )
+
+
 def complete_articles(result, matched_issue):
     """
     Solar가 누락한 언론사를 원본 클러스터 데이터로 보완하고,
@@ -537,25 +635,12 @@ def analyze_issue(
             f"JSON으로 읽지 못했습니다."
         ) from error
 
-    returned_publishers = []
-
-    for article in result.get("articles", []):
-        if isinstance(article, dict):
-            returned_publishers.append(
-                article.get("publisher")
-            )
-        else:
-            returned_publishers.append(
-                f"잘못된 형식: {repr(article)}"
-            )
-
-    expected_publishers = [
-        cluster.get("publisher")
-        for cluster in matched_issue.get(
-            "clusters",
-            [],
+    expected_publishers, returned_publishers = (
+        validate_solar_response(
+            result,
+            matched_issue,
         )
-    ]
+    )
 
     print(
         f"{match_id} 원본 언론사: "
@@ -565,23 +650,9 @@ def analyze_issue(
         f"{match_id} Solar 반환 언론사: "
         f"{returned_publishers}"
     )
-
-    missing_publishers = [
-        publisher
-        for publisher in expected_publishers
-        if publisher not in returned_publishers
-    ]
-
-    if missing_publishers:
-        print(
-            f"[경고] {match_id} Solar 누락 언론사: "
-            f"{missing_publishers}"
-        )
-    else:
-        print(
-            f"{match_id} 누락 언론사: 없음"
-        )
-
+    print(
+        f"{match_id} 누락 언론사: 없음"
+    )
 
     # 모델이 값을 누락하더라도 기본 식별자는 유지한다.
     result["issue_id"] = match_id
