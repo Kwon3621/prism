@@ -32,7 +32,9 @@ def make_article_text(article):
     title = clean_text(article.get("title", ""))
     description = clean_text(article.get("description", ""))
 
-    return f"{title} {title} {description}"
+    short_description = description[:200]
+
+    return f"{title} {title} {title} {title} {short_description}"
 
 def group_articles_by_category_and_publisher(news_items):
     """
