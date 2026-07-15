@@ -487,3 +487,67 @@ img { max-width: 100%; display: block; }
     min-height: auto;
   }
 }
+/* =========================
+   실시간 뉴스 - 언론사 필터 사이드바
+========================= */
+
+.live-news-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.live-news-sidebar {
+  flex: 0 0 200px;
+  position: sticky;
+  top: 92px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-soft);
+}
+
+.filter-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.filter-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.filter-checkbox-item input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.live-news-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .live-news-layout {
+    flex-direction: column;
+  }
+  .live-news-sidebar {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+}
