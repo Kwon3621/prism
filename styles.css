@@ -311,12 +311,13 @@ img { max-width: 100%; display: block; }
   color: #2563eb;
 }
 
-.hero-description {
+.hero .hero-description {
   max-width: 620px;
   margin: 0 auto;
   color: #64748b;
   font-size: 18px;
   line-height: 1.7;
+  text-align: center;
 }
 
 .hero .hero-search {
@@ -417,7 +418,7 @@ img { max-width: 100%; display: block; }
     font-size: 40px;
   }
 
-  .hero-description {
+  .hero .hero-description {
     padding: 0 12px;
     font-size: 16px;
   }
