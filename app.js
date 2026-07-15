@@ -335,27 +335,17 @@ async function renderLiveNews() {
     function render() {
       const visibleNews = newsItems.slice(0, visibleCount);
 
-      root.innerHTML = visibleNews
-        .map(
-          (item) => `
+      root.innerHTML = visibleNews.map(item => `
         <article class="card">
           <span class="eyebrow">${item.publisher}</span>
           <h3>${item.title}</h3>
-          <p>${item.summary || item.description || ""}</p>
-          <div class="card-footer">
-            
-              class="btn btn-secondary"
-              href="${item.link}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <div class="card-footer" style="margin-top: auto; padding-top: 16px;">
+            <a class="btn btn-secondary" href="${item.link}" target="_blank" rel="noopener noreferrer">
               원문 보기
             </a>
           </div>
         </article>
-      `
-        )
-        .join("");
+      `).join("");
 
       if (newsItems.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
