@@ -82,11 +82,11 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: 100%;
   margin-top: 30px;
-  padding: 16px;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: var(--shadow);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .search-row {
