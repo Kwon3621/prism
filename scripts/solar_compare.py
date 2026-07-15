@@ -196,13 +196,26 @@ def complete_articles(result, matched_issue):
     Solar가 누락한 언론사를 원본 클러스터 데이터로 보완하고,
     article_count, titles, links, title, link는 원본 기준으로 고정한다.
     """
+
     solar_articles = result.get("articles", [])
 
-    solar_by_publisher = {
-        article.get("publisher"): article
-        for article in solar_articles
-        if article.get("publisher")
-    }
+    # Solar가 예상과 다른 형식을 반환하는 경우를 대비
+    if not isinstance(solar_articles, list):
+        solar_articles = []
+
+    solar_by_publisher = {}
+
+    for article in solar_articles:
+        # 문자열 등 잘못된 형식은 건너뛴다.
+        if not isinstance(article, dict):
+            continue
+
+        publisher = article.get("publisher")
+
+        if not publisher:
+            continue
+
+        solar_by_publisher[publisher] = article
 
     completed_articles = []
 
@@ -358,6 +371,35 @@ def analyze_issue(
             f"{match_id}의 Solar 응답을 "
             f"JSON으로 읽지 못했습니다."
         ) from error
+
+    returned_publishers = []
+
+    for article in result.get("articles", []):
+        if isinstance(article, dict):
+            returned_publishers.append(
+                article.get("publisher")
+            )
+        else:
+            returned_publishers.append(
+                f"잘못된 형식: {repr(article)}"
+            )
+
+    expected_publishers = [
+        cluster.get("publisher")
+        for cluster in matched_issue.get(
+            "clusters",
+            [],
+        )
+    ]
+
+    print(
+        f"{match_id} 원본 언론사: "
+        f"{expected_publishers}"
+    )
+    print(
+        f"{match_id} Solar 반환 언론사: "
+        f"{returned_publishers}"
+    )
 
     # 모델이 값을 누락하더라도 기본 식별자는 유지한다.
     result["category"] = result.get(
