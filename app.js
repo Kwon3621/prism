@@ -220,7 +220,7 @@ async function renderSearchResults() {
   }
 }
 
-// 1. [내가 저장한 이슈] 렌더링 함수 - 더보기/줄이기 완벽 적용 및 괄호 에러 해결
+// 1. [내가 저장한 이슈] 렌더링 함수 - 더보기/줄이기
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
   if (!root) return; 
@@ -251,7 +251,7 @@ function renderSaved() {
     return;
   }
 
-  const INITIAL_COUNT = 4;
+  const INITIAL_COUNT = 3;
   if (typeof window.savedVisibleCount === 'undefined') {
     window.savedVisibleCount = INITIAL_COUNT;
   }
@@ -290,7 +290,7 @@ function renderSaved() {
         loadMoreBtn.className = "btn btn-primary";
         loadMoreBtn.textContent = "더보기 ▾";
         loadMoreBtn.addEventListener("click", () => {
-          window.savedVisibleCount += 4;
+          window.savedVisibleCount += 3;
           renderSavedCards();
         });
         wrapper.appendChild(loadMoreBtn);
@@ -343,8 +343,7 @@ async function renderLiveNews() {
           <h3>${item.title}</h3>
           <p>${item.summary || item.description || ""}</p>
           <div class="card-footer">
-            <small>RSS 수집 기사</small>
-            <a
+            
               class="btn btn-secondary"
               href="${item.link}"
               target="_blank"
@@ -566,7 +565,7 @@ async function renderFeaturedIssue() {
       return;
     }
 
-    const INITIAL_COUNT = 4;
+    const INITIAL_COUNT = 3;
     if (typeof window.featuredVisibleCount === 'undefined') {
       window.featuredVisibleCount = INITIAL_COUNT;
     }
@@ -579,19 +578,14 @@ async function renderFeaturedIssue() {
           <span class="eyebrow">${issue.category}</span>
           <h3>${issue.title}</h3>
           <p>${issue.summary}</p>
-          <div class="meta">
-            <span class="badge blue">
-              ${issue.articles ? issue.articles.length : 0}개 기사 비교
-            </span>
-          </div>
           <div class="card-footer">
-            <small>${issue.issue_id}</small>
             <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
               프레임 비교 보기
             </a>
           </div>
         </article>
       `).join("");
+        
 
       if (issues.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
@@ -608,7 +602,7 @@ async function renderFeaturedIssue() {
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
           loadMoreBtn.addEventListener("click", () => {
-            window.featuredVisibleCount += 4;
+            window.featuredVisibleCount += 3;
             renderFeaturedCards();
           });
           wrapper.appendChild(loadMoreBtn);
