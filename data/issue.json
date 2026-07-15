@@ -3,210 +3,413 @@
     {
       "issue_id": "match-1",
       "category": "사회",
-      "title": "내년 최저임금 결정",
-      "summary": "2026년 최저임금이 시간당 1만700원으로 결정됐다.",
+      "title": "종합특검이 양평고속도로 노선 변경 의혹과 관련해 원희룡 전 국토교통부 장관을 압수수색하고 소환일자를 조율했다",
+      "summary": "종합특검팀이 양평고속도로 노선 변경 의혹과 관련해 원희룡 전 국토교통부 장관을 대상으로 압수수색을 실시하고 강제수사를 개시했으며, 원 전 장관의 휴대전화 확보 및 소환일자 조율이 이루어졌다",
       "common_facts": [
-        "2026년 최저임금이 시간당 1만700원으로 결정됨",
-        "올해보다 3.7% 인상됨",
-        "내년 최저임금이 1만700원으로 확정됨"
+        "종합특검팀이 양평고속도로 노선 변경 의혹과 관련해 원희룡 전 국토교통부 장관을 대상으로 강제수사에 착수했다",
+        "압수수색 영장을 집행하여 원희룡 전 장관의 휴대전화를 확보했다",
+        "종합특검팀이 원희룡 전 장관과 출석 일자를 조율한 것으로 확인되었다",
+        "양평고속도로 사업이 2023년 백지화되었으며 이 과정에서 직권남용이 있었다는 의혹이 제기되었다"
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "내년 최저임금 1만700원... 올해보다 3.7% 오른다"
+            "2차 특검 ‘양평고속道 노선 변경 의혹’ 원희룡 전 장관 압수수색"
           ],
           "links": [
-            "https://www.chosun.com/national/labor/2026/07/14/OZ4AUHRGW5FPPIQPXNQ6DA3MVE/"
+            "https://www.chosun.com/national/court_law/2026/07/15/UWOCRBDXI5CVJHDD2P7IWWGBYE/"
           ],
-          "title": "내년 최저임금 1만700원... 올해보다 3.7% 오른다",
-          "link": "https://www.chosun.com/national/labor/2026/07/14/OZ4AUHRGW5FPPIQPXNQ6DA3MVE/",
+          "title": "2차 특검 ‘양평고속道 노선 변경 의혹’ 원희룡 전 장관 압수수색",
+          "link": "https://www.chosun.com/national/court_law/2026/07/15/UWOCRBDXI5CVJHDD2P7IWWGBYE/",
           "keywords": [
-            "내년 최저임금",
-            "1만700원",
-            "3.7% 인상"
+            "2차 특검",
+            "양평고속道 노선 변경 의혹",
+            "원희룡 전 장관",
+            "압수수색",
+            "직권남용"
           ],
-          "people": [],
-          "focus": "내년 최저임금이 1만700원으로 결정되었다는 사실을 중점적으로 보도",
-          "expression_summary": "제목에 구체적인 금액(1만700원)과 인상률(3.7%)을 명시하여 결정 사항을 알림",
-          "evidence_limit": "해당"
+          "people": [
+            "원희룡"
+          ],
+          "focus": "2차 특검의 양평고속도로 노선 변경 의혹 수사에서 원희룡 전 장관의 압수수색과 휴대전화 확보 사실",
+          "expression_summary": "2차 특검의 양평고속道 노선 변경 의혹 수사로 원희룡 전 장관을 압수수색했다는 사실을 제목에 명시했다",
+          "evidence_limit": "조선일보 기사에는 구체적인 표현 방식이 "
         },
         {
           "publisher": "한겨레",
           "article_count": 1,
           "titles": [
-            "내년도 최저임금 시간당 1만700원…올해보다 3.7% 올라"
+            "종합특검, ‘양평고속도로 특혜 의혹’ 원희룡 전 장관 압수수색"
           ],
           "links": [
-            "https://www.hani.co.kr/arti/society/labor/1268293.html"
+            "https://www.hani.co.kr/arti/society/society_general/1268418.html"
           ],
-          "title": "내년도 최저임금 시간당 1만700원…올해보다 3.7% 올라",
-          "link": "https://www.hani.co.kr/arti/society/labor/1268293.html",
-          "keywords": [
-            "내년도 최저임금",
-            "시간당 1만700원",
-            "3.7% 인상"
-          ],
+          "title": "종합특검, ‘양평고속도로 특혜 의혹’ 원희룡 전 장관 압수수색",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268418.html",
+          "keywords": [],
           "people": [],
-          "focus": "내년 최저임금 결정 내용을 보도",
-          "expression_summary": "제목에 '시간당'이라는 표현을 추가하여 구체적인 금액 명시",
-          "evidence_limit": "해당"
-        },
-        {
-          "publisher": "한국경제",
-          "article_count": 4,
-          "titles": [
-            "내년 최저임금 시간당 1만700원…올해보다 380원 인상 [종합]",
-            "[속보] 내년 최저임금 올해보다 380원 오른다…합의 불발돼 표결",
-            "[속보] 내년 최저임금 1만700원…시급 380원 오른다",
-            "[속보] 내년 최저임금 시간당 1만700원…올해보다 3.7% 인상"
-          ],
-          "links": [
-            "https://www.hankyung.com/article/2026071454217",
-            "https://www.hankyung.com/article/2026071453957",
-            "https://www.hankyung.com/article/202607145384i",
-            "https://www.hankyung.com/article/2026071453917"
-          ],
-          "title": "내년 최저임금 시간당 1만700원…올해보다 380원 인상 [종합]",
-          "link": "https://www.hankyung.com/article/2026071454217",
-          "keywords": [
-            "내년 최저임금",
-            "1만700원",
-            "380원 인상",
-            "합의 불발",
-            "표결"
-          ],
-          "people": [],
-          "focus": "내년 최저임금이 380원 인상되어 1만700원이 되었고, 합의 불발 후 표결로 결정되었다는 과정을 강조",
-          "expression_summary": "속보 표기와 함께 인상 금액(380원)과 인상률(3.7%)을 병기하고, 합의 불발 및 표결 과정을 추가로 언급",
-          "evidence_limit": "합의 불발 및 표결 과정에 대한 구체적인 내용은 보고서만으로는 확인 어려움"
-        }
-      ]
-    },
-    {
-      "issue_id": "match-2",
-      "category": "정치",
-      "title": "이재명 대통령의 부패 신고·전문 신고꾼 관련 발언",
-      "summary": "이재명 대통령이 부정부패 신고 포상금 제도와 관련해 전문 신고꾼의 활동을 인정하고, 신고로 인한 발본색원이 국가와 공동체에 기여한다는 입장을 밝혔다.",
-      "common_facts": [
-        "이재명 대통령이 부정부패 신고를 업으로 하는 것도 나쁘지 않다고 발언했다.",
-        "전문 신고꾼에 대해 불이익을 주지 말아야 한다고 언급했다.",
-        "신고 포상 관련 언급 및 발본색원의 필요성을 강조했다.",
-        "발언은 정부 기관 업무보고 중 청와대 영빈관에서 이루어졌다."
-      ],
-      "articles": [
-        {
-          "publisher": "조선일보",
-          "article_count": 1,
-          "titles": [
-            "李대통령 “부정부패 신고, 업으로 하는 것도 나쁘지 않아...전문 신고꾼에 불이익 안돼”"
-          ],
-          "links": [
-            "https://www.chosun.com/politics/politics_general/2026/07/15/2KFCJFM2IJESJHOOWNNXCQXQJA/"
-          ],
-          "title": "李대통령 “부정부패 신고, 업으로 하는 것도 나쁘지 않아...전문 신고꾼에 불이익 안돼”",
-          "link": "https://www.chosun.com/politics/politics_general/2026/07/15/2KFCJFM2IJESJHOOWNNXCQXQJA/",
-          "keywords": [
-            "부정부패 신고",
-            "전문 신고꾼",
-            "불이익",
-            "이재명 대통령"
-          ],
-          "people": [
-            "이재명 대통령"
-          ],
-          "focus": "부정부패 신고를 업으로 하는 것을 긍정적으로 평가하며 전문 신고꾼에 대한 불이익 금지",
-          "expression_summary": "인용문의 직접 인용을 통해 대통령의 발언을 그대로 전달",
-          "evidence_limit": "기사 제목 외에 추가 맥락 정보 부족"
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
         },
         {
           "publisher": "한국경제",
           "article_count": 1,
           "titles": [
-            "李대통령 \"부정부패 신고업 나쁘지 않아\"…기업 해산도 언급"
+            "[속보] 종합특검, '직권남용' 원희룡 압수수색…출석일자 조율"
           ],
           "links": [
-            "https://www.hankyung.com/article/2026071565867"
+            "https://www.hankyung.com/article/2026071575067"
           ],
-          "title": "李대통령 \"부정부패 신고업 나쁘지 않아\"…기업 해산도 언급",
-          "link": "https://www.hankyung.com/article/2026071565867",
-          "keywords": [
-            "부정부패 신고업",
-            "전문 신고꾼",
-            "불이익",
-            "기업 해산"
-          ],
-          "people": [
-            "이재명 대통령"
-          ],
-          "focus": "부정부패 신고업의 긍정적 측면과 기업 해산 언급",
-          "expression_summary": "제목에서 '기업 해산도 언급'이라는 추가 맥락 제시",
-          "evidence_limit": "'기업 해산'에 대한 구체적 내용 확인 불가"
+          "title": "[속보] 종합특검, '직권남용' 원희룡 압수수색…출석일자 조율",
+          "link": "https://www.hankyung.com/article/2026071575067",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
         },
         {
           "publisher": "동아일보",
           "article_count": 1,
           "titles": [
-            "李 “부정부패 신고, 업으로 할수도…전문 신고꾼 불이익 없어야”"
+            "종합특검, ‘양평 의혹’ 원희룡 前장관 압수수색…출석일자 조율"
           ],
           "links": [
-            "https://www.donga.com/news/Politics/article/all/20260715/134302756/1"
+            "https://www.donga.com/news/Society/article/all/20260715/134306036/1"
           ],
-          "title": "李 “부정부패 신고, 업으로 할수도…전문 신고꾼 불이익 없어야”",
-          "link": "https://www.donga.com/news/Politics/article/all/20260715/134302756/1",
+          "title": "종합특검, ‘양평 의혹’ 원희룡 前장관 압수수색…출석일자 조율",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134306036/1",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        },
+        {
+          "publisher": "매일경제",
+          "article_count": 1,
+          "titles": [
+            "[속보] 종합특검, ‘양평고속道’ 원희룡 압수수색…출석일자 조율"
+          ],
+          "links": [
+            "https://www.mk.co.kr/news/society/12099415"
+          ],
+          "title": "[속보] 종합특검, ‘양평고속道’ 원희룡 압수수색…출석일자 조율",
+          "link": "https://www.mk.co.kr/news/society/12099415",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "특검, '양평 의혹' 원희룡 휴대전화 압수수색…소환일자 협의"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659633&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "특검, '양평 의혹' 원희룡 휴대전화 압수수색…소환일자 협의",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659633&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-2",
+      "category": "경제",
+      "title": "코픽스 금리 상승으로 주담대 변동금리 인상",
+      "summary": "코픽스 금리가 상승하면서 은행권 주택담보대출 변동금리 기준이 3%대로 재진입했다. 이는 신규취급액 기준 코픽스가 1년 5개월 만에 최고치를 기록한 후 석 달 연속 상승한 결과다.",
+      "common_facts": [
+        "코픽스(COFIX·자금조달비용지수)가 상승하여 3%대로 올라섰다.",
+        "코픽스는 은행권 주택담보대출 변동금리가 적용되는 기준 지수이다.",
+        "6월 신규취급액 기준 코픽스는 전월 대비 0.15%포인트 상승하여 3.05%를 기록했다.",
+        "6월 잔액 기준 코픽스는 전월 대비 0.05%포인트 상승하여 2.94%를 기록했다.",
+        "코픽스 상승은 은행들이 조달한 자금 금리의 가중평균에 따라 결정됐다.",
+        "코픽스는 정기예금, 적금, 금융채 등 수신상품 금리 변동에 따라 상승 또는 하락한다.",
+        "코픽스는 농협, 신한, 우리, SC제일, 하나, 기업, KB국민, 한국씨티 등 국내 8개 은행이 산정한다."
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "주담대 금리 또 오른다…신규 코픽스 1년5개월 만에 3%대"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/economy/finance/1268380.html"
+          ],
+          "title": "주담대 금리 또 오른다…신규 코픽스 1년5개월 만에 3%대",
+          "link": "https://www.hani.co.kr/arti/economy/finance/1268380.html",
           "keywords": [
-            "부정부패 신고",
-            "전문 신고꾼",
-            "불이익",
-            "발본색원"
+            "코픽스",
+            "주담대 금리",
+            "신규취급액",
+            "3%대"
           ],
           "people": [
-            "이재명 대통령"
+            "은행연합회"
           ],
-          "focus": "전문 신고꾼에 대한 불이익 금지와 신고의 발본색원 중요성 강조",
-          "expression_summary": "기사에 인용문 상세 내용 포함, '신고해서 돈 받는다'는 인식 개선 필요성 언급",
-          "evidence_limit": ""
+          "focus": "신규 코픽스가 1년 5개월 만에 3%대를 기록하며 주택담보대출 변동금리가 상승하는 상황을 강조했다.",
+          "expression_summary": "기사 제목은 '주담대 금리 또 오른다…신규 코픽스 1년5개월 만에 3%대'로, 코픽스 상승과 주담대 금리 인상 연계성을 암시했다.",
+          "evidence_limit": "코픽스 산정 방식, 코픽스에 포함된 수신상품 종류, 코픽스 산정 은행 등 구체적인 산정 메커니즘에 대한 상세 설명은 제공되지 않았다."
+        },
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "코픽스 3%대로…변동형 주담대 금리 또 오른다"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/202607157275i"
+          ],
+          "title": "코픽스 3%대로…변동형 주담대 금리 또 오른다",
+          "link": "https://www.hankyung.com/article/202607157275i",
+          "keywords": [
+            "코픽스",
+            "변동형 주담대",
+            "금리 인상"
+          ],
+          "people": [
+            "은행연합회"
+          ],
+          "focus": "변동형 주담대 금리가 코픽스 상승에 따라 또 오르는 상황을 강조했다.",
+          "expression_summary": "기사 제목은 '코픽스 3%대로…변동형 주담대 금리 또 오른다'로, 코픽스 3%대 진입과 변동형 주담대 금리 인상 간 연계성을 명시했다.",
+          "evidence_limit": "코픽스 산정 방식, 코픽스 상승과 수신상품 금리 변동 간 구체적 인과관계, 코픽스에 포함된 수신상품 종류 등 상세 설명은 제공되지 않았다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "주담대 변동금리 뛴다…6월 코픽스 1년5개월 만에 3%대로"
+          ],
+          "links": [
+            "https://www.donga.com/news/Economy/article/all/20260715/134304448/1"
+          ],
+          "title": "주담대 변동금리 뛴다…6월 코픽스 1년5개월 만에 3%대로",
+          "link": "https://www.donga.com/news/Economy/article/all/20260715/134304448/1",
+          "keywords": [
+            "코픽스",
+            "주담대 변동금리",
+            "6월 코픽스",
+            "1년5개월"
+          ],
+          "people": [
+            "은행연합회"
+          ],
+          "focus": "6월 신규취급액 기준 코픽스가 3.05%로 상승해 1년 5개월 만에 최고치를 기록한 점을 강조했다.",
+          "expression_summary": "기사 제목은 '주담대 변동금리 뛴다…6월 코픽스 1년5개월 만에 3%대로'로, 시계열적 변화(6월 코픽스, 1년5개월 만)와 코픽스-주담대 금리 연계성을 명시했다.",
+          "evidence_limit": "코픽스 산정 방식, 코픽스에 포함된 수신상품 종류, 코픽스 산정 은행 등 구체적인 산정 메커니즘에 대한 상세 설명은 제공되지 않았다."
+        },
+        {
+          "publisher": "매일경제",
+          "article_count": 1,
+          "titles": [
+            "코픽스 3%대 재진입 … 주담대 이자 또 오른다"
+          ],
+          "links": [
+            "https://www.mk.co.kr/news/economy/12099449"
+          ],
+          "title": "코픽스 3%대 재진입 … 주담대 이자 또 오른다",
+          "link": "https://www.mk.co.kr/news/economy/12099449",
+          "keywords": [
+            "코픽스",
+            "주담대",
+            "3%대 재진입",
+            "이자 상승"
+          ],
+          "people": [
+            "은행연합회"
+          ],
+          "focus": "코픽스가 17개월 만에 3%대로 재진입한 점과 이에 따른 주담대 이자 상승 전망을 강조했다.",
+          "expression_summary": "기사 제목은 '코픽스 3%대 재진입 … 주담대 이자 또 오른다'로, 시간적 주기(17개월 만)와 코픽스-주담대 금리 연계성을 명시했다.",
+          "evidence_limit": "코픽스 산정 방식, 코픽스 상승과 수신상품 금리 변동 간 구체적 인과관계, 코픽스에 포함된 수신상품 종류 등 상세 설명은 제공되지 않았다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "주담대 변동금리 기준 코픽스, 석 달째 상승…1년 5개월 만 3%대 진입"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659425&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "주담대 변동금리 기준 코픽스, 석 달째 상승…1년 5개월 만 3%대 진입",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659425&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "코픽스",
+            "주담대 변동금리",
+            "석 달째 상승",
+            "1년 5개월"
+          ],
+          "people": [
+            "은행연합회"
+          ],
+          "focus": "코픽스가 석 달 연속 상승 추세를 이어가며 1년 5개월 만에 3%대에 진입한 점을 강조했다.",
+          "expression_summary": "기사 제목은 '주담대 변동금리 기준 코픽스, 석 달째 상승…1년 5개월 만 3%대 진입'으로, 상승 기간(석 달째)과 진입 시점(1년 5개월 만)을 명시적으로 서술했다.",
+          "evidence_limit": "코픽스 산정 방식, 코픽스에 포함된 수신상품 종류, 코픽스 산정 은행 등 구체적인 산정 메커니즘에 대한 상세 설명은 제공되지 않았다."
         }
       ]
     },
     {
       "issue_id": "match-3",
-      "category": "사회",
-      "title": "대법, 김건희 주가조작 등 상고심 선고 24일로 연기",
-      "summary": "대법원이 김건희 여사의 주가조작 및 무상 여론조사 혐의에 대한 상고심 선고를 7월 24일로 연기했다는 내용의 기사가 여러 언론사에서 보도되었다.",
+      "category": "정치",
+      "title": "강경화 주미대사의 일시 귀국 및 쿠팡 문제 관련 발언",
+      "summary": "강경화 주미대사가 한미 관계 업무 협의를 위해 일시 귀국했으며 쿠팡 문제가 예상보다 오래 지속되는 이슈라고 밝혔다. 한미 간 협의는 계속 진행 중이다.",
       "common_facts": [
-        "대법원이 김건희 여사의 상고심 선고를 24일로 연기했다",
-        "사건이 주가조작 혐의와 관련되어 있다",
-        "사건이 무상 여론조사 혐의와 관련되어 있다",
-        "선고 일정이 7월 15일이 아닌 24일로 변경되었다"
+        "강경화 주미대사가 한미 관계 업무 협의를 위해 일시 귀국했다.",
+        "강경화 대사는 쿠팡 문제가 생각보다 훨씬 오래 지속되는 이슈라고 말했다.",
+        "강경화 대사는 한미 간 협의를 다양한 레벨에서 계속하고 있다고 밝혔다.",
+        "쿠팡 문제에 대한 미국 측의 구체적 요구사항은 아직 알려지지 않았다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "대법, 김건희 주가조작 등 상고심 선고 24일로 연기"
+            "‘이례적 귀국’ 강경화 주미대사 “쿠팡, 생각보다 오래가는 이슈”"
           ],
           "links": [
-            "https://www.chosun.com/national/court_law/2026/07/15/YTTKZLX7CNECNNAAE7PO34QZAY/"
+            "https://www.chosun.com/politics/diplomacy-defense/2026/07/15/JQAA2FIZ3NGQHMRXU3BG6DXP5Y/"
           ],
-          "title": "대법, 김건희 주가조작 등 상고심 선고 24일로 연기",
-          "link": "https://www.chosun.com/national/court_law/2026/07/15/YTTKZLX7CNECNNAAE7PO34QZAY/",
+          "title": "‘이례적 귀국’ 강경화 주미대사 “쿠팡, 생각보다 오래가는 이슈”",
+          "link": "https://www.chosun.com/politics/diplomacy-defense/2026/07/15/JQAA2FIZ3NGQHMRXU3BG6DXP5Y/",
           "keywords": [
-            "대법",
+            "이례적 귀국",
+            "쿠팡",
+            "오래가는 이슈"
+          ],
+          "people": [
+            "강경화",
+            "조현"
+          ],
+          "focus": "쿠팡 문제가 생각보다 오래 지속되는 이슈라는 점을 강조했다.",
+          "expression_summary": "이례적 귀국이라는 표현을 사용했으며 쿠팡 문제가 오래간다는 점을 강조했다.",
+          "evidence_limit": "조현 외교부 장관과의 면담 내용 등 구체적인 협의 진척 상황에 대한 정보가 제한적이었다."
+        },
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "이례적 귀국, 강경화 대사 “쿠팡, 생각보다 훨씬 오래 가는 이슈”"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/politics/politics_general/1268366.html"
+          ],
+          "title": "이례적 귀국, 강경화 대사 “쿠팡, 생각보다 훨씬 오래 가는 이슈”",
+          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268366.html",
+          "keywords": [
+            "이례적 귀국",
+            "쿠팡",
+            "오래 가는 이슈"
+          ],
+          "people": [
+            "강경화",
+            "조현"
+          ],
+          "focus": "쿠팡 문제가 예상보다 오래 지속되는 이슈라고 언급했다.",
+          "expression_summary": "이례적 귀국이라는 표현을 사용했으며 쿠팡 문제가 오래 간다는 점을 강조했다.",
+          "evidence_limit": "구체적인 협의 진척 상황 및 한미 투자 이행 관련 세부 내용은 제한적이었다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "강경화 “쿠팡 사태, 생각보다 오래가”…일시 귀국"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134304698/1"
+          ],
+          "title": "강경화 “쿠팡 사태, 생각보다 오래가”…일시 귀국",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134304698/1",
+          "keywords": [
+            "쿠팡 사태",
+            "오래가는 이슈",
+            "일시 귀국",
+            "한미 투자"
+          ],
+          "people": [
+            "강경화",
+            "조현",
+            "미 연방 하원"
+          ],
+          "focus": "쿠팡 문제가 예상보다 오래 지속되는 이슈이며 한미 투자 이행이 지연되고 있다고 밝혔다.",
+          "expression_summary": "쿠팡 사태는 생각보다 오래가는 이슈라고 표현했으며 한미 간 협의는 더 필요하다고 했다.",
+          "evidence_limit": "미국 측의 구체적 요구사항은 명시되지 않았으며 미 연방 하원 보고서에 대한 상세 내용은 제한적이었다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 2,
+          "titles": [
+            "청와대 \"강경화 일시 귀국, 공관장 건의·의견 청취 목적\"",
+            "강경화 주미대사 \"쿠팡, 생각보다 훨씬 오래가는 이슈…대미투자 프로젝트 발굴, 더 논의\""
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659519&plink=RSSLINK&cooper=RSSREADER",
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659265&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "청와대 \"강경화 일시 귀국, 공관장 건의·의견 청취 목적\"",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659519&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "강경화 주미대사",
+            "쿠팡",
+            "오래가는 이슈",
+            "대미투자",
+            "프로젝트 발굴"
+          ],
+          "people": [
+            "강경화",
+            "조현"
+          ],
+          "focus": "쿠팡 문제는 예상보다 오래 지속되며 대미 투자 프로젝트 발굴을 위해 더 논의가 필요하다고 했다.",
+          "expression_summary": "청와대 지시에 따라 일시 귀국했다는 점을 명시했으며 쿠팡 문제가 오래가고 추가 논의가 필요하다는 점을 강조했다.",
+          "evidence_limit": "미국 측의 구체적 요구사항은 밝혀지지 않았으며 조현 장관과의 구체적인 면담 내용 등은 제한적이었다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-4",
+      "category": "사회",
+      "title": "김건희 여사 상고심 선고 생중계 및 연기 결정",
+      "summary": "대법원이 24일 김건희 여사의 도이치모터스 주가조작 및 통일교 금품 수수 등 상고심 선고를 생중계하기로 했으며 일부 언론사에서는 선고 일정이 연기된 것으로 보도했다.",
+      "common_facts": [
+        "대법원은 24일 김건희 여사의 상고심 선고를 생중계하기로 결정했다",
+        "선고 내용은 주가조작, 무상 여론조사, 통일교 금품 수수 의혹을 포함한다"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "대법원, 24일 김건희 상고심 선고 생중계"
+          ],
+          "links": [
+            "https://www.chosun.com/national/court_law/2026/07/15/JP4LWD44JVEORDJH5LFY7Q2RJM/"
+          ],
+          "title": "대법원, 24일 김건희 상고심 선고 생중계",
+          "link": "https://www.chosun.com/national/court_law/2026/07/15/JP4LWD44JVEORDJH5LFY7Q2RJM/",
+          "keywords": [
+            "대법원",
             "김건희",
-            "주가조작",
             "상고심",
-            "선고 연기",
-            "무상 여론조사"
+            "선고",
+            "생중계"
           ],
           "people": [
             "김건희"
           ],
-          "focus": "대법원이 김건희 여사의 주가조작 및 무상 여론조사 혐의에 대한 상고심 선고를 24일로 연기했다는 사실 전달",
-          "expression_summary": "제목과 RSS 설명이 동일하며, 선고 일정 변경 사실을 간결하게 전달",
-          "evidence_limit": "김건희 여사가 판결 대상인 혐의에 대한 구체적 내용 및 법적 절차는 제공되지 않음"
+          "focus": "대법원은 24일 김건희 상고심 선고를 생중계하기로 결정했다",
+          "expression_summary": "제목은 '대법원, 24일 김건희 상고심 선고 생중계'라고 명시되어 있다",
+          "evidence_limit": "선고 연기 여부와 관련된 내용은 확인되지 않았다"
         },
         {
           "publisher": "한겨레",
@@ -229,517 +432,805 @@
           "people": [
             "김건희"
           ],
-          "focus": "대법원이 김건희 여사의 주가조작 및 무상 여론조사 혐의에 대한 상고심 선고를 24일로 연기했다는 사실 전달",
-          "expression_summary": "제목과 RSS 설명이 동일하며, 혐의에 '무상 여론조사'를 명시적으로 포함하여 표현",
-          "evidence_limit": "김건희 여사가 판결 대상인 혐의에 대한 구체적 내용 및 법적 절차는 제공되지 않음"
+          "focus": "대법원은 김건희 상고심 선고 일정을 24일로 연기했다",
+          "expression_summary": "제목은 '대법, 김건희 ‘주가조작·무상 여론조사’ 선고 24일로 연기'라고 명시하고 있다",
+          "evidence_limit": "생중계 여부에 대한 언급은 제공되지 않았다"
         },
         {
           "publisher": "한국경제",
-          "article_count": 1,
+          "article_count": 2,
           "titles": [
-            "[속보] 대법, 김건희 '주가조작 등' 상고심 선고 24일로 연기"
+            "[속보] 대법, 24일 김건희 상고심 선고 재판 중계 허가",
+            "대법, 김건희 '주가조작 등' 상고심 선고 24일로 연기"
           ],
           "links": [
+            "https://www.hankyung.com/article/2026071573557",
             "https://www.hankyung.com/article/2026071565117"
           ],
-          "title": "[속보] 대법, 김건희 '주가조작 등' 상고심 선고 24일로 연기",
-          "link": "https://www.hankyung.com/article/2026071565117",
+          "title": "[속보] 대법, 24일 김건희 상고심 선고 재판 중계 허가",
+          "link": "https://www.hankyung.com/article/2026071573557",
           "keywords": [
             "대법",
             "김건희",
-            "주가조작 등",
+            "주가조작",
             "상고심",
             "선고 연기",
-            "[속보]"
+            "중계 허가"
           ],
           "people": [
             "김건희"
           ],
-          "focus": "대법원이 김건희 여사의 주가조작 등 혐의에 대한 상고심 선고를 24일로 연기했다는 속보 전달",
-          "expression_summary": "제목에 '[속보]' 표기가 포함되어 있으며, '주가조작 등'으로 간략하게 표현",
-          "evidence_limit": "김건희 여사가 판결 대상인 혐의에 대한 구체적 내용 및 법적 절차는 제공되지 않음"
-        }
-      ]
-    },
-    {
-      "issue_id": "match-4",
-      "category": "정치",
-      "title": "송영길 더불어민주당 대표의 평택 공천 및 조국 전 장관 출마 관련 발언 논란",
-      "summary": "송영길 더불어민주당 대표가 과거 평택 지역구 공천에 대한 후회와 관련해 '낙태해야 했는데 낳았다'는 발언을 한 것으로 보도되었으며, 이 발언이 낙태 및 여성 정책에 대한 부적절한 발언으로 비판받고 있다. 또한, 조국 전 장관의 부산 출마 관련 언급도 함께 보도되었다.",
-      "common_facts": [
-        "송영길 더불어민주당 대표의 발언",
-        "평택 지역구 공천과 관련된 후회 발언",
-        "낙태와 관련된 표현 사용",
-        "조국 전 장관의 부산 출마 언급"
-      ],
-      "articles": [
-        {
-          "publisher": "조선일보",
-          "article_count": 1,
-          "titles": [
-            "송영길 “鄭 평택 공천 후회? 낙태해야 했는데 낳았다는 말”"
-          ],
-          "links": [
-            "https://www.chosun.com/politics/assembly/2026/07/15/RQNICFEH35FZVFQXARNBN2PSFA/"
-          ],
-          "title": "송영길 “鄭 평택 공천 후회? 낙태해야 했는데 낳았다는 말”",
-          "link": "https://www.chosun.com/politics/assembly/2026/07/15/RQNICFEH35FZVFQXARNBN2PSFA/",
-          "keywords": [
-            "송영길",
-            "평택 공천",
-            "낙태",
-            "더불어민주당"
-          ],
-          "people": [
-            "송영길",
-            "조국"
-          ],
-          "focus": "송영길 대표의 평택 공천에 대한 후회와 낙태 관련 표현의 부적절성",
-          "expression_summary": "평택 공천을 '낙태해야 했는데 낳았다는 말'로 비유한 발언 내용",
-          "evidence_limit": "발언의 정확한 맥락과 현재 정치적 입장에 대한 추가 정보가 제공되지 않음"
+          "focus": "대법원은 24일 김건희 상고심 선고 중계 허가 및 연기 결정을 보도했다",
+          "expression_summary": "제목은 '[속보] 대법, 24일 김건희 상고심 선고 재판 중계 허가'와 '대법, 김건희 '주가조작 등' 상고심 선고 24일로 연기'로 구분된다",
+          "evidence_limit": "구체적인 중계 방식과 일정 연기 이유는 제공되지 않았다"
         },
         {
-          "publisher": "한국경제",
+          "publisher": "SBS",
           "article_count": 1,
           "titles": [
-            "송영길 \"평택을 공천 후회? 무책임한 말…조국 부산 출마했어야\""
+            "대법, 김건희 '주가조작·통일교 금품' 24일 선고 생중계"
           ],
           "links": [
-            "https://www.hankyung.com/article/202607155971H"
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659661&plink=RSSLINK&cooper=RSSREADER"
           ],
-          "title": "송영길 \"평택을 공천 후회? 무책임한 말…조국 부산 출마했어야\"",
-          "link": "https://www.hankyung.com/article/202607155971H",
+          "title": "대법, 김건희 '주가조작·통일교 금품' 24일 선고 생중계",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659661&plink=RSSLINK&cooper=RSSREADER",
           "keywords": [
-            "송영길",
-            "평택 공천",
-            "낙태",
-            "조국 부산 출마"
+            "대법",
+            "김건희",
+            "주가조작",
+            "통일교 금품",
+            "생중계"
           ],
           "people": [
-            "송영길",
-            "조국"
+            "김건희"
           ],
-          "focus": "송영길 대표의 발언이 무책임하다는 비판 및 조국 전 장관의 부산 출마 관련 언급",
-          "expression_summary": "평택 공천 후회를 낙태에 비유하며 무책임한 발언이라는 평가",
-          "evidence_limit": "발언의 구체적인 맥락과 언론사의 비판 근거, 조국 출마 관련 정확한 의도 파악 불가능"
+          "focus": "대법원이 24일 김건희 상고심 선고를 생중계하기로 했으며 통일교 금품 수수 의혹을 포함한다",
+          "expression_summary": "제목은 '대법, 김건희 '주가조작·통일교 금품' 24일 선고 생중계'라고 명시하고 있다",
+          "evidence_limit": "무상 여론조사와 관련된 언급은 제공되지 않았다"
         }
       ]
     },
     {
       "issue_id": "match-5",
       "category": "정치",
-      "title": "송영길과 정청래의 역사적 비유 발언 논란",
-      "summary": "송영길 전 대표와 정청래 의원이 대통령과의 관계 및 정당의 역사적 정체성을 언급하며, 특히 '옛날이면 역적'이라는 표현을 사용해 정치적 평가를 내린 사건에 대한 보도가 확인됐다.",
+      "title": "대통령이 부패 신고 전문 활동 및 관련 포상 정책에 대한 입장 표명",
+      "summary": "대통령이 부정부패 신고를 업으로 하는 전문 신고꾼에 대한 불이익을 주지 않아야 한다고 발언했으며, 신고 포상 제도의 개선 필요성을 언급했다 했다.",
       "common_facts": [
-        "송영길 전 더불어민주당 대표가 정청래 의원의 발언에 대해 반박하는 내용이 포함됨",
-        "정청래 의원이 '내가 코어 묶을 적임자'라고 발언함",
-        "두 정치인 모두 역사적으로 '옛날이면 역적'이라는 표현을 사용함",
-        "대통령과의 정치적 관계에 대한 언급이 있음"
+        "대통령이 부정부패 신고를 업으로 하는 것을 나쁘지 않다고 발언했다 했다.",
+        "전문 신고꾼에게 불이익을 주지 않아야 한다는 입장을 밝혔다 했다.",
+        "신고 포상 관련 정책에 대한 언급 또는 개선 필요성이 있었다 했다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "송영길 “대통령과 싸워? 옛날이면 역적으로 목을…” 정청래 “섬뜩하고 무섭다”"
+            "李대통령 “부정부패 신고, 업으로 하는 것도 나쁘지 않아...전문 신고꾼에 불이익 안돼”"
           ],
           "links": [
-            "https://www.chosun.com/politics/assembly/2026/07/14/HTKBM5AYM5AFZEGLQVGQMEBIGI/"
+            "https://www.chosun.com/politics/politics_general/2026/07/15/2KFCJFM2IJESJHOOWNNXCQXQJA/"
           ],
-          "title": "송영길 “대통령과 싸워? 옛날이면 역적으로 목을…” 정청래 “섬뜩하고 무섭다”",
-          "link": "https://www.chosun.com/politics/assembly/2026/07/14/HTKBM5AYM5AFZEGLQVGQMEBIGI/",
+          "title": "李대통령 “부정부패 신고, 업으로 하는 것도 나쁘지 않아...전문 신고꾼에 불이익 안돼”",
+          "link": "https://www.chosun.com/politics/politics_general/2026/07/15/2KFCJFM2IJESJHOOWNNXCQXQJA/",
           "keywords": [
-            "송영길",
-            "정청래",
-            "역적",
-            "대통령",
-            "역사적 비유",
-            "정치 발언"
+            "부정부패 신고",
+            "전문 신고꾼",
+            "불이익 방지",
+            "포상 정책"
           ],
           "people": [
-            "송영길",
-            "정청래"
+            "李대통령"
           ],
-          "focus": "정청래 의원의 역사적 비유 발언을 비판하며 대통령과의 관계를 강조",
-          "expression_summary": "송영길 전 대표가 정청래의 발언을 '역적으로 목을 칠 정도'로 비판하고, 정청래 발언은 '섬뜩하고 무섭다'고 평가",
-          "evidence_limit": "송영길 전 대표의 정확한 발언 내용 및 맥락은 제공된 자료에서 완전히 확인되지 않음"
+          "focus": "부정부패 신고를 업으로 하는 행위에 대한 부정적 인식 개선과 전문 신고꾼에 대한 불이익 금지 원칙을 강조했다 했다.",
+          "expression_summary": "부정부패 신고를 업으로 하는 것도 나쁘지 않다는 발언과 전문 신고꾼에 대한 불이익 방지 필요성을 강조했다 했다.",
+          "evidence_limit": "신고 포상 관련 구체적 정책 내용에 대한 상세 설명은 제공되지 않았다 했다."
         },
         {
           "publisher": "한겨레",
           "article_count": 1,
           "titles": [
-            "정청래 “내가 코어 묶을 적임자”…송영길 “선청후당, 옛날이면 역적”"
+            "이 대통령 “전문 신고꾼 불이익 없어야…부패 신고는 공익에 기여”"
           ],
           "links": [
-            "https://www.hani.co.kr/arti/politics/politics_general/1268231.html"
+            "https://www.hani.co.kr/arti/politics/bluehouse/1268342.html"
           ],
-          "title": "정청래 “내가 코어 묶을 적임자”…송영길 “선청후당, 옛날이면 역적”",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268231.html",
+          "title": "이 대통령 “전문 신고꾼 불이익 없어야…부패 신고는 공익에 기여”",
+          "link": "https://www.hani.co.kr/arti/politics/bluehouse/1268342.html",
           "keywords": [
-            "정청래",
-            "송영길",
-            "역적",
-            "코어 묶",
-            "선청후당",
-            "정치적 비판"
+            "부정부패 신고",
+            "전문 신고꾼",
+            "공익 기여",
+            "불이익 금지"
           ],
           "people": [
-            "정청래",
-            "송영길"
+            "이 대통령"
           ],
-          "focus": "정청래 의원의 '코어 묶' 발언과 송영길의 역사적 비유에 초점",
-          "expression_summary": "정청래 의원이 '코어 묶을 적임자'라고 주장하고, 송영길 전 대표가 '선청후당, 옛날이면 역적'이라고 반박",
-          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+          "focus": "부정부패 신고가 공익에 기여함을 강조하고 전문 신고꾼의 불이익 금지 필요성을 설명했다 했다.",
+          "expression_summary": "전문 신고꾼에 대한 불이익 없어야 한다는 주장과 부패 신고의 공익성을 강조했다 했다.",
+          "evidence_limit": "구체적인 포상 규정이나 제도 개선 방안에 대한 내용은 제공되지 않았다 했다."
+        },
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "李대통령 \"부정부패 신고업 나쁘지 않아\"…기업 해산도 언급"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/2026071565867"
+          ],
+          "title": "李대통령 \"부정부패 신고업 나쁘지 않아\"…기업 해산도 언급",
+          "link": "https://www.hankyung.com/article/2026071565867",
+          "keywords": [
+            "부정부패 신고업",
+            "기업 해산",
+            "전문 신고꾼",
+            "불이익 방지"
+          ],
+          "people": [
+            "李대통령"
+          ],
+          "focus": "부정부패 신고업을 긍정적으로 평가하며 기업 해산 가능성도 언급했다 했다.",
+          "expression_summary": "부정부패 신고업을 나쁘지 않다고 발언하고 기업 해산 관련 언급도 포함했다 했다.",
+          "evidence_limit": "구체적인 기업 해산 사유나 재정경제부 등 기관 업무보고 내용의 상세 정보는 제공되지 않았다 했다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "李 “부정부패 신고, 업으로 할수도…전문 신고꾼 불이익 없어야”"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134302756/1"
+          ],
+          "title": "李 “부정부패 신고, 업으로 할수도…전문 신고꾼 불이익 없어야”",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134302756/1",
+          "keywords": [
+            "부정부패 신고",
+            "업",
+            "전문 신고꾼",
+            "불이익 금지"
+          ],
+          "people": [
+            "李대통령",
+            "재정경제부",
+            "국가데이터처",
+            "금융위원회",
+            "기획예산처"
+          ],
+          "focus": "전문 신고꾼의 불이익 금지와 신고 포상 정책 개선을 구체적인 발언 내용과 함께 설명했다 했다.",
+          "expression_summary": "부정부패 신고를 업으로 할 수 있다는 발언과 과거 포상 거부 사례를 언급하며 제도 개선 필요성을 제시했다 했다.",
+          "evidence_limit": "국가데이터처와 금융위원회 등 기관 업무보고에서 논의된 구체적 내용은 제한적으로 제공되었다 했다."
         }
       ]
     },
     {
       "issue_id": "match-6",
       "category": "정치",
-      "title": "강경화 주미대사의 쿠팡 관련 이견으로 인한 일시 귀국",
-      "summary": "강경화 주미대사가 쿠팡 관련 한미 간 이견으로 인해 이례적으로 일시 귀국한 것으로 보도되었으며, 해당 귀국 기간 중 정통망법, 군함 건조 등 다양한 현안을 논의할 것으로 예상된다.",
+      "title": "이재명 대통령, 삼성·SK하이닉스 단일종목 레버리지 ETF 관련 금융당국에 보완대책 지시",
+      "summary": "이재명 대통령이 15일 청와대 영빈관에서 열린 하반기 부처 업무보고에서 이찬진 금융감독원장과 정은보 한국거래소 이사장에게 삼성전자 및 SK하이닉스 관련 단일종목 레버리지 ETF에 대한 제도 보완을 지시했다.",
       "common_facts": [
-        "강경화 주미대사가 쿠팡 관련 한미 간 이견으로 인해 이례적으로 일시 귀국했다.",
-        "강경화 대사의 귀국 기간 중 한미 간 여러 현안을 논의할 것으로 예상된다.",
-        "논의 대상에는 쿠팡 관련 문제, 정통망법, 군함 건조 등이 포함된다."
+        "이재명 대통령이 15일 청와대 영빈관에서 진행된 부처 업무보고 중 금융당국에 단일종목 레버리지 ETF 보완대책을 지시했다",
+        "이찬진 금융감독원장과 정은보 한국거래소 이사장이 해당 발언에 직접 응답했다",
+        "삼성전자와 SK하이닉스 중심의 단일종목 레버리지 ETF가 시장 논란의 대상이 되었다",
+        "이재명 대통령은 보완대책을 신속히 마련할 것을 지시했다"
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "韓美 쿠팡 이견에 강경화 주미 대사 이례적 일시 귀국"
+            "李, ‘삼전닉스’ 레버리지 ETF에 “보완대책 신속히 마련하라”"
           ],
           "links": [
-            "https://www.chosun.com/politics/diplomacy-defense/2026/07/15/3LORXJSS5JDTNFH6HBOO5V2UMU/"
+            "https://www.chosun.com/politics/politics_general/2026/07/15/ZHKBEBUD3ZAYVALKT5DQ2XMV6Y/"
           ],
-          "title": "韓美 쿠팡 이견에 강경화 주미 대사 이례적 일시 귀국",
-          "link": "https://www.chosun.com/politics/diplomacy-defense/2026/07/15/3LORXJSS5JDTNFH6HBOO5V2UMU/",
+          "title": "李, ‘삼전닉스’ 레버리지 ETF에 “보완대책 신속히 마련하라”",
+          "link": "https://www.chosun.com/politics/politics_general/2026/07/15/ZHKBEBUD3ZAYVALKT5DQ2XMV6Y/",
           "keywords": [
-            "강경화 주미대사",
-            "쿠팡 이견",
-            "한미",
-            "일시 귀국"
+            "삼전닉스",
+            "레버리지 ETF",
+            "보완대책"
           ],
           "people": [
-            "강경화",
-            "주미대사"
+            "이재명 대통령",
+            "이찬진 금융감독원장",
+            "정은보 한국거래소 이사장"
           ],
-          "focus": "쿠팡 관련 한미 간 이견으로 인한 강경화 주미대사의 일시 귀국",
-          "expression_summary": "쿠팡과 한미 간 이견으로 인해 강경화 주미 대사가 이례적인 일시 귀국을 했다는 내용을 강조",
-          "evidence_limit": ""
+          "focus": "이재명 대통령이 이찬진 금융감독원장과 정은보 한국거래소 이사장에게 단일종목 레버리지 ETF 관련 보완대책을 신속히 마련할 것을 지시했다",
+          "expression_summary": "제목에서 李(이재명)을 직접 언급하며 삼전닉스 레버리지 ETF에 대한 보완대책 지시를 강조했다",
+          "evidence_limit": "RSS 설명에 관련 발언이 구체적으로 포함되어 있으나, 기사에서 인용된 원문의 전체 맥락이 제공되지 않았다"
         },
         {
           "publisher": "한겨레",
           "article_count": 1,
           "titles": [
-            "강경화 주미대사 이례적 귀국…쿠팡·정통망법·군함 건조 논의할 듯"
+            "이 대통령, 삼전닉스 레버리지 ETF “보완 대책 신속하게 마련하라”"
           ],
           "links": [
-            "https://www.hani.co.kr/arti/politics/politics_general/1268252.html"
+            "https://www.hani.co.kr/arti/politics/politics_general/1268361.html"
           ],
-          "title": "강경화 주미대사 이례적 귀국…쿠팡·정통망법·군함 건조 논의할 듯",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268252.html",
+          "title": "이 대통령, 삼전닉스 레버리지 ETF “보완 대책 신속하게 마련하라”",
+          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268361.html",
           "keywords": [
-            "강경화 주미대사",
-            "이례적 귀국",
-            "쿠팡",
-            "정통망법",
-            "군함 건조",
-            "한미 논의"
+            "삼전닉스",
+            "레버리지 ETF",
+            "보완 대책"
           ],
           "people": [
-            "강경화",
-            "주미대사"
+            "이재명 대통령",
+            "이찬진 금융감독원장",
+            "정은보 한국거래소 이사장"
           ],
-          "focus": "쿠팡 문제 해결, 정통망법, 군함 건조 등 다양한 한미 현안 논의",
-          "expression_summary": "쿠팡 및 정통망법, 군함 건조 등 여러 현안을 논의할 것으로 예상된다는 점을 강조",
-          "evidence_limit": ""
+          "focus": "이재명 대통령이 삼전닉스 레버리지 ETF와 관련해 금융당국에 신속한 보완대책 마련을 지시했다",
+          "expression_summary": "제목에서 이 대통령을 직접 언급하며 삼전닉스 레버리지 ETF에 대한 보완 대책 지시를 강조했다",
+          "evidence_limit": "기사에서 인용된 발언의 구체적인 내용과 맥락이 제한적으로 제공되어 전체 발언의 의도를 완전히 파악하기 어렵다"
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 2,
+          "titles": [
+            "李 “금감원장 많이 당하고 계셔”…삼전닉스 레버리지 대책 주문",
+            "李대통령, 삼전닉스 레버리지 ETF에 “보완대책 신속히 마련하라”"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134303937/1",
+            "https://www.donga.com/news/Politics/article/all/20260715/134303038/1"
+          ],
+          "title": "李 “금감원장 많이 당하고 계셔”…삼전닉스 레버리지 대책 주문",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134303937/1",
+          "keywords": [
+            "삼전닉스",
+            "레버리지 ETF",
+            "보완대책"
+          ],
+          "people": [
+            "이재명 대통령",
+            "이찬진 금융감독원장",
+            "정은보 한국거래소 이사장"
+          ],
+          "focus": "이재명 대통령이 업무보고에서 이찬진 금융감독원장과 정은보 한국거래소 이사장 모두에게 단일종목 레버리지 ETF 보완대책을 신속히 마련할 것을 직접 지시했다",
+          "expression_summary": "제목에서 李(이재명)이 두 기관 수장에게 '보완대책 신속히 마련하라'고 지시한 내용을 간결하게 표현했다",
+          "evidence_limit": "두 기사 모두 업무보고의 전체 내용과 배경 설명이 제한적이어서 구체적 지시 내용과 배경을 완전히 확인하기 어렵다"
         }
       ]
     },
     {
       "issue_id": "match-7",
-      "category": "정치",
-      "title": "보완수사권 폐지 관련 여야 입장 변화 및 신중론 확산",
-      "summary": "민주당 박지원 의원이 보완수사권 폐지에 선회하는 입장을 밝혔으며, 여야에서 보완수사권 폐지 정책에 대한 신중론이 확산되고 있는 상황이다.",
+      "category": "경제",
+      "title": "6월 서울 주택 매매·전세·월세 모두 상승…월세 상승률 역대 최고 기록",
+      "summary": "6월 서울 주택 매매·전세·월세 가격이 모두 상승했고, 월세 상승률은 통계 작성 이후 최고 수준을 경신했다. 한국부동산원 발표에 따르면 매매 가격은 1.03%, 전세 가격은 0.81%, 월세 가격은 0.96% 상승했다.",
       "common_facts": [
-        "보완수사권 폐지 정책에 대한 논의",
-        "민주당 박지원 의원의 입장 변화",
-        "보완수사권 폐지 관련 신중론 확산"
+        "6월 서울 주택 매매·전세·월세 가격이 전월보다 상승했다.",
+        "월세 상승률은 2015년 통계 이후 최고 수준을 경신했다.",
+        "한국부동산원이 6월 전국 주택가격 동향 조사 결과를 발표했다.",
+        "서울 주택종합 평균 매매 가격은 1.03% 상승했다.",
+        "서울 주택종합 평균 전세 가격은 0.81% 상승했다.",
+        "서울 주택종합 평균 월세 가격은 0.96% 상승했다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
-          "article_count": 1,
+          "article_count": 2,
           "titles": [
-            "‘보완수사권 폐지’ 박지원도 선회… “약자 돕는 예외조항 둬야”"
+            "6월 서울 매매·전세·월세 다 올라…월세 상승률 역대 최고",
+            "6월 서울 매매·전세·월세 ‘트리플 강세’…월세 상승률은 최고치 경신"
           ],
           "links": [
-            "https://www.chosun.com/politics/assembly/2026/07/15/2EWKEPJ2AZF23ACTEXUUTGFSRA/"
+            "https://www.chosun.com/economy/real_estate/2026/07/15/AOAEOYG3FBF2FDMASUNPKSWFTE/",
+            "https://www.chosun.com/economy/real_estate/2026/07/15/GQZDINTGHE3DAMTDMNRWKYRXGI/"
           ],
-          "title": "‘보완수사권 폐지’ 박지원도 선회… “약자 돕는 예외조항 둬야”",
-          "link": "https://www.chosun.com/politics/assembly/2026/07/15/2EWKEPJ2AZF23ACTEXUUTGFSRA/",
+          "title": "6월 서울 매매·전세·월세 다 올라…월세 상승률 역대 최고",
+          "link": "https://www.chosun.com/economy/real_estate/2026/07/15/AOAEOYG3FBF2FDMASUNPKSWFTE/",
           "keywords": [
-            "보완수사권 폐지",
-            "박지원",
-            "선회",
-            "예외조항",
-            "약자"
+            "서울 매매·전세·월세",
+            "월세 상승률",
+            "트리플 강세",
+            "한국부동산원",
+            "6월 전국 주택 가격 동향",
+            "주택종합 평균 매매·전세·월세 가격"
           ],
           "people": [
-            "박지원"
+            "한국부동산원"
           ],
-          "focus": "민주당 박지원 의원이 보완수사권 폐지에서 예외조항을 두고 선회하는 입장과 이에 대한 언론의 해석",
-          "expression_summary": "보완수사권 폐지 정책에 대해 박지원 의원이 신중론으로 선회하는 모습을 강조하며, 약자 지원을 위한 예외조항 필요성을 부각하고 있음",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
+          "focus": "서울 주택 매매·전세·월세 '트리플 강세'와 월세 상승률 역대 최고 경신에 초점을 맞췄다.",
+          "expression_summary": "기사 제목에 '다 올라'와 '트리플 강세'라는 표현을 사용했으며, RSS 설명에서 전월 대비 상승 폭과 한국부동산원 발표 내용을 구체적으로 서술했다.",
+          "evidence_limit": "월세 상승 원인에 대한 세부 분석은 제공되지 않았다."
         },
         {
-          "publisher": "한겨레",
+          "publisher": "동아일보",
           "article_count": 1,
           "titles": [
-            "[뷰리핑] 여 ‘보완수사권 폐지’ 신중론 확산"
+            "서울 월셋값 상승률 또 최고치 갈아치워…평균 128만원"
           ],
           "links": [
-            "https://www.hani.co.kr/arti/politics/politics_general/1268312.html"
+            "https://www.donga.com/news/Economy/article/all/20260715/134303583/1"
           ],
-          "title": "[뷰리핑] 여 ‘보완수사권 폐지’ 신중론 확산",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268312.html",
+          "title": "서울 월셋값 상승률 또 최고치 갈아치워…평균 128만원",
+          "link": "https://www.donga.com/news/Economy/article/all/20260715/134303583/1",
           "keywords": [
-            "보완수사권 폐지",
-            "신중론",
-            "확산",
-            "여당"
+            "서울 월셋값 상승률",
+            "역대 최고치",
+            "서울 주택 월세가격지수",
+            "성동구",
+            "노원구",
+            "송파구",
+            "정주여건",
+            "월셋값 128만원"
           ],
-          "people": [],
-          "focus": "여당에서 보완수사권 폐지 정책에 대한 신중론이 확산되고 있는 현상",
-          "expression_summary": "[뷰리핑] 형식으로 여당 내부에서 보완수사권 폐지에 대한 신중한 접근이 확대되고 있음을 분석하고 있음",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
+          "people": [
+            "한국부동산원",
+            "성동구",
+            "노원구",
+            "송파구",
+            "성북구",
+            "강동구",
+            "도봉구",
+            "강북구",
+            "마포구",
+            "구로구",
+            "광진구"
+          ],
+          "focus": "서울 지역별 월세 상승률과 최고치 경신을 구체적으로 제시했으며, 특히 성동구 등 특정 지역의 높은 상승률에 주목했다.",
+          "expression_summary": "기사 제목에 '또 최고치 갈아치워'와 '평균 128만원'을 강조했고, RSS 설명에서 지역명과 상승률 수치를 구체적으로 나열했다.",
+          "evidence_limit": "월세 가격 상승 원인에 대한 심층 분석 및 향후 전망은 제공되지 않았다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "6월 서울 주택 매매·전세·월세 상승률 동반 확대…'3중 강세'"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659074&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "6월 서울 주택 매매·전세·월세 상승률 동반 확대…'3중 강세'",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659074&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "서울 주택 매매·전세·월세",
+            "상승률 동반 확대",
+            "3중 강세",
+            "삼중 강세",
+            "한국부동산원",
+            "6월 전국 주택가격 동향조사",
+            "전세 상승률"
+          ],
+          "people": [
+            "한국부동산원"
+          ],
+          "focus": "서울 주택 매매·전세·월세 상승률 동반 확대와 '3중 강세' 현상에 초점을 맞췄다.",
+          "expression_summary": "기사 제목에 '동반 확대'와 '3중 강세'라는 표현을 사용했으며, RSS 설명에서 전세 상승률이 매매 가격 상승을 넘어섰음을 강조했다.",
+          "evidence_limit": "월세 가격 상승률에 대한 구체적인 수치는 제공되지 않았다."
         }
       ]
     },
     {
       "issue_id": "match-8",
       "category": "정치",
-      "title": "이 대통령 분당 아파트 매각 완료",
-      "summary": "이 대통령은 분당 소재 아파트를 매각했다고 발표했으며, 해당 거래는 마무리 단계에 이른 것으로 보도되었다.",
+      "title": "종합특검 수사기간 30일 연장 법안이 여야 대립 속에서 법사위 통과",
+      "summary": "종합특검의 수사기간을 30일 연장하는 법안이 더불어민주당 주도로 법제사법위원회를 통과했다. 다음 달 23일까지 수사가 연장될 수 있으며 국회 본회의 처리를 앞두고 있다.",
       "common_facts": [
-        "이 대통령이 분당 소재 아파트를 매각했다고 발표",
-        "매각 거래가 마무리 단계에 이른 것으로 확인"
+        "종합특검 수사기간 30일 연장 법안이 법사위 전체회의에서 통과되었다.",
+        "법사위 의결은 국민의힘 위원의 전원 불참 상태에서 진행되었다.",
+        "법사위 의결 내용은 수사 기간을 매회 30일씩 대통령 승인에 따라 최대 두 차례 연장할 수 있도록 하는 개정안이었다.",
+        "특검에 파견할 수 있는 공무원은 130명에서 150명으로 확대되었다.",
+        "파견 요청 대상 기관에 국방부가 추가되었다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "李대통령 “난 이제 집 없다”... 분당아파트 팔렸다"
+            "‘종합특검 30일 연장안‘ 與 주도로 법사위 통과"
           ],
           "links": [
-            "https://www.chosun.com/politics/politics_general/2026/07/14/J7AEUWLGZZG7BEBIFEOORWV5JM/"
+            "https://www.chosun.com/politics/assembly/2026/07/15/I564NC5QXBCEVCCXBPKCKAJ7XY/"
           ],
-          "title": "李대통령 “난 이제 집 없다”... 분당아파트 팔렸다",
-          "link": "https://www.chosun.com/politics/politics_general/2026/07/14/J7AEUWLGZZG7BEBIFEOORWV5JM/",
+          "title": "‘종합특검 30일 연장안‘ 與 주도로 법사위 통과",
+          "link": "https://www.chosun.com/politics/assembly/2026/07/15/I564NC5QXBCEVCCXBPKCKAJ7XY/",
           "keywords": [
-            "이대통령",
-            "분당아파트",
-            "매각",
-            "발표"
+            "종합특검 30일 연장안",
+            "與 주도"
           ],
           "people": [
-            "이대통령"
+            "더불어민주당",
+            "국민의힘"
           ],
-          "focus": "이 대통령의 개인 주거지 매각 발표",
-          "expression_summary": "직설적인 표현과 강조된 인용문",
-          "evidence_limit": "판매 완료 여부에 대한 명확한 확인 정보 부재"
+          "focus": "與 주도로 법사위 통과했다는 점을 강조했다.",
+          "expression_summary": "기사 제목에서 ‘종합특검 30일 연장안‘을 與 주도로 법사위 통과했다고 표현했다.",
+          "evidence_limit": "본회의 통과 여부에 대해서는 확인되지 않았다."
         },
         {
           "publisher": "한국경제",
           "article_count": 1,
           "titles": [
-            "李대통령 \"난 이제 집 없다\"…분당 아파트 매각 마무리 단계"
+            "[속보] 2차 종합특검 수사기간 연장법 법사위 전체회의 통과"
           ],
           "links": [
-            "https://www.hankyung.com/article/2026071451157"
+            "https://www.hankyung.com/article/2026071571157"
           ],
-          "title": "李대통령 \"난 이제 집 없다\"…분당 아파트 매각 마무리 단계",
-          "link": "https://www.hankyung.com/article/2026071451157",
+          "title": "[속보] 2차 종합특검 수사기간 연장법 법사위 전체회의 통과",
+          "link": "https://www.hankyung.com/article/2026071571157",
           "keywords": [
-            "이대통령",
-            "분당아파트",
-            "매각",
-            "마무리단계"
+            "2차 종합특검 수사기간 연장법",
+            "법사위 전체회의 통과"
           ],
           "people": [
-            "이대통령"
+            "더불어민주당",
+            "국민의힘"
           ],
-          "focus": "아파트 매각 거래의 진행 상황",
-          "expression_summary": "부호 사용 및 거래 진행 단계에 대한 설명",
-          "evidence_limit": "판매 완료 여부에 대한 명확한 확인 정보 부재"
+          "focus": "속보 성격을 강조하며 법사위 전체회의 통과 사실을 보도했다.",
+          "expression_summary": "제목에 [속보]를 표시하고 법사위 전체회의 통과라고 표현했다.",
+          "evidence_limit": "특검의 구체적인 수사 기한 종료 예정일이나 연장된 수사 기한 종료일에 대한 상세 정보는 확인되지 않았다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "종합특검 3차 연장 법안, 與 주도로 법사위 통과"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134304812/1"
+          ],
+          "title": "종합특검 3차 연장 법안, 與 주도로 법사위 통과",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134304812/1",
+          "keywords": [
+            "종합특검 3차 연장 법안",
+            "與 주도",
+            "법사위 통과"
+          ],
+          "people": [
+            "더불어민주당",
+            "국민의힘",
+            "권창영",
+            "국방"
+          ],
+          "focus": "법사위 통과 과정의 세부 사항과 향후 본회의 처리 전망을 상세히 보도했다.",
+          "expression_summary": "제목에서 종합특검 3차 연장 법안이라고 표현했고 RSS 설명에서 법사위 통과 과정을 구체적으로 서술했다.",
+          "evidence_limit": "법사위 회의 중 구체적인 발언 내용이나 국민의힘의 불참 이유에 대한 상세 정보는 확인되지 않았다."
         }
       ]
     },
     {
       "issue_id": "match-9",
       "category": "정치",
-      "title": "송영길, 정청래에 대한 비판 발언 보도",
-      "summary": "송영길 더불어민주당 의원이 정청래 의원의 과거 발언을 비판하며 대통령을 깔보는 느낌을 받았다고 주장했다.",
+      "title": "이재명 대통령, 장기 연체 채무자 탕감 필요성 강조",
+      "summary": "이재명 대통령은 15일 청와대 영빈관에서 열린 금융위원회 업무보고에서 갚을 능력이 없는 장기 연체 채무자에 대한 적극적인 채무 탕감이 필요하다고 밝혔다. 빚을 갚을 수 없는 사람을 계속 묶어두기보다 파산·면책 등을 통해 재출발할 수 있도록 해야 사회 전체에 도움이 된다는 취지를 설명했다.",
       "common_facts": [
-        "송영길 의원이 정청래 의원을 비판",
-        "송영길이 정청래에게 '대통령 깔보는 느낌'을 주장",
-        "송영길의 비판 대상에 '낙태' 관련 표현 사용"
+        "이재명 대통령이 15일 청와대 영빈관에서 열린 금융위원회 업무보고에서 발언했다",
+        "이재명 대통령은 갚을 능력이 없는 장기 연체 채무자에 대한 적극적인 채무 탕감이 필요하다고 밝혔다",
+        "이재명 대통령은 빚을 갚을 수 없는 사람을 파산·면책하고 다시 재출발시킬 필요가 있다고 말했다",
+        "이재명 대통령은 채무 탕감을 통해 장기 연체 채무자가 정상적으로 경제 활동을 할 수 있도록 해야 한다고 말했다",
+        "이재명 대통령은 못 갚는 빚 때문에 사람이 죽거나 사회로부터 격리되어 경제활동을 못 하는 일이 없어야 한다고 강조했다",
+        "이재명 대통령은 채무 탕감이 도덕적 해이를 부를 수 있다는 비판을 강하게 반박했다"
       ],
       "articles": [
-        {
-          "publisher": "한겨레",
-          "article_count": 1,
-          "titles": [
-            "송영길, 정청래에 “대통령 깔보는 느낌”…“낙태” 써가며 비판"
-          ],
-          "links": [
-            "https://www.hani.co.kr/arti/politics/politics_general/1268316.html"
-          ],
-          "title": "송영길, 정청래에 “대통령 깔보는 느낌”…“낙태” 써가며 비판",
-          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268316.html",
-          "keywords": [
-            "송영길",
-            "정청래",
-            "대통령 깔보는 느낌",
-            "낙태"
-          ],
-          "people": [
-            "송영길",
-            "정청래"
-          ],
-          "focus": "정청래 과거 발언에 대한 비판 및 '대통령을 깔보는 느낌' 주장",
-          "expression_summary": "제목과 본문에 '대통령 깔보는 느낌'을 강조하며 '낙태' 표현을 통해 과거 비판",
-          "evidence_limit": "송영길의 정확한 발언 맥락 및 정청래의 과거 발언 내용은 기사 본문에만 존재"
-        },
         {
           "publisher": "한국경제",
           "article_count": 1,
           "titles": [
-            "송영길 \"정청래, 과거 기억에 李대통령 깔보는 느낌\" 직격"
+            "李대통령 \"빚 못 갚으면 면책해야…도덕적 해이 지적은 선동\""
           ],
           "links": [
-            "https://www.hankyung.com/article/202607155771i"
+            "https://www.hankyung.com/article/2026071567097"
           ],
-          "title": "송영길 \"정청래, 과거 기억에 李대통령 깔보는 느낌\" 직격",
-          "link": "https://www.hankyung.com/article/202607155771i",
-          "keywords": [],
-          "people": [],
-          "focus": "명확한 차이를 확인하기 어려움",
-          "expression_summary": "명확한 차이를 확인하기 어려움",
-          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+          "title": "李대통령 \"빚 못 갚으면 면책해야…도덕적 해이 지적은 선동\"",
+          "link": "https://www.hankyung.com/article/2026071567097",
+          "keywords": [
+            "이재명 대통령",
+            "채무 탕감",
+            "파산 면책",
+            "도덕적 해이",
+            "장기 연체 채무자"
+          ],
+          "people": [
+            "이재명 대통령",
+            "금융위원회"
+          ],
+          "focus": "채무 탕감 필요성을 강조하면서 도덕적 해이 지적을 선동이라고 표현했다",
+          "expression_summary": "제목에서 '빚 못 갚으면 면책해야…도덕적 해이 지적은 선동'을 명시하고, RSS 설명에서 이재명 대통령의 발언 내용을 요약했다",
+          "evidence_limit": "발언이 시작된 정확한 시간과 발언의 전체 맥락은 제공되지 않았다"
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "李 “빚 탕감이 도덕적 해이?…되레 금융기관 가혹한 관리가 문제”"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134303546/1"
+          ],
+          "title": "李 “빚 탕감이 도덕적 해이?…되레 금융기관 가혹한 관리가 문제”",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134303546/1",
+          "keywords": [
+            "이재명 대통령",
+            "채무 탕감",
+            "도덕적 해이",
+            "장기 연체 채무자",
+            "금융기관 관리"
+          ],
+          "people": [
+            "이재명 대통령",
+            "청와대",
+            "금융위원회"
+          ],
+          "focus": "장기 연체 채무자 구제를 위해 금융기관의 가혹한 관리가 문제이며 채무 탕감이 필요하다는 점을 강조했다",
+          "expression_summary": "제목에서 '빚 탕감이 도덕적 해이?…되레 금융기관 가혹한 관리가 문제'를 제시하고, RSS 설명에서 구체적인 발언 내용과 배경을 상세히 서술했다",
+          "evidence_limit": "발언의 전체 맥락과 구체 수치, 추가 정책 방안은 제공되지 않았다"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "이 대통령 \"적극적 탕감이 도덕적 해이 유발? 무책임한 선동\""
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659503&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "이 대통령 \"적극적 탕감이 도덕적 해이 유발? 무책임한 선동\"",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659503&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "이재명 대통령",
+            "채무 탕감",
+            "도덕적 해이",
+            "무책임한 선동"
+          ],
+          "people": [
+            "이재명 대통령",
+            "청와대"
+          ],
+          "focus": "적극적 탕감 정책이 도덕적 해이를 유발한다는 주장을 무책임한 선동이라고 반박하며 채무자 구제를 강조했다",
+          "expression_summary": "제목에서 '적극적 탕감이 도덕적 해이 유발? 무책임한 선동'을 제시하고, RSS 설명에서 발언 장소와 대통령 이름을 간략히 언급했으나 상세한 내용은 생략되었다",
+          "evidence_limit": "구체적 발언 내용과 맥락은 제공되지 않았다"
         }
       ]
     },
     {
       "issue_id": "match-10",
-      "category": "경제",
-      "title": "구글 딥마인드 CEO 허사비스, AGI 도래 임박 및 미국 주도 규제기구 신설 주장",
-      "summary": "구글 딥마인드 최고경영자(CEO) 데미스 허사비스는 SNS에 게시한 글을 통해 범용인공지능(AGI)이 불과 몇 년 안에 도래할 것으로 전망했으며, 이를 관리하기 위해 미국이 주도하는 규제기관을 신설해야 한다고 주장했다.",
+      "category": "사회",
+      "title": "동국제강 인천공장 고철 더미 화재 사건",
+      "summary": "동국제강 인천공장 야외 고철 더미에서 화재가 발생했고, 초기 진화 후 완진까지 20시간여 소요되었다.",
       "common_facts": [
-        "데미스 허사비스가 구글 딥마인드 CEO이자 노벨화학상 수상자로서 AGI 도래를 불과 몇 년 이내로 예측",
-        "미국이 주도하는 규제기관 신설의 필요성 주장",
-        "AGI를 중대한 기술 발전으로 인식"
+        "동국제강 인천공장 야외 고철 더미에서 화재가 발생했다.",
+        "화재는 20시간여 만에 완진되었다.",
+        "화재 발생 지점은 인천시 제물포구 송현동 야적장 또는 하역장이다.",
+        "인명 피해는 발생하지 않았다.",
+        "소방 당국은 정확한 발화 원인과 피해 규모를 조사할 방침이다.",
+        "화재 진압에 펌프차 등 장비 39대, 인원 96명이 동원되었다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "구글 AI 책임자 “AGI 도래 눈앞… 美 주도 규제기관 신설해야”"
+            "동국제강 인천공장 고철 더미서 화재… 20시간여 만에 진화"
           ],
           "links": [
-            "https://www.chosun.com/economy/tech_it/2026/07/15/MEZDAOJWGM2GEOLCMYYTINBRMI/"
+            "https://www.chosun.com/national/incident/2026/07/15/MR3RO6V7MFDYHAE4OE5KD6DX6U/"
           ],
-          "title": "구글 AI 책임자 “AGI 도래 눈앞… 美 주도 규제기관 신설해야”",
-          "link": "https://www.chosun.com/economy/tech_it/2026/07/15/MEZDAOJWGM2GEOLCMYYTINBRMI/",
+          "title": "동국제강 인천공장 고철 더미서 화재… 20시간여 만에 진화",
+          "link": "https://www.chosun.com/national/incident/2026/07/15/MR3RO6V7MFDYHAE4OE5KD6DX6U/",
           "keywords": [
-            "AGI",
-            "범용인공지능",
-            "데미스 허사비스",
-            "구글 딥마인드",
-            "규제기관",
-            "미국 주도",
-            "노벨화학상"
+            "동국제강 인천공장",
+            "고철 더미",
+            "화재",
+            "진화",
+            "20시간여"
           ],
           "people": [
-            "데미스 허사비스"
+            "인천소방본부",
+            "군 부대",
+            "소방 관계자"
           ],
-          "focus": "AGI 도래 임박 시점과 미국 주도 규제기관 신설 필요성",
-          "expression_summary": "허사비스가 SNS를 통해 AGI가 불과 몇 년 남지 않았다고 전망하며 미국 주도의 규제기구 설립을 촉구",
-          "evidence_limit": "AGI가 '전기·불 발견 비견'이라는 비유적 표현 사용 여부 불확실"
+          "focus": "화재 진압에 펌프차 39대와 인원 96명이 동원된 점을 강조했다.",
+          "expression_summary": "고철 더미서 화재가 발생했고 20시간여 만에 진화되었다고 표현했다.",
+          "evidence_limit": "화재 발생 시각이 정확하게 명시되지 않았다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "인천 동국제강 야적장 화재…18시간 만에 초진"
+          ],
+          "links": [
+            "https://www.donga.com/news/Society/article/all/20260715/134303543/1"
+          ],
+          "title": "인천 동국제강 야적장 화재…18시간 만에 초진",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134303543/1",
+          "keywords": [
+            "인천 동국제강",
+            "야적장",
+            "화재",
+            "18시간",
+            "초기 진화"
+          ],
+          "people": [
+            "인천소방본부",
+            "군 부대",
+            "소방 관계자"
+          ],
+          "focus": "화재가 18시간 만에 초진된 것과 고철 더미를 뒤집어가며 진화했다는 방식을 강조했다.",
+          "expression_summary": "인천 동국제강 야외 하적장에서 고철 더미 1만t에 화재가 발생했고 18시간24분 만에 큰 불길을 잡았다고 표현했다.",
+          "evidence_limit": "정확한 발화 원인은 조사 중으로 명시되지 않았다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "동국제강 인천공장 고철더미서 불…20시간여 만에 완진"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659556&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "동국제강 인천공장 고철더미서 불…20시간여 만에 완진",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659556&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "동국제강 인천공장",
+            "고철더미",
+            "완진",
+            "20시간여"
+          ],
+          "people": [
+            "소방대원",
+            "인천소방본부"
+          ],
+          "focus": "화재가 20시간여 만에 완진된 것을 강조했다.",
+          "expression_summary": "인천시 제물포구 송현동 야외 하역장에서 소방대원들이 고철 더미에 붙은 불을 끄고 있다고 보도했다.",
+          "evidence_limit": "화재 발생 시각이 정확하게 명시되지 않았다."
+        }
+      ],
+      "evidence_limit": "화재 발생 시각은 조선일보는 '전날 오후 7시18분'으로, 동아일보는 '18시간24분'으로, SBS는 구체적으로 명시되지 않아 정확한 시각을 확인할 수 없었다."
+    },
+    {
+      "issue_id": "match-11",
+      "category": "사회",
+      "title": "조희대 대법원장 법왜곡죄 고발 사건 각하 처분",
+      "summary": "경찰은 조희대 대법원장에 대한 법왜곡죄 1호 사건을 각하 처분했다. 각하 이유는 법 시행 전 판결이 적용되어 죄책이 성립하지 않기 때문이다.",
+      "common_facts": [
+        "경찰, 조희대 대법원장 법왜곡죄 1호 사건을 각하 처분했다.",
+        "각하 이유는 법 시행 전 판결이 적용되어 죄책이 성립하지 않기 때문이다."
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "경찰, ‘법왜곡죄 1호’ 조희대 대법원장 사건 각하"
+          ],
+          "links": [
+            "https://www.chosun.com/national/court_law/2026/07/15/A3KWUBCBYJFA5ENIPSIHEQFB7E/"
+          ],
+          "title": "경찰, ‘법왜곡죄 1호’ 조희대 대법원장 사건 각하",
+          "link": "https://www.chosun.com/national/court_law/2026/07/15/A3KWUBCBYJFA5ENIPSIHEQFB7E/",
+          "keywords": [
+            "법왜곡죄 1호",
+            "조희대",
+            "대법원장",
+            "각하"
+          ],
+          "people": [
+            "조희대",
+            "대법원장"
+          ],
+          "focus": "조희대 대법원장에 대한 법왜곡죄 1호 사건을 각하했다.",
+          "expression_summary": "경찰은 법왜곡죄 1호 사건을 각하했다.",
+          "evidence_limit": "법 시행 전후 판결 적용 여부에 대한 구체적인 판단 근거를 확인할 수 없었다."
         },
         {
           "publisher": "한겨레",
           "article_count": 1,
           "titles": [
-            "허사비스 “AGI, 전기·불 발견 비견…미국 주도 규제기구 세워야”"
+            "경찰, ‘법왜곡죄 1호’ 조희대 사건 불송치…“법 시행 전 판결 적용 안 돼”"
           ],
           "links": [
-            "https://www.hani.co.kr/arti/economy/it/1268340.html"
+            "https://www.hani.co.kr/arti/society/society_general/1268387.html"
           ],
-          "title": "허사비스 “AGI, 전기·불 발견 비견…미국 주도 규제기구 세워야”",
-          "link": "https://www.hani.co.kr/arti/economy/it/1268340.html",
+          "title": "경찰, ‘법왜곡죄 1호’ 조희대 사건 불송치…“법 시행 전 판결 적용 안 돼”",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268387.html",
           "keywords": [
-            "AGI",
-            "범용인공지능",
-            "데미스 허사비스",
-            "구글 딥마인드",
-            "규제기구",
-            "미국 주도",
-            "전기·불 발견 비견"
+            "법왜곡죄 1호",
+            "조희대",
+            "불송치",
+            "법 시행 전 판결"
           ],
           "people": [
-            "데미스 허사비스"
+            "조희대"
           ],
-          "focus": "AGI의 중대한 의미를 전기·불 발견에 비유하며 미국 주도 규제기구 설립 주장",
-          "expression_summary": "허사비스가 AGI를 전기·불 발견에 비견하며 미국 주도 규제기구 설치를 요구",
-          "evidence_limit": "RSS 설명이 제공되지 않아 허사비스가 구체적으로 몇 년을 언급했는지 불명확"
+          "focus": "법 시행 전 판결이 적용되어 죄책이 성립하지 않아 불송치했다.",
+          "expression_summary": "법 시행 전 판결이 적용되어 죄책이 성립하지 않아 불송치했다.",
+          "evidence_limit": "법 시행 전 판결 적용 여부에 대한 구체적인 판단 근거를 확인할 수 없었다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "[자막뉴스] '법왜곡죄 1호' 수사 결과 나왔다…\"7만쪽 이틀 만에\" 경찰 판단은"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659500&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "[자막뉴스] '법왜곡죄 1호' 수사 결과 나왔다…\"7만쪽 이틀 만에\" 경찰 판단은",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659500&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "법왜곡죄 1호",
+            "조희대",
+            "수사 결과",
+            "각하",
+            "7만쪽",
+            "이틀 만에"
+          ],
+          "people": [
+            "조희대"
+          ],
+          "focus": "조희대 대법원장 고발 사건을 각하했다.",
+          "expression_summary": "조희대 대법원장 고발 사건이 각하 처분됐다.",
+          "evidence_limit": "법 시행 전 판결 적용 여부에 대한 구체적인 판단 근거를 확인할 수 않았다."
         }
       ]
     },
     {
-      "issue_id": "match-11",
+      "issue_id": "match-12",
       "category": "사회",
-      "title": "장윤기, 피해 여고생 살해 사건의 범행 전 인지 정황 수사",
-      "summary": "장윤기(23)가 광주에서 여고생을 살해한 사건과 관련해, 경찰 특별수사단이 범행 이전부터 피해 여고생을 일방적으로 알고 있었을 가능성이 있는 정황을 발견했다. 디지털 포렌식을 통해 확보한 공기계 휴대전화에서 이러한 정황이 확인되었으나, 구체적인 내용은 비공개 상태이며 현재 수사가 진행 중이다.",
+      "title": "장윤기, 피해 여고생 살해 사건과 관련 정황",
+      "summary": "장윤기는 광주에서 여고생을 살해한 혐의로 수사 중인 23세 피의자이며, 특별수사단이 중간 수사 결과를 발표했다. 수사 과정에서 범행 이전부터 피해 여고생을 알고 있었을 가능성이 있는 정황이 발견되었고, 공기계 휴대전화에서 관련 증거가 확보되었으나 구체적인 내용은 공개되지 않았다.",
       "common_facts": [
-        "장윤기(23)가 광주에서 여고생을 살해한 사건",
-        "경찰청 특별수사단이 중간 수사 결과를 발표",
-        "수사단이 장윤기가 범행 이전부터 피해 여고생을 알고 있었을 가능성이 있는 정황을 확인",
-        "디지털 포렌식을 통해 확보한 공기계 휴대전화에서 정황 발견",
-        "현재 수사 진행 중으로 구체적인 내용은 공개되지 않음",
-        "당시 수사팀은 정황을 인지하고 있었으나 충분히 확인하지 않은 채 검찰에 송치"
+        "장윤기는 광주에서 여고생을 살해한 23세 피의자이다.",
+        "경찰청 특별수사단이 중간 수사 결과를 발표했다.",
+        "범행 이전부터 피해 여고생을 알고 있었을 가능성이 있는 정황이 발견되었다.",
+        "공기계 휴대전화에서 관련 증거가 확보되었으나 구체적인 내용은 공개되지 않았다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "경찰 ”장윤기, 범행 전부터 피해 여고생 알았을 정황 포착”"
+            "장윤기, 피해 여고생 몰랐다더니... 경찰 “미리 파악후 범행했을 정황”"
           ],
           "links": [
             "https://www.chosun.com/national/national_general/2026/07/15/Q2QICRXT6JDTBC77NZUUYY37MY/"
           ],
-          "title": "경찰 ”장윤기, 범행 전부터 피해 여고생 알았을 정황 포착”",
+          "title": "장윤기, 피해 여고생 몰랐다더니... 경찰 “미리 파악후 범행했을 정황”",
           "link": "https://www.chosun.com/national/national_general/2026/07/15/Q2QICRXT6JDTBC77NZUUYY37MY/",
           "keywords": [
             "장윤기",
             "피해 여고생",
-            "범행 전 인지 정황",
-            "경찰 특별수사단",
-            "디지털 포렌식",
-            "공기계 휴대전화",
-            "광주 여고생 살해"
+            "미리 파악",
+            "범행 정황"
           ],
           "people": [
-            "장윤기"
+            "장윤기",
+            "경찰청 특별수사단",
+            "광주경찰청 기자실"
           ],
-          "focus": "장윤기가 범행 이전부터 피해 여고생을 일방적으로 알고 있었을 가능성에 대한 정황 포착",
-          "expression_summary": "제목에서는 '장윤기, 범행 전부터 피해 여고생 알았을 정황 포착'으로 요약, RSS 설명에서는 '일면식 없다더니 휴대폰을 통해 인지 정황'이라고 표현",
-          "evidence_limit": "현재 제공된 자료만으로 판단하기 어려운 부분"
+          "focus": "피해 여고생과의 사전 인지 가능성에 대한 경찰의 중간 수사 결과 발표가 있었다.",
+          "expression_summary": "제목은 피해 여고생을 몰랐을 것이라는 주장과 경찰의 미리 파악 정황이 대비적으로 제시되었다.",
+          "evidence_limit": "구체적인 정황 내용이나 수사 진행 상황은 명확히 확인되지 않았다."
+        },
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "장윤기, 피해 여고생 계획적으로 노렸나…휴대폰서 정황 발견"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/2026071567687"
+          ],
+          "title": "장윤기, 피해 여고생 계획적으로 노렸나…휴대폰서 정황 발견",
+          "link": "https://www.hankyung.com/article/2026071567687",
+          "keywords": [
+            "장윤기",
+            "피해 여고생",
+            "계획적 노림",
+            "휴대폰 정황"
+          ],
+          "people": [
+            "장윤기",
+            "경찰청 특별수사단",
+            "디지털 포렌식"
+          ],
+          "focus": "휴대폰에서 발견된 정황으로 범행 계획성을 지적하는 분석이 있었다.",
+          "expression_summary": "제목은 휴대폰에서 발견된 정황을 바탕으로 계획적 범행 가능성에 초점을 맞추었다.",
+          "evidence_limit": "휴대전화에서 어떤 구체적인 정황이 발견되었는지 상세히 확인되지 않았다."
         },
         {
           "publisher": "동아일보",
@@ -755,159 +1246,1016 @@
           "keywords": [
             "장윤기",
             "피해 여고생",
-            "일면식 없다더니",
-            "휴대폰 인지 정황",
-            "경찰청 특별수사단",
-            "디지털 포렌식",
-            "공기계 휴대전화",
-            "광주 여고생 살해"
+            "일면식 없음",
+            "휴대폰 인지 정황"
           ],
           "people": [
             "장윤기",
             "경찰청 특별수사단",
-            "광주경찰청"
+            "국가수사본부",
+            "광주경찰"
           ],
-          "focus": "일면식이 없음에도 불구하고 휴대폰을 통해 피해 여고생을 인지하고 있었을 정황",
-          "expression_summary": "제목에서 '일면식 없다더니'라고 표현, RSS 설명에서는 '범행 이전부터 피해 여고생을 일방적으로 알고 있었을 가능성이 있는 정황'이라고 구체적으로 설명",
-          "evidence_limit": "현재 제공된 자료만으로 판단하기 어려운 부분"
-        }
-      ]
-    },
-    {
-      "issue_id": "match-12",
-      "category": "사회",
-      "title": "청주시의회 압수수색 및 아동 성매매 혐의 수사",
-      "summary": "경찰이 청주시의회 소속 시의원을 대상으로 아동 성매매 혐의를 수사하며, 해당 의원의 사무실 및 기타 장소를 압수수색한 사건이 발생했다.",
-      "common_facts": [
-        "경찰이 청주시의회 소속 시의원을 대상으로 수사 진행 중",
-        "해당 의원이 아동 성매매 혐의를 받고 있음",
-        "청주시의회 및 관련 장소에 대한 압수수색 실시"
-      ],
-      "articles": [
-        {
-          "publisher": "조선일보",
-          "article_count": 1,
-          "titles": [
-            "중학생과 성매매 혐의... 경찰, 청주시의원 강제 수사"
-          ],
-          "links": [
-            "https://www.chosun.com/national/regional/chungcheong/2026/07/15/3SK646ZPHBEMZN6G23QACCAVN4/"
-          ],
-          "title": "중학생과 성매매 혐의... 경찰, 청주시의원 강제 수사",
-          "link": "https://www.chosun.com/national/regional/chungcheong/2026/07/15/3SK646ZPHBEMZN6G23QACCAVN4/",
-          "keywords": [
-            "중학생",
-            "성매매",
-            "청주시의원",
-            "강제",
-            "수사"
-          ],
-          "people": [],
-          "focus": "중학생과의 성매매 혐의와 강제 수사라는 표현에 주목",
-          "expression_summary": "제목에서 '중학생과 성매매 혐의'와 '강제 수사'라는 표현 사용",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
-        },
-        {
-          "publisher": "한국경제",
-          "article_count": 1,
-          "titles": [
-            "[속보] 경찰, 청주시의회 압수수색…시의원 아동 성매매 혐의"
-          ],
-          "links": [
-            "https://www.hankyung.com/article/2026071559537"
-          ],
-          "title": "[속보] 경찰, 청주시의회 압수수색…시의원 아동 성매매 혐의",
-          "link": "https://www.hankyung.com/article/2026071559537",
-          "keywords": [
-            "속보",
-            "압수수색",
-            "청주시의회",
-            "아동",
-            "성매매",
-            "시의원"
-          ],
-          "people": [],
-          "focus": "속보, 압수수색, 아동 성매매 혐의 표현에 강조",
-          "expression_summary": "제목에서 '속보', '압수수색', '아동 성매매 혐의' 표현 사용",
-          "evidence_limit": "명확한 차이를 확인하기 어려움"
+          "focus": "일면식이 없을 것이라는 의혹이 있었으나, 휴대폰에서 인지 정황이 발견되어 특별수사단이 수사했다.",
+          "expression_summary": "제목은 일면식 없다는 주장과 휴대폰에 인지 정황이 대비되며, 수사단의 공식 발표가 포함되었다.",
+          "evidence_limit": "구체적인 정황 내용이나 수사 진행 상황은 명확히 확인되지 않았다."
         }
       ]
     },
     {
       "issue_id": "match-13",
-      "category": "사회",
-      "title": "대한체육회, 배재고 야구부 6개월 출전정지 징계 재심의",
-      "summary": "대한체육회가 배재고 야구부에 내린 6개월 출전정지 징계에 대해 재심의가 예정된 사안으로, 재검토 과정에서 공정위의 의견을 수렴하거나 별도 논의가 진행된다는 점이 주요 내용이다.",
+      "category": "정치",
+      "title": "이재명 대통령, 공직자 술자리 성 비위 경계 및 가짜뉴스 대응 지시",
+      "summary": "이재명 대통령은 15일 청와대에서 업무보고를 마무리하며 공직자들에게 술자리에서의 성 비위 주의를 당부하고 가짜뉴스 실시간 대응을 주문했다 했다.",
       "common_facts": [
-        "대한체육회가 배재고 야구부에 6개월 출전정지 징계를 부과했다",
-        "이 징계에 대해 재심의가 예정되어 있다"
+        "이재명 대통령이 15일 청와대에서 업무보고를 마무리하며 발언했다 했다.",
+        "공직자들에게 술자리에서 젊은 이성을 옆으로 앉히지 말 것을 지시했다 했다.",
+        "성 비위에 각별한 주의를 기울일 것을 당부했다 했다.",
+        "가짜뉴스에 대해 실시간 대응을 주문했다 했다."
+      ],
+      "articles": [
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "李 “공직자 술자리서 옆에 젊은 이성 앉히지 마라…큰일 난다”"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134303576/1"
+          ],
+          "title": "李 “공직자 술자리서 옆에 젊은 이성 앉히지 마라…큰일 난다”",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134303576/1",
+          "keywords": [
+            "공직자",
+            "술자리",
+            "성 비위",
+            "젊은 이성"
+          ],
+          "people": [
+            "이재명 대통령"
+          ],
+          "focus": "이재명 대통령이 공직자들에게 술자리에서의 성 비위 주의를 강조하고 노리개감 취급을 경고했다 했다.",
+          "expression_summary": "제목은 인용구를 강조했으며 RSS 설명은 구체적인 발언 내용과 출처를 요약했다 했다.",
+          "evidence_limit": "정확한 발언 맥락과 전체 문장 내용이 제공되지 않아 판단하기 어렵다 했다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 3,
+          "titles": [
+            "[바로이뉴스] 이 대통령 \"술자리서 젊은 이성 옆에 앉히지 마라\"…'모든 공직자들' 향해 경고한 이유?",
+            "이 대통령, 여성 소방관 사망 언급…\"옆자리 젊은 이성 앉히지 말라\"",
+            "이 대통령, 가짜뉴스 실시간 대응 주문…\"공동체 파괴할 정도\""
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659344&plink=RSSLINK&cooper=RSSREADER",
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659387&plink=RSSLINK&cooper=RSSREADER",
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659255&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "[바로이뉴스] 이 대통령 \"술자리서 젊은 이성 옆에 앉히지 마라\"…'모든 공직자들' 향해 경고한 이유?",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659344&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "가짜뉴스",
+            "실시간 대응",
+            "공직자",
+            "술자리",
+            "성 비위"
+          ],
+          "people": [
+            "이재명 대통령",
+            "여성 소방관"
+          ],
+          "focus": "이재명 대통령이 가짜뉴스 대응과 술자리 성 비위에 대해 종합적으로 보도했다 했다.",
+          "expression_summary": "제목은 인용구와 핵심 발언을 강조했으며 RSS 설명은 방송 뉴스 형식으로 요약했다 했다.",
+          "evidence_limit": "여성 소방관 사망에 대한 구체적인 맥락과 발언 전체 맥락이 제공되지 않아 판단하기 어렵다 했다."
+        }
+      ],
+      "focus": "이재명 대통령이 공직자들에게 술자리 성 비위 경계와 가짜뉴스 대응 필요성을 강조했다 했다.",
+      "expression_summary": "모든 언론사가 발언 내용과 주요 키워드를 중심으로 제목과 설명을 작성했다 했다.",
+      "evidence_limit": "발언의 전체 맥락과 정확한 문장 구조가 제공되지 않아 일부 내용을 확인하기 어렵다 했다."
+    },
+    {
+      "issue_id": "match-14",
+      "category": "정치",
+      "title": "국민의힘 충북도당이 최영중 청주시의원을 미성년자 성착취 혐의로 제명 의결",
+      "summary": "국민의힘 충북도당은 미성년자 성착취 혐의를 받는 최영중 청주시의원을 제명했다. 경찰은 수사 착수 후 압수수색을 집행하고 자료 확보에 나섰다.",
+      "common_facts": [
+        "국민의힘 충북도당은 최영중 청주시의원을 제명 의결했다",
+        "경찰이 최영중 청주시의원과 관련된 압수수색 영장을 집행하고 자료를 확보했다",
+        "경찰이 미성년자 대상 성범죄 의혹에 대해 강제수사에 착수했다"
+      ],
+      "articles": [
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "국힘 충북도당, '미성년자 성착취' 최영중 청주시의원 제명 의결"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/202607157424H"
+          ],
+          "title": "국힘 충북도당, '미성년자 성착취' 최영중 청주시의원 제명 의결",
+          "link": "https://www.hankyung.com/article/202607157424H",
+          "keywords": [
+            "국힘 충북도당",
+            "최영중 청주시의원",
+            "미성년자 성착취",
+            "제명"
+          ],
+          "people": [
+            "최영중",
+            "국민의힘 충북도당 윤리위원회"
+          ],
+          "focus": "미성년자 성착취 혐의로 최영중 청주시의원을 제명 의결한 사실을 중점적으로 전달했다",
+          "expression_summary": "기사는 국힘 충북도당이 최영중 청주시의원을 제명 의결한 내용을 제목에 명시했고, RSS 설명에는 제명과 관련한 구체적 절차와 경찰의 수사 착수 사실을 언급했다",
+          "evidence_limit": "제명 절차 마무리 일정 및 구체적인 혐의 내용에 대한 세부 정보가 제공되어 있지 않았다"
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 2,
+          "titles": [
+            "국힘, 미성년자 성매매 혐의 청주시의원 제명",
+            "[속보]국힘, 미성년자 성매매 혐의 청주시의원 제명"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134305467/1",
+            "https://www.donga.com/news/Politics/article/all/20260715/134305310/1"
+          ],
+          "title": "국힘, 미성년자 성매매 혐의 청주시의원 제명",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134305467/1",
+          "keywords": [
+            "국힘",
+            "미성년자 성매매",
+            "청주시의원 제명",
+            "압수수색",
+            "최영중"
+          ],
+          "people": [
+            "최영중",
+            "청주청원경찰서",
+            "국민의힘 충북도당 윤리위원회"
+          ],
+          "focus": "제명 의결 외에 경찰의 수사 착수, 압수수색, 혐의 내용 등을 추가로 강조했다",
+          "expression_summary": "제목은 '미성년자 성매매 혐의'를, RSS 설명은 '국힘이 최모 시의원을 제명했다'는 내용으로 표현되었다",
+          "evidence_limit": "혐의의 구체적 내용 및 압수수색 결과에 대한 상세 정보가 제공되지 않았다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-15",
+      "category": "정치",
+      "title": "李 대통령의 술자리 안전 관련 발언",
+      "summary": "李 대통령이 술자리에서 젊은 이성을 옆에 앉히지 말라고 당부했으며, 이는 사소한 주의사항으로 보이지만 실제 사고 예방에 중요하다는 내용이었다 했다. 여러 언론사가 동일한 발언을 보도했으나 표현 방식에 일부 차이가 있었다 했다.",
+      "common_facts": [
+        "李 대통령이 술자리 옆에 젊은 이성을 앉히지 말라고 발언했다 했다.",
+        "해당 발언이 사소한 사항으로 보이지만 실제 사고 예방 차원에서 중요하다 했다.",
+        "재외공관 직원들에게 안전 관련 주의 사항을 강조했다 했다."
       ],
       "articles": [
         {
           "publisher": "조선일보",
           "article_count": 1,
           "titles": [
-            "대한체육회, 배재고 야구부 ‘6개월 출전 정지’ 징계 재심의"
+            "李 “술자리 옆에 젊은 이성 앉히지 마라…사소해 보이지만 세상이 안 그래”"
           ],
           "links": [
-            "https://www.chosun.com/national/national_general/2026/07/14/6AO54HMWLBCXPDBFUDZWENQX7E/"
+            "https://www.chosun.com/politics/blue_house/2026/07/15/YE4MLGOQMJFERJCRL3CF3IUCVA/"
           ],
-          "title": "대한체육회, 배재고 야구부 ‘6개월 출전 정지’ 징계 재심의",
-          "link": "https://www.chosun.com/national/national_general/2026/07/14/6AO54HMWLBCXPDBFUDZWENQX7E/",
+          "title": "李 “술자리 옆에 젊은 이성 앉히지 마라…사소해 보이지만 세상이 안 그래”",
+          "link": "https://www.chosun.com/politics/blue_house/2026/07/15/YE4MLGOQMJFERJCRL3CF3IUCVA/",
           "keywords": [
-            "대한체육회",
-            "배재고 야구부",
-            "6개월 출전 정지",
-            "징계 재심의"
+            "술자리 안전",
+            "젊은 이성 옆자리",
+            "李 대통령 발언",
+            "사고 예방"
           ],
           "people": [
-            "대한체육회"
+            "李 대통령",
+            "재외공관 직원들"
           ],
-          "focus": "배재고 야구부의 출전정지 징계에 대한 재심의 절차",
-          "expression_summary": "징계 재심의가 진행된다는 중립적인 제목 구성",
-          "evidence_limit": "6개월 출전정지 징계의 구체적 사유나 배경 정보는 제공된 자료에서 확인 불가"
+          "focus": "술자리에서의 젊은 이성 옆자리와 사고 발생 가능성에 대한 주의를 강조했다 했다.",
+          "expression_summary": "제목과 RSS 설명에서 사소해 보이지만 실제 위험이 있다는 표현을 사용했다 했다.",
+          "evidence_limit": "발언의 구체적인 맥락이나 대상, 정확한 시간에 대한 추가 정보가 제공되지 않았다 했다."
         },
         {
-          "publisher": "한겨레",
+          "publisher": "한국경제",
           "article_count": 1,
           "titles": [
-            "대한체육회 공정위, 20일 배재고 ‘6개월 출전정지’ 재심 논의"
+            "李 대통령 \"옆자리에 젊은 이성 앉히지 마라, 꼭 사고 난다\""
           ],
           "links": [
-            "https://www.hani.co.kr/arti/society/society_general/1268265.html"
+            "https://www.hankyung.com/article/202607157083H"
           ],
-          "title": "대한체육회 공정위, 20일 배재고 ‘6개월 출전정지’ 재심 논의",
-          "link": "https://www.hani.co.kr/arti/society/society_general/1268265.html",
+          "title": "李 대통령 \"옆자리에 젊은 이성 앉히지 마라, 꼭 사고 난다\"",
+          "link": "https://www.hankyung.com/article/202607157083H",
           "keywords": [
-            "대한체육회",
-            "공정위",
-            "배재고",
-            "6개월 출전정지",
-            "재심"
+            "술자리 안전",
+            "젊은 이성 옆자리",
+            "李 대통령 발언",
+            "사고 예방"
           ],
           "people": [
-            "대한체육회",
-            "공정위"
+            "李 대통령",
+            "재외공관 직원들"
           ],
-          "focus": "재심 일정과 공정위의 관여",
-          "expression_summary": "재심 날짜가 20일이며 공정위가 관여한다는 구체적 일정 언급",
-          "evidence_limit": "재심 논의의 구체적 내용과 결과, 징계 사유의 상세 정보는 제공된 자료에서 확인 불가"
+          "focus": "술자리 옆자리에 젊은 이성을 앉힐 경우 사고 위험이 높아진다는 점을 강조했다 했다.",
+          "expression_summary": "제목과 RSS 설명에서 '꼭 사고 난다'는 표현을 사용하여 위험성을 직접적으로 나타냈다 했다.",
+          "evidence_limit": "발언의 구체적인 배경이나 발언 대상에 대한 추가 정보가 제공되지 않았다 했다."
         }
       ]
     },
     {
-      "issue_id": "match-14",
-      "category": "사회",
-      "title": "전국적 강우와 지역별 기온 변화 및 열대야 예상",
-      "summary": "15일 오후까지 전국에 비가 내리고, 강원 동해안·영남은 무더위, 16일 호남·제주는 다시 비가 시작되며, 일부 지역에서는 열대야와 높은 체감온도가 예상된다.",
+      "issue_id": "match-16",
+      "category": "정치",
+      "title": "국민의힘, 범죄 피해자 보호 3법과 보완수사권 유지법안 발의",
+      "summary": "국민의힘이 범죄 피해자 보호 3법과 보완수사권 존치 법안을 발의했다. 여러 언론사는 해당 법안 발의 사실과 보완수사권 유지 주장을 공통적으로 보도했다.",
       "common_facts": [
-        "15일 오후까지 전국에 비",
-        "16일 호남·제주부터 비 시작",
-        "15일 낮 최고기온 27~36도",
-        "강원 동해안·경상권 최고체감온도 33도",
-        "경북권 체감온도 35도",
-        "일부 지역 열대야 발생",
-        "강한 바람과 높은 물결 주의"
+        "국민의힘이 범죄 피해자 보호 3법을 발의했다.",
+        "국민의힘이 보완수사권 존치를 추진하는 법안을 발의했다."
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "檢보완수사권 존치...국힘, ‘범죄 피해자 보호 3법’ 발의"
+          ],
+          "links": [
+            "https://www.chosun.com/politics/politics_general/2026/07/15/KWKJMV7VGZCZTOW3ZBJFPAJF2Q/"
+          ],
+          "title": "檢보완수사권 존치...국힘, ‘범죄 피해자 보호 3법’ 발의",
+          "link": "https://www.chosun.com/politics/politics_general/2026/07/15/KWKJMV7VGZCZTOW3ZBJFPAJF2Q/",
+          "keywords": [
+            "보완수사권",
+            "국힘",
+            "범죄 피해자 보호 3법",
+            "피해자 보호"
+          ],
+          "people": [
+            "국민의힘"
+          ],
+          "focus": "보완수사권 존치를 강조하며 범죄 피해자 보호 3법 발의를 부각했다.",
+          "expression_summary": "제목에 '檢보완수사권 존치'라는 표현을 사용하여 검찰 수사권 유지 의미를 강조했다.",
+          "evidence_limit": "피해자 구체적 보호 방안이나 법안 세부 내용에 대한 추가 정보가 제공되지 않았다."
+        },
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "\"약자 보호 최소장치\"…국힘, 보완수사권 유지법안 발의"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/202607157240H"
+          ],
+          "title": "\"약자 보호 최소장치\"…국힘, 보완수사권 유지법안 발의",
+          "link": "https://www.hankyung.com/article/202607157240H",
+          "keywords": [
+            "보완수사권",
+            "국힘",
+            "약자 보호",
+            "범죄 피해자 보호법"
+          ],
+          "people": [
+            "국민의힘"
+          ],
+          "focus": "보완수사권을 '약자 보호 최소장치'로 표현하며 약자 보호 관점을 부각했다.",
+          "expression_summary": "제목에 '약자 보호 최소장치'라는 표현을 사용하여 사회적 약자 보호 중요성을 강조했다.",
+          "evidence_limit": "법안 구체적 내용이나 보완수사권 범위에 대한 추가 정보가 제공되지 않았다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-17",
+      "category": "정치",
+      "title": "민주당, 홈플러스 사태 청문회 추진 발표 및 MBK·메리츠 책임 주장",
+      "summary": "민주당은 홈플러스 청문회를 27일 개최하기로 추진하고 MBK파트너스와 메리츠금융그룹의 책임 회피 태도를 비판했으며, 동아일보도 민주당 주도의 청문회 추진과 두 기업 및 국민 분노를 보도했다.",
+      "common_facts": [
+        "민주당(여당)이 홈플러스 사태를 대상으로 청문회 개최를 추진하기로 했다",
+        "청문회 예정 일자는 27일로 알려졌다",
+        "홈플러스 대주주는 MBK파트너스이며 중심 금융기관은 메리츠금융그룹이 참여했다",
+        "한병도 당대표 직무대행 겸 원내대표가 최고위원회의에서 청문회 추진 의사를 발표했다",
+        "MBK파트너스와 메리츠금융그룹이 책임 회피에만 골몰하는 태도를 보였다고 비판했다",
+        "MBK와 메리츠의 기만적 태도에 국민적 분노가 커지고 있다고 주장했다",
+        "청문회는 홈플러스 파산 절차의 책임자 처벌과 진상 규명을 목적으로 했다"
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "민주당 “홈플러스 사태 청문회 추진…MBK·메리츠, 책임 회피만 골몰”"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/politics/assembly/1268319.html"
+          ],
+          "title": "민주당 “홈플러스 사태 청문회 추진…MBK·메리츠, 책임 회피만 골몰”",
+          "link": "https://www.hani.co.kr/arti/politics/assembly/1268319.html",
+          "keywords": [
+            "홈플러스 사태",
+            "청문회 추진",
+            "MBK파트너스",
+            "메리츠금융그룹",
+            "책임 회피"
+          ],
+          "people": [
+            "한병도",
+            "박상혁"
+          ],
+          "focus": "민주당이 홈플러스 사태와 관련해 청문회 추진 의사를 밝히고 MBK·메리츠의 책임 회피 태도를 비판적으로 보도했다",
+          "expression_summary": "제목과 RSS 설명 모두 홈플러스 청문회 추진 및 MBK·메리츠 책임 회피 주장을 직접적으로 표현했다",
+          "evidence_limit": "청문회 구체적 진행 절차 및 향후 일정 등 상세 내용은 제공되지 않았다"
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "與, 홈플러스 청문회 추진…“MBK·메리츠 기만적 태도에 국민 분노”"
+          ],
+          "links": [
+            "https://www.donga.com/news/Politics/article/all/20260715/134304575/1"
+          ],
+          "title": "與, 홈플러스 청문회 추진…“MBK·메리츠 기만적 태도에 국민 분노”",
+          "link": "https://www.donga.com/news/Politics/article/all/20260715/134304575/1",
+          "keywords": [
+            "홈플러스 청문회",
+            "MBK파트너스",
+            "메리츠금융그룹",
+            "기만적 태도",
+            "국민 분노",
+            "한병도"
+          ],
+          "people": [
+            "한병도",
+            "박상혁"
+          ],
+          "focus": "민주당 주도의 청문회 추진과 MBK·메리츠의 기만적 태도 및 국민 분노 반응을 강조했다",
+          "expression_summary": "제목과 RSS 설명 모두 홈플러스 청문회 추진, MBK·메리츠 태도 비판, 국민 분노를 구체적으로 서술했다",
+          "evidence_limit": "청문회 구체적 진행 절차 및 향후 일정 등 상세 내용은 제공되지 않았다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-18",
+      "category": "정치",
+      "title": "송영길, 정청래에 ‘대통령 깔보는 느낌’ 표현 인용 및 비판",
+      "summary": "송영길은 정청래가 과거 기억에 대해 李대통령(임기환)을 깔보는 느낌을 받았다고 비판했으며, 낙태라는 표현을 쓰며 논란을 제기했다.",
+      "common_facts": [
+        "송영길은 정청래에게 ‘대통령 깔보는 느낌’이라는 표현을 인용하여 비판을 제기했다.",
+        "낙태라는 단어가 비판 과정에서 사용되었다."
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "송영길, 정청래에 “대통령 깔보는 느낌”…“낙태” 써가며 비판"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/politics/politics_general/1268316.html"
+          ],
+          "title": "송영길, 정청래에 “대통령 깔보는 느낌”…“낙태” 써가며 비판",
+          "link": "https://www.hani.co.kr/arti/politics/politics_general/1268316.html",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        },
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "송영길 \"정청래, 과거 기억에 李대통령 깔보는 느낌\" 직격"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/202607155771i"
+          ],
+          "title": "송영길 \"정청래, 과거 기억에 李대통령 깔보는 느낌\" 직격",
+          "link": "https://www.hankyung.com/article/202607155771i",
+          "keywords": [
+            "송영길",
+            "정청래",
+            "李대통령(임기환)",
+            "직격"
+          ],
+          "people": [
+            "송영길",
+            "정청래",
+            "李대통령(임기환)"
+          ],
+          "focus": "송영길이 정청래의 과거 기억이 李대통령을 깔보는 느낌을 준다고 직격했다",
+          "expression_summary": "제목과 RSS 설명에서 인용 표현을 직접 인용하며 비판적인 어조를 사용했다",
+          "evidence_limit": "RSS 설명 내용이 제공되지 않아 구체적인 표현 방식을 확인하기 어려웠다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-19",
+      "category": "정치",
+      "title": "오세훈 서울시장의 부동산 정책 비판 및 정부 수요억제 정책 지적",
+      "summary": "오세훈 서울시장이 '부동산 일타강사'를 자처하며 정부의 수요억제 정책을 비판했고, 이재명 정부의 부동산 정책에 대한 평가를 진행했다했다.",
+      "common_facts": [
+        "오세훈 서울시장이 '부동산 일타강사'를 자처했다",
+        "정부가 수요억제 정책을 펼쳤다고 지적했다",
+        "이재명 정부의 출범 1년에 대한 평가 맥락이 있었다"
+      ],
+      "articles": [
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "'부동산 일타강사' 자처한 오세훈…정부 '수요억제' 정책 지적"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/2026071570607"
+          ],
+          "title": "'부동산 일타강사' 자처한 오세훈…정부 '수요억제' 정책 지적",
+          "link": "https://www.hankyung.com/article/2026071570607",
+          "keywords": [
+            "부동산 일타강사",
+            "수요억제",
+            "오세훈",
+            "정부 정책"
+          ],
+          "people": [
+            "오세훈",
+            "이재명"
+          ],
+          "focus": "'부동산 일타강사' 자처를 통해 정부 정책을 비판하며 서울시장의 역할 강조를 했다",
+          "expression_summary": "제목에서 '부동산 일타강사' 자처와 '수요억제' 정책 비판을 명시적으로 제시했다",
+          "evidence_limit": "이재명 정부의 구체적 정책 내용에 대한 상세 정보는 확인되지 않았다했다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "오세훈, '부동산 일타강사' 자처…정부 '수요 억제' 정책 지적"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659229&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "오세훈, '부동산 일타강사' 자처…정부 '수요 억제' 정책 지적",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659229&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "부동산 일타강사",
+            "수요 억제",
+            "오세훈",
+            "이재명 정부"
+          ],
+          "people": [
+            "오세훈",
+            "이재명"
+          ],
+          "focus": "일타강사 자처를 통해 정부 정책의 한계를 지적하고 서울시장으로서의 입장을 강조했다",
+          "expression_summary": "제목에서 '일타강사'로 나서는 오세훈의 모습과 정부 '수요 억제' 정책 지적을 서술했다",
+          "evidence_limit": "이재명 정부의 구체적 정책 방향이나 세부 내용에 대한 정보는 제공되지 않았다했다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-20",
+      "category": "정치",
+      "title": "더불어민주당 보완수사권 폐지 관련 당론 확인 및 속도 조절 표명",
+      "summary": "더불어민주당은 보완수사권 폐지에 대해 당론이 아니라는 입장을 밝히고 속도 조절을 표명했으며 잡음이 계속되고 있다. SBS는 수석 대변인의 공개 확인을 통해 해당 입장을 보도했고, 한국경제는 보도의 속도와 잡음에 초점을 맞추어 보도했다.",
+      "common_facts": [
+        "더불어민주당이 보완수사권 폐지에 대해 당론이 아니라는 입장을 밝혔다했다.",
+        "보완수사권 폐지에 대한 속도 조절을 표명했다했다.",
+        "관련 잡음이 지속되고 있다했다.",
+        "SBS는 수석 대변인의 공개 확인으로 보도했다했다.",
+        "한국경제는 속도 조절과 잡음에 초점을 두었다했다."
+      ],
+      "articles": [
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "민주 \"보완수사권 폐지 당론 아니다\" 속도 조절…잡음은 여전"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/202607156845H"
+          ],
+          "title": "민주 \"보완수사권 폐지 당론 아니다\" 속도 조절…잡음은 여전",
+          "link": "https://www.hankyung.com/article/202607156845H",
+          "keywords": [
+            "보완수사권 폐지",
+            "더불어민주당",
+            "당론 아니다",
+            "속도 조절",
+            "잡음"
+          ],
+          "people": [
+            "수석 대변인",
+            "SBS"
+          ],
+          "focus": "민주당의 보완수사권 관련 입장 변화와 잡음 지속에 초점을 두었다했다.",
+          "expression_summary": "제목에 당론이 아니라는 점과 속도 조절, 잡음을 명시했다했다.",
+          "evidence_limit": "기사 본문 내용에 대한 구체적인 확인이 어렵다했다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "[여담야담] \"보완수사권 폐지, 당론 아니다\" 수석 대변인 공개 확인 파장"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659398&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "[여담야담] \"보완수사권 폐지, 당론 아니다\" 수석 대변인 공개 확인 파장",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659398&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "보완수사권 폐지",
+            "당론 아니다",
+            "수석 대변인",
+            "공개 확인",
+            "파장"
+          ],
+          "people": [
+            "수석 대변인",
+            "SBS"
+          ],
+          "focus": "수석 대변인의 공개 확인과 파장을 강조했다했다.",
+          "expression_summary": "제목을 통해 당론 아니라는 점과 수석 대변인 확인, 파장을 강조했다했다.",
+          "evidence_limit": "기사 본문의 구체적인 내용과 추가 맥락이 제공되지 않아 판단하기 어렵다했다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-21",
+      "category": "경제",
+      "title": "삼성전자의 차세대 폴더블폰 기술 '플렉스 티타늄' 공개",
+      "summary": "삼성전자가 차세대 갤럭시 폴더블 기기에 적용될 플렉스 티타늄 기술을 공개했다. 티타늄 소재 사용으로 화면 내구성을 높이고 접히는 부분의 주름을 줄였으며, 기존 폴리머 대비 약 20배 단단한 특성을 확보했다.",
+      "common_facts": [
+        "삼성전자가 차세대 갤럭시 폴더블 기기에 적용될 플렉스 티타늄 기술을 공개했다.",
+        "티타늄 소재를 사용해 화면 내구성을 높이고 접히는 부분의 주름을 줄였다.",
+        "유기발광다이오드(OLED) 패널 아래에 티타늄 합금 필름을 적용했다.",
+        "티타늄 합금 필름은 기존 폴리머 필름보다 약 20배 단단하다고 밝혔다."
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "삼성전자, 폴더블 신제품 주름 개선한 ‘플렉스 티타늄’ 기술 공개"
+          ],
+          "links": [
+            "https://www.chosun.com/economy/tech_it/2026/07/15/F3XKGBMP7JD5HPOEJ2MCCAC5Q4/"
+          ],
+          "title": "삼성전자, 폴더블 신제품 주름 개선한 ‘플렉스 티타늄’ 기술 공개",
+          "link": "https://www.chosun.com/economy/tech_it/2026/07/15/F3XKGBMP7JD5HPOEJ2MCCAC5Q4/",
+          "keywords": [
+            "플렉스 티타늄",
+            "폴더블",
+            "주름",
+            "기술",
+            "삼성전자"
+          ],
+          "people": [
+            "삼성전자"
+          ],
+          "focus": "폴더블 신제품의 주름 개선 기술에 초점을 맞췄다.",
+          "expression_summary": "폴더블 신제품 주름 개선 기술 공개를 제목으로 제시했다.",
+          "evidence_limit": "공개 행사 세부 일정 및 구체적인 기술 적용 모델에 대한 정보가 제한적이다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "갤럭시 폴더블 주름 줄였다…‘플렉스 티타늄’ 새기술 공개"
+          ],
+          "links": [
+            "https://www.donga.com/news/Economy/article/all/20260715/134303748/1"
+          ],
+          "title": "갤럭시 폴더블 주름 줄였다…‘플렉스 티타늄’ 새기술 공개",
+          "link": "https://www.donga.com/news/Economy/article/all/20260715/134303748/1",
+          "keywords": [
+            "플렉스 티타늄",
+            "갤럭시 폴더블",
+            "주름",
+            "티타늄",
+            "차세대"
+          ],
+          "people": [
+            "삼성전자"
+          ],
+          "focus": "갤럭시 폴더블 기기의 주름 감소 효과와 기술 구조에 중점을 두었다.",
+          "expression_summary": "갤럭시 폴더블 주름 감소를 강조하며 새기술 공개 사실을 서술했다.",
+          "evidence_limit": "공개 예정인 폴더블폰의 구체적인 모델명과 제품 사양에 대한 정보가 제한적이다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-22",
+      "category": "경제",
+      "title": "이재명 대통령, 공직 기강 강화 및 술자리 성 비위 주의 당부",
+      "summary": "이재명 대통령은 2026년 7월 15일 청와대에서 공직 기강을 주문하며 술자리에서 옆에 젊은 이성을 앉히지 말라고 당부했다. 이는 최근 20대 소방관의 자살 사건을 계기로 성 비위에 대한 경각심을 높이기 위한 조치로 해석된다.",
+      "common_facts": [
+        "이재명 대통령이 2026년 7월 15일 청와대에서 2차 생중계 업무보고를 마무리하며 공직 기강을 주문했다",
+        "술자리에서 옆에 젊은 이성을 앉히지 말 것을 당부했다",
+        "최근 20대 소방관의 자살 사건을 언급하며 공직 사회의 성 비위 주의를 강조했다",
+        "발언 장소로 청와대 또는 청와대 영빈관이 확인되었다"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "李 “술 자리에서 옆에 젊은 이성 앉히지 말라”"
+          ],
+          "links": [
+            "https://www.chosun.com/economy/economy_general/2026/07/15/HFRGMMRQMFQTEYJXMVSGCNBXMQ/"
+          ],
+          "title": "李 “술 자리에서 옆에 젊은 이성 앉히지 말라”",
+          "link": "https://www.chosun.com/economy/economy_general/2026/07/15/HFRGMMRQMFQTEYJXMVSGCNBXMQ/",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "이 대통령 \"공직자 술자리서 옆에 젊은 이성 앉히지 마라\""
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659266&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "이 대통령 \"공직자 술자리서 옆에 젊은 이성 앉히지 마라\"",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659266&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "이재명",
+            "공직자",
+            "술자리",
+            "젊은 이성",
+            "성 비위",
+            "소방관 자살"
+          ],
+          "people": [
+            "이재명"
+          ],
+          "focus": "공직자 술자리 성 비위 예방 강조",
+          "expression_summary": "제목의 직접적인 인용 형식과 함께 기사에 사진 자료가 포함되어 발언 장면을 시각적으로 제시했다",
+          "evidence_limit": "사진 자료의 구체적인 내용과 발언 맥락이 인용문을 통해 확인되었으며, 제공된 자료만으로 판단하기 어려운 부분은 없다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-23",
+      "category": "경제",
+      "title": "민주노총, 원청의 직접 교섭 촉구하며 서울 도심에서 총파업대회 개최",
+      "summary": "민주노총이 15일 서울 종로구에서 총파업대회를 열고 원청의 직접 교섭을 요구하며 1만명이 모였다. 노란봉투법 개정을 계기로 하청 비정규직 노동자 보호를 강조했다.",
+      "common_facts": [
+        "민주노총이 15일 서울 종로구 동화면세점 앞에서 총파업대회를 열었다",
+        "민주노총이 원청의 직접 교섭을 촉구했다고 보도했다",
+        "하청 비정규직 노동자의 교섭권 확보를 요구한 것으로 보도되었다",
+        "참가 인원은 경찰 추산 5000명, 민주노총 추산 1만명인 것으로 보도되었다"
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "“원청, 하청과 직접 교섭하라” 민주노총 총파업… 1만명 광화문서 청와대 행진"
+          ],
+          "links": [
+            "https://www.chosun.com/economy/economy_general/2026/07/15/GQZDKMBZGEYWGN3EGZRDEOLCMY/"
+          ],
+          "title": "“원청, 하청과 직접 교섭하라” 민주노총 총파업… 1만명 광화문서 청와대 행진",
+          "link": "https://www.chosun.com/economy/economy_general/2026/07/15/GQZDKMBZGEYWGN3EGZRDEOLCMY/",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "\"원청교섭 쟁취\"…민주노총 서울 도심서 총파업대회"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659621&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "\"원청교섭 쟁취\"…민주노총 서울 도심서 총파업대회",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659621&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-24",
+      "category": "경제",
+      "title": "이재명 대통령의 단일종목 레버리지 ETF 대책 지시 및 국내 증시 현황",
+      "summary": "이재명 대통령은 15일 청와대에서 열린 업무보고에서 단일종목 레버리지 ETF와 관련해 보완대책을 신속히 마련하라고 지시했다.",
+      "common_facts": [
+        "이재명 대통령이 15일 청와대에서 열린 업무보고에서 단일종목 레버리지 상장지수펀드(ETF)와 관련해 보완대책을 신속히 마련하라고 지시했다",
+        "하루 전인 14일 삼성전자 및 SK하이닉스 단일종목 레버리지·인버스 ETF 16종의 거래대금은 18조2827억원으로 집계됐다",
+        "18조2827억원은 코스피 전체 거래대금의 약 40%를 차지하며, 일부 상품의 회전율은 2432%에 달했다",
+        "이찬진 금융감독원장은 시장관리자로서 책임에 대해 언급했고 정은보 한국거래소 이사장은 업무보고서를 제출했다"
+      ],
+      "articles": [
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "李 지시에 단일종목 레버리지 ETF 손본다…변동성 대책 마련"
+          ],
+          "links": [
+            "https://www.donga.com/news/Economy/article/all/20260715/134303679/1"
+          ],
+          "title": "李 지시에 단일종목 레버리지 ETF 손본다…변동성 대책 마련",
+          "link": "https://www.donga.com/news/Economy/article/all/20260715/134303679/1",
+          "keywords": [],
+          "people": [],
+          "focus": "명확한 차이를 확인하기 어려움",
+          "expression_summary": "명확한 차이를 확인하기 어려움",
+          "evidence_limit": "현재 제공된 자료만으로는 구체적인 차이를 판단하기 어려움"
+        },
+        {
+          "publisher": "매일경제",
+          "article_count": 1,
+          "titles": [
+            "李 대통령 “2배 ETF 많이 당하고 계신데”…보완대책 마련 주문"
+          ],
+          "links": [
+            "https://www.mk.co.kr/news/economy/12099166"
+          ],
+          "title": "李 대통령 “2배 ETF 많이 당하고 계신데”…보완대책 마련 주문",
+          "link": "https://www.mk.co.kr/news/economy/12099166",
+          "keywords": [
+            "단일종목 레버리지 ETF",
+            "2배 ETF",
+            "이재명 대통령",
+            "보완대책",
+            "변동성 확대"
+          ],
+          "people": [
+            "이재명 대통령",
+            "이찬진 금감원장",
+            "정은보 한국거래소 이사장"
+          ],
+          "focus": "이재명 대통령이 ‘2배 ETF’ 투자자들이 많은 피해를 보고 있다고 언급하며 보완대책 마련을 주문한 점을 강조했다",
+          "expression_summary": "이재명 대통령의 발언인 “2배 ETF 많이 당하고 계신데”를 중심으로 시장관리자의 책임과 변동성 확대 문제를 거론했다",
+          "evidence_limit": "현재 제공된 자료만으로는 보완대책의 실행 주체나 구체적 방안에 대해 판단하기 어려웠다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-25",
+      "category": "경제",
+      "title": "기업 예금 및 증권 거래 증거금 증가로 5월 통화량 32조 원 급증",
+      "summary": "한국은행이 발표한 5월 M2 통화량은 32조 원 증가했으며 기업 예금 증가와 증권·파생상품 거래 증거금 유입이 주요 원인으로 작용했다.",
+      "common_facts": [
+        "5월 M2 통화량은 32조 원 넘게 증가했다",
+        "기업 예금 증가가 통화량 증가를 견인했다",
+        "증권·파생상품 거래 증거금 유입이 통화량 증가에 기여했다",
+        "통화량 증가가 7개월 연속 지속되었다",
+        "증권·파생상품 거래를 위한 증거금 유입이 증가했다"
+      ],
+      "articles": [
+        {
+          "publisher": "매일경제",
+          "article_count": 1,
+          "titles": [
+            "“이러니 여기저기서 버블 걱정”…반도체 기업 자금 몰리며 통화량 32조 급증"
+          ],
+          "links": [
+            "https://www.mk.co.kr/news/economy/12099214"
+          ],
+          "title": "“이러니 여기저기서 버블 걱정”…반도체 기업 자금 몰리며 통화량 32조 급증",
+          "link": "https://www.mk.co.kr/news/economy/12099214",
+          "keywords": [
+            "버블",
+            "반도체 기업",
+            "통화량",
+            "자금 몰림"
+          ],
+          "people": [
+            "한국은행"
+          ],
+          "focus": "반도체 기업의 자금 쏠림과 통화량 급증에 대한 우려 및 버블 발생 가능성을 강조했다",
+          "expression_summary": "버블 우려를 나타내는 인용구를 제목에 사용하고 증권사 증거금 유입에 대한 구체적인 수치를 강조했다",
+          "evidence_limit": "명확한 차이를 확인하기 어려움"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "삼전·닉스 등 투자에…5월 통화량 32조 증가, 9개월 만에 최대폭"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659058&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "삼전·닉스 등 투자에…5월 통화량 32조 증가, 9개월 만에 최대폭",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659058&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "삼성전자",
+            "SK하이닉스",
+            "통화량 증가",
+            "증거금"
+          ],
+          "people": [
+            "한국은행"
+          ],
+          "focus": "삼성전자와 SK하이닉스 등의 투자에 따른 통화량 증가를 중심으로 보도했다",
+          "expression_summary": "기업 투자와 통화량 증가를 연결지어 설명하고 한국은행의 통계 자료를 인용해 보도했다",
+          "evidence_limit": "명확한 차이를 확인하기 어려움"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-26",
+      "category": "사회",
+      "title": "암 환자 진료비 페이백 의혹 병의원 12곳 경찰 수사 착수",
+      "summary": "경찰은 암 환자를 대상으로 진료비 일부를 돌려주는 이른바 페이백 관행을 의심하여 병·의원 12곳에 대해 수사를 진행했다 했다. 해당 수사는 의료비 지원 정책의 공정성과 부정수급 여부를 확인하기 위한 것이었다 했다.",
+      "common_facts": [
+        "경찰은 암 환자 진료비 '페이백' 의혹을 받고 있는 병·의원 12곳에 대해 수사를 착수했다 했다.",
+        "수사 대상 병·의원은 암 환자를 대상으로 진료비 일부를 돌려주는 행위를 한 것으로 의심되었다 했다.",
+        "수사는 병·의원의 페이백 관행이 법적 문제를 일으킬 수 있는지 조사하기 위해 진행되었다 했다."
+      ],
+      "articles": [
+        {
+          "publisher": "조선일보",
+          "article_count": 1,
+          "titles": [
+            "경찰, 암 환자 진료비 ‘페이백’ 의혹 병·의원 12곳 수사 착수"
+          ],
+          "links": [
+            "https://www.chosun.com/national/incident/2026/07/15/OOE2HIFSLFD5TEFLLH7GBMGIYA/"
+          ],
+          "title": "경찰, 암 환자 진료비 ‘페이백’ 의혹 병·의원 12곳 수사 착수",
+          "link": "https://www.chosun.com/national/incident/2026/07/15/OOE2HIFSLFD5TEFLLH7GBMGIYA/",
+          "keywords": [
+            "암 환자",
+            "진료비 페이백",
+            "병의심",
+            "수사 착수"
+          ],
+          "people": [],
+          "focus": "암 환자 진료비 페이백 의혹 병·의원 12곳에 대한 경찰 수사 착수를 보도했다 했다.",
+          "expression_summary": "제목에 '페이백' 의혹을 강조하고 RSS 설명에는 환자 사진이 기사 내용과 무관함을 안내했다 했다.",
+          "evidence_limit": "수사의 구체적인 진행 방식이나 결과에 대한 정보는 제공되지 않았다 했다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "경찰, 암환자 진료비 '페이백' 의심 병원 12곳 수사 착수"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659512&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "경찰, 암환자 진료비 '페이백' 의심 병원 12곳 수사 착수",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659512&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "암환자",
+            "페이백",
+            "의심 병원",
+            "수사 착수"
+          ],
+          "people": [],
+          "focus": "암환자 진료비 '페이백' 의심 병원 12곳 수사 착수를 보도했다 했다.",
+          "expression_summary": "제목에 '페이백' 의심을 표시하고 RSS 설명에 환자 사진의 관련성 없음을 안내했다 했다.",
+          "evidence_limit": "수사의 구체적인 진행 방식이나 결과에 대한 정보는 제공되지 않았다 했다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-27",
+      "category": "사회",
+      "title": "프로배구단 코치 회식 중 부적절 행위 의혹으로 자진 사퇴 및 스포츠윤리센터 조사",
+      "summary": "프로배구 여자부 구단 코치가 회식 중 부적절한 행위로 인해 자진 사퇴했으며 스포츠윤리센터가 조사에 착수했다 했다.",
+      "common_facts": [
+        "프로배구 여자부 구단 코치가 회식 중 부적절한 행위로 의혹을 받아 자진 사퇴했다 했다.",
+        "스포츠윤리센터가 해당 코치에 대한 조사를 진행 중이다 했다.",
+        "의혹 내용은 성적 수치심과 관련된 부적절한 행위로 확인되었다 했다.",
+        "사건은 1월에 발생한 선수단 회식 자리에서 일어났다 했다."
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "회식 중 부적절 행위 의혹 프로배구단 코치 자진 사퇴…스포츠윤리센터 조사 중"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/society/society_general/1268359.html"
+          ],
+          "title": "회식 중 부적절 행위 의혹 프로배구단 코치 자진 사퇴…스포츠윤리센터 조사 중",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268359.html",
+          "keywords": [
+            "프로배구단 코치",
+            "자진 사퇴",
+            "불적절 행위 의혹",
+            "회식",
+            "스포츠윤리센터",
+            "조사 중"
+          ],
+          "people": [
+            "B 전 코치"
+          ],
+          "focus": "코치의 자진 사퇴와 스포츠윤리센터의 조사 착수 및 진행 상황에 초점을 맞추고 있다 했다.",
+          "expression_summary": "제목에서 '회식 중 부적절 행위 의혹'과 '자진 사퇴'를 부각하고 RSS 설명에서 구체적인 사건 경위를 제시했다 했다.",
+          "evidence_limit": "의혹의 정확한 행위 내용, 배구단 명칭, 조사 결과 등 세부 정보는 현재 자료로는 확인하기 어렵다 했다."
+        },
+        {
+          "publisher": "매일경제",
+          "article_count": 1,
+          "titles": [
+            "성적 수치심 느꼈다…회식서 부적절한 행위 의혹 女배구 코치, 자진 사퇴"
+          ],
+          "links": [
+            "https://www.mk.co.kr/news/society/12099357"
+          ],
+          "title": "성적 수치심 느꼈다…회식서 부적절한 행위 의혹 女배구 코치, 자진 사퇴",
+          "link": "https://www.mk.co.kr/news/society/12099357",
+          "keywords": [
+            "성적 수치심",
+            "회식사 부적절한 행위",
+            "女배구 코치",
+            "자진 사퇴",
+            "스포츠윤리센터 조사"
+          ],
+          "people": [
+            "B 전 코치",
+            "프로배구 여자부 A구단"
+          ],
+          "focus": "선수들이 느낀 성적 수치심과 회식이라는 구체적 상황에서 발생한 부적절한 행위를 강조하고 있다 했다.",
+          "expression_summary": "제목에서 '성적 수치심 느꼈다'를 직접적으로 표현하고 RSS 설명에서 추가적인 사건 세부 사항을 서술했다 했다.",
+          "evidence_limit": "의혹의 정확한 행위 내용, 조사 결과, 배구단 명칭 등 구체적 정보는 현재 자료로는 확인하기 어렵다 했다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-28",
+      "category": "사회",
+      "title": "병원 앱 예시문에 세월호 참사 날짜 노출된 레몬헬스케어 사의 사과",
+      "summary": "레몬헬스케어가 국내 주요 종합병원 모바일 애플리케이션(앱)의 생년월일 입력란에 세월호 참사일인 ‘2014년 4월 16일’을 예시 데이터로 노출한 사실이 알려졌고, 해당 업체가 유족과 국민에게 사과했다. 사과문에는 유가족과 국민에게 상처를 드린 점과 변경하려는 의지가 담겼다.",
+      "common_facts": [
+        "레몬헬스케어는 국내 주요 종합병원 모바일 애플리케이션(앱)의 생년월일 예시 데이터에 ‘2014년 4월 16일’을 표기했다.",
+        "레몬헬스케어 측은 해당 날짜가 예시로 쓰인 경위에 대해 과거 개발 과정에서 처음 작성된 이후 검증 없이 복사되어 현재 화면에 표시되었다고 설명했다.",
+        "레몬헬스케어는 세월호 참사일로 가족을 잃은 유가족과 아픔을 함께 견뎌온 국민에게 상처를 드린 것에 대해 사과했다.",
+        "레몬헬스케어는 사과문에서 어떤 말로도 용서를 구하기 어렵다는 것을 알고 있지만 진심으로 사과드린다고 밝혔다."
+      ],
+      "articles": [
+        {
+          "publisher": "한겨레",
+          "article_count": 1,
+          "titles": [
+            "생년월일 ‘2014년 4월 16일’ 병원 앱 개발사 “세월호 유족께 사과”"
+          ],
+          "links": [
+            "https://www.hani.co.kr/arti/society/society_general/1268358.html"
+          ],
+          "title": "생년월일 ‘2014년 4월 16일’ 병원 앱 개발사 “세월호 유족께 사과”",
+          "link": "https://www.hani.co.kr/arti/society/society_general/1268358.html",
+          "keywords": [
+            "생년월일 예시, 병원 앱, 세월호 참사일, 사과"
+          ],
+          "people": [
+            "레몬헬스케어 홍병진 대표"
+          ],
+          "focus": "병원 앱의 생년월일 예시 데이터에 세월호 참사일이 노출된 사실을 보도했다.",
+          "expression_summary": "생년월일 예시문에 세월호 참사일이 들어간 개발사를 지적하며 사과 보도를 했다.",
+          "evidence_limit": "발행 정보가 포함되어 있지 않았다."
+        },
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "병원앱 예시문에 세월호 참사 날짜가…제작업체 “사과”"
+          ],
+          "links": [
+            "https://www.donga.com/news/Society/article/all/20260715/134303046/2"
+          ],
+          "title": "병원앱 예시문에 세월호 참사 날짜가…제작업체 “사과”",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134303046/2",
+          "keywords": [
+            "병원 앱, 세월호 참사일, 생일 예시, 사과문, 레몬헬스케어"
+          ],
+          "people": [
+            "레몬헬스케어 홍병진 대표"
+          ],
+          "focus": "앱에 노출된 세월호 참사일 예시와 레몬헬스케어의 사과문 내용을 상세히 보도했다.",
+          "expression_summary": "레몬헬스케어가 앱에 세월호 참사일을 생년월일로 예시로 노출한 사실을 지적하며, 사과문과 경위 설명을 보도하고 발행 정보를 포함했다.",
+          "evidence_limit": "발행 정보는 제공되었으나 해당 날짜의 기사 내용은 포함되어 있지 않았다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-29",
+      "category": "사회",
+      "title": "전국 곳곳 비 내린 뒤 무더위와 열대야 예보",
+      "summary": "오늘 오후까지 전국 곳곳에 비가 내렸다가 중부 일부 지역에는 5~20mm의 적은 강수량이 기록되었고, 내일 호남과 제주를 시작으로 비가 다시 확대되며 무더위와 열대야가 지속될 것으로 예보했다.",
+      "common_facts": [
+        "오늘 오후까지 전국 곳곳에 비가 내렸다.",
+        "내일 호남과 제주를 시작으로 비가 다시 확대된다.",
+        "16일 예상 강수량은 중부 5~20mm, 전북 5~40mm, 대구·경북 5~30mm이다.",
+        "강한 바람과 높은 물결에도 주의가 필요하다."
       ],
       "articles": [
         {
@@ -923,16 +2271,17 @@
           "link": "https://www.hani.co.kr/arti/society/environment/1268310.html",
           "keywords": [
             "비",
-            "강우량",
-            "체감온도",
-            "무더위",
-            "열대야",
+            "강원 동해안",
+            "영남",
+            "체감온도 33도",
+            "무더위"
+          ],
+          "people": [
             "기상청"
           ],
-          "people": [],
-          "focus": "15일 오후까지 비가 내린 뒤 서쪽 지역의 더위는 누그러지지만 동쪽 지역은 무더위 지속",
-          "expression_summary": "제목에 지역별 강수 및 기온 현황, 체감온도, 무더위 강조",
-          "evidence_limit": "기상청 예보 상세 내용"
+          "focus": "강원 동해안과 영남 지역의 높은 체감온도와 무더위에 초점을 두었다.",
+          "expression_summary": "제목은 지역 구분과 체감온도 33도 무더위를 강조했고, RSS 설명은 비가 그친 후 동쪽 지역 무더위가 이어진다는 내용을 담았다.",
+          "evidence_limit": "발행 정보 및 원문 전체 내용이 제공되지 않아 추가 사실 확인이 어려웠다."
         },
         {
           "publisher": "동아일보",
@@ -946,80 +2295,489 @@
           "title": "호남·제주 내일도 비…수도권·충청·영남은 무더위",
           "link": "https://www.donga.com/news/Society/article/all/20260715/134303119/1",
           "keywords": [
-            "강우",
-            "기상청",
-            "체감온도",
+            "비",
+            "호남",
+            "제주",
             "무더위",
             "열대야",
-            "순간풍속"
+            "체감온도"
           ],
-          "people": [],
-          "focus": "16일 호남·제주 비 시작으로 전국 확대 예상, 지역별 기온 차이와 열대야, 강한 바람과 높은 물결 주의",
-          "expression_summary": "제목에 지역별 강수 패턴, 무더위, 16일 기상 예보 포함",
-          "evidence_limit": "기상청 예보의 구체적 수치와 지역별 상세 정보"
+          "people": [
+            "기상청"
+          ],
+          "focus": "내일 호남과 제주를 시작으로 비가 확대되고 무더위와 열대야가 지속된다는 점을 강조했다.",
+          "expression_summary": "제목은 지역별 비와 무더위 전망을 요약했고, RSS 설명은 강수량 세부 수치와 지역별 기온 최고·최저 예측을 상세히 제시했다.",
+          "evidence_limit": "발행 정보 및 원문 전체 내용이 제공되지 않아 추가 사실 확인이 어려웠다."
         }
       ]
     },
     {
-      "issue_id": "match-15",
+      "issue_id": "match-30",
       "category": "사회",
-      "title": "경산에서 친구를 살해한 20대 남성, 피범벅 상태로 도주 후 경찰의 초동대응 논란",
-      "summary": "경북 경산에서 친구를 살해한 20대 남성이 피범벅 상태로 거리를 배회하던 중 경찰과 마주쳤음에도 도주한 사실이 드러나 초동대응 부실 논란이 확산되고 있다.",
+      "title": "장윤기 사건 수사에서 담당 팀장의 증거 묵살 지시로 인한 의도적 부실 확인",
+      "summary": "장윤기 사건 수사 과정에서 담당 팀장이 핵심 증거를 묵살하도록 지시한 사실이 확인되었으며 이로 인해 수사가 의도적으로 부실하게 진행된 것으로 나타났다. 여러 언론사 기사에서 해당 팀장의 지시와 수사 부실에 대한 내용이 공통적으로 확인되고 있다.",
       "common_facts": [
-        "경북 경산에서 친구를 살해한 20대 남성이 피범벅 상태로 거리를 배회했다",
-        "해당 남성이 경찰과 마주쳤음에도 도주했다",
-        "경찰의 초동대응 부실에 대한 논란이 커지고 있다",
-        "사건의 발생 일시 및 장소는 2026년 7월 15일 경산의 거리"
+        "담당 팀장이 증거를 묵살하도록 지시한 사실이 확인되었다",
+        "장윤기 사건 수사가 의도적 부실로 진행되었다",
+        "핵심 증거가 제대로 검토되지 않았다"
       ],
       "articles": [
         {
           "publisher": "한국경제",
           "article_count": 1,
           "titles": [
-            "피범벅 알몸 남성 보고도…2m 앞 살인범 놓친 경찰 초동대응 도마"
+            "담당 팀장이 증거 묵살 지시…장윤기 수사 '의도적 부실' 확인"
           ],
           "links": [
-            "https://www.hankyung.com/article/202607156301H"
+            "https://www.hankyung.com/article/2026071573407"
           ],
-          "title": "피범벅 알몸 남성 보고도…2m 앞 살인범 놓친 경찰 초동대응 도마",
-          "link": "https://www.hankyung.com/article/202607156301H",
+          "title": "담당 팀장이 증거 묵살 지시…장윤기 수사 '의도적 부실' 확인",
+          "link": "https://www.hankyung.com/article/2026071573407",
           "keywords": [
-            "피범벅",
-            "알몸",
-            "남성",
-            "살인범",
-            "경찰 초동대응"
+            "증거 묵살",
+            "담당 팀장",
+            "장윤기",
+            "수사 부실",
+            "의도적 부실"
           ],
           "people": [
-            "20대 남성"
+            "장윤기"
           ],
-          "focus": "경찰의 초동대응 부실에 대한 비판",
-          "expression_summary": "피범벅 알몸 상태의 남성을 목격했음에도 2m 거리에서 살인범을 놓친 경찰의 대응 미흡을 문제 삼음",
-          "evidence_limit": "명확하지 않음"
+          "focus": "담당 팀장의 증거 묵살 지시로 인해 수사가 의도적 부실로 진행된 점에 초점을 두었다",
+          "expression_summary": "제목은 ‘담당 팀장이 증거 묵살 지시…장윤기 수사 '의도적 부실' 확인’으로 조사 결과를 요약했으며 RSS 설명은 간결하게 핵심 내용을 반복했다",
+          "evidence_limit": "증거 묵살 지시의 구체적 과정이나 수사 부실의 범위는 제공된 자료만으로 판단하기 어려웠다"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "증거, 놓친 게 아니라 묵살…장윤기 수사 '의도적 부실' 드러나"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659554&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "증거, 놓친 게 아니라 묵살…장윤기 수사 '의도적 부실' 드러나",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659554&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "증거 묵살",
+            "수사 의도적 부실",
+            "여고생 살해범 장윤기",
+            "핵심 증거"
+          ],
+          "people": [
+            "장윤기"
+          ],
+          "focus": "담당 팀장이 증거를 고의로 묵살하여 수사가 부실하게 진행된 점에 초점을 두었다",
+          "expression_summary": "제목은 ‘증거, 놓친 게 아니라 묵살…장윤기 수사 '의도적 부실' 드러나’로 책임자 행동을 강조했으며 RSS 설명은 '담당 팀장의 묵살 지시로 핵심 증거가 방…'으로 시작해 증거 방치에 대한 구체적 상황을 암시했다",
+          "evidence_limit": "증거 묵살 지시의 구체적 과정이나 수사 부실의 범위는 제공된 자료만으로 판단하기 어려웠다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-31",
+      "category": "사회",
+      "title": "민주노총 집회 후 청와대 방향 행진으로 도심 교통 혼잡 발생",
+      "summary": "전국민주노동조합총연맹이 15일 서울 종로구 동화면세점 인근에서 총파업 집회를 개최한 후 청와대 방향으로 행진하면서 도심 교통이 혼잡했다고 했다.",
+      "common_facts": [
+        "전국민주노동조합총연맹이 15일 서울 종로구 동화면세점 인근에서 총파업 집회를 개최했다 했다.",
+        "집회 후 참가자들이 청와대 방향으로 행진했다 했다.",
+        "도심 교통이 혼잡했다 했다."
+      ],
+      "articles": [
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "[속보] 민주노총 집회 후 청와대 방향 행진…도심 교통 혼잡"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/2026071573887"
+          ],
+          "title": "[속보] 민주노총 집회 후 청와대 방향 행진…도심 교통 혼잡",
+          "link": "https://www.hankyung.com/article/2026071573887",
+          "keywords": [
+            "민주노총",
+            "총파업 집회",
+            "청와대 방향 행진",
+            "도심 교통 혼잡"
+          ],
+          "people": [
+            "전국민주노동조합총연맹"
+          ],
+          "focus": "집회와 행진, 그리고 도심 교통 혼잡에 중점을 두어 보도했다고 했다.",
+          "expression_summary": "제목에 '[속보]' 표기를 사용하여 신속하게 진행 중인 사건임을 알렸다고 했다.",
+          "evidence_limit": "집회 현장 사진이나 구체적인 교통 혼잡 정도에 대한 상세 정보는 제공되지 않았다 했다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "[속보] 민주노총 집회 후 청와대 방향 행진…도심 교통 혼잡"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659508&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "[속보] 민주노총 집회 후 청와대 방향 행진…도심 교통 혼잡",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659508&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "민주노총",
+            "총파업 집회",
+            "청와대 방향 행진",
+            "도심 교통 혼잡"
+          ],
+          "people": [
+            "전국민주노동조합총연맹"
+          ],
+          "focus": "집회 현장 모습과 참가자들의 구호를 강조하며 현장 분위기를 전달했다고 했다.",
+          "expression_summary": "제목에 '[속보]' 표기를 사용하고 RSS 설명에 집회 현장 사진과 참가자 구호 외침에 대한 설명을 포함하여 보도했다고 했다.",
+          "evidence_limit": "집회 현장의 구체적인 상황 사진이나 영상, 교통 혼잡의 구체적인 내용에 대한 상세 정보는 제공되지 않았다 했다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-32",
+      "category": "사회",
+      "title": "홍명보 전 축구 국가대표팀 감독 선임 의혹 수사 진행 상황",
+      "summary": "경찰은 홍명보 전 축구 국가대표팀 감독 선임 의혹과 관련해 대한축구협회 전력강화위원 및 임원들을 참고인 신분으로 조사하고 있으며, 정몽규 전 축구협회장 등 주요 인물을 재소환하거나 홍 전 감독을 추가 소환 조사할 가능성을 검토하고 했다.",
+      "common_facts": [
+        "홍명보 전 축구 국가대표팀 감독 선임 의혹이 수사 대상이 되었으며, 경찰은 당시 대한축구협회 전력강화위원 및 임원들을 참고인 신분으로 조사하고 있다.",
+        "2024년 문화체육관광부 감사에서 확인된 감독 후보 추천 및 선임 과정의 절차적 하자와 범죄 혐의를 뒷받침할 새로운 사실관계를 확인하기 위한 조사가 이루어지고 있다.",
+        "서울경찰청 광역수사단 금융범죄수사대는 홍 전 감독 선임 당시 축구협회 비상근 부회장을 지낸 A 씨와 전력강화위원으로 활동한 B 씨를 전날 참고인으로 조사했다.",
+        "지난 9일에는 홍 전 감독 선임 과정을 공개적으로 비판했던 박주호 전 전력강화위원을 참고인으로 조사했으며, 이에 앞서 해"
+      ],
+      "articles": [
+        {
+          "publisher": "한국경제",
+          "article_count": 1,
+          "titles": [
+            "경찰, 홍명보 선임 의혹 관련 참고인 조사…정몽규 재소환 검토"
+          ],
+          "links": [
+            "https://www.hankyung.com/article/2026071570047"
+          ],
+          "title": "경찰, 홍명보 선임 의혹 관련 참고인 조사…정몽규 재소환 검토",
+          "link": "https://www.hankyung.com/article/2026071570047",
+          "keywords": [
+            "홍명보 선임 의혹",
+            "참고인 조사",
+            "정몽규 재소환",
+            "수사"
+          ],
+          "people": [
+            "정몽규"
+          ],
+          "focus": "홍명보 선임 의혹 수사 과정에서 정몽규 전 축구협회장을 재소환 조사하고 홍 전 감독도 불러 조사할 가능성을 검토하고 했다.",
+          "expression_summary": "홍명보 선임 의혹 관련 참고인 조사 진행 상황과 정몽규 재소환 검토 계획을 제목에 명시하고 했다.",
+          "evidence_limit": "기사 내용이 중간에 끊겨 있어 서울경찰청 광역수사단 금융범죄수사대의 정확한 수사 범위와 향후 조사 계획을 상세히 확인하기 어려움 했다."
         },
         {
           "publisher": "동아일보",
           "article_count": 1,
           "titles": [
-            "피범벅으로 거리 활보한 살인범…2m 앞서 놓친 경찰"
+            "‘홍명보 선임 의혹’ 수사 속도…정몽규·이임생 재소환 가능성"
           ],
           "links": [
-            "https://www.donga.com/news/Society/article/all/20260715/134302499/2"
+            "https://www.donga.com/news/Society/article/all/20260715/134303980/1"
           ],
-          "title": "피범벅으로 거리 활보한 살인범…2m 앞서 놓친 경찰",
-          "link": "https://www.donga.com/news/Society/article/all/20260715/134302499/2",
+          "title": "‘홍명보 선임 의혹’ 수사 속도…정몽규·이임생 재소환 가능성",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134303980/1",
           "keywords": [
-            "피범벅",
-            "살인범",
-            "경찰 초동대응"
+            "홍명보 선임 의혹",
+            "수사 속도",
+            "정몽규 재소환",
+            "이임생 재소환",
+            "참고인 조사"
           ],
           "people": [
-            "20대 남성",
-            "친구"
+            "홍명보",
+            "정몽규",
+            "이임생",
+            "A 씨",
+            "B 씨",
+            "박주호"
           ],
-          "focus": "피범벅 상태로 거리 활보한 살인범의 도주 및 경찰 대응 실패",
-          "expression_summary": "경북 경산에서 친구를 살해한 20대 남성이 피범벅 상태로 거리를 배회하고 경찰과 마주쳤음에도 도주한 사실을 보도",
-          "evidence_limit": "명확하지 않음"
+          "focus": "홍명보 전 감독 선임 의혹 수사가 진행 중이며 정몽규 전 축구협회장 및 이임생 전 기술총괄이사 재소환 가능성을 보도하고 했다.",
+          "expression_summary": "'홍명보 선임 의혹' 수사 상황과 정몽규·이임생 재소환 가능성을 제목에 반영하고 했다.",
+          "evidence_limit": "기사 내용이 중간에 중단되어 추가 고발된 홍 전 감독 조사 가능성과 구체적 수사 범위 확인이 제한적이었다. 했다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-33",
+      "category": "사회",
+      "title": "부산 유흥주점 업주가 가짜 양주 판매 후 의식 잃은 손님 9시간 방치해 사망케 한 혐의로 실형 선고",
+      "summary": "부산 도심 유흥주점에서 가짜 양주를 판매한 업주 2명이 손님에게 의식을 잃게 한 뒤 9시간 동안 방치하여 숨지게 한 혐의로 각각 징역 8년과 4년을 선고받았다.",
+      "common_facts": [
+        "부산 도심 유흥주점의 30대 업주와 40대 업주가 가짜 양주를 판매했다.",
+        "손님이 가짜 양주로 인해 의식을 잃은 후 약 9시간 동안 방치되었다.",
+        "손님은 급성 알코올중독으로 사망했다.",
+        "부산지법 형사5부가 유기한 혐의로 업주 2명을 기소했다.",
+        "업주 2명은 각각 징역 8년과 4년을 선고받았다.",
+        "유족은 1억원을 공탁받은 후 거부했다.",
+        "업주는 2024년 9월부터 2025년 11월까지 남은 양주를 모아 가짜 양주를 만들어 판매했다."
+      ],
+      "articles": [
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "가짜 양주 먹인 손님 9시간 방치 사망…주점 업주 2명 실형"
+          ],
+          "links": [
+            "https://www.donga.com/news/Society/article/all/20260715/134306550/1"
+          ],
+          "title": "가짜 양주 먹인 손님 9시간 방치 사망…주점 업주 2명 실형",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134306550/1",
+          "keywords": [
+            "가짜 양주",
+            "후카시 양주",
+            "주점 업주",
+            "실형",
+            "유기치사",
+            "9시간 방치",
+            "급성 알코올중독"
+          ],
+          "people": [
+            "30대 손님",
+            "30대 업주",
+            "40대 업주",
+            "부산지법 형사5부(김현순 부장판사)"
+          ],
+          "focus": "업주 2명이 각각 징역 8년과 4년을 선고받은 형량을 구체적으로 보도했다.",
+          "expression_summary": "가짜 양주를 판매해 만취시킨 뒤 의식을 잃은 손님을 장시간 방치해 숨지게 한 사건을 설명하고 업주들의 유죄 및 형량 선고를 강조했다.",
+          "evidence_limit": "업주들이 가짜 양주를 만들게 된 구체적인 동기에 대한 정보가 제공되지 않았다."
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "'후카시 양주' 마시고 의식 잃었는데… 소파에 9시간 방치해 숨졌다"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659575&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "'후카시 양주' 마시고 의식 잃었는데… 소파에 9시간 방치해 숨졌다",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659575&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "가짜 양주",
+            "후카시 양주",
+            "주점 업주",
+            "실형",
+            "유기치사",
+            "소파 방치",
+            "의식 회복"
+          ],
+          "people": [
+            "30대 손님",
+            "업주 2명",
+            "부산지법 형사5부"
+          ],
+          "focus": "손님이 의식을 잃은 후 소파에 9시간 방치되어 숨진 사실에 초점을 맞췄다.",
+          "expression_summary": "손님이 가짜 양주를 마시고 의식을 잃은 뒤 소파에 9시간 방치되어 사망한 사건을 간결하게 서술했다.",
+          "evidence_limit": "부산지법 형사5부 판사의 구체적인 이름과 판결문 세부 내용이 제공되지 않았다."
+        }
+      ]
+    },
+    {
+      "issue_id": "match-34",
+      "category": "사회",
+      "title": "부산경찰청 소속 경찰관이 미성년자 준강간 혐의로 입건된 사건",
+      "summary": "부산경찰청 소속 경찰관이 미성년자를 상대로 성범죄를 저지른 혐의로 입건되어 조사받고 있으며, 해당 경찰관은 3년 전에도 불법촬영로 중징계를 받은 전력이 있다했다. 10대 여성과의 성관계 후 여성의 신고로 사건이 발생했고, 경찰은 진술 내용을 확인하고 있다이다.",
+      "common_facts": [
+        "부산경찰청 소속 경찰관이 미성년자를 상대로 성범죄를 저지른 혐의로 입건되어 조사받고 있다",
+        "해당 경찰관은 3년 전 휴대전화 카메라로 잠든 여성을 촬영한 혐의로 중징계를 받은 전력이 있다",
+        "부산 연제경찰서가 준강간 혐의로 경찰관을 입건했고 조사 중이다",
+        "15일 부산에서 10대 여성과의 성관계 후 여성의 신고로 사건이 발생했다",
+        "현재 제공된 자료만으로는 두 사람의 의식이 정상인지 여부를 명확히 알 수 없다"
+      ],
+      "articles": [
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "3년전 ‘불법촬영’ 중징계 경찰간부, 이번엔 미성년 성범죄 혐의 입건"
+          ],
+          "links": [
+            "https://www.donga.com/news/Society/article/all/20260715/134304915/1"
+          ],
+          "title": "3년전 ‘불법촬영’ 중징계 경찰간부, 이번엔 미성년 성범죄 혐의 입건",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134304915/1",
+          "keywords": [
+            "부산경찰청",
+            "경찰간부",
+            "불법촬영",
+            "중징계",
+            "미성년 성범죄",
+            "준강간",
+            "직위해제"
+          ],
+          "people": [
+            "김모 경감"
+          ],
+          "focus": "부산경찰청 소속 경찰관이 3년 전 불법촬영로 중징계를 받은 전력도 함께 강조하고 있다",
+          "expression_summary": "제목에 '3년전’과 ‘불법촬영’을 강조하여 과거 징계 전력을 부각했고, RSS 설명에서는 구체적인 범행 장소와 경위, 의식 상태 조사 방침을 서술했다",
+          "evidence_limit": "두 사람의 의식 상태 등에 대한 구체적 조사 결과는 현재 제공된 자료만으로 판단하기 어렵다"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "'성범죄 전력' 부산 경찰관, 이번엔 미성년자 준강간 혐의 입건"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659640&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "'성범죄 전력' 부산 경찰관, 이번엔 미성년자 준강간 혐의 입건",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659640&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "부산경찰청",
+            "성범죄 전력",
+            "미성년자",
+            "준강간",
+            "입건"
+          ],
+          "people": [
+            "부산경찰청 경찰관"
+          ],
+          "focus": "과거 성범죄 전력에 초점을 두고 현재 입건 사실을 보도하고 있다",
+          "expression_summary": "제목에 '성범죄 전력'을 강조하여 과거 징계 전력을 부각했고, RSS 설명에서는 '▲' 기호로 관련 기관 정보를 시작했다",
+          "evidence_limit": "두 사람의 의식 상태 등에 대한 구체적 조사 결과는 현재 제공된 자료만으로 판단하기 어렵다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-35",
+      "category": "사회",
+      "title": "영국 앤 공주의 고려대 방문 및 과학기술 연구 현장 점검",
+      "summary": "영국 찰스 3세 국왕의 동생 앤 공주가 고려대학교를 방문해 첨단 과학기술 연구 현장을 둘러보고 로봇 및 반도체 기술을 시찰했다.",
+      "common_facts": [
+        "영국 앤 공주가 서울 성북구 고려대학교를 방문했다",
+        "앤 공주가 로봇 연구 현장을 시찰했다",
+        "앤 공주가 반도체 기술 현장을 시찰했다",
+        "안현 SK하이닉스 사장이 현장을 소개했다"
+      ],
+      "articles": [
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "英 앤 공주, 고려대 방문…로봇·HBM 연구 현장 둘러봐"
+          ],
+          "links": [
+            "https://www.donga.com/news/Society/article/all/20260715/134304248/1"
+          ],
+          "title": "英 앤 공주, 고려대 방문…로봇·HBM 연구 현장 둘러봐",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134304248/1",
+          "keywords": [
+            "앤 공주",
+            "고려대",
+            "로봇",
+            "HBM",
+            "반도체",
+            "산학 협력"
+          ],
+          "people": [
+            "앤 공주",
+            "티머시 로런스",
+            "김서현",
+            "안현 SK하이닉스 사장"
+          ],
+          "focus": "앤 공주의 로봇 관절 제어 기술 관심 및 HBM 연구 현장 시찰",
+          "expression_summary": "앤 공주가 인간형 로봇 연구와 모션 캡처 환경을 둘러보고 김서현 씨와 기술 토론을 했으며 안현 SK하이닉스 사장이 HBM 실물 모형을 시연했다",
+          "evidence_limit": "기사 전체 내용이 제공되지 않아 앤 공주의 구체적인 발언 내용과 행사 전체 일정에 대한 정보가 제한적이다"
+        },
+        {
+          "publisher": "매일경제",
+          "article_count": 1,
+          "titles": [
+            "고려대 찾은 英 앤 공주 “IT기술 발전 놀라워…웨어러블 로봇 써보길 기대”"
+          ],
+          "links": [
+            "https://www.mk.co.kr/news/society/12099361"
+          ],
+          "title": "고려대 찾은 英 앤 공주 “IT기술 발전 놀라워…웨어러블 로봇 써보길 기대”",
+          "link": "https://www.mk.co.kr/news/society/12099361",
+          "keywords": [
+            "앤 공주",
+            "고려대",
+            "웨어러블 로봇",
+            "SK하이닉스",
+            "산학협력"
+          ],
+          "people": [
+            "앤 공주",
+            "티머시 로런스",
+            "안현 SK하이닉스 사장"
+          ],
+          "focus": "앤 공주의 IT기술 발전 평가 및 웨어러블 로봇 체험 기대 발언",
+          "expression_summary": "앤 공주가 IT기술 발전을 놀라워하며 웨어러블 로봇을 사용해볼 것을 기대했다는 발언이 강조되었다",
+          "evidence_limit": "기사 전체 내용이 제공되지 않아 앤 공주의 구체적인 발언 전후 맥락과 행사 전체 진행 상황에 대한 정보가 제한적이다"
+        }
+      ]
+    },
+    {
+      "issue_id": "match-36",
+      "category": "사회",
+      "title": "90대 노모 폭행 사망 사건 및 아들의 징역 5년 선고",
+      "summary": "60대 아들이 90대 노모를 폭행한 혐의로 부산지법에서 징역 5년을 선고받았다.",
+      "common_facts": [
+        "90대 노모를 폭행해 숨지게 한 60대 아들이 부산지법 형사5부에서 징역 5년을 선고받았다",
+        "아들이 노모의 대변 처리 과정에서 폭행하였고 이로 인해 양측 갈비뼈 다발성 골절 등의 상해를 입었다",
+        "노모는 다발성 근육 손상과 합병증으로 사망하였으며 아들은 응급조치를 취하지 않고 시신을 방치하였다"
+      ],
+      "articles": [
+        {
+          "publisher": "동아일보",
+          "article_count": 1,
+          "titles": [
+            "‘대변 실수’ 97세 노모 때려 숨지게 한 60대 아들 ‘징역 5년’"
+          ],
+          "links": [
+            "https://www.donga.com/news/Society/article/all/20260715/134302668/1"
+          ],
+          "title": "‘대변 실수’ 97세 노모 때려 숨지게 한 60대 아들 ‘징역 5년’",
+          "link": "https://www.donga.com/news/Society/article/all/20260715/134302668/1",
+          "keywords": [
+            "대변 실수",
+            "97세 노모",
+            "60대 아들",
+            "징역 5년",
+            "폭행",
+            "사망"
+          ],
+          "people": [
+            "A 씨",
+            "B 씨"
+          ],
+          "focus": "아들의 폭행으로 인한 노모의 사망과 응급조치 미이행 및 시신 방치에 중점을 두었다",
+          "expression_summary": "기사 제목은 '대변 실수'를 강조하였고 RSS 설명은 혐의 내용과 판결 사실을 서술했다",
+          "evidence_limit": "노모가 97세인지 90대인지에 대한 정확한 나이 차이와 사건의 구체적인 정황은 확인 어려웠다"
+        },
+        {
+          "publisher": "SBS",
+          "article_count": 1,
+          "titles": [
+            "'대변 실수' 90대 노모 때려 숨지게 한 아들 징역 5년 선고"
+          ],
+          "links": [
+            "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659682&plink=RSSLINK&cooper=RSSREADER"
+          ],
+          "title": "'대변 실수' 90대 노모 때려 숨지게 한 아들 징역 5년 선고",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008659682&plink=RSSLINK&cooper=RSSREADER",
+          "keywords": [
+            "대변 실수",
+            "90대 노모",
+            "아들",
+            "징역 5년",
+            "존속상해치사"
+          ],
+          "people": [
+            "A 씨",
+            "B 씨"
+          ],
+          "focus": "아들의 존속상해치사 혐의와 징역 5년 선고 사실에 초점을 두었다",
+          "expression_summary": "제목은 '대변 실수'를 언급하였고 RSS 설명은 혐의 내용과 판결 결과를 서술했다",
+          "evidence_limit": "노모의 정확한 나이와 아들의 구체적 정황, 응급조치 미이행 여부는 제한적이었다"
         }
       ]
     }
