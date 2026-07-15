@@ -2,13 +2,21 @@ let currentIssue = null;
 
 const SAVED_ISSUES_KEY = 'prism-saved-issues';
 
+function shuffleArray(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 // 뷰 스타일 상태 관리 (기본값은 'card')
 const viewModes = {
   liveNews: 'card',
   featured: 'card',
   saved: 'card'
 };
-
 // 뷰 토글 버튼 바인딩 함수
 function initViewToggles() {
   document.querySelectorAll('[data-view-toggle]').forEach(group => {
@@ -30,7 +38,6 @@ function initViewToggles() {
           viewModes.saved = selectedView;
           renderSaved();
         }
-
         // 활성화 스타일 클래스 업데이트
         buttons.forEach(b => {
           if (b === btn) {
@@ -411,7 +418,8 @@ async function renderLiveNews() {
       throw new Error(`HTTP 오류: ${response.status}`);
     }
 
-    const newsItems = await response.json();
+    const rawNewsItems = await response.json();
+    const newsItems = shuffleArray(rawNewsItems);
 
     const INITIAL_COUNT = 4; 
     let visibleCount = INITIAL_COUNT;
@@ -870,6 +878,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderLiveNews();
   renderIssuePage();
   renderFeaturedIssue();
+  initViewToggles();
 });
 
 // 로그인/회원가입 기능 바인딩
