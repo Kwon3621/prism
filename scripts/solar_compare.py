@@ -12,6 +12,8 @@ MATCHED_CLUSTERS_PATH = Path(
 OUTPUT_PATH = Path("data/issue.json")
 
 MODEL_NAME = "solar-pro3"
+REQUEST_TIMEOUT_SECONDS = 60
+MAX_RETRIES = 2
 
 
 def load_json(path):
@@ -149,6 +151,7 @@ def build_prompt(matched_issue):
 - 핵심 키워드와 주요 인물·기관은 제공된 자료에 등장한 것만
   사용하세요.
 - 모든 언론사를 빠짐없이 articles 배열에 포함하세요.
+- **[중요] 생성되는 모든 한국어 문장(summary, focus, expression_summary, evidence_limit 등)은 반드시 문장 끝을 '-했다.', '-이다.' 톤의 평서문으로 일관되게 종결하세요. (~하며, ~함, ~합니다, ~해요 등의 종결 어미는 절대 사용하지 마세요.)**
 - JSON 이외의 문장은 출력하지 마세요.
 
 반드시 아래 JSON 구조로만 답하세요.
@@ -157,9 +160,9 @@ def build_prompt(matched_issue):
   "issue_id": "{match_id}",
   "category": "{category}",
   "title": "모든 언론사의 기사를 아우르는 중립적인 사건 제목",
-  "summary": "사건의 공통 내용을 설명하는 1~2문장",
+  "summary": "사건의 공통 내용을 설명하는 1~2문장 (반드시 '-했다.', '-이다.'로 끝낼 것)",
   "common_facts": [
-    "여러 언론사 기사에서 공통으로 확인되는 사실"
+    "여러 언론사 기사에서 공통으로 확인되는 사실 (반드시 '-했다.', '-이다.'로 끝낼 것)"
   ],
   "articles": [
     {{
@@ -179,9 +182,9 @@ def build_prompt(matched_issue):
       "people": [
         "기사 묶음에 등장한 주요 인물 또는 기관"
       ],
-      "focus": "해당 언론사 기사 묶음에서 상대적으로 강조된 내용",
-      "expression_summary": "제목과 RSS 설명에서 확인되는 표현 방식",
-      "evidence_limit": "현재 제공된 자료만으로 판단하기 어려운 부분"
+      "focus": "해당 언론사 기사 묶음에서 상대적으로 강조된 내용 (반드시 '-했다.', '-이다.'로 끝낼 것)",
+      "expression_summary": "제목과 RSS 설명에서 확인되는 표현 방식 (반드시 '-했다.', '-이다.'로 끝낼 것)",
+      "evidence_limit": "현재 제공된 자료만으로 판단하기 어려운 부분 (반드시 '-했다.', '-이다.'로 끝낼 것)"
     }}
   ]
 }}
@@ -298,6 +301,55 @@ def complete_articles(result, matched_issue):
 
     return result
 
+def build_fallback_result(matched_issue, error_message):
+    """
+    Solar 재시도까지 모두 실패한 이슈를 원본 데이터로 보완한다.
+
+    언론사명, 기사 제목, 링크 등 원본 정보는 유지하고,
+    Solar 분석이 필요한 필드는 기본 안내 문구로 채운다.
+    """
+    match_id = matched_issue.get(
+        "match_id",
+        "match-unknown",
+    )
+
+    clusters = matched_issue.get(
+        "clusters",
+        [],
+    )
+
+    representative_title = next(
+        (
+            cluster.get("topic_title")
+            for cluster in clusters
+            if cluster.get("topic_title")
+        ),
+        "자동 분석에 실패한 이슈",
+    )
+
+    fallback_result = {
+        "issue_id": match_id,
+        "category": matched_issue.get(
+            "category",
+            "기타",
+        ),
+        "title": representative_title,
+        "summary": (
+            "Solar 분석 요청이 반복해서 실패하여 "
+            "원본 기사 정보만 표시합니다."
+        ),
+        "common_facts": [],
+        "articles": [],
+        "analysis_status": "fallback",
+        "analysis_error": str(error_message),
+    }
+
+    return complete_articles(
+        fallback_result,
+        matched_issue,
+    )
+
+
 def create_client():
     """
     환경변수에서 Upstage API 키를 읽고
@@ -350,6 +402,7 @@ def analyze_issue(
         response_format={
             "type": "json_object"
         },
+        timeout=REQUEST_TIMEOUT_SECONDS,
     )
 
     content = (
@@ -401,7 +454,25 @@ def analyze_issue(
         f"{returned_publishers}"
     )
 
+    missing_publishers = [
+        publisher
+        for publisher in expected_publishers
+        if publisher not in returned_publishers
+    ]
+
+    if missing_publishers:
+        print(
+            f"[경고] {match_id} Solar 누락 언론사: "
+            f"{missing_publishers}"
+        )
+    else:
+        print(
+            f"{match_id} 누락 언론사: 없음"
+        )
+
+
     # 모델이 값을 누락하더라도 기본 식별자는 유지한다.
+    result["issue_id"] = match_id
     result["category"] = result.get(
         "category"
     ) or matched_issue.get(
@@ -412,6 +483,23 @@ def analyze_issue(
     result = complete_articles(
         result,
         matched_issue,
+    )
+
+    final_publishers = [
+        article.get("publisher")
+        for article in result.get("articles", [])
+    ]
+
+    print(
+        f"{match_id} 최종 저장 언론사: "
+        f"{final_publishers}"
+    )
+
+    print(
+        f"{match_id} 처리 결과: "
+        f"원본 {len(expected_publishers)}개 / "
+        f"Solar {len(returned_publishers)}개 / "
+        f"최종 {len(final_publishers)}개"
     )
 
     print(f"분석 완료: {match_id}")
@@ -442,15 +530,120 @@ def main():
         f"{len(matched_issues)}개"
     )
 
-    results = []
+    results_by_id = {}
+    failed_issues = []
+    last_errors = {}
 
     for matched_issue in matched_issues:
-        result = analyze_issue(
-            client,
-            matched_issue,
+        match_id = matched_issue.get(
+            "match_id",
+            "match-unknown",
         )
 
-        results.append(result)
+        try:
+            result = analyze_issue(
+                client,
+                matched_issue,
+            )
+            results_by_id[match_id] = result
+
+        except Exception as error:
+            print(
+                f"[오류] {match_id} 1차 분석 실패: "
+                f"{error}"
+            )
+            print(
+                f"{match_id}를 재시도 목록에 추가합니다."
+            )
+
+            failed_issues.append(
+                matched_issue
+            )
+            last_errors[match_id] = error
+
+    for retry_number in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
+        if not failed_issues:
+            break
+
+        print(
+            f"\n실패 이슈 재시도 "
+            f"{retry_number}/{MAX_RETRIES}: "
+            f"{len(failed_issues)}개"
+        )
+
+        retry_targets = failed_issues
+        failed_issues = []
+
+        for matched_issue in retry_targets:
+            match_id = matched_issue.get(
+                "match_id",
+                "match-unknown",
+            )
+
+            try:
+                result = analyze_issue(
+                    client,
+                    matched_issue,
+                )
+                results_by_id[match_id] = result
+
+                print(
+                    f"{match_id} 재시도 성공"
+                )
+
+            except Exception as error:
+                print(
+                    f"[재시도 실패] {match_id}: "
+                    f"{error}"
+                )
+
+                failed_issues.append(
+                    matched_issue
+                )
+                last_errors[match_id] = error
+
+    if failed_issues:
+        print(
+            "\n최종 분석 실패 이슈를 "
+            "원본 데이터 기반 결과로 저장합니다."
+        )
+
+        for matched_issue in failed_issues:
+            match_id = matched_issue.get(
+                "match_id",
+                "match-unknown",
+            )
+
+            error = last_errors.get(
+                match_id,
+                "알 수 없는 오류",
+            )
+
+            fallback_result = build_fallback_result(
+                matched_issue,
+                error,
+            )
+
+            results_by_id[match_id] = (
+                fallback_result
+            )
+
+            print(
+                f"- {match_id}: fallback 저장 완료"
+            )
+
+    results = [
+        results_by_id[
+            matched_issue.get(
+                "match_id",
+                "match-unknown",
+            )
+        ]
+        for matched_issue in matched_issues
+    ]
 
     output_data = {
         "issues": results
@@ -472,10 +665,23 @@ def main():
             indent=2,
         )
 
+    fallback_count = sum(
+        1
+        for result in results
+        if result.get("analysis_status")
+        == "fallback"
+    )
+
     print(
         f"\n총 {len(results)}개 이슈의 "
         f"비교 분석 결과를 "
         f"{OUTPUT_PATH}에 저장했습니다."
+    )
+
+    print(
+        f"정상 분석: "
+        f"{len(results) - fallback_count}개 / "
+        f"fallback 저장: {fallback_count}개"
     )
 
 
