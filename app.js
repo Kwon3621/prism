@@ -2,6 +2,56 @@ let currentIssue = null;
 
 const SAVED_ISSUES_KEY = 'prism-saved-issues';
 
+// 뷰 스타일 상태 관리 (기본값은 'card')
+const viewModes = {
+  liveNews: 'card',
+  featured: 'card',
+  saved: 'card'
+};
+
+// 뷰 토글 버튼 바인딩 함수
+function initViewToggles() {
+  document.querySelectorAll('[data-view-toggle]').forEach(group => {
+    const sectionKey = group.dataset.viewToggle; // 'live-news', 'featured', 'saved'
+    const buttons = group.querySelectorAll('[data-view]');
+    
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedView = btn.dataset.view; // 'card' or 'list'
+        
+        // 상태 변경
+        if (sectionKey === 'live-news') {
+          viewModes.liveNews = selectedView;
+          renderLiveNews();
+        } else if (sectionKey === 'featured') {
+          viewModes.featured = selectedView;
+          renderFeaturedIssue();
+        } else if (sectionKey === 'saved') {
+          viewModes.saved = selectedView;
+          renderSaved();
+        }
+
+        // 활성화 스타일 클래스 업데이트
+        buttons.forEach(b => {
+          if (b === btn) {
+            b.classList.add('active');
+            b.style.background = '#fff';
+            b.style.color = '#333';
+            b.style.fontWeight = 'bold';
+            b.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+          } else {
+            b.classList.remove('active');
+            b.style.background = 'transparent';
+            b.style.color = '#666';
+            b.style.fontWeight = 'normal';
+            b.style.boxShadow = 'none';
+          }
+        });
+      });
+    });
+  });
+}
+
 function readSavedIssues() {
   try {
     return JSON.parse(localStorage.getItem(SAVED_ISSUES_KEY) || '[]');
@@ -220,7 +270,7 @@ async function renderSearchResults() {
   }
 }
 
-// 1. [내가 저장한 이슈] 렌더링 함수 - 더보기/줄이기 완벽 적용 및 괄호 에러 해결
+// 1. [내가 저장한 이슈] 렌더링 함수 - 더보기/줄이기
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
   if (!root) return; 
@@ -251,34 +301,67 @@ function renderSaved() {
     return;
   }
 
-  const INITIAL_COUNT = 4;
+  const INITIAL_COUNT = 3;
   if (typeof window.savedVisibleCount === 'undefined') {
     window.savedVisibleCount = INITIAL_COUNT;
   }
 
   const renderSavedCards = () => {
     const visibleSaved = saved.slice(0, window.savedVisibleCount);
+    const viewMode = viewModes.saved;
 
-    root.innerHTML = visibleSaved.map(item => `
-      <article class="card">
-        <span class="eyebrow">${item.category}</span>
-        <h3>${item.title}</h3>
-        <p>${item.summary}</p>
-        <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-          ${(item.tags || []).map(t => `<span class="badge blue">#${t}</span>`).join('')}
-        </div>
-        <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-          <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-          <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
-        </div>
-      </article>
-    `).join('');
+    // 뷰 모드 상태에 따라 CSS Grid / Flex 구조 조절
+    if (viewMode === 'list') {
+      root.style.display = "flex";
+      root.style.flexDirection = "column";
+      root.style.gap = "12px";
+
+      root.innerHTML = visibleSaved.map(item => `
+        <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; gap: 20px;">
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span class="eyebrow" style="margin: 0; font-size: 12px;">${item.category}</span>
+              <div class="meta" style="display: flex; gap: 4px;">
+                ${(item.tags || []).map(t => `<span class="badge blue" style="font-size: 11px; padding: 2px 6px;">#${t}</span>`).join('')}
+              </div>
+            </div>
+            <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</h3>
+            <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.summary}</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
+            <small style="color: #94a3b8; font-size: 12px; display: block; text-align: right;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
+            <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}" style="white-space: nowrap;">분석 보기</a>
+          </div>
+        </article>
+      `).join('');
+    } else {
+      // 기존 카드 뷰 레이아웃 복원
+      root.style.display = "grid";
+      root.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
+      root.style.gap = "24px";
+
+      root.innerHTML = visibleSaved.map(item => `
+        <article class="card">
+          <span class="eyebrow">${item.category}</span>
+          <h3>${item.title}</h3>
+          <p>${item.summary}</p>
+          <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
+            ${(item.tags || []).map(t => `<span class="badge blue">#${t}</span>`).join('')}
+          </div>
+          <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
+            <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
+          </div>
+        </article>
+      `).join('');
+    }
 
     // 더보기 / 줄이기 버튼 마크업
     if (saved.length > INITIAL_COUNT) {
       const wrapper = document.createElement("div");
       wrapper.className = "load-more-wrap";
       wrapper.style.gridColumn = "1 / -1";
+      wrapper.style.width = "100%";
       wrapper.style.textAlign = "center";
       wrapper.style.marginTop = "24px";
       wrapper.style.display = "flex";
@@ -290,7 +373,7 @@ function renderSaved() {
         loadMoreBtn.className = "btn btn-primary";
         loadMoreBtn.textContent = "더보기 ▾";
         loadMoreBtn.addEventListener("click", () => {
-          window.savedVisibleCount += 4;
+          window.savedVisibleCount += 3;
           renderSavedCards();
         });
         wrapper.appendChild(loadMoreBtn);
@@ -316,6 +399,7 @@ function renderSaved() {
 }
 
 // 2. [실시간 수집 뉴스] 렌더링 함수
+// 2. [실시간 수집 뉴스] 렌더링 함수
 async function renderLiveNews() {
   const root = document.querySelector("[data-live-news]");
   if (!root) return;
@@ -334,33 +418,48 @@ async function renderLiveNews() {
 
     function render() {
       const visibleNews = newsItems.slice(0, visibleCount);
+      const viewMode = viewModes.liveNews;
 
-      root.innerHTML = visibleNews
-        .map(
-          (item) => `
-        <article class="card">
-          <span class="eyebrow">${item.publisher}</span>
-          <h3>${item.title}</h3>
-          <p>${item.summary || item.description || ""}</p>
-          <div class="card-footer">
-            <small>RSS 수집 기사</small>
-            <a
-              class="btn btn-secondary"
-              href="${item.link}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              원문 보기
-            </a>
-          </div>
-        </article>
-      `
-        )
-        .join("");
+      if (viewMode === 'list') {
+        root.className = ""; // grid-2 클래스 제거
+        root.style.display = "flex";
+        root.style.flexDirection = "column";
+        root.style.gap = "12px";
+
+        root.innerHTML = visibleNews.map(item => `
+          <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 20px; gap: 16px;">
+            <div style="flex: 1; min-width: 0;">
+              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${item.publisher}</span>
+              <h3 style="font-size: 15px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${item.title}</h3>
+            </div>
+            <div style="flex-shrink: 0;">
+              <a class="btn btn-secondary btn-sm" href="${item.link}" target="_blank" rel="noopener noreferrer" style="white-space: nowrap; padding: 6px 12px; font-size: 13px;">
+                원문 보기
+              </a>
+            </div>
+          </article>
+        `).join("");
+      } else {
+        root.style.display = ""; // flex 제거
+        root.className = "grid-2"; // CSS grid 클래스 적용
+
+        root.innerHTML = visibleNews.map(item => `
+          <article class="card">
+            <span class="eyebrow">${item.publisher}</span>
+            <h3>${item.title}</h3>
+            <div class="card-footer" style="margin-top: auto; padding-top: 16px;">
+              <a class="btn btn-secondary" href="${item.link}" target="_blank" rel="noopener noreferrer">
+                원문 보기
+              </a>
+            </div>
+          </article>
+        `).join("");
+      }
 
       if (newsItems.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
+        wrapper.style.width = "100%";
         wrapper.style.gridColumn = "1 / -1";
         wrapper.style.textAlign = "center";
         wrapper.style.marginTop = "24px";
@@ -543,6 +642,7 @@ async function renderIssuePage() {
 }
 
 // 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
+// 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
   if (!root) return;
@@ -566,31 +666,57 @@ async function renderFeaturedIssue() {
       return;
     }
 
-    const INITIAL_COUNT = 4;
+    const INITIAL_COUNT = 3;
     if (typeof window.featuredVisibleCount === 'undefined') {
       window.featuredVisibleCount = INITIAL_COUNT;
     }
 
     const renderFeaturedCards = () => {
       const visibleIssues = issues.slice(0, window.featuredVisibleCount);
+      const viewMode = viewModes.featured;
 
-      root.innerHTML = visibleIssues.map(issue => `
-        <article class="card">
-          <span class="eyebrow">${issue.category}</span>
-          <h3>${issue.title}</h3>
-          <p>${issue.summary}</p>
-          <div class="card-footer">
-            <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
-              프레임 비교 보기
-            </a>
-          </div>
-        </article>
-      `).join("");
-        
+      if (viewMode === 'list') {
+        root.className = "";
+        root.style.display = "flex";
+        root.style.flexDirection = "column";
+        root.style.gap = "12px";
+
+        root.innerHTML = visibleIssues.map(issue => `
+          <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; gap: 16px;">
+            <div style="flex: 1; min-width: 0;">
+              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${issue.category}</span>
+              <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${issue.title}</h3>
+              <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${issue.summary}</p>
+            </div>
+            <div style="flex-shrink: 0;">
+              <a class="btn btn-primary btn-sm" href="issue.html?id=${issue.issue_id}" style="white-space: nowrap;">
+                프레임 비교 보기
+              </a>
+            </div>
+          </article>
+        `).join("");
+      } else {
+        root.style.display = "";
+        root.className = "grid-3";
+
+        root.innerHTML = visibleIssues.map(issue => `
+          <article class="card">
+            <span class="eyebrow">${issue.category}</span>
+            <h3>${issue.title}</h3>
+            <p>${issue.summary}</p>
+            <div class="card-footer">
+              <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
+                프레임 비교 보기
+              </a>
+            </div>
+          </article>
+        `).join("");
+      }
 
       if (issues.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
+        wrapper.style.width = "100%";
         wrapper.style.gridColumn = "1 / -1";
         wrapper.style.textAlign = "center";
         wrapper.style.marginTop = "24px";
@@ -603,7 +729,7 @@ async function renderFeaturedIssue() {
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
           loadMoreBtn.addEventListener("click", () => {
-            window.featuredVisibleCount += 4;
+            window.featuredVisibleCount += 3;
             renderFeaturedCards();
           });
           wrapper.appendChild(loadMoreBtn);
@@ -650,14 +776,24 @@ async function renderSearchSuggestions() {
 
     const data = await response.json();
 
-    const keywords = (data.issues || [])
-      .flatMap(issue =>
-        (issue.articles || []).flatMap(article => article.keywords || [])
-      )
-      .map(keyword => String(keyword).trim())
-      .filter(Boolean);
+    const usedKeywords = new Set();
+    const uniqueKeywords = [];
 
-    const uniqueKeywords = [...new Set(keywords)].slice(0, 3);
+    for (const issue of (data.issues || [])) {
+      const issueKeywords = (issue.articles || [])
+        .flatMap(article => article.keywords || [])
+        .map(keyword => String(keyword).trim())
+        .filter(Boolean);
+
+      const pick = issueKeywords.find(keyword => !usedKeywords.has(keyword));
+
+      if (pick) {
+        usedKeywords.add(pick);
+        uniqueKeywords.push(pick);
+      }
+
+      if (uniqueKeywords.length >= 3) break;
+    }
 
     if (!uniqueKeywords.length) {
       targets.forEach(target => {
@@ -702,6 +838,7 @@ async function renderSearchSuggestions() {
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
+  initViewToggles(); // 뷰 토글 제어 초기화 추가!
   initSaveButtons();
   initShare();
   renderSearchResults();
