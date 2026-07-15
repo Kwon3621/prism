@@ -398,7 +398,25 @@ function renderSaved() {
   renderSavedCards();
 }
 
-// 2. [실시간 수집 뉴스] 렌더링 함수
+function formatPublishedTime(value) {
+  if (!value) return '발행 시간 정보 없음';
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return '발행 시간 정보 없음';
+  }
+
+  return date.toLocaleString('ko-KR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
+
 // 2. [실시간 수집 뉴스] 렌더링 함수
 async function renderLiveNews() {
   const root = document.querySelector("[data-live-news]");
@@ -431,7 +449,10 @@ async function renderLiveNews() {
             <div style="flex: 1; min-width: 0;">
               <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${item.publisher}</span>
               <h3 style="font-size: 15px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${item.title}</h3>
-            </div>
+              <small class="live-news-time">
+                ${formatPublishedTime(item.published)}
+              </small>
+              </div>
             <div style="flex-shrink: 0;">
               <a class="btn btn-secondary btn-sm" href="${item.link}" target="_blank" rel="noopener noreferrer" style="white-space: nowrap; padding: 6px 12px; font-size: 13px;">
                 원문 보기
@@ -447,6 +468,11 @@ async function renderLiveNews() {
           <article class="card">
             <span class="eyebrow">${item.publisher}</span>
             <h3>${item.title}</h3>
+
+            <small class="live-news-time">
+              ${formatPublishedTime(item.published)}
+            </small>
+            
             <div class="card-footer" style="margin-top: auto; padding-top: 16px;">
               <a class="btn btn-secondary" href="${item.link}" target="_blank" rel="noopener noreferrer">
                 원문 보기
@@ -508,6 +534,27 @@ async function renderLiveNews() {
       </div>
     `;
   }
+}
+
+function resizeMediaCards() {
+  const grid = document.querySelector('[data-issue-articles]');
+
+  if (!grid) return;
+
+  const rowHeight = 8;
+  const rowGap = 0;
+
+  grid.querySelectorAll('.media-card').forEach(card => {
+    card.style.gridRowEnd = '';
+
+    const cardHeight = card.getBoundingClientRect().height;
+
+    const rowSpan = Math.ceil(
+      (cardHeight + rowGap) / (rowHeight + rowGap)
+    );
+
+    card.style.gridRowEnd = `span ${rowSpan}`;
+  });
 }
 
 // 3. [이슈 비교 결과 페이지] 렌더링 함수
@@ -578,9 +625,18 @@ async function renderIssuePage() {
 
     articlesRoot.innerHTML = (data.articles || []).map(article => `
       <article class="card media-card">
-        <div class="media-name">
-          <strong>${article.publisher}</strong>
-        </div>
+        <button class="media-toggle" type="button">
+          <span class="media-toggle-title">
+            <strong>${article.publisher}</strong>
+            <span class="article-count">
+              ${article.article_count || article.titles?.length || 1}개 기사
+            </span>
+          </span>
+
+          <span class="media-toggle-icon" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="media-content">
 
         <div class="compare-block">
           <span class="compare-label">핵심 키워드</span>
@@ -614,8 +670,90 @@ async function renderIssuePage() {
           <span class="compare-label">분석 한계</span>
           <p class="compare-text">${article.evidence_limit || ''}</p>
         </div>
+
+        <div class="compare-block source-block">
+          <span class="compare-label">분석 대상 원문 기사</span>
+
+          <ol class="source-list">
+            ${((article.titles && article.titles.length)
+                ? article.titles
+                : [article.title]
+              ).map((title, index) => {
+
+                const link =
+                  (article.links && article.links[index]) ||
+                  article.link ||
+                  '#';
+
+                const published =
+                  (article.published_times &&
+                  article.published_times[index])
+                    ? article.published_times[index]
+                    : '';
+
+                return `
+                  <li>
+                    <a
+                      href="${link}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ${title}
+                    </a>
+
+                    <div class="article-time">
+                      🕒 ${
+                        published
+                          ? new Date(published).toLocaleString(
+                              'ko-KR',
+                              {
+                                year: 'numeric',
+                                month: '2-digit',
+                                day: '2-digit',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                              }
+                            )
+                          : '발행 시간 정보 없음'
+                      }
+                    </div>
+                  </li>
+                `;
+              }).join('')}
+          </ol> 
+      </div>
+
+      </div>
+
       </article>
     `).join('');
+
+    articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const card = toggle.closest('.media-card');
+    
+        if (!card) return;
+    
+        const isOpen = card.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+
+        requestAnimationFrame(resizeMediaCards);
+      });
+    });
+    
+    const firstCard = articlesRoot.querySelector('.media-card');
+    
+    if (firstCard) {
+      firstCard.classList.add('open');
+    
+      const firstToggle = firstCard.querySelector('.media-toggle');
+    
+      if (firstToggle) {
+        firstToggle.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    requestAnimationFrame(resizeMediaCards);
 
     const sourcesRoot = document.querySelector('[data-issue-sources]');
 
@@ -1007,4 +1145,8 @@ window.addEventListener('storage', event => {
     renderSaved();
     syncSaveButtons();
   }
+});
+
+window.addEventListener('resize', () => {
+  requestAnimationFrame(resizeMediaCards);
 });

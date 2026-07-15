@@ -151,6 +151,8 @@ def build_prompt(matched_issue):
 - 핵심 키워드와 주요 인물·기관은 제공된 자료에 등장한 것만
   사용하세요.
 - 모든 언론사를 빠짐없이 articles 배열에 포함하세요.
+- published_times 배열은 titles, links 배열과 같은 기사 순서를 유지하세요.
+- 발행 시간이 없는 기사는 published_times에 빈 문자열("")을 사용하세요.
 - **[중요] 생성되는 모든 한국어 문장(summary, focus, expression_summary, evidence_limit 등)은 반드시 문장 끝을 '-했다.', '-이다.' 톤의 평서문으로 일관되게 종결하세요. (~하며, ~함, ~합니다, ~해요 등의 종결 어미는 절대 사용하지 마세요.)**
 - JSON 이외의 문장은 출력하지 마세요.
 
@@ -173,6 +175,9 @@ def build_prompt(matched_issue):
       ],
       "links": [
         "해당 기사 원문 링크"
+      ],
+      "published_times": [
+        "해당 기사 발행 시간. 정보가 없으면 빈 문자열"
       ],
       "title": "대표 기사 제목 또는 대표 제목",
       "link": "대표 기사 원문 링크",
@@ -331,16 +336,25 @@ def complete_articles(result, matched_issue):
             [],
         )
 
-        titles = [
-            article.get("title", "")
+        valid_articles = [
+            article
             for article in original_articles
             if article.get("title")
         ]
 
+        titles = [
+            article.get("title", "")
+            for article in valid_articles
+        ]
+
         links = [
             article.get("link", "")
-            for article in original_articles
-            if article.get("link")
+            for article in valid_articles
+        ]
+
+        published_times = [
+            article.get("published", "")
+            for article in valid_articles
         ]
 
         solar_article = solar_by_publisher.get(
@@ -356,6 +370,7 @@ def complete_articles(result, matched_issue):
                 ),
                 "titles": titles,
                 "links": links,
+                "published_times": published_times,
                 "title": (
                     titles[0]
                     if titles
