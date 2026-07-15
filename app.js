@@ -406,7 +406,6 @@ function renderSaved() {
 }
 
 // 2. [실시간 수집 뉴스] 렌더링 함수
-// 2. [실시간 수집 뉴스] 렌더링 함수
 async function renderLiveNews() {
   const root = document.querySelector("[data-live-news]");
   if (!root) return;
@@ -421,15 +420,87 @@ async function renderLiveNews() {
     const rawNewsItems = await response.json();
     const newsItems = shuffleArray(rawNewsItems);
 
-    const INITIAL_COUNT = 4; 
+    const INITIAL_COUNT = 4;
     let visibleCount = INITIAL_COUNT;
 
+    // 1. 뉴스 데이터에서 언론사 목록 중복 없이 추출
+    const publishers = [...new Set(newsItems.map(item => item.publisher))];
+
+    // 2. 선택된 언론사 상태 관리 (기본값: 전체 선택)
+    let selectedPublishers = new Set(publishers);
+
+    // 3. 사이드바에 체크박스 렌더링
+    function renderPublisherFilters() {
+      const filterRoot = document.querySelector('[data-publisher-checkboxes]');
+      if (!filterRoot) return;
+
+      filterRoot.innerHTML = publishers.map(publisher => `
+        <label class="filter-checkbox-item">
+          <input type="checkbox" value="${publisher}" checked data-publisher-checkbox>
+          <span>${publisher}</span>
+        </label>
+      `).join('');
+
+      const checkboxes = filterRoot.querySelectorAll('[data-publisher-checkbox]');
+
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            selectedPublishers.add(checkbox.value);
+          } else {
+            selectedPublishers.delete(checkbox.value);
+          }
+          visibleCount = INITIAL_COUNT; // 필터 바뀌면 더보기 상태 초기화
+          render();
+        });
+      });
+
+      // 전체 선택 / 전체 해제 버튼
+      const selectAllBtn = document.querySelector('[data-select-all]');
+      const deselectAllBtn = document.querySelector('[data-deselect-all]');
+
+      if (selectAllBtn) {
+        selectAllBtn.addEventListener('click', () => {
+          selectedPublishers = new Set(publishers);
+          checkboxes.forEach(checkbox => { checkbox.checked = true; });
+          visibleCount = INITIAL_COUNT;
+          render();
+        });
+      }
+
+      if (deselectAllBtn) {
+        deselectAllBtn.addEventListener('click', () => {
+          selectedPublishers = new Set();
+          checkboxes.forEach(checkbox => { checkbox.checked = false; });
+          visibleCount = INITIAL_COUNT;
+          render();
+        });
+      }
+    }
+    
     function render() {
-      const visibleNews = newsItems.slice(0, visibleCount);
+      // 4. 선택된 언론사만 필터링
+      const filteredNews = newsItems.filter(item =>
+        selectedPublishers.has(item.publisher)
+      );
+      const visibleNews = filteredNews.slice(0, visibleCount);
       const viewMode = viewModes.liveNews;
 
+      // 5. 필터 결과가 하나도 없을 때 처리
+      if (!filteredNews.length) {
+        root.className = "";
+        root.style.display = "";
+        root.innerHTML = `
+          <div class="empty-state">
+            <h3>선택한 언론사의 뉴스가 없습니다.</h3>
+            <p>다른 언론사를 선택해 보세요.</p>
+          </div>
+        `;
+        return;
+      }
+
       if (viewMode === 'list') {
-        root.className = ""; // grid-2 클래스 제거
+        root.className = "";
         root.style.display = "flex";
         root.style.flexDirection = "column";
         root.style.gap = "12px";
@@ -448,8 +519,8 @@ async function renderLiveNews() {
           </article>
         `).join("");
       } else {
-        root.style.display = ""; // flex 제거
-        root.className = "grid-2"; // CSS grid 클래스 적용
+        root.style.display = "";
+        root.className = "grid-2";
 
         root.innerHTML = visibleNews.map(item => `
           <article class="card">
@@ -464,7 +535,8 @@ async function renderLiveNews() {
         `).join("");
       }
 
-      if (newsItems.length > INITIAL_COUNT) {
+      // 6. 더보기/줄이기 기준을 filteredNews.length로 변경
+      if (filteredNews.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
         wrapper.style.width = "100%";
@@ -475,16 +547,16 @@ async function renderLiveNews() {
         wrapper.style.justifyContent = "center";
         wrapper.style.gap = "12px";
 
-        if (visibleCount < newsItems.length) {
+        if (visibleCount < filteredNews.length) {
           const loadMoreBtn = document.createElement("button");
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
-          
+
           loadMoreBtn.addEventListener("click", () => {
             visibleCount += 4;
             render();
           });
-          
+
           wrapper.appendChild(loadMoreBtn);
         }
 
@@ -492,13 +564,13 @@ async function renderLiveNews() {
           const shrinkBtn = document.createElement("button");
           shrinkBtn.className = "btn btn-secondary";
           shrinkBtn.textContent = "줄이기 ▴";
-          
+
           shrinkBtn.addEventListener("click", () => {
             visibleCount = INITIAL_COUNT;
             render();
             root.scrollIntoView({ behavior: "smooth", block: "start" });
           });
-          
+
           wrapper.appendChild(shrinkBtn);
         }
 
@@ -506,6 +578,7 @@ async function renderLiveNews() {
       }
     }
 
+    renderPublisherFilters();
     render();
   } catch (error) {
     console.error(error);

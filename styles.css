@@ -551,3 +551,27 @@ img { max-width: 100%; display: block; }
     position: static;
   }
 }
+
+.filter-actions {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.filter-action-btn {
+  flex: 1;
+  padding: 6px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .15s ease;
+}
+
+.filter-action-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}

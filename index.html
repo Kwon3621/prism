@@ -79,11 +79,15 @@
 
     <div class="live-news-layout">
       <aside class="live-news-sidebar">
-        <h3 class="filter-title">언론사 필터</h3>
-        <div class="filter-checkbox-list" data-publisher-checkboxes>
-          <!-- 체크박스는 app.js에서 자동으로 생성됩니다 -->
-        </div>
-      </aside>
+      <h3 class="filter-title">언론사 필터</h3>
+      <div class="filter-actions">
+        <button type="button" class="filter-action-btn" data-select-all>전체 선택</button>
+        <button type="button" class="filter-action-btn" data-deselect-all>전체 해제</button>
+      </div>
+      <div class="filter-checkbox-list" data-publisher-checkboxes>
+        <!-- 체크박스는 app.js에서 자동으로 생성됩니다 -->
+      </div>
+    </aside>
 
       <div class="live-news-main">
         <div id="live-news-container" data-live-news>
