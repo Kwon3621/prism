@@ -11,11 +11,46 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
-    <nav class="nav" data-nav aria-label="주요 메뉴">
-      <a href="index.html#live-news">이슈 둘러보기</a>
-      <a href="#topics">이슈 비교하기</a>
-      <a href="index.html#saved-section">저장한 이슈</a>
-      <a href="index.html#how-it-works">분석 방식</a>
+    <nav class="nav nav-dropdown" data-nav aria-label="주요 메뉴">
+
+      <div class="nav-item-dropdown">
+        <button type="button" class="nav-dropdown-toggle">
+          사이트 설명
+          <span aria-hidden="true">▾</span>
+        </button>
+    
+        <div class="nav-dropdown-menu">
+          <a href="./how-it-works.html">비교 과정</a>
+          <a href="./features.html">비교 요소</a>
+          <a href="./principles.html">분석 원칙</a>
+          <a href="./methodology.html">분석 방식</a>
+        </div>
+      </div>
+    
+      <div class="nav-item-dropdown">
+        <button type="button" class="nav-dropdown-toggle">
+          이슈 둘러보기
+          <span aria-hidden="true">▾</span>
+        </button>
+    
+        <div class="nav-dropdown-menu">
+          <a href="./index.html#live-news">실시간 뉴스</a>
+          <a href="./index.html#saved-section">저장한 이슈</a>
+        </div>
+      </div>
+    
+      <div class="nav-item-dropdown">
+        <button type="button" class="nav-dropdown-toggle">
+          이슈 비교하기
+          <span aria-hidden="true">▾</span>
+        </button>
+    
+        <div class="nav-dropdown-menu">
+          <a href="./index.html#topics">주요 이슈 비교</a>
+          <a href="./search.html">키워드 검색</a>
+        </div>
+      </div>
+    
     </nav>
     <div class="header-actions">
       <button class="btn btn-secondary" id="btn-login-nav">로그인</button>
@@ -79,15 +114,24 @@
 
     <div class="live-news-layout">
       <aside class="live-news-sidebar">
-      <h3 class="filter-title">언론사 필터</h3>
-      <div class="filter-actions">
-        <button type="button" class="filter-action-btn" data-select-all>전체 선택</button>
-        <button type="button" class="filter-action-btn" data-deselect-all>전체 해제</button>
-      </div>
-      <div class="filter-checkbox-list" data-publisher-checkboxes>
-        <!-- 체크박스는 app.js에서 자동으로 생성됩니다 -->
-      </div>
-    </aside>
+        <div class="filter-control-group">
+          <h3 class="filter-title">언론사 필터</h3>
+      
+          <div class="filter-actions">
+            <button type="button" class="filter-action-btn" data-select-all>
+              전체 선택
+            </button>
+      
+            <button type="button" class="filter-action-btn" data-deselect-all>
+              전체 해제
+            </button>
+          </div>
+        </div>
+      
+        <div class="filter-checkbox-list" data-publisher-checkboxes>
+          <!-- 체크박스는 app.js에서 자동 생성됩니다 -->
+        </div>
+      </aside>
 
       <div class="live-news-main">
         <div id="live-news-container" data-live-news>
