@@ -11,6 +11,20 @@ function shuffleArray(array) {
   return result;
 }
 
+// 언론사 아코디언 카드의 실제 높이를 측정해 masonry 그리드의 grid-row span을 계산합니다.
+// styles.css의 [data-issue-articles] { grid-auto-rows: 8px } 값과 반드시 일치해야 합니다.
+function layoutMediaMasonry() {
+  const container = document.querySelector('[data-issue-articles]');
+  if (!container) return;
+
+  const rowHeight = 8;
+  container.querySelectorAll('.media-card').forEach(card => {
+    const height = card.getBoundingClientRect().height;
+    const span = Math.ceil(height / rowHeight);
+    card.style.gridRowEnd = `span ${span}`;
+  });
+}
+
 // 뷰 스타일 상태 관리 (기본값은 'card')
 const viewModes = {
   liveNews: 'card',
@@ -702,172 +716,127 @@ async function renderIssuePage() {
     document.querySelector('[data-issue-summary]').textContent =
       data.summary || '';
 
-    const commonFacts = document.querySelector('[data-common-facts]');
-    commonFacts.innerHTML = `
-      <strong>공통으로 확인된 사실</strong><br>
-      ${(data.common_facts || []).join('<br>')}
-    `;
+      const commonFacts = document.querySelector('[data-common-facts]');
+      commonFacts.innerHTML = `
+        <strong>공통으로 확인된 사실</strong>
+        <ul class="common-facts-list" style="margin: 10px 0 0 0; padding-left: 20px; line-height: 1.6;">
+          ${(data.common_facts || []).map(fact => `<li style="margin-bottom: 6px;">${fact}</li>`).join('')}
+        </ul>
+      `;
 
+      const summaryRoot = document.querySelector('[data-media-summary-grid]');
     const articlesRoot = document.querySelector('[data-issue-articles]');
 
-// 최신 클러스터 데이터를 바탕으로 언론사별 카드를 생성한다.
+    // 1) 언론사별 강조 포인트 요약 (2행 3열, 아코디언 카드와는 완전히 별도 컨테이너)
+    if (summaryRoot) {
+      summaryRoot.innerHTML = mediaClusters.map(cluster => {
+        const topKeyword =
+          (cluster.keywords && cluster.keywords[0]) ||
+          (cluster.focus ? cluster.focus.slice(0, 12) : '핵심 내용');
 
-        // 최신 클러스터 데이터를 바탕으로 언론사별 카드를 생성한다.
-    articlesRoot.innerHTML = mediaClusters.map(cluster => {
-      const clusteredArticles =
-        Array.isArray(cluster.articles) && cluster.articles.length
-          ? cluster.articles
-          : cluster.title && cluster.link
-            ? [{
-                title: cluster.title,
-                link: cluster.link,
-                published: cluster.published || ''
-              }]
-            : [];
+        return `
+          <div class="summary-chip">
+            <strong>${cluster.publisher}</strong>
+            <span class="badge blue">${topKeyword} 강조</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // 2) 언론사별 상세 아코디언 카드 (styles.css의 masonry 구조에 맞춘 마크업)
+    articlesRoot.innerHTML = mediaClusters.map((cluster, index) => {
+      const clusteredArticles = cluster.articles ||
+                                (cluster.title && cluster.link ? [{ title: cluster.title, link: cluster.link }] : []);
 
       return `
-        <article class="card media-card">
-          <button
-            class="media-toggle"
-            type="button"
-            aria-expanded="false"
-          >
-            <span class="media-toggle-title">
-              <strong>${cluster.publisher}</strong>
-
-              <span class="article-count">
-                ${clusteredArticles.length}개 기사
-              </span>
+      <article class="card media-card${index === 0 ? ' open' : ''}">
+        <button type="button" class="media-toggle">
+          <span class="media-toggle-title">
+            <strong>${cluster.publisher}</strong>
+            <span style="font-size: 11px; background: #eff6ff; color: #2563eb; padding: 3px 10px; border-radius: 99px; font-weight: bold; border: 1px solid #dbeafe;">
+              ${clusteredArticles.length}개 기사 분석됨
             </span>
+          </span>
+          <span class="media-toggle-icon">⌄</span>
+        </button>
 
-            <span
-              class="media-toggle-icon"
-              aria-hidden="true"
-            >
-              ⌄
-            </span>
-          </button>
+        <div class="media-content">
+          <div class="compare-block">
+            <span class="compare-label">대표 토픽</span>
+            <p class="compare-text" style="font-weight: 600; color: #334155;">${cluster.topic_title || cluster.title || '주제 요약 없음'}</p>
+          </div>
 
-          <div class="media-content">
-            <div class="compare-block">
-              <span class="compare-label">대표 토픽</span>
-              <p class="compare-text">
-                ${cluster.topic_title || cluster.title || '주제 요약 없음'}
-              </p>
-            </div>
-
-            <div class="compare-block">
-              <span class="compare-label">핵심 키워드</span>
-
-              <div class="meta">
-                ${
-                  (cluster.keywords || []).length
-                    ? (cluster.keywords || []).map(keyword =>
-                        `<span class="badge blue">${keyword}</span>`
-                      ).join('')
-                    : `
-                      <span
-                        style="color: #94a3b8; font-size: 13px;"
-                      >
-                        추출된 키워드 없음
-                      </span>
-                    `
-                }
-              </div>
-            </div>
-
-            <div class="compare-block">
-              <span class="compare-label">주요 인물 및 기관</span>
-
-              <div class="meta">
-                ${
-                  (cluster.people || []).length
-                    ? (cluster.people || []).map(person =>
-                        `<span class="badge purple">${person}</span>`
-                      ).join('')
-                    : `
-                      <span
-                        style="color: #94a3b8; font-size: 13px;"
-                      >
-                        추출된 인물 정보 없음
-                      </span>
-                    `
-                }
-              </div>
-            </div>
-
-            <div class="compare-block">
-              <span class="compare-label">강조된 내용</span>
-
-              <p class="compare-text">
-                ${cluster.focus || '명확한 차이를 확인하기 어려움'}
-              </p>
-            </div>
-
-            <div class="compare-block">
-              <span class="compare-label">표현 요약</span>
-
-              <p class="compare-text">
-                ${cluster.expression_summary || '명확한 차이를 확인하기 어려움'}
-              </p>
-            </div>
-
-            <div class="compare-block">
-              <span class="compare-label">분석 한계</span>
-
-              <p class="compare-text">
-                ${cluster.evidence_limit || '현재 제공된 자료만으로 구체적인 차이를 판단하기 어려움'}
-              </p>
-            </div>
-
-            <div class="compare-block source-block">
-              <span class="compare-label">
-                분석 대상 원문 기사
-              </span>
-
-              ${
-                clusteredArticles.length
-                  ? `
-                    <ol class="source-list">
-                      ${clusteredArticles.map(article => {
-                        const published =
-                          article.published ||
-                          article.published_at ||
-                          '';
-
-                        return `
-                          <li>
-                            <a
-                              href="${article.link || '#'}"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              ${article.title || '기사 제목 없음'}
-                            </a>
-
-                            <div class="article-time">
-                              🕒 ${
-                                published
-                                  ? formatPublishedTime(published)
-                                  : '발행 시간 정보 없음'
-                              }
-                            </div>
-                          </li>
-                        `;
-                      }).join('')}
-                    </ol>
-                  `
-                  : `
-                    <p class="compare-text">
-                      포함된 원문 기사가 없습니다.
-                    </p>
-                  `
-              }
+          <div class="compare-block">
+            <span class="compare-label">핵심 키워드</span>
+            <div class="meta">
+              ${(cluster.keywords || []).map(keyword =>
+                `<span class="badge blue">${keyword}</span>`
+              ).join('')}
+              ${(cluster.keywords || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 키워드 없음</span>' : ''}
             </div>
           </div>
-        </article>
-      `;
+
+          <div class="compare-block">
+            <span class="compare-label">주요 인물 및 기관</span>
+            <div class="meta">
+              ${(cluster.people || []).map(person =>
+                `<span class="badge purple">${person}</span>`
+              ).join('')}
+              ${(cluster.people || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 인물 정보 없음</span>' : ''}
+            </div>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">강조된 내용 / 프레임</span>
+            <p class="compare-text">${cluster.focus || '실시간 기사 수집 및 클러스터 구성 단계입니다.'}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">표현 요약</span>
+            <p class="compare-text">${cluster.expression_summary || '분석 진행 중'}</p>
+          </div>
+
+          <div class="compare-block">
+            <span class="compare-label">분석 한계</span>
+            <p class="compare-text">${cluster.evidence_limit || '수집 자료 분석 중'}</p>
+          </div>
+
+          <div class="compare-block source-links-block" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #e2e8f0;">
+            <span class="compare-label" style="display: block; font-weight: bold; font-size: 12px; color: #475569; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
+              분석 대상 원문 기사 리스트
+            </span>
+            <div class="source-links-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px;">
+              ${clusteredArticles.length > 0 ? clusteredArticles.map((article, idx) => `
+                <div style="display: flex; align-items: flex-start; gap: 6px; font-size: 13px; line-height: 1.4;">
+                  <span style="color: #3b82f6; font-weight: bold; flex-shrink: 0; min-width: 14px;">${idx + 1}.</span>
+                  
+                    href="${article.link}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="color: #2563eb; text-decoration: none; font-weight: 500; word-break: break-all;"
+                  >
+                    ${article.title}
+                  </a>
+                </div>
+              `).join('') : '<p style="font-size: 12px; color: #94a3b8; margin: 0;">포함된 원문 기사가 없습니다.</p>'}
+            </div>
+          </div>
+        </div>
+      </article>
+    `;
     }).join('');
+
+    // 3) 아코디언 열기/닫기 바인딩 + 열고 닫을 때마다 masonry 재계산
+    articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.closest('.media-card').classList.toggle('open');
+        requestAnimationFrame(layoutMediaMasonry);
+      });
+    });
+
+    // 4) 최초 렌더 후 masonry 계산 (레이아웃이 실제로 그려진 뒤 높이를 재야 하므로 rAF 사용)
+    requestAnimationFrame(layoutMediaMasonry);
+    window.addEventListener('resize', layoutMediaMasonry);
 
     articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
