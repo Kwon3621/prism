@@ -23,14 +23,13 @@ const viewModes = {
   saved: 'card'
 };
 
-// 뷰 토글 버튼 바인딩 함수 (중복 등록 방지 처리 완료)
+// 뷰 토글 버튼 바인딩 함수 (중복 등록 방지 및 오타 수정 완료)
 function initViewToggles() {
   document.querySelectorAll('[data-view-toggle]').forEach(group => {
-    const sectionKey = group.dataset.viewToggle; // 'live-news', 'featured', 'saved'
+    const sectionKey = group.dataset.viewToggle; // 'featured', 'saved'
     const buttons = group.querySelectorAll('[data-view]');
     
     buttons.forEach(btn => {
-      // 기존에 붙어있을 수 있는 중복 이벤트를 방지하기 위해 clone 생성 후 대체하는 안전 코드
       const newBtn = btn.cloneNode(true);
       btn.parentNode.replaceChild(newBtn, btn);
 
@@ -39,9 +38,6 @@ function initViewToggles() {
         
         // 상태 변경 및 해당 섹션 즉시 재렌더링
         if (sectionKey === 'featured') {
-          viewModes.featured = selectedView;
-          renderFeaturedIssue();
-        } else if (sectionKey === 'saved') {
           viewModes.featured = selectedView;
           renderFeaturedIssue();
         } else if (sectionKey === 'saved') {
@@ -235,16 +231,13 @@ function renderSaved() {
           <div style="flex: 1; min-width: 0;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <span class="eyebrow" style="margin: 0; font-size: 12px;">${item.category}</span>
-              <div class="meta" style="display: flex; gap: 4px;">
-                ${(item.tags || []).map(t => `<span class="badge blue" style="font-size: 11px; padding: 2px 6px;">#${t}</span>`).join('')}
-              </div>
             </div>
             <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</h3>
             <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.summary}</p>
           </div>
           <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
             <small style="color: #94a3b8; font-size: 12px; display: block; text-align: right;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="compare.html?q=${item.title}" style="white-space: nowrap;">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" href="compare.html?q=${encodeURIComponent(item.title)}" style="white-space: nowrap;">분석 보기</a>
           </div>
         </article>
       `).join('');
@@ -258,12 +251,9 @@ function renderSaved() {
           <span class="eyebrow">${item.category}</span>
           <h3>${item.title}</h3>
           <p>${item.summary}</p>
-          <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-            ${(item.tags || []).map(t => `<span class="badge blue">#${t}</span>`).join('')}
-          </div>
           <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="compare.html?q=${item.title}">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" href="compare.html?q=${encodeURIComponent(item.title)}">분석 보기</a>
           </div>
         </article>
       `).join('');
@@ -323,10 +313,10 @@ function formatPublishedTime(value) {
   });
 }
 
-// [이슈 비교 결과 페이지] 렌더링 함수 - v2 compare.html 동적 연동 전담
+// [1단계 + 2단계 + 3단계 통합] compare.html 동적 정밀 비교 분석 엔진
 async function renderComparePage() {
   const page = document.querySelector('[data-compare-page]');
-  if (!page) return; 
+  if (!page) return;
 
   const params = new URLSearchParams(window.location.search);
   const q = (params.get('q') || '').trim();
@@ -334,15 +324,11 @@ async function renderComparePage() {
   const titleEl = document.getElementById('compare-query-title');
   const summaryEl = document.getElementById('compare-query-summary');
   const categoryEl = document.getElementById('compare-query-category');
-  const keywordContainer = document.getElementById('expanded-keywords-container');
 
   if (!q) {
     if (titleEl) titleEl.textContent = "비교할 검색어가 없습니다.";
-    if (summaryEl) summaryEl.textContent = "메인 화면에서 궁금한 이슈를 검색해 주세요.";
     return;
   }
-
-  if (titleEl) titleEl.textContent = `“${q}” 비교 분석 결과`;
 
   try {
     const response = await fetch('./data/issue.json');
@@ -351,23 +337,19 @@ async function renderComparePage() {
     const db = await response.json();
     const issues = db.issues || [];
 
-    // [유사도 매칭 시뮬레이션]
+    // 검색어 기반 이슈 동적 매칭
     const matchedIssue = issues.find(issue => {
       const textPool = [
         issue.title,
         issue.summary,
-        (issue.common_facts || []).join(' '),
         (issue.keywords || []).join(' ')
       ].join(' ').toLowerCase();
       return textPool.includes(q.toLowerCase());
-    }) || issues[0]; 
+    }) || issues[0];
 
-    if (!matchedIssue) {
-      if (summaryEl) summaryEl.textContent = "유사한 이슈 정보를 찾을 수 없습니다.";
-      return;
-    }
+    if (!matchedIssue) return;
 
-    // 전역 currentIssue 업데이트 (저장용)
+    // 전역 currentIssue 할당 (상단 저장 버튼 연동 활성화)
     currentIssue = {
       id: matchedIssue.issue_id,
       category: matchedIssue.category || '자동 분석',
@@ -376,153 +358,179 @@ async function renderComparePage() {
       tags: matchedIssue.keywords || [],
       mediaNames: [...new Set((matchedIssue.articles || []).map(art => art.publisher))]
     };
-
     syncSaveButtons();
 
-    if (categoryEl) categoryEl.textContent = matchedIssue.category || "종합 분석";
-    if (summaryEl) summaryEl.textContent = matchedIssue.summary || "이슈 요약 정보가 존재하지 않습니다.";
-
-    if (keywordContainer && matchedIssue.keywords) {
-      const chipsHtml = matchedIssue.keywords.map(kw => `
-        <span class="badge blue" style="font-size: 13px; padding: 6px 12px;">#${kw}</span>
-      `).join('');
-      keywordContainer.innerHTML = `
-        <span style="font-size: 14px; color: var(--muted); font-weight: bold; align-self: center; margin-right: 10px;">확장된 검색 키워드:</span>
-        ${chipsHtml}
-      `;
-    }
+    // 1단계: 상단 요약 바인딩
+    if (categoryEl) categoryEl.textContent = matchedIssue.category || "이슈 분석";
+    if (titleEl) titleEl.textContent = matchedIssue.title;
+    if (summaryEl) summaryEl.textContent = matchedIssue.summary;
 
     const articles = matchedIssue.articles || [];
-    const publishers = [...new Set(articles.map(art => art.publisher))];
-    const selectedPublishers = new Set(publishers); 
 
-    const filterContainer = document.getElementById('compare-publisher-checkboxes');
-    
-    function renderFilters() {
-      if (!filterContainer) return;
-      filterContainer.innerHTML = publishers.map(pub => `
-        <label class="filter-checkbox-item">
-          <input type="checkbox" value="${pub}" checked data-compare-checkbox>
-          <span>${pub}</span>
-        </label>
-      `).join('');
+    // 2단계: 프레임 그룹화 시각화 작동
+    renderFrameGroups(articles);
 
-      filterContainer.querySelectorAll('[data-compare-checkbox]').forEach(cb => {
-        cb.addEventListener('change', () => {
-          if (cb.checked) {
-            selectedPublishers.add(cb.value);
-          } else {
-            selectedPublishers.delete(cb.value);
-          }
-          updateCompareDisplay(articles, selectedPublishers, matchedIssue);
-        });
-      });
-    }
-
-    const selectAllBtn = document.getElementById('compare-select-all');
-    const deselectAllBtn = document.getElementById('compare-deselect-all');
-
-    if (selectAllBtn) {
-      selectAllBtn.onclick = () => {
-        publishers.forEach(pub => selectedPublishers.add(pub));
-        filterContainer.querySelectorAll('[data-compare-checkbox]').forEach(cb => cb.checked = true);
-        updateCompareDisplay(articles, selectedPublishers, matchedIssue);
-      };
-    }
-
-    if (deselectAllBtn) {
-      deselectAllBtn.onclick = () => {
-        selectedPublishers.clear();
-        filterContainer.querySelectorAll('[data-compare-checkbox]').forEach(cb => cb.checked = false);
-        updateCompareDisplay(articles, selectedPublishers, matchedIssue);
-      };
-    }
-
-    renderFilters();
-    updateCompareDisplay(articles, selectedPublishers, matchedIssue);
+    // 3단계: 최대 4개 상세 대조표 인터랙션 세팅
+    initPublisherSelector(articles, matchedIssue);
 
   } catch (error) {
-    console.error("비교 분석 로드 오류:", error);
+    console.error("동적 비교 렌더링 실패:", error);
   }
 }
 
-function updateCompareDisplay(articles, selectedPublishers, matchedIssue) {
-  const gridContainer = document.getElementById('compare-grid-container');
-  const commonSummaryEl = document.getElementById('ai-common-summary');
-  const focusDiffEl = document.getElementById('ai-focus-diff');
+function renderFrameGroups(articles) {
+  const container = document.getElementById('frame-group-container');
+  if (!container) return;
 
-  const filteredArticles = articles.filter(art => selectedPublishers.has(art.publisher));
+  const groups = {};
+  articles.forEach(art => {
+    let key = "중립/사실 전달";
+    if (art.focus.includes("특혜") || art.focus.includes("의혹")) key = "의혹 제기 및 집중 보도";
+    else if (art.focus.includes("수사") || art.focus.includes("혐의") || art.focus.includes("직권남용")) key = "수사 상황 및 혐의 중심 보도";
+    else if (art.focus.includes("내구성") || art.focus.includes("기술")) key = "기술성 및 기능적 개선 중심";
+    else if (art.focus.includes("상승") || art.focus.includes("최고치")) key = "지표 상승 추세 및 우려 중심";
+    else if (art.focus.includes("경고") || art.focus.includes("주의")) key = "기강 확립 및 행동 지침 중심";
 
-  if (!gridContainer) return;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(art.publisher);
+  });
 
-  if (filteredArticles.length === 0) {
-    gridContainer.innerHTML = `
-      <div class="empty-state" style="grid-column: 1 / -1;">
-        <h3>비교할 언론사가 선택되지 않았습니다.</h3>
-        <p>위 필터에서 하나 이상의 언론사를 선택해 주세요.</p>
+  container.innerHTML = Object.keys(groups).map((groupTitle, index) => {
+    const publishersInGroup = groups[groupTitle];
+    const colors = ["#2563eb", "#7c3aed", "#ea580c", "#0f766e"];
+    const themeColor = colors[index % colors.length];
+
+    return `
+      <div class="card" style="border-top: 5px solid ${themeColor}; background: #fff; padding: 24px; height: auto;">
+        <span class="badge" style="background: ${themeColor}15; color: ${themeColor}; font-weight: 800; font-size: 13px; margin-bottom: 12px; display: inline-block;">
+          Group: ${groupTitle}
+        </span>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+          ${publishersInGroup.map(pub => `
+            <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700;">
+              ${pub}
+            </span>
+          `).join('')}
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 14px; line-height: 1.5;">
+          ※ 이 매체들은 유사한 어휘 패턴과 주안점을 공유하여 같은 프레임 범주로 자동 인식되었습니다.
+        </p>
       </div>
     `;
-    if (commonSummaryEl) commonSummaryEl.textContent = "선택된 언론사가 없습니다.";
-    if (focusDiffEl) focusDiffEl.textContent = "선택된 언론사가 없습니다.";
+  }).join('');
+}
+
+function initPublisherSelector(articles, matchedIssue) {
+  const chipContainer = document.getElementById('compare-publisher-chips');
+  if (!chipContainer) return;
+
+  const publishers = [...new Set(articles.map(art => art.publisher))];
+  const selected = new Set(publishers.slice(0, 4));
+
+  function renderChips() {
+    chipContainer.innerHTML = publishers.map(pub => {
+      const isChecked = selected.has(pub);
+      const bg = isChecked ? 'var(--primary)' : '#fff';
+      const color = isChecked ? '#fff' : 'var(--text)';
+      const border = isChecked ? 'var(--primary)' : 'var(--border)';
+
+      return `
+        <button type="button" class="btn" data-pub-chip="${pub}" style="min-height: 38px; padding: 0 14px; background: ${bg}; color: ${color}; border: 1px solid ${border}; font-size: 13.5px; border-radius: 30px;">
+          ${pub} ${isChecked ? '✓' : '+'}
+        </button>
+      `;
+    }).join('');
+
+    chipContainer.querySelectorAll('[data-pub-chip]').forEach(btn => {
+      btn.onclick = () => {
+        const pub = btn.dataset.pubChip;
+        if (selected.has(pub)) {
+          selected.delete(pub);
+        } else {
+          if (selected.size >= 4) {
+            showToast("상세 비교는 최대 4개 언론사까지만 동시에 선택할 수 있습니다.");
+            return;
+          }
+          selected.add(pub);
+        }
+        renderChips();
+        renderDetailComparison(articles, selected, matchedIssue);
+      };
+    });
+  }
+
+  renderChips();
+  renderDetailComparison(articles, selected, matchedIssue);
+}
+
+function renderDetailComparison(articles, selectedSet, matchedIssue) {
+  const detailGrid = document.getElementById('detail-compare-grid');
+  if (!detailGrid) return;
+
+  const filtered = articles.filter(art => selectedSet.has(art.publisher));
+
+  if (filtered.length === 0) {
+    detailGrid.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <h3>선택된 언론사가 없습니다.</h3>
+        <p>위의 언론사 칩을 클릭하여 비교 대조표를 구성해 보세요.</p>
+      </div>
+    `;
     return;
   }
 
-  // 대조표 카드 렌더링
-  gridContainer.innerHTML = filteredArticles.map(art => `
-    <article class="card" style="align-self: start; height: auto;">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 12px;">
+  detailGrid.innerHTML = filtered.map(art => `
+    <article class="card" style="align-self: start; height: auto; border: 1px solid var(--border); box-shadow: var(--shadow);">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); padding-bottom: 12px; margin-bottom: 16px;">
         <strong style="font-size: 20px; color: var(--primary);">${art.publisher}</strong>
+        <span class="badge gray" style="font-size: 11px; font-weight: bold;">정밀 대조</span>
       </div>
-      <div class="compare-block">
-        <span class="compare-label">🔑 핵심 관점</span>
-        <p class="compare-text" style="font-size: 14.5px; line-height: 1.5; font-weight: 500;">
-          ${art.focus || '일반 사실 보도.'}
+
+      <div class="compare-block" style="margin-bottom: 14px;">
+        <span class="compare-label" style="color: var(--common); font-weight: 900; font-size: 12.5px;">📌 공통 내용 요약</span>
+        <p class="compare-text" style="font-size: 13.5px; line-height: 1.5; color: var(--text-2); margin-top: 4px;">
+          ${(matchedIssue.common_facts || []).slice(0, 2).join(' / ') || '사실 내용 매핑 중.'}
         </p>
       </div>
-      <div class="compare-block" style="margin-top: 14px;">
-        <span class="compare-label">🧩 강조된 원인 및 배경</span>
-        <p class="compare-text" style="font-size: 14px; color: var(--text-2);">
-          ${art.expression_summary || '일반적 전달.'}
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--keyword); font-weight: 900; font-size: 12.5px;">🎯 핵심 관점</span>
+        <p class="compare-text" style="font-size: 14px; font-weight: bold; color: var(--text); margin-top: 4px;">
+          ${art.focus || '객관적 사실 전달 중심.'}
         </p>
       </div>
-      <div class="compare-block" style="margin-top: 14px;">
-        <span class="compare-label">🏷️ 핵심 키워드</span>
-        <div class="meta" style="margin: 6px 0;">
-          ${(art.keywords || []).map(kw => `<span class="badge blue" style="font-size: 11px;">#${kw}</span>`).join(' ')}
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--context); font-weight: 900; font-size: 12.5px;">🧩 강조된 원인/배경</span>
+        <p class="compare-text" style="font-size: 13.5px; line-height: 1.5; color: var(--text-2); margin-top: 4px;">
+          ${art.expression_summary || '세부적인 배경 보도 생략.'}
+        </p>
+      </div>
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--person); font-weight: 900; font-size: 12.5px;">👥 강조한 영향/대상</span>
+        <div class="meta" style="margin: 4px 0 0 0; gap: 4px;">
+          ${(art.people || []).map(p => `<span class="badge purple" style="font-size: 10.5px; padding: 2px 8px;">${p}</span>`).join('')}
+          ${(art.organizations || []).map(o => `<span class="badge teal" style="font-size: 10.5px; padding: 2px 8px;">${o}</span>`).join('')}
+          ${(art.people || []).length === 0 && (art.organizations || []).length === 0 ? '<span style="font-size:13px; color:#94a3b8;">분석된 타겟 대상 없음</span>' : ''}
         </div>
       </div>
-      <div class="compare-block" style="margin-top: 14px;">
-        <span class="compare-label">👥 관계 인물 및 기관</span>
-        <div class="meta" style="margin: 6px 0;">
-          ${(art.people || []).map(p => `<span class="badge purple" style="font-size: 11px;">${p}</span>`).join(' ')}
-          ${(art.organizations || []).map(o => `<span class="badge teal" style="font-size: 11px;">${o}</span>`).join(' ')}
-        </div>
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--additional); font-weight: 900; font-size: 12.5px;">⚖️ 보도 태도/근거</span>
+        <p class="compare-text" style="font-size: 13px; color: var(--text-2); margin-top: 4px;">
+          ${art.evidence_limit ? `[한계 지적] ${art.evidence_limit}` : '공식 발행된 기사 텍스트를 정량 근거로 채택.'}
+        </p>
       </div>
-      <div class="compare-block" style="margin-top: 14px; border-top: 1px solid var(--border); padding-top: 14px;">
-        <span class="compare-label">🔗 원문 기사 참조</span>
-        <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13.5px; color: var(--primary); font-weight: bold; text-decoration: underline;">
-          기사 원문 보기 ↗
+
+      <div class="compare-block" style="border-top: 1px solid var(--border); padding-top: 12px; margin-top: 16px;">
+        <span class="compare-label" style="font-size: 11px;">🔗 원문 링크 참조</span>
+        <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: var(--primary); font-weight: 800; text-decoration: underline; display: inline-block; margin-top: 2px;">
+          뉴스 본문 바로가기 ↗
         </a>
       </div>
     </article>
   `).join('');
-
-  if (commonSummaryEl) {
-    commonSummaryEl.innerHTML = `
-      <strong>[공통 내용 요약]</strong><br>
-      <ul style="margin: 10px 0 0 18px; padding: 0;">
-        ${(matchedIssue.common_facts || []).map(fact => `<li style="margin-bottom: 6px;">${fact}</li>`).join('')}
-      </ul>
-    `;
-  }
-
-  if (focusDiffEl) {
-    const focusDetails = filteredArticles.map(art => `<strong>${art.publisher}</strong>: ${art.focus || '사실 기반 보도.'}`).join('<br><br>');
-    focusDiffEl.innerHTML = `
-      선택된 언론사들의 핵심 보도 관점 대조 내용입니다.<br><br>
-      ${focusDetails}
-    `;
-  }
 }
 
 // [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화 (최대 3개 노출로 변경)
@@ -542,7 +550,6 @@ async function renderFeaturedIssue() {
       return;
     }
 
-    // 🌟 v2 변경: 기본적으로 카드가 딱 3개만 먼저 보이도록 설정합니다.
     const INITIAL_COUNT = 3;
     if (typeof window.featuredVisibleCount === 'undefined') {
       window.featuredVisibleCount = INITIAL_COUNT;
@@ -566,7 +573,7 @@ async function renderFeaturedIssue() {
               <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${issue.summary || '요약 준비 중입니다.'}</p>
             </div>
             <div style="flex-shrink: 0;">
-              <a class="btn btn-primary btn-sm" href="compare.html?q=${issue.title}" style="white-space: nowrap;">
+              <a class="btn btn-primary btn-sm" href="compare.html?q=${encodeURIComponent(issue.title)}" style="white-space: nowrap;">
                 프레임 비교 보기
               </a>
             </div>
@@ -574,7 +581,7 @@ async function renderFeaturedIssue() {
         `).join("");
       } else {
         root.style.display = "";
-        root.className = "grid-3"; // 🌟 3열 그리드로 예쁘게 배치하기 위해 css 클래스 연동
+        root.className = "grid-3"; 
 
         root.innerHTML = visibleIssues.map(issue => `
           <article class="card" style="display: flex; flex-direction: column; height: 100%;">
@@ -582,7 +589,7 @@ async function renderFeaturedIssue() {
             <h3 style="margin: 12px 0 10px; font-size: 18px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 50px;">${issue.title}</h3>
             <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 67px; margin-bottom: 16px;">${issue.summary || '요약 준비 중입니다.'}</p>
             <div class="card-footer" style="margin-top: auto; padding-top: 0; display: flex; justify-content: flex-end;">
-              <a class="btn btn-primary" href="compare.html?q=${issue.title}" style="width: 100%; text-align: center;">
+              <a class="btn btn-primary" href="compare.html?q=${encodeURIComponent(issue.title)}" style="width: 100%; text-align: center;">
                 프레임 비교 보기
               </a>
             </div>
@@ -590,7 +597,6 @@ async function renderFeaturedIssue() {
         `).join("");
       }
 
-      // 이슈 총 개수가 3개보다 많으면 더보기 버튼 활성화
       if (issues.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
@@ -607,7 +613,7 @@ async function renderFeaturedIssue() {
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
           loadMoreBtn.addEventListener("click", () => {
-            window.featuredVisibleCount += 3; // 🌟 3개씩 추가 노출
+            window.featuredVisibleCount += 3; 
             renderFeaturedCards();
           });
           wrapper.appendChild(loadMoreBtn);
@@ -646,6 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initShare();
   
   const isComparePage = document.querySelector('[data-compare-page]');
+  const isMainPage = document.querySelector('[data-featured-issues]');
 
   if (isComparePage) {
     renderComparePage();

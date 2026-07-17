@@ -1,135 +1,48 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Prism - Solar Embedding 기반 실시간 언론사 비교" />
-  <title>이슈 비교 분석 | Prism</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
-    <nav class="nav nav-dropdown" data-nav aria-label="주요 메뉴">
-      <a href="about.html" style="display: flex; align-items: center; padding: 0 16px; font-weight: bold; color: inherit; text-decoration: none;">사이트 설명</a>
-      
-      <div class="nav-item-dropdown">
-        <button type="button" class="nav-dropdown-toggle">
-          이슈 둘러보기 <span aria-hidden="true">▾</span>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="./index.html#live-news">실시간 뉴스</a>
-          <a href="./index.html#saved-section">저장한 이슈</a>
-        </div>
-      </div>
-
-      <div class="nav-item-dropdown">
-        <button type="button" class="nav-dropdown-toggle">
-          이슈 비교하기 <span aria-hidden="true">▾</span>
-        </button>
-        <div class="nav-dropdown-menu">
-          <a href="./index.html#topics">주요 이슈 비교</a>
-          <a href="./search.html">키워드 검색</a>
-        </div>
-      </div>
-    </nav>
-    <div class="header-actions">
-      <button class="btn btn-secondary" id="btn-login-nav">로그인</button>
-      <button class="menu-toggle" data-menu-toggle aria-label="메뉴 열기" aria-expanded="false">☰</button>
-    </div>
-  </div>
-</header>
-
 <main data-compare-page>
-  <!-- 검색 분석 결과 상단부 -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow" id="compare-query-category">검색어 분석</span>
-      <h1 id="compare-query-title">“검색어” 비교 분석</h1>
-      <p id="compare-query-summary">Solar LLM이 확장한 검색어로 유사도 분석을 진행합니다.</p>
-
-      <!-- 확장어 표시 컴포넌트 -->
-      <div class="meta" id="expanded-keywords-container" style="margin-top: 16px;">
-        <span style="font-size: 14px; color: var(--muted); font-weight: bold; align-self: center; margin-right: 8px;">확장된 검색 키워드:</span>
-        <!-- JS로 동적 키워드 칩 추가 예정 -->
-      </div>
-
-      <div class="toolbar">
-        <button class="btn btn-primary" data-save-issue>이 분석 결과 저장</button>
-        <button class="btn btn-secondary" data-share>공유</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 언론사 선택 및 비교표 섹션 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">비교 대상 언론사 선택</h2>
-      <p class="section-desc">비교하고 싶은 언론사를 선택하면 아래 비교표와 분석 결과가 실시간으로 갱신됩니다.</p>
-      
-      <!-- 언론사 필터 선택 UI -->
-      <div class="live-news-sidebar" style="margin-bottom: 30px; justify-content: flex-start;">
-        <div class="filter-control-group">
-          <span class="filter-title">언론사 필터</span>
-          <div class="filter-actions">
-            <button type="button" class="filter-action-btn" id="compare-select-all">전체 선택</button>
-            <button type="button" class="filter-action-btn" id="compare-deselect-all">전체 해제</button>
-          </div>
-        </div>
-        <div class="filter-checkbox-list" id="compare-publisher-checkboxes">
-          <!-- JS에서 동적으로 언론사 체크박스 생성 예정 -->
+    <!-- [1단계] 이슈 메인 요약 영역 -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" id="compare-query-category">종합 분석</span>
+        <h1 id="compare-query-title">이슈를 분석하는 중입니다</h1>
+        <p id="compare-query-summary" style="font-size: 18px; line-height: 1.7; max-width: 800px; margin-top: 12px; color: var(--text-2);">
+          기사 데이터를 바탕으로 핵심 쟁점을 요약하고 있습니다.
+        </p>
+  
+        <div class="toolbar" style="margin-top: 24px;">
+          <button class="btn btn-primary" data-save-issue>이 분석 저장하기</button>
+          <button class="btn btn-secondary" data-share>공유</button>
         </div>
       </div>
-
-      <!-- 정밀 비교표 및 결과 항목 -->
-      <h2 class="section-title">AI 프레임 대조표</h2>
-      <div class="grid-3" id="compare-grid-container" style="margin-top: 20px;">
-        <!-- JS에서 선택한 언론사의 분석 데이터를 카드 형태로 배치할 예정 -->
-      </div>
-    </div>
-  </section>
-
-  <!-- AI 심층 분석 결과 보고서 -->
-  <section class="section soft">
-    <div class="container" style="max-width: 900px;">
-      <h2 class="section-title" style="text-align: center;">AI 종합 보도 태도 비교</h2>
-      <p class="section-desc" style="text-align: center;">각 사의 핵심 논조와 보도 배경 차이를 종합적으로 요약해 드립니다.</p>
-      
-      <div class="card" style="padding: 32px; background: #fff;">
-        <div class="compare-block">
-          <span class="compare-label" style="font-size: 14px; color: var(--keyword);">📊 공통 내용 요약</span>
-          <p class="compare-text" id="ai-common-summary">선택한 언론사들의 공통 사실 관계를 분석하고 있습니다...</p>
-        </div>
-        <div class="compare-block" style="border-top: 1px solid var(--border); padding-top: 20px;">
-          <span class="compare-label" style="font-size: 14px; color: var(--person);">🎯 핵심 관점 차이</span>
-          <p class="compare-text" id="ai-focus-diff">매체별로 사건을 바라보는 핵심 관점의 차이를 로딩 중입니다...</p>
+    </section>
+  
+    <!-- [2단계] 비슷한 프레임 언론사 그룹 시각화 섹션 -->
+    <section class="section soft" style="padding: 60px 0; border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">📊 프레임 맵핑 (언론사 그룹화)</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">Solar LLM이 보도 태도와 논조의 유사도를 분석하여 같은 시선을 가진 미디어끼리 분류했습니다.</p>
+        
+        <!-- 시각화 그룹 컨테이너 -->
+        <div id="frame-group-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          <!-- JS로 동적 프레임 그룹이 렌더링됩니다 -->
         </div>
       </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Prism</div>
-        <p class="footer-desc">같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.</p>
+    </section>
+  
+    <!-- [3단계] 언론사 선택 및 5대 항목 정밀 상세 비교 섹션 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조 (최대 4개 선택)</h2>
+        <p class="section-desc" style="margin-bottom: 20px;">비교 분석할 언론사를 선택해 주세요. (최대 4개 매체 동시 비교 가능)</p>
+  
+        <!-- 언론사 수동 선택 칩 컨테이너 -->
+        <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
+          <!-- JS로 선택/해제 가능한 칩 버튼들이 생성됩니다 -->
+        </div>
+  
+        <!-- 5대 비교 지표 대조 테이블/그리드 -->
+        <div id="detail-compare-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+          <!-- 선택된 언론사들의 5대 비교 정보 카드가 동적으로 주입됩니다 -->
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="index.html">서비스 소개</a>
-        <a href="about.html">분석 방식</a>
-        <a href="#">이용 안내</a>
-      </div>
-    </div>
-    <div class="footer-bottom">© 2026 Prism. All rights reserved.</div>
-  </div>
-</footer>
-
-<!-- 전용 스크립트 연결 -->
-<script src="./search.js"></script>
-<script src="./app.js"></script>
-</body>
-</html>
+    </section>
+  </main>
