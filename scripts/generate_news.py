@@ -7,6 +7,9 @@ import feedparser
 
 import requests
 
+from email.utils import format_datetime
+from datetime import datetime, timezone
+
 
 RSS_FEEDS = [
     {
@@ -243,6 +246,26 @@ def collect_articles():
                 or entry.get("updated")
                 or ""
             )
+
+
+            if not published:
+                parsed_time = (
+                    entry.get("published_parsed")
+                    or entry.get("updated_parsed")
+                )
+
+                if parsed_time:
+                    published_datetime = datetime(
+                        parsed_time.tm_year,
+                        parsed_time.tm_mon,
+                        parsed_time.tm_mday,
+                        parsed_time.tm_hour,
+                        parsed_time.tm_min,
+                        parsed_time.tm_sec,
+                        tzinfo=timezone.utc
+                    )
+
+                    published = format_datetime(published_datetime)
 
             if not title or not link:
                 continue

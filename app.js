@@ -405,7 +405,26 @@ function renderSaved() {
   renderSavedCards();
 }
 
-// 2. [실시간 수집 뉴스] 렌더링 함수
+function formatPublishedTime(value) {
+  if (!value) return '발행 시간 정보 없음';
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return '발행 시간 정보 없음';
+  }
+
+  return date.toLocaleString('ko-KR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
+
+
 // 2. [실시간 수집 뉴스] 렌더링 함수
 async function renderLiveNews() {
   const root = document.querySelector("[data-live-news]");
@@ -421,15 +440,87 @@ async function renderLiveNews() {
     const rawNewsItems = await response.json();
     const newsItems = shuffleArray(rawNewsItems);
 
-    const INITIAL_COUNT = 4; 
+    const INITIAL_COUNT = 4;
     let visibleCount = INITIAL_COUNT;
 
+    // 1. 뉴스 데이터에서 언론사 목록 중복 없이 추출
+    const publishers = [...new Set(newsItems.map(item => item.publisher))];
+
+    // 2. 선택된 언론사 상태 관리 (기본값: 전체 선택)
+    let selectedPublishers = new Set(publishers);
+
+    // 3. 사이드바에 체크박스 렌더링
+    function renderPublisherFilters() {
+      const filterRoot = document.querySelector('[data-publisher-checkboxes]');
+      if (!filterRoot) return;
+
+      filterRoot.innerHTML = publishers.map(publisher => `
+        <label class="filter-checkbox-item">
+          <input type="checkbox" value="${publisher}" checked data-publisher-checkbox>
+          <span>${publisher}</span>
+        </label>
+      `).join('');
+
+      const checkboxes = filterRoot.querySelectorAll('[data-publisher-checkbox]');
+
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            selectedPublishers.add(checkbox.value);
+          } else {
+            selectedPublishers.delete(checkbox.value);
+          }
+          visibleCount = INITIAL_COUNT; // 필터 바뀌면 더보기 상태 초기화
+          render();
+        });
+      });
+
+      // 전체 선택 / 전체 해제 버튼
+      const selectAllBtn = document.querySelector('[data-select-all]');
+      const deselectAllBtn = document.querySelector('[data-deselect-all]');
+
+      if (selectAllBtn) {
+        selectAllBtn.addEventListener('click', () => {
+          selectedPublishers = new Set(publishers);
+          checkboxes.forEach(checkbox => { checkbox.checked = true; });
+          visibleCount = INITIAL_COUNT;
+          render();
+        });
+      }
+
+      if (deselectAllBtn) {
+        deselectAllBtn.addEventListener('click', () => {
+          selectedPublishers = new Set();
+          checkboxes.forEach(checkbox => { checkbox.checked = false; });
+          visibleCount = INITIAL_COUNT;
+          render();
+        });
+      }
+    }
+    
     function render() {
-      const visibleNews = newsItems.slice(0, visibleCount);
+      // 4. 선택된 언론사만 필터링
+      const filteredNews = newsItems.filter(item =>
+        selectedPublishers.has(item.publisher)
+      );
+      const visibleNews = filteredNews.slice(0, visibleCount);
       const viewMode = viewModes.liveNews;
 
+      // 5. 필터 결과가 하나도 없을 때 처리
+      if (!filteredNews.length) {
+        root.className = "";
+        root.style.display = "";
+        root.innerHTML = `
+          <div class="empty-state">
+            <h3>선택한 언론사의 뉴스가 없습니다.</h3>
+            <p>다른 언론사를 선택해 보세요.</p>
+          </div>
+        `;
+        return;
+      }
+
       if (viewMode === 'list') {
-        root.className = ""; // grid-2 클래스 제거
+        root.className = "";
         root.style.display = "flex";
         root.style.flexDirection = "column";
         root.style.gap = "12px";
@@ -439,7 +530,10 @@ async function renderLiveNews() {
             <div style="flex: 1; min-width: 0;">
               <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${item.publisher}</span>
               <h3 style="font-size: 15px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${item.title}</h3>
-            </div>
+              <small class="live-news-time">
+                ${formatPublishedTime(item.published)}
+              </small>
+              </div>
             <div style="flex-shrink: 0;">
               <a class="btn btn-secondary btn-sm" href="${item.link}" target="_blank" rel="noopener noreferrer" style="white-space: nowrap; padding: 6px 12px; font-size: 13px;">
                 원문 보기
@@ -448,13 +542,18 @@ async function renderLiveNews() {
           </article>
         `).join("");
       } else {
-        root.style.display = ""; // flex 제거
-        root.className = "grid-2"; // CSS grid 클래스 적용
+        root.style.display = "";
+        root.className = "grid-2";
 
         root.innerHTML = visibleNews.map(item => `
           <article class="card">
             <span class="eyebrow">${item.publisher}</span>
             <h3>${item.title}</h3>
+
+            <small class="live-news-time">
+              ${formatPublishedTime(item.published)}
+            </small>
+            
             <div class="card-footer" style="margin-top: auto; padding-top: 16px;">
               <a class="btn btn-secondary" href="${item.link}" target="_blank" rel="noopener noreferrer">
                 원문 보기
@@ -464,7 +563,8 @@ async function renderLiveNews() {
         `).join("");
       }
 
-      if (newsItems.length > INITIAL_COUNT) {
+      // 6. 더보기/줄이기 기준을 filteredNews.length로 변경
+      if (filteredNews.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
         wrapper.style.width = "100%";
@@ -475,16 +575,16 @@ async function renderLiveNews() {
         wrapper.style.justifyContent = "center";
         wrapper.style.gap = "12px";
 
-        if (visibleCount < newsItems.length) {
+        if (visibleCount < filteredNews.length) {
           const loadMoreBtn = document.createElement("button");
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
-          
+
           loadMoreBtn.addEventListener("click", () => {
             visibleCount += 4;
             render();
           });
-          
+
           wrapper.appendChild(loadMoreBtn);
         }
 
@@ -492,13 +592,13 @@ async function renderLiveNews() {
           const shrinkBtn = document.createElement("button");
           shrinkBtn.className = "btn btn-secondary";
           shrinkBtn.textContent = "줄이기 ▴";
-          
+
           shrinkBtn.addEventListener("click", () => {
             visibleCount = INITIAL_COUNT;
             render();
             root.scrollIntoView({ behavior: "smooth", block: "start" });
           });
-          
+
           wrapper.appendChild(shrinkBtn);
         }
 
@@ -506,6 +606,7 @@ async function renderLiveNews() {
       }
     }
 
+    renderPublisherFilters();
     render();
   } catch (error) {
     console.error(error);
@@ -516,6 +617,27 @@ async function renderLiveNews() {
       </div>
     `;
   }
+}
+
+function resizeMediaCards() {
+  const grid = document.querySelector('[data-issue-articles]');
+
+  if (!grid) return;
+
+  const rowHeight = 8;
+  const rowGap = 0;
+
+  grid.querySelectorAll('.media-card').forEach(card => {
+    card.style.gridRowEnd = '';
+
+    const cardHeight = card.getBoundingClientRect().height;
+
+    const rowSpan = Math.ceil(
+      (cardHeight + rowGap) / (rowHeight + rowGap)
+    );
+
+    card.style.gridRowEnd = `span ${rowSpan}`;
+  });
 }
 
 // 3. [이슈 비교 결과 페이지] 렌더링 함수
@@ -588,92 +710,201 @@ async function renderIssuePage() {
 
     const articlesRoot = document.querySelector('[data-issue-articles]');
 
-    // 최신 클러스터 데이터를 바탕으로 각 언론사별 카드를 동적 빌드합니다.
+// 최신 클러스터 데이터를 바탕으로 언론사별 카드를 생성한다.
+
+        // 최신 클러스터 데이터를 바탕으로 언론사별 카드를 생성한다.
     articlesRoot.innerHTML = mediaClusters.map(cluster => {
-      // 1. 클러스터 내에 포함된 실제 뉴스 기사들의 배열(articles)을 바인딩합니다.
-      const clusteredArticles = cluster.articles || 
-                                (cluster.title && cluster.link ? [{ title: cluster.title, link: cluster.link }] : []);
+      const clusteredArticles =
+        Array.isArray(cluster.articles) && cluster.articles.length
+          ? cluster.articles
+          : cluster.title && cluster.link
+            ? [{
+                title: cluster.title,
+                link: cluster.link,
+                published: cluster.published || ''
+              }]
+            : [];
 
       return `
-      <article class="card media-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 400px;">
-        <div>
-          <div class="media-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 16px;">
-            <div class="media-name" style="margin: 0;">
-              <strong style="font-size: 18px; color: #1e293b;">${cluster.publisher}</strong>
-            </div>
-            <span style="font-size: 11px; background: #eff6ff; color: #2563eb; padding: 3px 10px; border-radius: 99px; font-weight: bold; border: 1px solid #dbeafe;">
-              ${clusteredArticles.length}개 기사 분석됨
+        <article class="card media-card">
+          <button
+            class="media-toggle"
+            type="button"
+            aria-expanded="false"
+          >
+            <span class="media-toggle-title">
+              <strong>${cluster.publisher}</strong>
+
+              <span class="article-count">
+                ${clusteredArticles.length}개 기사
+              </span>
             </span>
-          </div>
 
-          <div class="compare-block">
-            <span class="compare-label">대표 토픽</span>
-            <p class="compare-text" style="font-weight: 600; color: #334155;">${cluster.topic_title || cluster.title || '주제 요약 없음'}</p>
-          </div>
+            <span
+              class="media-toggle-icon"
+              aria-hidden="true"
+            >
+              ⌄
+            </span>
+          </button>
 
-          <div class="compare-block">
-            <span class="compare-label">핵심 키워드</span>
-            <div class="meta">
-              ${(cluster.keywords || []).map(keyword =>
-                `<span class="badge blue">${keyword}</span>`
-              ).join('')}
-              ${(cluster.keywords || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 키워드 없음</span>' : ''}
+          <div class="media-content">
+            <div class="compare-block">
+              <span class="compare-label">대표 토픽</span>
+              <p class="compare-text">
+                ${cluster.topic_title || cluster.title || '주제 요약 없음'}
+              </p>
             </div>
-          </div>
 
-          <div class="compare-block">
-            <span class="compare-label">주요 인물 및 기관</span>
-            <div class="meta">
-              ${(cluster.people || []).map(person =>
-                `<span class="badge purple">${person}</span>`
-              ).join('')}
-              ${(cluster.people || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 인물 정보 없음</span>' : ''}
-            </div>
-          </div>
+            <div class="compare-block">
+              <span class="compare-label">핵심 키워드</span>
 
-          <div class="compare-block">
-            <span class="compare-label">강조된 내용 / 프레임</span>
-            <p class="compare-text">${cluster.focus || '실시간 기사 수집 및 클러스터 구성 단계입니다.'}</p>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">표현 요약</span>
-            <p class="compare-text">${cluster.expression_summary || '분석 진행 중'}</p>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">분석 한계</span>
-            <p class="compare-text">${cluster.evidence_limit || '수집 자료 분석 중'}</p>
-          </div>
-        </div>
-
-        <div class="compare-block source-links-block" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #e2e8f0;">
-          <span class="compare-label" style="display: block; font-weight: bold; font-size: 12px; color: #475569; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
-            분석 대상 원문 기사 리스트
-          </span>
-          <div class="source-links-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px;">
-            ${clusteredArticles.length > 0 ? clusteredArticles.map((article, idx) => `
-              <div style="display: flex; align-items: flex-start; gap: 6px; font-size: 13px; line-height: 1.4;">
-                <span style="color: #3b82f6; font-weight: bold; flex-shrink: 0; min-width: 14px;">${idx + 1}.</span>
-                <a 
-                  href="${article.link}" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  style="color: #2563eb; text-decoration: none; font-weight: 500; word-break: break-all; transition: color 0.15s ease-in-out;"
-                  onmouseover="this.style.color='#1d4ed8'; this.style.textDecoration='underline';"
-                  onmouseout="this.style.color='#2563eb'; this.style.textDecoration='none';"
-                >
-                  ${article.title}
-                </a>
+              <div class="meta">
+                ${
+                  (cluster.keywords || []).length
+                    ? (cluster.keywords || []).map(keyword =>
+                        `<span class="badge blue">${keyword}</span>`
+                      ).join('')
+                    : `
+                      <span
+                        style="color: #94a3b8; font-size: 13px;"
+                      >
+                        추출된 키워드 없음
+                      </span>
+                    `
+                }
               </div>
-            `).join('') : '<p style="font-size: 12px; color: #94a3b8; margin: 0;">포함된 원문 기사가 없습니다.</p>'}
+            </div>
+
+            <div class="compare-block">
+              <span class="compare-label">주요 인물 및 기관</span>
+
+              <div class="meta">
+                ${
+                  (cluster.people || []).length
+                    ? (cluster.people || []).map(person =>
+                        `<span class="badge purple">${person}</span>`
+                      ).join('')
+                    : `
+                      <span
+                        style="color: #94a3b8; font-size: 13px;"
+                      >
+                        추출된 인물 정보 없음
+                      </span>
+                    `
+                }
+              </div>
+            </div>
+
+            <div class="compare-block">
+              <span class="compare-label">강조된 내용</span>
+
+              <p class="compare-text">
+                ${cluster.focus || '명확한 차이를 확인하기 어려움'}
+              </p>
+            </div>
+
+            <div class="compare-block">
+              <span class="compare-label">표현 요약</span>
+
+              <p class="compare-text">
+                ${cluster.expression_summary || '명확한 차이를 확인하기 어려움'}
+              </p>
+            </div>
+
+            <div class="compare-block">
+              <span class="compare-label">분석 한계</span>
+
+              <p class="compare-text">
+                ${cluster.evidence_limit || '현재 제공된 자료만으로 구체적인 차이를 판단하기 어려움'}
+              </p>
+            </div>
+
+            <div class="compare-block source-block">
+              <span class="compare-label">
+                분석 대상 원문 기사
+              </span>
+
+              ${
+                clusteredArticles.length
+                  ? `
+                    <ol class="source-list">
+                      ${clusteredArticles.map(article => {
+                        const published =
+                          article.published ||
+                          article.published_at ||
+                          '';
+
+                        return `
+                          <li>
+                            <a
+                              href="${article.link || '#'}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              ${article.title || '기사 제목 없음'}
+                            </a>
+
+                            <div class="article-time">
+                              🕒 ${
+                                published
+                                  ? formatPublishedTime(published)
+                                  : '발행 시간 정보 없음'
+                              }
+                            </div>
+                          </li>
+                        `;
+                      }).join('')}
+                    </ol>
+                  `
+                  : `
+                    <p class="compare-text">
+                      포함된 원문 기사가 없습니다.
+                    </p>
+                  `
+              }
+            </div>
           </div>
-        </div>
-      </article>
-    `;
+        </article>
+      `;
     }).join('');
 
-    // 3. 하단부 기사 원문 중복 출력 영역 및 부모 컨테이너(공간) 완전히 가리기
+    articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const card = toggle.closest('.media-card');
+
+        if (!card) return;
+
+        const isOpen = card.classList.toggle('open');
+
+        toggle.setAttribute(
+          'aria-expanded',
+          String(isOpen)
+        );
+
+        requestAnimationFrame(resizeMediaCards);
+      });
+    });
+
+    const firstCard =
+      articlesRoot.querySelector('.media-card');
+
+    if (firstCard) {
+      firstCard.classList.add('open');
+
+      const firstToggle =
+        firstCard.querySelector('.media-toggle');
+
+      if (firstToggle) {
+        firstToggle.setAttribute(
+          'aria-expanded',
+          'true'
+        );
+      }
+    }
+
+    requestAnimationFrame(resizeMediaCards);
+
     const sourcesRoot = document.querySelector('[data-issue-sources]');
     if (sourcesRoot) {
       sourcesRoot.innerHTML = '';
@@ -1060,4 +1291,8 @@ window.addEventListener('storage', event => {
     renderSaved();
     syncSaveButtons();
   }
+});
+
+window.addEventListener('resize', () => {
+  requestAnimationFrame(resizeMediaCards);
 });
