@@ -420,46 +420,148 @@ def collect_articles():
     return news_items
 
 
+def migrate_existing_article(
+    item,
+    current_time,
+):
+    """
+    구형 기사 데이터를 현재 Article DB 스키마로 변환한다.
+
+    구형 필드:
+    - published
+
+    현재 필드:
+    - publisher_id
+    - published_at
+    - updated_at
+    """
+    if not isinstance(item, dict):
+        return None
+
+    migrated_item = item.copy()
+
+    publisher = str(
+        migrated_item.get("publisher") or ""
+    ).strip()
+
+    # 구형 published 필드를 published_at으로 이전
+    if not migrated_item.get("published_at"):
+        migrated_item["published_at"] = (
+            migrated_item.get("published")
+            or ""
+        )
+
+    # 언론사명을 기준으로 publisher_id 보완
+    if not migrated_item.get("publisher_id"):
+        migrated_item["publisher_id"] = (
+            PUBLISHER_IDS.get(
+                publisher,
+                "",
+            )
+        )
+
+    # article_id가 없으면 링크를 기준으로 생성
+    if (
+        not migrated_item.get("article_id")
+        and migrated_item.get("link")
+    ):
+        migrated_item["article_id"] = (
+            create_article_id(
+                migrated_item["link"]
+            )
+        )
+
+    # 최초 수집 시각이 없으면 현재 시각 사용
+    if not migrated_item.get("collected_at"):
+        migrated_item["collected_at"] = (
+            current_time
+        )
+
+    # 수정 시각이 없으면 수집 시각을 기준으로 보완
+    if not migrated_item.get("updated_at"):
+        migrated_item["updated_at"] = (
+            migrated_item.get("collected_at")
+            or current_time
+        )
+
+    # 더 이상 사용하지 않는 구형 필드 제거
+    migrated_item.pop(
+        "published",
+        None,
+    )
+
+    return migrated_item
+
+
 def save_articles(news_items):
     output_path = Path("data/news.json")
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     existing_items = []
 
     # 기존에 저장된 기사 불러오기
     if output_path.exists():
         try:
-            with output_path.open("r", encoding="utf-8") as file:
+            with output_path.open(
+                "r",
+                encoding="utf-8",
+            ) as file:
                 loaded_data = json.load(file)
 
             if isinstance(loaded_data, list):
                 existing_items = loaded_data
 
-        except (json.JSONDecodeError, OSError) as error:
-            print(f"기존 news.json 불러오기 실패: {error}")
-            print("새로 수집한 기사만 저장합니다.")
+        except (
+            json.JSONDecodeError,
+            OSError,
+        ) as error:
+            print(
+                f"기존 news.json 불러오기 실패: {error}"
+            )
+            print(
+                "새로 수집한 기사만 저장합니다."
+            )
 
     now = datetime.now(timezone.utc)
-    retention_cutoff = now - timedelta(days=RETENTION_DAYS)
+    current_time = now.isoformat()
+    retention_cutoff = (
+        now - timedelta(days=RETENTION_DAYS)
+    )
 
     existing_articles = {}
+    migrated_count = 0
 
     for item in existing_items:
-        article_id = item.get("article_id")
+        original_item = item.copy()
 
-        if not article_id and item.get("link"):
-            article_id = create_article_id(item["link"])
-            item["article_id"] = article_id
+        migrated_item = migrate_existing_article(
+            item,
+            current_time,
+        )
+
+        if migrated_item is None:
+            continue
+
+        if migrated_item != original_item:
+            migrated_count += 1
+
+        article_id = migrated_item.get(
+            "article_id"
+        )
 
         if article_id:
-            existing_articles[article_id] = item
+            existing_articles[
+                article_id
+            ] = migrated_item
 
     # 기존 기사에 새 수집 결과를 병합
     article_map = dict(existing_articles)
 
     duplicate_count = 0
     removed_old_count = 0
-    current_time = now.isoformat()
 
     content_fields = (
         "publisher_id",
@@ -471,57 +573,89 @@ def save_articles(news_items):
         "link",
     )
 
-
     for new_item in news_items:
-        article_id = new_item.get("article_id")
+        article_id = new_item.get(
+            "article_id"
+        )
 
         if not article_id:
             continue
 
-        existing_item = article_map.get(article_id)
+        existing_item = article_map.get(
+            article_id
+        )
 
         # 처음 저장되는 기사
         if existing_item is None:
-            new_item["updated_at"] = current_time
-            new_item["collected_at"] = current_time
-            article_map[article_id] = new_item
+            new_item["updated_at"] = (
+                current_time
+            )
+            new_item["collected_at"] = (
+                current_time
+            )
+            article_map[
+                article_id
+            ] = new_item
             continue
 
         # 기존 기사와 내용이 실제로 달라졌는지 확인
         content_changed = any(
-            existing_item.get(field, "") != new_item.get(field, "")
+            existing_item.get(field, "")
+            != new_item.get(field, "")
             for field in content_fields
         )
 
-        merged_item = existing_item.copy()
+        merged_item = (
+            existing_item.copy()
+        )
 
         for field in content_fields:
-            merged_item[field] = new_item.get(field, "")
+            merged_item[field] = (
+                new_item.get(field, "")
+            )
 
         # 재수집 시각은 항상 현재 시각으로 변경
-        merged_item["collected_at"] = current_time
+        merged_item["collected_at"] = (
+            current_time
+        )
 
         # 실제 내용이 바뀐 경우에만 updated_at 갱신
         if content_changed:
-            merged_item["updated_at"] = current_time
+            merged_item["updated_at"] = (
+                current_time
+            )
         else:
             merged_item["updated_at"] = (
-                existing_item.get("updated_at")
+                existing_item.get(
+                    "updated_at"
+                )
                 or current_time
             )
 
-        article_map[article_id] = merged_item
+        article_map[
+            article_id
+        ] = merged_item
+
         duplicate_count += 1
 
     # 60일이 지난 기사 제거
     merged_items = []
 
     for item in article_map.values():
-        published_dt = parse_published_datetime(
-            item.get("published_at", "")
+        published_dt = (
+            parse_published_datetime(
+                item.get(
+                    "published_at",
+                    "",
+                )
+            )
         )
 
-        if published_dt and published_dt < retention_cutoff:
+        if (
+            published_dt
+            and published_dt
+            < retention_cutoff
+        ):
             removed_old_count += 1
             continue
 
@@ -531,14 +665,22 @@ def save_articles(news_items):
     merged_items.sort(
         key=lambda item: (
             parse_published_datetime(
-                item.get("published_at", "")
+                item.get(
+                    "published_at",
+                    "",
+                )
             )
-            or datetime.min.replace(tzinfo=timezone.utc)
+            or datetime.min.replace(
+                tzinfo=timezone.utc
+            )
         ),
         reverse=True,
     )
 
-    with output_path.open("w", encoding="utf-8") as file:
+    with output_path.open(
+        "w",
+        encoding="utf-8",
+    ) as file:
         json.dump(
             merged_items,
             file,
@@ -559,13 +701,36 @@ def save_articles(news_items):
         }
     )
 
-    print(f"\n이번 실행에서 수집한 기사: {len(news_items)}개")
-    print(f"새로 추가된 기사: {new_link_count}개")
-    print(f"중복으로 제외된 기사: {duplicate_count}개")
-    print(f"60일 초과로 삭제된 기사: {removed_old_count}개")
-    print(f"현재 저장된 전체 기사: {len(merged_items)}개")
-    print(f"저장 위치: {output_path}")
-    print("이 단계에서는 Solar API를 사용하지 않습니다.")
+    print(
+        f"\n이번 실행에서 수집한 기사: "
+        f"{len(news_items)}개"
+    )
+    print(
+        f"새로 추가된 기사: "
+        f"{new_link_count}개"
+    )
+    print(
+        f"중복으로 제외된 기사: "
+        f"{duplicate_count}개"
+    )
+    print(
+        f"구형 스키마 변환 기사: "
+        f"{migrated_count}개"
+    )
+    print(
+        f"60일 초과로 삭제된 기사: "
+        f"{removed_old_count}개"
+    )
+    print(
+        f"현재 저장된 전체 기사: "
+        f"{len(merged_items)}개"
+    )
+    print(
+        f"저장 위치: {output_path}"
+    )
+    print(
+        "이 단계에서는 Solar API를 사용하지 않습니다."
+    )
 
 
 def main():

@@ -63,6 +63,264 @@ def select_representative_articles(articles, max_per_publisher=1):
 
     return selected_articles
 
+def build_analysis_input(
+    *,
+    issue_id,
+    issue_title,
+    query,
+    expanded_queries,
+    selected_articles,
+):
+    """
+    언론사별 대표 기사 선택 결과를
+    analysis.analyze_issue_batch() 입력 구조로 변환한다.
+    """
+    issue_id = str(
+        issue_id or ""
+    ).strip()
+
+    issue_title = str(
+        issue_title or ""
+    ).strip()
+
+    query = str(
+        query or ""
+    ).strip()
+
+    if not issue_id:
+        raise ValueError(
+            "issue_id가 비어 있습니다."
+        )
+
+    if not issue_title:
+        raise ValueError(
+            "issue_title이 비어 있습니다."
+        )
+
+    if not isinstance(
+        selected_articles,
+        dict,
+    ):
+        raise ValueError(
+            "selected_articles는 딕셔너리여야 합니다."
+        )
+
+    cleaned_expanded_queries = []
+    seen_queries = set()
+
+    for expanded_query in (
+        expanded_queries or []
+    ):
+        expanded_query = str(
+            expanded_query or ""
+        ).strip()
+
+        if not expanded_query:
+            continue
+
+        normalized_query = (
+            expanded_query.lower()
+        )
+
+        if normalized_query in seen_queries:
+            continue
+
+        seen_queries.add(
+            normalized_query
+        )
+
+        cleaned_expanded_queries.append(
+            expanded_query
+        )
+
+    publishers = []
+
+    for (
+        publisher,
+        articles,
+    ) in selected_articles.items():
+        publisher = str(
+            publisher or ""
+        ).strip()
+
+        if not publisher:
+            continue
+
+        if not isinstance(articles, list):
+            continue
+
+        valid_articles = [
+            article
+            for article in articles
+            if isinstance(article, dict)
+        ]
+
+        if not valid_articles:
+            continue
+
+        publisher_ids = {
+            str(
+                article.get(
+                    "publisher_id"
+                )
+                or ""
+            ).strip()
+            for article in valid_articles
+            if str(
+                article.get(
+                    "publisher_id"
+                )
+                or ""
+            ).strip()
+        }
+
+        if len(publisher_ids) != 1:
+            raise ValueError(
+                f"{publisher} 대표 기사에서 "
+                "publisher_id를 하나로 결정할 수 없습니다: "
+                f"{sorted(publisher_ids)}"
+            )
+
+        publisher_id = next(
+            iter(publisher_ids)
+        )
+
+        normalized_articles = []
+
+        for article in valid_articles:
+            article_id = str(
+                article.get(
+                    "article_id"
+                )
+                or ""
+            ).strip()
+
+            title = str(
+                article.get(
+                    "title"
+                )
+                or ""
+            ).strip()
+
+            if not article_id or not title:
+                continue
+
+            normalized_articles.append(
+                {
+                    "article_id": article_id,
+                    "title": title,
+                    "description": str(
+                        article.get(
+                            "description"
+                        )
+                        or article.get(
+                            "content"
+                        )
+                        or ""
+                    ).strip(),
+                    "published_at": str(
+                        article.get(
+                            "published_at"
+                        )
+                        or article.get(
+                            "published"
+                        )
+                        or ""
+                    ).strip(),
+                    "link": str(
+                        article.get(
+                            "link"
+                        )
+                        or ""
+                    ).strip(),
+                    "category": str(
+                        article.get(
+                            "category"
+                        )
+                        or ""
+                    ).strip(),
+                }
+            )
+
+        if not normalized_articles:
+            continue
+
+        publishers.append(
+            {
+                "publisher_id": (
+                    publisher_id
+                ),
+                "publisher": publisher,
+                "articles": (
+                    normalized_articles[:2]
+                ),
+            }
+        )
+
+    if len(publishers) < 2:
+        raise ValueError(
+            "분석 가능한 언론사가 2개 미만입니다."
+        )
+
+    return {
+        "issue_id": issue_id,
+        "issue_title": issue_title,
+        "query": query,
+        "expanded_queries": (
+            cleaned_expanded_queries
+        ),
+        "publishers": publishers,
+    }
+
+def prepare_issue_analysis_input(
+    *,
+    issue_id,
+    issue_title,
+    search_context,
+    max_per_publisher=2,
+):
+    """
+    search_with_context() 결과를 받아
+    analyze_issue_batch() 입력 구조를 생성한다.
+    """
+    if not isinstance(search_context, dict):
+        raise ValueError(
+            "search_context는 딕셔너리여야 합니다."
+        )
+
+    query = str(
+        search_context.get("query") or ""
+    ).strip()
+
+    expanded_queries = search_context.get(
+        "expanded_queries",
+        [],
+    )
+
+    search_results = search_context.get(
+        "results",
+        [],
+    )
+
+    if not isinstance(search_results, list):
+        raise ValueError(
+            "search_context의 results는 배열이어야 합니다."
+        )
+
+    selected_articles = (
+        select_representative_articles(
+            search_results,
+            max_per_publisher=max_per_publisher,
+        )
+    )
+
+    return build_analysis_input(
+        issue_id=issue_id,
+        issue_title=issue_title,
+        query=query,
+        expanded_queries=expanded_queries,
+        selected_articles=selected_articles,
+    )
 def score_hot_topic(topic):
     """
     핫토픽 점수 계산 기준
