@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -13,7 +14,7 @@ OUTPUT_PATH = Path("data/issue.json")
 
 MODEL_NAME = "solar-pro3"
 REQUEST_TIMEOUT_SECONDS = 60
-MAX_RETRIES = 2
+MAX_RETRIES = 3
 
 
 def load_json(path):
@@ -103,6 +104,39 @@ RSS 설명: {description}
     return "\n\n====================\n\n".join(
         cluster_sections
     )
+
+def clean_korean_sentence(value):
+    """
+    Solar 응답에서 발생할 수 있는
+    중복 종결 표현을 정리한다.
+    """
+    if not isinstance(value, str):
+        return value
+
+    value = value.strip()
+
+    replacements = {
+        "했다 했다.": "했다.",
+        "했다 했다": "했다.",
+        "이다 했다.": "이다.",
+        "이다 했다": "이다.",
+        "였다 했다.": "였다.",
+        "였다 했다": "였다.",
+        "됐다 했다.": "됐다.",
+        "됐다 했다": "됐다.",
+        "없다 했다.": "없다.",
+        "없다 했다": "없다.",
+        "어렵다 했다.": "어렵다.",
+        "어렵다 했다": "어렵다.",
+    }
+
+    for wrong, correct in replacements.items():
+        value = value.replace(wrong, correct)
+
+    if value and not value.endswith((".", "?", "!")):
+        value += "."
+
+    return value
 
 def clean_entity_list(values, max_items=6, max_length=30):
     """
@@ -219,7 +253,11 @@ def build_prompt(matched_issue):
 - 모든 언론사를 빠짐없이 articles 배열에 포함하세요.
 - published_times 배열은 titles, links 배열과 같은 기사 순서를 유지하세요.
 - 발행 시간이 없는 기사는 published_times에 빈 문자열("")을 사용하세요.
-- **[중요] 생성되는 모든 한국어 문장(summary, focus, expression_summary, evidence_limit 등)은 반드시 문장 끝을 '-했다.', '-이다.' 톤의 평서문으로 일관되게 종결하세요. (~하며, ~함, ~합니다, ~해요 등의 종결 어미는 절대 사용하지 마세요.)**
+- 생성되는 모든 한국어 문장은 자연스러운 평서문으로 작성하세요.
+- 문장은 문맥에 따라 "-했다.", "-였다.", "-이다.", "-없다.", "-어렵다." 등 자연스러운 종결형을 사용하세요.
+- 이미 완성된 문장 뒤에 "했다" 또는 "이다"를 추가하지 마세요.
+- "발생했다 했다", "계획이다 했다", "강조했다 했다"처럼 종결어를 중복하지 마세요.
+- "~하며", "~함", "~합니다", "~해요" 형태는 사용하지 마세요.
 - JSON 이외의 문장은 출력하지 마세요.
 
 반드시 아래 JSON 구조로만 답하세요.
@@ -228,9 +266,9 @@ def build_prompt(matched_issue):
   "issue_id": "{match_id}",
   "category": "{category}",
   "title": "모든 언론사의 기사를 아우르는 중립적인 사건 제목",
-  "summary": "사건의 공통 내용을 설명하는 1~2문장 (반드시 '-했다.', '-이다.'로 끝낼 것)",
+  "summary": "summary": "사건의 공통 내용을 설명하는 자연스러운 평서문 1~2문장",
   "common_facts": [
-    "여러 언론사 기사에서 공통으로 확인되는 사실 (반드시 '-했다.', '-이다.'로 끝낼 것)"
+    "여러 언론사 기사에서 공통으로 확인되는 사실을 자연스러운 평서문으로 작성"
   ],
   "articles": [
     {{
@@ -256,9 +294,9 @@ def build_prompt(matched_issue):
       "organizations": [
         "사건에 직접 관련된 정당·기업·정부 기관·단체"
       ],
-      "focus": "해당 언론사 기사 묶음에서 상대적으로 강조된 내용 (반드시 '-했다.', '-이다.'로 끝낼 것)",
-      "expression_summary": "제목과 RSS 설명에서 확인되는 표현 방식 (반드시 '-했다.', '-이다.'로 끝낼 것)",
-      "evidence_limit": "현재 제공된 자료만으로 판단하기 어려운 부분 (반드시 '-했다.', '-이다.'로 끝낼 것)"
+      "focus": "해당 언론사 기사 묶음에서 상대적으로 강조된 내용",
+      "expression_summary": "제목과 RSS 설명에서 확인되는 표현 방식",
+      "evidence_limit": "현재 제공된 자료만으로 판단하기 어려운 부분"
     }}
   ]
 }}
@@ -678,6 +716,32 @@ def analyze_issue(
         "기타"
     )
 
+    result["summary"] = clean_korean_sentence(
+        result.get("summary", "")
+    )
+
+    result["common_facts"] = [
+        clean_korean_sentence(fact)
+        for fact in result.get("common_facts", [])
+        if isinstance(fact, str) and fact.strip()
+    ]
+
+    for article in result.get("articles", []):
+        if not isinstance(article, dict):
+            continue
+
+        article["focus"] = clean_korean_sentence(
+            article.get("focus", "")
+        )
+
+        article["expression_summary"] = clean_korean_sentence(
+            article.get("expression_summary", "")
+        )
+
+        article["evidence_limit"] = clean_korean_sentence(
+            article.get("evidence_limit", "")
+        )
+
     result = complete_articles(
         result,
         matched_issue,
@@ -771,6 +835,9 @@ def main():
             f"{retry_number}/{MAX_RETRIES}: "
             f"{len(failed_issues)}개"
         )
+
+        print("2초 후 재시도를 시작합니다...")
+        time.sleep(2)
 
         retry_targets = failed_issues
         failed_issues = []
