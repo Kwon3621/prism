@@ -11,34 +11,11 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
-    <nav class="nav nav-dropdown" data-nav aria-label="주요 메뉴">
-
-      <a href="about.html" style="display: flex; align-items: center; padding: 0 16px; font-weight: bold; color: inherit; text-decoration: none;">사이트 설명</a>
-    
-      <div class="nav-item-dropdown">
-        <button type="button" class="nav-dropdown-toggle">
-          이슈 둘러보기
-          <span aria-hidden="true">▾</span>
-        </button>
-    
-        <div class="nav-dropdown-menu">
-          <a href="./index.html#live-news">실시간 뉴스</a>
-          <a href="./index.html#saved-section">저장한 이슈</a>
-        </div>
-      </div>
-    
-      <div class="nav-item-dropdown">
-        <button type="button" class="nav-dropdown-toggle">
-          이슈 비교하기
-          <span aria-hidden="true">▾</span>
-        </button>
-    
-        <div class="nav-dropdown-menu">
-          <a href="./index.html#topics">주요 이슈 비교</a>
-          <a href="./search.html">키워드 검색</a>
-        </div>
-      </div>
-    
+    <nav class="nav" data-nav aria-label="주요 메뉴">
+      <a href="index.html#live-news">이슈 둘러보기</a>
+      <a href="#topics">이슈 비교하기</a>
+      <a href="index.html#saved-section">저장한 이슈</a>
+      <a href="index.html#how-it-works">분석 방식</a>
     </nav>
     <div class="header-actions">
       <button class="btn btn-secondary" id="btn-login-nav">로그인</button>
@@ -100,36 +77,12 @@
       </div>
     </div>
 
-    <div class="live-news-layout">
-      <aside class="live-news-sidebar">
-        <div class="filter-control-group">
-          <h3 class="filter-title">언론사 필터</h3>
-      
-          <div class="filter-actions">
-            <button type="button" class="filter-action-btn" data-select-all>
-              전체 선택
-            </button>
-      
-            <button type="button" class="filter-action-btn" data-deselect-all>
-              전체 해제
-            </button>
-          </div>
-        </div>
-      
-        <div class="filter-checkbox-list" data-publisher-checkboxes>
-          <!-- 체크박스는 app.js에서 자동 생성됩니다 -->
-        </div>
-      </aside>
+    <div id="live-news-container" data-live-news>
+      <p>뉴스를 불러오는 중입니다.</p>
+    </div>
 
-      <div class="live-news-main">
-        <div id="live-news-container" data-live-news>
-          <p>뉴스를 불러오는 중입니다.</p>
-        </div>
-
-        <div class="actions-container" style="text-align: center; margin-top: 24px;">
-          <button class="btn btn-secondary" id="btn-toggle-news" style="display: none;">더보기</button>
-        </div>
-      </div>
+    <div class="actions-container" style="text-align: center; margin-top: 24px;">
+      <button class="btn btn-secondary" id="btn-toggle-news" style="display: none;">더보기</button>
     </div>
 
   </div>
@@ -175,46 +128,6 @@
   </div>
 </section>
 
-
-</main>
-
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Prism</div><p class="footer-desc">같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.</p></div><div class="footer-links"><a href="index.html">서비스 소개</a><a href="methodology.html">분석 방식</a><a href="#">이용 안내</a><a href="#">개인정보처리방침</a><a href="#">문의</a></div></div><div class="footer-bottom">© 2026 Prism. All rights reserved.</div></div></footer>
-<script src="./app.js"></script>
-
-<div id="login-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
-  <div style="background: white; padding: 32px; border-radius: 12px; width: 100%; max-width: 380px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); position: relative;">
-    
-    <h3 id="modal-title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px;">Prism 로그인</h3>
-    <p id="modal-desc" style="color: #666; font-size: 14px; margin-bottom: 24px;">서비스 이용을 위해 로그인을 진행해 주세요.</p>
-    
-    <form id="auth-form">
-      <div id="field-name" style="margin-bottom: 16px; display: none;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">이름</label>
-        <input type="text" id="auth-name" placeholder="홍길동" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
-      </div>
-
-      <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">아이디 (이메일)</label>
-        <input type="email" id="auth-email" placeholder="example@email.com" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
-      </div>
-
-      <div style="margin-bottom: 24px;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">비밀번호</label>
-        <input type="password" id="auth-password" placeholder="••••••••" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
-      </div>
-      
-      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
-        <button type="button" id="btn-close-modal" class="btn btn-secondary" style="flex: 1; padding: 10px 0;">취소</button>
-        <button type="submit" id="btn-auth-submit" class="btn btn-primary" style="flex: 1; padding: 10px 0; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">로그인</button>
-      </div>
-
-      <div style="text-align: center; font-size: 13px; color: #666;">
-        <span id="switch-text">아직 계정이 없으신가요?</span>
-        <a href="#" id="link-switch-auth" style="color: #007bff; text-decoration: none; margin-left: 4px; font-weight: bold;">회원가입</a>
-      </div>
-    </form>
-  </div>
-</div>
 
 </body>
 </html>
