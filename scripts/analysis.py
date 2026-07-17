@@ -1,0 +1,1689 @@
+import argparse
+import json
+import os
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+from cache import (
+    get_publisher_analysis,
+    save_publisher_analysis,
+)
+
+
+MODEL_NAME = "solar-pro3"
+REQUEST_TIMEOUT_SECONDS = 60
+MAX_RETRIES = 3
+RETRY_WAIT_SECONDS = 2
+
+DEFAULT_INPUT_PATH = Path(
+    "data/representative_articles.json"
+)
+DEFAULT_OUTPUT_PATH = Path(
+    "data/publisher_analyses.json"
+)
+
+
+def load_json(path: Path) -> dict:
+    """
+    UTF-8 JSON 파일을 읽어 딕셔너리로 반환한다.
+    """
+    if not path.exists():
+        raise FileNotFoundError(
+            f"입력 파일을 찾을 수 없습니다: {path}"
+        )
+
+    with path.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+        data = json.load(file)
+
+    if not isinstance(data, dict):
+        raise ValueError(
+            f"JSON 최상위 값은 객체여야 합니다: {path}"
+        )
+
+    return data
+
+
+def save_json(
+    path: Path,
+    data: dict,
+) -> None:
+    """
+    결과를 UTF-8 JSON 파일로 저장한다.
+    """
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    with path.open(
+        "w",
+        encoding="utf-8",
+    ) as file:
+        json.dump(
+            data,
+            file,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+
+def create_client() -> OpenAI:
+    """
+    환경변수의 Upstage API 키로 클라이언트를 생성한다.
+    """
+    load_dotenv()
+
+    api_key = os.getenv(
+        "UPSTAGE_API_KEY"
+    )
+
+    if not api_key:
+        raise ValueError(
+            "UPSTAGE_API_KEY가 설정되지 않았습니다. "
+            ".env 파일을 확인하세요."
+        )
+
+    return OpenAI(
+        api_key=api_key,
+        base_url="https://api.upstage.ai/v1",
+    )
+
+
+def clean_string(value: Any) -> str:
+    """
+    문자열이 아닌 값은 빈 문자열로 바꾸고
+    문자열의 앞뒤 공백을 제거한다.
+    """
+    if not isinstance(value, str):
+        return ""
+
+    return value.strip()
+
+
+def clean_string_list(
+    values: Any,
+    max_items: int = 8,
+) -> list[str]:
+    """
+    문자열 배열을 정리한다.
+
+    - 빈 값 제거
+    - 중복 제거
+    - 최대 개수 제한
+    """
+    if not isinstance(values, list):
+        return []
+
+    cleaned_values = []
+    seen = set()
+
+    for value in values:
+        if not isinstance(value, str):
+            continue
+
+        value = value.strip()
+
+        if not value:
+            continue
+
+        normalized = value.replace(
+            " ",
+            "",
+        )
+
+        if normalized in seen:
+            continue
+
+        seen.add(normalized)
+        cleaned_values.append(value)
+
+        if len(cleaned_values) >= max_items:
+            break
+
+    return cleaned_values
+
+
+def normalize_articles(
+    articles: Any,
+) -> list[dict]:
+    """
+    대표 기사 입력값을 분석에 필요한 공통 구조로 정리한다.
+    """
+    if not isinstance(articles, list):
+        raise ValueError(
+            "articles는 배열이어야 합니다."
+        )
+
+    if not articles:
+        raise ValueError(
+            "분석할 대표 기사가 없습니다."
+        )
+
+    if len(articles) > 2:
+        raise ValueError(
+            "언론사별 대표 기사는 최대 2개만 허용됩니다."
+        )
+
+    normalized_articles = []
+
+    for index, article in enumerate(
+        articles,
+        start=1,
+    ):
+        if not isinstance(article, dict):
+            raise ValueError(
+                f"articles[{index - 1}]은 객체여야 합니다."
+            )
+
+        article_id = clean_string(
+            article.get("article_id")
+        )
+
+        title = clean_string(
+            article.get("title")
+        )
+
+        if not article_id:
+            raise ValueError(
+                f"{index}번째 기사에 article_id가 없습니다."
+            )
+
+        if not title:
+            raise ValueError(
+                f"{index}번째 기사에 title이 없습니다."
+            )
+
+        normalized_articles.append(
+            {
+                "article_id": article_id,
+                "title": title,
+                "description": clean_string(
+                    article.get("description")
+                ),
+                "published_at": clean_string(
+                    article.get("published_at")
+                    or article.get("published")
+                ),
+                "link": clean_string(
+                    article.get("link")
+                ),
+                "category": clean_string(
+                    article.get("category")
+                ),
+            }
+        )
+
+    return normalized_articles
+
+
+def build_article_text(
+    articles: list[dict],
+) -> str:
+    """
+    대표 기사 목록을 Solar 프롬프트에 넣을 텍스트로 변환한다.
+    """
+    sections = []
+
+    for index, article in enumerate(
+        articles,
+        start=1,
+    ):
+        sections.append(
+            f"""
+기사 {index}
+기사 ID: {article["article_id"]}
+제목: {article["title"]}
+RSS 설명: {article["description"]}
+발행 시각: {article["published_at"]}
+카테고리: {article["category"]}
+원문 링크: {article["link"]}
+""".strip()
+        )
+
+    return "\n\n--------------------\n\n".join(
+        sections
+    )
+
+
+def build_publisher_prompt(
+    issue_id: str,
+    issue_title: str,
+    publisher_id: str,
+    publisher: str,
+    articles: list[dict],
+) -> str:
+    """
+    언론사 한 곳의 대표 기사 1~2개를 분석하기 위한
+    Solar 프롬프트를 생성한다.
+    """
+    article_text = build_article_text(
+        articles
+    )
+
+    return f"""
+당신은 뉴스 기사 비교 서비스 Prism의 언론사별 기사 분석기입니다.
+
+이번 요청에서는 여러 언론사를 서로 비교하지 않습니다.
+하나의 언론사가 동일 이슈를 다룬 대표 기사 1~2개만 분석합니다.
+
+분석 대상 이슈:
+- 이슈 ID: {issue_id}
+- 이슈명: {issue_title}
+- 언론사 ID: {publisher_id}
+- 언론사명: {publisher}
+
+분석 자료의 범위:
+- 기사 제목
+- RSS 설명
+- 발행 시각
+- 원문 링크
+
+중요 원칙:
+- 제공된 제목과 RSS 설명에서 확인되는 내용만 사용하세요.
+- 기사 원문 전체를 읽은 것처럼 작성하지 마세요.
+- 언론사의 정치 성향이나 고정된 성격을 판단하지 마세요.
+- 기자 또는 언론사의 의도를 추측하지 마세요.
+- 해당 기사 세트에서 실제로 강조된 내용만 분석하세요.
+- 근거가 부족하면 억지로 차이나 프레임을 만들지 마세요.
+- 분석 근거에는 제목 또는 RSS 설명에서 실제로 확인되는 표현을 적으세요.
+- 동일한 내용을 반복하지 마세요.
+- 모든 배열은 확인 가능한 항목만 포함하세요.
+- 정보가 없으면 빈 문자열 또는 빈 배열을 사용하세요.
+- JSON 이외의 설명은 출력하지 마세요.
+
+분석 항목:
+
+1. article_summary
+대표 기사에 공통으로 나타나는 내용을 1~2문장으로 요약합니다.
+
+2. headline_frame
+제목이 사건의 어떤 요소를 중심에 놓는지 설명합니다.
+
+3. main_focus
+해당 언론사가 기사에서 가장 중요하게 다루는 핵심 관점을 설명합니다.
+
+4. keywords
+기사의 핵심 개념을 3~6개 제시합니다.
+인물명과 기관명은 제외합니다.
+
+5. main_actors
+기사에서 주요 행동 주체로 다뤄지는 인물·집단·기관을 제시합니다.
+
+6. quoted_sources
+기사 설명에서 직접 인용하거나 입장을 전달한 대상이 확인되면 제시합니다.
+
+7. causes
+기사에서 사건의 직접적인 원인으로 강조한 내용을 제시합니다.
+
+8. background
+사건을 이해하기 위한 제도적·사회적·경제적 배경으로 다룬 내용을 제시합니다.
+
+9. emphasized_effects
+기사에서 중요하게 다룬 결과·영향·위험·변화를 제시합니다.
+
+10. affected_groups
+기사에서 영향을 받는 대상으로 강조한 사람·집단·기관을 제시합니다.
+
+11. tone
+보도 태도를 category와 evidence로 구분합니다.
+
+category는 다음 중 하나만 사용하세요.
+- 중립 설명
+- 분석·전망
+- 우려·경계
+- 비판
+- 기대
+- 갈등 강조
+- 판단 어려움
+
+evidence에는 해당 태도를 판단한 실제 제목 또는 RSS 설명 표현을 제시합니다.
+
+12. outlook
+기사에서 향후 전망이 확인되면 direction과 summary로 정리합니다.
+
+direction은 다음 중 하나만 사용하세요.
+- 긍정
+- 부정
+- 혼합
+- 중립
+- 전망 없음
+
+13. less_covered_context
+현재 제공된 기사에서 상대적으로 확인하기 어려운 관련 맥락을 제시합니다.
+기사에 없는 사실을 새로 만들어서는 안 됩니다.
+예: "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
+
+반드시 아래 JSON 구조로만 응답하세요.
+
+{{
+  "issue_id": "{issue_id}",
+  "publisher_id": "{publisher_id}",
+  "publisher": "{publisher}",
+  "articles": [
+    {{
+      "article_id": "입력된 기사 ID",
+      "title": "입력된 기사 제목",
+      "published_at": "입력된 발행 시각",
+      "link": "입력된 원문 링크"
+    }}
+  ],
+  "analysis": {{
+    "article_summary": "",
+    "headline_frame": "",
+    "main_focus": "",
+    "keywords": [],
+    "main_actors": [],
+    "quoted_sources": [],
+    "causes": [],
+    "background": [],
+    "emphasized_effects": [],
+    "affected_groups": [],
+    "tone": {{
+      "category": "",
+      "evidence": []
+    }},
+    "outlook": {{
+      "direction": "",
+      "summary": ""
+    }},
+    "less_covered_context": [],
+    "evidence_limit": "기사 제목과 RSS 설명 기준"
+  }}
+}}
+
+분석할 대표 기사:
+
+{article_text}
+""".strip()
+
+
+def validate_analysis_result(
+    result: Any,
+    issue_id: str,
+    publisher_id: str,
+    publisher: str,
+    source_articles: list[dict],
+) -> dict:
+    """
+    Solar 결과가 고정된 Structured Output을 따르는지 검사하고,
+    누락되거나 불안정한 값을 정리한다.
+    """
+    if not isinstance(result, dict):
+        raise ValueError(
+            "Solar 응답의 최상위 값이 객체가 아닙니다."
+        )
+
+    analysis = result.get("analysis")
+
+    if not isinstance(analysis, dict):
+        raise ValueError(
+            "Solar 응답에 analysis 객체가 없습니다."
+        )
+
+    tone = analysis.get("tone")
+
+    if not isinstance(tone, dict):
+        tone = {}
+
+    outlook = analysis.get("outlook")
+
+    if not isinstance(outlook, dict):
+        outlook = {}
+
+    allowed_tones = {
+        "중립 설명",
+        "분석·전망",
+        "우려·경계",
+        "비판",
+        "기대",
+        "갈등 강조",
+        "판단 어려움",
+    }
+
+    tone_category = clean_string(
+        tone.get("category")
+    )
+
+    if tone_category not in allowed_tones:
+        tone_category = "판단 어려움"
+
+    allowed_outlook_directions = {
+        "긍정",
+        "부정",
+        "혼합",
+        "중립",
+        "전망 없음",
+    }
+
+    outlook_direction = clean_string(
+        outlook.get("direction")
+    )
+
+    if (
+        outlook_direction
+        not in allowed_outlook_directions
+    ):
+        outlook_direction = "전망 없음"
+
+    normalized_result = {
+        "issue_id": issue_id,
+        "publisher_id": publisher_id,
+        "publisher": publisher,
+        "articles": [
+            {
+                "article_id": article[
+                    "article_id"
+                ],
+                "title": article["title"],
+                "published_at": article[
+                    "published_at"
+                ],
+                "link": article["link"],
+            }
+            for article in source_articles
+        ],
+        "analysis": {
+            "article_summary": clean_string(
+                analysis.get(
+                    "article_summary"
+                )
+            ),
+            "headline_frame": clean_string(
+                analysis.get(
+                    "headline_frame"
+                )
+            ),
+            "main_focus": clean_string(
+                analysis.get(
+                    "main_focus"
+                )
+            ),
+            "keywords": clean_string_list(
+                analysis.get("keywords"),
+                max_items=6,
+            ),
+            "main_actors": clean_string_list(
+                analysis.get(
+                    "main_actors"
+                ),
+                max_items=8,
+            ),
+            "quoted_sources": clean_string_list(
+                analysis.get(
+                    "quoted_sources"
+                ),
+                max_items=8,
+            ),
+            "causes": clean_string_list(
+                analysis.get("causes"),
+                max_items=6,
+            ),
+            "background": clean_string_list(
+                analysis.get(
+                    "background"
+                ),
+                max_items=6,
+            ),
+            "emphasized_effects": (
+                clean_string_list(
+                    analysis.get(
+                        "emphasized_effects"
+                    ),
+                    max_items=6,
+                )
+            ),
+            "affected_groups": (
+                clean_string_list(
+                    analysis.get(
+                        "affected_groups"
+                    ),
+                    max_items=6,
+                )
+            ),
+            "tone": {
+                "category": tone_category,
+                "evidence": clean_string_list(
+                    tone.get("evidence"),
+                    max_items=5,
+                ),
+            },
+            "outlook": {
+                "direction": (
+                    outlook_direction
+                ),
+                "summary": clean_string(
+                    outlook.get("summary")
+                ),
+            },
+            "less_covered_context": (
+                clean_string_list(
+                    analysis.get(
+                        "less_covered_context"
+                    ),
+                    max_items=5,
+                )
+            ),
+            "evidence_limit": (
+                "기사 제목과 RSS 설명 기준"
+            ),
+        },
+        "analysis_status": "success",
+        "analyzed_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "model": MODEL_NAME,
+    }
+
+    if not normalized_result[
+        "analysis"
+    ]["article_summary"]:
+        raise ValueError(
+            "article_summary가 비어 있습니다."
+        )
+
+    if not normalized_result[
+        "analysis"
+    ]["main_focus"]:
+        raise ValueError(
+            "main_focus가 비어 있습니다."
+        )
+
+    return normalized_result
+
+
+def request_solar_analysis(
+    client: OpenAI,
+    prompt: str,
+) -> dict:
+    """
+    Solar API를 호출하고 JSON 응답을 파싱한다.
+    """
+    response = client.chat.completions.create(
+        model=MODEL_NAME,
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+        response_format={
+            "type": "json_object",
+        },
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
+
+    content = (
+        response
+        .choices[0]
+        .message
+        .content
+    )
+
+    if not content:
+        raise ValueError(
+            "Solar 응답 내용이 비어 있습니다."
+        )
+
+    try:
+        result = json.loads(content)
+
+    except json.JSONDecodeError as error:
+        raise ValueError(
+            "Solar 응답을 JSON으로 해석할 수 없습니다."
+        ) from error
+
+    if not isinstance(result, dict):
+        raise ValueError(
+            "Solar 응답이 JSON 객체가 아닙니다."
+        )
+
+    return result
+
+
+def analyze_publisher(
+    client: OpenAI,
+    issue_id: str,
+    issue_title: str,
+    publisher_id: str,
+    publisher: str,
+    articles: list[dict],
+    use_cache: bool = True,
+) -> dict:
+    """
+    언론사 한 곳의 대표 기사 1~2개를 분석한다.
+
+    처리 순서:
+    1. 입력 기사 정리
+    2. 캐시 조회
+    3. Solar 분석
+    4. Structured Output 검증
+    5. 캐시 저장
+    """
+    normalized_articles = normalize_articles(
+        articles
+    )
+
+    article_ids = [
+        article["article_id"]
+        for article in normalized_articles
+    ]
+
+    if use_cache:
+        cached_result = (
+            get_publisher_analysis(
+                issue_id=issue_id,
+                publisher_id=publisher_id,
+                article_ids=article_ids,
+            )
+        )
+
+        if cached_result:
+            print(
+                f"[캐시 사용] "
+                f"{publisher} 분석 결과"
+            )
+
+            return cached_result
+
+    prompt = build_publisher_prompt(
+        issue_id=issue_id,
+        issue_title=issue_title,
+        publisher_id=publisher_id,
+        publisher=publisher,
+        articles=normalized_articles,
+    )
+
+    last_error = None
+
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
+        try:
+            print(
+                f"[Solar 분석] {publisher} "
+                f"{attempt}/{MAX_RETRIES}"
+            )
+
+            raw_result = request_solar_analysis(
+                client=client,
+                prompt=prompt,
+            )
+
+            validated_result = (
+                validate_analysis_result(
+                    result=raw_result,
+                    issue_id=issue_id,
+                    publisher_id=publisher_id,
+                    publisher=publisher,
+                    source_articles=(
+                        normalized_articles
+                    ),
+                )
+            )
+
+            save_publisher_analysis(
+                issue_id=issue_id,
+                publisher_id=publisher_id,
+                article_ids=article_ids,
+                result=validated_result,
+            )
+
+            print(
+                f"[분석 완료] {publisher}"
+            )
+
+            return validated_result
+
+        except Exception as error:
+            last_error = error
+
+            print(
+                f"[분석 실패] {publisher} "
+                f"{attempt}/{MAX_RETRIES}: "
+                f"{error}"
+            )
+
+            if attempt < MAX_RETRIES:
+                time.sleep(
+                    RETRY_WAIT_SECONDS
+                )
+
+    raise RuntimeError(
+        f"{publisher} 분석이 "
+        f"{MAX_RETRIES}회 모두 실패했습니다: "
+        f"{last_error}"
+    )
+
+
+def analyze_input_data(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    JSON 입력 파일에서 언론사 한 곳의 정보를 읽고 분석한다.
+    """
+    issue_id = clean_string(
+        input_data.get("issue_id")
+    )
+
+    issue_title = clean_string(
+        input_data.get("issue_title")
+    )
+
+    publisher_id = clean_string(
+        input_data.get("publisher_id")
+    )
+
+    publisher = clean_string(
+        input_data.get("publisher")
+    )
+
+    articles = input_data.get(
+        "articles",
+        [],
+    )
+
+    if not issue_id:
+        raise ValueError(
+            "issue_id가 없습니다."
+        )
+
+    if not issue_title:
+        raise ValueError(
+            "issue_title이 없습니다."
+        )
+
+    if not publisher_id:
+        raise ValueError(
+            "publisher_id가 없습니다."
+        )
+
+    if not publisher:
+        raise ValueError(
+            "publisher가 없습니다."
+        )
+
+    client = create_client()
+
+    return analyze_publisher(
+        client=client,
+        issue_id=issue_id,
+        issue_title=issue_title,
+        publisher_id=publisher_id,
+        publisher=publisher,
+        articles=articles,
+        use_cache=use_cache,
+    )
+def normalize_grouping_analyses(
+    publisher_analyses: Any,
+) -> list[dict]:
+    """
+    Publisher Grouping에 사용할 언론사별 분석 결과를 검증한다.
+    """
+    if not isinstance(publisher_analyses, list):
+        raise ValueError(
+            "publisher_analyses는 배열이어야 합니다."
+        )
+
+    if len(publisher_analyses) < 2:
+        raise ValueError(
+            "경향 그룹을 만들려면 최소 2개 언론사가 필요합니다."
+        )
+
+    normalized = []
+    seen_publishers = set()
+    issue_ids = set()
+
+    for index, item in enumerate(
+        publisher_analyses
+    ):
+        if not isinstance(item, dict):
+            raise ValueError(
+                f"publisher_analyses[{index}]는 객체여야 합니다."
+            )
+
+        issue_id = clean_string(
+            item.get("issue_id")
+        )
+
+        publisher_id = clean_string(
+            item.get("publisher_id")
+        )
+
+        publisher = clean_string(
+            item.get("publisher")
+        )
+
+        analysis = item.get("analysis")
+
+        if not issue_id:
+            raise ValueError(
+                f"{index + 1}번째 분석 결과에 issue_id가 없습니다."
+            )
+
+        if not publisher_id:
+            raise ValueError(
+                f"{index + 1}번째 분석 결과에 publisher_id가 없습니다."
+            )
+
+        if not publisher:
+            raise ValueError(
+                f"{index + 1}번째 분석 결과에 publisher가 없습니다."
+            )
+
+        if not isinstance(analysis, dict):
+            raise ValueError(
+                f"{publisher}의 analysis가 객체가 아닙니다."
+            )
+
+        if publisher_id in seen_publishers:
+            raise ValueError(
+                f"중복된 언론사입니다: {publisher_id}"
+            )
+
+        seen_publishers.add(
+            publisher_id
+        )
+
+        issue_ids.add(issue_id)
+
+        normalized.append(
+            {
+                "issue_id": issue_id,
+                "publisher_id": publisher_id,
+                "publisher": publisher,
+                "analysis": analysis,
+            }
+        )
+
+    if len(issue_ids) != 1:
+        raise ValueError(
+            "서로 다른 이슈의 언론사 분석 결과는 "
+            "하나의 경향 그룹으로 묶을 수 없습니다."
+        )
+
+    return normalized
+
+
+def build_grouping_text(
+    publisher_analyses: list[dict],
+) -> str:
+    """
+    언론사별 Structured Output을 그룹화용 텍스트로 변환한다.
+    """
+    sections = []
+
+    for item in publisher_analyses:
+        analysis = item["analysis"]
+
+        sections.append(
+            f"""
+언론사 ID: {item["publisher_id"]}
+언론사명: {item["publisher"]}
+
+제목 프레임:
+{analysis.get("headline_frame", "")}
+
+핵심 관점:
+{analysis.get("main_focus", "")}
+
+핵심 키워드:
+{json.dumps(
+    analysis.get("keywords", []),
+    ensure_ascii=False,
+)}
+
+강조된 원인:
+{json.dumps(
+    analysis.get("causes", []),
+    ensure_ascii=False,
+)}
+
+강조된 배경:
+{json.dumps(
+    analysis.get("background", []),
+    ensure_ascii=False,
+)}
+
+강조된 영향:
+{json.dumps(
+    analysis.get("emphasized_effects", []),
+    ensure_ascii=False,
+)}
+
+영향 대상:
+{json.dumps(
+    analysis.get("affected_groups", []),
+    ensure_ascii=False,
+)}
+
+보도 태도:
+{json.dumps(
+    analysis.get("tone", {}),
+    ensure_ascii=False,
+)}
+
+향후 전망:
+{json.dumps(
+    analysis.get("outlook", {}),
+    ensure_ascii=False,
+)}
+""".strip()
+        )
+
+    return "\n\n====================\n\n".join(
+        sections
+    )
+
+
+def build_grouping_prompt(
+    issue_id: str,
+    publisher_analyses: list[dict],
+) -> str:
+    """
+    언론사별 분석 결과를 보도 경향 그룹으로 묶기 위한
+    Solar 프롬프트를 생성한다.
+    """
+    grouping_text = build_grouping_text(
+        publisher_analyses
+    )
+
+    publisher_count = len(
+        publisher_analyses
+    )
+
+    maximum_group_count = min(
+        5,
+        publisher_count,
+    )
+
+    return f"""
+당신은 뉴스 기사 비교 서비스 Prism의
+보도 경향 그룹 분석기입니다.
+
+입력 데이터는 동일한 이슈를 다룬 언론사별 기사 분석 결과입니다.
+각 언론사의 현재 기사에서 확인되는 강조점이 얼마나 유사한지를
+기준으로 언론사를 그룹화하세요.
+
+이슈 ID:
+{issue_id}
+
+언론사 수:
+{publisher_count}
+
+그룹화 원칙:
+- 언론사의 고정된 정치 성향을 분류하지 마세요.
+- 보수, 진보, 좌파, 우파와 같은 고정 성향 라벨을 사용하지 마세요.
+- 현재 제공된 기사 분석 결과만 사용하세요.
+- 핵심 관점, 원인·배경, 영향 대상, 보도 태도의 유사성을 종합하세요.
+- 키워드가 일부 같다는 이유만으로 같은 그룹으로 묶지 마세요.
+- 강조점이 실질적으로 다르면 다른 그룹으로 구분하세요.
+- 차이가 명확하지 않으면 같은 그룹으로 묶을 수 있습니다.
+- 모든 언론사는 정확히 한 개 그룹에만 포함해야 합니다.
+- 어떤 언론사도 누락하거나 중복하지 마세요.
+- 그룹명은 해당 기사에서 나타난 강조점을 짧은 명사구로 작성하세요.
+- 그룹명 예시는 "정책 추진 과정 중심",
+  "생활 부담 영향 중심", "안보 위험 중심"과 같은 형식입니다.
+- 언론사 수보다 많은 그룹을 만들지 마세요.
+- 의미 없는 1개 언론사 그룹을 억지로 만들지 마세요.
+- 전체 언론사가 매우 유사하면 그룹 수를 줄일 수 있습니다.
+- 그룹 수는 1개 이상 {maximum_group_count}개 이하로 작성하세요.
+- JSON 이외의 문장은 출력하지 마세요.
+
+반드시 아래 JSON 구조로만 응답하세요.
+
+{{
+  "issue_id": "{issue_id}",
+  "groups": [
+    {{
+      "group_id": "영문 소문자와 하이픈으로 작성한 그룹 ID",
+      "label": "현재 기사에서 나타난 강조점 중심의 그룹명",
+      "summary": "이 그룹에 포함된 언론사들이 공통으로 강조한 내용을 설명",
+      "keywords": [
+        "대표 키워드"
+      ],
+      "publisher_ids": [
+        "언론사 ID"
+      ],
+      "group_evidence": [
+        "그룹을 구성한 근거"
+      ]
+    }}
+  ],
+  "group_contrasts": [
+    {{
+      "group_ids": [
+        "비교할 그룹 ID"
+      ],
+      "contrast_statement": "두 그룹의 핵심 강조점 차이를 설명"
+    }}
+  ],
+  "grouping_summary": "전체 보도 경향 분포를 종합한 설명",
+  "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준"
+}}
+
+언론사별 Structured Output:
+
+{grouping_text}
+""".strip()
+
+
+def validate_grouping_result(
+    result: Any,
+    issue_id: str,
+    publisher_analyses: list[dict],
+) -> dict:
+    """
+    Solar의 Publisher Grouping 결과를 검증하고
+    고정 JSON 구조로 정리한다.
+    """
+    if not isinstance(result, dict):
+        raise ValueError(
+            "그룹화 결과의 최상위 값이 객체가 아닙니다."
+        )
+
+    groups = result.get("groups")
+
+    if not isinstance(groups, list):
+        raise ValueError(
+            "groups는 배열이어야 합니다."
+        )
+
+    if not groups:
+        raise ValueError(
+            "생성된 보도 경향 그룹이 없습니다."
+        )
+
+    expected_publishers = {
+        item["publisher_id"]: item["publisher"]
+        for item in publisher_analyses
+    }
+
+    maximum_group_count = min(
+        5,
+        len(expected_publishers),
+    )
+
+    if len(groups) > maximum_group_count:
+        raise ValueError(
+            f"그룹 수가 허용 범위를 초과했습니다: "
+            f"{len(groups)}개"
+        )
+
+    normalized_groups = []
+    assigned_publishers = set()
+    seen_group_ids = set()
+
+    for index, group in enumerate(
+        groups,
+        start=1,
+    ):
+        if not isinstance(group, dict):
+            raise ValueError(
+                f"groups[{index - 1}]은 객체여야 합니다."
+            )
+
+        group_id = clean_string(
+            group.get("group_id")
+        )
+
+        if not group_id:
+            group_id = f"group-{index}"
+
+        if group_id in seen_group_ids:
+            group_id = f"{group_id}-{index}"
+
+        seen_group_ids.add(group_id)
+
+        publisher_ids = group.get(
+            "publisher_ids",
+            [],
+        )
+
+        if not isinstance(publisher_ids, list):
+            publisher_ids = []
+
+        valid_publisher_ids = []
+
+        for publisher_id in publisher_ids:
+            publisher_id = clean_string(
+                publisher_id
+            )
+
+            if (
+                publisher_id
+                not in expected_publishers
+            ):
+                continue
+
+            if publisher_id in assigned_publishers:
+                raise ValueError(
+                    f"언론사가 여러 그룹에 중복되었습니다: "
+                    f"{publisher_id}"
+                )
+
+            assigned_publishers.add(
+                publisher_id
+            )
+
+            valid_publisher_ids.append(
+                publisher_id
+            )
+
+        if not valid_publisher_ids:
+            continue
+
+        normalized_groups.append(
+            {
+                "group_id": group_id,
+                "label": clean_string(
+                    group.get("label")
+                ) or f"보도 경향 그룹 {index}",
+                "summary": clean_string(
+                    group.get("summary")
+                ),
+                "keywords": clean_string_list(
+                    group.get("keywords"),
+                    max_items=6,
+                ),
+                "publisher_ids": (
+                    valid_publisher_ids
+                ),
+                "publishers": [
+                    {
+                        "publisher_id": publisher_id,
+                        "publisher": expected_publishers[
+                            publisher_id
+                        ],
+                    }
+                    for publisher_id
+                    in valid_publisher_ids
+                ],
+                "publisher_count": len(
+                    valid_publisher_ids
+                ),
+                "group_evidence": (
+                    clean_string_list(
+                        group.get(
+                            "group_evidence"
+                        ),
+                        max_items=6,
+                    )
+                ),
+            }
+        )
+
+    missing_publishers = (
+        set(expected_publishers)
+        - assigned_publishers
+    )
+
+    if missing_publishers:
+        raise ValueError(
+            "그룹에서 누락된 언론사가 있습니다: "
+            f"{sorted(missing_publishers)}"
+        )
+
+    if not normalized_groups:
+        raise ValueError(
+            "유효한 보도 경향 그룹이 없습니다."
+        )
+
+    group_ids = {
+        group["group_id"]
+        for group in normalized_groups
+    }
+
+    raw_contrasts = result.get(
+        "group_contrasts",
+        [],
+    )
+
+    normalized_contrasts = []
+
+    if isinstance(raw_contrasts, list):
+        for contrast in raw_contrasts:
+            if not isinstance(
+                contrast,
+                dict,
+            ):
+                continue
+
+            contrast_group_ids = (
+                contrast.get(
+                    "group_ids",
+                    [],
+                )
+            )
+
+            if not isinstance(
+                contrast_group_ids,
+                list,
+            ):
+                continue
+
+            valid_group_ids = [
+                clean_string(group_id)
+                for group_id
+                in contrast_group_ids
+                if clean_string(group_id)
+                in group_ids
+            ]
+
+            if len(valid_group_ids) < 2:
+                continue
+
+            statement = clean_string(
+                contrast.get(
+                    "contrast_statement"
+                )
+            )
+
+            if not statement:
+                continue
+
+            normalized_contrasts.append(
+                {
+                    "group_ids": (
+                        valid_group_ids[:2]
+                    ),
+                    "contrast_statement": (
+                        statement
+                    ),
+                }
+            )
+
+    return {
+        "issue_id": issue_id,
+        "groups": normalized_groups,
+        "group_count": len(
+            normalized_groups
+        ),
+        "group_contrasts": (
+            normalized_contrasts
+        ),
+        "grouping_summary": clean_string(
+            result.get(
+                "grouping_summary"
+            )
+        ),
+        "evidence_limit": (
+            "기사 제목과 RSS 설명을 기반으로 "
+            "생성된 언론사별 분석 결과 기준"
+        ),
+        "grouping_status": "success",
+        "grouped_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "model": MODEL_NAME,
+    }
+
+
+def group_publishers(
+    client: OpenAI,
+    publisher_analyses: list[dict],
+) -> dict:
+    """
+    동일 이슈의 언론사별 Structured Output을
+    보도 경향 그룹으로 묶는다.
+    """
+    normalized_analyses = (
+        normalize_grouping_analyses(
+            publisher_analyses
+        )
+    )
+
+    issue_id = normalized_analyses[
+        0
+    ]["issue_id"]
+
+    prompt = build_grouping_prompt(
+        issue_id=issue_id,
+        publisher_analyses=(
+            normalized_analyses
+        ),
+    )
+
+    last_error = None
+
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
+        try:
+            print(
+                "[Publisher Grouping] "
+                f"{attempt}/{MAX_RETRIES}"
+            )
+
+            raw_result = request_solar_analysis(
+                client=client,
+                prompt=prompt,
+            )
+
+            validated_result = (
+                validate_grouping_result(
+                    result=raw_result,
+                    issue_id=issue_id,
+                    publisher_analyses=(
+                        normalized_analyses
+                    ),
+                )
+            )
+
+            print(
+                "[그룹화 완료] "
+                f"{validated_result['group_count']}개 그룹"
+            )
+
+            return validated_result
+
+        except Exception as error:
+            last_error = error
+
+            print(
+                "[그룹화 실패] "
+                f"{attempt}/{MAX_RETRIES}: "
+                f"{error}"
+            )
+
+            if attempt < MAX_RETRIES:
+                time.sleep(
+                    RETRY_WAIT_SECONDS
+                )
+
+    raise RuntimeError(
+        "Publisher Grouping이 "
+        f"{MAX_RETRIES}회 모두 실패했습니다: "
+        f"{last_error}"
+    )
+
+def analyze_issue_batch(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    B팀이 전달한 이슈별 publishers 배열을 순회하며
+    각 언론사를 독립적으로 분석하고,
+    완료된 결과로 Publisher Grouping을 실행한다.
+    """
+    issue_id = clean_string(
+        input_data.get("issue_id")
+    )
+
+    issue_title = clean_string(
+        input_data.get("issue_title")
+    )
+
+    query = clean_string(
+        input_data.get("query")
+    )
+
+    expanded_queries = clean_string_list(
+        input_data.get(
+            "expanded_queries",
+            [],
+        ),
+        max_items=10,
+    )
+
+    publishers = input_data.get(
+        "publishers",
+        [],
+    )
+
+    if not issue_id:
+        raise ValueError(
+            "issue_id가 없습니다."
+        )
+
+    if not issue_title:
+        raise ValueError(
+            "issue_title이 없습니다."
+        )
+
+    if not isinstance(publishers, list):
+        raise ValueError(
+            "publishers는 배열이어야 합니다."
+        )
+
+    if len(publishers) < 2:
+        raise ValueError(
+            "분석 가능한 언론사가 2개 미만입니다."
+        )
+
+    client = create_client()
+
+    publisher_analyses = []
+    failed_publishers = []
+
+    for index, publisher_item in enumerate(
+        publishers,
+        start=1,
+    ):
+        if not isinstance(
+            publisher_item,
+            dict,
+        ):
+            failed_publishers.append(
+                {
+                    "publisher_id": "",
+                    "publisher": "",
+                    "error": (
+                        f"publishers[{index - 1}]이 "
+                        "객체가 아닙니다."
+                    ),
+                }
+            )
+            continue
+
+        publisher_id = clean_string(
+            publisher_item.get(
+                "publisher_id"
+            )
+        )
+
+        publisher = clean_string(
+            publisher_item.get(
+                "publisher"
+            )
+        )
+
+        articles = publisher_item.get(
+            "articles",
+            [],
+        )
+
+        if not publisher_id or not publisher:
+            failed_publishers.append(
+                {
+                    "publisher_id": (
+                        publisher_id
+                    ),
+                    "publisher": publisher,
+                    "error": (
+                        "publisher_id 또는 "
+                        "publisher가 없습니다."
+                    ),
+                }
+            )
+            continue
+
+        if not isinstance(articles, list):
+            failed_publishers.append(
+                {
+                    "publisher_id": (
+                        publisher_id
+                    ),
+                    "publisher": publisher,
+                    "error": (
+                        "articles가 배열이 아닙니다."
+                    ),
+                }
+            )
+            continue
+
+        if not articles:
+            print(
+                f"[분석 제외] {publisher}: "
+                "대표 기사가 없습니다."
+            )
+            continue
+
+        try:
+            result = analyze_publisher(
+                client=client,
+                issue_id=issue_id,
+                issue_title=issue_title,
+                publisher_id=publisher_id,
+                publisher=publisher,
+                articles=articles,
+                use_cache=use_cache,
+            )
+
+            publisher_analyses.append(
+                result
+            )
+
+        except Exception as error:
+            print(
+                f"[언론사 분석 실패] "
+                f"{publisher}: {error}"
+            )
+
+            failed_publishers.append(
+                {
+                    "publisher_id": (
+                        publisher_id
+                    ),
+                    "publisher": publisher,
+                    "error": str(error),
+                }
+            )
+
+    if len(publisher_analyses) < 2:
+        raise RuntimeError(
+            "정상 분석된 언론사가 2개 미만이어서 "
+            "Publisher Grouping을 실행할 수 없습니다."
+        )
+
+    grouping_result = group_publishers(
+        client=client,
+        publisher_analyses=(
+            publisher_analyses
+        ),
+    )
+
+    return {
+        "issue_id": issue_id,
+        "issue_title": issue_title,
+        "query": query,
+        "expanded_queries": (
+            expanded_queries
+        ),
+        "publisher_count": len(
+            publisher_analyses
+        ),
+        "publisher_analyses": (
+            publisher_analyses
+        ),
+        "publisher_grouping": (
+            grouping_result
+        ),
+        "failed_publishers": (
+            failed_publishers
+        ),
+        "analysis_status": (
+            "partial_success"
+            if failed_publishers
+            else "success"
+        ),
+        "processed_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+    }
+    
+def parse_arguments() -> argparse.Namespace:
+    """
+    명령행 실행 옵션을 정의한다.
+    """
+    parser = argparse.ArgumentParser(
+        description=(
+            "언론사 한 곳의 대표 기사를 "
+            "Solar로 분석합니다."
+        )
+    )
+
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=DEFAULT_INPUT_PATH,
+        help=(
+            "분석할 대표 기사 JSON 파일 경로"
+        ),
+    )
+
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=DEFAULT_OUTPUT_PATH,
+        help=(
+            "분석 결과 JSON 파일 경로"
+        ),
+    )
+
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help=(
+            "기존 캐시를 사용하지 않고 "
+            "Solar를 다시 호출합니다."
+        ),
+    )
+
+    return parser.parse_args()
+
+
+def main() -> None:
+    """
+    analysis.py 단독 실행 진입점.
+    """
+    args = parse_arguments()
+
+    input_data = load_json(
+        args.input
+    )
+
+    result = analyze_input_data(
+        input_data=input_data,
+        use_cache=not args.no_cache,
+    )
+
+    output_data = {
+        "publisher_analyses": [
+            result
+        ]
+    }
+
+    save_json(
+        args.output,
+        output_data,
+    )
+
+    print(
+        f"분석 결과를 저장했습니다: "
+        f"{args.output}"
+    )
+
+
+if __name__ == "__main__":
+    main()

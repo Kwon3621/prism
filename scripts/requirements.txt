@@ -3,3 +3,4 @@ scikit-learn
 openai
 python-dotenv
 requests
+chromadb

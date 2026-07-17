@@ -1,7 +1,13 @@
-let currentIssue = null;
+// [v2 개편 안전장치] ?mode=legacy 주소로 들어오면 옛날 데이터(issue.json)를 보여줍니다.
+function isLegacyMode() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('mode') === 'legacy';
+}
 
+let currentIssue = null;
 const SAVED_ISSUES_KEY = 'prism-saved-issues';
 
+// 배열 요소를 무작위로 섞어주는 유틸리티 함수
 function shuffleArray(array) {
   const result = [...array];
   for (let i = result.length - 1; i > 0; i--) {
@@ -11,50 +17,37 @@ function shuffleArray(array) {
   return result;
 }
 
-// 언론사 아코디언 카드의 실제 높이를 측정해 masonry 그리드의 grid-row span을 계산합니다.
-// styles.css의 [data-issue-articles] { grid-auto-rows: 8px } 값과 반드시 일치해야 합니다.
-function layoutMediaMasonry() {
-  const container = document.querySelector('[data-issue-articles]');
-  if (!container) return;
-
-  const rowHeight = 8;
-  container.querySelectorAll('.media-card').forEach(card => {
-    const height = card.getBoundingClientRect().height;
-    const span = Math.ceil(height / rowHeight);
-    card.style.gridRowEnd = `span ${span}`;
-  });
-}
-
 // 뷰 스타일 상태 관리 (기본값은 'card')
 const viewModes = {
-  liveNews: 'card',
   featured: 'card',
   saved: 'card'
 };
-// 뷰 토글 버튼 바인딩 함수
+
+// 뷰 토글 버튼 바인딩 함수 (중복 등록 방지 및 오타 수정 완료)
 function initViewToggles() {
   document.querySelectorAll('[data-view-toggle]').forEach(group => {
-    const sectionKey = group.dataset.viewToggle; // 'live-news', 'featured', 'saved'
+    const sectionKey = group.dataset.viewToggle; // 'featured', 'saved'
     const buttons = group.querySelectorAll('[data-view]');
     
     buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const selectedView = btn.dataset.view; // 'card' or 'list'
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+
+      newBtn.addEventListener('click', () => {
+        const selectedView = newBtn.dataset.view; // 'card' or 'list'
         
-        // 상태 변경
-        if (sectionKey === 'live-news') {
-          viewModes.liveNews = selectedView;
-          renderLiveNews();
-        } else if (sectionKey === 'featured') {
+        // 상태 변경 및 해당 섹션 즉시 재렌더링
+        if (sectionKey === 'featured') {
           viewModes.featured = selectedView;
           renderFeaturedIssue();
         } else if (sectionKey === 'saved') {
           viewModes.saved = selectedView;
           renderSaved();
         }
+
         // 활성화 스타일 클래스 업데이트
-        buttons.forEach(b => {
-          if (b === btn) {
+        group.querySelectorAll('[data-view]').forEach(b => {
+          if (b.dataset.view === selectedView) {
             b.classList.add('active');
             b.style.background = '#fff';
             b.style.color = '#333';
@@ -124,7 +117,7 @@ function initSearch() {
       if (!keyword) return;
       button.disabled = true;
       button.textContent = '검색 중';
-      window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
+      window.location.href = `compare.html?q=${encodeURIComponent(keyword)}`;
     });
   });
 }
@@ -149,8 +142,7 @@ function initSaveButtons() {
         return;
       }
 
-      const isLoggedIn =
-        localStorage.getItem('isLoggedIn') === 'true';
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
       if (!isLoggedIn) {
         showToast('로그인 후 이슈를 저장할 수 있습니다.');
@@ -158,28 +150,18 @@ function initSaveButtons() {
       }
 
       const savedIssues = readSavedIssues();
-
-      const alreadySaved = savedIssues.some(
-        item => item.id === currentIssue.id
-      );
+      const alreadySaved = savedIssues.some(item => item.id === currentIssue.id);
 
       const nextSavedIssues = alreadySaved
         ? savedIssues.filter(item => item.id !== currentIssue.id)
         : [...savedIssues, currentIssue];
 
-      localStorage.setItem(
-        SAVED_ISSUES_KEY,
-        JSON.stringify(nextSavedIssues)
-      );
+      localStorage.setItem(SAVED_ISSUES_KEY, JSON.stringify(nextSavedIssues));
 
       syncSaveButtons();
       renderSaved();
 
-      showToast(
-        alreadySaved
-          ? '저장을 취소했습니다.'
-          : '이슈를 저장했습니다.'
-      );
+      showToast(alreadySaved ? '저장을 취소했습니다.' : '이슈를 저장했습니다.');
     });
   });
 
@@ -202,103 +184,12 @@ function initShare() {
   });
 }
 
-async function renderSearchResults() {
-  const root = document.querySelector("[data-search-results]");
-  if (!root) return;
-
-  const params = new URLSearchParams(window.location.search);
-  const q = (params.get("q") || "").trim();
-
-  const title = document.querySelector("[data-search-title]");
-  if (title) {
-    title.textContent = q ? `“${q}” 검색 결과` : "검색 결과";
-  }
-
-  if (!q) {
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>검색어를 입력해 주세요.</h3>
-        <p>비교하고 싶은 이슈나 키워드를 입력하면 관련 이슈를 보여드립니다.</p>
-      </div>
-    `;
-    return;
-  }
-
-  try {
-    const response = await fetch("./data/issue.json");
-
-    if (!response.ok) {
-      throw new Error("issue.json을 불러오지 못했습니다.");
-    }
-
-    const data = await response.json();
-    const keyword = q.toLowerCase();
-
-    const results = (data.issues || []).filter(issue => {
-      const text = [
-        issue.title,
-        issue.category,
-        issue.summary,
-        ...(issue.common_facts || []),
-        ...(issue.articles || []).flatMap(article => [
-          article.title,
-          ...(article.keywords || []),
-          ...(article.people || [])
-        ])
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      return text.includes(keyword);
-    });
-
-    if (!results.length) {
-      root.innerHTML = `
-        <div class="empty-state">
-          <h3>검색 결과가 없습니다.</h3>
-          <p>다른 키워드로 검색해 보세요.</p>
-          <a class="btn btn-secondary" href="index.html">
-            메인으로 돌아가기
-          </a>
-        </div>
-      `;
-      return;
-    }
-
-    root.innerHTML = results.map(issue => `
-      <article class="card">
-        <span class="eyebrow">${issue.category}</span>
-        <h3>${issue.title}</h3>
-        <p>${issue.summary}</p>
-        <div class="card-footer">
-          <small>
-            ${issue.articles.map(a => a.publisher).join(" · ")}
-          </small>
-          <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
-            비교 보기
-          </a>
-        </div>
-      </article>
-    `).join("");
-
-  } catch (err) {
-    console.error(err);
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>검색 결과를 불러오지 못했습니다.</h3>
-      </div>
-    `;
-  }
-}
-
-// 1. [내가 저장한 이슈] 렌더링 함수 - 더보기/줄이기
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
   if (!root) return; 
   
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   
-  // 미로그인 상태 처리
   if (!isLoggedIn) {
     root.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px dashed #ddd;">
@@ -311,7 +202,6 @@ function renderSaved() {
 
   const saved = JSON.parse(localStorage.getItem('prism-saved-issues') || '[]');
   
-  // 저장된 리스트가 없는 경우 처리
   if (!saved.length) {
     root.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff; border-radius: 12px; border: 1px dashed #ddd;">
@@ -331,7 +221,6 @@ function renderSaved() {
     const visibleSaved = saved.slice(0, window.savedVisibleCount);
     const viewMode = viewModes.saved;
 
-    // 뷰 모드 상태에 따라 CSS Grid / Flex 구조 조절
     if (viewMode === 'list') {
       root.style.display = "flex";
       root.style.flexDirection = "column";
@@ -342,21 +231,17 @@ function renderSaved() {
           <div style="flex: 1; min-width: 0;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <span class="eyebrow" style="margin: 0; font-size: 12px;">${item.category}</span>
-              <div class="meta" style="display: flex; gap: 4px;">
-                ${(item.tags || []).map(t => `<span class="badge blue" style="font-size: 11px; padding: 2px 6px;">#${t}</span>`).join('')}
-              </div>
             </div>
             <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</h3>
             <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.summary}</p>
           </div>
           <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
             <small style="color: #94a3b8; font-size: 12px; display: block; text-align: right;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}" style="white-space: nowrap;">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" href="compare.html?q=${encodeURIComponent(item.title)}" style="white-space: nowrap;">분석 보기</a>
           </div>
         </article>
       `).join('');
     } else {
-      // 기존 카드 뷰 레이아웃 복원
       root.style.display = "grid";
       root.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
       root.style.gap = "24px";
@@ -366,18 +251,14 @@ function renderSaved() {
           <span class="eyebrow">${item.category}</span>
           <h3>${item.title}</h3>
           <p>${item.summary}</p>
-          <div class="meta" style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;">
-            ${(item.tags || []).map(t => `<span class="badge blue">#${t}</span>`).join('')}
-          </div>
           <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="issue.html?id=${item.id}">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" href="compare.html?q=${encodeURIComponent(item.title)}">분석 보기</a>
           </div>
         </article>
       `).join('');
     }
 
-    // 더보기 / 줄이기 버튼 마크업
     if (saved.length > INITIAL_COUNT) {
       const wrapper = document.createElement("div");
       wrapper.className = "load-more-wrap";
@@ -421,13 +302,8 @@ function renderSaved() {
 
 function formatPublishedTime(value) {
   if (!value) return '발행 시간 정보 없음';
-
   const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return '발행 시간 정보 없음';
-  }
-
+  if (Number.isNaN(date.getTime())) return '발행 시간 정보 없음';
   return date.toLocaleString('ko-KR', {
     year: 'numeric',
     month: '2-digit',
@@ -437,484 +313,240 @@ function formatPublishedTime(value) {
   });
 }
 
-
-
-// 2. [실시간 수집 뉴스] 렌더링 함수
-async function renderLiveNews() {
-  const root = document.querySelector("[data-live-news]");
-  if (!root) return;
-
-  try {
-    const response = await fetch("./data/news.json");
-
-    if (!response.ok) {
-      throw new Error(`HTTP 오류: ${response.status}`);
-    }
-
-    const rawNewsItems = await response.json();
-    const newsItems = shuffleArray(rawNewsItems);
-
-    const INITIAL_COUNT = 4;
-    let visibleCount = INITIAL_COUNT;
-
-    // 1. 뉴스 데이터에서 언론사 목록 중복 없이 추출
-    const publishers = [...new Set(newsItems.map(item => item.publisher))];
-
-    // 2. 선택된 언론사 상태 관리 (기본값: 전체 선택)
-    let selectedPublishers = new Set(publishers);
-
-    // 3. 사이드바에 체크박스 렌더링
-    function renderPublisherFilters() {
-      const filterRoot = document.querySelector('[data-publisher-checkboxes]');
-      if (!filterRoot) return;
-
-      filterRoot.innerHTML = publishers.map(publisher => `
-        <label class="filter-checkbox-item">
-          <input type="checkbox" value="${publisher}" checked data-publisher-checkbox>
-          <span>${publisher}</span>
-        </label>
-      `).join('');
-
-      const checkboxes = filterRoot.querySelectorAll('[data-publisher-checkbox]');
-
-      checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-          if (checkbox.checked) {
-            selectedPublishers.add(checkbox.value);
-          } else {
-            selectedPublishers.delete(checkbox.value);
-          }
-          visibleCount = INITIAL_COUNT; // 필터 바뀌면 더보기 상태 초기화
-          render();
-        });
-      });
-
-      // 전체 선택 / 전체 해제 버튼
-      const selectAllBtn = document.querySelector('[data-select-all]');
-      const deselectAllBtn = document.querySelector('[data-deselect-all]');
-
-      if (selectAllBtn) {
-        selectAllBtn.addEventListener('click', () => {
-          selectedPublishers = new Set(publishers);
-          checkboxes.forEach(checkbox => { checkbox.checked = true; });
-          visibleCount = INITIAL_COUNT;
-          render();
-        });
-      }
-
-      if (deselectAllBtn) {
-        deselectAllBtn.addEventListener('click', () => {
-          selectedPublishers = new Set();
-          checkboxes.forEach(checkbox => { checkbox.checked = false; });
-          visibleCount = INITIAL_COUNT;
-          render();
-        });
-      }
-    }
-    
-    function render() {
-      // 4. 선택된 언론사만 필터링
-      const filteredNews = newsItems.filter(item =>
-        selectedPublishers.has(item.publisher)
-      );
-      const visibleNews = filteredNews.slice(0, visibleCount);
-      const viewMode = viewModes.liveNews;
-
-      // 5. 필터 결과가 하나도 없을 때 처리
-      if (!filteredNews.length) {
-        root.className = "";
-        root.style.display = "";
-        root.innerHTML = `
-          <div class="empty-state">
-            <h3>선택한 언론사의 뉴스가 없습니다.</h3>
-            <p>다른 언론사를 선택해 보세요.</p>
-          </div>
-        `;
-        return;
-      }
-
-      if (viewMode === 'list') {
-        root.className = "";
-        root.style.display = "flex";
-        root.style.flexDirection = "column";
-        root.style.gap = "12px";
-
-        root.innerHTML = visibleNews.map(item => `
-          <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 20px; gap: 16px;">
-            <div style="flex: 1; min-width: 0;">
-              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${item.publisher}</span>
-              <h3 style="font-size: 15px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${item.title}</h3>
-              <small class="live-news-time">
-                ${formatPublishedTime(item.published)}
-              </small>
-              </div>
-            <div style="flex-shrink: 0;">
-              <a class="btn btn-secondary btn-sm" href="${item.link}" target="_blank" rel="noopener noreferrer" style="white-space: nowrap; padding: 6px 12px; font-size: 13px;">
-                원문 보기
-              </a>
-            </div>
-          </article>
-        `).join("");
-      } else {
-        root.style.display = "";
-        root.className = "grid-2";
-
-        root.innerHTML = visibleNews.map(item => `
-          <article class="card">
-            <span class="eyebrow">${item.publisher}</span>
-            <h3>${item.title}</h3>
-
-            <small class="live-news-time">
-              ${formatPublishedTime(item.published)}
-            </small>
-            
-            <div class="card-footer" style="margin-top: auto; padding-top: 16px;">
-              <a class="btn btn-secondary" href="${item.link}" target="_blank" rel="noopener noreferrer">
-                원문 보기
-              </a>
-            </div>
-          </article>
-        `).join("");
-      }
-
-      // 6. 더보기/줄이기 기준을 filteredNews.length로 변경
-      if (filteredNews.length > INITIAL_COUNT) {
-        const wrapper = document.createElement("div");
-        wrapper.className = "load-more-wrap";
-        wrapper.style.width = "100%";
-        wrapper.style.gridColumn = "1 / -1";
-        wrapper.style.textAlign = "center";
-        wrapper.style.marginTop = "24px";
-        wrapper.style.display = "flex";
-        wrapper.style.justifyContent = "center";
-        wrapper.style.gap = "12px";
-
-        if (visibleCount < filteredNews.length) {
-          const loadMoreBtn = document.createElement("button");
-          loadMoreBtn.className = "btn btn-primary";
-          loadMoreBtn.textContent = "더보기 ▾";
-
-          loadMoreBtn.addEventListener("click", () => {
-            visibleCount += 4;
-            render();
-          });
-
-          wrapper.appendChild(loadMoreBtn);
-        }
-
-        if (visibleCount > INITIAL_COUNT) {
-          const shrinkBtn = document.createElement("button");
-          shrinkBtn.className = "btn btn-secondary";
-          shrinkBtn.textContent = "줄이기 ▴";
-
-          shrinkBtn.addEventListener("click", () => {
-            visibleCount = INITIAL_COUNT;
-            render();
-            root.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-
-          wrapper.appendChild(shrinkBtn);
-        }
-
-        root.appendChild(wrapper);
-      }
-    }
-
-    renderPublisherFilters();
-    render();
-  } catch (error) {
-    console.error(error);
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>뉴스를 불러오지 못했습니다.</h3>
-        <p>잠시 후 다시 확인해 주세요.</p>
-      </div>
-    `;
-  }
-}
-
-function resizeMediaCards() {
-  const grid = document.querySelector('[data-issue-articles]');
-
-  if (!grid) return;
-
-  const rowHeight = 8;
-  const rowGap = 0;
-
-  grid.querySelectorAll('.media-card').forEach(card => {
-    card.style.gridRowEnd = '';
-
-    const cardHeight = card.getBoundingClientRect().height;
-
-    const rowSpan = Math.ceil(
-      (cardHeight + rowGap) / (rowHeight + rowGap)
-    );
-
-    card.style.gridRowEnd = `span ${rowSpan}`;
-  });
-}
-
-// 3. [이슈 비교 결과 페이지] 렌더링 함수
-async function renderIssuePage() {
-  const page = document.querySelector('[data-issue-page]');
+// [1단계 + 2단계 + 3단계 통합] compare.html 동적 정밀 비교 분석 엔진
+async function renderComparePage() {
+  const page = document.querySelector('[data-compare-page]');
   if (!page) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const q = (params.get('q') || '').trim();
+
+  const titleEl = document.getElementById('compare-query-title');
+  const summaryEl = document.getElementById('compare-query-summary');
+  const categoryEl = document.getElementById('compare-query-category');
+
+  if (!q) {
+    if (titleEl) titleEl.textContent = "비교할 검색어가 없습니다.";
+    return;
+  }
 
   try {
     const response = await fetch('./data/issue.json');
-
-    if (!response.ok) {
-      throw new Error(`HTTP 오류: ${response.status}`);
-    }
-
-    const issueData = await response.json();
-
-    const params = new URLSearchParams(window.location.search);
-    const requestedIssueId = params.get('id');
-
-    const data =
-      issueData.issues?.find(
-        item => item.issue_id === requestedIssueId
-      ) ||
-      issueData.issues?.[0];
-
-    if (!data) {
-      throw new Error('표시할 이슈가 없습니다.');
-    }
-
-    // matched_clusters.json/issue.json의 최신 구조(clusters)를 최우선으로 매핑합니다.
-    const mediaClusters = data.clusters || data.articles || [];
-
-    currentIssue = {
-      id: data.issue_id,
-      category: data.category || '자동 분석',
-      title: data.title || '이슈 제목 없음',
-      summary: data.summary || '',
-      tags: [
-        ...new Set(
-          mediaClusters.flatMap(
-            cluster => cluster.keywords || []
-          )
-        )
-      ].slice(0, 6),
-      mediaNames: [
-        ...new Set(
-          mediaClusters
-            .map(cluster => cluster.publisher)
-            .filter(Boolean)
-        )
-      ]
-    };
+    if (!response.ok) throw new Error("분석 DB를 불러올 수 없습니다.");
     
+    const db = await response.json();
+    const issues = db.issues || [];
+
+    // 검색어 기반 이슈 동적 매칭
+    const matchedIssue = issues.find(issue => {
+      const textPool = [
+        issue.title,
+        issue.summary,
+        (issue.keywords || []).join(' ')
+      ].join(' ').toLowerCase();
+      return textPool.includes(q.toLowerCase());
+    }) || issues[0];
+
+    if (!matchedIssue) return;
+
+    // 전역 currentIssue 할당 (상단 저장 버튼 연동 활성화)
+    currentIssue = {
+      id: matchedIssue.issue_id,
+      category: matchedIssue.category || '자동 분석',
+      title: matchedIssue.title || '이슈 제목 없음',
+      summary: matchedIssue.summary || '',
+      tags: matchedIssue.keywords || [],
+      mediaNames: [...new Set((matchedIssue.articles || []).map(art => art.publisher))]
+    };
     syncSaveButtons();
 
-    document.querySelector('[data-issue-category]').textContent =
-      data.category || '자동 분석';
+    // 1단계: 상단 요약 바인딩
+    if (categoryEl) categoryEl.textContent = matchedIssue.category || "이슈 분석";
+    if (titleEl) titleEl.textContent = matchedIssue.title;
+    if (summaryEl) summaryEl.textContent = matchedIssue.summary;
 
-    document.querySelector('[data-issue-title]').textContent =
-      data.title || '이슈 제목 없음';
+    const articles = matchedIssue.articles || [];
 
-    document.querySelector('[data-issue-summary]').textContent =
-      data.summary || '';
+    // 2단계: 프레임 그룹화 시각화 작동
+    renderFrameGroups(articles);
 
-      const commonFacts = document.querySelector('[data-common-facts]');
-      commonFacts.innerHTML = `
-        <strong>공통으로 확인된 사실</strong>
-        <ul class="common-facts-list" style="margin: 10px 0 0 0; padding-left: 20px; line-height: 1.6;">
-          ${(data.common_facts || []).map(fact => `<li style="margin-bottom: 6px;">${fact}</li>`).join('')}
-        </ul>
-      `;
-
-      const summaryRoot = document.querySelector('[data-media-summary-grid]');
-    const articlesRoot = document.querySelector('[data-issue-articles]');
-
-    // 1) 언론사별 강조 포인트 요약 (2행 3열, 아코디언 카드와는 완전히 별도 컨테이너)
-    if (summaryRoot) {
-      summaryRoot.innerHTML = mediaClusters.map(cluster => {
-        const topKeyword =
-          (cluster.keywords && cluster.keywords[0]) ||
-          (cluster.focus ? cluster.focus.slice(0, 12) : '핵심 내용');
-
-        return `
-          <div class="summary-chip">
-            <strong>${cluster.publisher}</strong>
-            <span class="badge blue">${topKeyword} 강조</span>
-          </div>
-        `;
-      }).join('');
-    }
-
-    // 2) 언론사별 상세 아코디언 카드 (styles.css의 masonry 구조에 맞춘 마크업)
-    articlesRoot.innerHTML = mediaClusters.map((cluster, index) => {
-      const clusteredArticles = cluster.articles ||
-                                (cluster.title && cluster.link ? [{ title: cluster.title, link: cluster.link }] : []);
-
-      return `
-      <article class="card media-card${index === 0 ? ' open' : ''}">
-        <button type="button" class="media-toggle">
-          <span class="media-toggle-title">
-            <strong>${cluster.publisher}</strong>
-            <span style="font-size: 11px; background: #eff6ff; color: #2563eb; padding: 3px 10px; border-radius: 99px; font-weight: bold; border: 1px solid #dbeafe;">
-              ${clusteredArticles.length}개 기사 분석됨
-            </span>
-          </span>
-          <span class="media-toggle-icon">⌄</span>
-        </button>
-
-        <div class="media-content">
-          <div class="compare-block">
-            <span class="compare-label">대표 토픽</span>
-            <p class="compare-text" style="font-weight: 600; color: #334155;">${cluster.topic_title || cluster.title || '주제 요약 없음'}</p>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">핵심 키워드</span>
-            <div class="meta">
-              ${(cluster.keywords || []).map(keyword =>
-                `<span class="badge blue">${keyword}</span>`
-              ).join('')}
-              ${(cluster.keywords || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 키워드 없음</span>' : ''}
-            </div>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">주요 인물 및 기관</span>
-            <div class="meta">
-              ${(cluster.people || []).map(person =>
-                `<span class="badge purple">${person}</span>`
-              ).join('')}
-              ${(cluster.people || []).length === 0 ? '<span style="color: #94a3b8; font-size: 13px;">추출된 인물 정보 없음</span>' : ''}
-            </div>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">강조된 내용 / 프레임</span>
-            <p class="compare-text">${cluster.focus || '실시간 기사 수집 및 클러스터 구성 단계입니다.'}</p>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">표현 요약</span>
-            <p class="compare-text">${cluster.expression_summary || '분석 진행 중'}</p>
-          </div>
-
-          <div class="compare-block">
-            <span class="compare-label">분석 한계</span>
-            <p class="compare-text">${cluster.evidence_limit || '수집 자료 분석 중'}</p>
-          </div>
-
-          <div class="compare-block source-links-block" style="margin-top: 24px; padding-top: 16px; border-top: 1px dashed #e2e8f0;">
-            <span class="compare-label" style="display: block; font-weight: bold; font-size: 12px; color: #475569; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
-              분석 대상 원문 기사 리스트
-            </span>
-            <div class="source-links-list" style="display: flex; flex-direction: column; gap: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px;">
-              ${clusteredArticles.length > 0 ? clusteredArticles.map((article, idx) => `
-                <div style="display: flex; align-items: flex-start; gap: 6px; font-size: 13px; line-height: 1.4;">
-                  <span style="color: #3b82f6; font-weight: bold; flex-shrink: 0; min-width: 14px;">${idx + 1}.</span>
-                  
-                    href="${article.link}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style="color: #2563eb; text-decoration: none; font-weight: 500; word-break: break-all;"
-                  >
-                    ${article.title}
-                  </a>
-                </div>
-              `).join('') : '<p style="font-size: 12px; color: #94a3b8; margin: 0;">포함된 원문 기사가 없습니다.</p>'}
-            </div>
-          </div>
-        </div>
-      </article>
-    `;
-    }).join('');
-
-    // 3) 아코디언 열기/닫기 바인딩 + 열고 닫을 때마다 masonry 재계산
-    articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        toggle.closest('.media-card').classList.toggle('open');
-        requestAnimationFrame(layoutMediaMasonry);
-      });
-    });
-
-    // 4) 최초 렌더 후 masonry 계산 (레이아웃이 실제로 그려진 뒤 높이를 재야 하므로 rAF 사용)
-    requestAnimationFrame(layoutMediaMasonry);
-    window.addEventListener('resize', layoutMediaMasonry);
-
-    articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const card = toggle.closest('.media-card');
-
-        if (!card) return;
-
-        const isOpen = card.classList.toggle('open');
-
-        toggle.setAttribute(
-          'aria-expanded',
-          String(isOpen)
-        );
-
-        requestAnimationFrame(resizeMediaCards);
-      });
-    });
-
-    const firstCard =
-      articlesRoot.querySelector('.media-card');
-
-    if (firstCard) {
-      firstCard.classList.add('open');
-
-      const firstToggle =
-        firstCard.querySelector('.media-toggle');
-
-      if (firstToggle) {
-        firstToggle.setAttribute(
-          'aria-expanded',
-          'true'
-        );
-      }
-    }
-
-    requestAnimationFrame(resizeMediaCards);
-
-    const sourcesRoot = document.querySelector('[data-issue-sources]');
-    if (sourcesRoot) {
-      sourcesRoot.innerHTML = '';
-      
-      // data-issue-sources가 담긴 부모 section이나 div 레이아웃을 찾아 완전히 숨김 처리하여 공백을 없앱니다.
-      const parentLayout = sourcesRoot.closest('section') || sourcesRoot.parentElement;
-      if (parentLayout) {
-        parentLayout.style.display = 'none';
-      }
-    }
+    // 3단계: 최대 4개 상세 대조표 인터랙션 세팅
+    initPublisherSelector(articles, matchedIssue);
 
   } catch (error) {
-    console.error(error);
-    document.querySelector('[data-issue-title]').textContent =
-      '비교 결과를 불러오지 못했습니다.';
-    document.querySelector('[data-common-facts]').textContent =
-      '잠시 후 다시 확인해 주세요.';
+    console.error("동적 비교 렌더링 실패:", error);
   }
 }
 
-// 4. [이슈 비교 목록] 렌더링 함수 - 참조 변수 에러 및 구조 완벽 개선
+function renderFrameGroups(articles) {
+  const container = document.getElementById('frame-group-container');
+  if (!container) return;
+
+  const groups = {};
+  articles.forEach(art => {
+    let key = "중립/사실 전달";
+    if (art.focus.includes("특혜") || art.focus.includes("의혹")) key = "의혹 제기 및 집중 보도";
+    else if (art.focus.includes("수사") || art.focus.includes("혐의") || art.focus.includes("직권남용")) key = "수사 상황 및 혐의 중심 보도";
+    else if (art.focus.includes("내구성") || art.focus.includes("기술")) key = "기술성 및 기능적 개선 중심";
+    else if (art.focus.includes("상승") || art.focus.includes("최고치")) key = "지표 상승 추세 및 우려 중심";
+    else if (art.focus.includes("경고") || art.focus.includes("주의")) key = "기강 확립 및 행동 지침 중심";
+
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(art.publisher);
+  });
+
+  container.innerHTML = Object.keys(groups).map((groupTitle, index) => {
+    const publishersInGroup = groups[groupTitle];
+    const colors = ["#2563eb", "#7c3aed", "#ea580c", "#0f766e"];
+    const themeColor = colors[index % colors.length];
+
+    return `
+      <div class="card" style="border-top: 5px solid ${themeColor}; background: #fff; padding: 24px; height: auto;">
+        <span class="badge" style="background: ${themeColor}15; color: ${themeColor}; font-weight: 800; font-size: 13px; margin-bottom: 12px; display: inline-block;">
+          Group: ${groupTitle}
+        </span>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+          ${publishersInGroup.map(pub => `
+            <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700;">
+              ${pub}
+            </span>
+          `).join('')}
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 14px; line-height: 1.5;">
+          ※ 이 매체들은 유사한 어휘 패턴과 주안점을 공유하여 같은 프레임 범주로 자동 인식되었습니다.
+        </p>
+      </div>
+    `;
+  }).join('');
+}
+
+function initPublisherSelector(articles, matchedIssue) {
+  const chipContainer = document.getElementById('compare-publisher-chips');
+  if (!chipContainer) return;
+
+  const publishers = [...new Set(articles.map(art => art.publisher))];
+  const selected = new Set(publishers.slice(0, 4));
+
+  function renderChips() {
+    chipContainer.innerHTML = publishers.map(pub => {
+      const isChecked = selected.has(pub);
+      const bg = isChecked ? 'var(--primary)' : '#fff';
+      const color = isChecked ? '#fff' : 'var(--text)';
+      const border = isChecked ? 'var(--primary)' : 'var(--border)';
+
+      return `
+        <button type="button" class="btn" data-pub-chip="${pub}" style="min-height: 38px; padding: 0 14px; background: ${bg}; color: ${color}; border: 1px solid ${border}; font-size: 13.5px; border-radius: 30px;">
+          ${pub} ${isChecked ? '✓' : '+'}
+        </button>
+      `;
+    }).join('');
+
+    chipContainer.querySelectorAll('[data-pub-chip]').forEach(btn => {
+      btn.onclick = () => {
+        const pub = btn.dataset.pubChip;
+        if (selected.has(pub)) {
+          selected.delete(pub);
+        } else {
+          if (selected.size >= 4) {
+            showToast("상세 비교는 최대 4개 언론사까지만 동시에 선택할 수 있습니다.");
+            return;
+          }
+          selected.add(pub);
+        }
+        renderChips();
+        renderDetailComparison(articles, selected, matchedIssue);
+      };
+    });
+  }
+
+  renderChips();
+  renderDetailComparison(articles, selected, matchedIssue);
+}
+
+function renderDetailComparison(articles, selectedSet, matchedIssue) {
+  const detailGrid = document.getElementById('detail-compare-grid');
+  if (!detailGrid) return;
+
+  const filtered = articles.filter(art => selectedSet.has(art.publisher));
+
+  if (filtered.length === 0) {
+    detailGrid.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <h3>선택된 언론사가 없습니다.</h3>
+        <p>위의 언론사 칩을 클릭하여 비교 대조표를 구성해 보세요.</p>
+      </div>
+    `;
+    return;
+  }
+
+  detailGrid.innerHTML = filtered.map(art => `
+    <article class="card" style="align-self: start; height: auto; border: 1px solid var(--border); box-shadow: var(--shadow);">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); padding-bottom: 12px; margin-bottom: 16px;">
+        <strong style="font-size: 20px; color: var(--primary);">${art.publisher}</strong>
+        <span class="badge gray" style="font-size: 11px; font-weight: bold;">정밀 대조</span>
+      </div>
+
+      <div class="compare-block" style="margin-bottom: 14px;">
+        <span class="compare-label" style="color: var(--common); font-weight: 900; font-size: 12.5px;">📌 공통 내용 요약</span>
+        <p class="compare-text" style="font-size: 13.5px; line-height: 1.5; color: var(--text-2); margin-top: 4px;">
+          ${(matchedIssue.common_facts || []).slice(0, 2).join(' / ') || '사실 내용 매핑 중.'}
+        </p>
+      </div>
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--keyword); font-weight: 900; font-size: 12.5px;">🎯 핵심 관점</span>
+        <p class="compare-text" style="font-size: 14px; font-weight: bold; color: var(--text); margin-top: 4px;">
+          ${art.focus || '객관적 사실 전달 중심.'}
+        </p>
+      </div>
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--context); font-weight: 900; font-size: 12.5px;">🧩 강조된 원인/배경</span>
+        <p class="compare-text" style="font-size: 13.5px; line-height: 1.5; color: var(--text-2); margin-top: 4px;">
+          ${art.expression_summary || '세부적인 배경 보도 생략.'}
+        </p>
+      </div>
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--person); font-weight: 900; font-size: 12.5px;">👥 강조한 영향/대상</span>
+        <div class="meta" style="margin: 4px 0 0 0; gap: 4px;">
+          ${(art.people || []).map(p => `<span class="badge purple" style="font-size: 10.5px; padding: 2px 8px;">${p}</span>`).join('')}
+          ${(art.organizations || []).map(o => `<span class="badge teal" style="font-size: 10.5px; padding: 2px 8px;">${o}</span>`).join('')}
+          ${(art.people || []).length === 0 && (art.organizations || []).length === 0 ? '<span style="font-size:13px; color:#94a3b8;">분석된 타겟 대상 없음</span>' : ''}
+        </div>
+      </div>
+
+      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
+        <span class="compare-label" style="color: var(--additional); font-weight: 900; font-size: 12.5px;">⚖️ 보도 태도/근거</span>
+        <p class="compare-text" style="font-size: 13px; color: var(--text-2); margin-top: 4px;">
+          ${art.evidence_limit ? `[한계 지적] ${art.evidence_limit}` : '공식 발행된 기사 텍스트를 정량 근거로 채택.'}
+        </p>
+      </div>
+
+      <div class="compare-block" style="border-top: 1px solid var(--border); padding-top: 12px; margin-top: 16px;">
+        <span class="compare-label" style="font-size: 11px;">🔗 원문 링크 참조</span>
+        <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: var(--primary); font-weight: 800; text-decoration: underline; display: inline-block; margin-top: 2px;">
+          뉴스 본문 바로가기 ↗
+        </a>
+      </div>
+    </article>
+  `).join('');
+}
+
+// [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화 (최대 3개 노출로 변경)
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
-  if (!root) return;
+  if (!root) return; 
 
   try {
     const response = await fetch("./data/issue.json");
+    if (!response.ok) throw new Error("파일을 불러오는데 실패했습니다.");
 
-    if (!response.ok) {
-      throw new Error("issue.json을 불러오지 못했습니다.");
-    }
-
-    const issueData = await response.json();
-    const issues = issueData.issues || [];
+    const db = await response.json();
+    const issues = db.issues || [];
 
     if (!issues.length) {
-      root.innerHTML = `
-        <div class="empty-state">
-          <h3>비교 가능한 이슈가 없습니다.</h3>
-        </div>
-      `;
+      root.innerHTML = `<div class="empty-state"><h3>비교 가능한 이슈가 없습니다.</h3></div>`;
       return;
     }
 
@@ -936,12 +568,12 @@ async function renderFeaturedIssue() {
         root.innerHTML = visibleIssues.map(issue => `
           <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; gap: 16px;">
             <div style="flex: 1; min-width: 0;">
-              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${issue.category}</span>
+              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${issue.category || '종합'}</span>
               <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${issue.title}</h3>
-              <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${issue.summary}</p>
+              <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${issue.summary || '요약 준비 중입니다.'}</p>
             </div>
             <div style="flex-shrink: 0;">
-              <a class="btn btn-primary btn-sm" href="issue.html?id=${issue.issue_id}" style="white-space: nowrap;">
+              <a class="btn btn-primary btn-sm" href="compare.html?q=${encodeURIComponent(issue.title)}" style="white-space: nowrap;">
                 프레임 비교 보기
               </a>
             </div>
@@ -949,15 +581,15 @@ async function renderFeaturedIssue() {
         `).join("");
       } else {
         root.style.display = "";
-        root.className = "grid-3";
+        root.className = "grid-3"; 
 
         root.innerHTML = visibleIssues.map(issue => `
-          <article class="card">
-            <span class="eyebrow">${issue.category}</span>
-            <h3>${issue.title}</h3>
-            <p>${issue.summary}</p>
-            <div class="card-footer">
-              <a class="btn btn-primary" href="issue.html?id=${issue.issue_id}">
+          <article class="card" style="display: flex; flex-direction: column; height: 100%;">
+            <span class="eyebrow">${issue.category || '종합'}</span>
+            <h3 style="margin: 12px 0 10px; font-size: 18px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 50px;">${issue.title}</h3>
+            <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 67px; margin-bottom: 16px;">${issue.summary || '요약 준비 중입니다.'}</p>
+            <div class="card-footer" style="margin-top: auto; padding-top: 0; display: flex; justify-content: flex-end;">
+              <a class="btn btn-primary" href="compare.html?q=${encodeURIComponent(issue.title)}" style="width: 100%; text-align: center;">
                 프레임 비교 보기
               </a>
             </div>
@@ -981,7 +613,7 @@ async function renderFeaturedIssue() {
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
           loadMoreBtn.addEventListener("click", () => {
-            window.featuredVisibleCount += 3;
+            window.featuredVisibleCount += 3; 
             renderFeaturedCards();
           });
           wrapper.appendChild(loadMoreBtn);
@@ -1007,99 +639,27 @@ async function renderFeaturedIssue() {
 
   } catch (error) {
     console.error(error);
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>이슈를 불러오지 못했습니다.</h3>
-      </div>
-    `;
+    root.innerHTML = `<div class="empty-state"><h3>이슈를 불러오지 못했습니다.</h3></div>`;
   }
 }
 
-async function renderSearchSuggestions() {
-  const targets = document.querySelectorAll("[data-search-help]");
-  if (!targets.length) return;
-
-  try {
-    const response = await fetch("./data/issue.json");
-
-    if (!response.ok) {
-      throw new Error("issue.json을 불러오지 못했습니다.");
-    }
-
-    const data = await response.json();
-
-    const usedKeywords = new Set();
-    const uniqueKeywords = [];
-
-    for (const issue of (data.issues || [])) {
-      const issueKeywords = (issue.articles || [])
-        .flatMap(article => article.keywords || [])
-        .map(keyword => String(keyword).trim())
-        .filter(Boolean);
-
-      const pick = issueKeywords.find(keyword => !usedKeywords.has(keyword));
-
-      if (pick) {
-        usedKeywords.add(pick);
-        uniqueKeywords.push(pick);
-      }
-
-      if (uniqueKeywords.length >= 3) break;
-    }
-
-    if (!uniqueKeywords.length) {
-      targets.forEach(target => {
-        target.textContent = "추천 검색어가 없습니다.";
-      });
-      return;
-    }
-
-    targets.forEach(target => {
-      target.innerHTML = `
-        <span class="search-suggestion-label">추천 검색어</span>
-        <div class="search-suggestion-list">
-          ${uniqueKeywords.map(keyword => `
-            <button
-              type="button"
-              class="search-suggestion-chip"
-              data-search-keyword="${keyword}"
-            >
-              ${keyword}
-            </button>
-          `).join("")}
-        </div>
-      `;
-    });
-
-    document.querySelectorAll("[data-search-keyword]").forEach(button => {
-      button.addEventListener("click", () => {
-        const keyword = button.dataset.searchKeyword;
-        if (!keyword) return;
-        window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
-      });
-    });
-
-  } catch (error) {
-    console.error(error);
-    targets.forEach(target => {
-      target.textContent = "추천 검색어를 불러오지 못했습니다.";
-    });
-  }
-}
-
+// 📌 모든 기능 초기화 및 순차 렌더링 시작
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
-  initViewToggles(); // 뷰 토글 제어 초기화 추가!
+  initViewToggles(); 
   initSaveButtons();
   initShare();
-  renderSearchResults();
-  renderSearchSuggestions();
-  renderSaved();
-  renderLiveNews();
-  renderIssuePage();
-  renderFeaturedIssue();
-  initViewToggles();
+  
+  const isComparePage = document.querySelector('[data-compare-page]');
+  const isMainPage = document.querySelector('[data-featured-issues]');
+
+  if (isComparePage) {
+    renderComparePage();
+  } else if (isMainPage) {
+    renderFeaturedIssue();
+    renderSaved();
+  }
 });
 
 // 로그인/회원가입 기능 바인딩
@@ -1133,10 +693,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isLoggedIn = false;
         alert("로그아웃 되었습니다.");
         updateLoginUI();
-        
-        if (window.location.pathname.includes("issue.html")) {
-          location.reload();
-        }
+        location.reload();
       } else {
         setAuthMode(true);
         loginModal.style.display = "flex";
@@ -1145,15 +702,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", () => {
-      loginModal.style.display = "none";
-    });
+    closeModalBtn.addEventListener("click", () => { loginModal.style.display = "none"; });
   }
 
   loginModal.addEventListener("click", (e) => {
-    if (e.target === loginModal) {
-      loginModal.style.display = "none";
-    }
+    if (e.target === loginModal) loginModal.style.display = "none";
   });
 
   if (linkSwitchAuth) {
@@ -1195,7 +748,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!isLoginMode) {
         const name = authNameInput ? authNameInput.value.trim() : "";
-        
         localStorage.setItem("user_email", email);
         localStorage.setItem("user_password", password);
         localStorage.setItem("user_name", name);
@@ -1213,14 +765,9 @@ document.addEventListener("DOMContentLoaded", () => {
           alert(`반갑습니다, ${savedName}님! 성공적으로 로그인되었습니다.`);
           loginModal.style.display = "none";
           updateLoginUI();
-          
-          renderSaved();
-          
-          if (window.location.pathname.includes("issue.html")) {
-            location.reload(); 
-          }
+          location.reload();
         } else {
-          alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다. 회원가입 정보를 확인하거나 가입을 먼저 진행해 주세요!");
+          alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다.");
         }
       }
     });
@@ -1228,7 +775,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateLoginUI() {
     if (!loginNavBtn) return;
-    
     const loggedIn = localStorage.getItem("isLoggedIn") === "true";
     if (loggedIn) {
       const savedName = localStorage.getItem("user_name") || "사용자";
@@ -1240,7 +786,6 @@ document.addEventListener("DOMContentLoaded", () => {
       loginNavBtn.classList.remove("btn-primary");
       loginNavBtn.classList.add("btn-secondary");
     }
-    
     renderSaved();
   }
 });
@@ -1253,15 +798,8 @@ window.addEventListener('pageshow', () => {
 
 // 데이터 변화 모니터링 대응
 window.addEventListener('storage', event => {
-  if (
-    event.key === 'prism-saved-issues' ||
-    event.key === 'isLoggedIn'
-  ) {
+  if (event.key === 'prism-saved-issues' || event.key === 'isLoggedIn') {
     renderSaved();
     syncSaveButtons();
   }
-});
-
-window.addEventListener('resize', () => {
-  requestAnimationFrame(resizeMediaCards);
 });

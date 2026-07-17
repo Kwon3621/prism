@@ -1,14 +1,16 @@
-import hashlib
 import html
 import json
 import re
+import hashlib
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import feedparser
 
 import requests
 
-from datetime import datetime, timezone
+from email.utils import format_datetime
+from datetime import datetime, timedelta, timezone
 
 
 RSS_FEEDS = [
@@ -57,7 +59,7 @@ RSS_FEEDS = [
         "category": "사회",
         "url": "https://www.hankyung.com/feed/society",
     },
-        {
+    {
         "publisher": "동아일보",
         "category": "정치",
         "url": "https://rss.donga.com/politics.xml",
@@ -104,6 +106,10 @@ RSS_FEEDS = [
     },
 ]
 
+# 언론사·카테고리(RSS)별로 수집할 최대 기사 수, 최신 기사 우선 반영,저장소 최대 저장 날짜
+ARTICLE_LIMIT_PER_FEED = 40
+PRIORITY_WINDOW_HOURS = 24
+RETENTION_DAYS = 60
 PUBLISHER_IDS = {
     "조선일보": "chosun",
     "한겨레": "hani",
@@ -113,9 +119,45 @@ PUBLISHER_IDS = {
     "SBS": "sbs",
 }
 
-# 언론사·카테고리(RSS)별로 수집할 최대 기사 수
-ARTICLE_LIMIT_PER_FEED = 40
+def normalize_link(link):
+    parts = urlsplit(link.strip())
 
+    tracking_params = {
+        "plink",
+        "cooper",
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+    }
+
+    filtered_query = [
+        (key, value)
+        for key, value in parse_qsl(
+            parts.query,
+            keep_blank_values=True,
+        )
+        if key.lower() not in tracking_params
+    ]
+
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            parts.path,
+            urlencode(filtered_query),
+            "",
+        )
+    )
+
+
+def create_article_id(link):
+    normalized_link = normalize_link(link)
+
+    return hashlib.sha256(
+        normalized_link.encode("utf-8")
+    ).hexdigest()
 
 def clean_html_text(text):
     """
@@ -129,62 +171,6 @@ def clean_html_text(text):
     text = re.sub(r"\s+", " ", text)
 
     return text.strip()
-def normalize_url(url):
-    """
-    기사 URL의 불필요한 공백과 끝 슬래시를 정리한다.
-    """
-    if not url:
-        return ""
-
-    return url.strip().rstrip("/")
-
-
-def create_article_id(publisher, link):
-    """
-    동일한 기사 URL은 실행할 때마다 같은 article_id를 갖는다.
-    """
-    normalized_link = normalize_url(link)
-
-    raw_id = f"{publisher}|{normalized_link}"
-
-    hashed_id = hashlib.sha256(
-        raw_id.encode("utf-8")
-    ).hexdigest()[:16]
-
-    return f"article-{hashed_id}"
-
-
-def get_published_at(entry):
-    """
-    RSS 항목의 발행 시각을 ISO 8601 형식으로 반환한다.
-    발행 시각을 확인할 수 없으면 빈 문자열을 반환한다.
-    """
-    parsed_time = (
-        entry.get("published_parsed")
-        or entry.get("updated_parsed")
-    )
-
-    if parsed_time:
-        published_datetime = datetime(
-            parsed_time.tm_year,
-            parsed_time.tm_mon,
-            parsed_time.tm_mday,
-            parsed_time.tm_hour,
-            parsed_time.tm_min,
-            parsed_time.tm_sec,
-            tzinfo=timezone.utc,
-        )
-
-        return published_datetime.isoformat()
-
-    published_text = (
-        entry.get("published")
-        or entry.get("updated")
-        or ""
-    )
-
-    return published_text.strip()
-
 
 def sanitize_rss_xml(xml_text):
     """
@@ -217,6 +203,7 @@ def sanitize_rss_xml(xml_text):
         xml_text,
     )
 
+
 def parse_rss_feed(feed_url):
     """
     RSS 원문을 직접 요청한 뒤 XML 엔티티를 정리해서 파싱한다.
@@ -244,19 +231,69 @@ def parse_rss_feed(feed_url):
 
     return feedparser.parse(cleaned_xml)
 
+def get_entry_datetime(entry):
+    """
+    RSS 항목의 발행 시각을 UTC datetime으로 변환한다.
+    발행 시각을 확인할 수 없으면 None을 반환한다.
+    """
+    parsed_time = (
+        entry.get("published_parsed")
+        or entry.get("updated_parsed")
+    )
+
+    if not parsed_time:
+        return None
+
+    return datetime(
+        parsed_time.tm_year,
+        parsed_time.tm_mon,
+        parsed_time.tm_mday,
+        parsed_time.tm_hour,
+        parsed_time.tm_min,
+        parsed_time.tm_sec,
+        tzinfo=timezone.utc,
+    )
+
+def parse_published_datetime(published):
+    """
+    저장된 기사 발행 시각 문자열을 UTC datetime으로 변환한다.
+    변환할 수 없으면 None을 반환한다.
+    """
+    if not published:
+        return None
+
+    try:
+        parsed = datetime.fromisoformat(
+            published.replace("Z", "+00:00")
+        )
+
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+
+        return parsed.astimezone(timezone.utc)
+
+    except ValueError:
+        try:
+            from email.utils import parsedate_to_datetime
+
+            parsed = parsedate_to_datetime(published)
+
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+
+            return parsed.astimezone(timezone.utc)
+
+        except (TypeError, ValueError):
+            return None
+
 def collect_articles():
     news_items = []
-
-    collected_at = datetime.now(
-        timezone.utc
-    ).isoformat()
 
     # 언론사·카테고리별 수집 개수를 관리
     feed_counts = {}
 
     for feed_info in RSS_FEEDS:
         publisher = feed_info["publisher"]
-        publisher_id = PUBLISHER_IDS[publisher]
         category = feed_info["category"]
         feed_url = feed_info["url"]
 
@@ -265,8 +302,10 @@ def collect_articles():
         feed_counts[feed_key] = 0
 
         print(f"\n{publisher} - {category} RSS 수집 중...")
+
         try:
             feed = parse_rss_feed(feed_url)
+            print(f"RSS에서 제공된 항목 수: {len(feed.entries)}개")
         except requests.RequestException as error:
             print(
                 f"{publisher} {category} RSS 요청 실패: "
@@ -280,8 +319,25 @@ def collect_articles():
                 f"{feed.bozo_exception}"
             )
 
+        recent_entries = []
+        older_entries = []
+
+        now = datetime.now(timezone.utc)
+        cutoff = now - timedelta(hours=PRIORITY_WINDOW_HOURS)
+
         for entry in feed.entries:
-            # 해당 언론사·카테고리에서 최대 수량을 채우면 중단
+            published_dt = get_entry_datetime(entry)
+
+            if published_dt and published_dt >= cutoff:
+                recent_entries.append(entry)
+            else:
+                older_entries.append(entry)
+
+        candidate_entries = recent_entries + older_entries
+        
+
+        for entry in candidate_entries:
+            # 해당 언론사·카테고리에서 20개를 채우면 중단
             if feed_counts[feed_key] >= ARTICLE_LIMIT_PER_FEED:
                 break
 
@@ -293,44 +349,58 @@ def collect_articles():
                 or ""
             )
 
-            link = normalize_url(
-                entry.get("link", "")
+            link = entry.get("link", "")
+
+            published = (
+                entry.get("published")
+                or entry.get("updated")
+                or ""
             )
 
-            published_at = get_published_at(entry)
+
+            if not published:
+                parsed_time = (
+                    entry.get("published_parsed")
+                    or entry.get("updated_parsed")
+                )
+
+                if parsed_time:
+                    published_datetime = datetime(
+                        parsed_time.tm_year,
+                        parsed_time.tm_mon,
+                        parsed_time.tm_mday,
+                        parsed_time.tm_hour,
+                        parsed_time.tm_min,
+                        parsed_time.tm_sec,
+                        tzinfo=timezone.utc
+                    )
+
+                    published = format_datetime(published_datetime)
 
             if not title or not link:
                 continue
 
-            # 같은 링크의 기사가 이미 들어갔다면 제외
-            if any(item["link"] == link for item in news_items):
+            article_id = create_article_id(link)
+
+            # 같은 기사가 이미 들어갔다면 제외
+            if any(
+                item.get("article_id") == article_id
+                for item in news_items
+            ):
                 continue
 
-            article_id = create_article_id(
-                publisher=publisher,
-                link=link
-            )
-
-            embedding_text = " ".join(
-                text
-                for text in [title, description]
-                if text
-            ).strip()
-
+            
             news_items.append(
                 {
                     "article_id": article_id,
-                    "publisher_id": publisher_id,
+                    "publisher_id": PUBLISHER_IDS[publisher],
                     "publisher": publisher,
                     "category": category,
                     "title": title,
-                    "link": link,
-                    "published": published_at,
-                    "published_at": published_at,
-                    "collected_at": collected_at,
-                    "updated_at": collected_at,
                     "description": description,
-                    "embedding_text": embedding_text,
+                    "published_at": published,
+                    "link": normalize_link(link),
+                    "collected_at": datetime.now(timezone.utc).isoformat(),
                 }
             )
 
@@ -354,15 +424,147 @@ def save_articles(news_items):
     output_path = Path("data/news.json")
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    existing_items = []
+
+    # 기존에 저장된 기사 불러오기
+    if output_path.exists():
+        try:
+            with output_path.open("r", encoding="utf-8") as file:
+                loaded_data = json.load(file)
+
+            if isinstance(loaded_data, list):
+                existing_items = loaded_data
+
+        except (json.JSONDecodeError, OSError) as error:
+            print(f"기존 news.json 불러오기 실패: {error}")
+            print("새로 수집한 기사만 저장합니다.")
+
+    now = datetime.now(timezone.utc)
+    retention_cutoff = now - timedelta(days=RETENTION_DAYS)
+
+    existing_articles = {}
+
+    for item in existing_items:
+        article_id = item.get("article_id")
+
+        if not article_id and item.get("link"):
+            article_id = create_article_id(item["link"])
+            item["article_id"] = article_id
+
+        if article_id:
+            existing_articles[article_id] = item
+
+    # 기존 기사에 새 수집 결과를 병합
+    article_map = dict(existing_articles)
+
+    duplicate_count = 0
+    removed_old_count = 0
+    current_time = now.isoformat()
+
+    content_fields = (
+        "publisher_id",
+        "publisher",
+        "category",
+        "title",
+        "description",
+        "published_at",
+        "link",
+    )
+
+
+    for new_item in news_items:
+        article_id = new_item.get("article_id")
+
+        if not article_id:
+            continue
+
+        existing_item = article_map.get(article_id)
+
+        # 처음 저장되는 기사
+        if existing_item is None:
+            new_item["updated_at"] = current_time
+            new_item["collected_at"] = current_time
+            article_map[article_id] = new_item
+            continue
+
+        # 기존 기사와 내용이 실제로 달라졌는지 확인
+        content_changed = any(
+            existing_item.get(field, "") != new_item.get(field, "")
+            for field in content_fields
+        )
+
+        merged_item = existing_item.copy()
+
+        for field in content_fields:
+            merged_item[field] = new_item.get(field, "")
+
+        # 재수집 시각은 항상 현재 시각으로 변경
+        merged_item["collected_at"] = current_time
+
+        # 실제 내용이 바뀐 경우에만 updated_at 갱신
+        if content_changed:
+            merged_item["updated_at"] = current_time
+        else:
+            merged_item["updated_at"] = (
+                existing_item.get("updated_at")
+                or current_time
+            )
+
+        article_map[article_id] = merged_item
+        duplicate_count += 1
+
+    # 60일이 지난 기사 제거
+    merged_items = []
+
+    for item in article_map.values():
+        published_dt = parse_published_datetime(
+            item.get("published_at", "")
+        )
+
+        if published_dt and published_dt < retention_cutoff:
+            removed_old_count += 1
+            continue
+
+        merged_items.append(item)
+
+    # 최신 기사 순으로 정렬
+    merged_items.sort(
+        key=lambda item: (
+            parse_published_datetime(
+                item.get("published_at", "")
+            )
+            or datetime.min.replace(tzinfo=timezone.utc)
+        ),
+        reverse=True,
+    )
+
     with output_path.open("w", encoding="utf-8") as file:
         json.dump(
-            news_items,
+            merged_items,
             file,
             ensure_ascii=False,
             indent=2,
         )
 
-    print(f"\n총 {len(news_items)}개 기사를 {output_path}에 저장했습니다.")
+    new_link_count = len(
+        {
+            item.get("article_id")
+            for item in news_items
+            if item.get("article_id")
+        }
+        - {
+            item.get("article_id")
+            for item in existing_items
+            if item.get("article_id")
+        }
+    )
+
+    print(f"\n이번 실행에서 수집한 기사: {len(news_items)}개")
+    print(f"새로 추가된 기사: {new_link_count}개")
+    print(f"중복으로 제외된 기사: {duplicate_count}개")
+    print(f"60일 초과로 삭제된 기사: {removed_old_count}개")
+    print(f"현재 저장된 전체 기사: {len(merged_items)}개")
+    print(f"저장 위치: {output_path}")
     print("이 단계에서는 Solar API를 사용하지 않습니다.")
 
 

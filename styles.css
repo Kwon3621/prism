@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 }
 .header-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { font-size: 25px; font-weight: 900; letter-spacing: -.04em; color: var(--primary); }
-.nav { display: flex; align-items: center; gap: 28px; }
+.nav { display: flex; align-items: center; gap: 36px; }
 .nav a { color: var(--text-2); font-weight: 700; font-size: 15px; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--primary); }
 .header-actions { display: flex; align-items: center; gap: 10px; }
@@ -847,7 +847,7 @@ img { max-width: 100%; display: block; }
 .nav-dropdown {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
 }
 
 .nav-item-dropdown {
@@ -858,7 +858,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 14px;
+  padding: 10px 18px;
   border: 0;
   border-radius: 10px;
   background: transparent;
@@ -979,37 +979,6 @@ img { max-width: 100%; display: block; }
     transform: none;
   }
 }
-
-/* ===== 언론사별 강조 포인트 요약 그리드 (2행 3열) ===== */
-
-.media-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.summary-chip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 20px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.summary-chip strong {
-  font-size: 15px;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@media (max-width: 760px) {
-  .media-summary-grid {
-    grid-template-columns: 1fr;
-  }
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
