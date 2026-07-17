@@ -1,0 +1,297 @@
+#같은 이슈·언론사·기사 조합이면 동일한 캐시 키 생성
+#언론사별 분석 결과 저장 및 조회
+#선택 언론사 비교 결과 저장 및 조회
+#캐시 폴더 자동 생성
+#손상된 JSON 캐시는 오류를 내지 않고 무시
+
+import hashlib
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+
+CACHE_ROOT = Path("data/cache")
+PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
+COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
+
+
+def ensure_cache_directories() -> None:
+    """
+    캐시 저장 폴더가 없으면 생성한다.
+    """
+    PUBLISHER_CACHE_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    COMPARISON_CACHE_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+
+def make_cache_key(*parts: Any) -> str:
+    """
+    여러 값을 하나의 안정적인 캐시 키로 변환한다.
+
+    리스트와 딕셔너리는 정렬된 JSON 문자열로 변환하기 때문에
+    같은 입력이면 항상 같은 키가 생성된다.
+    """
+    normalized_parts = []
+
+    for part in parts:
+        if isinstance(part, (dict, list, tuple, set)):
+            normalized = json.dumps(
+                part,
+                ensure_ascii=False,
+                sort_keys=True,
+                separators=(",", ":"),
+                default=str,
+            )
+        else:
+            normalized = str(part)
+
+        normalized_parts.append(normalized)
+
+    raw_key = "||".join(normalized_parts)
+
+    return hashlib.sha256(
+        raw_key.encode("utf-8")
+    ).hexdigest()
+
+
+def make_publisher_cache_key(
+    issue_id: str,
+    publisher_id: str,
+    article_ids: list[str],
+) -> str:
+    """
+    언론사별 분석 결과의 캐시 키를 만든다.
+    기사 순서가 달라도 같은 기사 조합이면 같은 키를 반환한다.
+    """
+    return make_cache_key(
+        "publisher-analysis",
+        issue_id,
+        publisher_id,
+        sorted(article_ids),
+    )
+
+
+def make_comparison_cache_key(
+    issue_id: str,
+    publisher_ids: list[str],
+) -> str:
+    """
+    선택 언론사 비교 결과의 캐시 키를 만든다.
+    언론사 선택 순서가 달라도 같은 조합이면 같은 키를 반환한다.
+    """
+    return make_cache_key(
+        "publisher-comparison",
+        issue_id,
+        sorted(publisher_ids),
+    )
+
+
+def _read_cache_file(path: Path) -> dict | None:
+    """
+    캐시 JSON 파일을 읽는다.
+    파일이 없거나 손상되었으면 None을 반환한다.
+    """
+    if not path.exists():
+        return None
+
+    try:
+        with path.open(
+            "r",
+            encoding="utf-8",
+        ) as file:
+            data = json.load(file)
+
+        if not isinstance(data, dict):
+            return None
+
+        return data
+
+    except (
+        json.JSONDecodeError,
+        OSError,
+    ):
+        return None
+
+
+def _write_cache_file(
+    path: Path,
+    data: dict,
+) -> None:
+    """
+    캐시 데이터를 UTF-8 JSON 파일로 저장한다.
+    """
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    with path.open(
+        "w",
+        encoding="utf-8",
+    ) as file:
+        json.dump(
+            data,
+            file,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+
+def get_publisher_analysis(
+    issue_id: str,
+    publisher_id: str,
+    article_ids: list[str],
+) -> dict | None:
+    """
+    저장된 언론사별 분석 결과를 조회한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_publisher_cache_key(
+        issue_id,
+        publisher_id,
+        article_ids,
+    )
+
+    cache_path = (
+        PUBLISHER_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cached_data = _read_cache_file(
+        cache_path
+    )
+
+    if not cached_data:
+        return None
+
+    result = cached_data.get("result")
+
+    if not isinstance(result, dict):
+        return None
+
+    return result
+
+
+def save_publisher_analysis(
+    issue_id: str,
+    publisher_id: str,
+    article_ids: list[str],
+    result: dict,
+) -> Path:
+    """
+    언론사별 Solar 분석 결과를 캐시에 저장한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_publisher_cache_key(
+        issue_id,
+        publisher_id,
+        article_ids,
+    )
+
+    cache_path = (
+        PUBLISHER_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cache_data = {
+        "cache_type": "publisher_analysis",
+        "cache_key": cache_key,
+        "issue_id": issue_id,
+        "publisher_id": publisher_id,
+        "article_ids": sorted(article_ids),
+        "created_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "result": result,
+    }
+
+    _write_cache_file(
+        cache_path,
+        cache_data,
+    )
+
+    return cache_path
+
+
+def get_comparison(
+    issue_id: str,
+    publisher_ids: list[str],
+) -> dict | None:
+    """
+    저장된 선택 언론사 비교 결과를 조회한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_comparison_cache_key(
+        issue_id,
+        publisher_ids,
+    )
+
+    cache_path = (
+        COMPARISON_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cached_data = _read_cache_file(
+        cache_path
+    )
+
+    if not cached_data:
+        return None
+
+    result = cached_data.get("result")
+
+    if not isinstance(result, dict):
+        return None
+
+    return result
+
+
+def save_comparison(
+    issue_id: str,
+    publisher_ids: list[str],
+    result: dict,
+) -> Path:
+    """
+    선택 언론사 비교 결과를 캐시에 저장한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_comparison_cache_key(
+        issue_id,
+        publisher_ids,
+    )
+
+    cache_path = (
+        COMPARISON_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cache_data = {
+        "cache_type": "publisher_comparison",
+        "cache_key": cache_key,
+        "issue_id": issue_id,
+        "publisher_ids": sorted(
+            publisher_ids
+        ),
+        "created_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "result": result,
+    }
+
+    _write_cache_file(
+        cache_path,
+        cache_data,
+    )
+
+    return cache_path
