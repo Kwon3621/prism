@@ -18,7 +18,7 @@ UPSTAGE_API_KEY = os.getenv("UPSTAGE_API_KEY")
 UPSTAGE_EMBEDDING_URL = "https://api.upstage.ai/v1/embeddings"
 
 # 검색어(query) 전용 임베딩 모델명
-QUERY_EMBEDDING_MODEL = "solar-embedding-1-large-query"
+QUERY_EMBEDDING_MODEL = "embedding-query"
 
 
 def embed_query(query):
