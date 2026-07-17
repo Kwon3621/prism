@@ -717,13 +717,23 @@ async function renderIssuePage() {
       const clusteredArticles =
         Array.isArray(cluster.articles) && cluster.articles.length
           ? cluster.articles
-          : cluster.title && cluster.link
-            ? [{
-                title: cluster.title,
-                link: cluster.link,
-                published: cluster.published || ''
-              }]
-            : [];
+          : Array.isArray(cluster.titles) && cluster.titles.length
+            ? cluster.titles.map((title, index) => ({
+                title,
+                link: cluster.links?.[index] || '',
+                published: cluster.published_times?.[index] || ''
+              }))
+            : cluster.title && cluster.link
+              ? [{
+                  title: cluster.title,
+                  link: cluster.link,
+                  published:
+                    cluster.published ||
+                    cluster.published_at ||
+                    cluster.published_times?.[0] ||
+                    ''
+                }]
+              : [];
 
       return `
         <article class="card media-card">
