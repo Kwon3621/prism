@@ -61,17 +61,20 @@
   <!-- [3단계] 언론사 선택 바 및 5대 항목 정밀 상세 비교 섹션 -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조 (최대 4개 선택)</h2>
-      <p class="section-desc" style="margin-bottom: 20px;">비교 분석할 언론사를 선택해 주세요. 선택 시 아래 대조표가 실시간으로 변경됩니다.</p>
-
-      <!-- 🌟 상단 언론사 선택 바UI -->
-      <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
+      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조</h2>
+      
+      <!-- 언론사 수동 선택 칩 바UI -->
+      <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
         <!-- JS로 선택 버튼 바가 자동 생성됩니다 -->
       </div>
+      <!-- 🌟 요청사항 반영: 최대 4개 선택 안내를 아래 작은 글씨로 배치 -->
+      <small style="display: block; color: var(--muted); margin-bottom: 32px; margin-left: 4px;">※ 분석 비교할 언론사를 선택해 주세요. (최대 4개 매체 동시 대조 가능)</small>
 
-      <!-- 🌟 5대 지표 대조 그리드 표 -->
-      <div id="detail-compare-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: start;">
-        <!-- 선택된 언론사들의 5대 분석 정보와 원문 링크 카드가 동적으로 주입됩니다 -->
+      <!-- 🌟 [변경] 카드 그리드를 걷어내고 가로 대조가 가능한 가볍고 깔끔한 테이블 레이아웃 도입 -->
+      <div style="width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); background: #fff;">
+        <table id="detail-compare-table" style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
+          <!-- JS에서 선택된 매체 수에 따라 헤더(Th)와 데이터 행(Td)을 가로로 정밀 매핑합니다 -->
+        </table>
       </div>
     </div>
   </section>

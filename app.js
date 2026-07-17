@@ -23,7 +23,7 @@ const viewModes = {
   saved: 'card'
 };
 
-// 뷰 토글 버튼 바인딩 함수 (중복 등록 방지 및 오타 수정 완료)
+// 뷰 토글 버튼 바인딩 함수
 function initViewToggles() {
   document.querySelectorAll('[data-view-toggle]').forEach(group => {
     const sectionKey = group.dataset.viewToggle; // 'featured', 'saved'
@@ -178,7 +178,7 @@ function initShare() {
         } else {
           await navigator.clipboard.writeText(url);
           showToast('링크가 복사되었습니다.');
-        }
+          }
       } catch (_) {}
     });
   });
@@ -360,10 +360,21 @@ async function renderComparePage() {
     };
     syncSaveButtons();
 
-    // 1단계: 상단 요약 바인딩
+    // 1단계: 상단 핵심 쟁점 및 공통 내용 요약 바인딩
     if (categoryEl) categoryEl.textContent = matchedIssue.category || "이슈 분석";
     if (titleEl) titleEl.textContent = matchedIssue.title;
-    if (summaryEl) summaryEl.textContent = matchedIssue.summary;
+    
+    if (summaryEl) {
+      // 핵심 쟁점 설명과 공통 사실 요약을 깔끔하게 리스트 형태로 결합하여 매핑
+      const factsHtml = (matchedIssue.common_facts || []).map(fact => `<li style="margin-top: 6px;">${fact}</li>`).join('');
+      summaryEl.innerHTML = `
+        <div style="font-weight: 600; margin-bottom: 10px;">[개요] ${matchedIssue.summary}</div>
+        <div style="border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px;">
+          <strong style="color: var(--primary);">✓ 확인된 공통 팩트 요약:</strong>
+          <ul style="margin: 6px 0 0 18px; padding: 0; color: var(--text-2); font-size: 14.5px;">${factsHtml}</ul>
+        </div>
+      `;
+    }
 
     const articles = matchedIssue.articles || [];
 
@@ -378,6 +389,7 @@ async function renderComparePage() {
   }
 }
 
+// [2단계 함수] 프레임이 비슷한 그룹끼리 분류하여 시각화 상자 배치
 function renderFrameGroups(articles) {
   const container = document.getElementById('frame-group-container');
   if (!container) return;
@@ -401,18 +413,18 @@ function renderFrameGroups(articles) {
     const themeColor = colors[index % colors.length];
 
     return `
-      <div class="card" style="border-top: 5px solid ${themeColor}; background: #fff; padding: 24px; height: auto;">
-        <span class="badge" style="background: ${themeColor}15; color: ${themeColor}; font-weight: 800; font-size: 13px; margin-bottom: 12px; display: inline-block;">
-          Group: ${groupTitle}
+      <div class="card" style="border-top: 5px solid ${themeColor}; background: #fff; padding: 24px; height: auto; box-shadow: var(--shadow); border-radius: 12px;">
+        <span class="badge" style="background: ${themeColor}15; color: ${themeColor}; font-weight: 800; font-size: 13px; margin-bottom: 12px; display: inline-block; border-radius: 999px; padding: 4px 12px;">
+          논조 분류: ${groupTitle}
         </span>
         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
           ${publishersInGroup.map(pub => `
-            <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700;">
+            <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700; border-radius: 6px;">
               ${pub}
             </span>
           `).join('')}
         </div>
-        <p style="font-size: 13px; color: #64748b; margin-top: 14px; line-height: 1.5;">
+        <p style="font-size: 13px; color: #64748b; margin-top: 14px; line-height: 1.5; margin-bottom: 0;">
           ※ 이 매체들은 유사한 어휘 패턴과 주안점을 공유하여 같은 프레임 범주로 자동 인식되었습니다.
         </p>
       </div>
@@ -420,6 +432,7 @@ function renderFrameGroups(articles) {
   }).join('');
 }
 
+// [3단계 함수] 최대 4개의 언론사 칩 선택 제어
 function initPublisherSelector(articles, matchedIssue) {
   const chipContainer = document.getElementById('compare-publisher-chips');
   if (!chipContainer) return;
@@ -463,74 +476,112 @@ function initPublisherSelector(articles, matchedIssue) {
   renderDetailComparison(articles, selected, matchedIssue);
 }
 
+// [3단계 최종 함수] 5대 비교 지표 가로 테이블(Table) 레이아웃 매핑 엔진 (중복 요약 항목 제거)
 function renderDetailComparison(articles, selectedSet, matchedIssue) {
-  const detailGrid = document.getElementById('detail-compare-grid');
-  if (!detailGrid) return;
+  const tableContainer = document.getElementById('detail-compare-table');
+  if (!tableContainer) return;
 
   const filtered = articles.filter(art => selectedSet.has(art.publisher));
 
   if (filtered.length === 0) {
-    detailGrid.innerHTML = `
-      <div class="empty-state" style="grid-column: 1 / -1;">
-        <h3>선택된 언론사가 없습니다.</h3>
-        <p>위의 언론사 칩을 클릭하여 비교 대조표를 구성해 보세요.</p>
-      </div>
+    tableContainer.innerHTML = `
+      <tbody>
+        <tr>
+          <td style="padding: 40px; text-align: center; color: var(--muted);">
+            <strong>선택된 언론사가 없습니다.</strong><br>위의 언론사 버튼을 클릭하여 비교 테이블을 구성해 보세요.
+          </td>
+        </tr>
+      </tbody>
     `;
     return;
   }
 
-  detailGrid.innerHTML = filtered.map(art => `
-    <article class="card" style="align-self: start; height: auto; border: 1px solid var(--border); box-shadow: var(--shadow);">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); padding-bottom: 12px; margin-bottom: 16px;">
-        <strong style="font-size: 20px; color: var(--primary);">${art.publisher}</strong>
-        <span class="badge gray" style="font-size: 11px; font-weight: bold;">정밀 대조</span>
-      </div>
+  // 1. 테이블 헤더(상단 매체 이름 행) 생성
+  let tableHtml = `
+    <thead>
+      <tr style="background: var(--bg-soft); border-bottom: 2px solid var(--primary);">
+        <th style="padding: 16px 20px; font-weight: 800; color: var(--text); width: 180px; border-right: 1px solid var(--border);">비교 항목</th>
+        ${filtered.map(art => `
+          <th style="padding: 16px 20px; font-weight: 800; color: var(--primary); font-size: 17px; border-right: 1px solid var(--border);">
+            ${art.publisher}
+          </th>
+        `).join('')}
+      </tr>
+    </thead>
+    <tbody>
+  `;
 
-      <div class="compare-block" style="margin-bottom: 14px;">
-        <span class="compare-label" style="color: var(--common); font-weight: 900; font-size: 12.5px;">📌 공통 내용 요약</span>
-        <p class="compare-text" style="font-size: 13.5px; line-height: 1.5; color: var(--text-2); margin-top: 4px;">
-          ${(matchedIssue.common_facts || []).slice(0, 2).join(' / ') || '사실 내용 매핑 중.'}
-        </p>
-      </div>
-
-      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
-        <span class="compare-label" style="color: var(--keyword); font-weight: 900; font-size: 12.5px;">🎯 핵심 관점</span>
-        <p class="compare-text" style="font-size: 14px; font-weight: bold; color: var(--text); margin-top: 4px;">
+  // 2. 항목: 핵심 관점 행 생성
+  tableHtml += `
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--keyword); border-right: 1px solid var(--border);">🎯 핵심 관점</td>
+      ${filtered.map(art => `
+        <td style="padding: 16px 20px; font-size: 14.5px; font-weight: 600; line-height: 1.5; border-right: 1px solid var(--border);">
           ${art.focus || '객관적 사실 전달 중심.'}
-        </p>
-      </div>
+        </td>
+      `).join('')}
+    </tr>
+  `;
 
-      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
-        <span class="compare-label" style="color: var(--context); font-weight: 900; font-size: 12.5px;">🧩 강조된 원인/배경</span>
-        <p class="compare-text" style="font-size: 13.5px; line-height: 1.5; color: var(--text-2); margin-top: 4px;">
-          ${art.expression_summary || '세부적인 배경 보도 생략.'}
-        </p>
-      </div>
+  // 3. 항목: 강조된 원인/배경 행 생성
+  tableHtml += `
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--context); border-right: 1px solid var(--border);">🧩 강조된 원인/배경</td>
+      ${filtered.map(art => `
+        <td style="padding: 16px 20px; font-size: 14px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border);">
+          ${art.expression_summary || '일반적인 사실 관계 전달.'}
+        </td>
+      `).join('')}
+    </tr>
+  `;
 
-      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
-        <span class="compare-label" style="color: var(--person); font-weight: 900; font-size: 12.5px;">👥 강조한 영향/대상</span>
-        <div class="meta" style="margin: 4px 0 0 0; gap: 4px;">
-          ${(art.people || []).map(p => `<span class="badge purple" style="font-size: 10.5px; padding: 2px 8px;">${p}</span>`).join('')}
-          ${(art.organizations || []).map(o => `<span class="badge teal" style="font-size: 10.5px; padding: 2px 8px;">${o}</span>`).join('')}
-          ${(art.people || []).length === 0 && (art.organizations || []).length === 0 ? '<span style="font-size:13px; color:#94a3b8;">분석된 타겟 대상 없음</span>' : ''}
-        </div>
-      </div>
+  // 4. 항목: 강조한 영향/대상 행 생성
+  tableHtml += `
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--person); border-right: 1px solid var(--border);">👥 강조한 영향/대상</td>
+      ${filtered.map(art => {
+        const hasTags = (art.people || []).length > 0 || (art.organizations || []).length > 0;
+        return `
+          <td style="padding: 16px 20px; border-right: 1px solid var(--border);">
+            <div class="meta" style="margin: 0; gap: 4px;">
+              ${(art.people || []).map(p => `<span class="badge purple" style="font-size: 11px; padding: 2px 8px;">${p}</span>`).join('')}
+              ${(art.organizations || []).map(o => `<span class="badge teal" style="font-size: 11px; padding: 2px 8px;">${o}</span>`).join('')}
+              ${!hasTags ? '<span style="font-size:13px; color:#94a3b8;">특정 대상 언급 없음</span>' : ''}
+            </div>
+          </td>
+        `;
+      }).join('')}
+    </tr>
+  `;
 
-      <div class="compare-block" style="margin-bottom: 14px; border-top: 1px dashed var(--border); padding-top: 10px;">
-        <span class="compare-label" style="color: var(--additional); font-weight: 900; font-size: 12.5px;">⚖️ 보도 태도/근거</span>
-        <p class="compare-text" style="font-size: 13px; color: var(--text-2); margin-top: 4px;">
-          ${art.evidence_limit ? `[한계 지적] ${art.evidence_limit}` : '공식 발행된 기사 텍스트를 정량 근거로 채택.'}
-        </p>
-      </div>
+  // 5. 항목: 보도 태도/근거 행 생성
+  tableHtml += `
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--additional); border-right: 1px solid var(--border);">⚖️ 보도 태도/근거</td>
+      ${filtered.map(art => `
+        <td style="padding: 16px 20px; font-size: 13.5px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border);">
+          ${art.evidence_limit ? `[한계] ${art.evidence_limit}` : '기사 텍스트 본문 인용구 및 정량 데이터 채택.'}
+        </td>
+      `).join('')}
+    </tr>
+  `;
 
-      <div class="compare-block" style="border-top: 1px solid var(--border); padding-top: 12px; margin-top: 16px;">
-        <span class="compare-label" style="font-size: 11px;">🔗 원문 링크 참조</span>
-        <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13px; color: var(--primary); font-weight: 800; text-decoration: underline; display: inline-block; margin-top: 2px;">
-          뉴스 본문 바로가기 ↗
-        </a>
-      </div>
-    </article>
-  `).join('');
+  // 6. 항목: 뉴스 원문 참조 링크 행 생성
+  tableHtml += `
+    <tr>
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--common); border-right: 1px solid var(--border);">🔗 뉴스 원문 참조</td>
+      ${filtered.map(art => `
+        <td style="padding: 16px 20px; border-right: 1px solid var(--border);">
+          <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13.5px; color: var(--primary); font-weight: 800; text-decoration: underline;">
+            원문 기사 읽기 ↗
+          </a>
+        </td>
+      `).join('')}
+    </tr>
+  `;
+
+  tableHtml += `</tbody>`;
+  tableContainer.innerHTML = tableHtml;
 }
 
 // [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화 (최대 3개 노출로 변경)
