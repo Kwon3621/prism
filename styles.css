@@ -979,3 +979,6 @@ img { max-width: 100%; display: block; }
     transform: none;
   }
 }
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
