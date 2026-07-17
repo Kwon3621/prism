@@ -19,7 +19,6 @@ function shuffleArray(array) {
 
 // 뷰 스타일 상태 관리 (기본값은 'card')
 const viewModes = {
-  liveNews: 'card',
   featured: 'card',
   saved: 'card'
 };
@@ -39,10 +38,10 @@ function initViewToggles() {
         const selectedView = newBtn.dataset.view; // 'card' or 'list'
         
         // 상태 변경 및 해당 섹션 즉시 재렌더링
-        if (sectionKey === 'live-news') {
-          viewModes.liveNews = selectedView;
-          renderLiveNews();
-        } else if (sectionKey === 'featured') {
+        if (sectionKey === 'featured') {
+          viewModes.featured = selectedView;
+          renderFeaturedIssue();
+        } else if (sectionKey === 'saved') {
           viewModes.featured = selectedView;
           renderFeaturedIssue();
         } else if (sectionKey === 'saved') {
@@ -324,188 +323,6 @@ function formatPublishedTime(value) {
   });
 }
 
-async function renderLiveNews() {
-  const root = document.querySelector("[data-live-news]");
-  if (!root) return;
-
-  try {
-    const response = await fetch("./data/issue.json");
-    if (!response.ok) throw new Error(`HTTP 오류: ${response.status}`);
-
-    const rawData = await response.json();
-    const newsItems = [];
-
-    // [v2 뉴스 연동] issue.json의 하위 기사 데이터를 모아 실시간 뉴스로 띄워줍니다.
-    (rawData.issues || []).forEach(issue => {
-      (issue.articles || []).forEach(art => {
-        newsItems.push({
-          publisher: art.publisher,
-          title: art.title,
-          link: art.link,
-          published: art.published_times ? art.published_times[0] : ''
-        });
-      });
-    });
-
-    const shuffledNews = shuffleArray(newsItems);
-    const INITIAL_COUNT = 4;
-    let visibleCount = INITIAL_COUNT;
-
-    const publishers = [...new Set(shuffledNews.map(item => item.publisher))];
-    let selectedPublishers = new Set(publishers);
-
-    function renderPublisherFilters() {
-      const filterRoot = document.querySelector('[data-publisher-checkboxes]');
-      if (!filterRoot) return;
-
-      filterRoot.innerHTML = publishers.map(publisher => `
-        <label class="filter-checkbox-item">
-          <input type="checkbox" value="${publisher}" checked data-publisher-checkbox>
-          <span>${publisher}</span>
-        </label>
-      `).join('');
-
-      const checkboxes = filterRoot.querySelectorAll('[data-publisher-checkbox]');
-      checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-          if (checkbox.checked) {
-            selectedPublishers.add(checkbox.value);
-          } else {
-            selectedPublishers.delete(checkbox.value);
-          }
-          visibleCount = INITIAL_COUNT;
-          render();
-        });
-      });
-
-      const selectAllBtn = document.querySelector('[data-select-all]');
-      const deselectAllBtn = document.querySelector('[data-deselect-all]');
-
-      if (selectAllBtn) {
-        selectAllBtn.onclick = () => {
-          selectedPublishers = new Set(publishers);
-          checkboxes.forEach(checkbox => { checkbox.checked = true; });
-          visibleCount = INITIAL_COUNT;
-          render();
-        };
-      }
-
-      if (deselectAllBtn) {
-        deselectAllBtn.onclick = () => {
-          selectedPublishers = new Set();
-          checkboxes.forEach(checkbox => { checkbox.checked = false; });
-          visibleCount = INITIAL_COUNT;
-          render();
-        };
-      }
-    }
-    
-    function render() {
-      const filteredNews = shuffledNews.filter(item => selectedPublishers.has(item.publisher));
-      const visibleNews = filteredNews.slice(0, visibleCount);
-      const viewMode = viewModes.liveNews;
-
-      if (!filteredNews.length) {
-        root.className = "";
-        root.style.display = "";
-        root.innerHTML = `
-          <div class="empty-state">
-            <h3>선택한 언론사의 뉴스가 없습니다.</h3>
-            <p>다른 언론사를 선택해 보세요.</p>
-          </div>
-        `;
-        return;
-      }
-
-      if (viewMode === 'list') {
-        root.className = "";
-        root.style.display = "flex";
-        root.style.flexDirection = "column";
-        root.style.gap = "12px";
-
-        root.innerHTML = visibleNews.map(item => `
-          <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 20px; gap: 16px;">
-            <div style="flex: 1; min-width: 0;">
-              <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${item.publisher}</span>
-              <h3 style="font-size: 15px; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${item.title}</h3>
-              <small class="live-news-time">${formatPublishedTime(item.published)}</small>
-            </div>
-            <div style="flex-shrink: 0;">
-              <a class="btn btn-secondary btn-sm" href="${item.link}" target="_blank" rel="noopener noreferrer" style="white-space: nowrap; padding: 6px 12px; font-size: 13px;">
-                원문 보기
-              </a>
-            </div>
-          </article>
-        `).join("");
-      } else {
-        root.style.display = "";
-        root.className = "grid-2";
-
-        root.innerHTML = visibleNews.map(item => `
-          <article class="card">
-            <span class="eyebrow">${item.publisher}</span>
-            <h3>${item.title}</h3>
-            <small class="live-news-time">${formatPublishedTime(item.published)}</small>
-            <div class="card-footer" style="margin-top: auto; padding-top: 16px;">
-              <a class="btn btn-secondary" href="${item.link}" target="_blank" rel="noopener noreferrer">
-                원문 보기
-              </a>
-            </div>
-          </article>
-        `).join("");
-      }
-
-      if (filteredNews.length > INITIAL_COUNT) {
-        const wrapper = document.createElement("div");
-        wrapper.className = "load-more-wrap";
-        wrapper.style.width = "100%";
-        wrapper.style.gridColumn = "1 / -1";
-        wrapper.style.textAlign = "center";
-        wrapper.style.marginTop = "24px";
-        wrapper.style.display = "flex";
-        wrapper.style.justifyContent = "center";
-        wrapper.style.gap = "12px";
-
-        if (visibleCount < filteredNews.length) {
-          const loadMoreBtn = document.createElement("button");
-          loadMoreBtn.className = "btn btn-primary";
-          loadMoreBtn.textContent = "더보기 ▾";
-          loadMoreBtn.addEventListener("click", () => {
-            visibleCount += 4;
-            render();
-          });
-          wrapper.appendChild(loadMoreBtn);
-        }
-
-        if (visibleCount > INITIAL_COUNT) {
-          const shrinkBtn = document.createElement("button");
-          shrinkBtn.className = "btn btn-secondary";
-          shrinkBtn.textContent = "줄이기 ▴";
-          shrinkBtn.addEventListener("click", () => {
-            visibleCount = INITIAL_COUNT;
-            render();
-            root.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-          wrapper.appendChild(shrinkBtn);
-        }
-
-        root.appendChild(wrapper);
-      }
-    }
-
-    renderPublisherFilters();
-    render();
-  } catch (error) {
-    console.error(error);
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>뉴스를 불러오지 못했습니다.</h3>
-        <p>잠시 후 다시 확인해 주세요.</p>
-      </div>
-    `;
-  }
-}
-
 // [이슈 비교 결과 페이지] 렌더링 함수 - v2 compare.html 동적 연동 전담
 async function renderComparePage() {
   const page = document.querySelector('[data-compare-page]');
@@ -708,7 +525,7 @@ function updateCompareDisplay(articles, selectedPublishers, matchedIssue) {
   }
 }
 
-// [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화
+// [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화 (최대 3개 노출로 변경)
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
   if (!root) return; 
@@ -725,7 +542,8 @@ async function renderFeaturedIssue() {
       return;
     }
 
-    const INITIAL_COUNT = 4;
+    // 🌟 v2 변경: 기본적으로 카드가 딱 3개만 먼저 보이도록 설정합니다.
+    const INITIAL_COUNT = 3;
     if (typeof window.featuredVisibleCount === 'undefined') {
       window.featuredVisibleCount = INITIAL_COUNT;
     }
@@ -756,15 +574,15 @@ async function renderFeaturedIssue() {
         `).join("");
       } else {
         root.style.display = "";
-        root.className = "grid-2"; 
+        root.className = "grid-3"; // 🌟 3열 그리드로 예쁘게 배치하기 위해 css 클래스 연동
 
         root.innerHTML = visibleIssues.map(issue => `
-          <article class="card">
+          <article class="card" style="display: flex; flex-direction: column; height: 100%;">
             <span class="eyebrow">${issue.category || '종합'}</span>
-            <h3>${issue.title}</h3>
-            <p>${issue.summary || '요약 준비 중입니다.'}</p>
-            <div class="card-footer">
-              <a class="btn btn-primary" href="compare.html?q=${issue.title}">
+            <h3 style="margin: 12px 0 10px; font-size: 18px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 50px;">${issue.title}</h3>
+            <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 67px; margin-bottom: 16px;">${issue.summary || '요약 준비 중입니다.'}</p>
+            <div class="card-footer" style="margin-top: auto; padding-top: 0; display: flex; justify-content: flex-end;">
+              <a class="btn btn-primary" href="compare.html?q=${issue.title}" style="width: 100%; text-align: center;">
                 프레임 비교 보기
               </a>
             </div>
@@ -772,6 +590,7 @@ async function renderFeaturedIssue() {
         `).join("");
       }
 
+      // 이슈 총 개수가 3개보다 많으면 더보기 버튼 활성화
       if (issues.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
         wrapper.className = "load-more-wrap";
@@ -788,7 +607,7 @@ async function renderFeaturedIssue() {
           loadMoreBtn.className = "btn btn-primary";
           loadMoreBtn.textContent = "더보기 ▾";
           loadMoreBtn.addEventListener("click", () => {
-            window.featuredVisibleCount += 2;
+            window.featuredVisibleCount += 3; // 🌟 3개씩 추가 노출
             renderFeaturedCards();
           });
           wrapper.appendChild(loadMoreBtn);
@@ -827,12 +646,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initShare();
   
   const isComparePage = document.querySelector('[data-compare-page]');
-  const isMainPage = document.querySelector('[data-live-news]');
 
   if (isComparePage) {
     renderComparePage();
   } else if (isMainPage) {
-    renderLiveNews();
     renderFeaturedIssue();
     renderSaved();
   }
