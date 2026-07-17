@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 }
 .header-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { font-size: 25px; font-weight: 900; letter-spacing: -.04em; color: var(--primary); }
-.nav { display: flex; align-items: center; gap: 28px; }
+.nav { display: flex; align-items: center; gap: 36px; }
 .nav a { color: var(--text-2); font-weight: 700; font-size: 15px; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--primary); }
 .header-actions { display: flex; align-items: center; gap: 10px; }
@@ -847,7 +847,7 @@ img { max-width: 100%; display: block; }
 .nav-dropdown {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
 }
 
 .nav-item-dropdown {
@@ -858,7 +858,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 14px;
+  padding: 10px 18px;
   border: 0;
   border-radius: 10px;
   background: transparent;

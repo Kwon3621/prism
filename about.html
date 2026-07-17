@@ -12,11 +12,33 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
-    <nav class="nav" data-nav aria-label="주요 메뉴">
-      <a href="index.html#live-news">이슈 둘러보기</a>
-      <a href="index.html#topics">이슈 비교하기</a>
-      <a href="index.html#saved-section">저장한 이슈</a>
-      <a href="about.html" class="active">분석 방식</a>
+    <nav class="nav nav-dropdown" data-nav aria-label="주요 메뉴">
+      <!-- 현재 위치가 사이트 설명(about.html)이므로 스타일 상 하이라이트 효과를 위해 active를 추가하거나 일치시킵니다. -->
+      <a href="about.html" style="display: flex; align-items: center; padding: 0 16px; font-weight: bold; color: #2563eb; text-decoration: none;">사이트 설명</a>
+    
+      <div class="nav-item-dropdown">
+        <button type="button" class="nav-dropdown-toggle">
+          이슈 둘러보기
+          <span aria-hidden="true">▾</span>
+        </button>
+    
+        <div class="nav-dropdown-menu">
+          <a href="./index.html#live-news">실시간 뉴스</a>
+          <a href="./index.html#saved-section">저장한 이슈</a>
+        </div>
+      </div>
+    
+      <div class="nav-item-dropdown">
+        <button type="button" class="nav-dropdown-toggle">
+          이슈 비교하기
+          <span aria-hidden="true">▾</span>
+        </button>
+    
+        <div class="nav-dropdown-menu">
+          <a href="./index.html#topics">주요 이슈 비교</a>
+          <a href="./search.html">키워드 검색</a>
+        </div>
+      </div>
     </nav>
     <div class="header-actions">
       <button class="btn btn-secondary" id="btn-login-nav">로그인</button>
