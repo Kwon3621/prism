@@ -122,7 +122,7 @@ function initSearch() {
       if (!keyword) return;
       button.disabled = true;
       button.textContent = '검색 중';
-      window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
+      window.location.href = `compare.html?q=${encodeURIComponent(keyword)}`;
     });
   });
 }
@@ -189,92 +189,6 @@ function initShare() {
   });
 }
 
-async function renderSearchResults() {
-  const root = document.querySelector("[data-search-results]");
-  if (!root) return;
-
-  const params = new URLSearchParams(window.location.search);
-  const q = (params.get("q") || "").trim();
-
-  const title = document.querySelector("[data-search-title]");
-  if (title) {
-    title.textContent = q ? `“${q}” 검색 결과` : "검색 결과";
-  }
-
-  if (!q) {
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>검색어를 입력해 주세요.</h3>
-        <p>비교하고 싶은 이슈나 키워드를 입력하면 관련 이슈를 보여드립니다.</p>
-      </div>
-    `;
-    return;
-  }
-
-  try {
-    const response = await fetch("./data/issue.json");
-    if (!response.ok) throw new Error("issue.json을 불러오지 못했습니다.");
-
-    const data = await response.json();
-    const keyword = q.toLowerCase();
-
-    const results = (data.issues || []).filter(issue => {
-      const text = [
-        issue.title,
-        issue.category,
-        issue.summary,
-        ...(issue.common_facts || []),
-        ...(issue.articles || []).flatMap(article => [
-          article.title,
-          ...(article.keywords || []),
-          ...(article.people || [])
-        ])
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      return text.includes(keyword);
-    });
-
-    if (!results.length) {
-      root.innerHTML = `
-        <div class="empty-state">
-          <h3>검색 결과가 없습니다.</h3>
-          <p>다른 키워드로 검색해 보세요.</p>
-          <a class="btn btn-secondary" href="index.html">
-            메인으로 돌아가기
-          </a>
-        </div>
-      `;
-      return;
-    }
-
-    root.innerHTML = results.map(issue => `
-      <article class="card">
-        <span class="eyebrow">${issue.category}</span>
-        <h3>${issue.title}</h3>
-        <p>${issue.summary}</p>
-        <div class="card-footer">
-          <small>
-            ${issue.articles.map(a => a.publisher).join(" · ")}
-          </small>
-          <a class="btn btn-primary" href="compare.html?id=${issue.issue_id}">
-            비교 보기
-          </a>
-        </div>
-      </article>
-    `).join("");
-
-  } catch (err) {
-    console.error(err);
-    root.innerHTML = `
-      <div class="empty-state">
-        <h3>검색 결과를 불러오지 못했습니다.</h3>
-      </div>
-    `;
-  }
-}
-
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
   if (!root) return; 
@@ -331,7 +245,7 @@ function renderSaved() {
           </div>
           <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
             <small style="color: #94a3b8; font-size: 12px; display: block; text-align: right;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="compare.html?id=${item.id}" style="white-space: nowrap;">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" href="compare.html?q=${item.title}" style="white-space: nowrap;">분석 보기</a>
           </div>
         </article>
       `).join('');
@@ -350,7 +264,7 @@ function renderSaved() {
           </div>
           <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="compare.html?id=${item.id}">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" href="compare.html?q=${item.title}">분석 보기</a>
           </div>
         </article>
       `).join('');
@@ -415,16 +329,29 @@ async function renderLiveNews() {
   if (!root) return;
 
   try {
-    const response = await fetch("./data/news.json");
+    const response = await fetch("./data/issue.json");
     if (!response.ok) throw new Error(`HTTP 오류: ${response.status}`);
 
-    const rawNewsItems = await response.json();
-    const newsItems = shuffleArray(rawNewsItems);
+    const rawData = await response.json();
+    const newsItems = [];
 
+    // [v2 뉴스 연동] issue.json의 하위 기사 데이터를 모아 실시간 뉴스로 띄워줍니다.
+    (rawData.issues || []).forEach(issue => {
+      (issue.articles || []).forEach(art => {
+        newsItems.push({
+          publisher: art.publisher,
+          title: art.title,
+          link: art.link,
+          published: art.published_times ? art.published_times[0] : ''
+        });
+      });
+    });
+
+    const shuffledNews = shuffleArray(newsItems);
     const INITIAL_COUNT = 4;
     let visibleCount = INITIAL_COUNT;
 
-    const publishers = [...new Set(newsItems.map(item => item.publisher))];
+    const publishers = [...new Set(shuffledNews.map(item => item.publisher))];
     let selectedPublishers = new Set(publishers);
 
     function renderPublisherFilters() {
@@ -474,7 +401,7 @@ async function renderLiveNews() {
     }
     
     function render() {
-      const filteredNews = newsItems.filter(item => selectedPublishers.has(item.publisher));
+      const filteredNews = shuffledNews.filter(item => selectedPublishers.has(item.publisher));
       const visibleNews = filteredNews.slice(0, visibleCount);
       const viewMode = viewModes.liveNews;
 
@@ -579,190 +506,219 @@ async function renderLiveNews() {
   }
 }
 
-function resizeMediaCards() {
-  const grid = document.querySelector('[data-issue-articles]');
-  if (!grid) return;
+// [이슈 비교 결과 페이지] 렌더링 함수 - v2 compare.html 동적 연동 전담
+async function renderComparePage() {
+  const page = document.querySelector('[data-compare-page]');
+  if (!page) return; 
 
-  const rowHeight = 8;
-  const rowGap = 0;
+  const params = new URLSearchParams(window.location.search);
+  const q = (params.get('q') || '').trim();
 
-  grid.querySelectorAll('.media-card').forEach(card => {
-    card.style.gridRowEnd = '';
-    const cardHeight = card.getBoundingClientRect().height;
-    const rowSpan = Math.ceil((cardHeight + rowGap) / (rowHeight + rowGap));
-    card.style.gridRowEnd = `span ${rowSpan}`;
-  });
-}
+  const titleEl = document.getElementById('compare-query-title');
+  const summaryEl = document.getElementById('compare-query-summary');
+  const categoryEl = document.getElementById('compare-query-category');
+  const keywordContainer = document.getElementById('expanded-keywords-container');
 
-// 3. [이슈 비교 결과 페이지] 렌더링 함수
-async function renderIssuePage() {
-  const page = document.querySelector('[data-issue-page]');
-  if (!page) return; // 상세 페이지가 아니면 이 함수는 동작하지 않습니다 (오류 방지)
+  if (!q) {
+    if (titleEl) titleEl.textContent = "비교할 검색어가 없습니다.";
+    if (summaryEl) summaryEl.textContent = "메인 화면에서 궁금한 이슈를 검색해 주세요.";
+    return;
+  }
+
+  if (titleEl) titleEl.textContent = `“${q}” 비교 분석 결과`;
 
   try {
     const response = await fetch('./data/issue.json');
-    if (!response.ok) throw new Error(`HTTP 오류: ${response.status}`);
-
-    const issueData = await response.json();
-    const params = new URLSearchParams(window.location.search);
-    const requestedIssueId = params.get('id');
-
-    const data = issueData.issues?.find(item => item.issue_id === requestedIssueId) || issueData.issues?.[0];
-    if (!data) throw new Error('표시할 이슈가 없습니다.');
-
-    const mediaClusters = data.clusters || data.articles || [];
-
-    currentIssue = {
-      id: data.issue_id,
-      category: data.category || '자동 분석',
-      title: data.title || '이슈 제목 없음',
-      summary: data.summary || '',
-      tags: [...new Set(mediaClusters.flatMap(cluster => cluster.keywords || []))].slice(0, 6),
-      mediaNames: [...new Set(mediaClusters.map(cluster => cluster.publisher).filter(Boolean))]
-    };
+    if (!response.ok) throw new Error("분석 DB를 불러올 수 없습니다.");
     
+    const db = await response.json();
+    const issues = db.issues || [];
+
+    // [유사도 매칭 시뮬레이션]
+    const matchedIssue = issues.find(issue => {
+      const textPool = [
+        issue.title,
+        issue.summary,
+        (issue.common_facts || []).join(' '),
+        (issue.keywords || []).join(' ')
+      ].join(' ').toLowerCase();
+      return textPool.includes(q.toLowerCase());
+    }) || issues[0]; 
+
+    if (!matchedIssue) {
+      if (summaryEl) summaryEl.textContent = "유사한 이슈 정보를 찾을 수 없습니다.";
+      return;
+    }
+
+    // 전역 currentIssue 업데이트 (저장용)
+    currentIssue = {
+      id: matchedIssue.issue_id,
+      category: matchedIssue.category || '자동 분석',
+      title: matchedIssue.title || '이슈 제목 없음',
+      summary: matchedIssue.summary || '',
+      tags: matchedIssue.keywords || [],
+      mediaNames: [...new Set((matchedIssue.articles || []).map(art => art.publisher))]
+    };
+
     syncSaveButtons();
 
-    document.querySelector('[data-issue-category]').textContent = data.category || '자동 분석';
-    document.querySelector('[data-issue-title]').textContent = data.title || '이슈 제목 없음';
-    document.querySelector('[data-issue-summary]').textContent = data.summary || '';
+    if (categoryEl) categoryEl.textContent = matchedIssue.category || "종합 분석";
+    if (summaryEl) summaryEl.textContent = matchedIssue.summary || "이슈 요약 정보가 존재하지 않습니다.";
 
-    const commonFacts = document.querySelector('[data-common-facts]');
-    commonFacts.innerHTML = `
-      <strong>공통으로 확인된 사실</strong><br>
-      ${(data.common_facts || []).join('<br>')}
-    `;
-
-    const articlesRoot = document.querySelector('[data-issue-articles]');
-    articlesRoot.innerHTML = mediaClusters.map(cluster => {
-      const clusteredArticles = Array.isArray(cluster.articles) && cluster.articles.length
-        ? cluster.articles
-        : Array.isArray(cluster.titles) && cluster.titles.length
-          ? cluster.titles.map((title, index) => ({
-              title,
-              link: cluster.links?.[index] || '',
-              published: cluster.published_times?.[index] || ''
-            }))
-          : cluster.title && cluster.link
-            ? [{
-                title: cluster.title,
-                link: cluster.link,
-                published: cluster.published || cluster.published_at || cluster.published_times?.[0] || ''
-              }]
-            : [];
-
-      return `
-        <article class="card media-card">
-          <button class="media-toggle" type="button" aria-expanded="false">
-            <span class="media-toggle-title">
-              <strong>${cluster.publisher}</strong>
-              <span class="article-count">${clusteredArticles.length}개 기사</span>
-            </span>
-            <span class="media-toggle-icon" aria-hidden="true">⌄</span>
-          </button>
-
-          <div class="media-content">
-            <div class="compare-block">
-              <span class="compare-label">대표 토픽</span>
-              <p class="compare-text">${cluster.topic_title || cluster.title || '주제 요약 없음'}</p>
-            </div>
-            <div class="compare-block">
-              <span class="compare-label">핵심 키워드</span>
-              <div class="meta">
-                ${(cluster.keywords || []).length
-                  ? (cluster.keywords || []).map(keyword => `<span class="badge blue">${keyword}</span>`).join('')
-                  : `<span style="color: #94a3b8; font-size: 13px;">추출된 키워드 없음</span>`
-                }
-              </div>
-            </div>
-            <div class="compare-block">
-              <span class="compare-label">주요 인물 및 기관</span>
-              <div class="meta">
-                ${(cluster.people || []).length
-                  ? (cluster.people || []).map(person => `<span class="badge purple">${person}</span>`).join('')
-                  : `<span style="color: #94a3b8; font-size: 13px;">추출된 인물 정보 없음</span>`
-                }
-              </div>
-            </div>
-            <div class="compare-block">
-              <span class="compare-label">강조된 내용</span>
-              <p class="compare-text">${cluster.focus || '명확한 차이를 확인하기 어려움'}</p>
-            </div>
-            <div class="compare-block">
-              <span class="compare-label">표현 요약</span>
-              <p class="compare-text">${cluster.expression_summary || '명확한 차이를 확인하기 어려움'}</p>
-            </div>
-            <div class="compare-block">
-              <span class="compare-label">분석 한계</span>
-              <p class="compare-text">${cluster.evidence_limit || '현재 제공된 자료만으로 구체적인 차이를 판단하기 어려움'}</p>
-            </div>
-            <div class="compare-block source-block">
-              <span class="compare-label">분석 대상 원문 기사</span>
-              ${clusteredArticles.length
-                ? `<ol class="source-list">${clusteredArticles.map(article => `
-                    <li>
-                      <a href="${article.link || '#'}" target="_blank" rel="noopener noreferrer">
-                        ${article.title || '기사 제목 없음'}
-                      </a>
-                      <div class="article-time">
-                        🕒 ${article.published ? formatPublishedTime(article.published) : '발행 시간 정보 없음'}
-                      </div>
-                    </li>`).join('')}
-                   </ol>`
-                : `<p class="compare-text">포함된 원문 기사가 없습니다.</p>`
-              }
-            </div>
-          </div>
-        </article>
+    if (keywordContainer && matchedIssue.keywords) {
+      const chipsHtml = matchedIssue.keywords.map(kw => `
+        <span class="badge blue" style="font-size: 13px; padding: 6px 12px;">#${kw}</span>
+      `).join('');
+      keywordContainer.innerHTML = `
+        <span style="font-size: 14px; color: var(--muted); font-weight: bold; align-self: center; margin-right: 10px;">확장된 검색 키워드:</span>
+        ${chipsHtml}
       `;
-    }).join('');
+    }
 
-    articlesRoot.querySelectorAll('.media-toggle').forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const card = toggle.closest('.media-card');
-        if (!card) return;
-        const isOpen = card.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(isOpen));
-        requestAnimationFrame(resizeMediaCards);
+    const articles = matchedIssue.articles || [];
+    const publishers = [...new Set(articles.map(art => art.publisher))];
+    const selectedPublishers = new Set(publishers); 
+
+    const filterContainer = document.getElementById('compare-publisher-checkboxes');
+    
+    function renderFilters() {
+      if (!filterContainer) return;
+      filterContainer.innerHTML = publishers.map(pub => `
+        <label class="filter-checkbox-item">
+          <input type="checkbox" value="${pub}" checked data-compare-checkbox>
+          <span>${pub}</span>
+        </label>
+      `).join('');
+
+      filterContainer.querySelectorAll('[data-compare-checkbox]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          if (cb.checked) {
+            selectedPublishers.add(cb.value);
+          } else {
+            selectedPublishers.delete(cb.value);
+          }
+          updateCompareDisplay(articles, selectedPublishers, matchedIssue);
+        });
       });
-    });
-
-    const firstCard = articlesRoot.querySelector('.media-card');
-    if (firstCard) {
-      firstCard.classList.add('open');
-      const firstToggle = firstCard.querySelector('.media-toggle');
-      if (firstToggle) firstToggle.setAttribute('aria-expanded', 'true');
     }
 
-    requestAnimationFrame(resizeMediaCards);
+    const selectAllBtn = document.getElementById('compare-select-all');
+    const deselectAllBtn = document.getElementById('compare-deselect-all');
 
-    const sourcesRoot = document.querySelector('[data-issue-sources]');
-    if (sourcesRoot) {
-      sourcesRoot.innerHTML = '';
-      const parentLayout = sourcesRoot.closest('section') || sourcesRoot.parentElement;
-      if (parentLayout) parentLayout.style.display = 'none';
+    if (selectAllBtn) {
+      selectAllBtn.onclick = () => {
+        publishers.forEach(pub => selectedPublishers.add(pub));
+        filterContainer.querySelectorAll('[data-compare-checkbox]').forEach(cb => cb.checked = true);
+        updateCompareDisplay(articles, selectedPublishers, matchedIssue);
+      };
     }
+
+    if (deselectAllBtn) {
+      deselectAllBtn.onclick = () => {
+        selectedPublishers.clear();
+        filterContainer.querySelectorAll('[data-compare-checkbox]').forEach(cb => cb.checked = false);
+        updateCompareDisplay(articles, selectedPublishers, matchedIssue);
+      };
+    }
+
+    renderFilters();
+    updateCompareDisplay(articles, selectedPublishers, matchedIssue);
 
   } catch (error) {
-    console.error(error);
-    document.querySelector('[data-issue-title]').textContent = '비교 결과를 불러오지 못했습니다.';
-    document.querySelector('[data-common-facts]').textContent = '잠시 후 다시 확인해 주세요.';
+    console.error("비교 분석 로드 오류:", error);
   }
 }
 
-// 4. [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화
+function updateCompareDisplay(articles, selectedPublishers, matchedIssue) {
+  const gridContainer = document.getElementById('compare-grid-container');
+  const commonSummaryEl = document.getElementById('ai-common-summary');
+  const focusDiffEl = document.getElementById('ai-focus-diff');
+
+  const filteredArticles = articles.filter(art => selectedPublishers.has(art.publisher));
+
+  if (!gridContainer) return;
+
+  if (filteredArticles.length === 0) {
+    gridContainer.innerHTML = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <h3>비교할 언론사가 선택되지 않았습니다.</h3>
+        <p>위 필터에서 하나 이상의 언론사를 선택해 주세요.</p>
+      </div>
+    `;
+    if (commonSummaryEl) commonSummaryEl.textContent = "선택된 언론사가 없습니다.";
+    if (focusDiffEl) focusDiffEl.textContent = "선택된 언론사가 없습니다.";
+    return;
+  }
+
+  // 대조표 카드 렌더링
+  gridContainer.innerHTML = filteredArticles.map(art => `
+    <article class="card" style="align-self: start; height: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 12px;">
+        <strong style="font-size: 20px; color: var(--primary);">${art.publisher}</strong>
+      </div>
+      <div class="compare-block">
+        <span class="compare-label">🔑 핵심 관점</span>
+        <p class="compare-text" style="font-size: 14.5px; line-height: 1.5; font-weight: 500;">
+          ${art.focus || '일반 사실 보도.'}
+        </p>
+      </div>
+      <div class="compare-block" style="margin-top: 14px;">
+        <span class="compare-label">🧩 강조된 원인 및 배경</span>
+        <p class="compare-text" style="font-size: 14px; color: var(--text-2);">
+          ${art.expression_summary || '일반적 전달.'}
+        </p>
+      </div>
+      <div class="compare-block" style="margin-top: 14px;">
+        <span class="compare-label">🏷️ 핵심 키워드</span>
+        <div class="meta" style="margin: 6px 0;">
+          ${(art.keywords || []).map(kw => `<span class="badge blue" style="font-size: 11px;">#${kw}</span>`).join(' ')}
+        </div>
+      </div>
+      <div class="compare-block" style="margin-top: 14px;">
+        <span class="compare-label">👥 관계 인물 및 기관</span>
+        <div class="meta" style="margin: 6px 0;">
+          ${(art.people || []).map(p => `<span class="badge purple" style="font-size: 11px;">${p}</span>`).join(' ')}
+          ${(art.organizations || []).map(o => `<span class="badge teal" style="font-size: 11px;">${o}</span>`).join(' ')}
+        </div>
+      </div>
+      <div class="compare-block" style="margin-top: 14px; border-top: 1px solid var(--border); padding-top: 14px;">
+        <span class="compare-label">🔗 원문 기사 참조</span>
+        <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13.5px; color: var(--primary); font-weight: bold; text-decoration: underline;">
+          기사 원문 보기 ↗
+        </a>
+      </div>
+    </article>
+  `).join('');
+
+  if (commonSummaryEl) {
+    commonSummaryEl.innerHTML = `
+      <strong>[공통 내용 요약]</strong><br>
+      <ul style="margin: 10px 0 0 18px; padding: 0;">
+        ${(matchedIssue.common_facts || []).map(fact => `<li style="margin-bottom: 6px;">${fact}</li>`).join('')}
+      </ul>
+    `;
+  }
+
+  if (focusDiffEl) {
+    const focusDetails = filteredArticles.map(art => `<strong>${art.publisher}</strong>: ${art.focus || '사실 기반 보도.'}`).join('<br><br>');
+    focusDiffEl.innerHTML = `
+      선택된 언론사들의 핵심 보도 관점 대조 내용입니다.<br><br>
+      ${focusDetails}
+    `;
+  }
+}
+
+// [이슈 비교 목록] 렌더링 함수 - 핫토픽 연동 및 v2 규격화
 async function renderFeaturedIssue() {
   const root = document.querySelector("[data-featured-issues]");
   if (!root) return; 
 
-  const dataSource = isLegacyMode() ? "./data/issue.json" : "./data/hot_topics.json";
-
   try {
-    const response = await fetch(dataSource);
-    if (!response.ok) throw new Error(`${dataSource} 파일을 불러오는데 실패했습니다.`);
+    const response = await fetch("./data/issue.json");
+    if (!response.ok) throw new Error("파일을 불러오는데 실패했습니다.");
 
-    const issueData = await response.json();
-    const issues = issueData.hot_topics || issueData.issues || [];
+    const db = await response.json();
+    const issues = db.issues || [];
 
     if (!issues.length) {
       root.innerHTML = `<div class="empty-state"><h3>비교 가능한 이슈가 없습니다.</h3></div>`;
@@ -792,7 +748,7 @@ async function renderFeaturedIssue() {
               <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${issue.summary || '요약 준비 중입니다.'}</p>
             </div>
             <div style="flex-shrink: 0;">
-              <a class="btn btn-primary btn-sm" href="compare.html?id=${issue.issue_id || issue.id}" style="white-space: nowrap;">
+              <a class="btn btn-primary btn-sm" href="compare.html?q=${issue.title}" style="white-space: nowrap;">
                 프레임 비교 보기
               </a>
             </div>
@@ -808,7 +764,7 @@ async function renderFeaturedIssue() {
             <h3>${issue.title}</h3>
             <p>${issue.summary || '요약 준비 중입니다.'}</p>
             <div class="card-footer">
-              <a class="btn btn-primary" href="compare.html?id=${issue.issue_id || issue.id}">
+              <a class="btn btn-primary" href="compare.html?q=${issue.title}">
                 프레임 비교 보기
               </a>
             </div>
@@ -862,90 +818,27 @@ async function renderFeaturedIssue() {
   }
 }
 
-async function renderSearchSuggestions() {
-  const targets = document.querySelectorAll("[data-search-help]");
-  if (!targets.length) return;
-
-  try {
-    const response = await fetch("./data/issue.json");
-    if (!response.ok) throw new Error("issue.json을 불러오지 못했습니다.");
-
-    const data = await response.json();
-    const usedKeywords = new Set();
-    const uniqueKeywords = [];
-
-    for (const issue of (data.issues || [])) {
-      const issueKeywords = (issue.articles || [])
-        .flatMap(article => article.keywords || [])
-        .map(keyword => String(keyword).trim())
-        .filter(Boolean);
-
-      const pick = issueKeywords.find(keyword => !usedKeywords.has(keyword));
-      if (pick) {
-        usedKeywords.add(pick);
-        uniqueKeywords.push(pick);
-      }
-      if (uniqueKeywords.length >= 3) break;
-    }
-
-    if (!uniqueKeywords.length) {
-      targets.forEach(target => { target.textContent = "추천 검색어가 없습니다."; });
-      return;
-    }
-
-    targets.forEach(target => {
-      target.innerHTML = `
-        <span class="search-suggestion-label">추천 검색어</span>
-        <div class="search-suggestion-list">
-          ${uniqueKeywords.map(keyword => `
-            <button type="button" class="search-suggestion-chip" data-search-keyword="${keyword}">
-              ${keyword}
-            </button>
-          `).join("")}
-        </div>
-      `;
-    });
-
-    document.querySelectorAll("[data-search-keyword]").forEach(button => {
-      button.addEventListener("click", () => {
-        const keyword = button.dataset.searchKeyword;
-        if (!keyword) return;
-        window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
-      });
-    });
-
-  } catch (error) {
-    console.error(error);
-    targets.forEach(target => { target.textContent = "추천 검색어를 불러오지 못했습니다."; });
-  }
-}
-
-// 📌 모든 기능 초기화 및 순차 렌더링 시작 (단일 DOMContentLoaded로 정리)
+// 📌 모든 기능 초기화 및 순차 렌더링 시작
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initSearch();
-  initViewToggles(); // 뷰 토글은 단 한 번만 선언합니다!
+  initViewToggles(); 
   initSaveButtons();
   initShare();
   
-  // 현재 머물고 있는 페이지가 어디인지 분석하여 필요한 렌더링 함수만 실행합니다.
-  const isSearchPage = document.querySelector("[data-search-results]");
-  const isDetailPage = document.querySelector('[data-issue-page]');
+  const isComparePage = document.querySelector('[data-compare-page]');
   const isMainPage = document.querySelector('[data-live-news]');
 
-  if (isSearchPage) {
-    renderSearchResults();
-  } else if (isDetailPage) {
-    renderIssuePage();
+  if (isComparePage) {
+    renderComparePage();
   } else if (isMainPage) {
     renderLiveNews();
     renderFeaturedIssue();
     renderSaved();
-    renderSearchSuggestions();
   }
 });
 
-// 로그인/회원가입 기능 바인딩 (이벤트 등록 로직 단순화 및 싱글톤 구조화)
+// 로그인/회원가입 기능 바인딩
 document.addEventListener("DOMContentLoaded", () => {
   const loginNavBtn = document.getElementById("btn-login-nav");
   const loginModal = document.getElementById("login-modal");
@@ -1050,7 +943,7 @@ document.addEventListener("DOMContentLoaded", () => {
           updateLoginUI();
           location.reload();
         } else {
-          alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다. 회원가입 정보를 확인하거나 가입을 먼저 진행해 주세요!");
+          alert("아이디(이메일) 또는 비밀번호가 일치하지 않습니다.");
         }
       }
     });
@@ -1085,8 +978,4 @@ window.addEventListener('storage', event => {
     renderSaved();
     syncSaveButtons();
   }
-});
-
-window.addEventListener('resize', () => {
-  requestAnimationFrame(resizeMediaCards);
 });
