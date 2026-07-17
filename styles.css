@@ -979,37 +979,3 @@ img { max-width: 100%; display: block; }
     transform: none;
   }
 }
-
-/* ===== 언론사별 강조 포인트 요약 그리드 (2행 3열) ===== */
-
-.media-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.summary-chip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 20px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.summary-chip strong {
-  font-size: 15px;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@media (max-width: 760px) {
-  .media-summary-grid {
-    grid-template-columns: 1fr;
-  }
-}
