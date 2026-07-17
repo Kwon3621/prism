@@ -1,3 +1,4 @@
+import hashlib
 import html
 import json
 import re
@@ -7,7 +8,6 @@ import feedparser
 
 import requests
 
-from email.utils import format_datetime
 from datetime import datetime, timezone
 
 
@@ -57,21 +57,6 @@ RSS_FEEDS = [
         "category": "사회",
         "url": "https://www.hankyung.com/feed/society",
     },
-    {
-        "publisher": "동아일보",
-        "category": "정치",
-        "url": "https://rss.donga.com/politics.xml",
-    },
-    {
-        "publisher": "동아일보",
-        "category": "경제",
-        "url": "https://rss.donga.com/economy.xml",
-    },
-    {
-        "publisher": "동아일보",
-        "category": "사회",
-        "url": "https://rss.donga.com/national.xml",
-    },
         {
         "publisher": "동아일보",
         "category": "정치",
@@ -119,8 +104,17 @@ RSS_FEEDS = [
     },
 ]
 
+PUBLISHER_IDS = {
+    "조선일보": "chosun",
+    "한겨레": "hani",
+    "한국경제": "hankyung",
+    "동아일보": "donga",
+    "매일경제": "mk",
+    "SBS": "sbs",
+}
+
 # 언론사·카테고리(RSS)별로 수집할 최대 기사 수
-ARTICLE_LIMIT_PER_FEED = 20
+ARTICLE_LIMIT_PER_FEED = 40
 
 
 def clean_html_text(text):
@@ -135,6 +129,62 @@ def clean_html_text(text):
     text = re.sub(r"\s+", " ", text)
 
     return text.strip()
+def normalize_url(url):
+    """
+    기사 URL의 불필요한 공백과 끝 슬래시를 정리한다.
+    """
+    if not url:
+        return ""
+
+    return url.strip().rstrip("/")
+
+
+def create_article_id(publisher, link):
+    """
+    동일한 기사 URL은 실행할 때마다 같은 article_id를 갖는다.
+    """
+    normalized_link = normalize_url(link)
+
+    raw_id = f"{publisher}|{normalized_link}"
+
+    hashed_id = hashlib.sha256(
+        raw_id.encode("utf-8")
+    ).hexdigest()[:16]
+
+    return f"article-{hashed_id}"
+
+
+def get_published_at(entry):
+    """
+    RSS 항목의 발행 시각을 ISO 8601 형식으로 반환한다.
+    발행 시각을 확인할 수 없으면 빈 문자열을 반환한다.
+    """
+    parsed_time = (
+        entry.get("published_parsed")
+        or entry.get("updated_parsed")
+    )
+
+    if parsed_time:
+        published_datetime = datetime(
+            parsed_time.tm_year,
+            parsed_time.tm_mon,
+            parsed_time.tm_mday,
+            parsed_time.tm_hour,
+            parsed_time.tm_min,
+            parsed_time.tm_sec,
+            tzinfo=timezone.utc,
+        )
+
+        return published_datetime.isoformat()
+
+    published_text = (
+        entry.get("published")
+        or entry.get("updated")
+        or ""
+    )
+
+    return published_text.strip()
+
 
 def sanitize_rss_xml(xml_text):
     """
@@ -167,7 +217,6 @@ def sanitize_rss_xml(xml_text):
         xml_text,
     )
 
-
 def parse_rss_feed(feed_url):
     """
     RSS 원문을 직접 요청한 뒤 XML 엔티티를 정리해서 파싱한다.
@@ -198,11 +247,16 @@ def parse_rss_feed(feed_url):
 def collect_articles():
     news_items = []
 
+    collected_at = datetime.now(
+        timezone.utc
+    ).isoformat()
+
     # 언론사·카테고리별 수집 개수를 관리
     feed_counts = {}
 
     for feed_info in RSS_FEEDS:
         publisher = feed_info["publisher"]
+        publisher_id = PUBLISHER_IDS[publisher]
         category = feed_info["category"]
         feed_url = feed_info["url"]
 
@@ -227,7 +281,7 @@ def collect_articles():
             )
 
         for entry in feed.entries:
-            # 해당 언론사·카테고리에서 20개를 채우면 중단
+            # 해당 언론사·카테고리에서 최대 수량을 채우면 중단
             if feed_counts[feed_key] >= ARTICLE_LIMIT_PER_FEED:
                 break
 
@@ -239,33 +293,11 @@ def collect_articles():
                 or ""
             )
 
-            link = entry.get("link", "")
-
-            published = (
-                entry.get("published")
-                or entry.get("updated")
-                or ""
+            link = normalize_url(
+                entry.get("link", "")
             )
 
-
-            if not published:
-                parsed_time = (
-                    entry.get("published_parsed")
-                    or entry.get("updated_parsed")
-                )
-
-                if parsed_time:
-                    published_datetime = datetime(
-                        parsed_time.tm_year,
-                        parsed_time.tm_mon,
-                        parsed_time.tm_mday,
-                        parsed_time.tm_hour,
-                        parsed_time.tm_min,
-                        parsed_time.tm_sec,
-                        tzinfo=timezone.utc
-                    )
-
-                    published = format_datetime(published_datetime)
+            published_at = get_published_at(entry)
 
             if not title or not link:
                 continue
@@ -274,14 +306,31 @@ def collect_articles():
             if any(item["link"] == link for item in news_items):
                 continue
 
+            article_id = create_article_id(
+                publisher=publisher,
+                link=link
+            )
+
+            embedding_text = " ".join(
+                text
+                for text in [title, description]
+                if text
+            ).strip()
+
             news_items.append(
                 {
+                    "article_id": article_id,
+                    "publisher_id": publisher_id,
                     "publisher": publisher,
                     "category": category,
                     "title": title,
                     "link": link,
-                    "published": published,
+                    "published": published_at,
+                    "published_at": published_at,
+                    "collected_at": collected_at,
+                    "updated_at": collected_at,
                     "description": description,
+                    "embedding_text": embedding_text,
                 }
             )
 
