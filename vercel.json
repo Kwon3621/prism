@@ -2,6 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/api/debug/vector-store",
+      "destination": "/api/index"
+    },
+    {
       "source": "/api/health",
       "destination": "/api/index"
     },
