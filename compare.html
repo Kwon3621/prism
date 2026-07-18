@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Prism - Solar Embedding 기반 실시간 언론사 비교" />
   <title>이슈 프레임 비교 분석 | Prism</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logos/favicon.svg">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
+    <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">
+      <img src="./assets/logos/prism-icon.svg" alt="" width="25" height="25">
+      Prism
+    </a>
     <nav class="nav" data-nav aria-label="주요 메뉴" style="display: flex; align-items: center; gap: 24px;">
       <a href="about.html" style="font-weight: 700;">사이트 설명</a>
       <a href="index.html#topics" style="font-weight: 700;">실시간 핫토픽</a>
@@ -32,11 +36,11 @@
       <span class="eyebrow" id="compare-query-category">종합 분석</span>
       <h1 id="compare-query-title">이슈를 분석하는 중입니다</h1>
       
-      <div style="margin-top: 16px; padding: 20px; background: #ffffff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);">
+      <div style="margin: 30px 0 0; padding: 20px; background: #ffffff; border: 1px solid var(--border); border-radius: 15px; box-shadow: var(--shadow); max-width: 800px;">
         <strong style="font-size: 16px; color: var(--primary); display: block; margin-bottom: 8px;">💡 AI 핵심 쟁점 및 공통 내용 요약</strong>
-        <p id="compare-query-summary" style="font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 0;">
+        <div id="compare-query-summary" style="font-size: 15px; line-height: 1.7; color: var(--text-2);">
           기사 데이터를 바탕으로 핵심 쟁점을 요약하고 있습니다.
-        </p>
+        </div>
       </div>
 
       <div class="toolbar" style="margin-top: 24px;">
@@ -46,38 +50,52 @@
     </div>
   </section>
 
-  <!-- [2단계] 비슷한 프레임 언론사 그룹 시각화 섹션 -->
-  <section class="section soft" style="padding: 60px 0; border-bottom: 1px solid var(--border);">
+  <!-- [0단계, 신규] 이슈 후보(Event Group)가 여러 개일 때 사용자가 선택하는 영역 -->
+  <section class="section soft" id="issue-candidate-section" style="display: none; padding: 60px 0; border-bottom: 1px solid var(--border);">
     <div class="container">
-      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">📊 프레임 맵핑 (언론사 그룹화)</h2>
-      <p class="section-desc" style="margin-bottom: 24px;">Solar LLM이 보도 태도와 논조의 유사도를 분석하여 같은 시선을 가진 미디어끼리 분류했습니다.</p>
-      
-      <div id="frame-group-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-        <!-- JS로 동적 프레임 그룹 분류 상자가 주입됩니다 -->
+      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 어떤 이슈를 비교할까요?</h2>
+      <p class="section-desc" style="margin-bottom: 24px;">검색어와 관련된 서로 다른 사건입니다. 하나를 선택하면 그 이슈만 언론사별로 비교합니다.</p>
+
+      <div id="issue-candidate-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        <!-- JS로 이슈 후보 카드가 주입됩니다 -->
       </div>
     </div>
   </section>
 
-  <!-- [3단계] 언론사 선택 바 및 5대 항목 정밀 상세 비교 섹션 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조</h2>
-      
-      <!-- 언론사 수동 선택 칩 바UI -->
-      <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
-        <!-- JS로 선택 버튼 바가 자동 생성됩니다 -->
-      </div>
-      <!-- 🌟 요청사항 반영: 최대 4개 선택 안내를 아래 작은 글씨로 배치 -->
-      <small style="display: block; color: var(--muted); margin-bottom: 32px; margin-left: 4px;">※ 분석 비교할 언론사를 선택해 주세요. (최대 4개 매체 동시 대조 가능)</small>
+  <div id="issue-analysis-sections" style="display: none;">
+    <!-- [2단계] 비슷한 프레임 언론사 그룹 시각화 섹션 -->
+    <section class="section soft" style="padding: 60px 0; border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">📊 프레임 맵핑 (언론사 그룹화)</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">Solar LLM이 보도 태도와 논조의 유사도를 분석하여 같은 시선을 가진 미디어끼리 분류했습니다.</p>
 
-      <!-- 🌟 [변경] 카드 그리드를 걷어내고 가로 대조가 가능한 가볍고 깔끔한 테이블 레이아웃 도입 -->
-      <div style="width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); background: #fff;">
-        <table id="detail-compare-table" style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
-          <!-- JS에서 선택된 매체 수에 따라 헤더(Th)와 데이터 행(Td)을 가로로 정밀 매핑합니다 -->
-        </table>
+        <div id="frame-group-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          <!-- JS로 동적 프레임 그룹 분류 상자가 주입됩니다 -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- [3단계] 언론사 선택 바 및 5대 항목 정밀 상세 비교 섹션 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조</h2>
+
+        <!-- 언론사 수동 선택 칩 바UI -->
+        <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
+          <!-- JS로 선택 버튼 바가 자동 생성됩니다 -->
+        </div>
+        <!-- 🌟 요청사항 반영: 최대 4개 선택 안내를 아래 작은 글씨로 배치 -->
+        <small style="display: block; color: var(--muted); margin-bottom: 32px; margin-left: 4px;">※ 분석 비교할 언론사를 선택해 주세요. (최대 4개 매체 동시 대조 가능)</small>
+
+        <!-- 🌟 [변경] 카드 그리드를 걷어내고 가로 대조가 가능한 가볍고 깔끔한 테이블 레이아웃 도입 -->
+        <div style="width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); background: #fff;">
+          <table id="detail-compare-table" style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
+            <!-- JS에서 선택된 매체 수에 따라 헤더(Th)와 데이터 행(Td)을 가로로 정밀 매핑합니다 -->
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -99,5 +117,40 @@
 <!-- search.js와 app.js 연동 순서 고정 -->
 <script src="./search.js"></script>
 <script src="./app.js"></script>
+<div id="login-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+  <div style="background: white; padding: 32px; border-radius: 12px; width: 100%; max-width: 380px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); position: relative;">
+
+    <h3 id="modal-title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px;">Prism 로그인</h3>
+    <p id="modal-desc" style="color: #666; font-size: 14px; margin-bottom: 24px;">서비스 이용을 위해 로그인을 진행해 주세요.</p>
+
+    <form id="auth-form">
+      <div id="field-name" style="margin-bottom: 16px; display: none;">
+        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">이름</label>
+        <input type="text" id="auth-name" placeholder="홍길동" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">아이디 (이메일)</label>
+        <input type="email" id="auth-email" placeholder="example@email.com" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">비밀번호</label>
+        <input type="password" id="auth-password" placeholder="••••••••" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+      </div>
+
+      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+        <button type="button" id="btn-close-modal" class="btn btn-secondary" style="flex: 1; padding: 10px 0;">취소</button>
+        <button type="submit" id="btn-auth-submit" class="btn btn-primary" style="flex: 1; padding: 10px 0; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">로그인</button>
+      </div>
+
+      <div style="text-align: center; font-size: 13px; color: #666;">
+        <span id="switch-text">아직 계정이 없으신가요?</span>
+        <a href="#" id="link-switch-auth" style="color: #007bff; text-decoration: none; margin-left: 4px; font-weight: bold;">회원가입</a>
+      </div>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>

@@ -2,7 +2,6 @@
  * Prism v2 - 검색 처리 및 뉴스/키워드 연동 스크립트 (search.js)
  */
 
-const SEARCH_PAGE_SIZE = 6;
 window.__PRISM_INLINE_SEARCH__ = true;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,20 +24,9 @@ function escapeHtml(value) {
         .replace(/'/g, "&#39;");
 }
 
-function formatDate(value) {
-    if (!value) return "";
-    const parsed = new Date(value);
-    if (Number.isNaN(parsed.getTime())) return String(value);
-
-    return parsed.toLocaleDateString("ko-KR", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-    });
-}
-
-function goToCompare(query) {
-    window.location.href = `compare.html?q=${encodeURIComponent(query)}`;
+function goToIssue(candidate) {
+    sessionStorage.setItem('prism-selected-issue', JSON.stringify(candidate));
+    window.location.href = `compare.html?issue_id=${encodeURIComponent(candidate.issue_id)}`;
 }
 
 // 1. 검색창 이벤트 처리 (즉시 이동 대신 결과 노출)
@@ -102,23 +90,29 @@ function runSearchOnPage(query) {
     return false;
 }
 
-// 2. 검색어에 맞는 관련 뉴스 및 연관 키워드 매칭
+// 2. 검색어를 사건·쟁점 단위 이슈 후보(Event Group)로 묶어서 매칭
 async function fetchAndRenderSearchResults(query, container) {
+    container.innerHTML = `
+    <div class="search-loading" style="text-align:center; padding: 60px 20px; color: var(--muted);">
+        <div class="search-loading-spinner"></div>
+        <p style="margin:12px 0 0; font-weight:600;">분류중입니다...</p>
+    </div>
+    `;
     try {
         const response = await fetch(
-            `/api/search?q=${encodeURIComponent(query)}`
+            `/api/issue-candidates?q=${encodeURIComponent(query)}`
         );
 
         const data = await response.json();
 
         if (!response.ok || !data.success) {
             throw new Error(
-                data.error || "검색 결과를 가져올 수 없습니다."
+                data.error || "관련 이슈를 가져올 수 없습니다."
             );
         }
 
-        const articles = Array.isArray(data.results)
-            ? data.results
+        const candidates = Array.isArray(data.candidates)
+            ? data.candidates
             : [];
 
         const keywords = Array.isArray(data.expanded_queries)
@@ -127,14 +121,14 @@ async function fetchAndRenderSearchResults(query, container) {
             )
             : [];
 
-        renderSearchResultsUI(container, {
+        renderIssueCandidatesUI(container, {
             query: data.query || query,
             keywords,
-            articles,
+            candidates,
         });
 
     } catch (error) {
-        console.error("검색 결과 로드 실패:", error);
+        console.error("이슈 후보 로드 실패:", error);
 
         container.innerHTML = `
             <p class="no-result">
@@ -145,130 +139,78 @@ async function fetchAndRenderSearchResults(query, container) {
     }
 }
 
-// 2-1. 카드형/목록형 + 6개씩 더보기 렌더링
-function renderSearchResultsUI(container, { query, keywords, articles }) {
-    if (articles.length === 0 && keywords.length === 0) {
+// 2-1. 이슈 후보 카드 렌더링 (사건당 최대 5개뿐이므로 페이지네이션/뷰토글 불필요)
+function renderIssueCandidatesUI(container, { query, keywords, candidates }) {
+    if (candidates.length === 0 && keywords.length === 0) {
         container.innerHTML = `<p class="no-result">"${escapeHtml(query)}"에 대한 검색 결과가 없습니다.</p>`;
         return;
     }
 
-    const state = {
-        view: "card",
-        visibleCount: Math.min(SEARCH_PAGE_SIZE, articles.length),
-    };
-
-    const draw = () => {
-        const visibleArticles = articles.slice(0, state.visibleCount);
-        const hasMore = state.visibleCount < articles.length;
-        const nextBatchSize = Math.min(
-            SEARCH_PAGE_SIZE,
-            articles.length - state.visibleCount
-        );
-
-        container.innerHTML = `
-            <div class="search-results-wrapper">
-                ${keywords.length > 0 ? `
-                    <div class="related-keywords">
-                        <strong>연관 키워드</strong>
-                        <div class="chip-row">
-                            ${keywords.slice(0, 6).map(k => `
-                                <button type="button" class="chip" data-run-search="${escapeHtml(k)}">#${escapeHtml(k)}</button>
-                            `).join("")}
-                        </div>
-                    </div>
-                ` : ""}
-
-                <div class="search-results-toolbar">
-                    <span class="search-results-count">관련 기사 ${articles.length}건</span>
-                    <div class="view-toggle" role="group" aria-label="보기 방식 선택">
-                        <button type="button" class="view-toggle-btn ${state.view === "card" ? "active" : ""}" data-view="card">카드형</button>
-                        <button type="button" class="view-toggle-btn ${state.view === "list" ? "active" : ""}" data-view="list">목록형</button>
+    container.innerHTML = `
+        <div class="search-results-wrapper">
+            ${keywords.length > 0 ? `
+                <div class="related-keywords">
+                    <strong>연관 키워드</strong>
+                    <div class="chip-row">
+                        ${keywords.slice(0, 6).map(k => `
+                            <button type="button" class="chip" data-run-search="${escapeHtml(k)}">#${escapeHtml(k)}</button>
+                        `).join("")}
                     </div>
                 </div>
+            ` : ""}
 
-                <div class="search-results-grid ${state.view === "list" ? "is-list" : "is-card"}">
-                    ${visibleArticles.map(renderArticleItem).join("")}
-                </div>
-
-                ${articles.length > SEARCH_PAGE_SIZE ? `
-                    <div class="search-results-more">
-                        <button type="button" class="btn btn-secondary" data-toggle-more>
-                            ${hasMore ? `더보기 (+${nextBatchSize})` : "줄이기"}
-                        </button>
-                    </div>
-                ` : ""}
+            <div class="search-results-toolbar">
+                <span class="search-results-count">관련 이슈 ${candidates.length}건</span>
             </div>
-        `;
 
-        container.querySelectorAll("[data-view]").forEach(btn => {
-            btn.addEventListener("click", () => {
-                state.view = btn.dataset.view;
-                draw();
-            });
+            <div class="search-results-grid is-card">
+                ${candidates.map(renderIssueCandidateItem).join("")}
+            </div>
+        </div>
+    `;
+
+    container.querySelectorAll("[data-go-issue]").forEach((el, index) => {
+        el.addEventListener("click", () => {
+            goToIssue(candidates[index]);
         });
-
-        container.querySelectorAll("[data-go-compare]").forEach(el => {
-            el.addEventListener("click", () => {
-                goToCompare(el.dataset.goCompare);
-            });
-            el.addEventListener("keydown", (event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    goToCompare(el.dataset.goCompare);
-                }
-            });
+        el.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                goToIssue(candidates[index]);
+            }
         });
+    });
 
-        container.querySelectorAll("[data-run-search]").forEach(el => {
-            el.addEventListener("click", () => {
-                runSearchOnPage(el.dataset.runSearch);
-            });
+    container.querySelectorAll("[data-run-search]").forEach(el => {
+        el.addEventListener("click", () => {
+            runSearchOnPage(el.dataset.runSearch);
         });
-
-        const moreButton = container.querySelector("[data-toggle-more]");
-        if (moreButton) {
-            moreButton.addEventListener("click", () => {
-                if (hasMore) {
-                    state.visibleCount = Math.min(
-                        state.visibleCount + SEARCH_PAGE_SIZE,
-                        articles.length
-                    );
-                } else {
-                    state.visibleCount = SEARCH_PAGE_SIZE;
-                    container.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-                draw();
-            });
-        }
-    };
-
-    draw();
+    });
 }
 
-function renderArticleItem(article) {
-    const title = escapeHtml(article.title || "");
-    const publisher = escapeHtml(article.press || article.publisher || "언론사");
-    const date = escapeHtml(formatDate(article.date || article.published_at || ""));
-    const rawSummary = article.content || article.description || "";
-    const summary = escapeHtml(rawSummary.slice(0, 90));
-    const isTruncated = rawSummary.length > 90;
+function renderIssueCandidateItem(candidate) {
+    const title = escapeHtml(candidate.issue_title || "");
+    const summary = escapeHtml((candidate.summary || "").slice(0, 90));
+    const isTruncated = (candidate.summary || "").length > 90;
+    const publishers = (candidate.publishers || []).map(p => p.publisher);
+    const publisherPreview = publishers.slice(0, 4).join(", ") + (publishers.length > 4 ? " 외" : "");
 
     return `
         <article
             class="search-result-card"
-            data-go-compare="${title}"
+            data-go-issue
             tabindex="0"
             role="button"
-            aria-label="${title} 프레임 비교 보기"
+            aria-label="${title} 언론사별 비교 보기"
         >
             <div class="search-result-card-body">
-                <span class="badge blue">${publisher}</span>
+                <span class="badge blue">${publishers.length}개 언론사</span>
                 <h3>${title}</h3>
                 <p>${summary}${isTruncated ? "…" : ""}</p>
             </div>
             <div class="search-result-card-footer">
-                <small>${date}</small>
-                <span class="link-arrow" aria-hidden="true">프레임 비교 →</span>
+                <small>${escapeHtml(publisherPreview)}</small>
+                <span class="link-arrow" aria-hidden="true">언론사별 비교 →</span>
             </div>
         </article>
     `;

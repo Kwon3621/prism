@@ -346,12 +346,6 @@ def build_analysis_text(
     ensure_ascii=False
 )}
 
-향후 전망:
-{json.dumps(
-    analysis.get("outlook", {}),
-    ensure_ascii=False
-)}
-
 상대적으로 적게 다룬 맥락:
 {json.dumps(
     analysis.get("less_covered_context", []),
@@ -416,6 +410,9 @@ Structured Output입니다.
 - 근거에는 입력된 제목 프레임, 핵심 관점,
   원인, 영향, 태도 근거 중 실제 확인 가능한 내용을 사용하세요.
 - 원문 링크는 입력된 기사 정보에서만 가져오세요.
+- source_links의 title, link, published_at은 입력된 기사 정보를 그대로 복사하세요.
+- 입력 기사의 published_at 값이 "발행 시간 정보 없음"이면 그대로 출력하세요.
+- 발행 시간을 추측하거나 임의로 생성하지 마세요.
 - JSON 이외의 문장은 출력하지 마세요.
 
 비교 항목은 반드시 다음 5개를 포함하세요.
@@ -425,6 +422,9 @@ Structured Output입니다.
 3. 강조된 원인·배경
 4. 강조한 영향·대상
 5. 보도 태도·근거
+
+comparisons 배열에는 반드시 위 5개 항목이 각각 하나씩, 총 5개의 원소로
+포함되어야 합니다. 1개만 작성하고 끝내지 마세요.
 
 difference_level은 다음 중 하나만 사용하세요.
 
@@ -460,6 +460,66 @@ difference_level은 다음 중 하나만 사용하세요.
           ]
         }}
       ]
+    }},
+    {{
+      "dimension": "핵심 관점",
+      "difference_level": "차이 정도",
+      "contrast_statement": "언론사별 공통점 또는 차이를 직접 대조하는 문장",
+      "publisher_details": [
+        {{
+          "publisher_id": "언론사 ID",
+          "publisher": "언론사명",
+          "summary": "이 항목에서 해당 언론사가 강조한 내용",
+          "evidence": [
+            "판단 근거가 되는 분석 표현"
+          ]
+        }}
+      ]
+    }},
+    {{
+      "dimension": "강조된 원인·배경",
+      "difference_level": "차이 정도",
+      "contrast_statement": "언론사별 공통점 또는 차이를 직접 대조하는 문장",
+      "publisher_details": [
+        {{
+          "publisher_id": "언론사 ID",
+          "publisher": "언론사명",
+          "summary": "이 항목에서 해당 언론사가 강조한 내용",
+          "evidence": [
+            "판단 근거가 되는 분석 표현"
+          ]
+        }}
+      ]
+    }},
+    {{
+      "dimension": "강조한 영향·대상",
+      "difference_level": "차이 정도",
+      "contrast_statement": "언론사별 공통점 또는 차이를 직접 대조하는 문장",
+      "publisher_details": [
+        {{
+          "publisher_id": "언론사 ID",
+          "publisher": "언론사명",
+          "summary": "이 항목에서 해당 언론사가 강조한 내용",
+          "evidence": [
+            "판단 근거가 되는 분석 표현"
+          ]
+        }}
+      ]
+    }},
+    {{
+      "dimension": "보도 태도·근거",
+      "difference_level": "차이 정도",
+      "contrast_statement": "언론사별 공통점 또는 차이를 직접 대조하는 문장",
+      "publisher_details": [
+        {{
+          "publisher_id": "언론사 ID",
+          "publisher": "언론사명",
+          "summary": "이 항목에서 해당 언론사가 강조한 내용",
+          "evidence": [
+            "판단 근거가 되는 분석 표현"
+          ]
+        }}
+      ]
     }}
   ],
   "similarities": [
@@ -474,7 +534,8 @@ difference_level은 다음 중 하나만 사용하세요.
       "publisher_id": "언론사 ID",
       "publisher": "언론사명",
       "title": "기사 제목",
-      "link": "원문 링크"
+      "link": "원문 링크",
+      "published_at": "기사 발행 시간"
     }}
   ],
   "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준"
@@ -504,6 +565,7 @@ def request_solar_comparison(
         response_format={
             "type": "json_object",
         },
+        temperature=0,
         timeout=REQUEST_TIMEOUT_SECONDS,
     )
 
@@ -561,6 +623,10 @@ def collect_source_links(
                 article.get("title")
             )
 
+            published_at = clean_string(
+                article.get("published_at")
+            )
+
             if not link:
                 continue
 
@@ -579,6 +645,7 @@ def collect_source_links(
                     ),
                     "title": title,
                     "link": link,
+                    "published_at": published_at,
                 }
             )
 
@@ -748,6 +815,16 @@ def validate_comparison_result(
         ALLOWED_DIMENSIONS
         - returned_dimensions
     )
+
+    # Solar가 5개 항목 중 1개만 채워서 응답하는 등 대부분의 비교 항목을
+    # 통째로 누락시키면, 빈 자리를 채우는 대신 재시도하도록 실패시킨다.
+    # (1개 정도의 누락은 group_publishers와 마찬가지로 아래에서 자리만
+    # 채워서 복구한다.)
+    if len(missing_dimensions) > 1:
+        raise ValueError(
+            "비교 항목이 대부분 누락되었습니다: "
+            f"{sorted(missing_dimensions)}"
+        )
 
     for dimension in [
         "공통 내용",

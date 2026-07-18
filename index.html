@@ -1,25 +1,29 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="같은 사건을 다룬 여러 언론사의 보도 방식을 비교하는 Prism" />
-  <title>Prism | 뉴스 프레임 비교</title>
+  <meta name="description" content="媛숈? ?ш굔???ㅻ， ?щ윭 ?몃줎?ъ쓽 蹂대룄 諛⑹떇??鍮꾧탳?섎뒗 Prism" />
+  <title>Prism | ?댁뒪 ?꾨젅??鍮꾧탳</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logos/favicon.svg">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">Prism</a>
-    <nav class="nav" data-nav aria-label="주요 메뉴" style="display: flex; align-items: center; gap: 24px;">
-      <a href="about.html" style="font-weight: 700;">사이트 설명</a>
-      <a href="index.html#topics" style="font-weight: 700;">실시간 핫토픽</a>
-      <a href="index.html#saved-section" style="font-weight: 700;">내가 저장한 이슈</a>
-      <a href="index.html" style="font-weight: 700;">키워드 검색하기</a>
+    <a class="logo" href="index.html" aria-label="Prism ?덉쑝濡??대룞">
+      <img src="./assets/logos/prism-icon.svg" alt="" width="25" height="25">
+      Prism
+    </a>
+    <nav class="nav" data-nav aria-label="二쇱슂 硫붾돱" style="display: flex; align-items: center; gap: 24px;">
+      <a href="about.html" style="font-weight: 700;">?ъ씠???ㅻ챸</a>
+      <a href="index.html#topics" style="font-weight: 700;">?ㅼ떆媛??ロ넗??/a>
+      <a href="index.html#saved-section" style="font-weight: 700;">?닿? ??ν븳 ?댁뒋</a>
+      <a href="index.html" style="font-weight: 700;">?ㅼ썙??寃?됲븯湲?/a>
     </nav>
     <div class="header-actions">
-      <button class="btn btn-secondary" id="btn-login-nav">로그인</button>
-      <button class="menu-toggle" data-menu-toggle aria-label="메뉴 열기" aria-expanded="false">☰</button>
+      <button class="btn btn-secondary" id="btn-login-nav">濡쒓렇??/button>
+      <button class="menu-toggle" data-menu-toggle aria-label="硫붾돱 ?닿린" aria-expanded="false">??/button>
     </div>
   </div>
 </header>
@@ -29,62 +33,55 @@
           <div class="container">
             <div class="hero-content">
               <span class="eyebrow hero-eyebrow">SEE EVERY SIDE</span>
-              <h1>같은 이슈,<br><span>다른 시선</span>을 비교하세요</h1>
-              <p class="hero-description">여러 언론사의 공통 사실과 보도 차이를 한눈에 확인하세요.</p>
+              <h1>媛숈? ?댁뒋, <span>?ㅻⅨ ?쒖꽑</span></h1>
+              <p class="hero-description">?щ윭 ?몃줎?ъ쓽 怨듯넻 ?ъ떎怨?蹂대룄 李⑥씠瑜??쒕늿???뺤씤?섏꽭??</p>
           
               <form class="search-panel hero-search" data-search-form>
                 <div class="search-row">
-                  <input class="search-input" type="search" aria-label="이슈 검색어 입력" placeholder="궁금한 이슈나 키워드를 검색하세요" />
-                  <button class="btn btn-primary hero-search-button" type="submit">검색</button>
+                  <input class="search-input" type="search" aria-label="?댁뒋 寃?됱뼱 ?낅젰" placeholder="沅곴툑???댁뒋???ㅼ썙?쒕? 寃?됲븯?몄슂" />
+                  <button class="btn btn-primary hero-search-button" type="submit">寃??/button>
                 </div>
-                
               </form>
             </div>
           </div>
         </section>
-        
+
         <section id="topics" class="section">
           <div class="container">
             <span class="eyebrow">Featured issue</span>
             <div class="section-header-flex" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px; flex-wrap: wrap; gap: 12px;">
               <div>
-                <h2 class="section-title" style="margin: 0;">실시간 핫 토픽</h2>
-                <p class="section-desc" style="margin: 4px 0 0 0;">언론사 수, 기사 수, 최신성을 반영하여 AI가 선정한 주요 이슈입니다.<br />같은 이슈를 다룬 여러 언론사의 보도 방식을 비교해 보세요.</p>
+                <h2 class="section-title" style="margin: 0;">?ㅼ떆媛????좏뵿</h2>
+                <p class="section-desc" style="margin: 4px 0 0 0;">?몃줎???? 湲곗궗 ?? 理쒖떊?깆쓣 諛섏쁺?섏뿬 AI媛 ?좎젙??二쇱슂 ?댁뒋?낅땲??<br />媛숈? ?댁뒋瑜??ㅻ， ?щ윭 ?몃줎?ъ쓽 蹂대룄 諛⑹떇??鍮꾧탳??蹂댁꽭??</p>
               </div>
               <div class="view-toggle-buttons" data-view-toggle="featured" style="display: flex; gap: 4px; background: #eee; padding: 2px; border-radius: 6px;">
-                <button class="btn btn-sm active" data-view="card" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: #fff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">카드형</button>
-                <button class="btn btn-sm" data-view="list" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: transparent; color: #666;">목록형</button>
+                <button class="btn btn-sm active" data-view="card" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: #fff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">移대뱶??/button>
+                <button class="btn btn-sm" data-view="list" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: transparent; color: #666;">紐⑸줉??/button>
               </div>
             </div>
             
             <div id="featured-container" data-featured-issues>
-              <p>실시간 핫 토픽을 불러오는 중입니다.</p>
+              <p>?ㅼ떆媛????좏뵿??遺덈윭?ㅻ뒗 以묒엯?덈떎.</p>
             </div>
           </div>
         </section>
-        
-        
-  
-    </div>
-  </div>
-</section>
 
 <section id="saved-section" class="section soft" style="background-color: #f8f9fa; border-top: 1px solid #eef2f6; border-bottom: 1px solid #eef2f6; padding: 60px 0;">
   <div class="container">
     <span class="eyebrow" style="color: #2563eb; font-weight: bold; display: block; margin-bottom: 8px;">My Saved Issues</span>
     <div class="section-header-flex" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 12px;">
       <div>
-        <h2 class="section-title" style="margin: 0;">내가 저장한 이슈</h2>
-        <p class="section-desc" style="color: #666; margin: 4px 0 0 0;">관심 있게 지켜보기 위해 저장해 둔 이슈 목록입니다.</p>
+        <h2 class="section-title" style="margin: 0;">?닿? ??ν븳 ?댁뒋</h2>
+        <p class="section-desc" style="color: #666; margin: 4px 0 0 0;">愿???덇쾶 吏耳쒕낫湲??꾪빐 ??ν빐 ???댁뒋 紐⑸줉?낅땲??</p>
       </div>
       <div class="view-toggle-buttons" data-view-toggle="saved" style="display: flex; gap: 4px; background: #e2e8f0; padding: 2px; border-radius: 6px;">
-        <button class="btn btn-sm active" data-view="card" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: #fff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">카드형</button>
-        <button class="btn btn-sm" data-view="list" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: transparent; color: #666;">목록형</button>
+        <button class="btn btn-sm active" data-view="card" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: #fff; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">移대뱶??/button>
+        <button class="btn btn-sm" data-view="list" style="padding: 6px 12px; font-size: 13px; border: none; border-radius: 4px; cursor: pointer; background: transparent; color: #666;">紐⑸줉??/button>
       </div>
     </div>
     
     <div id="saved-container" data-saved-list>
-      <p style="color: #666;">저장된 이슈를 불러오는 중입니다...</p>
+      <p style="color: #666;">??λ맂 ?댁뒋瑜?遺덈윭?ㅻ뒗 以묒엯?덈떎...</p>
     </div>
   </div>
 </section>
@@ -92,39 +89,39 @@
 
 </main>
 
-<footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Prism</div><p class="footer-desc">같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.</p></div><div class="footer-links"><a href="index.html">서비스 소개</a><a href="methodology.html">분석 방식</a><a href="#">이용 안내</a><a href="#">개인정보처리방침</a><a href="#">문의</a></div></div><div class="footer-bottom">© 2026 Prism. All rights reserved.</div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">Prism</div><p class="footer-desc">媛숈? ?ш굔???ㅻ， ?щ윭 ?몃줎?ъ쓽 蹂대룄 諛⑹떇??鍮꾧탳?⑸땲??</p></div><div class="footer-links"><a href="index.html">?쒕퉬???뚭컻</a><a href="bout.html">遺꾩꽍 諛⑹떇</a><a href="#">?댁슜 ?덈궡</a><a href="#">媛쒖씤?뺣낫泥섎━諛⑹묠</a><a href="#">臾몄쓽</a></div></div><div class="footer-bottom">짤 2026 Prism. All rights reserved.</div></div></footer>
 <script src="./app.js"></script>
 
 <div id="login-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
   <div style="background: white; padding: 32px; border-radius: 12px; width: 100%; max-width: 380px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); position: relative;">
     
-    <h3 id="modal-title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px;">Prism 로그인</h3>
-    <p id="modal-desc" style="color: #666; font-size: 14px; margin-bottom: 24px;">서비스 이용을 위해 로그인을 진행해 주세요.</p>
+    <h3 id="modal-title" style="margin-top: 0; margin-bottom: 8px; font-size: 20px;">Prism 濡쒓렇??/h3>
+    <p id="modal-desc" style="color: #666; font-size: 14px; margin-bottom: 24px;">?쒕퉬???댁슜???꾪빐 濡쒓렇?몄쓣 吏꾪뻾??二쇱꽭??</p>
     
     <form id="auth-form">
       <div id="field-name" style="margin-bottom: 16px; display: none;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">이름</label>
-        <input type="text" id="auth-name" placeholder="홍길동" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">?대쫫</label>
+        <input type="text" id="auth-name" placeholder="?띻만?? style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
       </div>
 
       <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">아이디 (이메일)</label>
+        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">?꾩씠??(?대찓??</label>
         <input type="email" id="auth-email" placeholder="example@email.com" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
       </div>
 
       <div style="margin-bottom: 24px;">
-        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">비밀번호</label>
-        <input type="password" id="auth-password" placeholder="••••••••" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
+        <label style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 6px;">鍮꾨?踰덊샇</label>
+        <input type="password" id="auth-password" placeholder="?™™™™™™™? required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box;">
       </div>
       
       <div style="display: flex; gap: 8px; margin-bottom: 16px;">
-        <button type="button" id="btn-close-modal" class="btn btn-secondary" style="flex: 1; padding: 10px 0;">취소</button>
-        <button type="submit" id="btn-auth-submit" class="btn btn-primary" style="flex: 1; padding: 10px 0; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">로그인</button>
+        <button type="button" id="btn-close-modal" class="btn btn-secondary" style="flex: 1; padding: 10px 0;">痍⑥냼</button>
+        <button type="submit" id="btn-auth-submit" class="btn btn-primary" style="flex: 1; padding: 10px 0; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer;">濡쒓렇??/button>
       </div>
 
       <div style="text-align: center; font-size: 13px; color: #666;">
-        <span id="switch-text">아직 계정이 없으신가요?</span>
-        <a href="#" id="link-switch-auth" style="color: #007bff; text-decoration: none; margin-left: 4px; font-weight: bold;">회원가입</a>
+        <span id="switch-text">?꾩쭅 怨꾩젙???놁쑝?좉???</span>
+        <a href="#" id="link-switch-auth" style="color: #007bff; text-decoration: none; margin-left: 4px; font-weight: bold;">?뚯썝媛??/a>
       </div>
     </form>
   </div>
@@ -132,3 +129,5 @@
 
 </body>
 </html>
+
+
