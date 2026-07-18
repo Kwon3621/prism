@@ -1,324 +1,333 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Prism 뉴스 프레임 비교 검색 결과"
-  >
-  <title>검색 결과 | Prism</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
+/**
+ * Prism v2 - 검색 처리 및 뉴스/키워드 연동 스크립트 (search.js)
+ */
 
-<body>
+const SEARCH_PAGE_SIZE = 6;
 
-<header class="site-header">
-  <div class="container header-inner">
+document.addEventListener("DOMContentLoaded", () => {
+    initSearchBehavior();
+    renderSearchSuggestions(); // 페이지 로드 시 기본 추천 키워드 로드
+});
 
-    <a class="logo" href="index.html" aria-label="Prism 홈으로 이동">
-      Prism
-    </a>
+// 0. 공용 유틸
 
-    <nav class="nav" data-nav aria-label="주요 메뉴">
-      <a href="index.html#live-news">이슈 둘러보기</a>
-      <a href="index.html#saved-section">저장한 이슈</a>
-      <a href="index.html#how-it-works">분석 방식</a>
-    </nav>
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
 
-    <div class="header-actions">
-      <button
-        class="btn btn-secondary"
-        id="btn-login-nav"
-        type="button"
-      >
-        로그인
-      </button>
+function formatDate(value) {
+    if (!value) return "";
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) return String(value);
 
-      <button
-        class="menu-toggle"
-        data-menu-toggle
-        type="button"
-        aria-label="메뉴 열기"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
-    </div>
+    return parsed.toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    });
+}
 
-  </div>
-</header>
+function goToCompare(query) {
+    window.location.href = `compare.html?q=${encodeURIComponent(query)}`;
+}
 
-<main>
+// 1. 검색창 이벤트 처리 (즉시 이동 대신 결과 노출)
+function initSearchBehavior() {
+    const searchForms = document.querySelectorAll('[data-search-form]');
 
-  <section class="page-hero">
-    <div class="container">
+    searchForms.forEach(form => {
+        const input = form.querySelector('input');
+        const button = form.querySelector('button[type="submit"]');
+        const resultsContainer = document.getElementById('search-results') || createResultsContainer(form);
 
-      <span class="eyebrow">Search</span>
+        if (!input || !button) return;
 
-      <h1 data-search-title>
-        검색 결과
-      </h1>
+        const checkInput = () => {
+            button.disabled = input.value.trim().length < 1;
+        };
+        input.addEventListener('input', checkInput);
+        checkInput();
 
-      <form class="search-panel" data-search-form>
-        <div class="search-row">
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const query = input.value.trim();
+            if (!query) return;
 
-          <input
-            class="search-input"
-            type="search"
-            aria-label="이슈 검색어 입력"
-            placeholder="비교하고 싶은 이슈나 키워드를 검색하세요"
-          >
+            button.disabled = true;
+            button.textContent = '검색 중...';
 
-          <button
-            class="btn btn-primary"
-            type="submit"
-          >
-            이슈 검색
-          </button>
+            await fetchAndRenderSearchResults(query, resultsContainer);
 
-        </div>
+            button.disabled = false;
+            button.textContent = '검색';
+        });
 
-        <div class="search-help" data-search-help>
-          기사 키워드를 불러오는 중...
-        </div>
-      </form>
+        // 추천 키워드 칩 등 다른 곳에서도 같은 폼으로 검색을 실행할 수 있도록 저장해둔다.
+        form.dataset.searchBound = "true";
+        form.__prismRunSearch = async (query) => {
+            input.value = query;
+            checkInput();
+            await fetchAndRenderSearchResults(query, resultsContainer);
+            resultsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+    });
+}
 
-    </div>
-  </section>
+// 결과를 표시할 컨테이너가 없을 경우 동적 생성
+function createResultsContainer(form) {
+    const container = document.createElement('div');
+    container.id = 'search-results';
+    container.style.marginTop = '15px';
+    form.parentNode.insertBefore(container, form.nextSibling);
+    return container;
+}
 
-  <section class="section">
-    <div class="container">
-      <div
-        class="search-results"
-        data-search-results
-      ></div>
-    </div>
-  </section>
+// 페이지에 있는 검색 폼을 찾아 검색을 실행한다. (추천 키워드 칩에서 사용)
+function runSearchOnPage(query) {
+    const form = document.querySelector('[data-search-form][data-search-bound="true"]');
+    if (form && typeof form.__prismRunSearch === "function") {
+        form.__prismRunSearch(query);
+        return true;
+    }
+    return false;
+}
 
-</main>
+// 2. 검색어에 맞는 관련 뉴스 및 연관 키워드 매칭
+async function fetchAndRenderSearchResults(query, container) {
+    try {
+        const response = await fetch("./data/issue.json");
+        if (!response.ok) throw new Error("데이터를 가져올 수 없습니다.");
 
-<footer class="site-footer">
-  <div class="container">
+        const data = await response.json();
+        const issues = data.issues || [];
 
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Prism</div>
-        <p class="footer-desc">
-          같은 사건을 다룬 여러 언론사의 보도 방식을 비교합니다.
-        </p>
-      </div>
+        const matchedArticles = [];
+        const matchedKeywords = new Set();
 
-      <div class="footer-links">
-        <a href="index.html">서비스 소개</a>
-        <a href="index.html#saved-section">저장한 이슈</a>
-        <a href="index.html#how-it-works">분석 방식</a>
-      </div>
-    </div>
+        issues.forEach(issue => {
+            if (issue.keywords && issue.keywords.some(k => k.includes(query))) {
+                issue.keywords.forEach(k => matchedKeywords.add(k));
+            }
 
-    <div class="footer-bottom">
-      © 2026 Prism. All rights reserved.
-    </div>
+            (issue.articles || []).forEach(art => {
+                const inTitle = art.title && art.title.includes(query);
+                const inContent = art.content && art.content.includes(query);
+                const inKeywords = art.keywords && art.keywords.some(k => k.includes(query));
 
-  </div>
-</footer>
+                if (inTitle || inContent || inKeywords) {
+                    matchedArticles.push(art);
+                    if (art.keywords) art.keywords.forEach(k => matchedKeywords.add(k));
+                }
+            });
+        });
 
-<!-- 로그인·회원가입 모달 -->
-<div
-  id="login-modal"
-  style="
-    display: none;
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-  "
->
-  <div
-    style="
-      position: relative;
-      width: calc(100% - 32px);
-      max-width: 380px;
-      padding: 32px;
-      border-radius: 12px;
-      background: white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      box-sizing: border-box;
-    "
-  >
+        renderSearchResultsUI(container, {
+            query,
+            keywords: [...matchedKeywords],
+            articles: matchedArticles,
+        });
 
-    <h3
-      id="modal-title"
-      style="
-        margin: 0 0 8px;
-        font-size: 20px;
-      "
-    >
-      Prism 로그인
-    </h3>
+    } catch (error) {
+        console.error("검색 결과 로드 실패:", error);
+        container.innerHTML = `<p style="color: red;">검색 중 오류가 발생했습니다.</p>`;
+    }
+}
 
-    <p
-      id="modal-desc"
-      style="
-        margin: 0 0 24px;
-        color: #666;
-        font-size: 14px;
-      "
-    >
-      서비스 이용을 위해 로그인을 진행해 주세요.
-    </p>
+// 2-1. 카드형/목록형 + 6개씩 더보기 렌더링
+function renderSearchResultsUI(container, { query, keywords, articles }) {
+    if (articles.length === 0 && keywords.length === 0) {
+        container.innerHTML = `<p class="no-result">"${escapeHtml(query)}"에 대한 검색 결과가 없습니다.</p>`;
+        return;
+    }
 
-    <form id="auth-form">
+    const state = {
+        view: "card",
+        visibleCount: Math.min(SEARCH_PAGE_SIZE, articles.length),
+    };
 
-      <div
-        id="field-name"
-        style="
-          display: none;
-          margin-bottom: 16px;
-        "
-      >
-        <label
-          for="auth-name"
-          style="
-            display: block;
-            margin-bottom: 6px;
-            font-size: 13px;
-            font-weight: 700;
-          "
+    const draw = () => {
+        const visibleArticles = articles.slice(0, state.visibleCount);
+        const hasMore = state.visibleCount < articles.length;
+        const isExpanded = state.visibleCount > SEARCH_PAGE_SIZE;
+        const nextBatchSize = Math.min(
+            SEARCH_PAGE_SIZE,
+            articles.length - state.visibleCount
+        );
+
+        container.innerHTML = `
+            <div class="search-results-wrapper">
+                ${keywords.length > 0 ? `
+                    <div class="related-keywords">
+                        <strong>연관 키워드</strong>
+                        <div class="chip-row">
+                            ${keywords.slice(0, 6).map(k => `
+                                <button type="button" class="chip" data-run-search="${escapeHtml(k)}">#${escapeHtml(k)}</button>
+                            `).join("")}
+                        </div>
+                    </div>
+                ` : ""}
+
+                <div class="search-results-toolbar">
+                    <span class="search-results-count">관련 기사 ${articles.length}건</span>
+                    <div class="view-toggle" role="group" aria-label="보기 방식 선택">
+                        <button type="button" class="view-toggle-btn ${state.view === "card" ? "active" : ""}" data-view="card">카드형</button>
+                        <button type="button" class="view-toggle-btn ${state.view === "list" ? "active" : ""}" data-view="list">목록형</button>
+                    </div>
+                </div>
+
+                <div class="search-results-grid ${state.view === "list" ? "is-list" : "is-card"}">
+                    ${visibleArticles.map(renderArticleItem).join("")}
+                </div>
+
+                ${articles.length > SEARCH_PAGE_SIZE ? `
+                    <div class="search-results-more">
+                        <button type="button" class="btn btn-secondary" data-toggle-more>
+                            ${hasMore ? `더보기 (+${nextBatchSize})` : "줄이기"}
+                        </button>
+                    </div>
+                ` : ""}
+            </div>
+        `;
+
+        container.querySelectorAll("[data-view]").forEach(btn => {
+            btn.addEventListener("click", () => {
+                state.view = btn.dataset.view;
+                draw();
+            });
+        });
+
+        container.querySelectorAll("[data-go-compare]").forEach(el => {
+            el.addEventListener("click", () => {
+                goToCompare(el.dataset.goCompare);
+            });
+            el.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    goToCompare(el.dataset.goCompare);
+                }
+            });
+        });
+
+        container.querySelectorAll("[data-run-search]").forEach(el => {
+            el.addEventListener("click", () => {
+                runSearchOnPage(el.dataset.runSearch);
+            });
+        });
+
+        const moreButton = container.querySelector("[data-toggle-more]");
+        if (moreButton) {
+            moreButton.addEventListener("click", () => {
+                if (hasMore) {
+                    state.visibleCount = Math.min(
+                        state.visibleCount + SEARCH_PAGE_SIZE,
+                        articles.length
+                    );
+                } else {
+                    state.visibleCount = SEARCH_PAGE_SIZE;
+                    container.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                draw();
+            });
+        }
+    };
+
+    draw();
+}
+
+function renderArticleItem(article) {
+    const title = escapeHtml(article.title || "");
+    const publisher = escapeHtml(article.press || article.publisher || "언론사");
+    const date = escapeHtml(formatDate(article.date || article.published_at || ""));
+    const rawSummary = article.content || article.description || "";
+    const summary = escapeHtml(rawSummary.slice(0, 90));
+    const isTruncated = rawSummary.length > 90;
+
+    return `
+        <article
+            class="search-result-card"
+            data-go-compare="${title}"
+            tabindex="0"
+            role="button"
+            aria-label="${title} 프레임 비교 보기"
         >
-          이름
-        </label>
+            <div class="search-result-card-body">
+                <span class="badge blue">${publisher}</span>
+                <h3>${title}</h3>
+                <p>${summary}${isTruncated ? "…" : ""}</p>
+            </div>
+            <div class="search-result-card-footer">
+                <small>${date}</small>
+                <span class="link-arrow" aria-hidden="true">프레임 비교 →</span>
+            </div>
+        </article>
+    `;
+}
 
-        <input
-          id="auth-name"
-          type="text"
-          placeholder="홍길동"
-          style="
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-          "
-        >
-      </div>
+// 3. 메인화면 초기 "추천 키워드" 렌더링
+async function renderSearchSuggestions() {
+    const targets = document.querySelectorAll("[data-search-help]");
+    if (!targets.length) return;
 
-      <div style="margin-bottom: 16px;">
-        <label
-          for="auth-email"
-          style="
-            display: block;
-            margin-bottom: 6px;
-            font-size: 13px;
-            font-weight: 700;
-          "
-        >
-          아이디 (이메일)
-        </label>
+    try {
+        const response = await fetch("./data/issue.json");
+        if (!response.ok) throw new Error("issue.json 데이터를 찾을 수 없습니다.");
 
-        <input
-          id="auth-email"
-          type="email"
-          placeholder="example@email.com"
-          required
-          style="
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-          "
-        >
-      </div>
+        const data = await response.json();
+        const suggestions = [];
 
-      <div style="margin-bottom: 24px;">
-        <label
-          for="auth-password"
-          style="
-            display: block;
-            margin-bottom: 6px;
-            font-size: 13px;
-            font-weight: 700;
-          "
-        >
-          비밀번호
-        </label>
+        const issues = data.issues || [];
+        issues.forEach(issue => {
+            if (issue.keywords && issue.keywords.length > 0) {
+                suggestions.push(...issue.keywords);
+            }
+            (issue.articles || []).forEach(art => {
+                if (art.keywords) suggestions.push(...art.keywords);
+            });
+        });
 
-        <input
-          id="auth-password"
-          type="password"
-          placeholder="••••••••"
-          required
-          style="
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-          "
-        >
-      </div>
+        const uniqueSuggestions = [...new Set(suggestions)].slice(0, 4);
 
-      <div
-        style="
-          display: flex;
-          gap: 8px;
-          margin-bottom: 16px;
-        "
-      >
-        <button
-          class="btn btn-secondary"
-          id="btn-close-modal"
-          type="button"
-          style="flex: 1;"
-        >
-          취소
-        </button>
+        targets.forEach(target => {
+            if (uniqueSuggestions.length === 0) {
+                target.textContent = "추천 키워드를 준비 중입니다.";
+                return;
+            }
 
-        <button
-          class="btn btn-primary"
-          id="btn-auth-submit"
-          type="submit"
-          style="flex: 1;"
-        >
-          로그인
-        </button>
-      </div>
+            target.innerHTML = `
+                <span class="search-suggestion-label">추천 키워드</span>
+                <div class="search-suggestion-list" style="display: flex; gap: 8px; margin-top: 6px;">
+                    ${uniqueSuggestions.map(kw => `
+                        <button type="button" class="search-suggestion-chip" data-search-keyword="${escapeHtml(kw)}" style="padding: 4px 8px; border-radius: 12px; border: 1px solid #007bff; background: none; color: #007bff; cursor: pointer;">
+                            #${escapeHtml(kw)}
+                        </button>
+                    `).join("")}
+                </div>
+            `;
+        });
 
-      <div
-        style="
-          text-align: center;
-          color: #666;
-          font-size: 13px;
-        "
-      >
-        <span id="switch-text">
-          아직 계정이 없으신가요?
-        </span>
+        // [변경] 클릭 시 compare.html로 바로 이동하지 않고, 같은 페이지의 검색 결과 목록으로 표시한다.
+        document.querySelectorAll("[data-search-keyword]").forEach(button => {
+            button.addEventListener("click", () => {
+                const keyword = button.dataset.searchKeyword;
+                if (!keyword) return;
 
-        <a
-          id="link-switch-auth"
-          href="#"
-          style="
-            margin-left: 4px;
-            color: #2563eb;
-            font-weight: 700;
-            text-decoration: none;
-          "
-        >
-          회원가입
-        </a>
-      </div>
+                const handled = runSearchOnPage(keyword);
+                if (!handled) {
+                    // 검색 폼이 없는 페이지(예: 홈)라면 검색 페이지로 이동해 결과를 보여준다.
+                    window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
+                }
+            });
+        });
 
-    </form>
-  </div>
-</div>
-
-<script src="./app.js"></script>
-
-</body>
-</html>
+    } catch (error) {
+        console.error("추천 키워드 로드 실패:", error);
+        targets.forEach(target => {
+            target.textContent = "추천 키워드 로딩 실패 (데이터 경로를 확인하세요)";
+        });
+    }
+}
