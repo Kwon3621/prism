@@ -7,7 +7,6 @@ window.__PRISM_INLINE_SEARCH__ = true;
 
 document.addEventListener("DOMContentLoaded", () => {
     initSearchBehavior();
-    renderSearchSuggestions(); // 페이지 로드 시 기본 추천 키워드 로드
 
     // 다른 페이지(홈 등)에서 ?q=검색어 로 넘어온 경우 자동으로 검색을 실행한다.
     const queryFromUrl = new URLSearchParams(window.location.search).get("q");
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         runSearchOnPage(queryFromUrl);
     }
 });
-
 // 0. 공용 유틸
 
 function escapeHtml(value) {
