@@ -104,6 +104,10 @@ function initMenu() {
 }
 
 function initSearch() {
+  // search.js가 로드된 페이지(검색 결과 페이지)는 자체적으로
+  // 검색 폼을 처리하므로, 여기서 중복으로 리스너를 걸지 않는다.
+  if (window.__PRISM_INLINE_SEARCH__) return;
+
   document.querySelectorAll('[data-search-form]').forEach(form => {
     const input = form.querySelector('input');
     const button = form.querySelector('button[type="submit"]');
@@ -117,7 +121,9 @@ function initSearch() {
       if (!keyword) return;
       button.disabled = true;
       button.textContent = '검색 중';
-      window.location.href = `compare.html?q=${encodeURIComponent(keyword)}`;
+      // 홈 등 다른 페이지의 검색창은 이제 프레임 비교로 바로 가지 않고
+      // 검색 결과 목록 페이지로 이동한다.
+      window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
     });
   });
 }

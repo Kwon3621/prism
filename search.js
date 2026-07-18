@@ -2,31 +2,64 @@
  * Prism v2 - 검색 처리 및 뉴스/키워드 연동 스크립트 (search.js)
  */
 
+const SEARCH_PAGE_SIZE = 6;
+window.__PRISM_INLINE_SEARCH__ = true;
+
 document.addEventListener("DOMContentLoaded", () => {
     initSearchBehavior();
     renderSearchSuggestions(); // 페이지 로드 시 기본 추천 키워드 로드
+
+    // 다른 페이지(홈 등)에서 ?q=검색어 로 넘어온 경우 자동으로 검색을 실행한다.
+    const queryFromUrl = new URLSearchParams(window.location.search).get("q");
+    if (queryFromUrl) {
+        runSearchOnPage(queryFromUrl);
+    }
 });
+
+// 0. 공용 유틸
+
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+function formatDate(value) {
+    if (!value) return "";
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) return String(value);
+
+    return parsed.toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    });
+}
+
+function goToCompare(query) {
+    window.location.href = `compare.html?q=${encodeURIComponent(query)}`;
+}
 
 // 1. 검색창 이벤트 처리 (즉시 이동 대신 결과 노출)
 function initSearchBehavior() {
     const searchForms = document.querySelectorAll('[data-search-form]');
-    
+
     searchForms.forEach(form => {
         const input = form.querySelector('input');
         const button = form.querySelector('button[type="submit"]');
-        // 결과 뉴스나 키워드를 보여줄 컨테이너 (HTML에 <div id="search-results"></div> 구조 필요)
         const resultsContainer = document.getElementById('search-results') || createResultsContainer(form);
 
         if (!input || !button) return;
 
-        // 입력값 감지 후 버튼 활성화/비활성화
         const checkInput = () => {
             button.disabled = input.value.trim().length < 1;
         };
         input.addEventListener('input', checkInput);
         checkInput();
 
-        // 검색 Submit 이벤트
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
             const query = input.value.trim();
@@ -35,12 +68,20 @@ function initSearchBehavior() {
             button.disabled = true;
             button.textContent = '검색 중...';
 
-            // [핵심 변경] 바로 페이지 이동을 하지 않고, 관련 뉴스 및 키워드를 검색해 띄웁니다.
             await fetchAndRenderSearchResults(query, resultsContainer);
 
             button.disabled = false;
             button.textContent = '검색';
         });
+
+        // 추천 키워드 칩 등 다른 곳에서도 같은 폼으로 검색을 실행할 수 있도록 저장해둔다.
+        form.dataset.searchBound = "true";
+        form.__prismRunSearch = async (query) => {
+            input.value = query;
+            checkInput();
+            await fetchAndRenderSearchResults(query, resultsContainer);
+            resultsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
     });
 }
 
@@ -53,26 +94,33 @@ function createResultsContainer(form) {
     return container;
 }
 
-// 2. 검색어에 맞는 관련 뉴스 및 연관 키워드 매칭 및 렌더링
+// 페이지에 있는 검색 폼을 찾아 검색을 실행한다. (추천 키워드 칩에서 사용)
+function runSearchOnPage(query) {
+    const form = document.querySelector('[data-search-form][data-search-bound="true"]');
+    if (form && typeof form.__prismRunSearch === "function") {
+        form.__prismRunSearch(query);
+        return true;
+    }
+    return false;
+}
+
+// 2. 검색어에 맞는 관련 뉴스 및 연관 키워드 매칭
 async function fetchAndRenderSearchResults(query, container) {
     try {
-        const response = await fetch("./data/issue.json"); // 실제 서버 API가 있다면 해당 주소로 변경
+        const response = await fetch("./data/issue.json");
         if (!response.ok) throw new Error("데이터를 가져올 수 없습니다.");
-        
+
         const data = await response.json();
         const issues = data.issues || [];
 
-        // 검색어(query)가 포함된 뉴스 기사(articles) 필터링
-        let matchedArticles = [];
-        let matchedKeywords = new Set();
+        const matchedArticles = [];
+        const matchedKeywords = new Set();
 
         issues.forEach(issue => {
-            // 이슈 키워드 체크
             if (issue.keywords && issue.keywords.some(k => k.includes(query))) {
                 issue.keywords.forEach(k => matchedKeywords.add(k));
             }
 
-            // 기사 제목, 본문, 키워드 체크
             (issue.articles || []).forEach(art => {
                 const inTitle = art.title && art.title.includes(query);
                 const inContent = art.content && art.content.includes(query);
@@ -85,43 +133,10 @@ async function fetchAndRenderSearchResults(query, container) {
             });
         });
 
-        // 렌더링 HTML 생성
-        if (matchedArticles.length === 0 && matchedKeywords.size === 0) {
-            container.innerHTML = `<p class="no-result">"${query}"에 대한 검색 결과가 없습니다.</p>`;
-            return;
-        }
-
-        const keywordList = [...matchedKeywords].slice(0, 5); // 상위 5개만
-
-        container.innerHTML = `
-            <div class="search-results-wrapper" style="background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd;">
-                ${keywordList.length > 0 ? `
-                    <div class="related-keywords" style="margin-bottom: 15px;">
-                        <strong>연관 키워드:</strong>
-                        ${keywordList.map(k => `<button type="button" class="chip" data-go-compare="${k}" style="margin: 2px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background:#fff; cursor:pointer;">#${k}</button>`).join('')}
-                    </div>
-                ` : ''}
-                
-                <div class="related-articles">
-                    <strong>관련 뉴스 기사 (선택 시 프레임 비교 진행):</strong>
-                    <ul style="list-style: none; padding-left: 0; margin-top: 8px;">
-                        ${matchedArticles.map(art => `
-                            <li style="margin-bottom: 10px; padding: 10px; background:#fff; border: 1px solid #eee; border-radius: 4px; cursor: pointer; hover: background: #f0f0f0;" data-go-compare="${art.title}">
-                                <span style="font-weight: bold; display: block;">${art.title}</span>
-                                <small style="color: #666;">${art.press || '언론사'} | ${art.date || ''}</small>
-                            </li>
-                        `).join('')}
-                    </ul>
-                </div>
-            </div>
-        `;
-
-        // 리스트 아이템 클릭 시 비교 페이지(compare.html)로 라우팅 이벤트 바인딩
-        container.querySelectorAll('[data-go-compare]').forEach(element => {
-            element.addEventListener('click', () => {
-                const targetValue = element.dataset.goCompare;
-                window.location.href = `compare.html?q=${encodeURIComponent(targetValue)}`;
-            });
+        renderSearchResultsUI(container, {
+            query,
+            keywords: [...matchedKeywords],
+            articles: matchedArticles,
         });
 
     } catch (error) {
@@ -130,19 +145,147 @@ async function fetchAndRenderSearchResults(query, container) {
     }
 }
 
-// 3. 메인화면 초기 "추천 키워드" 렌더링 함수 (기존 코드 유지 및 예외처리 강화)
+// 2-1. 카드형/목록형 + 6개씩 더보기 렌더링
+function renderSearchResultsUI(container, { query, keywords, articles }) {
+    if (articles.length === 0 && keywords.length === 0) {
+        container.innerHTML = `<p class="no-result">"${escapeHtml(query)}"에 대한 검색 결과가 없습니다.</p>`;
+        return;
+    }
+
+    const state = {
+        view: "card",
+        visibleCount: Math.min(SEARCH_PAGE_SIZE, articles.length),
+    };
+
+    const draw = () => {
+        const visibleArticles = articles.slice(0, state.visibleCount);
+        const hasMore = state.visibleCount < articles.length;
+        const nextBatchSize = Math.min(
+            SEARCH_PAGE_SIZE,
+            articles.length - state.visibleCount
+        );
+
+        container.innerHTML = `
+            <div class="search-results-wrapper">
+                ${keywords.length > 0 ? `
+                    <div class="related-keywords">
+                        <strong>연관 키워드</strong>
+                        <div class="chip-row">
+                            ${keywords.slice(0, 6).map(k => `
+                                <button type="button" class="chip" data-run-search="${escapeHtml(k)}">#${escapeHtml(k)}</button>
+                            `).join("")}
+                        </div>
+                    </div>
+                ` : ""}
+
+                <div class="search-results-toolbar">
+                    <span class="search-results-count">관련 기사 ${articles.length}건</span>
+                    <div class="view-toggle" role="group" aria-label="보기 방식 선택">
+                        <button type="button" class="view-toggle-btn ${state.view === "card" ? "active" : ""}" data-view="card">카드형</button>
+                        <button type="button" class="view-toggle-btn ${state.view === "list" ? "active" : ""}" data-view="list">목록형</button>
+                    </div>
+                </div>
+
+                <div class="search-results-grid ${state.view === "list" ? "is-list" : "is-card"}">
+                    ${visibleArticles.map(renderArticleItem).join("")}
+                </div>
+
+                ${articles.length > SEARCH_PAGE_SIZE ? `
+                    <div class="search-results-more">
+                        <button type="button" class="btn btn-secondary" data-toggle-more>
+                            ${hasMore ? `더보기 (+${nextBatchSize})` : "줄이기"}
+                        </button>
+                    </div>
+                ` : ""}
+            </div>
+        `;
+
+        container.querySelectorAll("[data-view]").forEach(btn => {
+            btn.addEventListener("click", () => {
+                state.view = btn.dataset.view;
+                draw();
+            });
+        });
+
+        container.querySelectorAll("[data-go-compare]").forEach(el => {
+            el.addEventListener("click", () => {
+                goToCompare(el.dataset.goCompare);
+            });
+            el.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    goToCompare(el.dataset.goCompare);
+                }
+            });
+        });
+
+        container.querySelectorAll("[data-run-search]").forEach(el => {
+            el.addEventListener("click", () => {
+                runSearchOnPage(el.dataset.runSearch);
+            });
+        });
+
+        const moreButton = container.querySelector("[data-toggle-more]");
+        if (moreButton) {
+            moreButton.addEventListener("click", () => {
+                if (hasMore) {
+                    state.visibleCount = Math.min(
+                        state.visibleCount + SEARCH_PAGE_SIZE,
+                        articles.length
+                    );
+                } else {
+                    state.visibleCount = SEARCH_PAGE_SIZE;
+                    container.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                draw();
+            });
+        }
+    };
+
+    draw();
+}
+
+function renderArticleItem(article) {
+    const title = escapeHtml(article.title || "");
+    const publisher = escapeHtml(article.press || article.publisher || "언론사");
+    const date = escapeHtml(formatDate(article.date || article.published_at || ""));
+    const rawSummary = article.content || article.description || "";
+    const summary = escapeHtml(rawSummary.slice(0, 90));
+    const isTruncated = rawSummary.length > 90;
+
+    return `
+        <article
+            class="search-result-card"
+            data-go-compare="${title}"
+            tabindex="0"
+            role="button"
+            aria-label="${title} 프레임 비교 보기"
+        >
+            <div class="search-result-card-body">
+                <span class="badge blue">${publisher}</span>
+                <h3>${title}</h3>
+                <p>${summary}${isTruncated ? "…" : ""}</p>
+            </div>
+            <div class="search-result-card-footer">
+                <small>${date}</small>
+                <span class="link-arrow" aria-hidden="true">프레임 비교 →</span>
+            </div>
+        </article>
+    `;
+}
+
+// 3. 메인화면 초기 "추천 키워드" 렌더링
 async function renderSearchSuggestions() {
     const targets = document.querySelectorAll("[data-search-help]");
     if (!targets.length) return;
-  
+
     try {
-        // 상대경로 주의: 메인 index.html 기준 data/issue.json 위치 확인 필요
         const response = await fetch("./data/issue.json");
         if (!response.ok) throw new Error("issue.json 데이터를 찾을 수 없습니다.");
-  
+
         const data = await response.json();
         const suggestions = [];
-        
+
         const issues = data.issues || [];
         issues.forEach(issue => {
             if (issue.keywords && issue.keywords.length > 0) {
@@ -152,35 +295,41 @@ async function renderSearchSuggestions() {
                 if (art.keywords) suggestions.push(...art.keywords);
             });
         });
-  
+
         const uniqueSuggestions = [...new Set(suggestions)].slice(0, 4);
-  
+
         targets.forEach(target => {
             if (uniqueSuggestions.length === 0) {
                 target.textContent = "추천 키워드를 준비 중입니다.";
                 return;
             }
-  
+
             target.innerHTML = `
                 <span class="search-suggestion-label">추천 키워드</span>
                 <div class="search-suggestion-list" style="display: flex; gap: 8px; margin-top: 6px;">
                     ${uniqueSuggestions.map(kw => `
-                        <button type="button" class="search-suggestion-chip" data-search-keyword="${kw}" style="padding: 4px 8px; border-radius: 12px; border: 1px solid #007bff; background: none; color: #007bff; cursor: pointer;">
-                            #${kw}
+                        <button type="button" class="search-suggestion-chip" data-search-keyword="${escapeHtml(kw)}" style="padding: 4px 8px; border-radius: 12px; border: 1px solid #007bff; background: none; color: #007bff; cursor: pointer;">
+                            #${escapeHtml(kw)}
                         </button>
                     `).join("")}
                 </div>
             `;
         });
-  
+
+        // [변경] 클릭 시 compare.html로 바로 이동하지 않고, 같은 페이지의 검색 결과 목록으로 표시한다.
         document.querySelectorAll("[data-search-keyword]").forEach(button => {
             button.addEventListener("click", () => {
                 const keyword = button.dataset.searchKeyword;
                 if (!keyword) return;
-                window.location.href = `compare.html?q=${encodeURIComponent(keyword)}`;
+
+                const handled = runSearchOnPage(keyword);
+                if (!handled) {
+                    // 검색 폼이 없는 페이지(예: 홈)라면 검색 페이지로 이동해 결과를 보여준다.
+                    window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
+                }
             });
         });
-  
+
     } catch (error) {
         console.error("추천 키워드 로드 실패:", error);
         targets.forEach(target => {
