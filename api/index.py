@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -26,6 +27,9 @@ def debug_vector_store():
     return jsonify(
         {
             "project_root": str(PROJECT_ROOT),
+            "upstage_api_key_configured": bool(
+                os.getenv("UPSTAGE_API_KEY")
+            ),
             "records_exists": records_path.exists(),
             "records_size": (
                 records_path.stat().st_size
