@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 
@@ -19,31 +18,6 @@ from search_engine import search_with_context  # noqa: E402
 app = Flask(__name__)
 
 
-@app.get("/api/debug/vector-store")
-def debug_vector_store():
-    records_path = PROJECT_ROOT / "data" / "vector_store" / "records.json"
-    embeddings_path = PROJECT_ROOT / "data" / "vector_store" / "embeddings.npy"
-
-    return jsonify(
-        {
-            "project_root": str(PROJECT_ROOT),
-            "upstage_api_key_configured": bool(
-                os.getenv("UPSTAGE_API_KEY")
-            ),
-            "records_exists": records_path.exists(),
-            "records_size": (
-                records_path.stat().st_size
-                if records_path.exists()
-                else 0
-            ),
-            "embeddings_exists": embeddings_path.exists(),
-            "embeddings_size": (
-                embeddings_path.stat().st_size
-                if embeddings_path.exists()
-                else 0
-            ),
-        }
-    )
 
 @app.get("/api/health")
 def health_api():
