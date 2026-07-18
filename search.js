@@ -4,7 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initSearchBehavior();
-    renderSearchSuggestions(); // 페이지 로드 시 기본 추천 키워드 로드
 });
 
 // 1. 검색창 이벤트 처리 (즉시 이동 대신 결과 노출)
