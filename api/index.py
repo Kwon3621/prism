@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import sys
 from pathlib import Path
@@ -18,7 +18,7 @@ from search_engine import search_with_context  # noqa: E402
 app = Flask(__name__)
 
 
-@app.get("/api/health")
+@app.get("/")
 def health_api():
     return jsonify(
         {
@@ -28,7 +28,7 @@ def health_api():
     )
 
 
-@app.get("/api/search")
+@app.get("/search")
 def search_api():
     query = str(request.args.get("q") or "").strip()
 
