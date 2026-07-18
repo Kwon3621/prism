@@ -4,4 +4,3 @@ __pycache__/
 *.pyc
 scripts/test_solar.py
 .vscode/
-data/vector_db/
