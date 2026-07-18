@@ -18,7 +18,7 @@ from search_engine import search_with_context  # noqa: E402
 app = Flask(__name__)
 
 
-@app.get("/")
+@app.get("/api/health")
 def health_api():
     return jsonify(
         {
@@ -28,7 +28,7 @@ def health_api():
     )
 
 
-@app.get("/search")
+@app.get("/api/search")
 def search_api():
     query = str(request.args.get("q") or "").strip()
 
