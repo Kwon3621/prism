@@ -4,8 +4,11 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+from generate_news import migrate_existing_article
 
 from embedding import build_article_text, embed_articles
 from vector_store import (
@@ -30,7 +33,7 @@ REQUIRED_FIELDS = (
 
 
 def load_articles(source_path: Path) -> list[dict[str, Any]]:
-    """JSON 파일에서 기사 목록을 읽는다."""
+    """JSON 파일에서 기사를 읽고 현재 Article DB 스키마로 변환한다."""
     if not source_path.exists():
         raise FileNotFoundError(
             f"Article DB 파일을 찾을 수 없습니다: {source_path}"
@@ -40,12 +43,23 @@ def load_articles(source_path: Path) -> list[dict[str, Any]]:
         data = json.load(file)
 
     if not isinstance(data, list):
-        raise ValueError("Article DB JSON의 최상위 구조는 배열이어야 합니다.")
+        raise ValueError(
+            "Article DB JSON의 최상위 구조는 배열이어야 합니다."
+        )
+
+    current_time = datetime.now(
+        timezone.utc
+    ).isoformat()
 
     articles: list[dict[str, Any]] = []
 
     for index, item in enumerate(data, start=1):
-        if not isinstance(item, dict):
+        migrated_item = migrate_existing_article(
+            item,
+            current_time,
+        )
+
+        if not isinstance(migrated_item, dict):
             raise ValueError(
                 f"{index}번째 기사 데이터가 객체 형식이 아닙니다."
             )
@@ -53,7 +67,7 @@ def load_articles(source_path: Path) -> list[dict[str, Any]]:
         missing_fields = [
             field
             for field in REQUIRED_FIELDS
-            if field not in item
+            if field not in migrated_item
         ]
 
         if missing_fields:
@@ -62,14 +76,29 @@ def load_articles(source_path: Path) -> list[dict[str, Any]]:
                 f"{', '.join(missing_fields)}"
             )
 
-        article_id = str(item.get("article_id") or "").strip()
+        required_nonempty_fields = (
+            "article_id",
+            "publisher_id",
+            "publisher",
+            "title",
+            "link",
+        )
 
-        if not article_id:
+        empty_fields = [
+            field
+            for field in required_nonempty_fields
+            if not str(
+                migrated_item.get(field) or ""
+            ).strip()
+        ]
+
+        if empty_fields:
             raise ValueError(
-                f"{index}번째 기사의 article_id가 비어 있습니다."
+                f"{index}번째 기사의 필수 값이 비어 있습니다: "
+                f"{', '.join(empty_fields)}"
             )
 
-        articles.append(item)
+        articles.append(migrated_item)
 
     return articles
 
