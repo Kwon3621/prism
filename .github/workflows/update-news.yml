@@ -31,6 +31,7 @@ jobs:
           python scripts/generate_news.py
           python scripts/cluster_news.py
           python scripts/compare_cluster.py
+          python scripts/solar_compare.py
 
       - name: 변경된 뉴스 저장
         run: |
