@@ -7,7 +7,7 @@
     },
     {
       "source": "/api/search",
-      "destination": "/api/index/search"
+      "destination": "/api/index"
     }
   ]
 }
