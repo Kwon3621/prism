@@ -6,7 +6,7 @@ from pathlib import Path
 from flask import Flask, jsonify, request
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = PROJECT_ROOT / "scripts"
 
 if str(SCRIPTS_DIR) not in sys.path:
@@ -78,3 +78,4 @@ if __name__ == "__main__":
         port=8000,
         debug=True,
     )
+
