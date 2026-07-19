@@ -8,6 +8,18 @@
     {
       "source": "/api/search",
       "destination": "/api/index"
+    },
+    {
+      "source": "/api/issue",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/api/issue-candidates",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/api/compare",
+      "destination": "/api/index"
     }
   ]
 }
