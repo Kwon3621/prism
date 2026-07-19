@@ -506,7 +506,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
   let tableHtml = `
     <thead>
       <tr style="background: var(--bg-soft); border-bottom: 2px solid var(--primary);">
-        <th style="padding: 16px 20px; font-weight: 800; color: var(--text); width: 180px; border-right: 1px solid var(--border);">비교 항목</th>
+        <th style="padding: 16px 20px; font-weight: 800; color: var(--text); width: 190px; word-break: keep-all; border-right: 1px solid var(--border);">비교 항목</th>
         ${filtered.map(art => `
           <th style="padding: 16px 20px; font-weight: 800; color: var(--primary); font-size: 17px; border-right: 1px solid var(--border);">
             ${art.publisher}
@@ -520,7 +520,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
   // 2. 항목: 핵심 관점 행 생성
   tableHtml += `
     <tr style="border-bottom: 1px solid var(--border);">
-      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--keyword); border-right: 1px solid var(--border);">🎯 핵심 관점</td>
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--keyword); word-break: keep-all; border-right: 1px solid var(--border);">🎯 핵심 관점</td>
       ${filtered.map(art => `
         <td style="padding: 16px 20px; font-size: 14.5px; font-weight: 600; line-height: 1.5; border-right: 1px solid var(--border);">
           ${art.focus || '객관적 사실 전달 중심.'}
@@ -532,7 +532,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
   // 3. 항목: 강조된 원인/배경 행 생성
   tableHtml += `
     <tr style="border-bottom: 1px solid var(--border);">
-      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--context); border-right: 1px solid var(--border);">🧩 강조된 원인/배경</td>
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--context); word-break: keep-all; border-right: 1px solid var(--border);">🧩 강조된 원인/배경</td>
       ${filtered.map(art => `
         <td style="padding: 16px 20px; font-size: 14px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border);">
           ${art.expression_summary || '일반적인 사실 관계 전달.'}
@@ -544,7 +544,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
   // 4. 항목: 강조한 영향/대상 행 생성
   tableHtml += `
     <tr style="border-bottom: 1px solid var(--border);">
-      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--person); border-right: 1px solid var(--border);">👥 강조한 영향/대상</td>
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--person); word-break: keep-all; border-right: 1px solid var(--border);">👥 강조한 영향/대상</td>
       ${filtered.map(art => {
         const hasTags = (art.people || []).length > 0 || (art.organizations || []).length > 0;
         return `
@@ -563,7 +563,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
   // 5. 항목: 보도 태도/근거 행 생성
   tableHtml += `
     <tr style="border-bottom: 1px solid var(--border);">
-      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--additional); border-right: 1px solid var(--border);">⚖️ 보도 태도/근거</td>
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--additional); word-break: keep-all; border-right: 1px solid var(--border);">⚖️ 보도 태도/근거</td>
       ${filtered.map(art => `
         <td style="padding: 16px 20px; font-size: 13.5px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border);">
           ${art.evidence_limit ? `[한계] ${art.evidence_limit}` : '기사 텍스트 본문 인용구 및 정량 데이터 채택.'}
@@ -575,7 +575,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
   // 6. 항목: 뉴스 원문 참조 링크 행 생성
   tableHtml += `
     <tr>
-      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--common); border-right: 1px solid var(--border);">🔗 뉴스 원문 참조</td>
+      <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--common); word-break: keep-all; border-right: 1px solid var(--border);">🔗 뉴스 원문 참조</td>
       ${filtered.map(art => `
         <td style="padding: 16px 20px; border-right: 1px solid var(--border);">
           <a href="${art.link || '#'}" target="_blank" rel="noopener noreferrer" style="font-size: 13.5px; color: var(--primary); font-weight: 800; text-decoration: underline;">

@@ -1095,3 +1095,16 @@ img { max-width: 100%; display: block; }
   .search-results-grid.is-card { grid-template-columns: 1fr; }
   .search-results-grid.is-list .search-result-card { flex-direction: column; align-items: flex-start; }
 }
+.search-loading-spinner {
+  margin: 0 auto;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e2e8f0;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: prism-spin 0.8s linear infinite;
+}
+
+@keyframes prism-spin {
+  to { transform: rotate(360deg); }
+}
