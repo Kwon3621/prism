@@ -33,14 +33,15 @@ DEFAULT_MAX_POOL_SIZE = 40
 
 MAXIMUM_EVENT_GROUP_COUNT = 5
 
-# build_ranked_event_candidates() 전용 — 사건 묶음 자체를 채점할 때 쓰는 값.
-# "언론사 수 + 기사 수 + 최신성" 가중 합산으로 사건의 비중을 매긴다.
-GROUP_RECENCY_WINDOW_HOURS = 24
-GROUP_PUBLISHER_COUNT_CAP = DEFAULT_PUBLISHER_LIMIT
-GROUP_ARTICLE_COUNT_CAP = 10
-GROUP_PUBLISHER_WEIGHT = 0.5
-GROUP_ARTICLE_WEIGHT = 0.3
-GROUP_RECENCY_WEIGHT = 0.2
+# extract_query_keywords() 전용 — "정치"/"경제"/"사회"처럼 넓은 검색어를
+# 구체적인 키워드로 좁히는 단계라 필터링 없이 랭킹 상위만 넓게 본다.
+# (관련도 컷을 걸면 "사회"처럼 후보 자체가 통째로 걸러져 실패하는
+# 경우가 있었다.)
+KEYWORD_EXTRACTION_POOL_SIZE = 60
+MAXIMUM_KEYWORD_COUNT = 8
+# 한 언론사만 다룬 키워드는 "여러 언론사가 다루는 구체적 사건"이 아니므로
+# 후보에서 제외한다 (build_issue_candidates의 2곳 이상 기준과 동일한 원칙).
+KEYWORD_MIN_PUBLISHER_COUNT = 2
 
 
 def select_representative_articles(
@@ -282,7 +283,67 @@ def validate_event_groups(
             }
         )
 
-    return normalized_groups
+    return merge_overlapping_groups(normalized_groups)
+
+
+GROUP_OVERLAP_MERGE_THRESHOLD = 0.5
+
+
+def merge_overlapping_groups(
+    groups: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    같은 사건을 가리키는 event group이 여러 개로 쪼개진 경우를 하나로 합친다.
+
+    Solar가 "실제로 하나의 사건만 존재하면 그룹 1개만 반환하세요"라는
+    지시를 어기고, 같은 핵심 기사에 매번 다른 언론사 기사 하나씩만 짝지어
+    거의 동일한 그룹을 여러 개 반환하는 경우가 있다. 두 그룹의 article_ids가
+    (더 작은 쪽 기준으로) GROUP_OVERLAP_MERGE_THRESHOLD 이상 겹치면 같은
+    사건으로 보고 기사 목록을 합친다. 기준을 "더 작은 쪽 대비 비율"로 잡은
+    건, 기사 하나가 여러 사건에 걸쳐 있어서 그룹 사이에 기사가 조금
+    겹치는 정상적인 경우까지 합쳐버리지 않기 위해서다.
+    """
+    merged_groups: list[dict[str, Any]] = []
+
+    for group in groups:
+        group_id_set = set(group["article_ids"])
+
+        target = None
+
+        for kept in merged_groups:
+            kept_id_set = set(kept["article_ids"])
+
+            smaller_size = min(
+                len(group_id_set),
+                len(kept_id_set),
+            )
+
+            if smaller_size == 0:
+                continue
+
+            overlap_ratio = (
+                len(group_id_set & kept_id_set)
+                / smaller_size
+            )
+
+            if overlap_ratio >= GROUP_OVERLAP_MERGE_THRESHOLD:
+                target = kept
+                break
+
+        if target is None:
+            merged_groups.append(group)
+            continue
+
+        # 순서를 유지하면서 기사 목록만 합친다 (label/summary는 먼저
+        # 나온 그룹 것을 그대로 쓴다).
+        target["article_ids"] = list(
+            dict.fromkeys(
+                target["article_ids"]
+                + group["article_ids"]
+            )
+        )
+
+    return merged_groups
 
 
 def check_candidate_quality(
@@ -461,130 +522,247 @@ def build_issue_candidates(
     }
 
 
-def cap_candidate_pool(
-    ranked_results: list[dict[str, Any]],
-    max_pool_size: int = DEFAULT_MAX_POOL_SIZE,
+
+def build_event_keyword_prompt(
+    query: str,
+    articles: list[dict[str, Any]],
+) -> str:
+    """
+    "정치"/"경제"/"사회"처럼 넓은 검색어로 모은 기사 목록에서, 여러
+    언론사가 공통으로 다루는 구체적인 키워드(인물·사건·정책 등)를 뽑기
+    위한 Solar 프롬프트를 생성한다.
+
+    기사를 article_id(수십 자짜리 해시 문자열)로 인용하게 하면, 후보가
+    60개까지 늘어났을 때 모델이 그 긴 문자열을 베끼다가 서로 다른 두
+    article_id를 뒤섞어 존재하지 않는 값을 만들어내는 경우가 실측
+    확인됐다(예: 두 실제 id의 뒷부분이 짜깁기된 값). 숫자는 긴 해시보다
+    훨씬 안정적으로 재현되므로, article_id 대신 1부터 시작하는 번호로
+    인용하게 하고 코드에서 번호→article_id로 역매핑한다.
+    """
+    articles_text = "\n\n====================\n\n".join(
+        f"""
+번호: {index}
+언론사: {article.get("publisher", "")}
+제목: {article.get("title", "")}
+설명: {article.get("description", "")}
+""".strip()
+        for index, article in enumerate(articles, start=1)
+    )
+
+    return f"""
+당신은 뉴스 기사 비교 서비스 Prism의 키워드 추출 분석기입니다.
+
+검색어 "{query}"로 수집된 기사 목록에서, 여러 언론사가 공통으로 다루는
+구체적인 인물, 사건, 정책, 기관 조치를 키워드로 추출하세요.
+
+[키워드로 추출해야 하는 것]
+
+- 검색하면 하나의 구체적 사건·쟁점으로 좁혀지는 고유명사 또는 짧은
+  구체적 표현 (예: "정청래", "레버리지 ETF 규제", "장동혁 제헌절 불참")
+- 반드시 서로 다른 언론사의 기사 2건 이상에서 반복 등장해야 합니다.
+
+[키워드로 추출하면 안 되는 것]
+
+- "{query}"처럼 여전히 넓은 범주 명사나 일반 명사(예: "국회", "경제
+  정책", "물가", "사회 갈등")
+- 기사 1건에서만 등장하는 지엽적 단어나 세부 수치
+- 단순히 같은 인물·기관이 등장한다는 이유만으로 묶은 키워드. 같은
+  인물이라도 서로 다른 발언·사건·결정을 다루면 별개의 키워드로
+  분리하세요 (예: "정청래" 한 명에 대해서도 "후원금 쇄도"와 "후원회장
+  인선"은 서로 다른 결정이므로 다른 키워드로 분리).
+
+[작성 방법]
+
+1. 후보 기사들을 훑어보고, 같은 키워드가 서로 다른 언론사·기사에서
+   반복 등장하는지 확인하세요.
+2. 키워드마다 그 키워드를 실제로 다루는 기사의 번호(위 기사 목록의
+   "번호")를 모으세요. 목록에 실제로 있는 번호만 사용하고, 번호를
+   만들어내거나 다른 번호와 섞지 마세요.
+3. 서로 다른 언론사 기사가 2건 이상 걸리는 키워드만 포함하세요.
+   해당하는 기사가 2건 미만이면 그 키워드는 아예 포함하지 마세요 —
+   기사 수를 채우려고 그 키워드와 무관하거나 배경으로만 살짝 스친
+   기사를 끼워 넣지 마세요.
+4. 키워드마다 그 키워드에 속한 기사들이 공통으로 다루는 사실만으로
+   1~2문장의 summary를 작성하세요. 이 summary는 재검색 없이 그대로
+   사용자에게 노출됩니다.
+5. 키워드는 최대 {MAXIMUM_KEYWORD_COUNT}개까지, 언급 비중(기사 수·언론사
+   수)이 큰 순서로 정렬하세요.
+6. 내부 판단 과정은 출력하지 말고 최종 JSON만 반환하세요.
+7. Markdown 코드 블록이나 JSON 이외의 문장은 출력하지 마세요.
+
+반드시 아래 JSON 구조로만 응답하세요.
+
+{{
+  "keywords": [
+    {{
+      "keyword": "짧고 구체적인 키워드 또는 사건명",
+      "summary": "이 키워드에 속한 기사들이 공통으로 다루는 사실 요약",
+      "article_indexes": [
+        "이 키워드를 직접 다루는 기사의 번호(정수)"
+      ]
+    }}
+  ]
+}}
+
+검색어: "{query}"
+
+기사 목록:
+
+{articles_text}
+""".strip()
+
+
+def validate_extracted_keywords(
+    result: Any,
+    candidate_pool: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
     """
-    개별 기사의 검색 관련도 점수로 후보를 거르지 않고, Solar 프롬프트
-    길이만 감안해 랭킹 상위 max_pool_size건으로 후보 풀을 잘라낸다.
+    Solar의 키워드 추출 결과를 검증하고 정리한다.
 
-    filter_candidate_pool()과 달리 최고 점수 대비 비율 컷이 없다 —
-    핫토픽 배치는 "이 기사가 검색어와 얼마나 관련 있어 보이는가"가 아니라
-    사건으로 묶은 뒤 "그 사건을 몇 개 언론사·기사가, 얼마나 최근에
-    다뤘는가"로 판단해야 하므로, 관련도가 낮아 보이는 기사도 일단
-    그룹핑 단계까지는 살려둔다.
+    "정치"/"경제"/"사회"처럼 후보 풀이 60개 가까이 되고 서로 무관한
+    기사들로 넓게 뒤섞여 있으면, Solar가 article_id(수십 자짜리 해시)를
+    그대로 베끼다가 서로 다른 두 article_id를 뒤섞어 존재하지 않는
+    값을 만들어내는 경우가 실측 확인됐다. 그래서 프롬프트에서 article_id
+    대신 1부터 시작하는 번호(article_indexes)로 인용하게 했고, 여기서는
+    그 번호를 candidate_pool의 실제 인덱스로 되돌려 article_id를 구한다
+    (범위를 벗어난 번호는 버린다).
+
+    최종 채택 여부(서로 다른 언론사 2곳 이상 등)는 extract_query_keywords()가
+    다시 판단한다 — 이 함수는 형식과 번호 유효성만 정리한다.
     """
-    return ranked_results[:max_pool_size]
-
-
-def parse_published_datetime(published: str) -> datetime | None:
-    """
-    기사 발행 시각 문자열을 UTC datetime으로 변환한다.
-
-    generate_news.py에도 같은 이름의 함수가 있지만, 그 모듈은 최상단에서
-    feedparser를 import한다. Vercel의 api/index.py는 issue_builder를
-    불러오는데, feedparser는 루트 requirements.txt(서버리스 함수용)에는
-    없어서 그쪽 모듈을 import하면 API 전체가 죽는다. 그래서 stdlib만
-    쓰는 이 파싱 로직만 여기 그대로 복사해 둔다.
-    """
-    if not published:
-        return None
-
-    try:
-        parsed = datetime.fromisoformat(
-            published.replace("Z", "+00:00")
+    if not isinstance(result, dict):
+        raise ValueError(
+            "키워드 추출 결과의 최상위 값이 객체가 아닙니다."
         )
 
-        if parsed.tzinfo is None:
-            parsed = parsed.replace(tzinfo=timezone.utc)
+    raw_keywords = result.get("keywords")
 
-        return parsed.astimezone(timezone.utc)
+    if not isinstance(raw_keywords, list):
+        raise ValueError("keywords는 배열이어야 합니다.")
 
-    except ValueError:
-        try:
-            from email.utils import parsedate_to_datetime
+    if not raw_keywords:
+        raise ValueError("추출된 키워드가 없습니다.")
 
-            parsed = parsedate_to_datetime(published)
+    normalized_keywords = []
+    seen_keywords: set[str] = set()
 
-            if parsed.tzinfo is None:
-                parsed = parsed.replace(tzinfo=timezone.utc)
+    for item in raw_keywords[:MAXIMUM_KEYWORD_COUNT]:
+        if not isinstance(item, dict):
+            continue
 
-            return parsed.astimezone(timezone.utc)
+        keyword = clean_string(item.get("keyword"))
 
-        except (TypeError, ValueError):
-            return None
+        if not keyword or keyword in seen_keywords:
+            continue
+
+        summary = clean_string(item.get("summary"))
+
+        raw_indexes = item.get("article_indexes", [])
+
+        if not isinstance(raw_indexes, list):
+            raw_indexes = []
+
+        article_ids = []
+        seen_ids: set[str] = set()
+
+        for raw_index in raw_indexes:
+            try:
+                index = int(raw_index)
+            except (TypeError, ValueError):
+                continue
+
+            position = index - 1
+
+            if position < 0 or position >= len(candidate_pool):
+                continue
+
+            article_id = candidate_pool[position]["article_id"]
+
+            if article_id in seen_ids:
+                continue
+
+            seen_ids.add(article_id)
+            article_ids.append(article_id)
+
+        if len(article_ids) < 2:
+            continue
+
+        seen_keywords.add(keyword)
+        normalized_keywords.append(
+            {
+                "keyword": keyword,
+                "summary": summary,
+                "article_ids": article_ids,
+            }
+        )
+
+    return normalized_keywords
 
 
-def score_event_group(
-    group_articles: list[dict[str, Any]],
-    now: datetime,
-) -> float:
+# 키워드 토큰 대조 필터에서 무시할 범용 단어. 이런 단어만 남으면 어떤
+# 기사와도 "겹친다"고 나와 필터가 무력화되므로 제외한다.
+_KEYWORD_TOKEN_STOPWORDS = {
+    "논란", "발언", "정치", "경제", "사회", "관련", "비판", "주장",
+    "추진", "우려", "대응", "강조", "폐지", "규제", "결정", "요구",
+}
+
+
+def keyword_search_tokens(keyword: str) -> list[str]:
     """
-    사건 묶음 하나를 "언론사 수 + 기사 수 + 최신성" 가중 합산으로 채점한다.
-
-    최신성은 묶음 안에서 가장 오래된 기사의 발행 시각을 기준으로 계산한다.
-    최신 기사가 하나 섞여 있어도 나머지가 다 오래됐다면 지금 한창 다뤄지는
-    사건은 아니라고 보기 때문이다.
+    키워드 문자열에서 대조에 쓸 핵심 토큰만 남긴다. 공백으로만
+    나누는 단순한 방식이지만, LLM 호출 없이 기계적으로 검증할 수 있는
+    최소한의 안전장치로는 충분하다.
     """
-    publisher_count = len(
-        {
-            article.get("publisher_id")
-            for article in group_articles
-        }
-    )
-    article_count = len(group_articles)
-
-    published_at_list = [
-        parse_published_datetime(article.get("published_at"))
-        for article in group_articles
-    ]
-    published_at_list = [
-        value for value in published_at_list if value
+    tokens = [
+        token
+        for token in keyword.split()
+        if len(token) >= 2 and token not in _KEYWORD_TOKEN_STOPWORDS
     ]
 
-    if published_at_list:
-        oldest_age_hours = (
-            now - min(published_at_list)
-        ).total_seconds() / 3600
-    else:
-        oldest_age_hours = GROUP_RECENCY_WINDOW_HOURS
-
-    recency_score = max(
-        0.0,
-        1 - (oldest_age_hours / GROUP_RECENCY_WINDOW_HOURS),
-    )
-    publisher_score = (
-        min(publisher_count, GROUP_PUBLISHER_COUNT_CAP)
-        / GROUP_PUBLISHER_COUNT_CAP
-    )
-    article_score = (
-        min(article_count, GROUP_ARTICLE_COUNT_CAP)
-        / GROUP_ARTICLE_COUNT_CAP
-    )
-
-    return (
-        GROUP_PUBLISHER_WEIGHT * publisher_score
-        + GROUP_ARTICLE_WEIGHT * article_score
-        + GROUP_RECENCY_WEIGHT * recency_score
-    )
+    return tokens or [
+        token for token in keyword.split() if len(token) >= 2
+    ] or keyword.split()
 
 
-def build_ranked_event_candidates(
+def article_matches_keyword_tokens(
+    article: dict[str, Any],
+    tokens: list[str],
+) -> bool:
+    """
+    기사의 title/description에 키워드 토큰이 하나도 안 겹치면
+    이 기사는 그 키워드와 무관하다고 본다 — Solar가 배경 설명이나
+    다른 기사를 착각해서 끼워 넣는 경우를 코드 레벨에서 걸러낸다.
+    """
+    haystack = (
+        f"{article.get('title', '')} {article.get('description', '')}"
+    )
+
+    return any(token in haystack for token in tokens)
+
+
+def extract_query_keywords(
     client: OpenAI,
     query: str,
-    max_candidates: int = DEFAULT_MAX_CANDIDATES,
-    n_publishers: int = DEFAULT_PUBLISHER_LIMIT,
+    max_keywords: int = MAXIMUM_KEYWORD_COUNT,
 ) -> dict[str, Any]:
     """
-    핫토픽 배치(build_featured_issues.py) 전용 이슈 후보 생성 함수.
+    넓은 검색어(예: "정치")로 모은 후보 기사 풀에서, 실제로 여러
+    언론사가 공통으로 다루는 구체적인 키워드(인물·사건 등)를 추출한다.
 
-    build_issue_candidates()는 사용자가 입력한 검색어와의 관련도로 후보를
-    먼저 거른 뒤 그룹핑하지만, 이 함수는 관련도 컷 없이 먼저 Event
-    Grouping을 실행하고, 만들어진 사건 묶음을 언론사 수·기사 수·최신성
-    종합 점수(score_event_group)로 평가해 점수가 높은 순으로 채택한다.
-    "정치"/"경제"/"사회" 같은 넓은 카테고리 검색어는 관련도 점수 자체가
-    사건의 비중을 대변하지 못하기 때문이다.
+    반환된 키워드마다 이미 검증된 article_ids(서로 다른 언론사 2곳
+    이상)와 summary가 함께 붙어 있어서, build_candidate_from_keyword()가
+    이 결과만으로 바로 비교 카드를 만들 수 있다. 키워드로 검색을 다시
+    실행하지 않는 이유는, 그렇게 하면 그 키워드와 무관한 최근 기사들이
+    새 후보 풀에 섞여 들어오고(예: "언더도그 전략"으로 재검색하면
+    레버리지 ETF, 코스피 급락처럼 전혀 무관한 그룹이 같이 나옴), 희귀한
+    키워드는 관련도 컷을 통과하는 기사가 2건 미만이 되어 재검색 자체가
+    실패하기도 하기 때문이다. 이미 이 함수 안에서 한 번 검증한 후보
+    풀을 그대로 재사용하는 게 더 정확하고 빠르다.
+
+    관련도 컷(filter_candidate_pool)을 쓰지 않는다 — 넓은 검색어는
+    관련도 점수 자체가 신호가 되지 못하고("정치" 검색에서 상위 스코어
+    기사와 하위 스코어 기사가 똑같이 유효한 정치 기사일 수 있음), 컷을
+    걸면 "사회"처럼 후보 풀 전체가 걸러져 실패하는 경우가 있었다.
     """
     normalized_query = str(query or "").strip()
 
@@ -593,41 +771,38 @@ def build_ranked_event_candidates(
 
     search_context = search_with_context(normalized_query)
     ranked_results = search_context.get("results", [])
-
-    candidate_pool = cap_candidate_pool(ranked_results)
+    candidate_pool = ranked_results[:KEYWORD_EXTRACTION_POOL_SIZE]
 
     if len(candidate_pool) < 2:
         raise ValueError(
-            "이 검색어로는 비교할 수 있는 기사가 부족합니다."
+            "이 검색어로는 키워드를 추출할 기사가 부족합니다."
         )
 
-    prompt = build_event_grouping_prompt(
+    prompt = build_event_keyword_prompt(
         normalized_query,
         candidate_pool,
     )
 
-    valid_article_ids = {
-        article["article_id"] for article in candidate_pool
+    articles_by_id = {
+        article["article_id"]: article
+        for article in candidate_pool
     }
 
     last_error = None
-    event_groups = None
+    raw_keywords = None
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            print(
-                "[Event Grouping] "
-                f"{attempt}/{MAX_RETRIES}"
-            )
+            print(f"[키워드 추출] {attempt}/{MAX_RETRIES}")
 
             raw_result = request_solar_analysis(
                 client=client,
                 prompt=prompt,
             )
 
-            event_groups = validate_event_groups(
+            raw_keywords = validate_extracted_keywords(
                 raw_result,
-                valid_article_ids,
+                candidate_pool,
             )
 
             break
@@ -636,108 +811,154 @@ def build_ranked_event_candidates(
             last_error = error
 
             print(
-                "[Event Grouping 실패] "
+                "[키워드 추출 실패] "
                 f"{attempt}/{MAX_RETRIES}: {error}"
             )
 
             if attempt < MAX_RETRIES:
                 time.sleep(RETRY_WAIT_SECONDS)
 
-    if event_groups is None:
+    if raw_keywords is None:
         raise RuntimeError(
-            "Event Grouping이 "
+            "키워드 추출이 "
             f"{MAX_RETRIES}회 모두 실패했습니다: {last_error}"
         )
 
-    now = datetime.now(timezone.utc)
-    scored_groups = []
+    grounded_keywords = []
 
-    for group in event_groups:
-        article_id_set = set(group["article_ids"])
-
-        group_articles_ranked = [
-            article
-            for article in candidate_pool
-            if article["article_id"] in article_id_set
+    for item in raw_keywords:
+        matched_articles = [
+            articles_by_id[article_id]
+            for article_id in item["article_ids"]
+            if article_id in articles_by_id
         ]
 
-        representative_articles = select_representative_articles(
-            group_articles_ranked,
-            n_publishers=n_publishers,
-        )
+        # 코드 레벨 안전장치: 키워드 핵심 토큰이 title/description
+        # 어디에도 없는 기사는 Solar가 착각해서 끼워 넣은 것으로 보고
+        # 여기서 제외한다 (LLM 재호출 없이 기계적으로 검증).
+        keyword_tokens = keyword_search_tokens(item["keyword"])
+        grounded_articles = [
+            article
+            for article in matched_articles
+            if article_matches_keyword_tokens(article, keyword_tokens)
+        ]
 
-        # 서로 다른 언론사 2곳 미만이면 애초에 "여러 언론사가 다룬 사건"이
-        # 아니므로 점수를 매길 필요 없이 제외한다.
-        if len(representative_articles) < 2:
+        if not grounded_articles:
             continue
 
-        group_score = score_event_group(
-            group_articles_ranked,
-            now,
+        grounded_keywords.append(
+            {
+                "keyword": item["keyword"],
+                "summary": item["summary"],
+                "article_ids": [
+                    article["article_id"]
+                    for article in grounded_articles
+                ],
+            }
         )
 
-        scored_groups.append(
-            (group_score, group, representative_articles)
+    # "3분기 대출 조임"/"가계대출 엄격 관리"처럼, 같은 사건을 가리키는
+    # 키워드가 이름만 다르게 여러 개 나오는 경우가 있다(Q10에서 이벤트
+    # 그룹에 쓴 것과 같은 현상). merge_overlapping_groups는 article_ids
+    # 겹침 비율만 보고 병합하는 범용 함수라 키워드 딕셔너리에도 그대로
+    # 재사용한다.
+    merged_keywords = merge_overlapping_groups(grounded_keywords)
+
+    scored_keywords = []
+
+    for item in merged_keywords:
+        merged_articles = [
+            articles_by_id[article_id]
+            for article_id in item["article_ids"]
+            if article_id in articles_by_id
+        ]
+
+        publisher_ids = {
+            article.get("publisher_id")
+            for article in merged_articles
+        }
+
+        if len(publisher_ids) < KEYWORD_MIN_PUBLISHER_COUNT:
+            continue
+
+        scored_keywords.append(
+            {
+                "keyword": item["keyword"],
+                "summary": item["summary"],
+                "article_ids": item["article_ids"],
+                "article_count": len(merged_articles),
+                "publisher_count": len(publisher_ids),
+            }
         )
 
-    # 사건 묶음 자체의 비중(언론사 수·기사 수·최신성) 순으로 정렬한다.
-    scored_groups.sort(
-        key=lambda item: item[0],
+    scored_keywords.sort(
+        key=lambda item: (
+            item["publisher_count"],
+            item["article_count"],
+        ),
         reverse=True,
     )
 
-    candidates = []
-    excluded_count = len(event_groups) - len(scored_groups)
-
-    for group_score, group, representative_articles in scored_groups:
-        representative_article_ids = sorted(
-            article["article_id"]
-            for article in representative_articles
-        )
-
-        issue_id = "issue-" + hashlib.sha1(
-            (
-                f"{normalized_query.lower()}|"
-                f"{','.join(representative_article_ids)}"
-            ).encode("utf-8")
-        ).hexdigest()[:16]
-
-        candidate = {
-            "issue_id": issue_id,
-            "issue_title": group["label"],
-            "summary": group["summary"],
-            "query": normalized_query,
-            "expanded_queries": search_context.get(
-                "expanded_queries",
-                [],
-            ),
-            "group_score": round(group_score, 4),
-            "publishers": [
-                {
-                    "publisher_id": article["publisher_id"],
-                    "publisher": article["publisher"],
-                    "articles": [article],
-                }
-                for article in representative_articles
-            ],
-        }
-
-        checked_candidate = check_candidate_quality(candidate)
-
-        if checked_candidate is None:
-            excluded_count += 1
-            continue
-
-        candidates.append(checked_candidate)
-
-    if not candidates:
-        raise ValueError("비교 가능한 이슈를 찾지 못했습니다.")
-
     return {
-        "candidates": candidates[:max_candidates],
-        "excluded_count": excluded_count,
-        "expanded_queries": search_context.get(
-            "expanded_queries",
-            [],
-        ),
+        "query": normalized_query,
+        "keywords": scored_keywords[:max_keywords],
+        "articles_by_id": articles_by_id,
     }
+
+
+def build_candidate_from_keyword(
+    query: str,
+    keyword_item: dict[str, Any],
+    articles_by_id: dict[str, dict[str, Any]],
+    n_publishers: int = DEFAULT_PUBLISHER_LIMIT,
+) -> dict[str, Any] | None:
+    """
+    extract_query_keywords()가 반환한 키워드 하나를 비교 카드(candidate)로
+    바로 조립한다. 새 검색이나 새 Event Grouping 호출 없이, 키워드
+    추출 단계에서 이미 검증된 article_ids만 사용한다.
+    """
+    group_articles = [
+        articles_by_id[article_id]
+        for article_id in keyword_item["article_ids"]
+        if article_id in articles_by_id
+    ]
+
+    representative_articles = select_representative_articles(
+        group_articles,
+        n_publishers=n_publishers,
+    )
+
+    if len(representative_articles) < 2:
+        return None
+
+    representative_article_ids = sorted(
+        article["article_id"]
+        for article in representative_articles
+    )
+
+    issue_id = "issue-" + hashlib.sha1(
+        (
+            f"{query.lower()}|"
+            f"{keyword_item['keyword'].lower()}|"
+            f"{','.join(representative_article_ids)}"
+        ).encode("utf-8")
+    ).hexdigest()[:16]
+
+    candidate = {
+        "issue_id": issue_id,
+        "issue_title": keyword_item["keyword"],
+        "summary": keyword_item.get("summary", ""),
+        "query": query,
+        "keyword": keyword_item["keyword"],
+        "expanded_queries": [],
+        "publishers": [
+            {
+                "publisher_id": article["publisher_id"],
+                "publisher": article["publisher"],
+                "articles": [article],
+            }
+            for article in representative_articles
+        ],
+    }
+
+    return check_candidate_quality(candidate)

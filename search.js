@@ -75,8 +75,20 @@ function initSearchBehavior() {
 function createResultsContainer(form) {
     const container = document.createElement('div');
     container.id = 'search-results';
-    container.style.marginTop = '15px';
-    form.parentNode.insertBefore(container, form.nextSibling);
+
+    // hero 섹션 안에 결과를 넣으면 hero의 고정 padding-bottom(82px)과
+    // 배경 장식(::after 원)까지 함께 늘어나 불필요한 여백이 생긴다.
+    // 그래서 가능하면 hero 섹션 "바깥"에 결과를 붙인다.
+    const parentSection = form.closest('section');
+    if (parentSection && parentSection.parentNode) {
+        container.className = 'container';
+        parentSection.parentNode.insertBefore(container, parentSection.nextSibling);
+    } else {
+        // section 밖에 있는 폼(검색 페이지 등)이면 기존 방식 그대로.
+        container.style.marginTop = '15px';
+        form.parentNode.insertBefore(container, form.nextSibling);
+    }
+
     return container;
 }
 
@@ -115,6 +127,14 @@ async function fetchAndRenderSearchResults(query, container) {
             ? data.candidates
             : [];
 
+        if (data.mode === "keywords" && candidates.length > 1) {
+            renderKeywordSelectionUI(container, {
+                query: data.query || query,
+                candidates,
+            });
+            return;
+        }
+
         const keywords = Array.isArray(data.expanded_queries)
             ? data.expanded_queries.filter(
                 keyword => keyword !== query
@@ -137,6 +157,48 @@ async function fetchAndRenderSearchResults(query, container) {
             </p>
         `;
     }
+}
+
+// 2-0. 넓은 검색어("정치"/"경제"/"정청래" 등)로 여러 사건이 섞여 나올 때,
+// 비교 카드를 바로 보여주지 않고 구체적인 키워드부터 고르게 한다.
+// 후보(candidates)는 이미 API 응답에 다 들어있으므로, 칩을 클릭해도
+// 새로 요청하지 않고 그중 하나만 골라서 보여준다.
+function renderKeywordSelectionUI(container, { query, candidates }) {
+    container.innerHTML = `
+        <div class="search-results-wrapper">
+            <div class="keyword-select-guide">
+                <p>
+                    "${escapeHtml(query)}"에 대한 구체화된 키워드입니다.
+                    원하시는 키워드를 선택해 주세요.
+                    원하시는 키워드가 없다면 검색에서 더 자세히 검색해 주세요.
+                </p>
+                <div class="chip-row">
+                    ${candidates.map((candidate, index) => `
+                        <button
+                            type="button"
+                            class="chip"
+                            data-select-keyword="${index}"
+                        >#${escapeHtml(candidate.keyword || candidate.issue_title || "")}</button>
+                    `).join("")}
+                </div>
+            </div>
+        </div>
+    `;
+
+    container.querySelectorAll("[data-select-keyword]").forEach(el => {
+        el.addEventListener("click", () => {
+            const index = Number(el.dataset.selectKeyword);
+            const selected = candidates[index];
+
+            if (!selected) return;
+
+            renderIssueCandidatesUI(container, {
+                query,
+                keywords: [],
+                candidates: [selected],
+            });
+        });
+    });
 }
 
 // 2-1. 이슈 후보 카드 렌더링 (사건당 최대 5개뿐이므로 페이지네이션/뷰토글 불필요)

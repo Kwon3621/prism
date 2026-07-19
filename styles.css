@@ -51,7 +51,7 @@ img { max-width: 100%; display: block; }
 .header-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 3px; font-size: 25px; font-weight: 500; letter-spacing: -.01em; color: var(--text); }
 .logo img { width: 25px; height: 25px; display: block; margin-top: 5px; }
-.nav { display: flex; align-items: center; gap: 36px; }
+.nav { display: flex; align-items: center; gap: 44px; }
 .nav a { color: var(--text-2); font-weight: 700; font-size: 15px; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--primary); }
 .header-actions { display: flex; align-items: center; gap: 10px; }
@@ -998,6 +998,14 @@ img { max-width: 100%; display: block; }
 .related-keywords { margin-bottom: 20px; }
 .related-keywords strong { display: block; margin-bottom: 10px; font-size: 14px; }
 
+.keyword-select-guide { padding: 24px 0; }
+.keyword-select-guide p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
   padding: 6px 12px;
@@ -1109,4 +1117,9 @@ img { max-width: 100%; display: block; }
 
 @keyframes prism-spin {
   to { transform: rotate(360deg); }
+}
+
+/* hero 섹션 밖으로 나온 검색 결과 영역의 위아래 여백 */
+#search-results.container {
+  padding: 32px 0 60px;
 }
