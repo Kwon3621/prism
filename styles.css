@@ -49,8 +49,8 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(14px);
 }
 .header-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { display: inline-flex; align-items: center; gap: 8px; font-size: 22px; font-weight: 900; letter-spacing: -.02em; color: var(--primary); }
-.logo img { width: 26px; height: 26px; display: block; }
+.logo { display: inline-flex; align-items: center; gap: 10px; font-size: 25px; font-weight: 500; letter-spacing: -.01em; color: var(--text); }
+.logo img { width: 38px; height: 38px; display: block; }
 .nav { display: flex; align-items: center; gap: 36px; }
 .nav a { color: var(--text-2); font-weight: 700; font-size: 15px; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--primary); }
