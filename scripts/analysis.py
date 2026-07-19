@@ -311,29 +311,75 @@ def build_publisher_prompt(
 3. main_focus
 해당 언론사가 기사에서 가장 중요하게 다루는 핵심 관점을 설명합니다.
 
-4. keywords
+4. primary_frame
+기사에서 가장 중심적으로 나타나는 프레임을 다음 구조로 정리합니다.
+
+- category:
+  기사가 사건을 바라보는 중심 문제 유형을 짧은 자유형 문자열로 작성합니다.
+
+- stance:
+  프레임의 대상이나 상황에 대해 기사에서 나타나는 평가 또는 입장 방향을
+  짧은 자유형 문자열로 작성합니다.
+
+- target:
+  해당 프레임이 주로 향하는 인물·집단·기관·정책·제도·현상 등을
+  짧은 자유형 문자열로 작성합니다.
+
+- summary:
+  category, stance, target이 기사에서 어떻게 나타나는지 1~2문장으로
+  구체적으로 설명합니다.
+
+- evidence:
+  해당 프레임을 판단한 근거가 되는 제목 또는 RSS 설명의 실제 표현을
+  배열로 제시합니다.
+
+category, stance, target에는 미리 정해진 선택지가 없습니다.
+다른 기사 및 언론사와 비교할 수 있도록 지나치게 길거나 추상적인 표현은 피하고,
+핵심 의미가 드러나는 간결한 표현을 사용하세요.
+
+summary는 headline_frame이나 main_focus를 그대로 반복하지 말고,
+어떤 대상을 어떤 문제 유형과 입장으로 다루는지가 드러나도록 작성하세요.
+
+primary_frame은 기사에서 확인되는 가장 중심적인 보도 구성을 반드시 정리하세요.
+기사 제목이나 RSS 설명에서 중심 대상, 문제 유형, 강조 방향 중 하나라도
+확인할 수 있다면 category, stance, target, summary를 작성해야 합니다.
+
+stance는 반드시 긍정·부정과 같은 평가만 의미하지 않습니다.
+평가가 뚜렷하지 않은 설명 기사에서는
+"사실 전달", "상황 강조", "피해 조명", "전망 제시"처럼
+기사의 서술 방향을 자유형 문자열로 작성할 수 있습니다.
+
+evidence에는 primary_frame을 판단하는 데 사용한 제목 또는 RSS 설명의
+실제 표현을 최소 1개 이상 제시하세요.
+
+기사 제목과 RSS 설명이 모두 비어 있거나,
+프레임을 판단할 실제 표현이 전혀 없는 경우에만
+category, stance, target, summary를 빈 문자열로 작성하고
+evidence를 빈 배열로 작성하세요.
+
+5. keywords
 기사의 핵심 개념을 3~6개 제시합니다.
 인물명과 기관명은 제외합니다.
 
-5. main_actors
+6. main_actors
 기사에서 주요 행동 주체로 다뤄지는 인물·집단·기관을 제시합니다.
 
-6. quoted_sources
+7. quoted_sources
 기사 설명에서 직접 인용하거나 입장을 전달한 대상이 확인되면 제시합니다.
 
-7. causes
+8. causes
 기사에서 사건의 직접적인 원인으로 강조한 내용을 제시합니다.
 
-8. background
+9. background
 사건을 이해하기 위한 제도적·사회적·경제적 배경으로 다룬 내용을 제시합니다.
 
-9. emphasized_effects
+10. emphasized_effects
 기사에서 중요하게 다룬 결과·영향·위험·변화를 제시합니다.
 
-10. affected_groups
+11. affected_groups
 기사에서 영향을 받는 대상으로 강조한 사람·집단·기관을 제시합니다.
 
-11. tone
+12. tone
 보도 태도를 category와 evidence로 구분합니다.
 
 category는 다음 중 하나만 사용하세요.
@@ -350,7 +396,7 @@ evidence에는 해당 태도를 판단한 실제 제목 또는 RSS 설명 표현
 판단할 근거를 정말 찾을 수 없는 경우에만 category를 "판단 어려움"으로
 쓰고 evidence를 비워두세요.
 
-12. outlook
+13. outlook
 기사에서 향후 전망이 확인되면 direction과 summary로 정리합니다.
 
 direction은 다음 중 하나만 사용하세요.
@@ -360,7 +406,7 @@ direction은 다음 중 하나만 사용하세요.
 - 중립
 - 전망 없음
 
-13. less_covered_context
+14. less_covered_context
 현재 제공된 기사에서 상대적으로 확인하기 어려운 관련 맥락을 제시합니다.
 기사에 없는 사실을 새로 만들어서는 안 됩니다.
 예: "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
@@ -383,6 +429,13 @@ direction은 다음 중 하나만 사용하세요.
     "article_summary": "",
     "headline_frame": "",
     "main_focus": "",
+    "primary_frame": {{
+      "category": "",
+      "stance": "",
+      "target": "",
+      "summary": "",
+      "evidence": []
+    }},
     "keywords": [],
     "main_actors": [],
     "quoted_sources": [],
@@ -432,6 +485,13 @@ def validate_analysis_result(
             "Solar 응답에 analysis 객체가 없습니다."
         )
 
+    primary_frame = analysis.get(
+        "primary_frame"
+    )
+
+    if not isinstance(primary_frame, dict):
+        primary_frame = {}
+
     tone = analysis.get("tone")
 
     if not isinstance(tone, dict):
@@ -466,7 +526,10 @@ def validate_analysis_result(
 
     # "판단 어려움"이 아닌 태도를 붙였다면 근거 없이 통과시키지 않는다 —
     # 근거를 못 찾으면 category 자체를 "판단 어려움"으로 썼어야 한다.
-    if tone_category != "판단 어려움" and not tone_evidence:
+    if (
+        tone_category != "판단 어려움"
+        and not tone_evidence
+    ):
         raise ValueError(
             f"tone.category가 '{tone_category}'인데 "
             "tone.evidence가 비어 있습니다."
@@ -523,6 +586,34 @@ def validate_analysis_result(
                     "main_focus"
                 )
             ),
+            "primary_frame": {
+                "category": clean_string(
+                    primary_frame.get(
+                        "category"
+                    )
+                ),
+                "stance": clean_string(
+                    primary_frame.get(
+                        "stance"
+                    )
+                ),
+                "target": clean_string(
+                    primary_frame.get(
+                        "target"
+                    )
+                ),
+                "summary": clean_string(
+                    primary_frame.get(
+                        "summary"
+                    )
+                ),
+                "evidence": clean_string_list(
+                    primary_frame.get(
+                        "evidence"
+                    ),
+                    max_items=5,
+                ),
+            },
             "keywords": clean_string_list(
                 analysis.get("keywords"),
                 max_items=6,
