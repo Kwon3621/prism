@@ -6,3 +6,6 @@ scripts/test_solar.py
 .vscode/
 data/cache/
 venv/
+
+.idea/
+data/vector_db/
