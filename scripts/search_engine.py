@@ -11,9 +11,11 @@ from typing import Any
 import requests
 from dotenv import load_dotenv
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
 from query_embedding import embed_query
 from ranking import calculate_score
-from vector_store import search_article_embeddings
+from vector_store import get_vector_collection, search_article_embeddings
 
 
 load_dotenv()
@@ -247,15 +249,35 @@ def semantic_search(
             "1 이상이어야 합니다."
         )
 
+    # Vector Store는 한 번만 로드해서 모든 검색어에서 재사용한다.
+    # (검색어마다 새로 로드하면 매번 embeddings.npy/records.json을
+    # 디스크에서 다시 읽어야 해서 느려진다.)
+    collection = get_vector_collection()
+
+    # 검색어별 임베딩 생성은 네트워크 API 호출이라
+    # 순차 실행 시 검색어 개수만큼 시간이 곱해진다.
+    # 병렬로 실행해서 전체 대기 시간을 줄인다.
+    query_embeddings: dict[str, list[float] | None] = {}
+
+    with ThreadPoolExecutor(
+        max_workers=min(len(queries), 5)
+    ) as executor:
+        future_to_query = {
+            executor.submit(embed_query, query): query
+            for query in queries
+        }
+
+        for future in as_completed(future_to_query):
+            query = future_to_query[future]
+            query_embeddings[query] = future.result()
+
     results_by_article_id: dict[
         str,
         dict[str, Any],
     ] = {}
 
     for query in queries:
-        query_embedding = embed_query(
-            query
-        )
+        query_embedding = query_embeddings.get(query)
 
         if not query_embedding:
             print(
@@ -269,6 +291,7 @@ def semantic_search(
                 n_results=(
                     n_results_per_query
                 ),
+                collection=collection,
             )
         )
 
