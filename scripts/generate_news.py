@@ -109,7 +109,7 @@ RSS_FEEDS = [
 # 언론사·카테고리(RSS)별로 수집할 최대 기사 수, 최신 기사 우선 반영,저장소 최대 저장 날짜
 ARTICLE_LIMIT_PER_FEED = 40
 PRIORITY_WINDOW_HOURS = 24
-RETENTION_DAYS = 60
+RETENTION_DAYS = 30
 PUBLISHER_IDS = {
     "조선일보": "chosun",
     "한겨레": "hani",
@@ -638,7 +638,7 @@ def save_articles(news_items):
 
         duplicate_count += 1
 
-    # 60일이 지난 기사 제거
+    # 30일이 지난 기사 제거
     merged_items = []
 
     for item in article_map.values():
@@ -718,7 +718,7 @@ def save_articles(news_items):
         f"{migrated_count}개"
     )
     print(
-        f"60일 초과로 삭제된 기사: "
+        f"30일 초과로 삭제된 기사: "
         f"{removed_old_count}개"
     )
     print(
