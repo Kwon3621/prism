@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -211,7 +212,7 @@ def normalize_articles(
                 "published_at": clean_string(
                     article.get("published_at")
                     or article.get("published")
-                ),
+                ) or "발행 시간 정보 없음",
                 "link": clean_string(
                     article.get("link")
                 ),
@@ -617,6 +618,7 @@ def request_solar_analysis(
         response_format={
             "type": "json_object",
         },
+        temperature=0,
         timeout=REQUEST_TIMEOUT_SECONDS,
     )
 
@@ -1020,6 +1022,14 @@ def build_grouping_prompt(
 언론사 수:
 {publisher_count}
 
+판단 순서 (같은 그룹인지는 아래 4가지를 이 순서대로 확인해서 결정하세요):
+1. 핵심 관점(main_focus)이 표현만 다를 뿐 실질적으로 같은 내용인가?
+2. 강조된 원인·배경에서 지목하는 책임 주체나 원인이 같은 방향인가?
+3. 강조한 영향·대상이 비슷한 대상(예: 특정 인물, 정부·기관, 특정 집단, 시장 등)을 향하는가?
+4. 보도 태도(tone)가 같은 방향(긍정/부정/중립/혼합)인가?
+위 4가지 중 대부분이 일치하면 같은 그룹으로 묶고, 하나라도 실질적으로 다른 방향이면
+다른 그룹으로 구분하세요. 키워드 표면 일치가 아니라 이 4가지 판단을 근거로 삼으세요.
+
 그룹화 원칙:
 - 언론사의 고정된 정치 성향을 분류하지 마세요.
 - 보수, 진보, 좌파, 우파와 같은 고정 성향 라벨을 사용하지 마세요.
@@ -1227,10 +1237,32 @@ def validate_grouping_result(
         - assigned_publishers
     )
 
-    if missing_publishers:
-        raise ValueError(
-            "그룹에서 누락된 언론사가 있습니다: "
-            f"{sorted(missing_publishers)}"
+    # Solar가 드물게 언론사 하나를 그룹 목록에서 누락시키는 경우
+    # (temperature=0에서도 완전히 없어지지 않는 잔여 변동성) 전체 분석을
+    # 실패시키는 대신, 누락된 언론사만 개별 그룹으로 만들어 복구한다.
+    for publisher_id in sorted(missing_publishers):
+        normalized_groups.append(
+            {
+                "group_id": f"group-ungrouped-{publisher_id}",
+                "label": "개별 분류 (그룹화 보류)",
+                "summary": (
+                    f"{expected_publishers[publisher_id]}는 "
+                    "다른 언론사와 뚜렷이 묶이지 않아 "
+                    "그룹화 단계에서 개별로 분류되었습니다."
+                ),
+                "keywords": [],
+                "publisher_ids": [publisher_id],
+                "publishers": [
+                    {
+                        "publisher_id": publisher_id,
+                        "publisher": expected_publishers[
+                            publisher_id
+                        ],
+                    }
+                ],
+                "publisher_count": 1,
+                "group_evidence": [],
+            }
         )
 
     if not normalized_groups:
@@ -1465,6 +1497,7 @@ def analyze_issue_batch(
 
     publisher_analyses = []
     failed_publishers = []
+    valid_publisher_items = []
 
     for index, publisher_item in enumerate(
         publishers,
@@ -1539,36 +1572,59 @@ def analyze_issue_batch(
             )
             continue
 
-        try:
-            result = analyze_publisher(
+        valid_publisher_items.append(
+            {
+                "publisher_id": publisher_id,
+                "publisher": publisher,
+                "articles": articles,
+            }
+        )
+
+    with ThreadPoolExecutor(
+        max_workers=max(
+            len(valid_publisher_items),
+            1,
+        ),
+    ) as executor:
+        future_to_item = {
+            executor.submit(
+                analyze_publisher,
                 client=client,
                 issue_id=issue_id,
                 issue_title=issue_title,
-                publisher_id=publisher_id,
-                publisher=publisher,
-                articles=articles,
+                publisher_id=item["publisher_id"],
+                publisher=item["publisher"],
+                articles=item["articles"],
                 use_cache=use_cache,
-            )
+            ): item
+            for item in valid_publisher_items
+        }
 
-            publisher_analyses.append(
-                result
-            )
+        for future in as_completed(future_to_item):
+            item = future_to_item[future]
 
-        except Exception as error:
-            print(
-                f"[언론사 분석 실패] "
-                f"{publisher}: {error}"
-            )
+            try:
+                result = future.result()
 
-            failed_publishers.append(
-                {
-                    "publisher_id": (
-                        publisher_id
-                    ),
-                    "publisher": publisher,
-                    "error": str(error),
-                }
-            )
+                publisher_analyses.append(
+                    result
+                )
+
+            except Exception as error:
+                print(
+                    f"[언론사 분석 실패] "
+                    f"{item['publisher']}: {error}"
+                )
+
+                failed_publishers.append(
+                    {
+                        "publisher_id": (
+                            item["publisher_id"]
+                        ),
+                        "publisher": item["publisher"],
+                        "error": str(error),
+                    }
+                )
 
     if len(publisher_analyses) < 2:
         raise RuntimeError(

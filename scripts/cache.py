@@ -6,12 +6,21 @@
 
 import hashlib
 import json
+import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 
-CACHE_ROOT = Path("data/cache")
+# Vercel 서버리스 함수는 배포 번들 디렉터리가 읽기 전용이라 data/cache에
+# 쓸 수 없고, /tmp(=tempfile.gettempdir())만 쓰기 가능하다.
+# 로컬 개발 환경에서는 기존처럼 프로젝트 폴더 아래 data/cache를 사용한다.
+if os.environ.get("VERCEL"):
+    CACHE_ROOT = Path(tempfile.gettempdir()) / "prism-cache"
+else:
+    CACHE_ROOT = Path("data/cache")
+
 PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
 COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
 

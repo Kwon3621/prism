@@ -38,9 +38,9 @@
       
       <div style="margin: 30px 0 0; padding: 20px; background: #ffffff; border: 1px solid var(--border); border-radius: 15px; box-shadow: var(--shadow); max-width: 800px;">
         <strong style="font-size: 16px; color: var(--primary); display: block; margin-bottom: 8px;">💡 AI 핵심 쟁점 및 공통 내용 요약</strong>
-        <p id="compare-query-summary" style="font-size: 15px; line-height: 1.7; color: var(--text-2); margin: 0;">
+        <div id="compare-query-summary" style="font-size: 15px; line-height: 1.7; color: var(--text-2);">
           기사 데이터를 바탕으로 핵심 쟁점을 요약하고 있습니다.
-        </p>
+        </div>
       </div>
 
       <div class="toolbar" style="margin-top: 24px;">
@@ -50,38 +50,52 @@
     </div>
   </section>
 
-  <!-- [2단계] 비슷한 프레임 언론사 그룹 시각화 섹션 -->
-  <section class="section soft" style="padding: 60px 0; border-bottom: 1px solid var(--border);">
+  <!-- [0단계, 신규] 이슈 후보(Event Group)가 여러 개일 때 사용자가 선택하는 영역 -->
+  <section class="section soft" id="issue-candidate-section" style="display: none; padding: 60px 0; border-bottom: 1px solid var(--border);">
     <div class="container">
-      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">📊 프레임 맵핑 (언론사 그룹화)</h2>
-      <p class="section-desc" style="margin-bottom: 24px;">Solar LLM이 보도 태도와 논조의 유사도를 분석하여 같은 시선을 가진 미디어끼리 분류했습니다.</p>
-      
-      <div id="frame-group-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-        <!-- JS로 동적 프레임 그룹 분류 상자가 주입됩니다 -->
+      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 어떤 이슈를 비교할까요?</h2>
+      <p class="section-desc" style="margin-bottom: 24px;">검색어와 관련된 서로 다른 사건입니다. 하나를 선택하면 그 이슈만 언론사별로 비교합니다.</p>
+
+      <div id="issue-candidate-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+        <!-- JS로 이슈 후보 카드가 주입됩니다 -->
       </div>
     </div>
   </section>
 
-  <!-- [3단계] 언론사 선택 바 및 5대 항목 정밀 상세 비교 섹션 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조</h2>
-      
-      <!-- 언론사 수동 선택 칩 바UI -->
-      <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
-        <!-- JS로 선택 버튼 바가 자동 생성됩니다 -->
-      </div>
-      <!-- 🌟 요청사항 반영: 최대 4개 선택 안내를 아래 작은 글씨로 배치 -->
-      <small style="display: block; color: var(--muted); margin-bottom: 32px; margin-left: 4px;">※ 분석 비교할 언론사를 선택해 주세요. (최대 4개 매체 동시 대조 가능)</small>
+  <div id="issue-analysis-sections" style="display: none;">
+    <!-- [2단계] 비슷한 프레임 언론사 그룹 시각화 섹션 -->
+    <section class="section soft" style="padding: 60px 0; border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">📊 프레임 맵핑 (언론사 그룹화)</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">Solar LLM이 보도 태도와 논조의 유사도를 분석하여 같은 시선을 가진 미디어끼리 분류했습니다.</p>
 
-      <!-- 🌟 [변경] 카드 그리드를 걷어내고 가로 대조가 가능한 가볍고 깔끔한 테이블 레이아웃 도입 -->
-      <div style="width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); background: #fff;">
-        <table id="detail-compare-table" style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
-          <!-- JS에서 선택된 매체 수에 따라 헤더(Th)와 데이터 행(Td)을 가로로 정밀 매핑합니다 -->
-        </table>
+        <div id="frame-group-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          <!-- JS로 동적 프레임 그룹 분류 상자가 주입됩니다 -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- [3단계] 언론사 선택 바 및 5대 항목 정밀 상세 비교 섹션 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 8px;">🔍 언론사 정밀 대조</h2>
+
+        <!-- 언론사 수동 선택 칩 바UI -->
+        <div id="compare-publisher-chips" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; padding: 16px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--border);">
+          <!-- JS로 선택 버튼 바가 자동 생성됩니다 -->
+        </div>
+        <!-- 🌟 요청사항 반영: 최대 4개 선택 안내를 아래 작은 글씨로 배치 -->
+        <small style="display: block; color: var(--muted); margin-bottom: 32px; margin-left: 4px;">※ 분석 비교할 언론사를 선택해 주세요. (최대 4개 매체 동시 대조 가능)</small>
+
+        <!-- 🌟 [변경] 카드 그리드를 걷어내고 가로 대조가 가능한 가볍고 깔끔한 테이블 레이아웃 도입 -->
+        <div style="width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); background: #fff;">
+          <table id="detail-compare-table" style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
+            <!-- JS에서 선택된 매체 수에 따라 헤더(Th)와 데이터 행(Td)을 가로로 정밀 매핑합니다 -->
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>
 
 <footer class="site-footer">
