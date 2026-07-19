@@ -5,3 +5,4 @@ __pycache__/
 scripts/test_solar.py
 .vscode/
 data/cache/
+venv/

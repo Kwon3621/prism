@@ -239,13 +239,25 @@ class FileVectorCollection:
         }
 
 
+_collection_cache: dict[str, FileVectorCollection] = {}
+
+
 def get_vector_collection(
     *,
     db_path: Path | str = DEFAULT_DB_PATH,
     collection_name: str = DEFAULT_COLLECTION_NAME,
 ) -> FileVectorCollection:
-    """파일 기반 벡터 컬렉션을 반환한다. (collection_name은 호환성을 위해 유지, 미사용)"""
-    return FileVectorCollection(Path(db_path))
+    """파일 기반 벡터 컬렉션을 반환한다. (collection_name은 호환성을 위해 유지, 미사용)
+
+    같은 프로세스 안에서 반복 호출될 때 embeddings.npy/records.json을
+    매번 디스크에서 다시 읽지 않도록 db_path 기준으로 캐싱한다.
+    """
+    cache_key = str(Path(db_path))
+
+    if cache_key not in _collection_cache:
+        _collection_cache[cache_key] = FileVectorCollection(Path(db_path))
+
+    return _collection_cache[cache_key]
 
 
 def build_article_metadata(

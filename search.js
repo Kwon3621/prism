@@ -92,6 +92,12 @@ function runSearchOnPage(query) {
 
 // 2. 검색어를 사건·쟁점 단위 이슈 후보(Event Group)로 묶어서 매칭
 async function fetchAndRenderSearchResults(query, container) {
+    container.innerHTML = `
+    <div class="search-loading" style="text-align:center; padding: 60px 20px; color: var(--muted);">
+        <div class="search-loading-spinner"></div>
+        <p style="margin:12px 0 0; font-weight:600;">분류중입니다...</p>
+    </div>
+    `;
     try {
         const response = await fetch(
             `/api/issue-candidates?q=${encodeURIComponent(query)}`
