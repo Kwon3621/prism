@@ -6,6 +6,30 @@ function isLegacyMode() {
 
 let currentIssue = null;
 const SAVED_ISSUES_KEY = 'prism-saved-issues';
+// 언론사 로고 매핑 (assets/logos 폴더 기준)
+const PUBLISHER_LOGOS = {
+  "조선일보": "chosun.svg",
+  "한겨레": "hani.png",
+  "한국경제": "hankyung.jpg",
+  "동아일보": "donga.png",
+  "매일경제": "mk.png",
+  "SBS": "sbs.png",
+};
+
+// 언론사 이름을 받아 로고 <img> HTML을 반환. 로고가 없거나 로드 실패 시 이니셜 아바타로 대체
+function getPublisherLogoHtml(publisherName, size = 20) {
+  const fileName = PUBLISHER_LOGOS[publisherName] || "";
+  const initial = (publisherName || "?").charAt(0);
+  const colors = ["#2563eb", "#7c3aed", "#ea580c", "#0f766e", "#be185d", "#4338ca"];
+  const colorIndex = (publisherName || "").length % colors.length;
+  const bg = colors[colorIndex];
+
+  const fallbackHtml = `<span class="publisher-logo-fallback" style="display:${fileName ? 'none' : 'inline-flex'}; width:${size}px; height:${size}px; border-radius:50%; background:${bg}; color:#fff; font-size:${Math.floor(size * 0.5)}px; font-weight:800; align-items:center; justify-content:center; margin-right:6px; vertical-align:middle;">${initial}</span>`;
+
+  if (!fileName) return fallbackHtml;
+
+  return `<img src="./assets/logos/${fileName}" alt="${publisherName}" style="width:${size}px; height:${size}px; object-fit:contain; border-radius:4px; vertical-align:middle; margin-right:6px; background:#fff; border:1px solid var(--border);" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />${fallbackHtml}`;
+}
 
 // 배열 요소를 무작위로 섞어주는 유틸리티 함수
 function shuffleArray(array) {
@@ -424,11 +448,11 @@ function renderFrameGroups(articles) {
           논조 분류: ${groupTitle}
         </span>
         <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
-          ${publishersInGroup.map(pub => `
-            <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700; border-radius: 6px;">
-              ${pub}
-            </span>
-          `).join('')}
+        ${publishersInGroup.map(pub => `
+          <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center;">
+            ${getPublisherLogoHtml(pub, 16)}${pub}
+          </span>
+        `).join('')}
         </div>
         <p style="font-size: 13px; color: #64748b; margin-top: 14px; line-height: 1.5; margin-bottom: 0;">
           ※ 이 매체들은 유사한 어휘 패턴과 주안점을 공유하여 같은 프레임 범주로 자동 인식되었습니다.
@@ -454,8 +478,8 @@ function initPublisherSelector(articles, matchedIssue) {
       const border = isChecked ? 'var(--primary)' : 'var(--border)';
 
       return `
-        <button type="button" class="btn" data-pub-chip="${pub}" style="min-height: 38px; padding: 0 14px; background: ${bg}; color: ${color}; border: 1px solid ${border}; font-size: 13.5px; border-radius: 30px;">
-          ${pub} ${isChecked ? '✓' : '+'}
+        <button type="button" class="btn" data-pub-chip="${pub}" style="min-height: 38px; padding: 0 14px; background: ${bg}; color: ${color}; border: 1px solid ${border}; font-size: 13.5px; border-radius: 30px; display: inline-flex; align-items: center;">
+          ${getPublisherLogoHtml(pub, 18)}${pub} ${isChecked ? '✓' : '+'}
         </button>
       `;
     }).join('');
@@ -509,7 +533,7 @@ function renderDetailComparison(articles, selectedSet, matchedIssue) {
         <th style="padding: 16px 20px; font-weight: 800; color: var(--text); width: 190px; word-break: keep-all; border-right: 1px solid var(--border);">비교 항목</th>
         ${filtered.map(art => `
           <th style="padding: 16px 20px; font-weight: 800; color: var(--primary); font-size: 17px; border-right: 1px solid var(--border);">
-            ${art.publisher}
+            ${getPublisherLogoHtml(art.publisher, 24)}${art.publisher}
           </th>
         `).join('')}
       </tr>

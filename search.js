@@ -268,7 +268,7 @@ function renderArticleItem(article) {
             aria-label="${title} 프레임 비교 보기"
         >
             <div class="search-result-card-body">
-                <span class="badge blue">${publisher}</span>
+                <span class="badge blue" style="display: inline-flex; align-items: center;">${getPublisherLogoHtml(publisher, 16)}${publisher}</span>
                 <h3>${title}</h3>
                 <p>${summary}${isTruncated ? "…" : ""}</p>
             </div>
