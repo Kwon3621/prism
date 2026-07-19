@@ -145,6 +145,56 @@ class FileVectorCollection:
 
         return {"ids": found_ids, "metadatas": metadatas}
 
+    def delete(
+        self,
+        ids: list[str],
+    ) -> int:
+        """지정한 article_id의 벡터와 메타데이터를 삭제한다."""
+        if not ids:
+            return 0
+
+        ids_to_delete = set(ids)
+        remaining_indices = [
+            index
+            for index, article_id in enumerate(self._ids)
+            if article_id not in ids_to_delete
+        ]
+
+        deleted_count = len(self._ids) - len(remaining_indices)
+
+        if deleted_count == 0:
+            return 0
+
+        remaining_ids = [
+            self._ids[index]
+            for index in remaining_indices
+        ]
+
+        if remaining_indices:
+            self._embeddings = self._embeddings[
+                remaining_indices
+            ]
+        else:
+            embedding_dimension = (
+                self._embeddings.shape[1]
+                if self._embeddings.ndim == 2
+                else 0
+            )
+            self._embeddings = np.zeros(
+                (0, embedding_dimension),
+                dtype="float32",
+            )
+
+        self._ids = remaining_ids
+        self._records = {
+            article_id: self._records[article_id]
+            for article_id in self._ids
+        }
+
+        self._save()
+
+        return deleted_count
+
     def count(self) -> int:
         return len(self._ids)
 
@@ -394,3 +444,26 @@ def count_stored_articles(
     target_collection = collection or get_vector_collection()
 
     return target_collection.count()
+
+def list_stored_article_ids(
+    *,
+    collection: FileVectorCollection | None = None,
+) -> list[str]:
+    """현재 Vector Store에 저장된 모든 article_id를 반환한다."""
+    target_collection = collection or get_vector_collection()
+
+    return list(target_collection._ids)
+
+
+def delete_article_embeddings(
+    article_ids: list[str],
+    *,
+    collection: FileVectorCollection | None = None,
+) -> int:
+    """지정한 article_id의 벡터와 메타데이터를 삭제한다."""
+    if not article_ids:
+        return 0
+
+    target_collection = collection or get_vector_collection()
+
+    return target_collection.delete(article_ids)

@@ -111,41 +111,43 @@ async function fetchAndRenderSearchResults(query, container) {
     </div>
     `;
     try {
-        const response = await fetch("./data/issue.json");
-        if (!response.ok) throw new Error("데이터를 가져올 수 없습니다.");
+        const response = await fetch(
+            `/api/search?q=${encodeURIComponent(query)}`
+        );
 
         const data = await response.json();
-        const issues = data.issues || [];
 
-        const matchedArticles = [];
-        const matchedKeywords = new Set();
+        if (!response.ok || !data.success) {
+            throw new Error(
+                data.error || "검색 결과를 가져올 수 없습니다."
+            );
+        }
 
-        issues.forEach(issue => {
-            if (issue.keywords && issue.keywords.some(k => k.includes(query))) {
-                issue.keywords.forEach(k => matchedKeywords.add(k));
-            }
+        const articles = Array.isArray(data.results)
+            ? data.results
+            : [];
 
-            (issue.articles || []).forEach(art => {
-                const inTitle = art.title && art.title.includes(query);
-                const inContent = art.content && art.content.includes(query);
-                const inKeywords = art.keywords && art.keywords.some(k => k.includes(query));
-
-                if (inTitle || inContent || inKeywords) {
-                    matchedArticles.push(art);
-                    if (art.keywords) art.keywords.forEach(k => matchedKeywords.add(k));
-                }
-            });
-        });
+        const keywords = Array.isArray(data.expanded_queries)
+            ? data.expanded_queries.filter(
+                keyword => keyword !== query
+            )
+            : [];
 
         renderSearchResultsUI(container, {
-            query,
-            keywords: [...matchedKeywords],
-            articles: matchedArticles,
+            query: data.query || query,
+            keywords,
+            articles,
         });
 
     } catch (error) {
         console.error("검색 결과 로드 실패:", error);
-        container.innerHTML = `<p style="color: red;">검색 중 오류가 발생했습니다.</p>`;
+
+        container.innerHTML = `
+            <p class="no-result">
+                검색 중 오류가 발생했습니다.
+                ${escapeHtml(error.message)}
+            </p>
+        `;
     }
 }
 

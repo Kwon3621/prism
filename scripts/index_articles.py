@@ -16,6 +16,8 @@ from vector_store import (
     get_stored_updated_at,
     get_vector_collection,
     upsert_article_embeddings,
+    delete_article_embeddings,
+    list_stored_article_ids,
 )
 
 
@@ -133,13 +135,39 @@ def select_articles_to_index(
 
     return selected
 
+def delete_stale_embeddings(
+    articles: list[dict[str, Any]],
+) -> int:
+    """Article DB에 없는 오래된 벡터를 Vector Store에서 삭제한다."""
+    current_article_ids = {
+        str(article["article_id"]).strip()
+        for article in articles
+        if str(article.get("article_id") or "").strip()
+    }
+
+    stored_article_ids = set(
+        list_stored_article_ids()
+    )
+
+    stale_article_ids = sorted(
+        stored_article_ids - current_article_ids
+    )
+
+    deleted_count = delete_article_embeddings(
+        stale_article_ids
+    )
+
+    return deleted_count
 
 def index_articles(source_path: Path) -> int:
-    """Article DB의 신규·변경 기사를 임베딩하고 Vector DB에 저장한다."""
+    """Article DB와 Vector Store를 동기화하고 신규·변경 기사를 저장한다."""
     articles = load_articles(source_path)
+
+    deleted_count = delete_stale_embeddings(articles)
     target_articles = select_articles_to_index(articles)
 
     print(f"전체 기사 수: {len(articles)}")
+    print(f"삭제된 오래된 벡터 수: {deleted_count}")
     print(f"임베딩 대상 기사 수: {len(target_articles)}")
 
     if not target_articles:

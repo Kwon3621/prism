@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from typing import Any
 
@@ -79,28 +80,28 @@ def expand_query_with_solar(
     query: str,
 ) -> list[str] | None:
     """
-    Solar LLM으로 검색어의 의미를 확장한다.
+    Solar LLM으로 검색어와 의미적으로 관련된 확장 검색어를 생성한다.
 
-    API 키가 없거나 호출에 실패하면 None을 반환한다.
+    API 키가 없거나 호출·파싱에 실패하면 None을 반환한다.
     """
     if not UPSTAGE_API_KEY:
         return None
 
     prompt = (
-        f"사용자가 뉴스 검색창에 '{query}'라고 입력했습니다. "
-        "이 검색어와 의미적으로 관련된 한국어 뉴스 검색어를 "
-        "3개에서 5개 제안하세요. "
-        "원래 검색어는 제외하세요. "
-        "쉼표로 구분된 검색어 목록만 출력하세요."
+        f'사용자가 뉴스 검색어로 "{query}"를 입력했습니다.\n'
+        "이 검색어와 직접 관련된 한국어 뉴스 검색어를 "
+        "3개에서 5개 제안하세요.\n"
+        "원래 검색어는 제외하세요.\n"
+        "설명, 이유, 번호, 마크다운을 절대 포함하지 마세요.\n"
+        '반드시 JSON 문자열 배열만 출력하세요.\n'
+        '예시: ["대출 금리", "통화 정책", "물가 상승"]'
     )
 
     try:
         response = requests.post(
             UPSTAGE_CHAT_URL,
             headers={
-                "Authorization": (
-                    f"Bearer {UPSTAGE_API_KEY}"
-                ),
+                "Authorization": f"Bearer {UPSTAGE_API_KEY}",
                 "Content-Type": "application/json",
             },
             json={
@@ -117,27 +118,33 @@ def expand_query_with_solar(
 
         response.raise_for_status()
 
-        content = response.json()[
-            "choices"
-        ][0]["message"]["content"]
+        content = str(
+            response.json()["choices"][0]["message"]["content"]
+        ).strip()
+
+        parsed_terms = json.loads(content)
+
+        if not isinstance(parsed_terms, list):
+            return None
 
         terms = [
-            term.strip()
-            for term in content.split(",")
-            if term.strip()
+            str(term).strip()
+            for term in parsed_terms
+            if isinstance(term, str)
         ]
 
         return clean_query_terms(terms)
 
     except (
         requests.RequestException,
+        json.JSONDecodeError,
         KeyError,
         IndexError,
         TypeError,
     ) as error:
         print(
             "Solar 확장 검색어 생성에 실패했습니다. "
-            f"대체 검색어를 사용합니다: {error}"
+            f"원래 검색어를 사용합니다: {error}"
         )
         return None
 
