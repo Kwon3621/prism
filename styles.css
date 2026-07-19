@@ -995,18 +995,26 @@ img { max-width: 100%; display: block; }
   background: var(--bg-soft);
 }
 
-.related-keywords { margin-bottom: 20px; }
-.related-keywords strong { display: block; margin-bottom: 10px; font-size: 14px; }
-
-.keyword-select-guide { padding: 24px 0; }
+.keyword-select-guide {
+  padding: 24px 0;
+  text-align: left;
+}
 .keyword-select-guide p {
   margin: 0 0 16px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.6;
+  text-align: left;
 }
 
-.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: left;
+}
+
 .chip {
   padding: 6px 12px;
   border-radius: 999px;
@@ -1096,7 +1104,12 @@ img { max-width: 100%; display: block; }
 
 .search-results-more { text-align: center; margin-top: 20px; }
 
-.no-result { color: var(--muted); padding: 20px 0; }
+.no-result {
+  color: var(--muted);
+  padding: 20px 0;
+  line-height: 1.7;
+  word-break: keep-all;
+}
 
 @media (max-width: 900px) {
   .search-results-grid.is-card { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1119,7 +1132,8 @@ img { max-width: 100%; display: block; }
   to { transform: rotate(360deg); }
 }
 
-/* hero 섹션 밖으로 나온 검색 결과 영역의 위아래 여백 */
-#search-results.container {
-  padding: 32px 0 60px;
-}
+/* 검색 결과가 있을 때는 hero 하단 고정 여백을 줄여
+   콘텐츠 길이에 맞게 자동으로 딱 맞도록 한다. (파란 배경/그라데이션은 유지) */
+   .hero.hero-centered.has-search-results {
+    padding-bottom: 40px;
+  }

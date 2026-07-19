@@ -42,6 +42,12 @@ ALLOWED_DIMENSIONS = {
     "보도 태도·근거",
 }
 
+# evidence(판단 근거)는 "보도 태도·근거" 항목에만 붙인다 — 원래 의도가
+# "왜 그렇게 판단했는지" 근거가 필요한 건 보도 태도뿐이었는데, 한때
+# 4개 항목 모두에 evidence를 요구·표시하게 만들어서 비교 항목 전체에
+# 근거 문구가 달리는 문제가 있었다.
+EVIDENCE_REQUIRED_DIMENSION = "보도 태도·근거"
+
 ALLOWED_DIFFERENCE_LEVELS = {
     "차이 큼",
     "일부 차이",
@@ -166,6 +172,12 @@ def clean_string_list(
             break
 
     return cleaned
+
+
+def normalize_text_for_duplicate_check(value: Any) -> str:
+    """공백만 제거해서 비교한다 (summary가 기사 제목을 그대로 복사했는지
+    확인하는 용도라, 구두점까지 봐줄 필요는 없다)."""
+    return "".join(str(value or "").split())
 
 
 def normalize_publisher_analyses(
@@ -407,16 +419,17 @@ Structured Output입니다.
 - 각 비교 문장은 어느 언론사가 무엇을 강조했는지
   직접 대조하는 형태로 작성하세요.
 - 공통 사실과 언론사별 차이를 구분하세요.
-- 근거에는 입력된 제목 프레임, 핵심 관점,
-  원인, 영향, 태도 근거 중 실제 확인 가능한 내용을 사용하세요.
-- publisher_details의 evidence는 언론사별로 최소 1개 이상 반드시
+- evidence는 "보도 태도·근거" 항목에만 작성하세요. 그 외 4개 항목
+  (공통 내용/핵심 관점/강조된 원인·배경/강조한 영향·대상)의
+  publisher_details에는 evidence를 넣지 말고 summary만 작성하세요.
+- "보도 태도·근거" 항목의 evidence는 언론사별로 최소 1개 이상 반드시
   채우세요. summary만 쓰고 evidence를 비워두지 마세요. 그 언론사에
   대한 근거를 정말 찾을 수 없을 때만 evidence를 비워도 되며, 그 경우
   해당 비교 항목의 difference_level을 "판단 어려움"으로 쓰세요.
 - summary와 evidence의 역할을 분리하세요. summary에는 기사 제목이나
   RSS 설명 문구를 그대로 옮기지 말고, 그 언론사가 무엇을 강조했는지
   또는 어떤 태도를 보였는지를 한 문장으로 설명하세요. 실제 기사
-  제목·인용구 같은 구체적 표현은 summary가 아니라 evidence에만
+  제목·인용구 같은 구체적 표현은 "보도 태도·근거"의 evidence에만
   넣으세요.
 - 원문 링크는 입력된 기사 정보에서만 가져오세요.
 - source_links의 title, link, published_at은 입력된 기사 정보를 그대로 복사하세요.
@@ -463,10 +476,7 @@ difference_level은 다음 중 하나만 사용하세요.
         {{
           "publisher_id": "언론사 ID",
           "publisher": "언론사명",
-          "summary": "이 항목에서 해당 언론사가 강조한 내용",
-          "evidence": [
-            "판단 근거가 되는 분석 표현"
-          ]
+          "summary": "이 항목에서 해당 언론사가 강조한 내용"
         }}
       ]
     }},
@@ -478,10 +488,7 @@ difference_level은 다음 중 하나만 사용하세요.
         {{
           "publisher_id": "언론사 ID",
           "publisher": "언론사명",
-          "summary": "이 항목에서 해당 언론사가 강조한 내용",
-          "evidence": [
-            "판단 근거가 되는 분석 표현"
-          ]
+          "summary": "이 항목에서 해당 언론사가 강조한 내용"
         }}
       ]
     }},
@@ -493,10 +500,7 @@ difference_level은 다음 중 하나만 사용하세요.
         {{
           "publisher_id": "언론사 ID",
           "publisher": "언론사명",
-          "summary": "이 항목에서 해당 언론사가 강조한 내용",
-          "evidence": [
-            "판단 근거가 되는 분석 표현"
-          ]
+          "summary": "이 항목에서 해당 언론사가 강조한 내용"
         }}
       ]
     }},
@@ -508,10 +512,7 @@ difference_level은 다음 중 하나만 사용하세요.
         {{
           "publisher_id": "언론사 ID",
           "publisher": "언론사명",
-          "summary": "이 항목에서 해당 언론사가 강조한 내용",
-          "evidence": [
-            "판단 근거가 되는 분석 표현"
-          ]
+          "summary": "이 항목에서 해당 언론사가 강조한 내용"
         }}
       ]
     }},
@@ -786,6 +787,9 @@ def validate_comparison_result(
                     "summary": clean_string(
                         detail.get("summary")
                     ),
+                    # evidence는 "보도 태도·근거" 항목에만 붙인다. 다른
+                    # 항목까지 evidence를 들고 있으면 app.js가 화면에
+                    # 그대로 노출해버려서, 여기서 아예 비워 전달한다.
                     "evidence": (
                         clean_string_list(
                             detail.get(
@@ -793,20 +797,61 @@ def validate_comparison_result(
                             ),
                             max_items=5,
                         )
+                        if dimension
+                        == EVIDENCE_REQUIRED_DIMENSION
+                        else []
                     ),
                 }
             )
 
-        # difference_level이 "판단 어려움"이 아니라면, 그 판단에 쓰인
-        # evidence가 언론사마다 최소 1개는 있어야 한다. summary(태도)만
-        # 쓰고 evidence를 비워두는 응답을 여기서 걸러 재시도시킨다.
-        if difference_level != "판단 어려움":
+        if dimension == EVIDENCE_REQUIRED_DIMENSION:
             for detail in normalized_details:
-                if not detail["evidence"]:
+                # difference_level이 "판단 어려움"이 아니라면, 그 판단에
+                # 쓰인 evidence가 언론사마다 최소 1개는 있어야 한다.
+                # summary(태도)만 쓰고 evidence를 비워두는 응답을 여기서
+                # 걸러 재시도시킨다.
+                if (
+                    difference_level != "판단 어려움"
+                    and not detail["evidence"]
+                ):
                     raise ValueError(
                         f"'{dimension}' 항목의 "
                         f"{detail['publisher']} evidence가 "
                         "비어 있습니다."
+                    )
+
+                # summary는 "이 언론사가 보인 태도"를 설명해야지, 기사
+                # 제목을 그대로 옮겨서는 안 된다(프롬프트에 명시했지만
+                # 실측 결과 모델이 종종 어김 — summary와 evidence가
+                # 그대로 중복 노출되는 문제로 이어짐). 원본 기사 제목과
+                # 완전히 같으면 재시도시킨다.
+                source_item = next(
+                    item
+                    for item in publisher_analyses
+                    if item["publisher_id"]
+                    == detail["publisher_id"]
+                )
+
+                source_titles = {
+                    normalize_text_for_duplicate_check(
+                        article.get("title")
+                    )
+                    for article in source_item.get(
+                        "articles",
+                        [],
+                    )
+                }
+
+                if (
+                    normalize_text_for_duplicate_check(
+                        detail["summary"]
+                    )
+                    in source_titles
+                ):
+                    raise ValueError(
+                        f"'{dimension}' 항목의 "
+                        f"{detail['publisher']} summary가 "
+                        "기사 제목을 그대로 복사했습니다."
                     )
 
         normalized_comparisons.append(
