@@ -770,7 +770,7 @@ function renderDetailComparisonTable(tableContainer, data) {
           ${publishers.map(pub => {
             const detail = detailByPublisher.get(pub.publisher_id);
             return `
-              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border);">
+              <td style="padding: 16px 20px; font-size: 14px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border); word-break: keep-all; overflow-wrap: break-word;">
                 ${(detail && detail.summary) || '분석 내용 없음'}
               </td>
             `;
@@ -782,7 +782,7 @@ function renderDetailComparisonTable(tableContainer, data) {
         tableHtml += `
           <tr style="border-bottom: 1px solid var(--border);">
             <td style="padding: 8px 20px; font-size: 12.5px; color: var(--muted); background: var(--bg-soft); border-right: 1px solid var(--border);">대조</td>
-            <td colspan="${publishers.length}" style="padding: 8px 20px; font-size: 13px; color: var(--muted); font-style: italic;">
+            <td colspan="${publishers.length}" style="padding: 8px 20px; font-size: 13px; color: var(--muted); font-style: italic; word-break: keep-all; overflow-wrap: break-word;">
               ${comparison.contrast_statement}
             </td>
           </tr>
