@@ -769,9 +769,16 @@ function renderDetailComparisonTable(tableContainer, data) {
           </td>
           ${publishers.map(pub => {
             const detail = detailByPublisher.get(pub.publisher_id);
+            const evidence = (detail && detail.evidence) || [];
+            const evidenceHtml = evidence.length ? `
+              <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); font-size: 12.5px; color: var(--muted); line-height: 1.5;">
+                근거: ${evidence.join(' · ')}
+              </div>
+            ` : '';
             return `
               <td style="padding: 16px 20px; font-size: 14px; color: var(--text-2); line-height: 1.5; border-right: 1px solid var(--border); word-break: keep-all; overflow-wrap: break-word;">
                 ${(detail && detail.summary) || '분석 내용 없음'}
+                ${evidenceHtml}
               </td>
             `;
           }).join('')}
