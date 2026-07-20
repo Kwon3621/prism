@@ -23,7 +23,6 @@ from analysis import (
     clean_string,
     request_solar_analysis,
 )
-from generate_news import parse_published_datetime
 from search_engine import search_with_context
 
 
@@ -432,6 +431,44 @@ def cap_candidate_pool(
     그룹핑 단계까지는 살려둔다.
     """
     return ranked_results[:max_pool_size]
+
+
+def parse_published_datetime(published: str) -> datetime | None:
+    """
+    기사 발행 시각 문자열을 UTC datetime으로 변환한다.
+
+    generate_news.py에도 같은 이름의 함수가 있지만, 그 모듈은 최상단에서
+    feedparser를 import한다. Vercel의 api/index.py는 issue_builder를
+    불러오는데, feedparser는 루트 requirements.txt(서버리스 함수용)에는
+    없어서 그쪽 모듈을 import하면 API 전체가 죽는다. 그래서 stdlib만
+    쓰는 이 파싱 로직만 여기 그대로 복사해 둔다.
+    """
+    if not published:
+        return None
+
+    try:
+        parsed = datetime.fromisoformat(
+            published.replace("Z", "+00:00")
+        )
+
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+
+        return parsed.astimezone(timezone.utc)
+
+    except ValueError:
+        try:
+            from email.utils import parsedate_to_datetime
+
+            parsed = parsedate_to_datetime(published)
+
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+
+            return parsed.astimezone(timezone.utc)
+
+        except (TypeError, ValueError):
+            return None
 
 
 def score_event_group(
