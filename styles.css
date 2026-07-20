@@ -662,7 +662,7 @@ img { max-width: 100%; display: block; }
 ========================= */
 
 [data-featured-issues] .card {
-  min-height: 390px;
+  min-height: 280px;
 }
 
 /* 제목 아래 회색 이슈 요약문만 3줄로 제한한다. */
