@@ -24,6 +24,11 @@ else:
 PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
 COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
 
+# analysis.py/compare.py의 Solar 프롬프트나 검증 로직을 바꾸면 이 값을
+# 올린다. 캐시 키에 포함시켜서, 예전 프롬프트로 만들어진 결과가 새 로직
+# 적용 후에도 그대로 재사용되는 것을 막는다.
+PROMPT_VERSION = "2026-07-20-evidence-required"
+
 
 def ensure_cache_directories() -> None:
     """
@@ -81,6 +86,7 @@ def make_publisher_cache_key(
     """
     return make_cache_key(
         "publisher-analysis",
+        PROMPT_VERSION,
         issue_id,
         publisher_id,
         sorted(article_ids),
@@ -97,6 +103,7 @@ def make_comparison_cache_key(
     """
     return make_cache_key(
         "publisher-comparison",
+        PROMPT_VERSION,
         issue_id,
         sorted(publisher_ids),
     )
