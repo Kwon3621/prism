@@ -435,8 +435,8 @@ function renderIssueCandidatePicker(section, listEl, candidates) {
       <div class="card" data-pick-issue="${index}" role="button" tabindex="0"
         style="cursor: pointer; background: #fff; padding: 24px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border);">
         <span class="badge blue" style="margin-bottom: 10px; display: inline-block;">${publisherNames.length}개 언론사</span>
-        <h3 style="font-size: 17px; margin: 6px 0;">${candidate.issue_title || ''}</h3>
-        <p style="font-size: 13.5px; color: var(--text-2); line-height: 1.5;">${candidate.summary || ''}</p>
+        <h3 style="font-size: 17px; margin: 6px 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; overflow-wrap: break-word;">${candidate.issue_title || ''}</h3>
+        <p style="font-size: 13.5px; color: var(--text-2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; overflow-wrap: break-word; min-height: calc(1.5em * 3);">${candidate.summary || ''}</p>
         <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
           ${publisherNames.map(name => `<span class="badge gray" style="font-size: 12px; padding: 4px 10px;">${name}</span>`).join('')}
         </div>
@@ -507,9 +507,10 @@ async function runIssueAnalysis(candidate) {
     };
     syncSaveButtons();
 
-    // 1단계: 상단 핵심 쟁점 요약 + 보도 경향 그룹 개요 바인딩
-    // 언론사를 선택하면 compare_publishers가 돌려주는 공통 내용(common_summary)도
-    // 이 상단 요약 영역(#compare-common-summary)에 함께 채워진다 (renderDetailComparisonTable에서 갱신).
+    // 1단계: 상단 공통 내용 요약 + 보도 경향 그룹 개요 바인딩
+    // 공통 내용은 사용자가 아래에서 고르는 언론사 조합과 무관하게,
+    // 이 이슈 묶음 전체 언론사를 기준으로 한 번만 계산해 고정 표시한다
+    // (renderOverallCommonSummary 참고. 선택 조합별 비교는 상세 대조표에서 별도로 처리).
     if (categoryEl) categoryEl.textContent = "이슈 분석";
     if (titleEl) titleEl.textContent = data.issue_title || candidate.issue_title;
 
@@ -519,17 +520,21 @@ async function runIssueAnalysis(candidate) {
       `).join('');
 
       summaryEl.innerHTML = `
-        <div style="font-weight: 600; margin-bottom: 10px;">[검색어] ${data.query || candidate.query || ''}</div>
-        <div style="border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px;">
-          <strong style="color: var(--primary);">✓ 보도 경향 그룹 개요:</strong>
+        <div id="compare-overall-common-summary" style="font-size: 14.5px; color: var(--text-2); line-height: 1.6;">
+          공통 내용을 분석하고 있습니다...
+        </div>
+        <div style="border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 16px;">
+          <strong style="color: var(--primary);"><span style="display: inline-block; width: 20px;">✓</span>보도 경향 그룹 개요:</strong>
           <ul style="margin: 6px 0 0 18px; padding: 0; color: var(--text-2); font-size: 14.5px;">${groupsHtml}</ul>
         </div>
-        <div id="compare-common-summary"></div>
       `;
     }
 
     // 2단계: 프레임 그룹화 시각화 작동 (서버가 계산한 그룹을 그대로 렌더링)
     renderFrameGroups(groups, publisherAnalyses);
+
+    // 이슈 묶음 전체 언론사 기준 공통 내용 (사용자의 상세 비교 선택과 무관하게 고정)
+    renderOverallCommonSummary(publisherAnalyses);
 
     // 3단계: 최대 4개 상세 대조표 인터랙션 세팅
     initPublisherSelector(publisherAnalyses);
@@ -538,6 +543,38 @@ async function runIssueAnalysis(candidate) {
     console.error("이슈 분석 렌더링 실패:", error);
     if (titleEl) titleEl.textContent = "이슈 분석에 실패했습니다.";
     if (summaryEl) summaryEl.textContent = error.message || "이 이슈를 분석하지 못했습니다.";
+  }
+}
+
+// [1단계 보조 함수] "AI 공통 내용 요약" 카드에 이슈 묶음 전체 언론사 기준 공통 내용을 채운다.
+// /api/compare는 한 번에 최대 4개 언론사만 받으므로, 4개를 넘으면 대표로 앞 4개만 사용한다.
+async function renderOverallCommonSummary(publisherAnalyses) {
+  const container = document.getElementById('compare-overall-common-summary');
+  if (!container) return;
+
+  if (publisherAnalyses.length < 2) {
+    container.textContent = "공통 내용을 분석할 언론사가 부족합니다.";
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/compare', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ publisher_analyses: publisherAnalyses.slice(0, 4) })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      throw new Error(data.error || "공통 내용 분석에 실패했습니다.");
+    }
+
+    container.textContent = data.common_summary || "공통 내용을 찾지 못했습니다.";
+
+  } catch (error) {
+    console.error("전체 공통 내용 렌더링 실패:", error);
+    container.textContent = "공통 내용을 불러오지 못했습니다.";
   }
 }
 
@@ -630,17 +667,14 @@ function initPublisherSelector(publisherAnalyses) {
   renderDetailComparison(publisherAnalyses, selected);
 }
 
-// [3단계 함수] 선택된 언론사 조합으로 /api/compare 호출 후 5대 항목 + 발행시각 테이블 렌더링
+// [3단계 함수] 선택된 언론사 조합으로 /api/compare 호출 후 4대 항목 + 발행시각 테이블 렌더링
 async function renderDetailComparison(publisherAnalyses, selectedSet) {
   const tableContainer = document.getElementById('detail-compare-table');
-  const summaryContainer = document.getElementById('compare-common-summary');
   if (!tableContainer) return;
 
   const selectedAnalyses = publisherAnalyses.filter(
     item => selectedSet.has(item.publisher_id)
   );
-
-  if (summaryContainer) summaryContainer.innerHTML = '';
 
   if (selectedAnalyses.length < 2) {
     tableContainer.innerHTML = `
@@ -676,7 +710,7 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
       throw new Error(data.error || "비교 분석에 실패했습니다.");
     }
 
-    renderDetailComparisonTable(tableContainer, summaryContainer, data);
+    renderDetailComparisonTable(tableContainer, data);
 
   } catch (error) {
     console.error("상세 비교 렌더링 실패:", error);
@@ -692,8 +726,10 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
   }
 }
 
-// [3단계 최종 함수] compare.py 비교 결과를 5대 비교 지표 + 발행시각 가로 테이블로 매핑
-function renderDetailComparisonTable(tableContainer, summaryContainer, data) {
+// [3단계 최종 함수] compare.py 비교 결과를 4대 비교 지표 + 발행시각 가로 테이블로 매핑
+// "공통 내용"은 상단 "AI 공통 내용 요약" 카드(renderOverallCommonSummary)가 이슈 묶음
+// 전체 기준으로 이미 보여주므로, 여기서는 선택 조합별로 달라지는 4개 지표만 표로 그린다.
+function renderDetailComparisonTable(tableContainer, data) {
   const publishers = data.selected_publishers || [];
   const comparisons = data.comparisons || [];
   const sourceLinks = data.source_links || [];
@@ -701,17 +737,7 @@ function renderDetailComparisonTable(tableContainer, summaryContainer, data) {
     sourceLinks.map(link => [link.publisher_id, link])
   );
 
-  // 1. 공통 내용 요약: 상단 "AI 핵심 쟁점 및 공통 내용 요약" 영역에 표시 (비교 항목 테이블에는 넣지 않음)
-  if (summaryContainer) {
-    summaryContainer.innerHTML = data.common_summary ? `
-      <div style="margin-top: 16px; padding: 18px 20px; background: #f8fafc; border: 1px solid var(--border); border-left: 4px solid var(--common); border-radius: 10px;">
-        <strong style="color: var(--common); font-size: 13.5px;">✓ 공통 내용 (선택한 언론사 기준)</strong>
-        <p style="margin: 6px 0 0; font-size: 14.5px; color: var(--text-2); line-height: 1.6;">${data.common_summary}</p>
-      </div>
-    ` : '';
-  }
-
-  // 2. 테이블 헤더(상단 매체 이름 행) 생성
+  // 1. 테이블 헤더(상단 매체 이름 행) 생성
   let tableHtml = `
     <thead>
       <tr style="background: var(--bg-soft); border-bottom: 2px solid var(--primary);">
@@ -726,8 +752,8 @@ function renderDetailComparisonTable(tableContainer, summaryContainer, data) {
     <tbody>
   `;
 
-  // 3. 4대 비교 항목(핵심 관점/원인·배경/영향·대상/보도 태도) 행 생성
-  // - "공통 내용"은 위에서 이미 별도 행으로 보여줬으므로 여기서는 제외
+  // 2. 4대 비교 항목(핵심 관점/원인·배경/영향·대상/보도 태도) 행 생성
+  // - "공통 내용"은 상단 "AI 공통 내용 요약" 카드에서 이슈 전체 기준으로 이미 보여주므로 제외
   // - "대조" 보조 행은 핵심 관점 항목에서만 표시
   comparisons
     .filter(comparison => comparison.dimension !== '공통 내용')
@@ -764,7 +790,7 @@ function renderDetailComparisonTable(tableContainer, summaryContainer, data) {
       }
   });
 
-  // 4. 발행 시각 행 (핸드오프 5-4: formatPublishedTime을 실제로 호출하는 지점)
+  // 3. 발행 시각 행 (핸드오프 5-4: formatPublishedTime을 실제로 호출하는 지점)
   tableHtml += `
     <tr style="border-bottom: 1px solid var(--border);">
       <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--keyword); word-break: keep-all; border-right: 1px solid var(--border);">발행 시각</td>
@@ -779,7 +805,7 @@ function renderDetailComparisonTable(tableContainer, summaryContainer, data) {
     </tr>
   `;
 
-  // 5. 뉴스 원문 참조 링크 행
+  // 4. 뉴스 원문 참조 링크 행
   tableHtml += `
     <tr>
       <td style="padding: 16px 20px; font-weight: 700; background: var(--bg-soft); color: var(--additional); word-break: keep-all; border-right: 1px solid var(--border);">🔗 뉴스 원문 참조</td>
@@ -832,15 +858,15 @@ async function renderFeaturedIssue() {
         root.style.flexDirection = "column";
         root.style.gap = "12px";
 
-        root.innerHTML = visibleIssues.map(issue => `
+        root.innerHTML = visibleIssues.map((issue, idx) => `
           <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; gap: 16px;">
             <div style="flex: 1; min-width: 0;">
               <span class="eyebrow" style="margin-bottom: 4px; display: inline-block; font-size: 11px;">${issue.category || '종합'}</span>
-              <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${issue.title}</h3>
+              <h3 style="font-size: 16px; margin: 0 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600;">${issue.issue_title}</h3>
               <p style="font-size: 13px; color: #64748b; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${issue.summary || '요약 준비 중입니다.'}</p>
             </div>
             <div style="flex-shrink: 0;">
-              <a class="btn btn-primary btn-sm" href="compare.html?q=${encodeURIComponent(issue.title)}" style="white-space: nowrap;">
+              <a class="btn btn-primary btn-sm" data-featured-issue-index="${idx}" href="compare.html?issue_id=${encodeURIComponent(issue.issue_id)}" style="white-space: nowrap;">
                 프레임 비교 보기
               </a>
             </div>
@@ -848,21 +874,34 @@ async function renderFeaturedIssue() {
         `).join("");
       } else {
         root.style.display = "";
-        root.className = "grid-3"; 
+        root.className = "grid-3";
 
-        root.innerHTML = visibleIssues.map(issue => `
+        root.innerHTML = visibleIssues.map((issue, idx) => `
           <article class="card" style="display: flex; flex-direction: column; height: 100%;">
             <span class="eyebrow">${issue.category || '종합'}</span>
-            <h3 style="margin: 12px 0 10px; font-size: 18px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 50px;">${issue.title}</h3>
-            <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; min-height: 67px; margin-bottom: 16px;">${issue.summary || '요약 준비 중입니다.'}</p>
+            <h3 style="margin: 12px 0 10px; font-size: 18px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; overflow-wrap: break-word; min-height: 50px;">${issue.issue_title}</h3>
+            <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; overflow-wrap: break-word; min-height: 67px; margin-bottom: 16px;">${issue.summary || '요약 준비 중입니다.'}</p>
             <div class="card-footer" style="margin-top: auto; padding-top: 0; display: flex; justify-content: flex-end;">
-              <a class="btn btn-primary" href="compare.html?q=${encodeURIComponent(issue.title)}" style="width: 100%; text-align: center;">
+              <a class="btn btn-primary" data-featured-issue-index="${idx}" href="compare.html?issue_id=${encodeURIComponent(issue.issue_id)}" style="width: 100%; text-align: center;">
                 프레임 비교 보기
               </a>
             </div>
           </article>
         `).join("");
       }
+
+      // 홈 카드는 이미 만들어둔 event group(candidate)을 그대로 들고 가서,
+      // compare.html에서 재검색 없이 곧바로 그 이슈 하나만 분석하게 한다.
+      // (재검색하면 Solar Event Grouping이 다시 돌면서 여러 사건으로
+      // 갈라져 "관련 이슈 여러 건" 선택 화면이 튀어나올 수 있다.)
+      root.querySelectorAll('[data-featured-issue-index]').forEach(link => {
+        link.addEventListener('click', () => {
+          const issue = visibleIssues[Number(link.dataset.featuredIssueIndex)];
+          if (issue) {
+            sessionStorage.setItem('prism-selected-issue', JSON.stringify(issue));
+          }
+        });
+      });
 
       if (issues.length > INITIAL_COUNT) {
         const wrapper = document.createElement("div");
