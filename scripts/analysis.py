@@ -345,7 +345,10 @@ category는 다음 중 하나만 사용하세요.
 - 갈등 강조
 - 판단 어려움
 
-evidence에는 해당 태도를 판단한 실제 제목 또는 RSS 설명 표현을 제시합니다.
+evidence에는 해당 태도를 판단한 실제 제목 또는 RSS 설명 표현을 최소 1개
+이상 반드시 제시하세요. category만 쓰고 evidence를 비워두지 마세요.
+판단할 근거를 정말 찾을 수 없는 경우에만 category를 "판단 어려움"으로
+쓰고 evidence를 비워두세요.
 
 12. outlook
 기사에서 향후 전망이 확인되면 direction과 summary로 정리합니다.
@@ -456,6 +459,19 @@ def validate_analysis_result(
     if tone_category not in allowed_tones:
         tone_category = "판단 어려움"
 
+    tone_evidence = clean_string_list(
+        tone.get("evidence"),
+        max_items=5,
+    )
+
+    # "판단 어려움"이 아닌 태도를 붙였다면 근거 없이 통과시키지 않는다 —
+    # 근거를 못 찾으면 category 자체를 "판단 어려움"으로 썼어야 한다.
+    if tone_category != "판단 어려움" and not tone_evidence:
+        raise ValueError(
+            f"tone.category가 '{tone_category}'인데 "
+            "tone.evidence가 비어 있습니다."
+        )
+
     allowed_outlook_directions = {
         "긍정",
         "부정",
@@ -551,10 +567,7 @@ def validate_analysis_result(
             ),
             "tone": {
                 "category": tone_category,
-                "evidence": clean_string_list(
-                    tone.get("evidence"),
-                    max_items=5,
-                ),
+                "evidence": tone_evidence,
             },
             "outlook": {
                 "direction": (

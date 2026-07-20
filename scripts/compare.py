@@ -409,6 +409,10 @@ Structured Output입니다.
 - 공통 사실과 언론사별 차이를 구분하세요.
 - 근거에는 입력된 제목 프레임, 핵심 관점,
   원인, 영향, 태도 근거 중 실제 확인 가능한 내용을 사용하세요.
+- publisher_details의 evidence는 언론사별로 최소 1개 이상 반드시
+  채우세요. summary만 쓰고 evidence를 비워두지 마세요. 그 언론사에
+  대한 근거를 정말 찾을 수 없을 때만 evidence를 비워도 되며, 그 경우
+  해당 비교 항목의 difference_level을 "판단 어려움"으로 쓰세요.
 - 원문 링크는 입력된 기사 정보에서만 가져오세요.
 - source_links의 title, link, published_at은 입력된 기사 정보를 그대로 복사하세요.
 - 입력 기사의 published_at 값이 "발행 시간 정보 없음"이면 그대로 출력하세요.
@@ -787,6 +791,18 @@ def validate_comparison_result(
                     ),
                 }
             )
+
+        # difference_level이 "판단 어려움"이 아니라면, 그 판단에 쓰인
+        # evidence가 언론사마다 최소 1개는 있어야 한다. summary(태도)만
+        # 쓰고 evidence를 비워두는 응답을 여기서 걸러 재시도시킨다.
+        if difference_level != "판단 어려움":
+            for detail in normalized_details:
+                if not detail["evidence"]:
+                    raise ValueError(
+                        f"'{dimension}' 항목의 "
+                        f"{detail['publisher']} evidence가 "
+                        "비어 있습니다."
+                    )
 
         normalized_comparisons.append(
             {
