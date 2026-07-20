@@ -413,6 +413,11 @@ Structured Output입니다.
   채우세요. summary만 쓰고 evidence를 비워두지 마세요. 그 언론사에
   대한 근거를 정말 찾을 수 없을 때만 evidence를 비워도 되며, 그 경우
   해당 비교 항목의 difference_level을 "판단 어려움"으로 쓰세요.
+- summary와 evidence의 역할을 분리하세요. summary에는 기사 제목이나
+  RSS 설명 문구를 그대로 옮기지 말고, 그 언론사가 무엇을 강조했는지
+  또는 어떤 태도를 보였는지를 한 문장으로 설명하세요. 실제 기사
+  제목·인용구 같은 구체적 표현은 summary가 아니라 evidence에만
+  넣으세요.
 - 원문 링크는 입력된 기사 정보에서만 가져오세요.
 - source_links의 title, link, published_at은 입력된 기사 정보를 그대로 복사하세요.
 - 입력 기사의 published_at 값이 "발행 시간 정보 없음"이면 그대로 출력하세요.
@@ -518,9 +523,9 @@ difference_level은 다음 중 하나만 사용하세요.
         {{
           "publisher_id": "언론사 ID",
           "publisher": "언론사명",
-          "summary": "이 항목에서 해당 언론사가 강조한 내용",
+          "summary": "이 언론사가 보인 보도 태도를 한 문장으로 설명 (기사 제목·인용구 인용 금지, 예: '사실관계를 중립적으로 전달함')",
           "evidence": [
-            "판단 근거가 되는 분석 표현"
+            "그 태도를 판단한 실제 제목·설명 표현"
           ]
         }}
       ]
