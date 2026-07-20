@@ -31,6 +31,14 @@ DEFAULT_MAX_CANDIDATES = 5
 DEFAULT_MIN_SCORE_RATIO = 0.5
 DEFAULT_MAX_POOL_SIZE = 40
 
+# build_ranked_event_candidates() 전용 — 검색 경로(DEFAULT_MIN_SCORE_RATIO)
+# 보다 훨씬 가벼운 컷. "정치"/"경제" 같은 넓은 카테고리 검색어는 관련
+# 기사 자체가 원래 넓게 퍼져 있어서 0.5처럼 세게 자르면 진짜 사건들까지
+# 후보 풀에서 빠질 수 있다. 그렇다고 전혀 안 거르면(이전 상태) Solar가
+# 사실상 무관한 기사를 그룹에 섞어 넣는 오배정이 늘어나는 걸 확인해서,
+# 최상위 점수 대비 이 비율 미만인, 확실히 노이즈인 기사만 걸러낸다.
+HOT_TOPIC_MIN_SCORE_RATIO = 0.15
+
 MAXIMUM_EVENT_GROUP_COUNT = 5
 
 # build_ranked_event_candidates() 전용 — 사건 묶음 자체를 채점할 때 쓰는 값.
@@ -282,7 +290,67 @@ def validate_event_groups(
             }
         )
 
-    return normalized_groups
+    return merge_overlapping_groups(normalized_groups)
+
+
+GROUP_OVERLAP_MERGE_THRESHOLD = 0.5
+
+
+def merge_overlapping_groups(
+    groups: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    같은 사건을 가리키는 event group이 여러 개로 쪼개진 경우를 하나로 합친다.
+
+    Solar가 "실제로 하나의 사건만 존재하면 그룹 1개만 반환하세요"라는
+    지시를 어기고, 같은 핵심 기사에 매번 다른 언론사 기사 하나씩만 짝지어
+    거의 동일한 그룹을 여러 개 반환하는 경우가 있다. 두 그룹의 article_ids가
+    (더 작은 쪽 기준으로) GROUP_OVERLAP_MERGE_THRESHOLD 이상 겹치면 같은
+    사건으로 보고 기사 목록을 합친다. 기준을 "더 작은 쪽 대비 비율"로 잡은
+    건, 기사 하나가 여러 사건에 걸쳐 있어서 그룹 사이에 기사가 조금
+    겹치는 정상적인 경우까지 합쳐버리지 않기 위해서다.
+    """
+    merged_groups: list[dict[str, Any]] = []
+
+    for group in groups:
+        group_id_set = set(group["article_ids"])
+
+        target = None
+
+        for kept in merged_groups:
+            kept_id_set = set(kept["article_ids"])
+
+            smaller_size = min(
+                len(group_id_set),
+                len(kept_id_set),
+            )
+
+            if smaller_size == 0:
+                continue
+
+            overlap_ratio = (
+                len(group_id_set & kept_id_set)
+                / smaller_size
+            )
+
+            if overlap_ratio >= GROUP_OVERLAP_MERGE_THRESHOLD:
+                target = kept
+                break
+
+        if target is None:
+            merged_groups.append(group)
+            continue
+
+        # 순서를 유지하면서 기사 목록만 합친다 (label/summary는 먼저
+        # 나온 그룹 것을 그대로 쓴다).
+        target["article_ids"] = list(
+            dict.fromkeys(
+                target["article_ids"]
+                + group["article_ids"]
+            )
+        )
+
+    return merged_groups
 
 
 def check_candidate_quality(
@@ -464,18 +532,32 @@ def build_issue_candidates(
 def cap_candidate_pool(
     ranked_results: list[dict[str, Any]],
     max_pool_size: int = DEFAULT_MAX_POOL_SIZE,
+    min_score_ratio: float = HOT_TOPIC_MIN_SCORE_RATIO,
 ) -> list[dict[str, Any]]:
     """
-    개별 기사의 검색 관련도 점수로 후보를 거르지 않고, Solar 프롬프트
-    길이만 감안해 랭킹 상위 max_pool_size건으로 후보 풀을 잘라낸다.
+    핫토픽 배치용 후보 풀을 구성한다.
 
-    filter_candidate_pool()과 달리 최고 점수 대비 비율 컷이 없다 —
-    핫토픽 배치는 "이 기사가 검색어와 얼마나 관련 있어 보이는가"가 아니라
-    사건으로 묶은 뒤 "그 사건을 몇 개 언론사·기사가, 얼마나 최근에
-    다뤘는가"로 판단해야 하므로, 관련도가 낮아 보이는 기사도 일단
-    그룹핑 단계까지는 살려둔다.
+    검색 경로(filter_candidate_pool)만큼 세게 거르진 않는다 — 핫토픽은
+    "이 기사가 검색어와 얼마나 관련 있어 보이는가"가 아니라 사건으로
+    묶은 뒤 "그 사건을 몇 개 언론사·기사가, 얼마나 최근에 다뤘는가"로
+    판단해야 하므로 관련 후보를 넓게 남겨둬야 한다. 다만 전혀 안 거르면
+    Solar가 사실상 무관한 기사를 그룹에 섞어 넣는 오배정이 늘어나서,
+    최상위 점수 대비 min_score_ratio 미만인 확실한 노이즈만 가볍게
+    걸러내고 랭킹 상위 max_pool_size건으로 자른다.
     """
-    return ranked_results[:max_pool_size]
+    if not ranked_results:
+        return []
+
+    top_score = float(ranked_results[0].get("score") or 0.0)
+    score_floor = top_score * min_score_ratio
+
+    filtered = [
+        article
+        for article in ranked_results
+        if float(article.get("score") or 0.0) >= score_floor
+    ]
+
+    return filtered[:max_pool_size]
 
 
 def parse_published_datetime(published: str) -> datetime | None:
