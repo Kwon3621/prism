@@ -13,7 +13,11 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from search_engine import search_with_context  # noqa: E402
-from issue_builder import build_issue_candidates  # noqa: E402
+from issue_builder import (  # noqa: E402
+    build_candidate_from_keyword,
+    build_issue_candidates,
+    extract_query_keywords,
+)
 from analysis import create_client, analyze_issue_batch  # noqa: E402
 from compare import analyze_input_data as analyze_comparison_input  # noqa: E402
 
@@ -78,6 +82,19 @@ def search_api():
 
 @app.get("/api/issue-candidates")
 def issue_candidates_api():
+    """
+    검색어가 "정치"/"경제"/"정청래"처럼 넓거나 인물명 위주라 여러
+    사건이 섞여 나올 수 있는 경우, 먼저 extract_query_keywords()로
+    구체적 키워드를 뽑고 키워드별 비교 카드를 전부 만들어서 한 번에
+    반환한다. 키워드가 2개 이상이면 mode="keywords"로 표시해 프론트가
+    "구체화된 키워드를 선택해주세요" 화면을 보여주게 하고, 1개 이하로
+    좁혀지면(이미 구체적인 검색어라는 뜻) mode="candidates"로 바로
+    카드를 보여준다. 키워드 클릭은 새 요청 없이, 이미 받은 candidates
+    배열에서 골라 보여주면 된다.
+
+    키워드 추출 자체가 실패하거나 결과가 하나도 없으면(예: 아주
+    희귀한 검색어) build_issue_candidates()로 바로 폴백한다.
+    """
     query = str(request.args.get("q") or "").strip()
 
     if not query:
@@ -90,12 +107,49 @@ def issue_candidates_api():
 
     try:
         client = create_client()
+
+        try:
+            keyword_result = extract_query_keywords(client, query)
+            articles_by_id = keyword_result["articles_by_id"]
+
+            candidates = [
+                candidate
+                for candidate in (
+                    build_candidate_from_keyword(
+                        query,
+                        keyword_item,
+                        articles_by_id,
+                    )
+                    for keyword_item in keyword_result["keywords"]
+                )
+                if candidate is not None
+            ]
+
+            if candidates:
+                mode = "keywords" if len(candidates) > 1 else "candidates"
+
+                return jsonify(
+                    {
+                        "success": True,
+                        "query": query,
+                        "mode": mode,
+                        "candidates": candidates,
+                    }
+                )
+
+        except Exception as error:
+            app.logger.info(
+                "키워드 추출로 결과를 못 만들어 직접 검색으로 대체: %s",
+                error,
+            )
+
         result = build_issue_candidates(client, query)
 
         return jsonify(
             {
                 "success": True,
                 "query": query,
+                "mode": "candidates",
                 **result,
             }
         )

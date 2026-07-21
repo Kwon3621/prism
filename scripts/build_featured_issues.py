@@ -1,16 +1,20 @@
 """
-카테고리별 대표 쿼리로 issue_builder의 Event Grouping을 실행해,
-홈페이지 핫토픽 섹션(data/issue.json)을 생성하는 배치 스크립트.
+카테고리별로 넓은 검색어("정치"/"경제"/"사회")를 issue_builder의
+extract_query_keywords()에 먼저 넣어 그날 실제로 여러 언론사가 다루는
+구체적 키워드로 좁힌 뒤, 그 키워드마다 build_candidate_from_keyword()로
+비교 카드를 조립해 홈페이지 핫토픽 섹션(data/issue.json)을 생성하는
+배치 스크립트.
 
-개별 기사의 검색 관련도로 먼저 거르는 대신, 사건 단위로 먼저 묶은 뒤
-그 묶음을 언론사 수·기사 수·최신성 종합 점수로 평가하는
-build_ranked_event_candidates()를 쓴다 (issue_builder.py 참고).
+카테고리명을 그대로 Event Grouping에 넣던 이전 방식
+(issue_builder.build_ranked_event_candidates, 현재
+scripts/legacy/hot_topic_ranked_candidates.py로 이동)은 관련도 컷 비율을
+아무리 조정해도 오배정이 잦아서 폐기했다 — 경위는
+issue_builder.extract_query_keywords() 참고.
 
 app.js의 renderFeaturedIssue()가 카드를 클릭하면 재검색 없이 곧바로
 POST /api/issue로 넘길 수 있어야 하므로, candidate(issue_id/issue_title/
-summary/query/expanded_queries/publishers)를 그대로 저장한다.
-publishers[].articles[]에는 article_id 등 analyze_issue_batch()가
-요구하는 원본 필드가 이미 들어 있다.
+summary/query/publishers)를 그대로 저장한다. publishers[].articles[]에는
+article_id 등 analyze_issue_batch()가 요구하는 원본 필드가 이미 들어 있다.
 """
 
 from __future__ import annotations
@@ -19,7 +23,7 @@ import json
 from pathlib import Path
 
 from analysis import create_client
-from issue_builder import build_ranked_event_candidates
+from issue_builder import build_candidate_from_keyword, extract_query_keywords
 
 
 CATEGORIES = ["정치", "경제", "사회"]
@@ -35,16 +39,27 @@ def build_featured_issues() -> dict:
 
     for category in CATEGORIES:
         try:
-            result = build_ranked_event_candidates(
+            result = extract_query_keywords(
                 client,
                 category,
-                max_candidates=CANDIDATES_PER_CATEGORY,
+                max_keywords=CANDIDATES_PER_CATEGORY,
             )
         except Exception as error:
-            print(f"[{category}] 핫토픽 생성 실패: {error}")
+            print(f"[{category}] 핫토픽 키워드 추출 실패: {error}")
             continue
 
-        for candidate in result["candidates"]:
+        articles_by_id = result["articles_by_id"]
+
+        for keyword_item in result["keywords"]:
+            candidate = build_candidate_from_keyword(
+                category,
+                keyword_item,
+                articles_by_id,
+            )
+
+            if candidate is None:
+                continue
+
             issue_id = candidate["issue_id"]
 
             if issue_id in seen_issue_ids:
@@ -56,14 +71,19 @@ def build_featured_issues() -> dict:
                 {
                     **candidate,
                     "category": category,
-                    "keywords": candidate.get("expanded_queries", [])[:5],
+                    "keywords": [keyword_item["keyword"]],
+                    "publisher_count": keyword_item["publisher_count"],
+                    "article_count": keyword_item["article_count"],
                 }
             )
 
-    # 카테고리 순서가 아니라, 사건 묶음 점수(언론사 수·기사 수·최신성)가
-    # 높은 순으로 보여준다.
+    # 카테고리 순서가 아니라, 키워드 비중(언론사 수·기사 수)이 높은
+    # 순으로 보여준다.
     issues.sort(
-        key=lambda issue: issue.get("group_score", 0),
+        key=lambda issue: (
+            issue.get("publisher_count", 0),
+            issue.get("article_count", 0),
+        ),
         reverse=True,
     )
 
