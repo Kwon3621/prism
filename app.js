@@ -596,9 +596,20 @@ function normalizeFrameGroupLabel(label) {
 }
 
 
-// "미분류" 그룹인지 확인
+// 그룹화가 보류된(미분류) 그룹인지 확인.
+// analysis.py:group_publishers()가 Solar 응답에서 언론사가 누락돼 복구할
+// 때 실제로 붙이는 라벨은 "미분류"가 아니라 "개별 분류 (그룹화 보류)"라서
+// (analysis.py의 missing_publishers 복구 로직 참고), 예전엔 여기서 정확히
+// "미분류"만 확인하는 바람에 실제 보류 그룹이 회색이 아니라 무작위
+// 팔레트 색으로 표시되는 버그가 있었다. 라벨이 비어 있는 경우("미분류"
+// 폴백 표시)와 백엔드의 실제 보류 라벨을 모두 인식하도록 바로잡는다.
 function isUnclassifiedFrameGroup(label) {
-  return normalizeFrameGroupLabel(label) === "미분류";
+  const normalized = normalizeFrameGroupLabel(label);
+  return (
+    !normalized ||
+    normalized === "미분류" ||
+    normalized.includes("그룹화 보류")
+  );
 }
 
 
