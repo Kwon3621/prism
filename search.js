@@ -130,15 +130,8 @@ async function fetchAndRenderSearchResults(query, container) {
             return;
         }
 
-        const keywords = Array.isArray(data.expanded_queries)
-            ? data.expanded_queries.filter(
-                keyword => keyword !== query
-            )
-            : [];
-
         renderIssueCandidatesUI(container, {
             query: data.query || query,
-            keywords,
             candidates,
         });
 
@@ -189,7 +182,6 @@ function renderKeywordSelectionUI(container, { query, candidates }) {
 
             renderIssueCandidatesUI(container, {
                 query,
-                keywords: [],
                 candidates: [selected],
             });
         });
@@ -197,25 +189,18 @@ function renderKeywordSelectionUI(container, { query, candidates }) {
 }
 
 // 2-1. 이슈 후보 카드 렌더링 (사건당 최대 5개뿐이므로 페이지네이션/뷰토글 불필요)
-function renderIssueCandidatesUI(container, { query, keywords, candidates }) {
-    if (candidates.length === 0 && keywords.length === 0) {
+// 카드마다 그 카드에 해당하는 키워드 하나만 배지로 붙인다(renderIssueCandidateItem).
+// 카드와 무관할 수 있는 "연관 키워드" 추천 목록은 더 이상 보여주지 않는다 —
+// 키워드 선택 화면을 거치든 바로 카드로 넘어오든 항상 "카드 + 그 카드 고유의
+// 키워드"만 보이도록 일관되게 맞춘 것.
+function renderIssueCandidatesUI(container, { query, candidates }) {
+    if (candidates.length === 0) {
         container.innerHTML = `<p class="no-result">"${escapeHtml(query)}"에 대한 검색 결과가 없습니다.</p>`;
         return;
     }
 
     container.innerHTML = `
         <div class="search-results-wrapper">
-            ${keywords.length > 0 ? `
-                <div class="related-keywords">
-                    <strong>연관 키워드</strong>
-                    <div class="chip-row">
-                        ${keywords.slice(0, 6).map(k => `
-                            <button type="button" class="chip" data-run-search="${escapeHtml(k)}">#${escapeHtml(k)}</button>
-                        `).join("")}
-                    </div>
-                </div>
-            ` : ""}
-
             <div class="search-results-toolbar">
                 <span class="search-results-count">관련 이슈 ${candidates.length}건</span>
             </div>
@@ -235,12 +220,6 @@ function renderIssueCandidatesUI(container, { query, keywords, candidates }) {
                 event.preventDefault();
                 goToIssue(candidates[index]);
             }
-        });
-    });
-
-    container.querySelectorAll("[data-run-search]").forEach(el => {
-        el.addEventListener("click", () => {
-            runSearchOnPage(el.dataset.runSearch);
         });
     });
 }

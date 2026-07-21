@@ -995,9 +995,6 @@ img { max-width: 100%; display: block; }
   background: var(--bg-soft);
 }
 
-.related-keywords { margin-bottom: 20px; }
-.related-keywords strong { display: block; margin-bottom: 10px; font-size: 14px; }
-
 .keyword-select-guide { padding: 24px 0; }
 .keyword-select-guide p {
   margin: 0 0 16px;
