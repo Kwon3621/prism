@@ -780,7 +780,12 @@ function renderDetailComparisonTable(tableContainer, data) {
           </td>
           ${publishers.map(pub => {
             const detail = detailByPublisher.get(pub.publisher_id);
-            const evidence = (detail && detail.evidence) || [];
+            // 근거(evidence)는 "보도 태도·근거" 항목에만 붙인다 — 백엔드가
+            // 이미 다른 항목엔 evidence를 비워서 주지만, 예전 캐시 결과
+            // 등에 대비해 프론트에서도 한 번 더 항목을 확인한다.
+            const evidence = comparison.dimension === '보도 태도·근거'
+              ? ((detail && detail.evidence) || [])
+              : [];
             const evidenceHtml = evidence.length ? `
               <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); font-size: 12.5px; color: var(--muted); line-height: 1.5;">
                 근거: ${evidence.join(' · ')}
