@@ -961,12 +961,16 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
     renderDetailComparisonTable(tableContainer, data);
 
   } catch (error) {
+    // 백엔드가 3회 재시도 후에도 실패하면 "3회 모두 실패했습니다: ..." 같은
+    // 원시 에러 문구를 그대로 보내는데, 사용자에게는 원인 대신 다음 행동을
+    // 안내하는 편이 낫다. 자세한 에러는 콘솔에만 남긴다.
     console.error("상세 비교 렌더링 실패:", error);
     tableContainer.innerHTML = `
       <tbody>
         <tr>
           <td style="padding: 40px; text-align: center; color: var(--muted);">
-            ${error.message || "비교 분석에 실패했습니다."}
+            비교 분석에 실패했습니다.<br>
+            새로고침 후 다시 시도해 주세요.
           </td>
         </tr>
       </tbody>
