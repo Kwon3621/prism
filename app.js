@@ -887,6 +887,22 @@ function initPublisherSelector(publisherAnalyses) {
   renderDetailComparison(publisherAnalyses, selected);
 }
 
+// 언론사 조합별 /api/compare 결과를 브라우저 메모리에 기억해 둔다.
+// 백엔드(compare.py)는 이미 (issue_id + 언론사 조합) 단위로 캐싱하지만,
+// 프론트는 매번 "비교 분석 중입니다..." placeholder를 띄운 뒤 새로
+// fetch하는 구조라, 서버가 즉시 응답해도 화면에는 짧게라도 로딩이
+// 깜빡였다. 이미 본 조합은 요청 자체 없이 바로 렌더링한다.
+const detailComparisonCache = new Map();
+
+function makeDetailComparisonCacheKey(issueId, selectedAnalyses) {
+  const sortedPublisherIds = selectedAnalyses
+    .map(item => item.publisher_id)
+    .sort()
+    .join(",");
+
+  return `${issueId}|${sortedPublisherIds}`;
+}
+
 // [3단계 함수] 선택된 언론사 조합으로 /api/compare 호출 후 4대 항목 + 발행시각 테이블 렌더링
 async function renderDetailComparison(publisherAnalyses, selectedSet) {
   const tableContainer = document.getElementById('detail-compare-table');
@@ -906,6 +922,17 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
         </tr>
       </tbody>
     `;
+    return;
+  }
+
+  const cacheKey = makeDetailComparisonCacheKey(
+    selectedAnalyses[0].issue_id,
+    selectedAnalyses
+  );
+  const cached = detailComparisonCache.get(cacheKey);
+
+  if (cached) {
+    renderDetailComparisonTable(tableContainer, cached);
     return;
   }
 
@@ -930,6 +957,7 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
       throw new Error(data.error || "비교 분석에 실패했습니다.");
     }
 
+    detailComparisonCache.set(cacheKey, data);
     renderDetailComparisonTable(tableContainer, data);
 
   } catch (error) {

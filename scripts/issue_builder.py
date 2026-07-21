@@ -48,6 +48,17 @@ KEYWORD_MIN_PUBLISHER_COUNT = 2
 # 넣어도 분류 품질은 비슷했고, 프롬프트 토큰만 줄여 응답 속도가 개선됐다.
 KEYWORD_DESCRIPTION_MAX_LENGTH = 150
 
+# 미리 정의된 카테고리명은 Solar 호출의 비결정성 때문에 실행마다 살아남는
+# 키워드 수가 크게 흔들린다(실측: "정치" 5개→1개, "사회" 2개→1개→0개).
+# 검색창에 사용자가 이 카테고리명을 그대로 입력한 경우("사회" 검색 시
+# 엉뚱한 사건 카드 하나로 바로 넘어가는 문제)에도 똑같이 적용되므로,
+# 생존 키워드가 너무 적게 나오면 한 번 더 시도해서 그중 더 나은 결과를
+# 쓴다. 진짜 구체적인 검색어(예: "정청래 후원회장")까지 재시도하면 낭비라
+# 이 카테고리명일 때만 적용한다.
+BROAD_CATEGORY_QUERIES = {"정치", "경제", "사회"}
+BROAD_QUERY_MIN_SURVIVING_KEYWORDS = 2
+BROAD_QUERY_MAX_ATTEMPTS = 3
+
 
 def select_representative_articles(
     ranked_results: list[dict[str, Any]],
@@ -818,6 +829,32 @@ def extract_query_keywords(
             candidate_pool,
             articles_by_id,
         )
+
+        if normalized_query in BROAD_CATEGORY_QUERIES:
+            attempt = 1
+
+            while (
+                len(scored_keywords)
+                < BROAD_QUERY_MIN_SURVIVING_KEYWORDS
+                and attempt < BROAD_QUERY_MAX_ATTEMPTS
+            ):
+                attempt += 1
+
+                print(
+                    "[키워드 추출] 넓은 카테고리 검색어라 재시도 "
+                    f"{attempt}/{BROAD_QUERY_MAX_ATTEMPTS} "
+                    f"(생존 키워드 {len(scored_keywords)}개)"
+                )
+
+                retried_keywords = _extract_and_score_keywords(
+                    client,
+                    normalized_query,
+                    candidate_pool,
+                    articles_by_id,
+                )
+
+                if len(retried_keywords) > len(scored_keywords):
+                    scored_keywords = retried_keywords
 
         save_keyword_extraction(
             normalized_query,
