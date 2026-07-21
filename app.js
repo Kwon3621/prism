@@ -590,44 +590,253 @@ async function renderOverallCommonSummary(publisherAnalyses) {
 }
 
 // [2단계 함수] Publisher Grouping(analysis.py:group_publishers) 결과를 그대로 렌더링
+// 프레임 그룹명 비교를 위한 문자열 정리
+function normalizeFrameGroupLabel(label) {
+  return String(label || "").trim();
+}
+
+
+// "미분류" 그룹인지 확인
+function isUnclassifiedFrameGroup(label) {
+  return normalizeFrameGroupLabel(label) === "미분류";
+}
+
+
+// HEX 색상을 투명도가 포함된 rgba 문자열로 변환
+function hexToRgba(hex, alpha) {
+  const normalizedHex = String(hex || "").replace("#", "");
+
+  if (!/^[0-9a-fA-F]{6}$/.test(normalizedHex)) {
+    return `rgba(37, 99, 235, ${alpha})`;
+  }
+
+  const red = parseInt(normalizedHex.slice(0, 2), 16);
+  const green = parseInt(normalizedHex.slice(2, 4), 16);
+  const blue = parseInt(normalizedHex.slice(4, 6), 16);
+
+  return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+}
+
+
+// HSL 색상을 HEX 색상으로 변환
+function hslToHex(hue, saturation, lightness) {
+  const s = saturation / 100;
+  const l = lightness / 100;
+
+  const chroma = (1 - Math.abs(2 * l - 1)) * s;
+  const section = hue / 60;
+  const secondComponent = chroma * (1 - Math.abs((section % 2) - 1));
+
+  let red = 0;
+  let green = 0;
+  let blue = 0;
+
+  if (section >= 0 && section < 1) {
+    red = chroma;
+    green = secondComponent;
+  } else if (section >= 1 && section < 2) {
+    red = secondComponent;
+    green = chroma;
+  } else if (section >= 2 && section < 3) {
+    green = chroma;
+    blue = secondComponent;
+  } else if (section >= 3 && section < 4) {
+    green = secondComponent;
+    blue = chroma;
+  } else if (section >= 4 && section < 5) {
+    red = secondComponent;
+    blue = chroma;
+  } else if (section >= 5 && section < 6) {
+    red = chroma;
+    blue = secondComponent;
+  }
+
+  const match = l - chroma / 2;
+
+  const toHex = value => {
+    return Math.round((value + match) * 255)
+      .toString(16)
+      .padStart(2, "0");
+  };
+
+  return `#${toHex(red)}${toHex(green)}${toHex(blue)}`;
+}
+
+
+// 분류명별 색상표 생성
+function createFrameGroupColorMap(groups) {
+  // 회색 계열을 제외한 정상 분류 전용 팔레트
+  const baseColors = [
+    "#2563eb",
+    "#7c3aed",
+    "#ea580c",
+    "#0f766e",
+    "#be123c",
+    "#0891b2",
+    "#65a30d",
+    "#c026d3",
+    "#d97706",
+    "#4f46e5",
+    "#059669",
+    "#e11d48",
+  ];
+
+  // 미분류는 이 회색으로만 표시
+  const unclassifiedColor = "#94a3b8";
+
+  const normalLabels = [
+    ...new Set(
+      groups
+        .map(group => normalizeFrameGroupLabel(group.label))
+        .filter(label => label && !isUnclassifiedFrameGroup(label))
+    ),
+  ].sort((left, right) => left.localeCompare(right, "ko"));
+
+  const colorMap = new Map();
+  const usedColors = new Set();
+
+  normalLabels.forEach((label, index) => {
+    let color;
+
+    if (index < baseColors.length) {
+      color = baseColors[index];
+    } else {
+      /*
+       * 기본 팔레트보다 분류가 많으면 황금각을 이용해 추가 색상을 생성한다.
+       * 채도와 명도를 일정 범위로 유지하여 회색처럼 보이지 않도록 한다.
+       */
+      let colorIndex = index - baseColors.length;
+      let attempt = 0;
+
+      do {
+        const hue = (colorIndex * 137.508 + attempt * 29) % 360;
+        color = hslToHex(hue, 68, 44);
+        attempt += 1;
+      } while (
+        usedColors.has(color.toLowerCase()) ||
+        color.toLowerCase() === unclassifiedColor.toLowerCase()
+      );
+    }
+
+    colorMap.set(label, color);
+    usedColors.add(color.toLowerCase());
+  });
+
+  colorMap.set("미분류", unclassifiedColor);
+
+  return colorMap;
+}
+
+
+// [2단계 함수] Publisher Grouping 결과를 분류별 고유 색상으로 렌더링
 function renderFrameGroups(groups, publisherAnalyses) {
-  const container = document.getElementById('frame-group-container');
+  const container = document.getElementById("frame-group-container");
   if (!container) return;
 
-  if (!groups.length) {
-    container.innerHTML = `<p style="color: var(--muted);">보도 경향 그룹화 결과가 없습니다.</p>`;
+  if (!Array.isArray(groups) || groups.length === 0) {
+    container.innerHTML = `
+      <p style="color: var(--muted);">
+        보도 경향 그룹화 결과가 없습니다.
+      </p>
+    `;
     return;
   }
 
   const publisherNameById = new Map(
-    publisherAnalyses.map(item => [item.publisher_id, item.publisher])
+    publisherAnalyses.map(item => [
+      item.publisher_id,
+      item.publisher,
+    ])
   );
-  const colors = ["#2563eb", "#7c3aed", "#ea580c", "#0f766e", "#be123c"];
 
-  container.innerHTML = groups.map((group, index) => {
-    const themeColor = colors[index % colors.length];
+  /*
+   * 분류명 → 색상 매핑을 렌더링 전에 한 번만 만든다.
+   * 카드와 이후 범례가 생기더라도 이 매핑을 함께 사용해야 한다.
+   */
+  const frameColorMap = createFrameGroupColorMap(groups);
+
+  container.innerHTML = groups.map(group => {
+    const rawLabel = normalizeFrameGroupLabel(group.label);
+    const displayLabel = rawLabel || "미분류";
+
+    const themeColor = isUnclassifiedFrameGroup(displayLabel)
+      ? frameColorMap.get("미분류")
+      : frameColorMap.get(displayLabel);
+
     const publisherNames = (group.publisher_ids || []).map(
-      id => publisherNameById.get(id) || id
+      publisherId => publisherNameById.get(publisherId) || publisherId
     );
 
     return `
-      <div class="card" style="border-top: 5px solid ${themeColor}; background: #fff; padding: 24px; height: auto; box-shadow: var(--shadow); border-radius: 12px;">
-        <span class="badge" style="background: ${themeColor}15; color: ${themeColor}; font-weight: 800; font-size: 13px; margin-bottom: 12px; display: inline-block; border-radius: 999px; padding: 4px 12px;">
-          ${group.label}
+      <div
+        class="card"
+        data-frame-group="${displayLabel}"
+        style="
+          border-top: 5px solid ${themeColor};
+          background: #fff;
+          padding: 24px;
+          height: auto;
+          box-shadow: var(--shadow);
+          border-radius: 12px;
+        "
+      >
+        <span
+          class="badge"
+          style="
+            background: ${hexToRgba(themeColor, 0.1)};
+            color: ${themeColor};
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: inline-block;
+            border-radius: 999px;
+            padding: 4px 12px;
+          "
+        >
+          ${displayLabel}
         </span>
-        <p style="font-size: 13.5px; color: var(--text-2); margin: 10px 0 0; line-height: 1.5;">
-          ${group.summary || ''}
+
+        <p
+          style="
+            font-size: 13.5px;
+            color: var(--text-2);
+            margin: 10px 0 0;
+            line-height: 1.5;
+          "
+        >
+          ${group.summary || ""}
         </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;">
+
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+          "
+        >
           ${publisherNames.map(name => `
-            <span class="badge gray" style="font-size: 13px; padding: 6px 12px; background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; font-weight: 700; border-radius: 6px; display: inline-flex; align-items: center;">
+            <span
+              class="badge"
+              style="
+                font-size: 13px;
+                padding: 6px 12px;
+                background: ${hexToRgba(themeColor, 0.07)};
+                color: #334155;
+                border: 1px solid ${hexToRgba(themeColor, 0.28)};
+                font-weight: 700;
+                border-radius: 6px;
+                display: inline-flex;
+                align-items: center;
+              "
+            >
               ${getPublisherLogoHtml(name, 16)}${name}
             </span>
-          `).join('')}
+          `).join("")}
         </div>
       </div>
     `;
-  }).join('');
+  }).join("");
 }
 
 // [3단계 함수] 최대 4개의 언론사 칩 선택 제어
