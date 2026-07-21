@@ -740,6 +740,33 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
 // [3단계 최종 함수] compare.py 비교 결과를 4대 비교 지표 + 발행시각 가로 테이블로 매핑
 // "공통 내용"은 상단 "AI 공통 내용 요약" 카드(renderOverallCommonSummary)가 이슈 묶음
 // 전체 기준으로 이미 보여주므로, 여기서는 선택 조합별로 달라지는 4개 지표만 표로 그린다.
+// "대조" 문장 안에 등장하는 언론사 이름만 굵게 강조해서 반환
+function boldPublisherNames(text, publishers) {
+  if (!text) return '';
+  let result = escapeContrastText(text);
+
+  publishers
+    .map(pub => pub.publisher)
+    .filter(Boolean)
+    .forEach(name => {
+      const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const pattern = new RegExp(escapedName, 'g');
+      result = result.replace(pattern, `<strong>${name}</strong>`);
+    });
+
+  return result;
+}
+
+// contrast_statement는 서버가 만든 일반 문자열이므로 XSS 방지를 위해 이스케이프 후 처리
+function escapeContrastText(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function renderDetailComparisonTable(tableContainer, data) {
   const publishers = data.selected_publishers || [];
   const comparisons = data.comparisons || [];
@@ -802,11 +829,13 @@ function renderDetailComparisonTable(tableContainer, data) {
       `;
 
       if (comparison.dimension === '핵심 관점' && comparison.contrast_statement) {
+        const contrastHtml = boldPublisherNames(comparison.contrast_statement, publishers);
+
         tableHtml += `
           <tr style="border-bottom: 1px solid var(--border);">
             <td style="padding: 8px 20px; font-size: 12.5px; color: var(--muted); background: var(--bg-soft); border-right: 1px solid var(--border);">대조</td>
-            <td colspan="${publishers.length}" style="padding: 8px 20px; font-size: 13px; color: var(--muted); font-style: italic; word-break: keep-all; overflow-wrap: break-word;">
-              ${comparison.contrast_statement}
+            <td colspan="${publishers.length}" style="padding: 8px 20px; font-size: 13px; color: var(--muted); word-break: keep-all; overflow-wrap: break-word;">
+              ${contrastHtml}
             </td>
           </tr>
         `;
