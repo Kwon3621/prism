@@ -33,7 +33,7 @@ PROMPT_VERSION = "2026-07-21-tone-only-evidence"
 # issue_builder.py의 키워드 추출 프롬프트/검증 로직을 바꾸면 이 값을
 # 올린다. 위 PROMPT_VERSION과 분리한 이유는 서로 다른 프롬프트라 한쪽만
 # 바뀌어도 다른 쪽 캐시까지 전부 무효화되는 걸 피하기 위해서다.
-KEYWORD_EXTRACTION_PROMPT_VERSION = "2026-07-21-positional-index-desc150"
+KEYWORD_EXTRACTION_PROMPT_VERSION = "2026-07-21-cache-with-articles"
 
 
 def ensure_cache_directories() -> None:
