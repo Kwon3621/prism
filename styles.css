@@ -996,7 +996,13 @@ img { max-width: 100%; display: block; }
 }
 
 .related-keywords { margin-bottom: 20px; }
-.related-keywords strong { display: block; margin-bottom: 10px; font-size: 14px; }
+.related-keywords-guide {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  word-break: keep-all;
+}
 
 .keyword-select-guide { padding: 24px 0; }
 .keyword-select-guide p {
