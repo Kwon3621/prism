@@ -998,6 +998,14 @@ img { max-width: 100%; display: block; }
 .related-keywords { margin-bottom: 20px; }
 .related-keywords strong { display: block; margin-bottom: 10px; font-size: 14px; }
 
+.keyword-select-guide { padding: 24px 0; }
+.keyword-select-guide p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
   padding: 6px 12px;

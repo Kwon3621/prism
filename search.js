@@ -115,6 +115,14 @@ async function fetchAndRenderSearchResults(query, container) {
             ? data.candidates
             : [];
 
+        if (data.mode === "keywords" && candidates.length > 1) {
+            renderKeywordSelectionUI(container, {
+                query: data.query || query,
+                candidates,
+            });
+            return;
+        }
+
         const keywords = Array.isArray(data.expanded_queries)
             ? data.expanded_queries.filter(
                 keyword => keyword !== query
@@ -137,6 +145,48 @@ async function fetchAndRenderSearchResults(query, container) {
             </p>
         `;
     }
+}
+
+// 2-0. 넓은 검색어("정치"/"경제"/"정청래" 등)로 여러 사건이 섞여 나올 때,
+// 비교 카드를 바로 보여주지 않고 구체적인 키워드부터 고르게 한다.
+// 후보(candidates)는 이미 API 응답에 다 들어있으므로, 칩을 클릭해도
+// 새로 요청하지 않고 그중 하나만 골라서 보여준다.
+function renderKeywordSelectionUI(container, { query, candidates }) {
+    container.innerHTML = `
+        <div class="search-results-wrapper">
+            <div class="keyword-select-guide">
+                <p>
+                    "${escapeHtml(query)}"에 대한 구체화된 키워드입니다.
+                    원하시는 키워드를 선택해 주세요.
+                    원하시는 키워드가 없다면 검색에서 더 자세히 검색해 주세요.
+                </p>
+                <div class="chip-row">
+                    ${candidates.map((candidate, index) => `
+                        <button
+                            type="button"
+                            class="chip"
+                            data-select-keyword="${index}"
+                        >#${escapeHtml(candidate.keyword || candidate.issue_title || "")}</button>
+                    `).join("")}
+                </div>
+            </div>
+        </div>
+    `;
+
+    container.querySelectorAll("[data-select-keyword]").forEach(el => {
+        el.addEventListener("click", () => {
+            const index = Number(el.dataset.selectKeyword);
+            const selected = candidates[index];
+
+            if (!selected) return;
+
+            renderIssueCandidatesUI(container, {
+                query,
+                keywords: [],
+                candidates: [selected],
+            });
+        });
+    });
 }
 
 // 2-1. 이슈 후보 카드 렌더링 (사건당 최대 5개뿐이므로 페이지네이션/뷰토글 불필요)
