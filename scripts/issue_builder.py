@@ -880,7 +880,17 @@ def _extract_and_score_keywords(
             if article_id in articles_by_id
         ]
 
-        # 코드 레벨 안전장치 1: 키워드에 3글자 이상 구체적인 토큰이
+        # 코드 레벨 안전장치 1: 키워드가 띄어쓰기 없는 단어 하나뿐이면
+        # ("정청래"처럼 인물명 하나만) 사건·쟁점이 아니라 그냥 인물·
+        # 기관명일 가능성이 높다. 프롬프트에서 "단순히 같은 인물·기관이
+        # 등장한다는 이유만으로 묶은 키워드"는 안 된다고 명시했는데도
+        # Solar가 가끔 이 규칙을 어기는 게 실측 확인돼서, 여기서
+        # 기계적으로 거른다. 이 세션에서 확인된 정상적인 키워드는
+        # 전부 "이름 + 사건/결정"처럼 2단어 이상이었다.
+        if len(item["keyword"].split()) < 2:
+            continue
+
+        # 코드 레벨 안전장치 2: 키워드에 3글자 이상 구체적인 토큰이
         # 하나도 없으면("영업 중단"처럼 2글자 일반 명사로만 구성된
         # 경우) 대조 자체가 무의미한 수준으로 느슨해지므로, 그 키워드
         # 자체를 통째로 버린다 — 애초에 프롬프트가 요구한 "구체적
@@ -890,7 +900,7 @@ def _extract_and_score_keywords(
         if not any(len(token) >= 3 for token in keyword_tokens):
             continue
 
-        # 코드 레벨 안전장치 2: 키워드 핵심 토큰이 title/description
+        # 코드 레벨 안전장치 3: 키워드 핵심 토큰이 title/description
         # 어디에도 없는 기사는 Solar가 착각해서 끼워 넣은 것으로 보고
         # 여기서 제외한다 (LLM 재호출 없이 기계적으로 검증).
         grounded_articles = [
