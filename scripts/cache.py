@@ -23,11 +23,17 @@ else:
 
 PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
 COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
+KEYWORD_EXTRACTION_CACHE_DIR = CACHE_ROOT / "keyword_extraction"
 
 # analysis.py/compare.py의 Solar 프롬프트나 검증 로직을 바꾸면 이 값을
 # 올린다. 캐시 키에 포함시켜서, 예전 프롬프트로 만들어진 결과가 새 로직
 # 적용 후에도 그대로 재사용되는 것을 막는다.
 PROMPT_VERSION = "2026-07-20-evidence-required"
+
+# issue_builder.py의 키워드 추출 프롬프트/검증 로직을 바꾸면 이 값을
+# 올린다. 위 PROMPT_VERSION과 분리한 이유는 서로 다른 프롬프트라 한쪽만
+# 바뀌어도 다른 쪽 캐시까지 전부 무효화되는 걸 피하기 위해서다.
+KEYWORD_EXTRACTION_PROMPT_VERSION = "2026-07-21-positional-index-desc150"
 
 
 def ensure_cache_directories() -> None:
@@ -40,6 +46,11 @@ def ensure_cache_directories() -> None:
     )
 
     COMPARISON_CACHE_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    KEYWORD_EXTRACTION_CACHE_DIR.mkdir(
         parents=True,
         exist_ok=True,
     )
@@ -299,6 +310,99 @@ def save_comparison(
         "publisher_ids": sorted(
             publisher_ids
         ),
+        "created_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "result": result,
+    }
+
+    _write_cache_file(
+        cache_path,
+        cache_data,
+    )
+
+    return cache_path
+
+def make_keyword_extraction_cache_key(
+    query: str,
+    data_version: str,
+) -> str:
+    """
+    키워드 추출 결과의 캐시 키를 만든다.
+
+    data_version(records.json 수정 시각)이 바뀌면 새 뉴스가 들어왔다는
+    뜻이므로 키가 달라져 예전 캐시를 자동으로 무효화한다.
+    """
+    return make_cache_key(
+        "keyword-extraction",
+        KEYWORD_EXTRACTION_PROMPT_VERSION,
+        data_version,
+        str(query or "").strip().lower(),
+    )
+
+
+def get_keyword_extraction(
+    query: str,
+    data_version: str,
+) -> dict | None:
+    """
+    저장된 키워드 추출 결과를 조회한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_keyword_extraction_cache_key(
+        query,
+        data_version,
+    )
+
+    cache_path = (
+        KEYWORD_EXTRACTION_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cached_data = _read_cache_file(
+        cache_path
+    )
+
+    if not cached_data:
+        return None
+
+    result = cached_data.get("result")
+
+    if not isinstance(result, dict):
+        return None
+
+    return result
+
+
+def save_keyword_extraction(
+    query: str,
+    data_version: str,
+    result: dict,
+) -> Path:
+    """
+    키워드 추출 결과를 캐시에 저장한다.
+
+    articles_by_id처럼 매번 새로 조회 가능한 무거운 데이터는 저장하지
+    않고, Solar가 실제로 판단한 부분(keywords 목록)만 저장한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_keyword_extraction_cache_key(
+        query,
+        data_version,
+    )
+
+    cache_path = (
+        KEYWORD_EXTRACTION_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cache_data = {
+        "cache_type": "keyword_extraction",
+        "cache_key": cache_key,
+        "query": query,
+        "data_version": data_version,
         "created_at": datetime.now(
             timezone.utc
         ).isoformat(),

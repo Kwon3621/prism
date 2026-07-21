@@ -260,6 +260,25 @@ def get_vector_collection(
     return _collection_cache[cache_key]
 
 
+def get_records_data_version(
+    db_path: Path | str = DEFAULT_DB_PATH,
+) -> str:
+    """
+    records.json의 수정 시각을 데이터 버전 마커로 반환한다.
+
+    RSS 배치가 새로 돌아 이 파일이 갱신되면 값이 바뀐다 — 검색 결과를
+    쿼리 문자열만으로 캐싱하면 새 기사가 들어와도 예전 분류 결과가 계속
+    재사용될 수 있어서, 이 마커를 캐시 키에 포함시켜 데이터가 바뀌면
+    캐시가 자동으로 무효화되게 한다.
+    """
+    records_path = Path(db_path) / RECORDS_FILENAME
+
+    try:
+        return str(records_path.stat().st_mtime_ns)
+    except OSError:
+        return "unknown"
+
+
 def build_article_metadata(
     article: dict[str, Any],
 ) -> dict[str, str]:
