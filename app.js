@@ -929,9 +929,9 @@ async function renderFeaturedIssue() {
             <span class="eyebrow">${issue.category || '종합'}</span>
             <h3 style="margin: 12px 0 10px; font-size: 18px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; overflow-wrap: break-word; min-height: 50px;">${issue.issue_title}</h3>
             <p style="font-size: 14px; color: var(--text-2); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; word-break: keep-all; overflow-wrap: break-word; min-height: 67px; margin-bottom: 16px;">${issue.summary || '요약 준비 중입니다.'}</p>
-            <div class="card-footer" style="margin-top: auto; padding-top: 0; display: flex; justify-content: flex-end;">              <a class="btn btn-primary" data-featured-issue-index="${idx}" href="compare.html?issue_id=${encodeURIComponent(issue.issue_id)}" style="width: 100%; text-align: center;">
+            <div class="card-footer" style="margin-top: auto; padding-top: 0; display: flex; justify-content: flex-end;">
               <a class="btn btn-primary" data-featured-issue-index="${idx}" href="compare.html?issue_id=${encodeURIComponent(issue.issue_id)}&q=${encodeURIComponent(issue.issue_title)}" style="width: 100%; text-align: center;">
-            프레임 비교 보기
+                프레임 비교 보기
               </a>
             </div>
           </article>
