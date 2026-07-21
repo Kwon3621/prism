@@ -773,24 +773,20 @@ def extract_query_keywords(
     if not normalized_query:
         raise ValueError("검색어가 비어 있습니다.")
 
-    search_context = search_with_context(normalized_query)
-    ranked_results = search_context.get("results", [])
-    candidate_pool = ranked_results[:KEYWORD_EXTRACTION_POOL_SIZE]
-
-    if len(candidate_pool) < 2:
-        raise ValueError(
-            "이 검색어로는 키워드를 추출할 기사가 부족합니다."
-        )
-
-    articles_by_id = {
-        article["article_id"]: article
-        for article in candidate_pool
-    }
-
     # 같은 검색어가 반복 요청되는 경우(인기 검색어, 핫토픽 카테고리 등)
     # Solar 호출(요청당 6~12초) 자체를 건너뛴다. records.json이 갱신되기
     # 전까지만 유효하도록 data_version을 키에 포함시킨다 — 새 기사가
     # 들어오면 자동으로 무효화된다.
+    #
+    # 캐시에는 article_id뿐 아니라 그 시점에 실제로 쓰인 기사 원본까지
+    # 통째로 저장한다(_build_keyword_cache_payload). 처음엔 article_id만
+    # 저장하고 캐시 히트 때도 매번 search_with_context()를 다시 불러
+    # articles_by_id를 새로 만들었는데, 이 재검색(특히 내부 쿼리 확장)이
+    # data_version이 그대로여도 완전히 결정적이지 않아서 캐시가 가리키는
+    # article_id 일부가 새 후보 풀에서 통째로 빠지는 경우가 실측됐다
+    # (대표 기사를 0명 뽑아 카드 생성이 실패하고 예전 방식 폴백으로
+    # 새는 원인이었다). 기사 원본을 캐시에 같이 넣어두면 캐시 히트 시
+    # 재검색 자체가 필요 없어져서 이 문제가 근본적으로 사라진다.
     data_version = get_records_data_version()
     cached_result = get_keyword_extraction(
         normalized_query,
@@ -798,8 +794,24 @@ def extract_query_keywords(
     )
 
     if cached_result is not None:
-        scored_keywords = cached_result.get("keywords", [])
+        scored_keywords, articles_by_id = _rehydrate_cached_keywords(
+            cached_result
+        )
     else:
+        search_context = search_with_context(normalized_query)
+        ranked_results = search_context.get("results", [])
+        candidate_pool = ranked_results[:KEYWORD_EXTRACTION_POOL_SIZE]
+
+        if len(candidate_pool) < 2:
+            raise ValueError(
+                "이 검색어로는 키워드를 추출할 기사가 부족합니다."
+            )
+
+        articles_by_id = {
+            article["article_id"]: article
+            for article in candidate_pool
+        }
+
         scored_keywords = _extract_and_score_keywords(
             client,
             normalized_query,
@@ -810,7 +822,10 @@ def extract_query_keywords(
         save_keyword_extraction(
             normalized_query,
             data_version,
-            {"keywords": scored_keywords},
+            _build_keyword_cache_payload(
+                scored_keywords,
+                articles_by_id,
+            ),
         )
 
     return {
@@ -818,6 +833,84 @@ def extract_query_keywords(
         "keywords": scored_keywords[:max_keywords],
         "articles_by_id": articles_by_id,
     }
+
+
+def _build_keyword_cache_payload(
+    scored_keywords: list[dict[str, Any]],
+    articles_by_id: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    """
+    캐시에 저장할 형태로 변환한다. article_id만으로는 나중에 재검색
+    없이 카드를 못 만드니, 그 키워드가 실제로 가리키는 기사 원본을
+    함께 담는다.
+    """
+    return {
+        "keywords": [
+            {
+                "keyword": item["keyword"],
+                "summary": item["summary"],
+                "article_count": item["article_count"],
+                "publisher_count": item["publisher_count"],
+                "articles": [
+                    articles_by_id[article_id]
+                    for article_id in item["article_ids"]
+                    if article_id in articles_by_id
+                ],
+            }
+            for item in scored_keywords
+        ]
+    }
+
+
+def _rehydrate_cached_keywords(
+    cached_result: dict[str, Any],
+) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]]]:
+    """
+    캐시된 결과(기사 원본 포함)에서 scored_keywords/articles_by_id를
+    재구성한다. 재검색 없이 그대로 build_candidate_from_keyword()에
+    넘길 수 있는 형태로 만든다.
+    """
+    scored_keywords = []
+    articles_by_id: dict[str, dict[str, Any]] = {}
+
+    for item in cached_result.get("keywords", []):
+        articles = item.get("articles", [])
+        article_ids = []
+
+        for article in articles:
+            article_id = article.get("article_id")
+
+            if not article_id:
+                continue
+
+            articles_by_id[article_id] = article
+            article_ids.append(article_id)
+
+        if len(article_ids) < 2:
+            continue
+
+        scored_keywords.append(
+            {
+                "keyword": item.get("keyword"),
+                "summary": item.get("summary"),
+                "article_ids": article_ids,
+                "article_count": item.get(
+                    "article_count",
+                    len(article_ids),
+                ),
+                "publisher_count": item.get(
+                    "publisher_count",
+                    len(
+                        {
+                            a.get("publisher_id")
+                            for a in articles
+                        }
+                    ),
+                ),
+            }
+        )
+
+    return scored_keywords, articles_by_id
 
 
 def _extract_and_score_keywords(
