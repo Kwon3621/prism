@@ -643,7 +643,7 @@ function renderFrameGroups(groups, publisherAnalyses) {
     return `
       <div class="card" style="border-top: 5px solid ${themeColor}; background: #fff; padding: 24px; height: auto; box-shadow: var(--shadow); border-radius: 12px;">
         <span class="badge" style="background: ${themeColor}15; color: ${themeColor}; font-weight: 800; font-size: 13px; margin-bottom: 12px; display: inline-block; border-radius: 999px; padding: 4px 12px;">
-          논조 분류: ${group.label}
+          ${group.label}
         </span>
         <p style="font-size: 13.5px; color: var(--text-2); margin: 10px 0 0; line-height: 1.5;">
           ${group.summary || ''}
