@@ -23,7 +23,9 @@ from analysis import (
     clean_string,
     request_solar_analysis,
 )
+from cache import get_keyword_extraction, save_keyword_extraction
 from search_engine import search_with_context
+from vector_store import get_records_data_version
 
 
 DEFAULT_PUBLISHER_LIMIT = 6
@@ -42,6 +44,9 @@ MAXIMUM_KEYWORD_COUNT = 8
 # 한 언론사만 다룬 키워드는 "여러 언론사가 다루는 구체적 사건"이 아니므로
 # 후보에서 제외한다 (build_issue_candidates의 2곳 이상 기준과 동일한 원칙).
 KEYWORD_MIN_PUBLISHER_COUNT = 2
+# 프롬프트에 넣는 기사 설명(description) 길이 상한. 실측 결과 전체 길이를
+# 넣어도 분류 품질은 비슷했고, 프롬프트 토큰만 줄여 응답 속도가 개선됐다.
+KEYWORD_DESCRIPTION_MAX_LENGTH = 150
 
 
 def select_representative_articles(
@@ -538,13 +543,16 @@ def build_event_keyword_prompt(
     확인됐다(예: 두 실제 id의 뒷부분이 짜깁기된 값). 숫자는 긴 해시보다
     훨씬 안정적으로 재현되므로, article_id 대신 1부터 시작하는 번호로
     인용하게 하고 코드에서 번호→article_id로 역매핑한다.
+
+    설명(description)은 150자로 자른다 — 실측 결과 전체 길이를 다 넣어도
+    분류 품질은 비슷했고, 프롬프트 토큰만 줄여서 응답 속도를 개선한다.
     """
     articles_text = "\n\n====================\n\n".join(
         f"""
 번호: {index}
 언론사: {article.get("publisher", "")}
 제목: {article.get("title", "")}
-설명: {article.get("description", "")}
+설명: {(article.get("description", "") or "")[:KEYWORD_DESCRIPTION_MAX_LENGTH]}
 """.strip()
         for index, article in enumerate(articles, start=1)
     )
@@ -699,29 +707,25 @@ def validate_extracted_keywords(
     return normalized_keywords
 
 
-# 키워드 토큰 대조 필터에서 무시할 범용 단어. 이런 단어만 남으면 어떤
-# 기사와도 "겹친다"고 나와 필터가 무력화되므로 제외한다.
-_KEYWORD_TOKEN_STOPWORDS = {
-    "논란", "발언", "정치", "경제", "사회", "관련", "비판", "주장",
-    "추진", "우려", "대응", "강조", "폐지", "규제", "결정", "요구",
-}
-
-
 def keyword_search_tokens(keyword: str) -> list[str]:
     """
-    키워드 문자열에서 대조에 쓸 핵심 토큰만 남긴다. 공백으로만
-    나누는 단순한 방식이지만, LLM 호출 없이 기계적으로 검증할 수 있는
-    최소한의 안전장치로는 충분하다.
-    """
-    tokens = [
-        token
-        for token in keyword.split()
-        if len(token) >= 2 and token not in _KEYWORD_TOKEN_STOPWORDS
-    ]
+    키워드 문자열에서 대조에 쓸 핵심 토큰만 남긴다.
 
-    return tokens or [
-        token for token in keyword.split() if len(token) >= 2
-    ] or keyword.split()
+    "영업 중단"의 "영업"/"중단"처럼 흔한 2글자 일반 명사는 무관한
+    기사에도 우연히 등장해서 대조 필터를 무력화시킨다(실측 확인 —
+    "홈플러스" 검색에서 인사 발령 기사가 "영업 중단" 키워드에 잘못
+    끼어듦). 개별 단어를 일일이 블랙리스트에 올리는 대신, 구체적인
+    고유명사·사건명은 대부분 3글자 이상이라는 점을 이용해 3글자 이상
+    토큰을 우선 쓴다. 그런 토큰이 하나도 없을 때만 2글자 토큰으로,
+    그마저 없으면 원본 그대로 폴백한다.
+    """
+    words = keyword.split()
+
+    return (
+        [word for word in words if len(word) >= 3]
+        or [word for word in words if len(word) >= 2]
+        or words
+    )
 
 
 def article_matches_keyword_tokens(
@@ -778,15 +782,58 @@ def extract_query_keywords(
             "이 검색어로는 키워드를 추출할 기사가 부족합니다."
         )
 
-    prompt = build_event_keyword_prompt(
-        normalized_query,
-        candidate_pool,
-    )
-
     articles_by_id = {
         article["article_id"]: article
         for article in candidate_pool
     }
+
+    # 같은 검색어가 반복 요청되는 경우(인기 검색어, 핫토픽 카테고리 등)
+    # Solar 호출(요청당 6~12초) 자체를 건너뛴다. records.json이 갱신되기
+    # 전까지만 유효하도록 data_version을 키에 포함시킨다 — 새 기사가
+    # 들어오면 자동으로 무효화된다.
+    data_version = get_records_data_version()
+    cached_result = get_keyword_extraction(
+        normalized_query,
+        data_version,
+    )
+
+    if cached_result is not None:
+        scored_keywords = cached_result.get("keywords", [])
+    else:
+        scored_keywords = _extract_and_score_keywords(
+            client,
+            normalized_query,
+            candidate_pool,
+            articles_by_id,
+        )
+
+        save_keyword_extraction(
+            normalized_query,
+            data_version,
+            {"keywords": scored_keywords},
+        )
+
+    return {
+        "query": normalized_query,
+        "keywords": scored_keywords[:max_keywords],
+        "articles_by_id": articles_by_id,
+    }
+
+
+def _extract_and_score_keywords(
+    client: OpenAI,
+    normalized_query: str,
+    candidate_pool: list[dict[str, Any]],
+    articles_by_id: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """
+    extract_query_keywords()의 캐시 미스 경로 — 실제로 Solar를 호출해
+    키워드를 뽑고 검증·병합·채점까지 마친 최종 목록을 반환한다.
+    """
+    prompt = build_event_keyword_prompt(
+        normalized_query,
+        candidate_pool,
+    )
 
     last_error = None
     raw_keywords = None
@@ -833,10 +880,19 @@ def extract_query_keywords(
             if article_id in articles_by_id
         ]
 
-        # 코드 레벨 안전장치: 키워드 핵심 토큰이 title/description
+        # 코드 레벨 안전장치 1: 키워드에 3글자 이상 구체적인 토큰이
+        # 하나도 없으면("영업 중단"처럼 2글자 일반 명사로만 구성된
+        # 경우) 대조 자체가 무의미한 수준으로 느슨해지므로, 그 키워드
+        # 자체를 통째로 버린다 — 애초에 프롬프트가 요구한 "구체적
+        # 사건명"이 아니라는 뜻이다.
+        keyword_tokens = keyword_search_tokens(item["keyword"])
+
+        if not any(len(token) >= 3 for token in keyword_tokens):
+            continue
+
+        # 코드 레벨 안전장치 2: 키워드 핵심 토큰이 title/description
         # 어디에도 없는 기사는 Solar가 착각해서 끼워 넣은 것으로 보고
         # 여기서 제외한다 (LLM 재호출 없이 기계적으로 검증).
-        keyword_tokens = keyword_search_tokens(item["keyword"])
         grounded_articles = [
             article
             for article in matched_articles
@@ -899,11 +955,7 @@ def extract_query_keywords(
         reverse=True,
     )
 
-    return {
-        "query": normalized_query,
-        "keywords": scored_keywords[:max_keywords],
-        "articles_by_id": articles_by_id,
-    }
+    return scored_keywords
 
 
 def build_candidate_from_keyword(
