@@ -155,10 +155,12 @@ function renderIssueCandidatesUI(container, { query, keywords, candidates }) {
 
     container.innerHTML = `
         <div class="search-results-wrapper">
-            ${keywords.length > 0 ? `
-                <div class="related-keywords">
-                    <strong>연관 키워드</strong>
-                    <div class="chip-row">
+        ${keywords.length > 0 ? `
+            <div class="related-keywords">
+                <p class="related-keywords-guide">
+                    '${escapeHtml(query)}' 검색 결과와 관련된 키워드입니다. 원하는 키워드를 선택하거나, 검색어를 더 구체적으로 입력해 보세요.
+                </p>
+                <div class="chip-row">
                         ${keywords.slice(0, 6).map(k => `
                             <button type="button" class="chip" data-run-search="${escapeHtml(k)}">#${escapeHtml(k)}</button>
                         `).join("")}
