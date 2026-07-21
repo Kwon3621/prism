@@ -1118,3 +1118,8 @@ img { max-width: 100%; display: block; }
 @keyframes prism-spin {
   to { transform: rotate(360deg); }
 }
+
+/* hero 섹션 밖으로 나온 검색 결과 영역의 위아래 여백 */
+#search-results.container {
+  padding: 32px 0 60px;
+}
