@@ -140,8 +140,8 @@ async function fetchAndRenderSearchResults(query, container) {
 
         container.innerHTML = `
             <p class="no-result">
-                검색 중 오류가 발생했습니다.
-                ${escapeHtml(error.message)}
+                검색하신 키워드에 대한 기사를 찾을 수 없거나, 일시적인 오류가 발생했습니다.<br>
+                다른 키워드로 검색하거나 잠시 후 다시 시도해 주세요.
             </p>
         `;
     }

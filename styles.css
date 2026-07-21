@@ -1093,7 +1093,12 @@ img { max-width: 100%; display: block; }
 
 .search-results-more { text-align: center; margin-top: 20px; }
 
-.no-result { color: var(--muted); padding: 20px 0; }
+.no-result {
+  color: var(--muted);
+  padding: 20px 0;
+  line-height: 1.7;
+  word-break: keep-all;
+}
 
 @media (max-width: 900px) {
   .search-results-grid.is-card { grid-template-columns: repeat(2, minmax(0, 1fr)); }
