@@ -1119,7 +1119,8 @@ img { max-width: 100%; display: block; }
   to { transform: rotate(360deg); }
 }
 
-/* hero 섹션 밖으로 나온 검색 결과 영역의 위아래 여백 */
-#search-results.container {
-  padding: 32px 0 60px;
-}
+/* 검색 결과가 있을 때는 hero 하단 고정 여백을 줄여
+   콘텐츠 길이에 맞게 자동으로 딱 맞도록 한다. (파란 배경/그라데이션은 유지) */
+   .hero.hero-centered.has-search-results {
+    padding-bottom: 40px;
+  }

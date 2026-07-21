@@ -75,20 +75,8 @@ function initSearchBehavior() {
 function createResultsContainer(form) {
     const container = document.createElement('div');
     container.id = 'search-results';
-
-    // hero 섹션 안에 결과를 넣으면 hero의 고정 padding-bottom(82px)과
-    // 배경 장식(::after 원)까지 함께 늘어나 불필요한 여백이 생긴다.
-    // 그래서 가능하면 hero 섹션 "바깥"에 결과를 붙인다.
-    const parentSection = form.closest('section');
-    if (parentSection && parentSection.parentNode) {
-        container.className = 'container';
-        parentSection.parentNode.insertBefore(container, parentSection.nextSibling);
-    } else {
-        // section 밖에 있는 폼(검색 페이지 등)이면 기존 방식 그대로.
-        container.style.marginTop = '15px';
-        form.parentNode.insertBefore(container, form.nextSibling);
-    }
-
+    container.style.marginTop = '15px';
+    form.parentNode.insertBefore(container, form.nextSibling);
     return container;
 }
 
@@ -104,6 +92,13 @@ function runSearchOnPage(query) {
 
 // 2. 검색어를 사건·쟁점 단위 이슈 후보(Event Group)로 묶어서 매칭
 async function fetchAndRenderSearchResults(query, container) {
+    // 검색 결과가 채워지면 hero의 고정 하단 여백(82px)을 줄여
+    // 콘텐츠 길이에 맞게 자동으로 조정되도록 한다.
+    const heroSection = container.closest('.hero');
+    if (heroSection) {
+        heroSection.classList.add('has-search-results');
+    }
+
     container.innerHTML = `
     <div class="search-loading" style="text-align:center; padding: 60px 20px; color: var(--muted);">
         <div class="search-loading-spinner"></div>
