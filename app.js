@@ -343,6 +343,22 @@ function formatPublishedTime(value) {
   });
 }
 
+// [공유 링크 복구용] sessionStorage가 비어있을 때 data/issue.json에서
+// issue_id로 이슈를 다시 찾아온다. 홈 화면 핫토픽 카드를 공유한 링크를
+// 새 탭/다른 브라우저에서 열었을 때를 위한 fallback.
+async function findFeaturedIssueById(issueId) {
+  try {
+    const response = await fetch('./data/issue.json');
+    if (!response.ok) return null;
+    const db = await response.json();
+    const issues = db.issues || [];
+    return issues.find(issue => issue.issue_id === issueId) || null;
+  } catch (error) {
+    console.error('issue.json에서 이슈를 찾지 못했습니다.', error);
+    return null;
+  }
+}
+
 // [0단계] compare.html 진입 시 어떤 이슈를 분석할지 결정
 // search.js에서 이슈 카드를 클릭하면 sessionStorage에 후보 전체가 담겨
 // issue_id와 함께 넘어온다. issue_id만 있고 sessionStorage가 비어 있으면
@@ -376,11 +392,25 @@ async function renderComparePage() {
     } catch (error) {
       handoffCandidate = null;
     }
+
+    // sessionStorage가 비어있는 경우 (공유 링크를 새 탭이나 다른 브라우저에서
+    // 직접 열었을 때) 홈 화면 핫토픽 데이터(data/issue.json)에서 issue_id로
+    // 다시 찾아본다. 그래야 "공유하기"로 복사한 링크가 실제로 동작한다.
+    if (!handoffCandidate) {
+      if (titleEl) titleEl.textContent = "이슈 정보를 불러오는 중입니다...";
+      handoffCandidate = await findFeaturedIssueById(issueIdParam);
+    }
   }
 
   if (handoffCandidate) {
     if (analysisSections) analysisSections.style.display = '';
     await runIssueAnalysis(handoffCandidate);
+    return;
+  }
+
+  if (issueIdParam && !q) {
+    if (titleEl) titleEl.textContent = "이슈를 찾을 수 없습니다.";
+    if (summaryEl) summaryEl.textContent = "공유된 링크의 이슈 정보를 더 이상 찾을 수 없습니다. 홈 화면에서 다시 검색해 주세요.";
     return;
   }
 
