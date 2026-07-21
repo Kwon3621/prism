@@ -156,9 +156,8 @@ function renderKeywordSelectionUI(container, { query, candidates }) {
         <div class="search-results-wrapper">
             <div class="keyword-select-guide">
                 <p>
-                    "${escapeHtml(query)}"에 대한 구체화된 키워드입니다.
-                    원하시는 키워드를 선택해 주세요.
-                    원하시는 키워드가 없다면 검색에서 더 자세히 검색해 주세요.
+                    '${escapeHtml(query)}' 검색 결과와 관련된 키워드입니다.
+                    원하는 키워드를 선택하거나, 검색어를 더 구체적으로 입력해 보세요.
                 </p>
                 <div class="chip-row">
                     ${candidates.map((candidate, index) => `
