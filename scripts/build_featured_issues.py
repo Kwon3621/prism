@@ -66,6 +66,71 @@ MAX_COMBO_RETRY_ATTEMPTS = 3
 # 결과가 나올 때까지 몇 번 더 시도해본다.
 MAX_GROUPING_RETRIES = 5
 
+# compare_publishers()는 overall_difference="판단 어려움"이면 실시간
+# 요청에서도 1회는 자체적으로 재시도하지만(compare.py 참고), 그래도
+# 여전히 판단 어려움이면 실시간에서는 API 사용량·응답 지연 때문에 더
+# 반복하지 않는다. "이슈 전체" 조합(공통 내용 요약 카드에 쓰임)만큼은
+# 그룹화 보류와 같은 수준으로, 배치 시점에 한해 몇 번 더 시도해서 더
+# 결정적인 결과가 정적 데이터로 남게 한다. 조합이 최대 50개까지 나올 수
+# 있는 상세 대조표 조합에는 적용하지 않는다 — 비용 대비 이득이 낮다.
+MAX_SUMMARY_QUALITY_RETRIES = 5
+
+
+def _regenerate_comparison_until_decisive(
+    client,
+    combo: list[dict],
+    max_attempts: int = MAX_SUMMARY_QUALITY_RETRIES,
+) -> dict:
+    """
+    "이슈 전체" 조합의 비교 결과가 판단 어려움이면, 더 결정적인 결과가
+    나오거나 시도 횟수를 다 쓸 때까지 완전히 새로 재생성한다
+    (build_complete_grouping과 같은 방식). 매번 use_cache=False로 캐시를
+    건너뛰어야 Solar를 다시 불러 다른 결과를 얻을 여지가 생긴다.
+    """
+    combo_key = ",".join(
+        sorted(item["publisher_id"] for item in combo)
+    )
+
+    best_result: dict | None = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            result = compare_publishers(
+                client=client,
+                publisher_analyses=combo,
+                use_cache=False,
+            )
+        except Exception as error:
+            print(
+                f"    [공통 요약 재시도] {combo_key} "
+                f"{attempt}/{max_attempts} 호출 실패: {error}"
+            )
+            continue
+
+        if result.get("overall_difference") != "판단 어려움":
+            return result
+
+        if best_result is None:
+            best_result = result
+
+        print(
+            f"    [공통 요약 재시도] {combo_key} "
+            f"{attempt}/{max_attempts}: 여전히 판단 어려움, 다시 시도"
+        )
+
+    print(
+        f"    [공통 요약] {combo_key}: {max_attempts}회 시도해도 "
+        "판단 어려움이 남아 마지막 결과를 사용합니다."
+    )
+
+    if best_result is not None:
+        return best_result
+
+    raise RuntimeError(
+        f"{combo_key} 조합의 공통 요약을 "
+        f"{max_attempts}회 모두 생성하지 못했습니다."
+    )
+
 
 def _compare_combo_with_retries(
     client,
@@ -133,19 +198,30 @@ def build_precomputed_comparisons(
         for combo in itertools.combinations(publisher_analyses, size)
     }
 
+    # "이슈 전체" 조합(공통 내용 요약에 쓰이는 조합)만 판단 어려움 재시도를
+    # 추가로 적용한다. 나머지 상세 대조표 조합(최대 50개)까지 다 적용하면
+    # 비용 대비 이득이 낮다.
+    full_combo_key = ",".join(
+        sorted(item["publisher_id"] for item in publisher_analyses)
+    )
+
     comparisons: dict[str, dict] = {}
 
     with ThreadPoolExecutor(
         max_workers=min(len(combos_by_key), MAX_COMPARISON_WORKERS)
     ) as executor:
-        future_to_key = {
-            executor.submit(
-                _compare_combo_with_retries,
-                client,
-                combo,
-            ): combo_key
-            for combo_key, combo in combos_by_key.items()
-        }
+        future_to_key = {}
+
+        for combo_key, combo in combos_by_key.items():
+            worker = (
+                _regenerate_comparison_until_decisive
+                if combo_key == full_combo_key
+                else _compare_combo_with_retries
+            )
+
+            future_to_key[
+                executor.submit(worker, client, combo)
+            ] = combo_key
 
         for future in as_completed(future_to_key):
             combo_key = future_to_key[future]
