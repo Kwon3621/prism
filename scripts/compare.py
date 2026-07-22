@@ -710,21 +710,36 @@ def validate_comparison_result(
             )
 
         if dimension == EVIDENCE_REQUIRED_DIMENSION:
-            for detail in normalized_details:
-                # difference_level이 "판단 어려움"이 아니라면, 그 판단에
-                # 쓰인 evidence가 언론사마다 최소 1개는 있어야 한다.
-                # summary(태도)만 쓰고 evidence를 비워두는 응답을 여기서
-                # 걸러 재시도시킨다.
+            # difference_level이 "판단 어려움"이 아니라면, 그 판단에 쓰인
+            # evidence가 언론사마다 최소 1개는 있어야 한다는 게 원래
+            # 의도였다. 예전엔 이걸 어기면 통째로 예외를 던져 재시도시켰는데,
+            # 실측 결과 특정 언론사 기사에 애초에 인용할 만한 "보도 태도"
+            # 표현 자체가 없어서 재시도해도 계속 실패하는 경우가 있었다
+            # (예: 동아일보 기사에 근거로 쓸 문구가 없어 5번을 재시도해도
+            # 안 됨). 그 한 항목 때문에 이미 잘 나온 common_summary까지
+            # 포함한 전체 응답이 통째로 날아가는 게 더 문제라, 이제는
+            # 예외 대신 이 항목의 difference_level만 "판단 어려움"으로
+            # 낮추고 나머지는 그대로 살린다.
+            missing_evidence_publishers = [
+                detail["publisher"]
+                for detail in normalized_details
                 if (
                     difference_level != "판단 어려움"
                     and not detail["evidence"]
-                ):
-                    raise ValueError(
-                        f"'{dimension}' 항목의 "
-                        f"{detail['publisher']} evidence가 "
-                        "비어 있습니다."
-                    )
+                )
+            ]
 
+            if missing_evidence_publishers:
+                print(
+                    f"[비교 검증] '{dimension}' 항목의 "
+                    f"{', '.join(missing_evidence_publishers)} evidence가 "
+                    "비어 있어 difference_level을 '판단 어려움'으로 "
+                    "낮춥니다."
+                )
+
+                difference_level = "판단 어려움"
+
+            for detail in normalized_details:
                 # summary는 "이 언론사가 보인 태도"를 설명해야지, 기사
                 # 제목을 그대로 옮겨서는 안 된다(프롬프트에 명시했지만
                 # 실측 결과 모델이 종종 어김 — summary와 evidence가
