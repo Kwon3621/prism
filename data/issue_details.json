@@ -1,8 +1,435 @@
 {
-  "issue-b47b40e1d487b84d": {
+  "issue-712791d586b11e3d": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-b47b40e1d487b84d",
+        "issue_id": "issue-712791d586b11e3d",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "906daa688a4680e06bc18a60cb38358d1e3f3251fa336655f62132e1e1781783",
+            "title": "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+            "published_at": "Mon, 20 Jul 2026 11:59:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134327305/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "정청래 전 대표가 검찰 보완수사권 폐지 필요성을 강조하며 중도층 확보보다 당 지지층 결집을 우선시해야 한다고 주장했고, 김민석 전 국무총리는 이를 비판하며 반명 심판을 요구했다.",
+          "headline_frame": "정청래 전 대표의 검찰개혁 발언과 당내 갈등 구도",
+          "main_focus": "정청래 전 대표의 검찰 보완수사권 폐지 주장과 당내 친명계와의 갈등",
+          "primary_frame": {
+            "category": "검찰개혁",
+            "stance": "필요성 강조",
+            "target": "검찰 보완수사권",
+            "summary": "정청래 전 대표는 검찰 보완수사권 전면 폐지가 이뤄지지 않으면 총선·대선이 무망하다고 주장하며 검찰개혁의 시급성을 강조했다.",
+            "evidence": [
+              "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+              "정 전 대표는 20일 MBC라디오에서 “검찰 보완수사권 전면 폐지가 이뤄지지 않으면 10% 꼬리에 몸통 전체가"
+            ]
+          },
+          "keywords": [
+            "검찰 보완수사권",
+            "정청래",
+            "김민석",
+            "전당대회",
+            "검찰개혁"
+          ],
+          "main_actors": [
+            "정청래",
+            "김민석",
+            "송영길"
+          ],
+          "quoted_sources": [
+            "MBC라디오"
+          ],
+          "causes": [
+            "검찰 보완수사권 미폐지"
+          ],
+          "background": [
+            "더불어민주당 8·17 전당대회",
+            "유시민 작가의 재건축론 비판"
+          ],
+          "emphasized_effects": [
+            "총선·대선 무망"
+          ],
+          "affected_groups": [
+            "더불어민주당 당 지지층"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+              "정 전 대표는 20일 MBC라디오에서 “검찰 보완수사권 전면 폐지가 이뤄지지 않으면 10% 꼬리에 몸통 전체가"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "정청래 전 대표의 검찰개혁 주장이 당내 갈등을 촉발했으나, 향후 전당대회에서 구체적 방향성은 아직 명확하지 않다."
+          },
+          "less_covered_context": [
+            "정청래 전 대표의 검찰개혁 구체적 로드맵",
+            "검찰 보완수사권 폐지에 대한 반대 의견"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:38:40.816958+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-712791d586b11e3d",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "765592c3eb5eae3d0f1175cc4f9814c1822fd5eb686d921578572390441f407f",
+            "title": "[정치쇼] 송영길 \"검찰과 싸우느라 당 떠났었는데 자격시비 거는 친청…검찰대리인인가? 개혁 한다면서?\"",
+            "published_at": "Fri, 17 Jul 2026 09:13:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662181"
+          }
+        ],
+        "analysis": {
+          "article_summary": "송영길 후보가 정청래 의원의 검찰개혁 발언을 비판하며, 검찰과의 갈등을 이유로 당을 떠난 자신의 경험과 대비시켜 정청래 세력의 검찰개혁 강조가 실질적이지 않다고 지적했다.",
+          "headline_frame": "송영길의 검찰개혁 비판과 자격 시비",
+          "main_focus": "정청래 의원의 검찰개혁 발언에 대한 송영길 후보의 비판과 당내 갈등 구도",
+          "primary_frame": {
+            "category": "검찰개혁 비판",
+            "stance": "비판",
+            "target": "정청래",
+            "summary": "송영길은 정청래가 검찰개혁을 강조하면서도 검찰에 부당기소된 날을 공격한 점을 지적하며, 그가 검찰 대리인 역할을 하고 있다고 비판한다.",
+            "evidence": [
+              "정청래 세력, 입만 열면 검찰개혁 강조하더니",
+              "尹 검찰에 부당기소된 날 공격? 檢 대리인인가"
+            ]
+          },
+          "keywords": [
+            "검찰개혁",
+            "정청래",
+            "송영길",
+            "자격시비",
+            "민주당"
+          ],
+          "main_actors": [
+            "송영길",
+            "정청래",
+            "민주당"
+          ],
+          "quoted_sources": [
+            "정청래"
+          ],
+          "causes": [
+            "검찰과의 갈등"
+          ],
+          "background": [
+            "민주당 당대표선거"
+          ],
+          "emphasized_effects": [
+            "당내 갈등 심화"
+          ],
+          "affected_groups": [
+            "민주당 당원"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "검찰대리인인가?",
+              "자격시비 거는 친청"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "송영길은 당대표가 되면 청년특위 약속과 보완수사 요구권을 통해 당을 이끌겠다고 밝혔으나, 구체적 정책 방향이나 향후 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "정청래의 검찰개혁 구체적 정책 내용",
+            "송영길의 검찰개혁 대안 제시"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:38:44.042239+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-712791d586b11e3d",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "검찰개혁 갈등과 당내 대립",
+          "summary": "정청래 전 대표의 검찰 보완수사권 폐지 주장과 당내 친명계(김민석, 송영길)와의 갈등을 중심으로, 검찰개혁 방향에 대한 해석 차이와 당내 권력 구도 변화를 강조하는 보도 경향",
+          "keywords": [
+            "검찰 보완수사권 폐지",
+            "정청래",
+            "김민석",
+            "송영길",
+            "당내 갈등",
+            "더불어민주당 전당대회"
+          ],
+          "publisher_ids": [
+            "donga",
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            },
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "두 언론사 모두 정청래 전 대표의 검찰 보완수사권 폐지 주장을 핵심 쟁점으로 삼고 있으며, 이 주장이 당내 친명계(김민석, 송영길)와의 갈등을 촉발했다는 점에서 동일한 해석 방향을 보인다.",
+            "동아일보는 '검찰 보완수사권 미폐지'를 원인으로, SBS는 '검찰과의 갈등'을 원인으로 제시하지만, 이는 동일한 정책(보완수사권 폐지)에 대한 해석 차이일 뿐 핵심 의미 자체는 동일하다.",
+            "두 기사 모두 '당내 갈등 심화'를 영향으로 보고 있으며, 대상도 '더불어민주당 당 지지층/당원'으로 유사하다.",
+            "동아일보는 중립 설명, SBS는 비판 태도를 보이지만, 이는 동일한 갈등 구도를 바라보는 관점의 차이일 뿐 핵심 해석 방향이 대립하지는 않는다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 정청래 전 대표의 검찰 보완수사권 폐지 주장을 중심으로, 이 정책이 당내 친명계와의 갈등을 유발했다는 동일한 핵심 해석을 공유한다. 원인, 배경, 영향, 대상에 대한 표현 차이는 있으나, 사건의 중심 쟁점과 해석 방향이 대체로 일치하므로 하나의 그룹으로 묶는다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T08:38:48.441184+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-712791d586b11e3d",
+        "selected_publishers": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "정청래 전 대표의 검찰 보완수사권 폐지 주장과 이에 대한 김민석 전 국무총리의 비판, 그리고 송영길 후보의 검찰개혁 발언 비판이 공통적으로 다뤄졌다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 정청래 전 대표의 검찰 보완수사권 폐지 주장과 이에 대한 당내 비판(김민석 전 총리 비판, 송영길 후보 비판)을 다루고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래 전 대표의 검찰 보완수사권 폐지 주장과 김민석 전 총리의 비판을 중심으로 당내 갈등 구도를 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "송영길 후보의 검찰개혁 발언 비판과 자격 시비 문제를 중심으로 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 정청래 전 대표의 검찰 보완수사권 폐지 주장과 당내 친명계와의 갈등을 핵심 관점으로 삼은 반면, SBS는 정청래 의원의 검찰개혁 발언에 대한 송영길 후보의 비판과 자격 시비를 핵심 관점으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래 전 대표의 검찰 보완수사권 폐지 주장과 당내 친명계와의 갈등을 핵심 관점으로 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래 의원의 검찰개혁 발언에 대한 송영길 후보의 비판과 자격 시비를 핵심 관점으로 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 검찰 보완수사권 미폐지를 원인으로, 더불어민주당 8·17 전당대회와 유시민 작가의 재건축론 비판을 배경으로 제시한 반면, SBS는 검찰과의 갈등을 원인으로, 민주당 당대표선거를 배경으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "검찰 보완수사권 미폐지를 원인으로, 더불어민주당 8·17 전당대회와 유시민 작가의 재건축론 비판을 배경으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "검찰과의 갈등을 원인으로, 민주당 당대표선거를 배경으로 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 더불어민주당 당 지지층을 대상으로 총선·대선 무망을 강조한 반면, SBS는 민주당 당원을 대상으로 당내 갈등 심화를 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당 당 지지층을 대상으로 총선·대선 무망을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당 당원을 대상으로 당내 갈등 심화를 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 정청래와 김민석의 발언을 중립적으로 설명하며 사실 전달에 초점을 둔 반면, SBS는 송영길 후보의 발언을 비판적으로 보도하며 '검찰대리인인가?' 등의 표현을 사용해 자격 시비를 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래와 김민석의 발언을 중립적으로 설명하며 사실 전달에 초점을 둔 보도 태도",
+                "evidence": [
+                  "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+                  "정 전 대표는 20일 MBC라디오에서 “검찰 보완수사권 전면 폐지가 이뤄지지 않으면 10% 꼬리에 몸통 전체가"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "송영길 후보의 발언을 비판적으로 보도하며 '검찰대리인인가?' 등의 표현을 사용해 자격 시비를 강조한 태도",
+                "evidence": [
+                  "검찰대리인인가?",
+                  "자격시비 거는 친청"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "정청래 전 대표의 검찰 보완수사권 폐지 주장과 이에 대한 당내 비판(김민석 전 총리 비판, 송영길 후보 비판)을 공통적으로 다룸",
+          "검찰개혁 관련 당내 갈등 구도를 보도"
+        ],
+        "key_differences": [
+          "동아일보는 정청래 전 대표의 검찰 보완수사권 폐지 주장과 당내 친명계와의 갈등을 중심으로 보도한 반면, SBS는 송영길 후보의 검찰개혁 발언 비판과 자격 시비를 중심으로 보도함",
+          "동아일보는 검찰 보완수사권 미폐지를 원인으로, SBS는 검찰과의 갈등을 원인으로 제시함",
+          "동아일보는 더불어민주당 당 지지층을 대상으로 총선·대선 무망을 강조한 반면, SBS는 민주당 당원을 대상으로 당내 갈등 심화를 강조함",
+          "동아일보는 중립 설명 태도를 보인 반면, SBS는 비판적 태도를 보임"
+        ],
+        "comparison_report": "동아일보와 SBS 모두 정청래 전 대표의 검찰 보완수사권 폐지 주장과 이에 대한 당내 비판을 다루었으나, 동아일보가 정청래 전 대표의 주장과 김민석 전 총리의 비판을 중심으로 검찰 보완수사권 미폐지를 원인으로 제시한 반면, SBS는 송영길 후보의 검찰개혁 발언 비판과 자격 시비를 중심으로 검찰과의 갈등을 원인으로 제시했다. 동아일보가 더불어민주당 당 지지층을 대상으로 총선·대선 무망을 강조한 데 비해 SBS는 민주당 당원을 대상으로 당내 갈등 심화를 강조했으며, 동아일보가 중립 설명 태도를 보인 반면 SBS는 '검찰대리인인가?' 등의 표현을 사용해 비판적 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134327305/1",
+            "published_at": "Mon, 20 Jul 2026 11:59:00 +0900"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치쇼] 송영길 \"검찰과 싸우느라 당 떠났었는데 자격시비 거는 친청…검찰대리인인가? 개혁 한다면서?\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662181",
+            "published_at": "Fri, 17 Jul 2026 09:13:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T08:38:58.748718+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-d03c9b8eaa55e201": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-d03c9b8eaa55e201",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "ea169276c5e2023b542003a548f674f3a63790cf9cbda97004a11b5ef5d7b135",
+            "title": "‘포스트 장동혁’ 안 보여…張 ‘올공 정치’ 바라만 보는 국힘",
+            "published_at": "Sun, 19 Jul 2026 08:21:42 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260719/134320632/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "장동혁 국민의힘 대표가 제헌절 경축식 불참과 올림픽공원 집회 참석을 통해 장외 정치에 집중하며 당내 리더십 상실과 '포스트 장동혁' 부재에 따른 교착 상태가 심화되고 있음을 보도했다.",
+          "headline_frame": "장동혁 대표의 제헌절 불참과 장외 정치 집중, 당내 리더십 상실 및 '포스트 장동혁' 부재",
+          "main_focus": "장동혁 대표의 장외 정치 집중과 당내 리더십 위기, 국민의힘의 교착 상태",
+          "primary_frame": {
+            "category": "리더십 위기 및 교착 상태",
+            "stance": "사실 전달",
+            "target": "장동혁 국민의힘 대표 및 국민의힘",
+            "summary": "장동혁 대표가 제헌절 경축식 불참과 올림픽공원 집회 참석을 통해 장외 정치에 집중하면서 당내 리더십이 상실되고 '포스트 장동혁'이 보이지 않아 국민의힘이 출구 없는 교착 상태에 빠진 상황을 사실적으로 전달하고 있다.",
+            "evidence": [
+              "장동혁 국민의힘 대표가 당내의 싸늘한 시선에도 올림픽공원과 전국 집회를 돌며 장외 정치에 집중하고 있다",
+              "사실상 당 대표로서 리더십이 상실됐다는 평가가 나오지만, 뚜렷한 ‘포스트 장동혁’도 보이지 않으면서 국민의힘이 출구 없는 교착 상태에 빠진 모습이다",
+              "제헌절이었던 지난 17일에도 국회 경축식에 불참하는 대신 올림픽공원 집회에 참석했다"
+            ]
+          },
+          "keywords": [
+            "장외 정치",
+            "리더십 상실",
+            "포스트 장동혁",
+            "교착 상태",
+            "올림픽공원 집회",
+            "제헌절 불참"
+          ],
+          "main_actors": [
+            "장동혁",
+            "국민의힘"
+          ],
+          "quoted_sources": [
+            "펜앤마이크"
+          ],
+          "causes": [
+            "당내의 싸늘한 시선",
+            "리더십 상실"
+          ],
+          "background": [
+            "제헌절 경축식 불참",
+            "올림픽공원 집회 참석"
+          ],
+          "emphasized_effects": [
+            "리더십 상실",
+            "교착 상태 심화"
+          ],
+          "affected_groups": [
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "사실상 당 대표로서 리더십이 상실됐다는 평가가 나오지만",
+              "뚜렷한 ‘포스트 장동혁’도 보이지 않으면서 국민의힘이 출구 없는 교착 상태에 빠진 모습이다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "국민의힘의 교착 상태가 지속될 것으로 보이며, 리더십 회복이나 새로운 대안 인물 등장 여부에 따라 향후 방향이 결정될 전망이다."
+          },
+          "less_covered_context": [
+            "장동혁 대표의 구체적인 정책 방향이나 당내 개혁 방안에 대한 언급은 부족하다"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:39:05.372620+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-d03c9b8eaa55e201",
         "publisher_id": "chosun",
         "publisher": "조선일보",
         "articles": [
@@ -14,14 +441,14 @@
           }
         ],
         "analysis": {
-          "article_summary": "장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회를 방문해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 장외 행보를 이어갔다.",
-          "headline_frame": "제헌절 국회 행사 불참 대신 장외 집회 참석",
-          "main_focus": "장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 장동혁 대표의 행보와 발언",
+          "article_summary": "장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회를 방문해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구했다.",
+          "headline_frame": "제헌절 행사 불참과 장외 집회 참석을 대비시켜 정치적 행보의 변화를 강조",
+          "main_focus": "장외 집회를 통한 부정선거 및 선거제 개혁 촉구",
           "primary_frame": {
-            "category": "정치 개혁 촉구",
+            "category": "선거 개혁 촉구",
             "stance": "비판적 요구",
-            "target": "선관위 및 선거제",
-            "summary": "장동혁 대표가 제헌절 국회 행사 대신 올림픽공원 집회를 찾아 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구하는 장외 행보를 이어갔다.",
+            "target": "선관위 및 선거 제도",
+            "summary": "장동혁 대표가 제헌절 국회 행사 대신 올림픽공원 집회를 찾아 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구하는 장외 행보를 보도했다.",
             "evidence": [
               "제헌절인 17일 국회 기념 행사에 불참한 장동혁 국민의힘 대표가 잠실 올림픽공원 집회를 찾아 장외 행보를 이어갔다",
               "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서 ‘40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송하다’",
@@ -29,16 +456,14 @@
             ]
           },
           "keywords": [
-            "제헌절",
-            "장외 집회",
             "부정선거 재선거",
             "당일투표 수개표",
             "선관위 개혁",
-            "선거제 개혁"
+            "장외 집회",
+            "제헌절 불참"
           ],
           "main_actors": [
-            "장동혁",
-            "국민의힘"
+            "장동혁"
           ],
           "quoted_sources": [],
           "causes": [
@@ -51,7 +476,7 @@
             "선관위 개혁 필요성"
           ],
           "affected_groups": [
-            "집회 참석자들"
+            "국민의힘"
           ],
           "tone": {
             "category": "비판",
@@ -66,1039 +491,32 @@
           },
           "less_covered_context": [
             "집회 참석자들의 구체적 반응",
-            "국회 기념 행사 불참에 대한 당내 반응",
-            "제헌절 행사의 구체적 내용"
+            "국회 내 다른 의원들의 반응",
+            "제헌절 행사 불참에 대한 공식적 설명"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:18:28.252528+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-b47b40e1d487b84d",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "fa4e013904d1f5a4af1541555cdd1c43b26222f6e16c6989d9f7639ab3902c1b",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "국민의힘 장동혁 대표가 제헌절 경축식 대신 6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 선거관리위원회 개혁과 선거제도 개혁을 촉구하며 장외 정치 활동을 이어갔다.",
-          "headline_frame": "제헌절 경축식 불참과 장외 정치 활동을 대비시켜 정치적 선택을 부각",
-          "main_focus": "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-          "primary_frame": {
-            "category": "선거제도 개혁 촉구",
-            "stance": "개혁 요구",
-            "target": "선거관리위원회",
-            "summary": "장동혁 대표가 제헌절 경축식 불참 후 6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 선거관리위원회 개혁과 선거제도 개혁을 요구하며 장외 정치 활동을 전개했다.",
-            "evidence": [
-              "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-              "6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 ‘장외 정치’를 이어갔다",
-              "선거관리위원회를 개혁하고, 선거제도 개혁을 이뤄내겠다"
-            ]
-          },
-          "keywords": [
-            "제헌절",
-            "장외정치",
-            "선거관리위원회 개혁",
-            "선거제도 개혁",
-            "투표용지 부족",
-            "재선거"
-          ],
-          "main_actors": [
-            "국민의힘",
-            "장동혁 대표",
-            "박성훈 수석대변인"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "6·3 지방선거 투표용지 부족 사태"
-          ],
-          "background": [
-            "제78주년 제헌절",
-            "18년 만에 공휴일로 재지정"
-          ],
-          "emphasized_effects": [
-            "선거관리위원회 개혁",
-            "선거제도 개혁"
-          ],
-          "affected_groups": [
-            "강성 지지층"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 선거관리위원회 개혁과 선거제도 개혁 추진 여부에 따라 정치적 영향 달라질 전망"
-          },
-          "less_covered_context": [
-            "집회 참여자들의 구체적 반응",
-            "다른 정당들의 반응",
-            "장동혁 대표의 구체적 선거제도 개혁 방안"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:18:28.330123+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-b47b40e1d487b84d",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "680b9117e8d29a4bff38adf204dc2adfa2b603d9844e4d32bb783b3ae563072f",
-            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
-            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586"
-          }
-        ],
-        "analysis": {
-          "article_summary": "조갑제 대표는 SBS 라디오 '정치쇼'에서 국민의힘 장동혁 대표의 제헌절 불참을 징계감이라고 지적하며, 2028년 공천 배제 명단 1번으로 장동혁을 지목하고 부정선거론자 및 계엄 동조자 등 70~80명을 명단에 포함시킬 것이라고 밝혔다.",
-          "headline_frame": "조갑제 대표의 2028년 국민의힘 공천 배제 명단 제시 및 장동혁 대표 지목",
-          "main_focus": "조갑제 대표가 국민의힘 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고, 2028년 공천 배제 명단 1번으로 장동혁을 지목하며 부정선거론자 및 계엄 동조자 등 70~80명을 명단에 포함시킬 것이라고 주장한 내용",
-          "primary_frame": {
-            "category": "공천 배제 명단 제시",
-            "stance": "징계감 및 배제 주장",
-            "target": "국민의힘 장동혁 대표",
-            "summary": "조갑제 대표는 국민의힘 장동혁 대표가 제헌절 기념식에 불참한 것을 징계감이라고 평가하고, 2028년 공천 배제 명단 1번으로 장동혁을 지목하며 부정선거론자 및 계엄 동조자 등 70~80명을 명단에 포함시킬 것이라고 주장했다.",
-            "evidence": [
-              "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\"",
-              "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
-              "부정선거론자, 계엄 동조자 등 70~80명 나올 것",
-              "공천 배제 명단, 나도 만들 생각 있어...1번은 장동혁"
-            ]
-          },
-          "keywords": [
-            "공천 배제 명단",
-            "제헌절 불참",
-            "징계감",
-            "부정선거론자",
-            "계엄 동조자",
-            "2028년"
-          ],
-          "main_actors": [
-            "조갑제",
-            "국민의힘 장동혁 대표"
-          ],
-          "quoted_sources": [
-            "조갑제 조갑제닷컴 대표"
-          ],
-          "causes": [
-            "제헌절 기념식 불참"
-          ],
-          "background": [
-            "이승만 61주기 참석 안 함",
-            "부실선거와 부정선거 구별"
-          ],
-          "emphasized_effects": [
-            "2028년 공천 배제 명단 1번 지목",
-            "부정선거론자 및 계엄 동조자 70~80명 명단 포함"
-          ],
-          "affected_groups": [
-            "국민의힘",
-            "부정선거론자",
-            "계엄 동조자"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
-              "1번은 장동혁"
-            ]
-          },
-          "outlook": {
-            "direction": "혼합",
-            "summary": "조갑제 대표는 장동혁 대표에 대한 강한 비판과 함께, 향후 2028년 공천 배제 명단 작성 및 외부에서의 명단 작성 효과를 언급하여 정치적 갈등과 동시에 전략적 대응을 시사했다."
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "장동혁 대표의 구체적 입장이나 해명"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:18:39.991301+00:00",
+        "analyzed_at": "2026-07-22T08:39:06.523570+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-b47b40e1d487b84d",
-      "groups": [
-        {
-          "group_id": "group-001",
-          "label": "선거제 개혁 촉구 및 부정선거 비판",
-          "summary": "장동혁 대표의 제헌절 불참과 장외 집회를 통해 선거제도 개혁 및 부정선거 재선거를 요구하는 비판적 보도. 조선일보와 동아일보는 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 장동혁 대표의 행보와 발언을 중심으로 보도하며, 6·3 지방선거 투표용지 부족 사태를 규탄하고 선관위 개혁을 강조함. SBS는 조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목하며 부정선거론자 및 계엄 동조자 명단을 포함시킬 것이라고 주장함.",
-          "keywords": [
-            "선거제 개혁",
-            "부정선거 재선거",
-            "선관위 개혁",
-            "제헌절 불참",
-            "장외 집회",
-            "공천 배제 명단"
-          ],
-          "publisher_ids": [
-            "chosun",
-            "donga",
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            },
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 3,
-          "group_evidence": [
-            "조선일보와 동아일보는 장동혁 대표의 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 행보와 발언을 중심으로 보도하며, 제헌절 국회 행사 불참 대신 장외 집회 참석을 통해 선관위 개혁 필요성을 강조함",
-            "SBS는 조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목하며 부정선거론자 및 계엄 동조자 명단을 포함시킬 것이라고 주장함",
-            "세 언론사 모두 장동혁 대표의 제헌절 불참을 비판적으로 보도하며, 선거제도 개혁 및 부정선거 문제를 핵심 쟁점으로 다루고 있음",
-            "조선일보와 동아일보는 장외 집회와 투표용지 부족 사태를 중심으로 선거제 개혁 필요성을 강조하는 반면, SBS는 조갑제 대표의 공천 배제 명단 제시를 통해 장동혁 대표의 정치적 미래를 비판함"
-          ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 장동혁 대표의 제헌절 불참을 비판적으로 보도하며, 선거제도 개혁 및 부정선거 문제를 핵심 쟁점으로 다루고 있음. 조선일보와 동아일보는 장외 집회와 투표용지 부족 사태를 중심으로 선거제 개혁 필요성을 강조하는 반면, SBS는 조갑제 대표의 공천 배제 명단 제시를 통해 장동혁 대표의 정치적 미래를 비판함. 세 언론사 모두 '선거제 개혁 촉구'라는 공통점을 가지고 있으나, SBS는 '공천 배제 명단'이라는 추가적인 정치적 제재 수단을 강조하여 다른 측면을 부각시킴.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-22T06:18:44.629436+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-b47b40e1d487b84d",
-        "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "국민의힘 장동혁 대표의 제헌절 경축식 불참과 관련된 정치적 논란",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 국민의힘 장동혁 대표의 제헌절 경축식 불참을 보도하며, 이 사건이 정치적 논란의 중심이 되었음을 공통적으로 확인했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표가 제헌절 경축식 대신 투표용지 부족 사태 규탄 집회에 참석해 선거제도 개혁을 촉구한 사실을 보도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표가 SBS 라디오에서 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목한 내용을 보도",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 장동혁 대표의 선거제도 개혁 촉구라는 긍정적 측면을 강조한 반면, SBS는 조갑제 대표의 징계감 평가라는 부정적 측면을 부각했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표의 제헌절 불참을 선거관리위원회 개혁과 선거제도 개혁을 촉구하는 장외 정치 활동으로 해석",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "장동혁 대표의 제헌절 불참을 징계감이라고 평가하며 2028년 공천 배제 명단 1번으로 지목",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 6·3 지방선거 투표용지 부족 사태를 주요 원인으로 제시한 반면, SBS는 제헌절 기념식 불참 자체를 원인으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 투표용지 부족 사태를 선거제도 개혁의 주요 원인으로 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "제헌절 기념식 불참을 징계감 평가의 주요 근거로 제시",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 강성 지지층을 대상으로 한 장동혁 대표의 결집을 강조한 반면, SBS는 국민의힘 전체를 대상으로 한 2028년 공천 배제 명단 적용을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표의 강성 지지층 결집을 선거제도 개혁의 영향 대상으로 제시",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "2028년 공천 배제 명단 적용을 통해 국민의힘 내 부정선거론자 및 계엄 동조자 70~80명을 영향 대상으로 지목",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 당내 비판을 보도하며 비판적 태도를 보인 반면, SBS는 조갑제 대표의 발언을 직접 인용해 강한 비판적 어조를 유지했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "당내 비판을 보도하며 장동혁 대표의 장외 정치 활동에 대한 비판적 태도를 보임",
-                "evidence": [
-                  "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표의 발언을 직접 인용하며 장동혁 대표의 제헌절 불참을 징계감이라고 강하게 비판",
-                "evidence": [
-                  "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
-                  "1번은 장동혁"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "국민의힘 장동혁 대표의 제헌절 경축식 불참",
-          "장동혁 대표의 정치적 행보에 대한 비판적 시각",
-          "선거제도 개혁 관련 논의"
-        ],
-        "key_differences": [
-          "동아일보는 장동혁 대표의 선거제도 개혁 촉구라는 긍정적 측면을 강조한 반면, SBS는 징계감이라는 부정적 평가를 강조"
-        ],
-        "comparison_report": "동아일보와 SBS는 모두 국민의힘 장동혁 대표의 제헌절 경축식 불참을 보도했으나, 동아일보가 장동혁 대표의 선거제도 개혁 촉구라는 긍정적 측면을 강조한 반면 SBS는 조갑제 대표의 발언을 인용해 징계감이라는 부정적 평가를 강조했다. 원인 측면에서 동아일보는 6·3 지방선거 투표용지 부족 사태를, SBS는 제헌절 불참 자체를 주요 원인으로 제시했다. 영향 대상도 동아일보는 강성 지지층을, SBS는 국민의힘 내 부정선거론자 및 계엄 동조자 70~80명을 지목했다. 보도 태도에서는 동아일보가 당내 비판을 보도한 반면 SBS는 조갑제 대표의 발언을 직접 인용해 강한 비판적 어조를 유지했다.",
-        "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
-            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-22T06:18:57.619674+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,sbs": {
-        "issue_id": "issue-b47b40e1d487b84d",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "두 언론사 모두 국민의힘 장동혁 대표의 제헌절 불참과 관련된 정치적 논란을 다루고 있으나, 조선일보는 장동혁 대표의 장외 집회 행보와 요구를, SBS는 조갑제 대표의 징계 및 공천 배제 명단 주장을 중심으로 보도하였다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 국민의힘 장동혁 대표의 제헌절 불참을 주요 사건으로 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에서 부정선거 재선거와 선관위 개혁을 요구한 사실을 보도함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표가 SBS 라디오에서 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단을 제시한 사실을 보도함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 장동혁 대표의 장외 행보와 요구를, SBS는 조갑제 대표의 징계 및 공천 배제 주장을 핵심 관점으로 제시함",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표의 장외 집회에서 부정선거 재선거와 선관위 개혁을 요구하는 행보와 발언을 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목한 주장을 강조함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 40일 넘게 해결책을 제시하지 못한 점을 원인으로, SBS는 제헌절 기념식 불참 자체를 배경으로 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "40일 넘게 해결책을 미제시한 점을 장동혁 대표의 장외 행보 원인으로 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "제헌절 기념식 불참을 징계감의 근거로 제시하며 이승만 61주기 참석 안 함과 부실선거와 부정선거 구별을 배경으로 설명함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 선관위 개혁 필요성을, SBS는 2028년 공천 배제 명단 적용을 영향 및 대상으로 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "선관위 개혁 필요성을 장동혁 대표의 장외 행보로 인한 영향으로 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "2028년 공천 배제 명단 1번 지목과 부정선거론자 및 계엄 동조자 70~80명 명단 포함을 영향 및 대상으로 강조함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 비판적인 태도를 보이지만, 조선일보는 '부정선거 재선거', '당일투표 수개표' 등 구호를, SBS는 '징계감', '1번은 장동혁' 등의 표현을 근거로 제시함",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "부정선거 재선거와 당일투표 수개표 등 구호를 외치는 장동혁 대표의 행보에 대해 비판적인 태도를 보임",
-                "evidence": [
-                  "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
-                  "반드시 선관위를 개혁하고, 선거제 개혁도 이"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목하는 비판적인 태도를 보임",
-                "evidence": [
-                  "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
-                  "1번은 장동혁"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "국민의힘 장동혁 대표의 제헌절 불참을 주요 사건으로 다루고 있음",
-          "장동혁 대표의 부정선거 관련 주장을 언급함"
-        ],
-        "key_differences": [
-          "조선일보는 장동혁 대표의 장외 집회 행보와 요구를, SBS는 조갑제 대표의 징계 및 공천 배제 명단 주장을 중심으로 보도함",
-          "조선일보는 선관위 개혁 필요성을, SBS는 2028년 공천 배제 명단 적용을 강조함"
-        ],
-        "comparison_report": "조선일보와 SBS는 모두 국민의힘 장동혁 대표의 제헌절 불참을 다루지만, 조선일보는 장동혁 대표의 장외 집회에서 부정선거 재선거와 선관위 개혁을 요구하는 행보와 발언을 중심으로 보도한 반면, SBS는 조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목한 주장을 중심으로 보도하였다. 두 언론사 모두 비판적인 태도를 보이지만, 조선일보는 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 행보에 초점을 맞춘 반면, SBS는 '징계감', '1번은 장동혁' 등의 표현을 근거로 제시하며 당내 징계 조치를 강조하였다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
-            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-22T06:18:58.005140+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga,sbs": {
-        "issue_id": "issue-b47b40e1d487b84d",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "국민의힘 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에 참석해 부정선거 재선거와 선거제 개혁을 요구하며 선관위 개혁을 촉구한 행보가 공통적으로 보도되었다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "조선일보와 동아일보는 모두 장동혁 대표가 제헌절 국회 행사에 불참하고 장외 집회에 참석해 부정선거 재선거와 선관위 개혁을 촉구했다고 보도했으며, SBS는 조갑제 대표가 장동혁의 제헌절 불참을 징계감이라고 지적하며 2028년 공천 배제 명단을 제시한 내용을 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표가 제헌절 국회 행사 불참 대신 장외 집회에 참석해 부정선거 재선거와 선관위 개혁을 촉구한 행보",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표가 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통해 선거제도 개혁을 촉구한 장외 정치 활동",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표가 SBS 라디오에서 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목한 내용",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 장동혁 대표의 장외 집회와 선거 개혁 요구를 중심으로 보도한 반면, SBS는 조갑제 대표의 공천 배제 명단 제시와 징계감 주장을 중심으로 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표의 장외 집회에서 부정선거 재선거와 선관위 개혁을 요구하는 행보와 발언",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목한 주장",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 40일 넘게 해결책 미제시 또는 6·3 지방선거 투표용지 부족 사태를 원인으로 강조한 반면, SBS는 제헌절 기념식 불참 자체를 원인으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "40일 넘게 해결책 미제시",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 투표용지 부족 사태",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "제헌절 기념식 불참",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 선관위 개혁 필요성을 강조한 반면, SBS는 2028년 공천 배제 명단 1번 지목과 부정선거론자 및 계엄 동조자 명단 포함을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "선관위 개혁 필요성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "선거관리위원회 개혁 및 선거제도 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "2028년 공천 배제 명단 1번 지목 및 부정선거론자·계엄 동조자 70~80명 명단 포함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 장동혁 대표의 장외 집회와 선거 개혁 요구를 비판적으로 보도했으며, SBS는 조갑제 대표의 장동혁 대표에 대한 징계감 주장을 비판적으로 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표의 부정선거 재선거 및 당일투표 수개표 구호 외침과 선관위 개혁 촉구 내용을 비판적으로 전달",
-                "evidence": [
-                  "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
-                  "반드시 선관위를 개혁하고, 선거제 개혁도 이"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식 불참 후 강성 지지층 결집에 집중한다는 당내 비판을 비판적으로 보도",
-                "evidence": [
-                  "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목한 내용을 비판적으로 전달",
-                "evidence": [
-                  "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
-                  "1번은 장동혁"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "장동혁 대표의 제헌절 국회/경축식 불참과 장외 집회 참석",
-          "부정선거 재선거 및 선거제도 개혁 촉구",
-          "선관위 개혁 필요성 제기"
-        ],
-        "key_differences": [
-          "조선일보와 동아일보는 장동혁 대표의 직접 행보와 발언을 중심으로 보도한 반면, SBS는 조갑제 대표의 제3자 주장을 중심으로 보도했다.",
-          "조선일보와 동아일보는 6·3 지방선거 투표용지 부족 사태를 배경으로 제시한 반면, SBS는 이승만 61주기 참석 안 함과 부실선거와 부정선거 구별을 배경으로 제시했다.",
-          "조선일보와 동아일보는 집회 참석자들을 영향 대상으로 언급한 반면, SBS는 국민의힘과 부정선거론자·계엄 동조자를 영향 대상으로 제시했다."
-        ],
-        "comparison_report": "조선일보와 동아일보는 국민의힘 장동혁 대표가 제헌절 국회/경축식 행사에 불참하고 잠실 올림픽공원 및 6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 부정선거 재선거와 선관위 개혁을 촉구한 장외 행보에 초점을 맞췄다. 두 언론사 모두 40일 넘게 해결책 미제시 또는 6·3 지방선거 투표용지 부족 사태를 배경으로 제시하며, 집회 참석자들을 영향 대상으로 삼았다. 반면 SBS는 조갑제 대표가 SBS 라디오 '정치쇼'에서 장동혁 대표의 제헌절 불참을 징계감이라고 평가하고 2028년 공천 배제 명단 1번으로 지목하며 부정선거론자 및 계엄 동조자 70~80명을 명단에 포함시킬 것이라고 주장한 내용을 보도했다. SBS는 이승만 61주기 참석 안 함과 부실선거와 부정선거 구별을 배경으로 제시하며, 국민의힘과 부정선거론자·계엄 동조자를 영향 대상으로 삼았다. 보도 태도는 세 언론사 모두 비판적이며, 조선일보와 동아일보는 장동혁 대표의 구호 외침과 개혁 촉구 내용을, SBS는 조갑제 대표의 징계감 주장을 비판적으로 전달했다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
-            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-22T06:19:07.767060+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga": {
-        "issue_id": "issue-b47b40e1d487b84d",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "두 언론사 모두 국민의힘 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에 참석해 부정선거 재선거와 선관위 개혁을 촉구한 사실을 보도하고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원/6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 부정선거 재선거와 선관위 개혁을 촉구한 사실을 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "제헌절 국회 행사 불참 대신 장외 집회 참석 및 부정선거 재선거와 선관위 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 장동혁 대표의 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 행보와 발언에 초점을 맞춘 반면, 동아일보는 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 대비시켜 정치적 선택을 부각하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 장동혁 대표의 행보와 발언",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 '40일 넘게 해결책 미제시'를 원인으로 강조한 반면, 동아일보는 '6·3 지방선거 투표용지 부족 사태'를 주요 원인으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "40일 넘게 해결책 미제시",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 투표용지 부족 사태",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 '선관위 개혁 필요성'을 강조한 반면, 동아일보는 '선거관리위원회 개혁'과 '선거제도 개혁'을 강조하고 영향 대상으로 '강성 지지층'을 언급하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "선관위 개혁 필요성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "선거관리위원회 개혁 및 선거제도 개혁 촉구, 강성 지지층 결집",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 비판적인 태도를 보이고 있으나, 조선일보는 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 모습을 강조한 반면, 동아일보는 '강성 지지층 결집에 집중한다는 비판'을 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "부정선거 재선거, 당일투표 수개표 등 구호를 외치며 선관위 개혁을 촉구하는 비판적 보도 태도",
-                "evidence": [
-                  "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
-                  "반드시 선관위를 개혁하고, 선거제 개혁도 이"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참과 강성 지지층 결집에 집중한다는 비판을 보도하는 비판적 태도",
-                "evidence": [
-                  "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "제헌절 기념 행사 불참",
-          "장외 집회 참석",
-          "부정선거 재선거 및 선관위 개혁 촉구"
-        ],
-        "key_differences": [
-          "동아일보는 6·3 지방선거 투표용지 부족 사태를 구체적 원인으로 제시한 반면 조선일보는 40일 넘게 해결책 미제시를 원인으로 제시",
-          "동아일보는 영향 대상으로 강성 지지층을 언급한 반면 조선일보는 집회 참석자들을 언급",
-          "동아일보는 제헌절 경축식 불참에 대한 당내 비판을 보도한 반면 조선일보는 집회에서의 구호 외침을 강조"
-        ],
-        "comparison_report": "조선일보와 동아일보 모두 국민의힘 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에 참석해 부정선거 재선거와 선관위 개혁을 촉구한 사실을 보도하고 있다. 조선일보는 제헌절 국회 행사 불참 대신 장외 집회 참석을 강조하며 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 모습을 부각하고, 40일 넘게 해결책 미제시를 원인으로 제시했다. 동아일보는 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 대비시켜 정치적 선택을 부각하고, 해당 사태를 주요 원인으로 제시하며 '강성 지지층 결집에 집중한다는 비판'을 보도하고 있다. 두 언론사 모두 비판적인 태도를 보이고 있으나, 동아일보는 당내 비판과 영향 대상에 대한 구체적 언급을, 조선일보는 집회에서의 구호 외침과 선관위 개혁 필요성을 강조하고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-22T06:19:18.514160+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-7442985c2d64dea8": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-7442985c2d64dea8",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "421d54ae69b1026d2c22903fd9bc024e48098c947c314ac953af742cbb313d4d",
-            "title": "임미애 “유시민 발언, 특정 지지층 결집 노린 전당대회용”",
-            "published_at": "Wed, 22 Jul 2026 11:03:48 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260722/134342426/1"
-          }
-        ],
-        "analysis": {
-          "article_summary": "임미애 더불어민주당 최고위원 후보가 유시민 작가의 발언을 전당대회 시기 특정 지지층 결집을 노린 메시지로 해석하며 비판했다.",
-          "headline_frame": "유시민 발언을 전당대회용 특정 지지층 결집 시도로 규정",
-          "main_focus": "유시민 작가의 발언이 전당대회 예비후보 컷오프 투표 시기에 특정 지지층을 결집하려는 의도적 메시지라는 해석",
-          "primary_frame": {
-            "category": "전당대회 전략 분석",
-            "stance": "비판",
-            "target": "유시민 작가",
-            "summary": "유시민 작가가 이재명 대통령을 정조준한 발언을 전당대회 예비후보 컷오프 투표 시기에 특정 지지층 결집을 노린 메시지로 해석하며 비판하고 있다.",
-            "evidence": [
-              "임미애 “유시민 발언, 특정 지지층 결집 노린 전당대회용”",
-              "“어제부터 (전당대회 예비후보 컷오프) 투표가 진행되고 있는데 아주 절묘하게 타이밍을 맞춰 특정 지지층을 결집하고 투표에 나서라는 그런 메시지를 준 것 아닌가 생각한다”",
-              "“왜 하필 이 시기에 이런 얘기를 또 하지라고 생각했다”"
-            ]
-          },
-          "keywords": [
-            "유시민",
-            "임미애",
-            "더불어민주당",
-            "최고위원",
-            "전당대회",
-            "이재명"
-          ],
-          "main_actors": [
-            "임미애",
-            "유시민",
-            "더불어민주당"
-          ],
-          "quoted_sources": [
-            "유시민 작가"
-          ],
-          "causes": [
-            "유시민 작가의 ‘뉴이재명’ 수장 관련 발언"
-          ],
-          "background": [
-            "민주당 경북도당위원장 임미애의 최고위원 후보 신분",
-            "전당대회 예비후보 컷오프 투표 진행 상황"
-          ],
-          "emphasized_effects": [
-            "특정 지지층 결집 유도"
-          ],
-          "affected_groups": [
-            "더불어민주당 전당대회 예비후보"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "“특정 지지층 결집 노린 전당대회용”",
-              "“아주 절묘하게 타이밍을 맞춰 특정 지지층을 결집하고 투표에 나서라는 그런 메시지를 준 것 아닌가 생각한다”"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "유시민 발언의 전당대회 영향에 대한 추가 전망이나 평가는 제시되지 않았다."
-          },
-          "less_covered_context": [
-            "유시민 발언의 구체적 내용이나 배경에 대한 상세 설명 부족",
-            "정청래 후보와의 직접적 연관성 언급 없음"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:19:27.528075+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-7442985c2d64dea8",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "0c2ed87a18d6a0027358034eb13963697d20ea15a99c822084affa9bdd5d6c7d",
-            "title": "[정치쇼] 임미애 \"정청래 공포 마케팅 그만해야…유시민 발언도 지지층 결집용\"",
-            "published_at": "Wed, 22 Jul 2026 10:35:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008668562"
-          }
-        ],
-        "analysis": {
-          "article_summary": "임미애 의원은 정청래 최고위원 후보의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 부적합하다고 주장했다.",
-          "headline_frame": "정청래 최고위원 후보의 공포 마케팅과 유시민의 발언을 비판",
-          "main_focus": "정청래 최고위원 후보의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 부적합하다고 주장",
-          "primary_frame": {
-            "category": "공포 마케팅 비판",
-            "stance": "비판",
-            "target": "정청래 최고위원 후보",
-            "summary": "정청래 후보가 보완수사권을 숙의 없이 페이스북에 선언하고 지난 1년간 당내 갈등을 스스로 만들어왔다며 과도한 공포 마케팅을 하고 있다고 비판했다.",
-            "evidence": [
-              "정청래, 보완수사권 숙의 없이 페북에 선언",
-              "지난 1년간 당내 갈등 스스로 만들어와",
-              "정청래, 과도한 공포 마케팅...그렇게 자신 없나"
-            ]
-          },
-          "keywords": [
-            "공포 마케팅",
-            "보완수사권",
-            "민주당 리더십",
-            "유시민 발언",
-            "지지층 결집"
-          ],
-          "main_actors": [
-            "임미애",
-            "정청래",
-            "유시민",
-            "김태현",
-            "더불어민주당"
-          ],
-          "quoted_sources": [
-            "임미애 더불어민주당 의원"
-          ],
-          "causes": [
-            "정청래 후보의 공포 마케팅",
-            "유시민의 발언"
-          ],
-          "background": [
-            "민주당 전국정당화",
-            "TK 당세 작은 곳",
-            "ABC-집토끼·산토끼론"
-          ],
-          "emphasized_effects": [
-            "당내 갈등 심화",
-            "지지층 결집 효과"
-          ],
-          "affected_groups": [
-            "더불어민주당 당원",
-            "민주당 지지층"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "정청래 공포 마케팅 그만해야",
-              "유시민 발언도 지지층 결집용",
-              "정청래, 집권여당 리더십에 맞지 않아"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "정청래 후보의 최고위원 도전이 당내 갈등을 심화시킬 수 있다는 우려가 제기되었으나, 향후 전망은 구체적으로 제시되지 않았다."
-          },
-          "less_covered_context": [
-            "정청래 후보의 구체적인 정책 공약이나 경력",
-            "민주당 최고위원 선거의 전체 후보군 및 경쟁 구도",
-            "정청래 후보의 보완수사권 관련 구체적 입장"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:19:29.070244+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-7442985c2d64dea8",
+      "issue_id": "issue-d03c9b8eaa55e201",
       "groups": [
         {
           "group_id": "group-01",
-          "label": "유시민 발언과 정청래 공포 마케팅 비판",
-          "summary": "유시민 작가의 전당대회 관련 발언이 특정 지지층 결집을 노린 의도적 메시지이며, 정청래 최고위원 후보의 공포 마케팅도 비판하며 집권여당 리더십에 부적합하다고 평가하는 관점",
+          "label": "리더십 위기와 교착 상태",
+          "summary": "두 언론사 모두 장동혁 대표의 제헌절 불참과 장외 정치 활동을 계기로 국민의힘의 리더십 위기와 교착 상태를 핵심 쟁점으로 다루고 있습니다. 동아일보는 리더십 상실과 포스트 장동혁 부재를, 조선일보는 장외 집회를 통한 부정선거 규탄과 선관위 개혁을 강조하지만, 모두 국민의힘의 내부 리더십 문제와 교착 상태에 초점을 맞추고 있습니다.",
           "keywords": [
-            "유시민 발언",
-            "특정 지지층 결집",
-            "정청래 공포 마케팅",
-            "민주당 리더십 비판"
+            "리더십 위기",
+            "교착 상태",
+            "장외 정치",
+            "제헌절 불참"
           ],
           "publisher_ids": [
             "donga",
-            "sbs"
+            "chosun"
           ],
           "publishers": [
             {
@@ -1106,57 +524,264 @@
               "publisher": "동아일보"
             },
             {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
             }
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "두 언론사 모두 유시민 작가의 발언을 전당대회 예비후보 컷오프 투표 시기에 특정 지지층을 결집하려는 의도적 메시지로 해석하며 비판적으로 보도",
-            "SBS는 정청래 최고위원 후보의 공포 마케팅까지 추가로 비판하며 집권여당 리더십에 부적합하다고 주장하지만, 이는 유시민 발언 비판과 동일한 맥락의 비판으로, 핵심 쟁점인 '특정 지지층 결집'과 '전당대회 관련 메시지'에 대한 부정적 해석 방향이 일치",
-            "두 기사 모두 민주당 전당대회 예비후보와 당원을 대상으로 한 영향(결집 유도, 갈등 심화)을 강조하며, 정책 효과나 긍정적 전망보다는 부정적 평가와 책임 추궁에 초점을 맞춤"
+            "동아일보는 장동혁 대표의 장외 정치 집중과 당내 리더십 상실, 포스트 장동혁 부재를 핵심 쟁점으로 제시하며 국민의힘의 교착 상태 심화를 강조하고 있습니다.",
+            "조선일보는 제헌절 불참과 장외 집회를 대비시켜 부정선거 규탄과 선관위 개혁을 촉구하지만, 이 역시 국민의힘의 리더십 위기와 교착 상태를 배경으로 하고 있습니다.",
+            "두 언론사 모두 국민의힘의 내부 리더십 문제와 교착 상태를 중심 쟁점으로 삼고 있으며, 장외 정치 활동을 통해 이를 부각시키고 있습니다."
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 유시민 작가의 전당대회 관련 발언을 특정 지지층 결집을 노린 의도적 메시지로 해석하며 비판적으로 보도하고, SBS는 추가로 정청래 최고위원 후보의 공포 마케팅을 비판하지만 이는 동일한 핵심 쟁점(특정 지지층 결집)에 대한 부정적 해석 방향을 공유하는 것으로, 핵심 관점이 실질적으로 유사하여 하나의 그룹으로 묶음",
+      "grouping_summary": "동아일보와 조선일보는 모두 장동혁 대표의 제헌절 불참과 장외 정치 활동을 계기로 국민의힘의 리더십 위기와 교착 상태를 핵심 쟁점으로 다루고 있습니다. 동아일보는 리더십 상실과 포스트 장동혁 부재를, 조선일보는 부정선거 규탄과 선관위 개혁을 강조하지만, 두 언론사 모두 국민의힘의 내부 리더십 문제와 교착 상태에 초점을 맞추고 있습니다. 따라서 두 언론사는 같은 그룹으로 묶을 수 있습니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-22T06:19:32.926542+00:00",
+      "grouped_at": "2026-07-22T08:39:12.057987+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {}
+  },
+  "issue-02c0e1aed73e2ffc": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-02c0e1aed73e2ffc",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "b47f6120f0b679d7e404e149da1e6ab53a067cef719a3daee863d509cdb1fa5e",
+            "title": "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\"",
+            "published_at": "Wed, 22 Jul 2026 16:18:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669646"
+          }
+        ],
+        "analysis": {
+          "article_summary": "국민의힘이 오세훈 서울시장의 1심 벌금 선고를 '정치 판결'로 규정하며 여당무죄·야당유죄라는 이중 잣대를 비판하는 입장을 밝혔다.",
+          "headline_frame": "정치 판결 프레임",
+          "main_focus": "국민의힘의 비판 입장",
+          "primary_frame": {
+            "category": "정치 판결 비판",
+            "stance": "비판",
+            "target": "오세훈 1심 판결",
+            "summary": "국민의힘은 오세훈 서울시장의 1심 벌금 선고를 '정치 판결'로 규정하고, 여당무죄·야당유죄라는 이중 잣대를 적용해 여당을 유리하게, 야당을 불리하게 판단하는 편향된 판결이라고 비판했다.",
+            "evidence": [
+              "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\"",
+              "정치 브로커 명태균 씨로부터 여론조사 결과를 받아보고 후원자에게 비용을 대납하게 한 혐의로 기소된 오세훈 서울시장이 22일 오후 …"
+            ]
+          },
+          "keywords": [
+            "정치 판결",
+            "여당무죄",
+            "야당유죄",
+            "오세훈 1심",
+            "국민의힘 비판"
+          ],
+          "main_actors": [
+            "국민의힘",
+            "오세훈 서울시장"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "정치 브로커 명태균 씨로부터 여론조사 결과 수령",
+            "후원자 비용 대납"
+          ],
+          "background": [
+            "오세훈 서울시장의 혐의 내용"
+          ],
+          "emphasized_effects": [
+            "정치 판결 논란"
+          ],
+          "affected_groups": [
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\""
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "향후 2심 진행 및 정치적 파장 예상"
+          },
+          "less_covered_context": [
+            "판결 금액 및 구체적 형량",
+            "오세훈 시장의 향후 정치 활동 계획"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:42:18.657519+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-02c0e1aed73e2ffc",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "03627f58d7ab8d43c553f95fae9acdf927d9642c5d057402cce77e90ffb8c30b",
+            "title": "민주 “사필귀정” 국힘 “정치 판결”…오세훈 대법선고는 내년초",
+            "published_at": "Wed, 22 Jul 2026 17:17:00 +0900",
+            "link": "https://www.donga.com/news/Society/article/all/20260722/134344864/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "오세훈 서울시장이 1심에서 당선무효형 벌금 1000만 원을 선고받은 사건에 대해 더불어민주당은 '사필귀정'이라 평가한 반면 국민의힘은 '정치 판결'이라며 반발했고, 무소속 한동훈 의원은 1심 유죄 판결에 의문을 제기했다.",
+          "headline_frame": "여야의 상반된 반응과 한동훈 의원의 비판",
+          "main_focus": "더불어민주당의 '사필귀정' 평가와 국민의힘의 '정치 판결' 반발, 무소속 의원의 비판",
+          "primary_frame": {
+            "category": "정치자금법 위반",
+            "stance": "사실 전달",
+            "target": "오세훈 서울시장",
+            "summary": "오세훈 시장이 정치브로커에 의뢰한 여론조사를 선거에 활용하고 비용을 후원자에게 대납시킨 행위가 정치자금법 위반으로 판단되어 1심에서 벌금 1000만 원의 당선무효형이 선고되었다.",
+            "evidence": [
+              "오세훈 서울시장에게 22일 1심에서 당선무효형인 벌금 1000만 원이 선고되자",
+              "더불어민주당 강준현 수석대변인은 이날 서면브리핑에서 “오 시장이 정치브로커에 의뢰한 여론조사를 선거에 활용했고 그 비용을 후원자에게 대납시켰다는 사실이 법원에서 입증된 것”이라며",
+              "이는 명백한 정치자금법 위반이자 민주주의의 근간인 선거제도 자체를 훼손한 것"
+            ]
+          },
+          "keywords": [
+            "정치자금법 위반",
+            "여론조사",
+            "후원",
+            "벌금",
+            "당선무효",
+            "사필귀정"
+          ],
+          "main_actors": [
+            "더불어민주당",
+            "국민의힘",
+            "오세훈 서울시장",
+            "강준현 더불어민주당 수석대변인",
+            "박성훈 국민의힘 수석대변인",
+            "한동훈 무소속 의원"
+          ],
+          "quoted_sources": [
+            "더불어민주당 강준현 수석대변인",
+            "국민의힘 박성훈 수석대변인",
+            "무소속 한동훈 의원"
+          ],
+          "causes": [
+            "정치브로커에 의뢰한 여론조사를 선거에 활용",
+            "비용을 후원자에게 대납"
+          ],
+          "background": [
+            "정치자금법 위반",
+            "선거제도 훼손"
+          ],
+          "emphasized_effects": [
+            "당선무효형",
+            "벌금 1000만 원"
+          ],
+          "affected_groups": [
+            "서울시",
+            "더불어민주당",
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다",
+              "국민의힘 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다",
+              "무소속 한동훈 의원도 페이스북에서 “1심 유죄 판결은 관련자 증언의 신빙성이 떨어지고 비약이 많아 납득하기 어렵다”고 했다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "대법 선고는 내년 초로 예상되며, 아직 형이 확정되지 않은 상태이다."
+          },
+          "less_covered_context": [
+            "오세훈 시장의 구체적인 선거 전략",
+            "정치브로커의 신원 및 역할",
+            "후원자의 구체적 신원"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:42:18.866796+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-02c0e1aed73e2ffc",
+      "groups": [
+        {
+          "group_id": "group-001",
+          "label": "정치 판결 논란",
+          "summary": "오세훈 서울시장의 1심 판결에 대해 국민의힘이 '정치 판결'로 비판하고, 더불어민주당은 '사필귀정'으로 평가하는 상반된 정치적 해석을 중심으로 보도",
+          "keywords": [
+            "정치 판결",
+            "사필귀정",
+            "정치자금법 위반",
+            "여론 조사 활용"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "오세훈 서울시장의 1심 유죄 판결에 대해 국민의힘은 '정치 판결'이라며 비판하고, 더불어민주당은 '사필귀정'이라며 명백한 범죄로 평가하는 상반된 정치적 해석을 제시",
+            "양 언론사 모두 정치자금법 위반과 여론 조사 활용이라는 동일한 법적 쟁점을 다루지만, 판결에 대한 정치적 의미와 평가 방향이 정반대",
+            "SBS는 국민의힘의 비판 입장을, 동아일보는 여야의 상반된 반응과 무소속 의원의 비판을 함께 보도하여 정치적 해석 차이를 강조"
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 오세훈 서울시장의 1심 유죄 판결을 다루지만, SBS는 국민의힘의 비판 입장에 초점을 맞추어 '정치 판결'이라는 부정적 해석을 강조한 반면, 동아일보는 여야의 상반된 반응과 무소속 의원의 비판을 함께 보도하여 정치적 해석의 대립 구도를 보다 포괄적으로 다루고 있다. 핵심 쟁점은 정치자금법 위반과 여론 조사 활용으로 동일하지만, 사건에 부여한 핵심 의미와 평가 방향이 서로 대립하여 별도의 그룹으로 분류하였다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T08:42:22.822765+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,sbs": {
-        "issue_id": "issue-7442985c2d64dea8",
+        "issue_id": "issue-02c0e1aed73e2ffc",
         "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
           }
         ],
-        "common_summary": "임미애 더불어민주당 의원이 유시민 작가의 발언을 전당대회 시기 특정 지지층 결집을 노린 메시지로 해석하며 비판하고, 정청래 최고위원 후보의 공포 마케팅을 함께 문제 삼아 집권여당 리더십에 부적합하다고 주장했다.",
+        "common_summary": "오세훈 서울시장의 1심 벌금 1000만 원 당선무효형 선고에 대해 국민의힘은 '정치 판결'이라며 비판하고, 더불어민주당은 '사필귀정'이라 평가한 사건이 공통적으로 다뤄졌다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 임미애 의원이 유시민 작가의 발언을 특정 지지층 결집을 노린 전당대회용 메시지로 해석하며 비판하고, 정청래 후보의 공포 마케팅을 문제 삼았다는 점을 공통적으로 보도했다.",
+            "contrast_statement": "두 언론사 모두 오세훈 서울시장의 1심 벌금 1000만 원 당선무효형 선고 사실을 보도하며, 국민의힘의 '정치 판결' 비판과 더불어민주당의 '사필귀정' 평가를 공통적으로 확인했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "유시민 발언을 전당대회용 특정 지지층 결집 시도로 규정하고 임미애 의원의 비판을 전달",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래 후보의 공포 마케팅과 유시민 발언을 비판하며 집권여당 리더십에 부적합하다고 주장",
+                "summary": "오세훈 1심 벌금 1000만 원 당선무효형 선고와 국민의힘의 '정치 판결' 비판 입장을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "오세훈 1심 벌금 1000만 원 당선무효형 선고와 여야의 상반된 반응(더불어민주당 '사필귀정', 국민의힘 '정치 판결')을 강조",
                 "evidence": []
               }
             ]
@@ -1164,18 +789,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 유시민 발언의 전당대회 시기 특정 지지층 결집 의도를 핵심 관점으로 삼은 반면, SBS는 정청래 후보의 공포 마케팅과 유시민 발언을 함께 비판하며 집권여당 리더십 부적합성을 강조했다.",
+            "contrast_statement": "SBS는 국민의힘의 비판 입장에 초점을 맞춘 반면, 동아일보는 더불어민주당의 '사필귀정' 평가와 국민의힘의 반발, 무소속 한동훈 의원의 비판을 모두 포함해 다각도로 보도했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "유시민 작가의 발언이 전당대회 예비후보 컷오프 투표 시기에 특정 지지층을 결집하려는 의도적 메시지라는 해석",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래 최고위원 후보의 공포 마케팅과 유시민 발언을 비판하며 집권여당 리더십에 부적합하다고 주장",
+                "summary": "국민의힘의 '정치 판결' 비판 입장을 핵심 관점으로 제시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "여야의 상반된 반응(더불어민주당 '사필귀정', 국민의힘 '정치 판결')과 무소속 한동훈 의원의 비판을 핵심 관점으로 제시",
                 "evidence": []
               }
             ]
@@ -1183,18 +808,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 유시민 작가의 '뉴이재명' 수장 관련 발언을 강조 배경으로 삼은 반면, SBS는 정청래 후보의 공포 마케팅과 민주당 전국정당화, TK 당세 작은 곳, ABC-집토끼·산토끼론 등을 강조 배경으로 제시했다.",
+            "contrast_statement": "SBS는 '정치 브로커 명태균 씨로부터 여론조사 결과 수령'과 '후원자 비용 대납'을 원인으로 강조한 반면, 동아일보는 '정치브로커에 의뢰한 여론조사를 선거에 활용'과 '비용을 후원자에게 대납'을 원인으로 제시했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "유시민 작가의 '뉴이재명' 수장 관련 발언과 민주당 경북도당위원장 임미애의 최고위원 후보 신분, 전당대회 예비후보 컷오프 투표 진행 상황",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래 후보의 공포 마케팅, 민주당 전국정당화, TK 당세 작은 곳, ABC-집토끼·산토끼론",
+                "summary": "정치 브로커 명태균 씨로부터 여론조사 결과 수령과 후원자 비용 대납을 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정치브로커에 의뢰한 여론조사를 선거에 활용하고 비용을 후원자에게 대납한 것을 원인으로 강조",
                 "evidence": []
               }
             ]
@@ -1202,18 +827,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 특정 지지층 결집을 유시민 발언의 영향으로 강조한 반면, SBS는 당내 갈등 심화와 지지층 결집 효과를 함께 강조했다.",
+            "contrast_statement": "SBS는 '정치 판결 논란'을 주요 영향으로 제시한 반면, 동아일보는 '당선무효형'과 '벌금 1000만 원'을 구체적 영향으로 강조하고, 영향 대상으로 '서울시', '더불어민주당', '국민의힘'을 언급했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "특정 지지층 결집 유도",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "당내 갈등 심화 및 지지층 결집 효과",
+                "summary": "정치 판결 논란을 주요 영향으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "당선무효형과 벌금 1000만 원을 구체적 영향으로 강조하고 서울시, 더불어민주당, 국민의힘을 영향 대상으로 제시",
                 "evidence": []
               }
             ]
@@ -1221,200 +846,185 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 비판적인 태도를 보였으나, 동아일보는 유시민 발언의 타이밍과 결집 의도를 구체적으로 인용한 반면, SBS는 정청래 후보의 공포 마케팅 중단 요구와 리더십 부적합성을 직접적으로 강조했다.",
+            "contrast_statement": "SBS는 '비판' 태도로 국민의힘의 '오세훈 1심, 정치 판결…여당무죄·야당유죄' 발언을 인용한 반면, 동아일보는 '중립 설명' 태도로 더불어민주당, 국민의힘, 무소속 한동훈 의원의 발언을 모두 인용해 다각도로 보도했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "유시민 발언을 전당대회용 특정 지지층 결집 시도로 규정하며 비판적인 태도를 보임",
-                "evidence": [
-                  "“특정 지지층 결집 노린 전당대회용”",
-                  "“아주 절묘하게 타이밍을 맞춰 특정 지지층을 결집하고 투표에 나서라는 그런 메시지를 준 것 아닌가 생각한다”"
-                ]
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래 후보의 공포 마케팅 중단 요구와 유시민 발언의 지지층 결집용 성격을 비판적으로 보도",
+                "summary": "국민의힘의 '오세훈 1심, 정치 판결…여당무죄·야당유죄' 발언을 인용하며 비판적인 태도를 보임",
                 "evidence": [
-                  "정청래 공포 마케팅 그만해야",
-                  "유시민 발언도 지지층 결집용",
-                  "정청래, 집권여당 리더십에 맞지 않아"
+                  "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\""
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당, 국민의힘, 무소속 한동훈 의원의 발언을 인용해 중립적으로 설명하는 태도를 보임",
+                "evidence": [
+                  "더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다",
+                  "국민의힘 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다",
+                  "무소속 한동훈 의원도 페이스북에서 “1심 유죄 판결은 관련자 증언의 신빙성이 떨어지고 비약이 많아 납득하기 어렵다”고 했다"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "임미애 의원의 유시민 발언 비판 및 정청래 후보 공포 마케팅 비판",
-          "유시민 발언의 특정 지지층 결집 의도 해석",
-          "집권여당 리더십에 대한 비판"
+          "오세훈 서울시장의 1심 벌금 1000만 원 당선무효형 선고",
+          "국민의힘의 '정치 판결' 비판",
+          "더불어민주당의 '사필귀정' 평가"
         ],
         "key_differences": [
-          "동아일보는 유시민 발언의 '뉴이재명' 수장 관련 발언에 초점을 맞춘 반면, SBS는 정청래 후보의 공포 마케팅에 더 많은 비중을 둠",
-          "동아일보는 민주당 경북도당위원장 임미애의 최고위원 후보 신분을 강조 배경으로 제시한 반면, SBS는 민주당 전국정당화, TK 당세 작은 곳, ABC-집토끼·산토끼론을 강조 배경으로 제시"
+          "SBS는 국민의힘의 비판 입장에 초점을 맞춘 반면, 동아일보는 여야의 상반된 반응과 무소속 한동훈 의원의 비판을 모두 포함해 다각도로 보도함",
+          "SBS는 '정치 판결 논란'을 주요 영향으로 제시한 반면, 동아일보는 '당선무효형'과 '벌금 1000만 원'을 구체적 영향으로 강조함"
         ],
-        "comparison_report": "동아일보와 SBS 모두 임미애 더불어민주당 의원이 유시민 작가의 발언을 전당대회 시기 특정 지지층 결집을 노린 메시지로 해석하며 비판하고, 정청래 최고위원 후보의 공포 마케팅을 문제 삼아 집권여당 리더십에 부적합하다고 주장했다는 공통점을 보인다. 그러나 동아일보가 유시민 발언의 '뉴이재명' 수장 관련 발언과 임미애 의원의 최고위원 후보 신분을 강조 배경으로 삼아 특정 지지층 결집 유도에 초점을 맞춘 반면, SBS는 정청래 후보의 공포 마케팅과 민주당 전국정당화, TK 당세 작은 곳, ABC-집토끼·산토끼론 등을 강조 배경으로 제시하며 당내 갈등 심화와 리더십 부적합성을 더 포괄적으로 비판했다. 두 언론사 모두 비판적인 보도 태도를 보였으나, 동아일보는 유시민 발언의 타이밍과 결집 의도를 구체적으로 인용한 반면, SBS는 정청래 후보의 공포 마케팅 중단 요구와 리더십 부적합성을 직접적으로 강조했다.",
+        "comparison_report": "SBS와 동아일보 모두 오세훈 서울시장의 1심 벌금 1000만 원 당선무효형 선고 사건을 보도했으나, SBS는 국민의힘의 '정치 판결' 비판 입장을 중심으로 보도한 반면, 동아일보는 더불어민주당의 '사필귀정' 평가, 국민의힘의 반발, 무소속 한동훈 의원의 비판까지 포함해 다각도로 보도했다. 원인 측면에서는 SBS가 '정치 브로커 명태균 씨로부터 여론조사 결과 수령'과 '후원자 비용 대납'을 강조한 반면, 동아일보는 '정치브로커에 의뢰한 여론조사를 선거에 활용'과 '비용을 후원자에게 대납'을 원인으로 제시했다. 영향 측면에서 SBS는 '정치 판결 논란'을 강조한 반면, 동아일보는 '당선무효형'과 '벌금 1000만 원'을 구체적 영향으로 제시하고 서울시, 더불어민주당, 국민의힘을 영향 대상으로 언급했다. 보도 태도 측면에서 SBS는 국민의힘의 발언을 인용하며 비판적인 태도를 보인 반면, 동아일보는 여러 정치인의 발언을 인용해 중립적으로 설명하는 태도를 보였다.",
         "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "임미애 “유시민 발언, 특정 지지층 결집 노린 전당대회용”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260722/134342426/1",
-            "published_at": "Wed, 22 Jul 2026 11:03:48 +0900"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "[정치쇼] 임미애 \"정청래 공포 마케팅 그만해야…유시민 발언도 지지층 결집용\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008668562",
-            "published_at": "Wed, 22 Jul 2026 10:35:00 +0900"
+            "title": "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669646",
+            "published_at": "Wed, 22 Jul 2026 16:18:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "민주 “사필귀정” 국힘 “정치 판결”…오세훈 대법선고는 내년초",
+            "link": "https://www.donga.com/news/Society/article/all/20260722/134344864/1",
+            "published_at": "Wed, 22 Jul 2026 17:17:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-22T06:19:43.394341+00:00",
+        "compared_at": "2026-07-22T08:42:35.476959+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-191e2dc324e03384": {
+  "issue-dfd650ff72768e0e": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-191e2dc324e03384",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
+        "issue_id": "issue-dfd650ff72768e0e",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
         "articles": [
           {
-            "article_id": "e24a64efb77bab15e1631788f6d438b5bc4a844406e052e178593ab0e04958bd",
-            "title": "김용범 “삼전닉스 레버리지 상장폐지 어려워”",
-            "published_at": "Mon, 20 Jul 2026 04:30:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260720/134325135/2"
+            "article_id": "a2a18aec154e8a03e7b208042dccafc772920c12741fb3a59d7434582f46487c",
+            "title": "\"조정, 레버리지 때문이란 착시도…보완도 우리 몫\"",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667976"
           }
         ],
         "analysis": {
-          "article_summary": "김용범 대통령정책실장이 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝혔으며, 기본예탁금 상향 등 보완 대책을 발표했다.",
-          "headline_frame": "레버리지 ETF 상장 폐지에 대한 정부 입장을 중심으로 김용범 실장의 발언을 강조",
-          "main_focus": "레버리지 ETF 상장 폐지 가능성과 정부의 대응 방향",
+          "article_summary": "이재명 대통령이 단일 종목 레버리지 ETF가 급격한 주가 변동의 원인으로 지목되며 시장 불안을 키웠다는 비판을 언급했습니다.",
+          "headline_frame": "주가 변동 원인을 레버리지 ETF에 돌리는 시각",
+          "main_focus": "레버리지 ETF가 시장 불안정을 초래했다는 비판",
           "primary_frame": {
-            "category": "시장 충격 우려",
-            "stance": "사실 전달",
-            "target": "삼성전자·SK하이닉스 단일종목 레버리지 ETF",
-            "summary": "김용범 실장은 레버리지 ETF 상장 폐지가 시장에 엄청난 충격을 줄 수 있어 상상하기 어렵다고 밝히며, 기본예탁금 상향 등 보완 대책을 발표했다.",
+            "category": "시장 불안 요인",
+            "stance": "비판",
+            "target": "단일 종목 레버리지 ETF",
+            "summary": "이재명 대통령은 단일 종목 레버리지 ETF 상품이 급격한 주가 변동을 유발하고 시장에 필요 이상의 불안을 조성했다는 비판을 지적했습니다.",
             "evidence": [
-              "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다.",
-              "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다."
+              "급격한 주가 변동의 원인으로 지목된 단일 종목 레버리지 ETF 상품에 대해, 시장에 필요 이상의 불안정을 키웠다는 비판이 있다고 지적했습니다."
             ]
           },
           "keywords": [
             "레버리지 ETF",
-            "상장 폐지",
-            "기본예탁금",
-            "김용범",
-            "시장 충격",
-            "삼성전자"
+            "주가 변동",
+            "시장 불안",
+            "이재명 대통령"
           ],
           "main_actors": [
-            "김용범 대통령정책실장",
-            "청와대",
-            "오세훈 서울시장"
+            "이재명 대통령"
           ],
-          "quoted_sources": [
-            "KBS 일요진단"
-          ],
+          "quoted_sources": [],
           "causes": [
-            "주식시장 변동성 확대"
+            "단일 종목 레버리지 ETF"
           ],
-          "background": [
-            "거시경제·금융현안 간담회",
-            "기본예탁금 제도 변경"
-          ],
+          "background": [],
           "emphasized_effects": [
-            "시장 충격 우려",
-            "투자자 부담 증가"
+            "시장 불안정"
           ],
-          "affected_groups": [
-            "레버리지 ETF 투자자"
-          ],
+          "affected_groups": [],
           "tone": {
-            "category": "중립 설명",
+            "category": "비판",
             "evidence": [
-              "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다.",
-              "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다."
+              "시장에 필요 이상의 불안정을 키웠다는 비판"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "정부는 추가 대책 필요성을 인정하지만 구체적인 추가 조치는 아직 발표되지 않았다."
+            "summary": "향후 보완 방안에 대한 언급은 있으나 구체적 전망은 제시되지 않았습니다."
           },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
-          ],
+          "less_covered_context": [],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:20:27.835843+00:00",
+        "analyzed_at": "2026-07-22T08:42:49.993298+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-191e2dc324e03384",
+        "issue_id": "issue-dfd650ff72768e0e",
         "publisher_id": "mk",
         "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "479f66213d2d854f3d57ad2827d4b161b6b42aeb5e771ebf1d3f1b82a7ffb045",
-            "title": "단일종목 레버리지 ETF의 운명은?",
-            "published_at": "Thu, 16 Jul 2026 15:21:37 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12100322"
+            "article_id": "8696d40a6ca4418d7f6f36979a86e93e292f5ee1aaf9d3d1e322299981237f6a",
+            "title": "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당…“집중 모니터링, 추가 대책 강구”",
+            "published_at": "Mon, 20 Jul 2026 20:36:46 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12102777"
           }
         ],
         "analysis": {
-          "article_summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 국내 증시 변동성의 주범으로 지목된 단일종목 레버리지 ETF에 대한 논의가 이루어졌다.",
-          "headline_frame": "단일종목 레버리지 ETF의 상장 폐지 여부를 둘러싼 논의",
-          "main_focus": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 다룬다.",
+          "article_summary": "더불어민주당 의원들이 금융당국과 만나 단일종목 레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구를 촉구하며, 주가 폭락의 원인 중 하나로 지목된 레버리지 ETF에 대한 규제 필요성을 제기했다.",
+          "headline_frame": "주가 폭락의 원인으로서 레버리지 ETF에 대한 규제 필요성을 강조하는 프레임",
+          "main_focus": "레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구",
           "primary_frame": {
-            "category": "금융 규제",
-            "stance": "사실 전달",
+            "category": "규제 필요성",
+            "stance": "경고 및 촉구",
             "target": "단일종목 레버리지 ETF",
-            "summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 전달한다.",
+            "summary": "주가 폭락의 주원인으로 지목된 단일종목 레버리지 ETF에 대해 금융당국의 집중 모니터링과 추가 대책 강구를 촉구하며 규제 필요성을 강조했다.",
             "evidence": [
-              "단일종목 레버리지 ETF의 운명은?",
-              "국내 증시 변동성의 주범으로 지목된 삼"
+              "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당",
+              "단일종목 레버리지 상장지수펀드(ETF)에 대한 집중 모니터링을 촉구"
             ]
           },
           "keywords": [
             "레버리지 ETF",
-            "상장 폐지",
-            "증시 변동성",
-            "거시경제",
+            "주가 폭락",
+            "집중 모니터링",
+            "추가 대책",
+            "더불어민주당",
             "금융당국"
           ],
           "main_actors": [
-            "거시경제·금융·통화당국 수장"
+            "더불어민주당 의원들",
+            "금융당국"
           ],
           "quoted_sources": [],
           "causes": [
-            "국내 증시 변동성"
+            "최근 급격한 주가 변동"
           ],
           "background": [
-            "거시경제·금융현안 간담회(F4 회의)"
+            "국회 정무위원회 소속 더불어민주당 의원들"
           ],
           "emphasized_effects": [
-            "국내 증시 변동성"
+            "주가 폭락"
           ],
           "affected_groups": [
             "투자자"
           ],
           "tone": {
-            "category": "중립 설명",
+            "category": "우려·경계",
             "evidence": [
-              "단일종목 레버리지 ETF의 운명은?",
-              "국내 증시 변동성의 주범으로 지목된 삼"
+              "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당",
+              "집중 모니터링, 추가 대책 강구"
             ]
           },
           "outlook": {
-            "direction": "전망 없음",
-            "summary": ""
+            "direction": "중립",
+            "summary": "금융당국의 모니터링 강화와 추가 대책 마련 여부에 따라 시장 안정 여부가 결정될 것으로 전망"
           },
           "less_covered_context": [
             "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
@@ -1422,55 +1032,906 @@
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-22T06:20:28.322211+00:00",
+        "analyzed_at": "2026-07-22T08:42:51.051455+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-dfd650ff72768e0e",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "d01c38964ba0daabf4a9b688d484a34898221fb6cbb67950562c5549079cc645",
+            "title": "레버리지 예탁금 3배로 ‘문턱’ 높여… “증시안정 효과 미지수”",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315619/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "금융당국이 단일종목 레버리지 ETF의 신규 매수 예탁금을 1000만 원에서 3000만 원으로 상향 조정해 거래량을 줄이려 했으나, 변동성 감소 효과에 대한 회의적 시각도 함께 제기되고 있다.",
+          "headline_frame": "레버리지 ETF 규제 조치의 구체적 내용과 효과에 대한 의문",
+          "main_focus": "레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과에 대한 평가",
+          "primary_frame": {
+            "category": "규제 조치",
+            "stance": "효과 의문",
+            "target": "단일종목 레버리지 ETF",
+            "summary": "금융당국이 단일종목 레버리지 ETF의 신규 매수 예탁금을 3000만 원으로 상향 조정해 거래량을 줄이려 했으나, 변동성 감소 효과에 대한 회의적 시각이 함께 제기되고 있다.",
+            "evidence": [
+              "국내 첫 단일종목 레버리지 상장지수펀드(ETF)가 선보인 지 50일 만에 금융당국이 변동성을 줄이는 대책을 내놨다",
+              "이번 대책으로 거래량을 줄이는 효과가 있을 것이란 평가가 있지만 변동성을 줄이는 근본 대책으로는 미흡하다는 지적도 나온다",
+              "레버리지 예탁금 3배로 ‘문턱’ 높여… “증시안정 효과 미지수”"
+            ]
+          },
+          "keywords": [
+            "레버리지 ETF",
+            "예탁금 상향",
+            "증시안정",
+            "변동성 감소",
+            "금융당국 대책"
+          ],
+          "main_actors": [
+            "재정경제부",
+            "금융위원회",
+            "금융당국"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "과도한 투자 쏠림으로 인한 증시 전체 변동성 증가"
+          ],
+          "background": [
+            "국내 첫 단일종목 레버리지 ETF 도입"
+          ],
+          "emphasized_effects": [
+            "거래량 감소 효과",
+            "변동성 감소 미흡"
+          ],
+          "affected_groups": [
+            "단일종목 레버리지 ETF 투자자"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "과도한 투자 쏠림으로 증시 전체의 변동성을 키우는 부작용이 컸기 때문이다",
+              "변동성을 줄이는 근본 대책으로는 미흡하다는 지적도 나온다"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "예탁금 상향으로 거래량 감소 효과는 기대되나, 변동성 감소 효과에 대해서는 회의적 시각이 공존하고 있다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:42:52.874186+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-191e2dc324e03384",
+      "issue_id": "issue-dfd650ff72768e0e",
       "groups": [
         {
           "group_id": "group-1",
-          "label": "레버리지 ETF 상장 폐지와 시장 영향",
-          "summary": "두 언론사 모두 레버리지 ETF 상장 폐지 가능성과 그로 인한 시장 영향에 초점을 맞추고 있으며, 정부의 대응 방향을 중립적으로 설명하고 있다. 핵심 쟁점은 레버리지 ETF 상장 폐지가 시장에 미칠 충격과 정부의 대응 조치이다.",
+          "label": "레버리지 ETF 규제 효과와 시장 안정 전망",
+          "summary": "레버리지 ETF에 대한 규제 조치(신규 매수 예탁금 상향)의 내용과 시장 안정 효과를 중심으로 설명하며, 정책의 긍정적 효과를 전망하는 관점",
           "keywords": [
             "레버리지 ETF",
-            "상장 폐지",
-            "시장 충격",
-            "기본예탁금",
-            "정부 대응"
+            "예탁금 상향",
+            "시장 안정",
+            "변동성 감소"
           ],
           "publisher_ids": [
-            "donga",
             "mk"
           ],
           "publishers": [
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            },
             {
               "publisher_id": "mk",
               "publisher": "매일경제"
             }
           ],
-          "publisher_count": 2,
+          "publisher_count": 1,
           "group_evidence": [
-            "두 언론사 모두 레버리지 ETF 상장 폐지 가능성과 그로 인한 시장 영향에 초점을 맞추고 있다. 동아일보는 김용범 실장의 발언을 통해 상장 폐지가 시장에 미칠 충격을 중립적으로 설명하며, 정부의 기본예탁금 상향 조치를 보도한다. 매일경제는 거시경제·금융현안 간담회에서 단일종목 레버리지 ETF가 증시 변동성의 주범으로 지목된 상황을 다루며, 상장 폐지 여부를 둘러싼 논의를 중립적으로 전달한다. 핵심 쟁점은 레버리지 ETF 상장 폐지가 시장에 미칠 충격과 정부의 대응 방향이며, 두 언론사 모두 이를 중립적인 설명 태도로 보도하고 있다."
+            "레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구를 강조하며, 주가 폭락의 원인으로 레버리지 ETF를 지목하고 금융당국의 규제 필요성을 제기함. 향후 금융당국의 모니터링 강화와 추가 대책 마련 여부에 따라 시장 안정 여부가 결정될 것으로 전망함."
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "레버리지 ETF 규제 효과와 한계 평가",
+          "summary": "레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과를 설명하지만, 변동성 감소 효과에 대한 회의적 시각을 함께 제시하는 관점",
+          "keywords": [
+            "레버리지 ETF",
+            "예탁금 상향",
+            "증시안정",
+            "변동성 감소",
+            "한계"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과를 설명하지만, 변동성 감소 효과에 대해서는 미흡하다는 지적을 함께 제시하며, 정책의 효과에 대한 회의적 시각을 드러냄."
+          ]
+        },
+        {
+          "group_id": "group-3",
+          "label": "레버리지 ETF 시장 불안 비판",
+          "summary": "레버리지 ETF가 시장 불안정을 초래했다는 비판을 중심으로, 단일 종목 레버리지 ETF에 대한 부정적 평가를 강조하는 관점",
+          "keywords": [
+            "레버리지 ETF",
+            "시장 불안",
+            "비판"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "레버리지 ETF가 시장 불안정을 초래했다는 비판을 중심으로, 단일 종목 레버리지 ETF에 대한 부정적 평가를 강조하며, 시장에 필요 이상의 불안정을 키웠다는 비판적 시각을 제시함."
           ]
         }
       ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 레버리지 ETF 상장 폐지가 시장에 미칠 영향과 정부의 대응 조치를 중립적으로 설명하고 있다. 동아일보는 김용범 실장의 발언과 기본예탁금 제도 변경을 구체적으로 보도하며, 매일경제는 거시경제·금융현안 간담회에서 단일종목 레버리지 ETF가 증시 변동성의 주범으로 지목된 상황을 다룬다. 핵심 관점은 '레버리지 ETF 상장 폐지와 시장 영향'으로 동일하며, 보도 태도는 중립 설명으로 일치한다.",
+      "group_count": 3,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "group-1은 레버리지 ETF에 대한 규제 필요성을 강조하며 금융당국의 모니터링 강화와 추가 대책 마련을 통해 시장 안정이 가능할 것으로 전망하는 반면, group-2는 규제 조치의 내용과 증시안정 효과를 설명하지만 변동성 감소 효과에 대해서는 미흡하다는 회의적 시각을 함께 제시하여 정책의 효과에 대한 평가가 더 신중하고 비판적입니다."
+        },
+        {
+          "group_ids": [
+            "group-1",
+            "group-3"
+          ],
+          "contrast_statement": "group-1은 레버리지 ETF를 주가 폭락의 원인으로 지목하며 규제 필요성을 강조하는 우려·경계적 태도를 보이는 반면, group-3은 레버리지 ETF가 시장 불안정을 초래했다는 비판을 중심으로 단일 종목 레버리지 ETF에 대한 부정적 평가를 강조하며, 시장에 필요 이상의 불안정을 키웠다는 비판적 시각을 제시합니다."
+        },
+        {
+          "group_ids": [
+            "group-2",
+            "group-3"
+          ],
+          "contrast_statement": "group-2는 레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과를 설명하며 정책의 효과에 대한 회의적 시각을 제시하는 반면, group-3은 레버리지 ETF가 시장 불안정을 초래했다는 비판을 중심으로 단일 종목 레버리지 ETF에 대한 부정적 평가를 강조하며, 시장에 필요 이상의 불안정을 키웠다는 비판적 시각을 제시합니다."
+        }
+      ],
+      "grouping_summary": "3개 언론사는 모두 레버리지 ETF를 주가 변동의 주요 원인으로 지목하지만, 핵심 관점이 서로 다릅니다. 매일경제(mk)는 레버리지 ETF에 대한 규제 필요성과 금융당국의 추가 대책 강구를 강조하는 반면, 동아일보(donga)는 규제 조치의 내용과 증시안정 효과를 설명하지만 변동성 감소 효과에 대한 회의적 시각을 함께 제시합니다. SBS(sbs)는 레버리지 ETF가 시장 불안정을 초래했다는 비판을 중심으로 단일 종목 레버리지 ETF에 대한 부정적 평가를 강조합니다. 따라서 3개의 별도 그룹으로 분류했습니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-22T06:20:31.710965+00:00",
+      "grouped_at": "2026-07-22T08:43:00.102274+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,mk": {
-        "issue_id": "issue-191e2dc324e03384",
+        "issue_id": "issue-dfd650ff72768e0e",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 단일종목 레버리지 ETF와 관련된 금융당국의 규제 조치를 다루고 있으며, 주가 폭락 또는 증시 변동성 문제와 연결지어 보도하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 단일종목 레버리지 ETF에 대한 금융당국의 규제 조치를 보도하며, 주가 폭락 또는 증시 변동성 문제를 언급하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주가 폭락의 원인 중 하나로 레버리지 ETF를 지목하고 규제 필요성을 제기함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "금융당국의 예탁금 상향 조정 조치를 보도하며 변동성 감소 효과에 대한 회의적 시각을 제시함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구를 강조하는 반면, 동아일보는 예탁금 상향 조정의 내용과 증시안정 효과에 대한 평가를 중심으로 보도함",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구 필요성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과에 대한 평가",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 최근 급격한 주가 변동을 원인으로 강조하는 반면, 동아일보는 과도한 투자 쏠림으로 인한 증시 전체 변동성 증가를 원인으로 제시함",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "최근 급격한 주가 변동",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "과도한 투자 쏠림으로 인한 증시 전체 변동성 증가",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 주가 폭락을 강조하고 투자자를 영향 대상으로 보는 반면, 동아일보는 거래량 감소 효과와 변동성 감소 미흡을 강조하고 단일종목 레버리지 ETF 투자자를 영향 대상으로 함",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주가 폭락",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "거래량 감소 효과 및 변동성 감소 미흡",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "두 언론사 모두 우려·경계 태도를 보이지만, 매일경제는 '경고등 켠 여당'이라는 표현을, 동아일보는 '문턱 높여'라는 표현을 사용하여 규제 조치의 효과에 대한 회의적 시각을 드러냄",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주가 폭락에 대한 경고등 켜는 듯한 우려·경계 태도",
+                "evidence": [
+                  "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당",
+                  "집중 모니터링, 추가 대책 강구"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "예탁금 상향 조치의 효과에 대한 회의적 우려·경계 태도",
+                "evidence": [
+                  "과도한 투자 쏠림으로 증시 전체의 변동성을 키우는 부작용이 컸기 때문이다",
+                  "변동성을 줄이는 근본 대책으로는 미흡하다는 지적도 나온다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "단일종목 레버리지 ETF와 관련된 금융당국의 규제 조치를 다루고 있음",
+          "주가 폭락 또는 증시 변동성 문제를 언급함",
+          "금융당국 또는 금융위원회의 조치를 보도함"
+        ],
+        "key_differences": [
+          "매일경제는 주가 폭락을 직접적인 원인으로 강조하는 반면, 동아일보는 과도한 투자 쏠림을 원인으로 제시함",
+          "매일경제는 집중 모니터링과 추가 대책 강구를 강조하는 반면, 동아일보는 예탁금 상향 조정의 내용과 효과에 대한 평가를 중심으로 함",
+          "매일경제는 투자자를 영향 대상으로 보는 반면, 동아일보는 단일종목 레버리지 ETF 투자자를 구체적으로 언급함"
+        ],
+        "comparison_report": "매일경제와 동아일보는 모두 단일종목 레버리지 ETF와 관련된 금융당국의 규제 조치를 보도하지만, 강조점과 보도 태도에서 차이를 보인다. 매일경제는 주가 폭락을 직접적인 원인으로 지목하고 집중 모니터링 및 추가 대책 강구를 촉구하는 반면, 동아일보는 과도한 투자 쏠림으로 인한 증시 변동성 증가를 원인으로 제시하며 예탁금 상향 조정의 효과에 대해 회의적인 시각을 보인다. 두 언론사 모두 우려·경계 태도를 보이지만, 매일경제는 규제 필요성에 초점을 맞추고 동아일보는 조치의 효과에 대한 의문을 제기한다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당…“집중 모니터링, 추가 대책 강구”",
+            "link": "https://www.mk.co.kr/news/economy/12102777",
+            "published_at": "Mon, 20 Jul 2026 20:36:46 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "레버리지 예탁금 3배로 ‘문턱’ 높여… “증시안정 효과 미지수”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315619/2",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T08:43:12.389883+00:00",
+        "model": "solar-pro3"
+      },
+      "donga,mk,sbs": {
+        "issue_id": "issue-dfd650ff72768e0e",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "이재명 대통령이 단일 종목 레버리지 ETF를 주가 변동의 원인으로 지목하며 시장 불안을 키웠다는 비판을 언급했고, 더불어민주당 의원들은 금융당국과 만나 레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구를 촉구했으며, 금융당국은 단일종목 레버리지 ETF의 신규 매수 예탁금을 1000만 원에서 3000만 원으로 상향 조정해 거래량을 줄이려 했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "SBS는 이재명 대통령의 비판을, 매일경제는 더불어민주당 의원들의 규제 촉구, 동아일보는 금융당국의 예탁금 상향 조치를 각각 보도했으나, 모두 단일종목 레버리지 ETF가 주가 변동 및 시장 불안의 원인으로 지목되었다는 점에서 공통점을 보인다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 대통령이 단일 종목 레버리지 ETF를 주가 변동의 원인으로 지목하며 시장 불안을 키웠다는 비판을 언급함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "더불어민주당 의원들이 금융당국과 만나 단일종목 레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구를 촉구함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "금융당국이 단일종목 레버리지 ETF의 신규 매수 예탁금을 1000만 원에서 3000만 원으로 상향 조정해 거래량을 줄이려 함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 레버리지 ETF가 시장 불안정을 초래했다는 비판에 초점을 맞춘 반면, 매일경제는 규제 필요성을, 동아일보는 규제 조치의 효과에 대한 의문을 제기함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "레버리지 ETF가 시장 불안정을 초래했다는 비판",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과에 대한 평가",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 단일 종목 레버리지 ETF를 직접적인 원인으로 지목했고, 매일경제는 최근 급격한 주가 변동을 원인으로 제시했으며, 동아일보는 과도한 투자 쏠림으로 인한 증시 전체 변동성 증가를 원인으로 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "단일 종목 레버리지 ETF가 급격한 주가 변동의 원인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "최근 급격한 주가 변동",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "과도한 투자 쏠림으로 인한 증시 전체 변동성 증가",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 시장 불안정을, 매일경제는 투자자들을 대상으로 한 주가 폭락을, 동아일보는 단일종목 레버리지 ETF 투자자들을 대상으로 한 거래량 감소와 변동성 감소 미흡을 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "시장 불안정을 키움",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주가 폭락",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "거래량 감소 효과 및 변동성 감소 미흡",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 비판적인 태도를 보이며 '시장에 필요 이상의 불안정을 키웠다는 비판'을 제시했고, 매일경제는 우려·경계의 태도로 '주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당', '집중 모니터링, 추가 대책 강구'를 강조했으며, 동아일보는 우려·경계의 태도로 '과도한 투자 쏠림으로 증시 전체의 변동성을 키우는 부작용이 컸기 때문이다', '변동성을 줄이는 근본 대책으로는 미흡하다는 지적도 나온다'를 제시함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "비판적인 태도로 시장에 필요 이상의 불안정을 키웠다는 비판을 제시함",
+                "evidence": [
+                  "시장에 필요 이상의 불안정을 키웠다는 비판"
+                ]
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "우려·경계의 태도로 주가 폭락에 대한 경고와 집중 모니터링, 추가 대책 강구를 강조함",
+                "evidence": [
+                  "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당",
+                  "집중 모니터링, 추가 대책 강구"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "우려·경계의 태도로 규제 조치의 효과에 대한 의문을 제기함",
+                "evidence": [
+                  "과도한 투자 쏠림으로 증시 전체의 변동성을 키우는 부작용이 컸기 때문이다",
+                  "변동성을 줄이는 근본 대책으로는 미흡하다는 지적도 나온다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "단일종목 레버리지 ETF가 주가 변동 및 시장 불안의 원인으로 지목됨",
+          "금융당국의 규제 또는 모니터링 필요성 제기"
+        ],
+        "key_differences": [
+          "SBS는 대통령 개인의 비판을, 매일경제는 여당의 규제 촉구, 동아일보는 금융당국의 구체적 규제 조치를 각각 강조함",
+          "SBS는 시장 불안정에 초점을, 매일경제는 주가 폭락과 투자자 영향, 동아일보는 규제 조치의 효과에 대한 의문을 강조함"
+        ],
+        "comparison_report": "SBS는 이재명 대통령이 단일 종목 레버리지 ETF를 주가 변동의 원인으로 지목하며 시장 불안을 키웠다는 비판을 보도한 반면, 매일경제는 더불어민주당 의원들이 금융당국과 만나 레버리지 ETF에 대한 집중 모니터링과 추가 대책 강구를 촉구하며 주가 폭락의 원인으로서 규제 필요성을 강조했고, 동아일보는 금융당국이 단일종목 레버리지 ETF의 신규 매수 예탁금을 1000만 원에서 3000만 원으로 상향 조정해 거래량을 줄이려 했으나 변동성 감소 효과에 대한 회의적 시각도 함께 제기하며 규제 조치의 효과에 의문을 제기했다. 세 언론사 모두 레버리지 ETF가 시장 불안의 원인으로 지목되었다는 공통점을 보이나, SBS는 비판적인 태도를, 매일경제는 우려·경계의 태도를, 동아일보는 규제 조치의 효과에 대한 의문을 제기하며 각각 다른 관점에서 보도하였다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "\"조정, 레버리지 때문이란 착시도…보완도 우리 몫\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667976",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "주가 폭락에 ‘레버리지 ETF’ 경고등 켠 여당…“집중 모니터링, 추가 대책 강구”",
+            "link": "https://www.mk.co.kr/news/economy/12102777",
+            "published_at": "Mon, 20 Jul 2026 20:36:46 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "레버리지 예탁금 3배로 ‘문턱’ 높여… “증시안정 효과 미지수”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315619/2",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T08:43:14.148523+00:00",
+        "model": "solar-pro3"
+      },
+      "donga,sbs": {
+        "issue_id": "issue-dfd650ff72768e0e",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "이재명 대통령이 단일 종목 레버리지 ETF가 급격한 주가 변동의 원인으로 지목되며 시장 불안을 키웠다는 비판을 언급했고, 금융당국은 해당 ETF의 신규 매수 예탁금을 1000만 원에서 3000만 원으로 상향 조정해 거래량을 줄이려 했으나 변동성 감소 효과에 대한 회의적 시각도 함께 제기되고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 단일 종목 레버리지 ETF가 주가 변동 및 시장 불안의 원인으로 지목되고, 금융당국의 예탁금 상향 조정 조치가 시행되었다는 점을 공통적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 대통령이 레버리지 ETF를 시장 불안의 원인으로 비판하며, 해당 ETF가 시장 불안을 키웠다는 점을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "금융당국이 레버리지 ETF 신규 매수 예탁금을 1000만 원에서 3000만 원으로 상향 조정해 거래량 감소를 유도했다는 점을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 레버리지 ETF 자체가 시장 불안정을 초래했다는 비판에 초점을 맞춘 반면, 동아일보는 예탁금 상향 조정의 내용과 증시안정 효과에 대한 평가를 중심으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "레버리지 ETF가 시장 불안정을 초래했다는 비판",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 신규 매수 예탁금 상향 조정의 내용과 증시안정 효과에 대한 평가",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 단일 종목 레버리지 ETF를 직접적인 원인으로 강조한 반면, 동아일보는 과도한 투자 쏠림으로 인한 증시 전체 변동성 증가를 원인으로 제시하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "단일 종목 레버리지 ETF가 시장 불안의 원인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "과도한 투자 쏠림으로 인한 증시 전체 변동성 증가",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 시장 불안정이라는 광범위한 영향을 강조한 반면, 동아일보는 거래량 감소와 변동성 감소 미흡이라는 구체적 효과와 단일종목 레버리지 ETF 투자자를 대상으로 한 영향을 언급하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "시장 불안정",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "거래량 감소 효과와 변동성 감소 미흡, 단일종목 레버리지 ETF 투자자 대상 영향",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 시장에 필요 이상의 불안정을 키웠다는 비판적 태도를 보인 반면, 동아일보는 과도한 투자 쏠림으로 인한 부작용과 변동성 감소 미흡에 대한 우려·경계 태도를 보이고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "시장에 필요 이상의 불안정을 키웠다는 비판",
+                "evidence": [
+                  "시장에 필요 이상의 불안정을 키웠다는 비판"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "과도한 투자 쏠림으로 증시 전체의 변동성을 키우는 부작용과 변동성 감소 미흡에 대한 우려",
+                "evidence": [
+                  "과도한 투자 쏠림으로 증시 전체의 변동성을 키우는 부작용이 컸기 때문이다",
+                  "변동성을 줄이는 근본 대책으로는 미흡하다는 지적도 나온다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "단일 종목 레버리지 ETF가 주가 변동 및 시장 불안의 원인으로 지목됨",
+          "금융당국의 예탁금 상향 조정 조치 시행",
+          "레버리지 ETF 규제 필요성에 대한 공감대"
+        ],
+        "key_differences": [
+          "SBS는 이재명 대통령의 비판을 중심으로 레버리지 ETF 자체에 대한 부정적 시각을 강조한 반면, 동아일보는 금융당국의 규제 조치와 그 효과에 대한 회의적 평가를 중심으로 보도"
+        ],
+        "comparison_report": "SBS와 동아일보 모두 단일 종목 레버리지 ETF가 시장 불안정의 원인으로 지목되고 금융당국의 예탁금 상향 조정 조치가 시행되었다는 공통점을 가지고 있으나, SBS는 이재명 대통령의 비판을 통해 레버리지 ETF 자체에 대한 부정적 시각을 강조한 반면, 동아일보는 금융당국의 규제 조치와 그 효과에 대한 회의적 평가를 중심으로 보도하고 있다. SBS는 시장 불안정이라는 광범위한 영향을 강조한 데 비해 동아일보는 거래량 감소와 변동성 감소 미흡이라는 구체적 효과와 단일종목 레버리지 ETF 투자자를 대상으로 한 영향을 언급하고 있으며, SBS는 비판적 태도를, 동아일보는 우려·경계 태도를 보이고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "\"조정, 레버리지 때문이란 착시도…보완도 우리 몫\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667976",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "레버리지 예탁금 3배로 ‘문턱’ 높여… “증시안정 효과 미지수”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315619/2",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T08:43:27.820688+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-9cc36ee87f768c32": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-9cc36ee87f768c32",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "5f3b8a00a8637c21c6d5e3aa63549706d68d1e6da8a6be5c8bed47537e751113",
+            "title": "年 7%대 주담대 더 오른다… 물가안정 기대속 영끌족 비상",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315507/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "한국은행이 3년 6개월 만에 기준금리를 인상하고 추가 인상까지 예고함에 따라 주택담보대출 금리가 연 8%대로 오를 것으로 전망되며, '영끌족' 등 대출자들의 상환 부담이 커질 것으로 예상된다.",
+          "headline_frame": "기준금리 인상으로 인한 주택담보대출 금리 상승 및 영끌족 부담 증가",
+          "main_focus": "기준금리 인상이 주택담보대출 금리에 미치는 영향과 영끌족 등 대출자들의 부담 증가",
+          "primary_frame": {
+            "category": "금리 인상과 대출 부담",
+            "stance": "사실 전달",
+            "target": "한국은행, 주택담보대출 금리, 영끌족",
+            "summary": "한국은행이 3년 6개월 만에 기준금리를 인상하고 추가 인상까지 예고함에 따라 주택담보대출 금리가 연 8%대로 오를 것으로 전망되며, '영끌족' 등 대출자들의 상환 부담이 커질 것으로 예상된다.",
+            "evidence": [
+              "16일 한국은행 금융통화위원회가 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다.",
+              "향후 추가 금리 인상까지 예고되면서 고물가와 고환율이 다소나마 안정될 계기를 찾을지 주목된다.",
+              "다만 이미 최대 연 7%대까지 높아진 주택담보대출 금리가 연 8%대로 오를 것으로 보이면서 대출을 받은 개인의 상환 부담은 한층 커질 것으로 전망된다.",
+              "급등한 부동산 시장과 증시에 뛰어든 ‘영끌’(영혼까지 끌어모아 대출)족들은 비상이 걸렸다."
+            ]
+          },
+          "keywords": [
+            "기준금리 인상",
+            "주택담보대출 금리",
+            "영끌족",
+            "물가안정",
+            "고환율",
+            "금리 인상 예고"
+          ],
+          "main_actors": [
+            "한국은행",
+            "영끌족",
+            "대출자"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "고물가",
+            "경기 회복세"
+          ],
+          "background": [
+            "소비자 물가 상승률 3.1%(5월), 3.2%(6월)",
+            "수입 물가 상승률 20.5%",
+            "생산자 물가 상승률 8.5%"
+          ],
+          "emphasized_effects": [
+            "주택담보대출 금리 연 8%대 상승",
+            "대출 상환 부담 증가",
+            "영끌족 비상"
+          ],
+          "affected_groups": [
+            "대출자",
+            "영끌족"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "16일 한국은행 금융통화위원회가 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다.",
+              "향후 추가 금리 인상까지 예고되면서 고물가와 고환율이 다소나마 안정될 계기를 찾을지 주목된다.",
+              "다만 이미 최대 연 7%대까지 높아진 주택담보대출 금리가 연 8%대로 오를 것으로 보이면서 대출을 받은 개인의 상환 부담은 한층 커질 것으로 전망된다."
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "향후 추가 금리 인상 예고로 고물가와 고환율이 안정될지 주목되나, 대출자들의 부담은 더욱 커질 전망이다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:44:53.103457+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-9cc36ee87f768c32",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "359d0d2892dcf058415a1dcfadd49c8dbe706fb19862a0709184d5cb1636af88",
+            "title": "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”",
+            "published_at": "Thu, 16 Jul 2026 13:49:12 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12100191"
+          }
+        ],
+        "analysis": {
+          "article_summary": "한국은행 금융통화위원회가 기준금리를 2.50%에서 2.75%로 0.25%p 인상했으며, 신현송 총재는 물가 안정 수렴 시까지 추가 인상 가능성을 열어두겠다고 밝혔다.",
+          "headline_frame": "기준금리 인상 결정과 향후 추가 인상 가능성을 동시에 강조",
+          "main_focus": "한국은행의 기준금리 인상 결정과 물가 안정을 위한 추가 인상 가능성",
+          "primary_frame": {
+            "category": "통화정책 결정",
+            "stance": "사실 전달",
+            "target": "한국은행 금융통화위원회 및 신현송 총재",
+            "summary": "한국은행이 기준금리를 0.25%p 인상하고, 물가 안정 수렴 시까지 추가 인상 가능성을 열어두겠다는 입장을 전달하며 통화정책 방향을 설명했다.",
+            "evidence": [
+              "16일 기준금리 2.75%…0.25%p↑",
+              "신현송 한은 총재 “모든 가능성 열어두겠다”",
+              "물가수준 안정적 수렴때까지 대응"
+            ]
+          },
+          "keywords": [
+            "기준금리 인상",
+            "물가 안정",
+            "추가 인상 가능성",
+            "한국은행",
+            "신현송 총재"
+          ],
+          "main_actors": [
+            "한국은행 금융통화위원회",
+            "신현송 총재"
+          ],
+          "quoted_sources": [
+            "신현송 한은 총재"
+          ],
+          "causes": [
+            "물가수준 안정적 수렴"
+          ],
+          "background": [
+            "기준금리 2.50%에서 2.75%로 인상"
+          ],
+          "emphasized_effects": [
+            "물가수준 안정적 수렴"
+          ],
+          "affected_groups": [
+            "실물경제"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "16일 기준금리 2.75%…0.25%p↑",
+              "물가수준 안정적 수렴때까지 대응",
+              "증시 변동성 높지만 실물경제 중요"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "물가 안정 수렴 시까지 추가 인상 가능성을 열어두었으나, 구체적인 향후 금리 방향에 대한 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:44:54.493704+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-9cc36ee87f768c32",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "기준금리 인상과 대출 부담 증가",
+          "summary": "한국은행의 기준금리 인상이 주택담보대출 금리에 미치는 영향과 대출자들의 부담 증가를 중심으로 분석한 그룹",
+          "keywords": [
+            "기준금리 인상",
+            "주택담보대출 금리",
+            "영끌족",
+            "대출 상환 부담"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "동아일보는 기준금리 인상이 주택담보대출 금리에 미치는 영향과 영끌족 등 대출자들의 부담 증가를 핵심 쟁점으로 다루고 있다. 고물가와 경기 회복세를 배경으로 기준금리 인상이 물가 안정을 위한 조치임을 설명하면서도, 이로 인해 대출 금리가 연 8%대로 상승하고 대출 상환 부담이 커질 것이라는 부정적 영향을 강조하고 있다. 이는 정책의 효과와 부작용을 동시에 언급하지만, 대출자 부담 증가라는 핵심 쟁점에 초점을 맞추고 있다."
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "기준금리 인상과 물가 안정 전망",
+          "summary": "한국은행의 기준금리 인상 결정과 물가 안정을 위한 추가 인상 가능성을 중심으로 분석한 그룹",
+          "keywords": [
+            "기준금리 인상",
+            "물가 안정",
+            "추가 인상 가능성",
+            "한국은행"
+          ],
+          "publisher_ids": [
+            "mk"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "매일경제는 한국은행의 기준금리 인상 결정과 물가 안정을 위한 추가 인상 가능성을 핵심 쟁점으로 다루고 있다. 기준금리 2.50%에서 2.75%로의 인상이라는 구체적 수치를 제시하며, 물가수준이 안정적으로 수렴할 때까지 대응하겠다는 입장을 강조하고 있다. 실물경제에 미치는 영향을 언급하면서도 물가 안정이라는 긍정적 효과에 초점을 맞추고 있으며, 대출 부담 증가보다는 물가 안정이라는 정책적 목표에 더 중점을 두고 있다."
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "동아일보는 기준금리 인상으로 인한 주택담보대출 금리 상승과 영끌족 등 대출자들의 부담 증가를 핵심 쟁점으로 삼아 정책의 부정적 영향을 강조하는 반면, 매일경제는 한국은행의 기준금리 인상 결정과 물가 안정을 위한 추가 인상 가능성을 중심으로 정책의 긍정적 효과를 강조한다. 동아일보는 대출자 부담 증가라는 구체적 영향을 강조하는 데 반해, 매일경제는 물가 안정이라는 거시적 목표에 초점을 맞추고 있다."
+        }
+      ],
+      "grouping_summary": "두 언론사는 모두 한국은행의 기준금리 인상이라는 동일한 사건을 다루고 있으나, 동아일보(donga)는 대출자들의 부담 증가라는 미시적 영향에 초점을 맞춘 반면, 매일경제(mk)는 물가 안정이라는 거시적 정책 효과에 초점을 맞추어 서로 다른 핵심 관점을 보이고 있다. 따라서 두 언론사는 별도의 그룹으로 분류되었다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T08:45:00.068596+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,mk": {
+        "issue_id": "issue-9cc36ee87f768c32",
         "selected_publishers": [
           {
             "publisher_id": "donga",
@@ -1481,24 +1942,24 @@
             "publisher": "매일경제"
           }
         ],
-        "common_summary": "김용범 대통령정책실장이 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝혔으며, 기본예탁금 상향 등 보완 대책을 발표했다. 거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 다룬다.",
+        "common_summary": "한국은행이 3년 6개월 만에 기준금리를 인상하고 추가 인상까지 예고함에 따라 주택담보대출 금리가 연 8%대로 오를 것으로 전망되며, 대출자들의 상환 부담이 커질 것으로 예상된다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 김용범 대통령정책실장이 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝혔으며, 기본예탁금 상향 등 보완 대책을 발표했다고 보도했다.",
+            "contrast_statement": "두 언론사 모두 한국은행의 기준금리 인상과 이로 인한 주택담보대출 금리 상승 및 대출자 부담 증가를 공통적으로 다루고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "김용범 대통령정책실장이 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝히고, 기본예탁금 3000만 원 상향 등 보완 대책을 발표했다.",
+                "summary": "한국은행의 기준금리 인상으로 주택담보대출 금리가 연 8%대로 상승하고 영끌족 등 대출자의 상환 부담이 커질 것으로 전망",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 보도했다.",
+                "summary": "한국은행의 기준금리 인상(2.50%→2.75%)과 추가 인상 가능성 예고로 인한 주택담보대출 금리 상승 및 대출자 부담 증가",
                 "evidence": []
               }
             ]
@@ -1506,18 +1967,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 레버리지 ETF 상장 폐지 가능성과 정부의 대응 방향에 초점을 맞춘 반면, 매일경제는 거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 강조했다.",
+            "contrast_statement": "동아일보는 기준금리 인상이 주택담보대출 금리에 미치는 구체적 영향에 초점을 맞춘 반면, 매일경제는 한국은행의 추가 인상 가능성과 물가 안정 목표에 더 중점을 둔다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "레버리지 ETF 상장 폐지 가능성과 정부의 대응 방향",
+                "summary": "기준금리 인상이 주택담보대출 금리에 미치는 영향과 영끌족 등 대출자들의 부담 증가",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황",
+                "summary": "한국은행의 기준금리 인상 결정과 물가 안정을 위한 추가 인상 가능성",
                 "evidence": []
               }
             ]
@@ -1525,18 +1986,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 주식시장 변동성 확대를 원인으로 강조한 반면, 매일경제는 거시경제·금융·통화당국 수장들이 참석한 거시경제·금융현안 간담회(F4 회의)를 배경으로 제시했다.",
+            "contrast_statement": "동아일보는 고물가와 경기 회복세를 원인으로 제시한 반면, 매일경제는 물가수준 안정적 수렴을 목표로 한 정책 배경을 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "주식시장 변동성 확대",
+                "summary": "고물가(소비자 물가 상승률 3.1%, 3.2%)와 경기 회복세를 기준금리 인상의 주요 원인으로 제시",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "거시경제·금융·통화당국 수장들이 참석한 거시경제·금융현안 간담회(F4 회의)",
+                "summary": "물가수준 안정적 수렴을 위한 기준금리 인상 결정",
                 "evidence": []
               }
             ]
@@ -1544,18 +2005,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 시장 충격 우려와 투자자 부담 증가를 강조한 반면, 매일경제는 국내 증시 변동성 자체를 강조했다.",
+            "contrast_statement": "동아일보는 주택담보대출 금리 상승과 영끌족 등 대출자 개인의 부담 증가를 구체적으로 언급한 반면, 매일경제는 실물경제 전반의 영향과 증시 변동성을 함께 다룬다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "시장 충격 우려, 투자자 부담 증가",
+                "summary": "주택담보대출 금리 연 8%대 상승 및 영끌족 등 대출자의 상환 부담 증가",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "국내 증시 변동성",
+                "summary": "실물경제 영향과 증시 변동성 고려",
                 "evidence": []
               }
             ]
@@ -1563,58 +2024,731 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 김용범 대통령정책실장이 KBS 일요진단에 출연해 '상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다'고 밝힌 내용을 중립적으로 전달했으며, 정부는 거시경제·금융현안 간담회에서 기본예탁금을 3000만 원으로 상향하고 현금만 인정하는 보완 대책을 발표했다고 보도했다. 매일경제는 '단일종목 레버리지 ETF의 운명은?'이라는 제목으로 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 중립적으로 보도했다.",
+            "contrast_statement": "동아일보는 중립적으로 사실을 설명하며 '영끌족 비상' 등 구체적 전망을 제시하는 반면, 매일경제는 신현송 총재의 발언을 직접 인용하며 '모든 가능성 열어두겠다'는 정책 기조를 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "김용범 대통령정책실장이 KBS 일요진단에 출연해 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝히고, 기본예탁금 3000만 원 상향 등 보완 대책을 발표한 내용을 중립적으로 전달함",
+                "summary": "사실관계를 중립적으로 전달하며 영끌족 등 대출자 부담 증가를 전망하는 설명적 태도",
                 "evidence": [
-                  "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다.",
-                  "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다."
+                  "16일 한국은행 금융통화위원회가 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다.",
+                  "향후 추가 금리 인상까지 예고되면서 고물가와 고환율이 다소나마 안정될 계기를 찾을지 주목된다.",
+                  "다만 이미 최대 연 7%대까지 높아진 주택담보대출 금리가 연 8%대로 오를 것으로 보이면서 대출을 받은 개인의 상환 부담은 한층 커질 것으로 전망된다."
                 ]
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 중립적으로 보도함",
+                "summary": "신현송 한은 총재의 발언을 직접 인용하며 중립적으로 정책 기조를 설명하는 태도",
                 "evidence": [
-                  "단일종목 레버리지 ETF의 운명은?",
-                  "국내 증시 변동성의 주범으로 지목된 삼"
+                  "16일 기준금리 2.75%…0.25%p↑",
+                  "물가수준 안정적 수렴때까지 대응",
+                  "증시 변동성 높지만 실물경제 중요"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다는 김용범 대통령정책실장의 발언",
-          "기본예탁금 상향 등 보완 대책 발표",
-          "거시경제·금융·통화당국 수장들이 참석한 간담회에서 논의가 이루어졌다는 점"
+          "한국은행의 기준금리 인상(3년 6개월 만)과 추가 인상 예고",
+          "주택담보대출 금리 상승 및 대출자 부담 증가 전망",
+          "고물가와 고환율 상황 언급"
         ],
         "key_differences": [
-          "동아일보는 김용범 대통령정책실장의 발언과 기본예탁금 상향 등 구체적 정부 대책을 강조한 반면, 매일경제는 거시경제·금융·통화당국 수장들이 참석한 간담회 자체를 배경으로 제시했다.",
-          "동아일보는 시장 충격 우려와 투자자 부담 증가를 강조한 반면, 매일경제는 국내 증시 변동성 자체를 강조했다."
+          "동아일보는 영끌족 등 대출자 개인의 구체적 부담 증가를 강조하는 반면, 매일경제는 실물경제 영향과 증시 변동성을 함께 다룸",
+          "동아일보는 고물가와 경기 회복세를 원인으로 제시한 반면, 매일경제는 물가수준 안정적 수렴을 목표로 한 정책 배경을 강조"
         ],
-        "comparison_report": "동아일보와 매일경제는 모두 김용범 대통령정책실장이 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝히고 기본예탁금 3000만 원 상향 등 보완 대책을 발표했다고 보도했다. 그러나 동아일보는 김용범 실장의 발언과 정부의 구체적 대책을 중심으로 보도한 반면, 매일경제는 거시경제·금융·통화당국 수장들이 참석한 거시경제·금융현안 간담회(F4 회의)에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 상황을 강조했다. 두 언론사 모두 중립적인 설명 태도를 보였으나, 동아일보는 '시장 충격 우려'와 '투자자 부담 증가'를 강조한 데 비해 매일경제는 '국내 증시 변동성' 자체를 강조했다.",
+        "comparison_report": "동아일보와 매일경제는 모두 한국은행의 기준금리 인상(3년 6개월 만)과 추가 인상 가능성을 보도하지만, 동아일보가 주택담보대출 금리 상승과 영끌족 등 대출자 개인의 부담 증가에 초점을 맞춘 반면, 매일경제는 신현송 총재의 발언을 중심으로 물가 안정 목표와 실물경제 영향을 강조한다. 두 언론사 모두 고물가와 고환율 상황을 배경으로 언급하지만, 동아일보는 경기 회복세를 원인으로 제시하는 데 비해 매일경제는 물가수준 안정적 수렴을 목표로 한 정책 기조를 부각한다. 보도 태도는 두 언론사 모두 중립적 설명을 유지하지만, 동아일보는 '영끌족 비상' 등 구체적 전망을 제시하는 반면, 매일경제는 '모든 가능성 열어두겠다'는 총재의 발언을 직접 인용하며 증시 변동성과 실물경제 중요성을 함께 언급한다.",
         "source_links": [
           {
             "publisher_id": "donga",
             "publisher": "동아일보",
-            "title": "김용범 “삼전닉스 레버리지 상장폐지 어려워”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260720/134325135/2",
-            "published_at": "Mon, 20 Jul 2026 04:30:00 +0900"
+            "title": "年 7%대 주담대 더 오른다… 물가안정 기대속 영끌족 비상",
+            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315507/2",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
           },
           {
             "publisher_id": "mk",
             "publisher": "매일경제",
-            "title": "단일종목 레버리지 ETF의 운명은?",
-            "link": "https://www.mk.co.kr/news/economy/12100322",
-            "published_at": "Thu, 16 Jul 2026 15:21:37 +09:00"
+            "title": "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”",
+            "link": "https://www.mk.co.kr/news/economy/12100191",
+            "published_at": "Thu, 16 Jul 2026 13:49:12 +09:00"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-22T06:21:02.789621+00:00",
+        "compared_at": "2026-07-22T08:45:11.388910+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-4db9b4c91145cf51": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-4db9b4c91145cf51",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "8e81fc6b2fc772438e49f0663ebfbf7c34c3ab607f291bd604667e68d52ed986",
+            "title": "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667972"
+          }
+        ],
+        "analysis": {
+          "article_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다.",
+          "headline_frame": "검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론",
+          "main_focus": "민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 의견 수렴",
+          "primary_frame": {
+            "category": "정책 존폐 논의",
+            "stance": "찬반 격론",
+            "target": "검찰 보완수사권",
+            "summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지 문제를 놓고 전문가 공청회를 열어 찬반 의견을 수렴하고 있다.",
+            "evidence": [
+              "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+              "장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다."
+            ]
+          },
+          "keywords": [
+            "보완수사권",
+            "장윤기 사건",
+            "민주당",
+            "공청회",
+            "존폐",
+            "찬반"
+          ],
+          "main_actors": [
+            "민주당"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "장윤기 사건"
+          ],
+          "background": [
+            "검찰 보완수사권"
+          ],
+          "emphasized_effects": [],
+          "affected_groups": [],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+              "장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다."
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "공청회를 통해 찬반 의견을 수렴하고 있으나 향후 정책 방향에 대한 구체적 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:45:26.119427+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-4db9b4c91145cf51",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "8ed8c304b53eab050652023da8c9dedf003f60aa96ea9bee9c34d126c3e5b65d",
+            "title": "장혜영 “보완수사권 폐지, 한동훈과 토론도 못 하면 재고해야”",
+            "published_at": "Wed, 22 Jul 2026 09:00:16 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134341391/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "장혜영 전 의원이 보완수사권 폐지에 대한 공개토론에 더불어민주당 의원들이 응하지 않는 상황을 비판하며, 토론조차 할 수 없는 법안은 재고해야 한다고 주장했다.",
+          "headline_frame": "보완수사권 폐지에 대한 공개토론 회피",
+          "main_focus": "더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피 비판",
+          "primary_frame": {
+            "category": "공개토론 회피 비판",
+            "stance": "비판",
+            "target": "더불어민주당 의원들",
+            "summary": "장혜영 전 의원은 보완수사권 폐지에 대한 한동훈 의원과의 공개토론에 더불어민주당 의원들이 응하지 않는 상황을 비판하며, 토론조차 할 수 없는 법안은 재고해야 한다고 주장했다.",
+            "evidence": [
+              "보완수사권 폐지와 관련해 한동훈 의원과 토론 한번 제대로 붙을 민주당 국회의원이 없다는 것이 참 놀랍다",
+              "아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다",
+              "토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다"
+            ]
+          },
+          "keywords": [
+            "보완수사권 폐지",
+            "공개토론",
+            "더불어민주당",
+            "장혜영",
+            "한동훈"
+          ],
+          "main_actors": [
+            "장혜영",
+            "더불어민주당 의원들",
+            "한동훈"
+          ],
+          "quoted_sources": [],
+          "causes": [],
+          "background": [],
+          "emphasized_effects": [
+            "시민들의 고통",
+            "민주당에 대한 심판"
+          ],
+          "affected_groups": [
+            "시민들"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다",
+              "토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "기사에서는 향후 전망에 대한 구체적인 언급이 없으며, 현재 상황에 대한 비판만 제시하고 있다."
+          },
+          "less_covered_context": [
+            "보완수사권 폐지의 구체적인 내용이나 법적 근거",
+            "한동훈 의원의 입장이나 구체적 주장",
+            "보완수사권 폐지가 검찰 수사 체계에 미칠 영향"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:45:27.479067+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-4db9b4c91145cf51",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "보완수사권 존폐 논의와 공청회",
+          "summary": "SBS는 장윤기 사건을 계기로 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하기 위한 민주당의 전문가 공청회를 중립적으로 보도하며, 정책의 내용과 시장 안정 효과를 설명하는 관점을 취합니다. 동아일보는 보완수사권 폐지 관련 공개토론을 회피하는 더불어민주당을 비판하며, 시민들의 고통과 민주당에 대한 심판을 강조하는 부정적 태도를 보입니다. 두 언론사는 동일한 정책(보완수사권)을 다루지만, SBS는 정책 내용과 효과를 설명하는 중립적 관점인 반면 동아일보는 정책 실패와 책임을 비판하는 대립적 관점을 가지고 있어 서로 다른 그룹으로 분류됩니다.",
+          "keywords": [
+            "보완수사권",
+            "장윤기 사건",
+            "민주당",
+            "공청회",
+            "공개토론 회피",
+            "비판"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS는 장윤기 사건을 계기로 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하기 위한 민주당의 전문가 공청회를 중립적으로 설명하며, 정책의 내용과 시장 안정 효과를 설명하는 관점을 취합니다.",
+            "동아일보는 보완수사권 폐지 관련 공개토론을 회피하는 더불어민주당을 비판하며, 시민들의 고통과 민주당에 대한 심판을 강조하는 부정적 태도를 보입니다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "SBS는 장윤기 사건을 계기로 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하기 위한 민주당의 전문가 공청회를 중립적으로 보도하며 정책의 내용과 시장 안정 효과를 설명하는 관점을 취합니다. 동아일보는 보완수사권 폐지 관련 공개토론을 회피하는 더불어민주당을 비판하며 시민들의 고통과 민주당에 대한 심판을 강조하는 부정적 태도를 보입니다. 두 언론사는 동일한 정책(보완수사권)을 다루지만, SBS는 정책 내용과 효과를 설명하는 중립적 관점인 반면 동아일보는 정책 실패와 책임을 비판하는 대립적 관점을 가지고 있어 서로 다른 그룹으로 분류됩니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T08:45:32.128626+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-4db9b4c91145cf51",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 검찰 보완수사권 폐지 문제를 다루고 있으나, SBS는 민주당의 전문가 공청회를 중심으로 찬반 논의를 보도한 반면, 동아일보는 장혜영 전 의원의 공개토론 회피 비판을 중심으로 보도했다.",
+        "overall_difference": "차이 큼",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴한 사실을 보도한 반면, 동아일보는 장혜영 전 의원이 더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피를 비판한 내용을 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최한 사실을 보도함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장혜영 전 의원이 보완수사권 폐지에 대한 공개토론에 더불어민주당 의원들이 응하지 않는 상황을 비판하며, 토론조차 할 수 없는 법안은 재고해야 한다고 주장함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴한 과정을 보도한 반면, 동아일보는 더불어민주당 의원들의 공개토론 회피를 비판하는 관점을 제시함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 의견 수렴",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피 비판",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 장윤기 사건을 검찰 보완수사권 폐지 논의의 계기로 강조한 반면, 동아일보는 장혜영 전 의원의 공개토론 회피 비판을 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장윤기 사건을 검찰 보완수사권 폐지 논의의 계기로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장혜영 전 의원의 공개토론 회피 비판을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 검찰 보완수사권 폐지의 찬반 논의에 초점을 맞춘 반면, 동아일보는 시민들의 고통과 민주당에 대한 심판을 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "검찰 보완수사권 폐지 여부에 대한 찬반 논의",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "시민들의 고통과 민주당에 대한 심판",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목으로 중립적으로 보도한 반면, 동아일보는 장혜영 “보완수사권 폐지, 한동훈과 토론도 못 하면 재고해야”라는 제목으로 비판적인 태도를 보임",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달하며 찬반 논의를 객관적으로 보도함",
+                "evidence": [
+                  "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+                  "장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다."
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장혜영 전 의원의 발언을 인용하며 더불어민주당 의원들의 공개토론 회피를 비판하는 태도를 보임",
+                "evidence": [
+                  "아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다",
+                  "토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "검찰 보완수사권 폐지 문제를 다루고 있음"
+        ],
+        "key_differences": [
+          "SBS는 민주당의 전문가 공청회를 중심으로 찬반 논의를 보도한 반면, 동아일보는 장혜영 전 의원의 공개토론 회피 비판을 중심으로 보도함"
+        ],
+        "comparison_report": "SBS는 민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최한 사실을 중립적으로 보도한 반면, 동아일보는 장혜영 전 의원이 보완수사권 폐지에 대한 공개토론에 더불어민주당 의원들이 응하지 않는 상황을 비판하며, 토론조차 할 수 없는 법안은 재고해야 한다고 주장했다. SBS는 장윤기 사건을 검찰 보완수사권 폐지 논의의 계기로 강조한 반면, 동아일보는 장혜영 전 의원의 공개토론 회피 비판을 강조했다. SBS는 검찰 보완수사권 폐지 여부에 대한 찬반 논의에 초점을 맞춘 반면, 동아일보는 시민들의 고통과 민주당에 대한 심판을 강조했다. 보도 태도 측면에서 SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목으로 중립적으로 보도한 반면, 동아일보는 장혜영 “보완수사권 폐지, 한동훈과 토론도 못 하면 재고해야”라는 제목으로 비판적인 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667972",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "장혜영 “보완수사권 폐지, 한동훈과 토론도 못 하면 재고해야”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134341391/1",
+            "published_at": "Wed, 22 Jul 2026 09:00:16 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T08:46:59.260249+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-2c9828f8ede784db": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-2c9828f8ede784db",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "1086d5d8cb93a8bf55d6b072fbd0ba93b1e14701682c760d479e7a10ae9309af",
+            "title": "“술은 손님이 직접 사오세요”…주류 안판다는 식당, 무슨 일",
+            "published_at": "Sat, 18 Jul 2026 13:24:45 +09:00",
+            "link": "https://www.mk.co.kr/news/society/12101400"
+          }
+        ],
+        "analysis": {
+          "article_summary": "제주 식당이 주류 도매업계의 담합으로 인해 주류 납품을 받지 못해 손님이 직접 술을 사오는 방식으로 운영 방식을 변경한 사례가 SNS를 통해 알려졌다.",
+          "headline_frame": "주류 도매업계의 담합으로 인한 식당 운영 방식 변화",
+          "main_focus": "주류 도매업계의 담합으로 인한 식당 운영 방식 변화",
+          "primary_frame": {
+            "category": "담합으로 인한 영업 방식 변화",
+            "stance": "사실 전달",
+            "target": "주류 도매업계",
+            "summary": "주류 도매업계의 담합으로 인해 제주 식당이 주류 납품을 받지 못해 손님이 직접 술을 사오는 방식으로 운영 방식을 변경한 사례를 사실적으로 전달하고 있다.",
+            "evidence": [
+              "주류 도매업계의 담합으로 납품업체를 바꾸지 못하고",
+              "손님이 직접 술을 사오는 방식으로 바꾼 사연"
+            ]
+          },
+          "keywords": [
+            "주류 담합",
+            "식당 운영 방식",
+            "SNS 사연",
+            "제주 식당"
+          ],
+          "main_actors": [
+            "주류 도매업계",
+            "제주 식당"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "주류 도매업계의 담합"
+          ],
+          "background": [],
+          "emphasized_effects": [
+            "식당 운영 방식 변경"
+          ],
+          "affected_groups": [
+            "제주 식당"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "주류 도매업계의 담합으로 납품업체를 바꾸지 못하고",
+              "손님이 직접 술을 사오는 방식으로 바꾼 사연"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "담합으로 인한 영업 방식 변화에 대한 구체적 전망이나 향후 방향은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "담합의 구체적인 내용이나 법적 조치 여부",
+            "해당 식당의 구체적인 위치나 규모",
+            "주류 도매업계의 담합에 대한 정부 또는 관련 기관의 대응"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:47:04.834469+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-2c9828f8ede784db",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "5d97bdd8cae213da34a4b7859b55d559f184979ba9dd1d090726157d872aa5e9",
+            "title": "정부 “14세 미만 청소년 SNS 가입 제한 추진”",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260716/134315497/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "정부가 만 14세 미만 청소년의 SNS 가입을 제한하고, 만 19세 미만은 중독성 강한 콘텐츠 노출을 제한하는 방안을 추진하겠다고 발표했다.",
+          "headline_frame": "청소년 SNS 가입 제한 정책의 추진 발표",
+          "main_focus": "청소년의 SNS 과몰입 문제 해결을 위한 규제 강화 방안",
+          "primary_frame": {
+            "category": "규제 강화",
+            "stance": "사실 전달",
+            "target": "청소년 SNS 가입 제한 정책",
+            "summary": "정부가 청소년의 SNS 과몰입 문제를 해결하기 위해 만 14세 미만 가입 제한과 만 19세 미만 중독성 콘텐츠 노출 제한을 추진하며, 플랫폼 사업자의 책임을 강화하는 규제 방안을 제시했다.",
+            "evidence": [
+              "정부가 만 14세 미만 청소년의 소셜네트워크서비스(SNS) 가입 제한을 추진하겠다고 밝혔다",
+              "만 14세 미만은 SNS 가입을 제한하고, 만 19세 미만은 ‘쇼츠’나 ‘릴스’ 등 중독성 강한 콘텐츠 노출을 제한하겠다는 것이다",
+              "SNS 사업자가 가입자의 나이를 확인하는 절차를 의무화하는 등 플랫폼 사업자의 책임을 강화하는 방안도 추진한다"
+            ]
+          },
+          "keywords": [
+            "SNS 가입 제한",
+            "청소년 과몰입",
+            "알고리즘 규제",
+            "정보통신망법 개정",
+            "청소년 보호 책임자"
+          ],
+          "main_actors": [
+            "정부",
+            "김종철 방송미디어통신위원회 위원장",
+            "SNS 사업자"
+          ],
+          "quoted_sources": [
+            "김종철 방송미디어통신위원회 위원장"
+          ],
+          "causes": [
+            "청소년의 SNS 과몰입 문제",
+            "전 세계적인 현상"
+          ],
+          "background": [
+            "만 14세 미만 청소년의 소셜네트워크서비스(SNS) 가입 제한 추진",
+            "만 19세 미만은 ‘쇼츠’나 ‘릴스’ 등 중독성 강한 콘텐츠 노출 제한"
+          ],
+          "emphasized_effects": [
+            "청소년의 SNS 과몰입 문제 해결",
+            "유해정보 차단 및 관리 강화"
+          ],
+          "affected_groups": [
+            "만 14세 미만 청소년",
+            "만 19세 미만 청소년"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "정부가 만 14세 미만 청소년의 소셜네트워크서비스(SNS) 가입 제한을 추진하겠다고 밝혔다",
+              "김종철 방송미디어통신위원회 위원장은 16일 청와대에서 열린 업무보고에서... 밝혔다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "국회와의 협의를 통해 정보통신망법 개정이 추진될 예정이며, 매출액 10억 원 이상 또는 일일 평균 이용자수 10만 명 이상 사업자들에게 청소년 보호 책임자 지정이 의무화될 전망이다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과나 부작용에 대한 언급은 확인되지 않는다"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T08:47:06.797906+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-2c9828f8ede784db",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "주류 담합과 식당 운영 방식 변화",
+          "summary": "주류 도매업계의 담합으로 인해 식당들이 납품업체를 변경하지 못하고 손님들이 직접 술을 구매하는 방식으로 영업 방식을 변경한 사례를 중심으로 보도",
+          "keywords": [
+            "주류 담합",
+            "식당 운영 방식 변화",
+            "SNS 사연"
+          ],
+          "publisher_ids": [
+            "mk"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "주류 도매업계의 담합이 식당 운영 방식에 직접적인 영향을 미쳤으며, 이로 인해 손님들이 직접 술을 사오는 방식으로 영업 방식을 변경한 사례를 중심으로 보도하고 있음",
+            "담합으로 인한 납품업체 변경 불가 상황이 식당 운영 방식의 변화를 초래했다는 점에서 핵심 쟁점이 일치함",
+            "보도 태도는 중립적인 설명으로, 담합의 내용과 그로 인한 영업 방식 변화에 초점을 맞추고 있음"
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "청소년 SNS 가입 제한 정책 추진",
+          "summary": "청소년의 SNS 과몰입 문제 해결을 위해 만 14세 미만 가입 제한과 만 19세 미만 중독성 콘텐츠 노출 제한을 포함한 규제 강화 방안을 보도",
+          "keywords": [
+            "SNS 가입 제한",
+            "청소년 과몰입",
+            "알고리즘 규제",
+            "정보통신망법 개정"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "청소년의 SNS 과몰입 문제를 해결하기 위한 규제 강화 방안을 중심으로 보도하고 있음",
+            "만 14세 미만 가입 제한과 만 19세 미만 중독성 콘텐츠 노출 제한을 포함한 정책 내용을 설명하고 있음",
+            "보도 태도는 중립적인 설명으로, 정책 추진 배경과 내용을 전달하는 데 초점을 맞추고 있음"
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "group-1은 주류 도매업계의 담합으로 인한 식당 운영 방식 변화를 중심으로 보도하는 반면, group-2는 청소년의 SNS 과몰입 문제 해결을 위한 규제 강화 정책을 다루고 있어 핵심 쟁점과 해석 방향이 완전히 다름"
+        }
+      ],
+      "grouping_summary": "두 언론사는 서로 다른 이슈를 다루고 있음. 매일경제(mk)는 주류 도매업계의 담합으로 인한 식당 운영 방식 변화를 보도하고 있으며, 동아일보(donga)는 청소년의 SNS 과몰입 문제 해결을 위한 규제 강화 정책을 보도하고 있음. 핵심 관점과 해석 방향이 서로 대립하거나 양립하기 어려운 별개의 사안이므로 별도의 그룹으로 분류함",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T08:47:12.690915+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,mk": {
+        "issue_id": "issue-2c9828f8ede784db",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 특정 사회 문제에 대한 정책 또는 업계 현황을 보도하고 있으나, 매일경제 기사는 제주 식당의 주류 납품 중단 사례를, 동아일보 기사는 정부의 청소년 SNS 가입 제한 정책을 다루고 있어 공통점이 없습니다.",
+        "overall_difference": "판단 어려움",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "매일경제는 제주 식당의 주류 납품 중단 사례를, 동아일보는 정부의 청소년 SNS 가입 제한 정책을 보도하여 공통 내용이 없습니다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주류 도매업계의 담합으로 인해 제주 식당이 손님 직접 술 구매 방식으로 운영 방식을 변경한 사례",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "매일경제는 주류 도매업계의 담합 문제를, 동아일보는 청소년 SNS 과몰입 문제 해결을 위한 규제 강화 방안을 핵심 관점으로 제시했습니다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주류 도매업계의 담합으로 인한 식당 운영 방식 변화",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "매일경제는 주류 도매업계의 담합을 원인으로, 동아일보는 청소년의 SNS 과몰입 문제를 원인으로 강조했습니다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주류 도매업계의 담합",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "매일경제는 제주 식당의 운영 방식 변경을, 동아일보는 만 14세 미만 및 만 19세 미만 청소년의 SNS 가입 제한과 콘텐츠 노출 제한을 영향 및 대상으로 제시했습니다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "식당 운영 방식 변경",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보였으나, 매일경제는 '주류 도매업계의 담합으로 납품업체를 바꾸지 못하고', 동아일보는 '정부가 만 14세 미만 청소년의 소셜네트워크서비스(SNS) 가입 제한을 추진하겠다고 밝혔다'는 표현을 사용했습니다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "주류 도매업계의 담합을 중립적으로 설명하며 식당 운영 방식 변화를 전달함",
+                "evidence": [
+                  "주류 도매업계의 담합으로 납품업체를 바꾸지 못하고",
+                  "손님이 직접 술을 사오는 방식으로 바꾼 사연"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정부의 청소년 SNS 가입 제한 정책을 중립적으로 설명하며 정책 추진 배경을 전달함",
+                "evidence": [
+                  "정부가 만 14세 미만 청소년의 소셜네트워크서비스(SNS) 가입 제한을 추진하겠다고 밝혔다",
+                  "김종철 방송미디어통신위원회 위원장은 16일 청와대에서 열린 업무보고에서... 밝혔다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [],
+        "key_differences": [],
+        "comparison_report": "매일경제와 동아일보의 기사는 서로 다른 사회 이슈를 다루고 있습니다. 매일경제는 제주 식당의 주류 납품 중단 사례를 보도하며 주류 도매업계의 담합을 원인으로 제시했고, 동아일보는 정부의 청소년 SNS 가입 제한 정책을 보도하며 청소년의 SNS 과몰입 문제를 원인으로 강조했습니다. 두 언론사 모두 중립적인 설명 태도를 보였으나, 다루는 주제와 맥락이 완전히 달라 공통점이나 차이점을 판단하기 어렵습니다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "“술은 손님이 직접 사오세요”…주류 안판다는 식당, 무슨 일",
+            "link": "https://www.mk.co.kr/news/society/12101400",
+            "published_at": "Sat, 18 Jul 2026 13:24:45 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "정부 “14세 미만 청소년 SNS 가입 제한 추진”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260716/134315497/2",
+            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T08:47:23.586069+00:00",
         "model": "solar-pro3"
       }
     }
