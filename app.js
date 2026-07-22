@@ -214,9 +214,21 @@ function initShare() {
   });
 }
 
+// 저장된 이슈의 "분석 보기" 링크를 만든다. issue_id가 있으면(스냅샷 저장
+// 기능 이후에 저장된 이슈) compare.html이 재검색 없이 스냅샷을 그대로
+// 복원할 수 있도록 issue_id를 같이 실어 보낸다. 이 기능 이전에 저장된
+// 옛 이슈는 issue_id가 없어서 기존처럼 제목으로 재검색하는 링크로 만든다.
+function buildSavedIssueHref(item) {
+  if (item.issue_id) {
+    return `compare.html?issue_id=${encodeURIComponent(item.issue_id)}&q=${encodeURIComponent(item.title)}`;
+  }
+
+  return `compare.html?q=${encodeURIComponent(item.title)}`;
+}
+
 function renderSaved() {
   const root = document.querySelector('[data-saved-list]');
-  if (!root) return; 
+  if (!root) return;
   
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   
@@ -256,7 +268,7 @@ function renderSaved() {
       root.style.flexDirection = "column";
       root.style.gap = "12px";
 
-      root.innerHTML = visibleSaved.map(item => `
+      root.innerHTML = visibleSaved.map((item, idx) => `
         <article class="list-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 20px; gap: 20px;">
           <div style="flex: 1; min-width: 0;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
@@ -267,7 +279,7 @@ function renderSaved() {
           </div>
           <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
             <small style="color: #94a3b8; font-size: 12px; display: block; text-align: right;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="compare.html?q=${encodeURIComponent(item.title)}" style="white-space: nowrap;">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" data-saved-issue-index="${idx}" href="${buildSavedIssueHref(item)}" style="white-space: nowrap;">분석 보기</a>
           </div>
         </article>
       `).join('');
@@ -276,18 +288,32 @@ function renderSaved() {
       root.style.gridTemplateColumns = "repeat(auto-fill, minmax(300px, 1fr))";
       root.style.gap = "24px";
 
-      root.innerHTML = visibleSaved.map(item => `
+      root.innerHTML = visibleSaved.map((item, idx) => `
         <article class="card">
           <span class="eyebrow">${item.category}</span>
           <h3>${item.title}</h3>
           <p>${item.summary}</p>
           <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" href="compare.html?q=${encodeURIComponent(item.title)}">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" data-saved-issue-index="${idx}" href="${buildSavedIssueHref(item)}">분석 보기</a>
           </div>
         </article>
       `).join('');
     }
+
+    // 저장된 이슈는 클릭 시 재검색하지 않고, 저장 시점의 분석 결과
+    // 스냅샷을 그대로 compare.html에 넘긴다(핫토픽 정적 데이터가 배치로
+    // 갱신되거나 사라져도 저장된 스냅샷은 영향받지 않는다). issue_id가
+    // 없는(이 기능 추가 이전에 저장된) 옛 항목은 기존처럼 제목 재검색으로
+    // 자연스럽게 대체된다.
+    root.querySelectorAll('[data-saved-issue-index]').forEach(link => {
+      link.addEventListener('click', () => {
+        const item = visibleSaved[Number(link.dataset.savedIssueIndex)];
+        if (item) {
+          sessionStorage.setItem('prism-selected-issue', JSON.stringify(item));
+        }
+      });
+    });
 
     if (saved.length > INITIAL_COUNT) {
       const wrapper = document.createElement("div");
@@ -492,11 +518,28 @@ async function runIssueAnalysis(candidate) {
   if (summaryEl) summaryEl.textContent = "언론사별 분석과 그룹화를 진행하고 있습니다. 잠시만 기다려 주세요.";
 
   try {
-    // 핫토픽 카드는 배치 시점(build_featured_issues.py)에 언론사별 분석·
-    // 그룹화·조합별 비교를 이미 다 계산해뒀을 수 있다. 그 경우 API 호출
-    // 없이 정적 데이터로 바로 렌더링하고, 없으면(검색으로 들어온 이슈 등)
-    // 기존처럼 실시간으로 계산한다.
-    let data = await resolvePrecomputedIssueData(candidate);
+    let data;
+
+    if (Array.isArray(candidate.publisher_analyses) && candidate.publisher_analyses.length >= 2) {
+      // 저장한 이슈를 다시 볼 때처럼, 후보 자체에 이미 완성된 분석
+      // 결과가 통째로 담겨 있으면(저장 시점의 스냅샷) 그걸 그대로 쓴다.
+      // 정적 데이터(data/issue_details.json) 조회도, 실시간 /api/issue
+      // 호출도 건너뛴다 — 핫토픽 배치가 몇 번을 갱신되든, 저장한 시점의
+      // 분석 결과가 그대로 복원되어야 하기 때문이다.
+      data = {
+        issue_id: candidate.issue_id,
+        issue_title: candidate.issue_title,
+        query: candidate.query,
+        publisher_analyses: candidate.publisher_analyses,
+        publisher_grouping: candidate.publisher_grouping || { groups: [] },
+      };
+    } else {
+      // 핫토픽 카드는 배치 시점(build_featured_issues.py)에 언론사별 분석·
+      // 그룹화·조합별 비교를 이미 다 계산해뒀을 수 있다. 그 경우 API 호출
+      // 없이 정적 데이터로 바로 렌더링하고, 없으면(검색으로 들어온 이슈 등)
+      // 기존처럼 실시간으로 계산한다.
+      data = await resolvePrecomputedIssueData(candidate);
+    }
 
     if (!data) {
       const response = await fetch('/api/issue', {
@@ -518,13 +561,24 @@ async function runIssueAnalysis(candidate) {
     const groups = (data.publisher_grouping && data.publisher_grouping.groups) || [];
 
     // 전역 currentIssue 할당 (상단 저장 버튼 연동 활성화)
+    // id/category/title/summary/mediaNames는 saved.html 목록 카드 렌더링용,
+    // issue_id/issue_title/query/publisher_analyses/publisher_grouping은
+    // "저장" 시 이 시점의 분석 결과를 통째로 스냅샷으로 남겨서, 나중에
+    // 다시 볼 때 재검색이나 정적 데이터 재조회 없이 그대로 복원하기 위함
+    // (initSaveButtons/renderSaved 참고 — 정적이든 실시간이든 저장하는
+    // 순간부터는 동일한 스냅샷 형태로 통일된다).
     currentIssue = {
       id: data.issue_id,
       category: '자동 분석',
       title: data.issue_title || candidate.issue_title,
       summary: data.query || candidate.query || '',
       tags: [],
-      mediaNames: [...new Set(publisherAnalyses.map(item => item.publisher))]
+      mediaNames: [...new Set(publisherAnalyses.map(item => item.publisher))],
+      issue_id: data.issue_id,
+      issue_title: data.issue_title || candidate.issue_title,
+      query: data.query || candidate.query || '',
+      publisher_analyses: publisherAnalyses,
+      publisher_grouping: { groups },
     };
     syncSaveButtons();
 
@@ -1412,11 +1466,20 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const isComparePage = document.querySelector('[data-compare-page]');
   const isMainPage = document.querySelector('[data-featured-issues]');
+  const hasSavedList = document.querySelector('[data-saved-list]');
 
   if (isComparePage) {
     renderComparePage();
   } else if (isMainPage) {
     renderFeaturedIssue();
+  }
+
+  // 홈 화면(저장한 이슈 미리보기)과 saved.html(저장한 이슈 전용 페이지)
+  // 둘 다 [data-saved-list] 컨테이너를 갖고 있어서, isMainPage 여부와
+  // 무관하게 그 컨테이너가 있으면 항상 렌더링한다. 예전엔 isMainPage일
+  // 때만 호출돼서, saved.html에 직접 들어오면 목록이 영원히 빈 채로
+  // 남아있었다.
+  if (hasSavedList) {
     renderSaved();
   }
 });
