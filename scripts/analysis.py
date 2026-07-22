@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 
 from cache import (
     get_publisher_analysis,
@@ -20,6 +20,25 @@ MODEL_NAME = "solar-pro3"
 REQUEST_TIMEOUT_SECONDS = 60
 MAX_RETRIES = 3
 RETRY_WAIT_SECONDS = 2
+
+# 429(과다 요청)는 일반 오류와 다르게, 빨리 재시도할수록 다시 막힐
+# 확률이 높다. 트래픽이 몰릴 때(예: 발표 중 다수 동시 접속) 재시도 간격을
+# 시도 횟수에 비례해 늘려서 Upstage 쪽이 숨 돌릴 시간을 준다.
+RATE_LIMIT_WAIT_SECONDS = 10
+
+
+def _wait_seconds_for_retry(
+    error: Exception,
+    attempt: int,
+) -> int:
+    """
+    에러 종류에 따라 재시도 전 대기 시간을 정한다.
+    레이트리밋(429)이면 더 길게, 그 외에는 기존과 동일하게 대기한다.
+    """
+    if isinstance(error, RateLimitError):
+        return RATE_LIMIT_WAIT_SECONDS * attempt
+
+    return RETRY_WAIT_SECONDS
 
 DEFAULT_INPUT_PATH = Path(
     "data/representative_articles.json"
@@ -860,7 +879,10 @@ def analyze_publisher(
 
             if attempt < MAX_RETRIES:
                 time.sleep(
-                    RETRY_WAIT_SECONDS
+                    _wait_seconds_for_retry(
+                        error,
+                        attempt,
+                    )
                 )
 
     raise RuntimeError(
@@ -1622,7 +1644,10 @@ def group_publishers(
 
             if attempt < MAX_RETRIES:
                 time.sleep(
-                    RETRY_WAIT_SECONDS
+                    _wait_seconds_for_retry(
+                        error,
+                        attempt,
+                    )
                 )
 
     raise RuntimeError(

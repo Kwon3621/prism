@@ -19,7 +19,7 @@ from openai import OpenAI
 
 from analysis import (
     MAX_RETRIES,
-    RETRY_WAIT_SECONDS,
+    _wait_seconds_for_retry,
     clean_string,
     request_solar_analysis,
 )
@@ -457,7 +457,7 @@ def build_issue_candidates(
             )
 
             if attempt < MAX_RETRIES:
-                time.sleep(RETRY_WAIT_SECONDS)
+                time.sleep(_wait_seconds_for_retry(error, attempt))
 
     if event_groups is None:
         raise RuntimeError(
@@ -1003,7 +1003,7 @@ def _extract_and_score_keywords(
             )
 
             if attempt < MAX_RETRIES:
-                time.sleep(RETRY_WAIT_SECONDS)
+                time.sleep(_wait_seconds_for_retry(error, attempt))
 
     if raw_keywords is None:
         raise RuntimeError(
