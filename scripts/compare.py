@@ -7,44 +7,28 @@
 
 import argparse
 import json
-import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from dotenv import load_dotenv
-from openai import OpenAI, RateLimitError
+from openai import OpenAI
 
 from cache import (
     get_comparison,
     save_comparison,
 )
+from solar_client import (
+    MAX_RETRIES,
+    MODEL_NAME,
+    REQUEST_TIMEOUT_SECONDS,
+    clean_string,
+    clean_string_list,
+    create_client,
+    request_solar_completion,
+    wait_seconds_for_retry,
+)
 
-
-MODEL_NAME = "solar-pro3"
-REQUEST_TIMEOUT_SECONDS = 60
-MAX_RETRIES = 3
-RETRY_WAIT_SECONDS = 2
-
-# 429(과다 요청)는 일반 오류와 다르게, 빨리 재시도할수록 다시 막힐
-# 확률이 높다. 트래픽이 몰릴 때(예: 발표 중 다수 동시 접속) 재시도 간격을
-# 시도 횟수에 비례해 늘려서 Upstage 쪽이 숨 돌릴 시간을 준다.
-RATE_LIMIT_WAIT_SECONDS = 10
-
-
-def _wait_seconds_for_retry(
-    error: Exception,
-    attempt: int,
-) -> int:
-    """
-    에러 종류에 따라 재시도 전 대기 시간을 정한다.
-    레이트리밋(429)이면 더 길게, 그 외에는 기존과 동일하게 대기한다.
-    """
-    if isinstance(error, RateLimitError):
-        return RATE_LIMIT_WAIT_SECONDS * attempt
-
-    return RETRY_WAIT_SECONDS
 
 DEFAULT_INPUT_PATH = Path(
     "data/publisher_analyses.json"
@@ -126,77 +110,6 @@ def save_json(
             ensure_ascii=False,
             indent=2,
         )
-
-
-def create_client() -> OpenAI:
-    """
-    Upstage API 클라이언트를 생성한다.
-    """
-    load_dotenv()
-
-    api_key = os.getenv(
-        "UPSTAGE_API_KEY"
-    )
-
-    if not api_key:
-        raise ValueError(
-            "UPSTAGE_API_KEY가 설정되지 않았습니다. "
-            ".env 파일을 확인하세요."
-        )
-
-    return OpenAI(
-        api_key=api_key,
-        base_url="https://api.upstage.ai/v1",
-    )
-
-
-def clean_string(value: Any) -> str:
-    """
-    문자열을 정리한다.
-    """
-    if not isinstance(value, str):
-        return ""
-
-    return value.strip()
-
-
-def clean_string_list(
-    values: Any,
-    max_items: int = 10,
-) -> list[str]:
-    """
-    문자열 배열의 빈 값과 중복을 제거한다.
-    """
-    if not isinstance(values, list):
-        return []
-
-    cleaned = []
-    seen = set()
-
-    for value in values:
-        if not isinstance(value, str):
-            continue
-
-        value = value.strip()
-
-        if not value:
-            continue
-
-        normalized = value.replace(
-            " ",
-            "",
-        )
-
-        if normalized in seen:
-            continue
-
-        seen.add(normalized)
-        cleaned.append(value)
-
-        if len(cleaned) >= max_items:
-            break
-
-    return cleaned
 
 
 def normalize_text_for_duplicate_check(value: Any) -> str:
@@ -588,49 +501,16 @@ def request_solar_comparison(
 ) -> dict:
     """
     Solar API를 호출하고 JSON 결과를 반환한다.
+    (실제 호출·파싱 로직은 solar_client.request_solar_completion 참고 —
+    analysis.py의 request_solar_analysis와 거의 동일했던 걸 통합했다.)
     """
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0,
-        timeout=REQUEST_TIMEOUT_SECONDS,
+    return request_solar_completion(
+        client,
+        prompt,
+        empty_error="Solar 비교 결과가 비어 있습니다.",
+        decode_error="Solar 비교 결과를 JSON으로 해석할 수 없습니다.",
+        type_error="Solar 비교 결과가 JSON 객체가 아닙니다.",
     )
-
-    content = (
-        response
-        .choices[0]
-        .message
-        .content
-    )
-
-    if not content:
-        raise ValueError(
-            "Solar 비교 결과가 비어 있습니다."
-        )
-
-    try:
-        result = json.loads(content)
-
-    except json.JSONDecodeError as error:
-        raise ValueError(
-            "Solar 비교 결과를 JSON으로 "
-            "해석할 수 없습니다."
-        ) from error
-
-    if not isinstance(result, dict):
-        raise ValueError(
-            "Solar 비교 결과가 JSON 객체가 아닙니다."
-        )
-
-    return result
 
 
 def collect_source_links(
@@ -1120,7 +1000,7 @@ def compare_publishers(
 
             if attempt < MAX_RETRIES:
                 time.sleep(
-                    _wait_seconds_for_retry(
+                    wait_seconds_for_retry(
                         error,
                         attempt,
                     )
