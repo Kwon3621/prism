@@ -1,0 +1,3561 @@
+{
+  "issue-b04607a2da4965c9": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-b04607a2da4965c9",
+        "publisher_id": "chosun",
+        "publisher": "조선일보",
+        "articles": [
+          {
+            "article_id": "dfd312f27ce2f0c004e052c35ffd684721787749ee5b9bf10307216c5a5a2312",
+            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
+            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/"
+          }
+        ],
+        "analysis": {
+          "article_summary": "장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구했다.",
+          "headline_frame": "제헌절 행사 불참과 장외 집회 참석을 대비시켜 정치적 행보의 변화를 강조",
+          "main_focus": "장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 장동혁 대표의 정치적 행보와 사과 메시지",
+          "primary_frame": {
+            "category": "정치 개혁 요구",
+            "stance": "비판적 촉구",
+            "target": "선관위 및 선거제",
+            "summary": "장동혁 대표가 제헌절 국회 행사 대신 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구하는 모습을 보도했다.",
+            "evidence": [
+              "제헌절인 17일 국회 기념 행사에 불참한 장동혁 국민의힘 대표가 잠실 올림픽공원 집회를 찾아 장외 행보를 이어갔다",
+              "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서 ‘40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송하다’",
+              "반드시 선관위를 개혁하고, 선거제 개혁도 이"
+            ]
+          },
+          "keywords": [
+            "부정선거 재선거",
+            "당일투표 수개표",
+            "선관위 개혁",
+            "장외 집회",
+            "제헌절 불참"
+          ],
+          "main_actors": [
+            "장동혁"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "40일 넘게 해결책 미제시"
+          ],
+          "background": [
+            "제헌절 국회 기념 행사"
+          ],
+          "emphasized_effects": [
+            "선관위 개혁 필요성"
+          ],
+          "affected_groups": [
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
+              "반드시 선관위를 개혁하고, 선거제 개혁도 이"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "향후 선관위 개혁 및 선거제 개혁 추진 여부에 대한 구체적 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "집회 참석자들의 구체적 반응이나 현장 분위기",
+            "국회 기념 행사 불참에 대한 당내 반응"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:46:43.093916+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-b04607a2da4965c9",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "ea169276c5e2023b542003a548f674f3a63790cf9cbda97004a11b5ef5d7b135",
+            "title": "‘포스트 장동혁’ 안 보여…張 ‘올공 정치’ 바라만 보는 국힘",
+            "published_at": "Sun, 19 Jul 2026 08:21:42 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260719/134320632/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "장동혁 국민의힘 대표가 제헌절 경축식 불참과 올림픽공원 집회 참석을 통해 장외 정치에 집중하며 당내 리더십 상실과 '포스트 장동혁' 부재에 따른 교착 상태를 초래하고 있다.",
+          "headline_frame": "장동혁 대표의 제헌절 불참과 장외 정치 집중, 당내 리더십 상실 및 '포스트 장동혁' 부재",
+          "main_focus": "장동혁 대표의 장외 정치 집중과 당내 리더십 위기, 국민의힘의 교착 상태",
+          "primary_frame": {
+            "category": "리더십 위기 및 교착 상태",
+            "stance": "사실 전달",
+            "target": "장동혁 국민의힘 대표 및 국민의힘",
+            "summary": "장동혁 대표가 제헌절 경축식 불참과 올림픽공원 집회 참석을 통해 장외 정치에 집중하면서 당내 리더십이 상실되고 '포스트 장동혁'이 보이지 않아 국민의힘이 출구 없는 교착 상태에 빠진 상황을 사실적으로 전달하고 있다.",
+            "evidence": [
+              "장동혁 국민의힘 대표가 당내의 싸늘한 시선에도 올림픽공원과 전국 집회를 돌며 장외 정치에 집중하고 있다",
+              "사실상 당 대표로서 리더십이 상실됐다는 평가가 나오지만, 뚜렷한 ‘포스트 장동혁’도 보이지 않으면서 국민의힘이 출구 없는 교착 상태에 빠진 모습이다",
+              "제헌절이었던 지난 17일에도 국회 경축식에 불참하는 대신 올림픽공원 집회에 참석했다"
+            ]
+          },
+          "keywords": [
+            "장외 정치",
+            "리더십 상실",
+            "포스트 장동혁",
+            "교착 상태",
+            "제헌절 불참",
+            "올공 정치"
+          ],
+          "main_actors": [
+            "장동혁",
+            "국민의힘"
+          ],
+          "quoted_sources": [
+            "펜앤마이크"
+          ],
+          "causes": [
+            "당내의 싸늘한 시선",
+            "리더십 상실"
+          ],
+          "background": [
+            "제헌절 경축식 불참",
+            "올림픽공원 집회 참석"
+          ],
+          "emphasized_effects": [
+            "국민의힘의 출구 없는 교착 상태"
+          ],
+          "affected_groups": [
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "사실상 당 대표로서 리더십이 상실됐다는 평가가 나오지만",
+              "뚜렷한 ‘포스트 장동혁’도 보이지 않으면서 국민의힘이 출구 없는 교착 상태에 빠진 모습이다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "국민의힘의 리더십 위기와 교착 상태가 지속될 것으로 보이며, '포스트 장동혁' 부재에 따른 출구 모색이 필요한 상황이다."
+          },
+          "less_covered_context": [
+            "장동혁 대표의 구체적인 정책 방향이나 당내 개혁 방안에 대한 언급은 부족하다",
+            "국민의힘의 구체적인 대응 전략이나 향후 리더십 교체 계획에 대한 내용은 확인되지 않는다"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:46:43.769996+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-b04607a2da4965c9",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "680b9117e8d29a4bff38adf204dc2adfa2b603d9844e4d32bb783b3ae563072f",
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586"
+          }
+        ],
+        "analysis": {
+          "article_summary": "조갑제 대표는 SBS 라디오 '정치쇼'에서 국민의힘 장동혁 대표의 제헌절 기념식 불참을 징계감이라고 지적하며, 2028년 공천 배제 명단 1번으로 장동혁을 지목하고 부정선거론자 및 계엄 동조자 등을 포함할 것이라고 밝혔다.",
+          "headline_frame": "조갑제 대표의 2028년 공천 배제 명단 언급과 장동혁 대표의 제헌절 불참을 징계감이라고 평가하는 내용",
+          "main_focus": "조갑제 대표가 국민의힘 장동혁 대표의 제헌절 불참을 징계감이라고 규정하고, 2028년 공천 배제 명단 1번으로 장동혁을 지목하며 부정선거론자 및 계엄 동조자 등을 포함할 것이라고 발언한 내용",
+          "primary_frame": {
+            "category": "공천 배제 명단 및 징계 논의",
+            "stance": "징계 및 배제 주장",
+            "target": "국민의힘 장동혁 대표",
+            "summary": "조갑제 대표는 국민의힘 장동혁 대표가 제헌절 기념식과 이승만 61주기 행사에 불참한 것을 징계감이라고 평가하고, 2028년 공천 배제 명단 1번으로 장동혁을 지목하며 부정선거론자 및 계엄 동조자 등 70~80명을 명단에 포함시킬 것이라고 주장했다.",
+            "evidence": [
+              "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\"",
+              "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
+              "부정선거론자, 계엄 동조자 등 70~80명 나올 것",
+              "공천 배제 명단, 나도 만들 생각 있어...1번은 장동혁"
+            ]
+          },
+          "keywords": [
+            "공천 배제 명단",
+            "제헌절 불참",
+            "징계감",
+            "부정선거론자",
+            "계엄 동조자",
+            "2028년"
+          ],
+          "main_actors": [
+            "조갑제",
+            "국민의힘 장동혁 대표"
+          ],
+          "quoted_sources": [
+            "조갑제 조갑제닷컴 대표"
+          ],
+          "causes": [
+            "부실선거와 부정선거 구별 문제",
+            "문해력의 문제"
+          ],
+          "background": [
+            "이승만 61주기 행사 불참",
+            "정점식 장동혁 거취 관련 발언"
+          ],
+          "emphasized_effects": [
+            "2028년 공천 배제 명단 작성",
+            "부정선거론자 및 계엄 동조자 70~80명 명단 포함"
+          ],
+          "affected_groups": [
+            "국민의힘",
+            "부정선거론자",
+            "계엄 동조자"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
+              "부정선거론자, 계엄 동조자 등 70~80명 나올 것",
+              "공천 배제 명단, 나도 만들 생각 있어...1번은 장동혁"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "조갑제 대표는 장동혁 대표에 대한 공천 배제 명단 작성을 주장하면서도, 부실선거와 부정선거를 구별해야 한다는 입장을 함께 제시해 내부 비판과 동시에 일부 논리적 접근을 시도하는 복합적인 태도를 보였다."
+          },
+          "less_covered_context": [
+            "정점식 대표의 구체적인 거취 관련 입장",
+            "2028년 공천 배제 명단 작성의 구체적 절차 및 기준"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:46:46.167227+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-b04607a2da4965c9",
+      "groups": [
+        {
+          "group_id": "group-01",
+          "label": "장외 집회와 선거제 개혁 요구",
+          "summary": "조선일보와 SBS는 모두 장동혁 대표의 제헌절 불참을 계기로 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 정치적 행보에 초점을 맞추고 있다. 두 언론사 모두 장외 집회의 내용과 그 정치적 의미를 중심으로 보도하며, SBS는 조갑제 대표의 발언을 통해 장동혁 대표의 제헌절 불참을 징계감이라고 규정하면서도 부정선거론자 및 계엄 동조자 명단 작성과 2028년 공천 배제 문제를 다루고 있다. 두 언론사 모두 장외 집회와 선거제 개혁을 핵심 쟁점으로 보고 있으며, 조선일보가 '선관위 개혁 필요성'을 강조하고 SBS가 '부정선거론자 및 계엄 동조자 명단'을 강조하는 것은 세부 대상 차이일 뿐 핵심 해석 방향은 동일하다.",
+          "keywords": [
+            "부정선거 재선거",
+            "선거제 개혁",
+            "장외 집회",
+            "제헌절 불참",
+            "선관위 개혁"
+          ],
+          "publisher_ids": [
+            "chosun",
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
+            },
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "조선일보: 장동혁 대표의 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 정치적 행보와 사과 메시지",
+            "SBS: 조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 규정하며 2028년 공천 배제 명단 작성을 언급, 부정선거론자 및 계엄 동조자 포함"
+          ]
+        },
+        {
+          "group_id": "group-ungrouped-donga",
+          "label": "개별 분류 (그룹화 보류)",
+          "summary": "동아일보는 다른 언론사와 뚜렷이 묶이지 않아 그룹화 단계에서 개별로 분류되었습니다.",
+          "keywords": [],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": []
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [],
+      "grouping_summary": "조선일보와 SBS는 장동혁 대표의 제헌절 불참을 계기로 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 정치적 행보에 초점을 맞추고 있다. 두 언론사 모두 장외 집회의 내용과 그 정치적 의미를 중심으로 보도하며, SBS는 조갑제 대표의 발언을 통해 장동혁 대표의 제헌절 불참을 징계감이라고 규정하면서도 부정선거론자 및 계엄 동조자 명단 작성과 2028년 공천 배제 문제를 다루고 있다. 동아일보만 장동혁 대표의 장외 정치 집중과 당내 리더십 위기, 국민의힘의 교착 상태를 강조하는 별도의 보도 경향을 보이고 있다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:46:50.632148+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "chosun,sbs": {
+        "issue_id": "issue-b04607a2da4965c9",
+        "selected_publishers": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "조선일보와 SBS 모두 국민의힘 장동혁 대표의 제헌절 국회 기념 행사 불참과 관련된 내용을 보도하고 있으나, 조선일보는 장동혁 대표의 집회 참석 및 개혁 촉구 내용을, SBS는 조갑제 대표의 징계감 지적 및 2028년 공천 배제 명단 언급을 중심으로 보도하고 있다.",
+        "overall_difference": "차이 큼",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "차이 큼",
+            "contrast_statement": "조선일보가 장동혁 대표의 집회 참석 및 개혁 촉구 내용을 보도한 반면, SBS는 조갑제 대표의 징계감 지적 및 공천 배제 명단 언급을 중심으로 보도하여 공통점이 거의 없다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 내용을 보도함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제 대표가 SBS 라디오 '정치쇼'에서 국민의힘 장동혁 대표의 제헌절 기념식 불참을 징계감이라고 지적하고 2028년 공천 배제 명단 1번으로 장동혁을 지목한 내용을 보도함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "조선일보는 장동혁 대표의 정치적 행보와 개혁 촉구 메시지를 핵심 관점으로 삼은 반면, SBS는 조갑제 대표의 징계감 규정과 공천 배제 명단 발언을 핵심 관점으로 보도함",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "장동혁 대표가 제헌절 행사 불참 후 장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 정치적 행보와 사과 메시지를 핵심 관점으로 보도함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제 대표가 국민의힘 장동혁 대표의 제헌절 기념식 불참을 징계감이라고 규정하고 2028년 공천 배제 명단 1번으로 지목한 발언을 핵심 관점으로 보도함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "조선일보는 '40일 넘게 해결책 미제시'를 원인으로 강조한 반면, SBS는 '부실선거와 부정선거 구별 문제' 및 '문해력의 문제'를 원인으로 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "장동혁 대표가 40일 넘게 해결책을 내놓지 못한 점을 원인으로 강조함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "부실선거와 부정선거를 구별하지 못하는 문해력의 문제를 원인으로 강조함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "조선일보는 '선관위 개혁 필요성'을 강조한 반면, SBS는 '2028년 공천 배제 명단 작성'과 '부정선거론자 및 계엄 동조자 70~80명 명단 포함'을 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "선관위 개혁 필요성을 강조함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "2028년 공천 배제 명단 작성 및 부정선거론자·계엄 동조자 70~80명 명단 포함을 강조함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "차이 큼",
+            "contrast_statement": "조선일보는 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 비판적 태도를 보인 반면, SBS는 '징계감', '공천 배제 명단' 등 표현을 사용해 조갑제 대표의 비판적 발언을 전달함",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "장동혁 대표가 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 모습을 비판적으로 보도함",
+                "evidence": [
+                  "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
+                  "반드시 선관위를 개혁하고, 선거제 개혁도 이"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제 대표가 '국힘 장동혁 대표 제헌절 기념식 불참은 징계감'이라고 발언한 내용을 비판적으로 전달함",
+                "evidence": [
+                  "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
+                  "부정선거론자, 계엄 동조자 등 70~80명 나올 것",
+                  "공천 배제 명단, 나도 만들 생각 있어...1번은 장동혁"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "제헌절 기념 행사 불참이라는 공통 사건을 언급함"
+        ],
+        "key_differences": [
+          "조선일보가 장동혁 대표의 집회 참석 및 개혁 촉구 내용을 보도한 반면, SBS는 조갑제 대표의 징계감 지적 및 공천 배제 명단 언급을 중심으로 보도함"
+        ],
+        "comparison_report": "조선일보와 SBS는 모두 국민의힘 장동혁 대표의 제헌절 국회 기념 행사 불참을 다루었으나, 조선일보는 장동혁 대표가 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구했다는 내용을 보도한 반면, SBS는 조갑제 대표가 SBS 라디오 '정치쇼'에서 장동혁 대표의 제헌절 기념식 불참을 징계감이라고 지적하고 2028년 공천 배제 명단 1번으로 장동혁을 지목한 내용을 보도하였다. 조선일보가 '40일 넘게 해결책 미제시'를 원인으로 강조한 데 비해 SBS는 '부실선거와 부정선거 구별 문제' 및 '문해력의 문제'를 원인으로 강조했으며, 조선일보는 '선관위 개혁 필요성'을 강조한 반면 SBS는 '2028년 공천 배제 명단 작성'과 '부정선거론자 및 계엄 동조자 70~80명 명단 포함'을 강조하였다. 보도 태도 측면에서 조선일보는 장동혁 대표가 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 모습을 비판적으로 보도한 반면, SBS는 조갑제 대표가 '국힘 장동혁 대표 제헌절 기념식 불참은 징계감'이라고 발언한 내용을 비판적으로 전달하였다.",
+        "source_links": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
+            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:47:07.242825+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,donga": {
+        "issue_id": "issue-b04607a2da4965c9",
+        "selected_publishers": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 내용을 다루고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 사실을 공통적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "제헌절 행사 불참과 장외 집회 참석을 대비시켜 정치적 행보의 변화를 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "제헌절 경축식 불참과 올림픽공원 집회 참석을 통해 장외 정치에 집중하는 모습을 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 장동혁 대표의 정치적 행보와 사과 메시지에 초점을 맞춘 반면, 동아일보는 그의 장외 정치 집중과 당내 리더십 위기, 국민의힘의 교착 상태에 더 주목했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 장동혁 대표의 정치적 행보와 사과 메시지",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장동혁 대표의 장외 정치 집중과 당내 리더십 상실, 국민의힘의 교착 상태",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "두 언론사 모두 제헌절 국회 기념 행사 불참을 배경으로 언급하지만, 조선일보는 '40일 넘게 해결책 미제시'를 원인으로 강조한 반면 동아일보는 '당내의 싸늘한 시선'과 '리더십 상실'을 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "40일 넘게 해결책 미제시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "당내의 싸늘한 시선, 리더십 상실",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "두 언론사 모두 국민의힘을 영향 대상으로 보지만, 조선일보는 '선관위 개혁 필요성'을 강조한 반면 동아일보는 '출구 없는 교착 상태'를 더 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "선관위 개혁 필요성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘의 출구 없는 교착 상태",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 '부정선거 재선거', '당일투표 수개표' 등 구호를 외치는 모습을 비판적으로 보도한 반면, 동아일보는 '사실상 당 대표로서 리더십이 상실됐다는 평가'를 중립적으로 설명하며 '포스트 장동혁' 부재에 따른 교착 상태를 분석했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사실관계를 비판적으로 전달하며 부정선거 재선거와 선거제 개혁을 요구하는 구호를 강조함",
+                "evidence": [
+                  "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
+                  "반드시 선관위를 개혁하고, 선거제 개혁도 이"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "당내 리더십 상실과 교착 상태를 중립적으로 설명하며 '포스트 장동혁' 부재를 지적함",
+                "evidence": [
+                  "사실상 당 대표로서 리더십이 상실됐다는 평가가 나오지만",
+                  "뚜렷한 ‘포스트 장동혁’도 보이지 않으면서 국민의힘이 출구 없는 교착 상태에 빠진 모습이다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "장동혁 대표의 제헌절 국회 기념 행사 불참과 잠실 올림픽공원 집회 참석",
+          "부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 내용",
+          "국민의힘을 영향 대상으로 보는 점"
+        ],
+        "key_differences": [
+          "조선일보가 장동혁 대표의 정치적 행보와 사과 메시지에 초점을 맞춘 반면, 동아일보는 당내 리더십 위기와 교착 상태에 더 주목함",
+          "조선일보가 '40일 넘게 해결책 미제시'를 원인으로 강조한 반면, 동아일보는 '당내의 싸늘한 시선'과 '리더십 상실'을 원인으로 제시함",
+          "조선일보가 '선관위 개혁 필요성'을 강조한 반면, 동아일보는 '출구 없는 교착 상태'를 더 강조함",
+          "조선일보가 비판적인 보도 태도를 보인 반면, 동아일보는 중립적인 설명 태도를 보임"
+        ],
+        "comparison_report": "두 언론사 모두 장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 사실을 보도했으나, 조선일보가 그의 정치적 행보와 사과 메시지에 초점을 맞추고 비판적인 태도를 보인 반면, 동아일보는 당내 리더십 상실과 '포스트 장동혁' 부재에 따른 국민의힘의 교착 상태를 중립적으로 설명하며 더 넓은 정치적 맥락을 분석했다.",
+        "source_links": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
+            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "‘포스트 장동혁’ 안 보여…張 ‘올공 정치’ 바라만 보는 국힘",
+            "link": "https://www.donga.com/news/Politics/article/all/20260719/134320632/1",
+            "published_at": "Sun, 19 Jul 2026 08:21:42 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:47:10.924726+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,donga,sbs": {
+        "issue_id": "issue-b04607a2da4965c9",
+        "selected_publishers": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 사실을 공통적으로 보도하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 사실을 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "제헌절 행사 불참과 장외 집회 참석을 대비시켜 정치적 행보의 변화를 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "제헌절 경축식 불참과 장외 정치 집중, 당내 리더십 상실 및 '포스트 장동혁' 부재를 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 지적하며 2028년 공천 배제 명단을 언급",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 장동혁 대표의 정치적 행보와 사과 메시지에 초점을 맞춘 반면, 동아일보는 당내 리더십 위기와 교착 상태를, SBS는 조갑제 대표의 징계 평가와 공천 배제 명단 언급에 초점을 두고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "장외 집회에서 부정선거 재선거와 선거제 개혁을 요구하는 장동혁 대표의 정치적 행보와 사과 메시지",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장동혁 대표의 장외 정치 집중과 당내 리더십 상실, 국민의힘의 교착 상태",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 규정하고 2028년 공천 배제 명단 1번으로 지목한 내용",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 40일 넘게 해결책을 제시하지 못한 점을 원인으로 강조한 반면, 동아일보는 당내 싸늘한 시선과 리더십 상실을, SBS는 부실선거와 부정선거 구별 문제를 원인으로 제시하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "40일 넘게 해결책을 미제시한 점을 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "당내의 싸늘한 시선과 리더십 상실을 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "부실선거와 부정선거 구별 문제, 문해력의 문제를 원인으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 선관위 개혁 필요성을, 동아일보는 국민의힘의 출구 없는 교착 상태를, SBS는 2028년 공천 배제 명단 작성과 부정선거론자 및 계엄 동조자 포함을 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "선관위 개혁 필요성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘의 출구 없는 교착 상태",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "2028년 공천 배제 명단 작성, 부정선거론자 및 계엄 동조자 70~80명 포함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 비판적인 태도로 부정선거 재선거와 당일투표 수개표 구호를 강조했고, 동아일보는 중립적으로 리더십 상실과 교착 상태를 설명했으며, SBS는 비판적으로 징계감과 공천 배제 명단을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사실관계를 비판적으로 전달하며 부정선거 재선거와 당일투표 수개표 구호를 강조",
+                "evidence": [
+                  "‘부정선거 재선거’, ‘당일투표 수개표’ 등 구호를 외치면서",
+                  "반드시 선관위를 개혁하고, 선거제 개혁도 이"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "사실관계를 중립적으로 설명하며 리더십 상실과 교착 상태를 전달",
+                "evidence": [
+                  "사실상 당 대표로서 리더십이 상실됐다는 평가가 나오지만",
+                  "뚜렷한 ‘포스트 장동혁’도 보이지 않으면서 국민의힘이 출구 없는 교착 상태에 빠진 모습이다"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "비판적으로 징계감과 공천 배제 명단을 강조하며 조갑제 대표의 발언을 인용",
+                "evidence": [
+                  "국힘 장동혁 대표 제헌절 기념식 불참은 징계감",
+                  "부정선거론자, 계엄 동조자 등 70~80명 나올 것",
+                  "공천 배제 명단, 나도 만들 생각 있어...1번은 장동혁"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "장동혁 대표의 제헌절 국회 기념 행사 불참과 잠실 올림픽공원 집회 참석",
+          "부정선거 재선거와 당일투표 수개표 요구",
+          "선관위 개혁 촉구"
+        ],
+        "key_differences": [
+          "조선일보는 장동혁 대표의 정치적 행보와 사과 메시지에 초점을 맞춘 반면, 동아일보는 당내 리더십 위기와 교착 상태를, SBS는 조갑제 대표의 징계 평가와 공천 배제 명단 언급에 초점을 두고 있다."
+        ],
+        "comparison_report": "세 언론사 모두 장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구한 사실을 보도하고 있다. 조선일보는 장동혁 대표의 정치적 행보와 사과 메시지에 초점을 맞추고 비판적인 태도로 부정선거 재선거와 당일투표 수개표 구호를 강조하며, 동아일보는 당내 리더십 상실과 교착 상태에 초점을 맞춰 중립적으로 리더십 위기와 국민의힘의 출구 없는 상황을 설명하고 있다. SBS는 조갑제 대표의 발언을 중심으로 장동혁 대표의 제헌절 불참을 징계감이라고 규정하고 2028년 공천 배제 명단 1번으로 지목하며 부정선거론자 및 계엄 동조자 포함을 강조하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
+            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "‘포스트 장동혁’ 안 보여…張 ‘올공 정치’ 바라만 보는 국힘",
+            "link": "https://www.donga.com/news/Politics/article/all/20260719/134320632/1",
+            "published_at": "Sun, 19 Jul 2026 08:21:42 +0900"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:47:17.089389+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-019697f3d12d8360": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-019697f3d12d8360",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "0c2ed87a18d6a0027358034eb13963697d20ea15a99c822084affa9bdd5d6c7d",
+            "title": "[정치쇼] 임미애 \"정청래 공포 마케팅 그만해야…유시민 발언도 지지층 결집용\"",
+            "published_at": "Wed, 22 Jul 2026 10:35:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008668562"
+          }
+        ],
+        "analysis": {
+          "article_summary": "임미애 의원은 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 맞지 않는 행태와 당내 갈등 유발에 대한 우려를 제기했다.",
+          "headline_frame": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십 문제를 제기",
+          "main_focus": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 맞지 않는 행태와 당내 갈등 유발에 대한 우려",
+          "primary_frame": {
+            "category": "리더십 비판",
+            "stance": "비판",
+            "target": "정청래 최고위원",
+            "summary": "정청래 최고위원이 공포 마케팅을 과도하게 사용하고 보완수사권을 숙의 없이 선언하며 당내 갈등을 유발했다고 비판하며, 집권여당 리더십에 맞지 않는 행태로 규정했다.",
+            "evidence": [
+              "정청래, 집권여당 리더십에 맞지 않아",
+              "정청래, 과도한 공포 마케팅...그렇게 자신 없나",
+              "정청래, 보완수사권 숙의 없이 페북에 선언",
+              "지난 1년간 당내 갈등 스스로 만들어와"
+            ]
+          },
+          "keywords": [
+            "공포 마케팅",
+            "집권여당 리더십",
+            "보완수사권",
+            "당내 갈등",
+            "유시민 발언",
+            "지지층 결집"
+          ],
+          "main_actors": [
+            "임미애",
+            "정청래",
+            "유시민",
+            "더불어민주당"
+          ],
+          "quoted_sources": [
+            "임미애 더불어민주당 의원"
+          ],
+          "causes": [
+            "정청래의 공포 마케팅",
+            "유시민의 발언"
+          ],
+          "background": [
+            "민주당 전국정당화",
+            "TK 당세 작은 곳"
+          ],
+          "emphasized_effects": [
+            "당내 갈등 유발",
+            "지지층 결집"
+          ],
+          "affected_groups": [
+            "더불어민주당 당원",
+            "민주당 지지층"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "정청래, 집권여당 리더십에 맞지 않아",
+              "정청래, 과도한 공포 마케팅...그렇게 자신 없나"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "향후 최고위원 선거 결과와 당내 갈등 해소 방향에 따라 리더십 문제가 지속될지 여부가 결정될 것으로 보인다."
+          },
+          "less_covered_context": [
+            "정청래 최고위원의 구체적인 정책 제안이나 대안 제시"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:47:57.170871+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-019697f3d12d8360",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "906daa688a4680e06bc18a60cb38358d1e3f3251fa336655f62132e1e1781783",
+            "title": "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+            "published_at": "Mon, 20 Jul 2026 11:59:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134327305/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "더불어민주당 전당대회를 앞두고 정청래 전 대표가 전통 지지층 우선론을 주장한 반면, 친명계 김민석 전 국무총리는 정 전 대표를 비판하며 당내 갈등이 표면화되고 있다.",
+          "headline_frame": "정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 비판을 대비시켜 당내 계파 갈등을 부각",
+          "main_focus": "더불어민주당 전당대회를 앞두고 정청래 전 대표의 전통 지지층 우선론과 김민석 전 국무총리의 비판으로 드러난 당내 계파 갈등",
+          "primary_frame": {
+            "category": "당내 계파 갈등",
+            "stance": "비판",
+            "target": "정청래 전 대표",
+            "summary": "정청래 전 대표가 검찰 보완수사권 폐지 미비를 이유로 '집단폭행 당하고 있다'고 주장한 데 대해 김민석 전 국무총리가 '갑자기 웬 약자 행보'라며 비판하고, 송영길 전 대표가 국민의힘 지지층의 역선택 가능성을 제기하며 공세를 펴는 등 당내 갈등이 심화되고 있다.",
+            "evidence": [
+              "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+              "정 전 대표는 20일 MBC라디오에서 “검찰 보완수사권 전면 폐지가 이뤄지지 않으면 10% 꼬리에 몸통 전체가",
+              "친명(친이재명)계 주자인 김민석 전 국무총리는 정 전 대표를 겨냥해 “명청(이 대통령과 정 전 대표) 대전을 끝내야 한다. 자기 정치와 사당화로 당정 갈등을 일으키는 당 대표는 안 된다”고 했다",
+              "송영길 전 대표는 “국민의힘에서 가장 지지도가 높은 사람이 정 전 대표”라며 국민의힘 지지층의 역선택 가능성을 제기하며 공세를 폈다"
+            ]
+          },
+          "keywords": [
+            "전당대회",
+            "집토끼 우선론",
+            "검찰 보완수사권",
+            "친명계",
+            "정청래",
+            "김민석"
+          ],
+          "main_actors": [
+            "정청래",
+            "김민석",
+            "송영길",
+            "이재명"
+          ],
+          "quoted_sources": [
+            "정청래",
+            "김민석",
+            "송영길"
+          ],
+          "causes": [
+            "검찰 보완수사권 전면 폐지 미비",
+            "당 지지층 이탈 우려"
+          ],
+          "background": [
+            "더불어민주당 8·17 전당대회",
+            "유시민 작가의 '재건축론'"
+          ],
+          "emphasized_effects": [
+            "당내 계파 갈등 심화",
+            "당 대표 리더십 논란"
+          ],
+          "affected_groups": [
+            "더불어민주당 당원",
+            "중도층"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+              "친명(친이재명)계 주자인 김민석 전 국무총리는 정 전 대표를 겨냥해 “명청(이 대통령과 정 전 대표) 대전을 끝내야 한다. 자기 정치와 사당화로 당정 갈등을 일으키는 당 대표는 안 된다”고 했다",
+              "송영길 전 대표는 “국민의힘에서 가장 지지도가 높은 사람이 정 전 대표”라며 국민의힘 지지층의 역선택 가능성을 제기하며 공세를 폈다"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "전당대회를 앞두고 당내 갈등이 표면화되면서 계파 간 대립이 심화될 가능성이 있으나, 동시에 검찰 개혁 등 주요 현안에 대한 입장 차이도 부각되고 있다."
+          },
+          "less_covered_context": [
+            "정청래 전 대표의 구체적인 정책 제안 내용",
+            "전당대회 이후 당 지도부 구성 전망"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:48:03.927578+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-019697f3d12d8360",
+      "groups": [
+        {
+          "group_id": "group-01",
+          "label": "집권여당 리더십 문제와 당내 갈등 비판",
+          "summary": "두 언론사 모두 더불어민주당의 리더십 문제와 당내 갈등을 비판적으로 보도하며, 정청래 최고위원의 공포 마케팅과 유시민 발언을 문제 삼고 있다. SBS는 집권여당 리더십에 맞지 않는 행태와 당내 갈등 유발을, 동아일보는 전당대회와 계파 갈등 심화 및 리더십 논란을 강조하고 있다.",
+          "keywords": [
+            "집권여당 리더십",
+            "당내 갈등",
+            "공포 마케팅",
+            "정청래",
+            "유시민"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS는 정청래 최고위원의 공포 마케팅과 유시민 발언을 비판하며 집권여당 리더십에 맞지 않는 행태와 당내 갈등 유발에 대한 우려를 제기하고 있다.",
+            "동아일보는 정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 비판을 대비시켜 전당대회 앞두고 당내 계파 갈등 심화와 당 대표 리더십 논란을 부각하고 있다.",
+            "두 언론사 모두 더불어민주당의 리더십 문제와 당내 갈등을 비판적으로 해석하며, 정청래의 행태가 당내 갈등을 유발한다는 공통된 핵심 관점을 가지고 있다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "SBS와 동아일보 모두 더불어민주당의 리더십 문제와 당내 갈등을 비판적으로 보도하고 있다. SBS는 정청래 최고위원의 공포 마케팅과 유시민 발언을 집권여당 리더십에 맞지 않는 행태로 규정하며 당내 갈등 유발을 우려하는 반면, 동아일보는 정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 비판을 대비시켜 전당대회 앞두고 계파 갈등 심화와 당 대표 리더십 논란을 강조하고 있다. 두 언론사 모두 리더십 문제와 당내 갈등을 핵심 쟁점으로 삼고 있으나, SBS는 공포 마케팅과 유시민 발언에 초점을 맞추고 동아일보는 전당대회와 계파 갈등에 초점을 맞추고 있다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:48:09.322806+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-019697f3d12d8360",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "더불어민주당 내 정청래 전 대표와 유시민, 김민석 등 주요 인물들의 발언을 통해 집권여당 리더십 문제와 당내 갈등 유발 우려가 제기되고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "SBS는 임미애 의원의 비판을 중심으로, 동아일보는 정청래와 김민석의 대립을 중심으로 보도했으나, 모두 더불어민주당 내 리더십 문제와 당내 갈등 우려를 다루고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "임미애 의원이 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십 문제와 당내 갈등 유발 우려를 제기함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래 전 대표의 '집토끼 우선론'에 대한 김민석 전 국무총리의 비판과 당내 계파 갈등 표면화를 보도함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 집권여당 리더십에 맞지 않는 행태와 당내 갈등 유발에 초점을 맞춘 반면, 동아일보는 전당대회와 계파 갈등 심화에 더 중점을 둠",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 맞지 않는 행태와 당내 갈등 유발에 대한 우려",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 비판을 통해 드러난 당내 계파 갈등과 당 대표 리더십 논란",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 정청래의 공포 마케팅과 유시민의 발언을 원인으로 강조한 반면, 동아일보는 검찰 보완수사권 전면 폐지 미비와 유시민 '재건축론'을 배경으로 제시함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 집권여당 리더십에 맞지 않는 행태의 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "검찰 보완수사권 전면 폐지 미비와 유시민 작가의 '재건축론'을 당내 갈등 배경 요인으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 지지층 결집을, 동아일보는 중도층 이탈과 계파 갈등 심화를 주요 영향으로 보도함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래와 유시민의 발언이 지지층 결집을 유발할 수 있다는 우려를 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래와 김민석의 대립으로 인한 당내 계파 갈등 심화와 중도층 이탈 가능성을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 '공포 마케팅'과 '리더십에 맞지 않음'을 비판적으로 보도한 반면, 동아일보는 '약자 행보'와 '사당화' 표현을 통해 더 강한 비판적 태도를 보임",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래와 유시민의 발언을 집권여당 리더십에 맞지 않는 행태로 비판하며 공포 마케팅을 문제시함",
+                "evidence": [
+                  "정청래, 집권여당 리더십에 맞지 않아",
+                  "정청래, 과도한 공포 마케팅...그렇게 자신 없나"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정청래의 '집단폭행' 발언과 '약자 행보'를 비판하며 사당화와 당정 갈등을 지적함",
+                "evidence": [
+                  "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+                  "친명(친이재명)계 주자인 김민석 전 국무총리는 정 전 대표를 겨냥해 “명청(이 대통령과 정 전 대표) 대전을 끝내야 한다. 자기 정치와 사당화로 당정 갈등을 일으키는 당 대표는 안 된다”고 했다",
+                  "송영길 전 대표는 “국민의힘에서 가장 지지도가 높은 사람이 정 전 대표”라며 국민의힘 지지층의 역선택 가능성을 제기하며 공세를 폈다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "더불어민주당 내 리더십 문제와 당내 갈등 유발 우려",
+          "정청래 전 대표의 발언에 대한 비판",
+          "전당대회와 관련된 정치적 맥락"
+        ],
+        "key_differences": [
+          "SBS는 임미애 의원의 비판을 중심으로 공포 마케팅과 유시민 발언에 초점을 맞춘 반면, 동아일보는 정청래와 김민석의 대립을 통해 계파 갈등과 중도층 이탈을 강조함",
+          "동아일보는 '사당화'와 '당정 갈등' 표현을 사용한 반면, SBS는 '공포 마케팅'과 '리더십에 맞지 않음'에 더 집중함"
+        ],
+        "comparison_report": "SBS와 동아일보 모두 더불어민주당 내 리더십 문제와 당내 갈등을 다루고 있으나, SBS는 임미애 의원의 비판을 통해 정청래 최고위원의 공포 마케팅과 유시민의 발언을 집권여당 리더십에 맞지 않는 행태로 비판하며 지지층 결집을 우려한 반면, 동아일보는 정청래 전 대표의 '집토끼 우선론'에 대한 김민석 전 국무총리와 송영길 전 대표의 비판을 중심으로 당내 계파 갈등 심화와 중도층 이탈 가능성을 강조했다. 두 언론사 모두 비판적 태도를 보였으나, 동아일보는 '사당화'와 '당정 갈등' 표현을 통해 더 강한 비판을, SBS는 '공포 마케팅'과 '리더십에 맞지 않음'에 초점을 맞춘 차이를 보인다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치쇼] 임미애 \"정청래 공포 마케팅 그만해야…유시민 발언도 지지층 결집용\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008668562",
+            "published_at": "Wed, 22 Jul 2026 10:35:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "정청래 “집단폭행 당하고 있어”…김민석 “갑자기 웬 약자 행보”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134327305/1",
+            "published_at": "Mon, 20 Jul 2026 11:59:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:48:28.741380+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-97edcd0479483618": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-97edcd0479483618",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "e9b726ac0ee13a2b16e8ace507e519019650917672ac05c56f674e4e4eda94bd",
+            "title": "김민석, ‘신천지 전대 개입설’ 제기… 정청래 “황당한 네거티브”",
+            "published_at": "Wed, 22 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134340592/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "더불어민주당 당권 주자들이 신천지의 전당대회 개입설을 두고 논쟁을 벌였으며, 김민석 전 총리는 개입설을 제기한 반면 정청래 전 대표는 이를 황당한 네거티브로 반박했다.",
+          "headline_frame": "신천지 전당대회 개입설을 둘러싼 당권 주자들의 난타전",
+          "main_focus": "신천지 개입설을 제기한 김민석 전 총리와 이를 반박한 정청래 전 대표의 대립 구도",
+          "primary_frame": {
+            "category": "정치 갈등",
+            "stance": "사실 전달",
+            "target": "신천지 개입설",
+            "summary": "더불어민주당 당권 주자들이 신천지의 전당대회 개입설을 두고 논쟁을 벌였으며, 김민석 전 총리는 개입설을 제기한 반면 정청래 전 대표는 이를 황당한 네거티브로 반박했다.",
+            "evidence": [
+              "‘신천지 전대 개입설’ 제기",
+              "정청래 “황당한 네거티브”",
+              "난타전을 벌였다"
+            ]
+          },
+          "keywords": [
+            "신천지",
+            "전당대회 개입설",
+            "김민석",
+            "정청래",
+            "네거티브",
+            "민주당 당권"
+          ],
+          "main_actors": [
+            "김민석",
+            "정청래",
+            "더불어민주당"
+          ],
+          "quoted_sources": [
+            "정청래"
+          ],
+          "causes": [
+            "신천지 특검 미진행"
+          ],
+          "background": [
+            "정청래 지도부 체제였던 올해 1월 통일교와 신천지의 정교 유착 비리 의혹"
+          ],
+          "emphasized_effects": [
+            "조기 과열된 민주당 전당대회가 사실상 계파 간 내전으로 비화"
+          ],
+          "affected_groups": [
+            "더불어민주당"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "난타전을 벌였다",
+              "황당한 네거티브"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "민주당 전당대회의 계파 간 갈등이 지속될 가능성이 있다."
+          },
+          "less_covered_context": [
+            "신천지 개입설의 구체적 증거 여부",
+            "전당대회 예비경선의 구체적 진행 상황"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:48:36.449621+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-97edcd0479483618",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "4160f696c8e6508be12283575faf7265795c17d775a41b4c2acfff8761c6f047",
+            "title": "[인터뷰] '장동혁은 끝났다' 김재섭 \"국힘, 이준석과 함께해야…한동훈 복당은 천천히\"",
+            "published_at": "Tue, 21 Jul 2026 16:32:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667670"
+          }
+        ],
+        "analysis": {
+          "article_summary": "김재섭 의원은 오세훈, 유의동 당선으로 국민의힘의 지향점이 확인되었다고 평가하며, 장동혁의 리더십 상실과 윤리위 징계 문제를 지적하고, 한동훈 복당은 충분한 소통 후 천천히 이뤄져야 한다고 주장했다.",
+          "headline_frame": "인터뷰 형식을 통해 김재섭 의원의 당내 리더십 평가와 한동훈 복당 관련 입장을 중심으로 사건을 조명",
+          "main_focus": "국민의힘 내 소장파의 관점에서 장동혁 리더십의 한계와 한동훈 복당의 신중한 접근 필요성 강조",
+          "primary_frame": {
+            "category": "리더십 평가 및 당내 갈등",
+            "stance": "비판",
+            "target": "장동혁",
+            "summary": "김재섭 의원은 장동혁이 사실상 식물 리더십 상태에 있으며 윤리위 징계 각오로 당내 정치적 입지를 세우려 한다고 비판하며, 오세훈·한동훈·유의동 당선으로 국민의힘의 지향점이 확인되었다고 평가했다.",
+            "evidence": [
+              "장동혁, 사실상 식물 리더십...의원들도 방치 상태",
+              "'재선거' 당론으로 꺾여...장동혁 리더십 상실한 상직적 장면",
+              "'민주당과 싸우지 않았다'는 이유로 징계? 사유 납득 안 돼"
+            ]
+          },
+          "keywords": [
+            "국민의힘",
+            "장동혁",
+            "리더십",
+            "윤리위",
+            "징계",
+            "한동훈"
+          ],
+          "main_actors": [
+            "김재섭",
+            "장동혁",
+            "오세훈",
+            "한동훈",
+            "유의동"
+          ],
+          "quoted_sources": [
+            "김재섭 국민의힘 의원"
+          ],
+          "causes": [
+            "민주당의 '보완수사권' 문제를 전당대회 이벤트로 접근"
+          ],
+          "background": [
+            "국민의힘의 소장파"
+          ],
+          "emphasized_effects": [
+            "장동혁 리더십 상실",
+            "윤리위 징계 가능성"
+          ],
+          "affected_groups": [
+            "국민의힘 의원들"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "장동혁, 사실상 식물 리더십...의원들도 방치 상태",
+              "'민주당과 싸우지 않았다'는 이유로 징계? 사유 납득 안 돼"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "한동훈 복당은 시차를 두고 충분한 소통·교감을 거쳐 이뤄져야 한다는 입장"
+          },
+          "less_covered_context": [
+            "민주당의 '보완수사권' 문제에 대한 구체적 대응 방안"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:48:37.439902+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-97edcd0479483618",
+      "groups": [
+        {
+          "group_id": "group-01",
+          "label": "신천지 개입설과 민주당 당권 갈등",
+          "summary": "신천지 전당대회 개입설을 둘러싼 김민석 전 총리와 정청래 전 대표의 대립 구도를 중심으로, 민주당 전당대회의 조기 과열과 계파 간 내전 양상을 중립적으로 설명하는 관점",
+          "keywords": [
+            "신천지",
+            "전당대회 개입설",
+            "김민석",
+            "정청래",
+            "네거티브",
+            "민주당 당권"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "신천지 개입설을 제기한 김민석 전 총리와 이를 반박한 정청래 전 대표의 대립 구도를 핵심 쟁점으로 삼고 있으며, 조기 과열된 민주당 전당대회가 사실상 계파 간 내전으로 비화되었다는 해석과 평가를 중립적으로 전달함. 신천지 특검 미진행 문제를 배경으로 지적하지만, 이는 대립 구도의 원인을 설명하는 보조적 요소이며, 사건의 핵심 의미는 당권 주자들의 네거티브 공방에 초점이 맞춰져 있음."
+          ]
+        },
+        {
+          "group_id": "group-02",
+          "label": "국민의힘 리더십 한계와 한동훈 복당 신중론",
+          "summary": "국민의힘 소장파 관점에서 장동혁 리더십의 한계와 한동훈 복당의 신중한 접근 필요성을 비판적으로 강조하는 관점",
+          "keywords": [
+            "국민의힘",
+            "장동혁",
+            "리더십",
+            "윤리위",
+            "징계",
+            "한동훈"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "민주당의 '보완수사권' 문제를 전당대회 이벤트로 접근한 국민의힘 소장파의 시각에서, 장동혁 리더십의 실질적 한계(식물 리더십)와 윤리위 징계 가능성을 비판적으로 지적하며, 한동훈 복당은 시차를 두고 충분한 소통·교감을 거쳐 이뤄져야 한다는 신중한 접근을 강조함. 사건의 핵심 의미는 국민의힘 내부 리더십 문제와 복당 과정의 절차적 정당성에 대한 비판에 있음."
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-01",
+            "group-02"
+          ],
+          "contrast_statement": "group-01은 신천지 개입설을 둘러싼 민주당 당권 주자들의 대립 구도와 네거티브 공방을 중립적으로 설명하는 반면, group-02는 국민의힘 소장파 관점에서 장동혁 리더십의 한계와 한동훈 복당의 신중한 접근을 비판적으로 강조하며, 민주당 문제를 전당대회 이벤트로 접근한 국민의힘의 시각을 제시함. 두 그룹은 서로 다른 정당(민주당 vs 국민의힘)의 내부 리더십 및 당권 경쟁 문제를 다루고 있으며, 사건의 핵심 의미와 평가 방향(민주당 당권 갈등 vs 국민의힘 리더십 비판)이 근본적으로 다름."
+        }
+      ],
+      "grouping_summary": "총 2개 언론사가 서로 다른 핵심 관점을 보임. 동아일보(donga)는 신천지 전당대회 개입설을 중심으로 한 민주당 당권 주자들의 대립 구도와 네거티브 공방을 중립적으로 보도했으며, SBS(sbs)는 국민의힘 소장파 관점에서 장동혁 리더십의 한계와 한동훈 복당의 신중한 접근을 비판적으로 강조함. 두 언론사는 동일한 이슈(신천지 전당대회 개입설)를 다루지만, 사건의 핵심 쟁점과 해석 방향이 서로 다른 정당 내부 문제에 초점을 맞추고 있어 별도의 그룹으로 분류함.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:48:44.037866+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {}
+  },
+  "issue-2dab2064cc788e1e": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "fba6b33567193b72fcf81d229c3717fbce00ba8c179dc8d175b9cbbea5a3c77f",
+            "title": "“반도체 여전히 좋다”…7월 1~20일 수출액 549억달러 ‘역대 최고’",
+            "published_at": "Tue, 21 Jul 2026 10:31:01 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12103105"
+          }
+        ],
+        "analysis": {
+          "article_summary": "반도체 수출 호조가 지속되며 7월 1~20일 수출액이 549억달러로 역대 최고를 기록했고, 전년 대비 180% 이상 증가하며 전체 수출을 견인했다.",
+          "headline_frame": "반도체 수출 실적의 역대 최고 기록",
+          "main_focus": "반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상",
+          "primary_frame": {
+            "category": "경제 성장",
+            "stance": "긍정적",
+            "target": "반도체 수출",
+            "summary": "반도체 수출액이 7월 1~20일 기준 549억달러로 역대 최고를 기록하며 전년 대비 180% 이상 증가했고, 이는 전체 수출 실적을 견인하는 긍정적 경제 현상으로 강조되었다.",
+            "evidence": [
+              "반도체 호조가 지속되며 이달 중순 수출액이 7월 기준 역대 최대를 기록했다",
+              "반도체 수출액이 1년 전보다 180% 넘게 증가하며 전체 수출 실적을 견인했다"
+            ]
+          },
+          "keywords": [
+            "반도체 수출",
+            "역대 최고",
+            "호조",
+            "수출액",
+            "견인"
+          ],
+          "main_actors": [
+            "관세청"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "반도체 호조의 지속"
+          ],
+          "background": [],
+          "emphasized_effects": [
+            "전체 수출 실적 견인"
+          ],
+          "affected_groups": [],
+          "tone": {
+            "category": "기대",
+            "evidence": [
+              "반도체 여전히 좋다"
+            ]
+          },
+          "outlook": {
+            "direction": "긍정",
+            "summary": "반도체 수출 호조가 지속될 경우 전체 수출 실적의 추가 성장이 기대된다."
+          },
+          "less_covered_context": [
+            "반도체 수출 호조의 지속 기간",
+            "반도체 수출 호조의 구체적 원인"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:49:53.606827+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "publisher_id": "chosun",
+        "publisher": "조선일보",
+        "articles": [
+          {
+            "article_id": "e4897d950c285d28f37ece4a256198a67cfb98107a03a0a3bbd6f8bfa687ece3",
+            "title": "7월 1~20일 수출 52%↑ 반도체 수출 1년 전의 2.8배로",
+            "published_at": "Tue, 21 Jul 2026 00:04:25 +0000",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/21/GTICANQAEJGPJPIIQLKAYODHSY/"
+          }
+        ],
+        "analysis": {
+          "article_summary": "7월 1~20일 수출액이 전년 대비 52% 증가했으며, 특히 반도체 수출이 1년 전의 2.8배로 크게 늘어난 것으로 나타났다.",
+          "headline_frame": "수출 증가율과 반도체 수출 성장세에 초점을 맞춘 수치 중심의 보도",
+          "main_focus": "반도체 수출 호황이 전체 수출 증가를 견인하고 있다는 점을 강조",
+          "primary_frame": {
+            "category": "수출 성장",
+            "stance": "사실 전달",
+            "target": "반도체 수출",
+            "summary": "반도체 수출이 전년 대비 2.8배 증가하며 전체 수출 52% 상승을 주도한 것으로 보도됨",
+            "evidence": [
+              "7월 1~20일 수출 52%↑",
+              "반도체 수출 1년 전의 2.8배로"
+            ]
+          },
+          "keywords": [
+            "수출 증가",
+            "반도체 수출",
+            "경제 호황",
+            "수출 통계"
+          ],
+          "main_actors": [
+            "반도체 산업"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "반도체 경기 호황"
+          ],
+          "background": [
+            "7월 1~20일 수출 실적"
+          ],
+          "emphasized_effects": [
+            "수출 52% 증가",
+            "반도체 수출 2.8배 성장"
+          ],
+          "affected_groups": [
+            "수출 기업"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "7월 1~20일 수출 52%↑",
+              "반도체 수출 1년 전의 2.8배로"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "향후 수출 동향에 대한 구체적 전망은 제시되지 않음"
+          },
+          "less_covered_context": [
+            "반도체 수출 증가의 구체적 원인",
+            "수출 증가의 지속 가능성",
+            "다른 산업 분야의 수출 실적"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:49:54.939735+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "19e8a4f4688a5533218ff0ae6cffcc69221796c6adfe1443ef6519bc6e1ea0ff",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "반도체 수출 호조로 올해 1~5월 누적 경상수지 흑자가 1413억 달러로 지난해 연간 규모를 넘어섰으나, 소비심리 위축과 내수 부진으로 경기 회복의 불균형이 심화되고 있다.",
+          "headline_frame": "반도체 수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형",
+          "main_focus": "반도체 수출 중심의 경상수지 흑자 확대가 국내 소비와 투자, 다른 산업으로의 확산으로 이어지지 못하는 문제",
+          "primary_frame": {
+            "category": "경제 불균형",
+            "stance": "우려",
+            "target": "수출-내수 격차",
+            "summary": "반도체 수출 호조로 경상수지 흑자가 급증했으나, 소비심리 위축과 내수 부진으로 경기 회복의 불균형이 심화되고 있으며, 대규모 흑자가 장기화될 경우 국내외 경제 불균형이 확대될 수 있다는 우려가 제기되고 있다.",
+            "evidence": [
+              "반도체 수출에 힘입어 올해 1~5월 누적 경상수지 흑자는 1413억 달러로, 지난해 연간 흑자 1230억 달러를 이미 넘어섰다.",
+              "수출 호조가 소비와 산업 전반의 투자 회복으로 충분히 확산하지 못하는 가운데, 대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고도 나온다.",
+              "전문가들은 반도체 수출이 만든 기록적인 흑자를 국내 소비와 투자, 다른 산업의 성장으로 확산하지 못할 경우 대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다고 지적한다."
+            ]
+          },
+          "keywords": [
+            "반도체 수출",
+            "경상수지 흑자",
+            "수출-내수 온도차",
+            "소비심리 위축",
+            "내수 부진",
+            "경제 불균형"
+          ],
+          "main_actors": [
+            "한국은행",
+            "해외 연구기관",
+            "전문가"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "반도체 수출 호조"
+          ],
+          "background": [
+            "올해 1~5월 누적 경상수지 흑자",
+            "GDP 대비 경상수지 흑자"
+          ],
+          "emphasized_effects": [
+            "수출-내수 온도차 심화",
+            "경기 회복의 불균형 심화",
+            "대외 통상 압박 가능성",
+            "산업간 성장 격차 확대 가능성"
+          ],
+          "affected_groups": [
+            "내수 부문",
+            "소비심리",
+            "국내 산업 전반"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고도 나온다",
+              "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다고 지적한다"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "반도체 수출 호조는 지속되나 내수 부진과 경제 불균형 심화로 인해 향후 경기 회복 전망이 불확실하며, 대외 통상 압박 가능성도 제기되고 있다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "반도체 수출 호조의 지속 가능성",
+            "내수 회복을 위한 구체적 정책 방안"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:49:57.793373+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-2dab2064cc788e1e",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "반도체 수출 호조와 전체 수출 견인",
+          "summary": "반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상에 초점을 맞춘 보도",
+          "keywords": [
+            "반도체 수출",
+            "호조",
+            "수출 실적 견인"
+          ],
+          "publisher_ids": [
+            "mk",
+            "chosun",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            },
+            {
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 3,
+          "group_evidence": [
+            "세 언론사 모두 반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상이라는 핵심 관점을 공유함",
+            "mk는 '반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상'으로, chosun은 '반도체 수출 호황이 전체 수출 증가를 견인'하고, donga는 '반도체 수출 중심의 경상수지 흑자 확대'로 표현했으나 모두 반도체 수출 호조의 긍정적 효과를 강조함",
+            "mk와 chosun은 반도체 수출 호조의 지속성과 시장 안정 효과를 긍정적으로 평가하며, donga는 반도체 수출 호조의 긍정적 측면을 인정하면서도 내수 부진과의 불균형 문제를 우려하지만, 이는 반도체 수출 호조의 긍정적 효과를 전제로 한 보완적 관점임",
+            "세 언론사 모두 반도체 수출 호조가 전체 경제에 미치는 긍정적 영향을 핵심 쟁점으로 삼고 있으며, 해석 방향이 대체로 일치함"
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "세 언론사 모두 반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상이라는 핵심 관점을 공유하지만, 동아일보(donga)는 반도체 수출 호조의 긍정적 효과와 함께 내수 부진 및 경제 불균형 문제를 추가로 강조하여 다른 언론사들과 차별화된 우려를 제시함. 매일경제(mk)와 조선일보(chosun)는 반도체 수출 호조의 긍정적 효과와 지속 가능성에 초점을 맞춘 반면, 동아일보는 수출-내수 간 불균형 문제를 부각시켜 보도 태도에서 차이를 보임.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:50:01.013904+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,mk": {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 반도체 수출 호조를 주요 경제 이슈로 다루었으며, 7월 1~20일 수출액이 549억달러로 역대 최고를 기록한 사실을 공통적으로 보도했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 7월 1~20일 반도체 수출액이 549억달러로 역대 최고를 기록한 사실을 공통적으로 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 지속되며 7월 1~20일 수출액이 549억달러로 역대 최고를 기록하고 전년 대비 180% 이상 증가했다고 보도했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조로 인해 올해 1~5월 누적 경상수지 흑자가 1413억 달러로 지난해 연간 규모를 넘어섰다고 보도했다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 수출 호조를 긍정적 경제 현상으로 본 반면, 동아일보는 수출 중심의 경상수지 흑자 확대가 내수 부진으로 이어져 경제 불균형을 심화시킨다고 지적했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상이라고 강조했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 중심의 경상수지 흑자 확대가 국내 소비와 투자, 다른 산업으로의 확산으로 이어지지 못하는 문제라고 지적했다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 호조의 지속을 원인으로 강조한 반면, 동아일보는 올해 1~5월 누적 경상수지 흑자와 GDP 대비 흑자 규모를 배경으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 호조의 지속을 수출 호조의 주요 원인으로 강조했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "올해 1~5월 누적 경상수지 흑자가 지난해 연간 규모를 넘어선 것을 배경으로 제시했다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 전체 수출 실적 견인을 강조한 반면, 동아일보는 수출-내수 온도차 심화와 경기 회복의 불균형 심화를 주요 영향으로 지적했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 전체 수출 실적을 견인했다고 강조했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "수출-내수 온도차 심화, 경기 회복의 불균형 심화, 대외 통상 압박 가능성, 산업간 성장 격차 확대 가능성을 지적했다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 수출 호조에 대한 기대를 보인 반면, 동아일보는 대규모 경상흑자의 장기화에 따른 우려를 경계하는 태도를 보였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조에 대해 긍정적 기대를 보이며 '반도체 여전히 좋다'는 태도를 보였다.",
+                "evidence": [
+                  "반도체 여전히 좋다"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 확대될 수 있다는 해외 연구기관의 경고를 우려하며 경계하는 태도를 보였다.",
+                "evidence": [
+                  "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고도 나온다",
+                  "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다고 지적한다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "반도체 수출 호조가 역대 최고 수출액을 기록하며 전체 수출을 견인했다는 점",
+          "관세청과 한국은행 등 공식 기관의 데이터를 인용했다는 점",
+          "반도체 수출 실적을 주요 경제 지표로 제시했다는 점"
+        ],
+        "key_differences": [
+          "매일경제는 반도체 수출 호조의 긍정적 효과에 초점을 맞춘 반면, 동아일보는 수출-내수 간 불균형 심화에 대한 우려를 강조했다.",
+          "매일경제는 수출 실적 자체에 대한 기대를 보인 반면, 동아일보는 경상수지 흑자의 장기화에 따른 부정적 영향에 대한 경계를 보였다."
+        ],
+        "comparison_report": "두 언론사 모두 7월 1~20일 반도체 수출액이 549억달러로 역대 최고를 기록한 사실을 보도했으나, 매일경제은 반도체 수출 호조를 전체 수출 실적을 견인하는 긍정적 경제 현상으로 보고 '반도체 여전히 좋다'는 기대를 표현한 반면, 동아일보는 반도체 수출 중심의 경상수지 흑자 확대가 내수 부진과 소비심리 위축으로 이어져 경기 회복의 불균형을 심화시킨다고 지적하며 대규모 경상흑자의 장기화에 따른 우려를 경계하는 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "“반도체 여전히 좋다”…7월 1~20일 수출액 549억달러 ‘역대 최고’",
+            "link": "https://www.mk.co.kr/news/economy/12103105",
+            "published_at": "Tue, 21 Jul 2026 10:31:01 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:50:17.945911+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,donga,mk": {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "7월 1~20일 수출액이 역대 최고를 기록했으며, 반도체 수출이 전체 수출을 견인하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 7월 1~20일 수출액이 역대 최고를 기록했으며, 반도체 수출이 전체 수출을 견인하고 있다는 점을 공통적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 지속되며 7월 1~20일 수출액이 549억달러로 역대 최고를 기록했고, 전년 대비 180% 이상 증가하며 전체 수출을 견인했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "7월 1~20일 수출액이 전년 대비 52% 증가했으며, 특히 반도체 수출이 1년 전의 2.8배로 크게 늘어난 것으로 나타났다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조로 올해 1~5월 누적 경상수지 흑자가 1413억 달러로 지난해 연간 규모를 넘어섰으나, 소비심리 위축과 내수 부진으로 경기 회복의 불균형이 심화되고 있다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 수출 호조를 긍정적 경제 현상으로, 조선일보는 수출 증가를 경제 호황으로, 동아일보는 수출 중심의 경상수지 흑자 확대가 내수 부진으로 이어지는 불균형 문제로 보고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "반도체 수출 호황이 전체 수출 증가를 견인하고 있다는 점을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 중심의 경상수지 흑자 확대가 국내 소비와 투자, 다른 산업으로의 확산으로 이어지지 못하는 문제",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제와 조선일보는 반도체 호조의 지속을 원인으로, 동아일보는 반도체 수출 호조를 원인으로 제시하지만, 동아일보는 경상수지 흑자와 내수 부진의 배경을 추가로 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 호조의 지속",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "반도체 경기 호황",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제와 조선일보는 전체 수출 실적 견인을, 동아일보는 수출-내수 온도차 심화와 경기 회복의 불균형 심화를 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "전체 수출 실적 견인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수출 52% 증가, 반도체 수출 2.8배 성장",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "수출-내수 온도차 심화, 경기 회복의 불균형 심화, 대외 통상 압박 가능성, 산업간 성장 격차 확대 가능성",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 긍정적 기대를, 조선일보는 중립적 설명을, 동아일보는 우려와 경계를 보이고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달하며 긍정적 기대를 보임",
+                "evidence": [
+                  "반도체 여전히 좋다"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수치 중심의 중립적 설명",
+                "evidence": [
+                  "7월 1~20일 수출 52%↑",
+                  "반도체 수출 1년 전의 2.8배로"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "우려와 경계를 보이며 불균형 문제를 지적",
+                "evidence": [
+                  "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고도 나온다",
+                  "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다고 지적한다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "7월 1~20일 수출액이 역대 최고를 기록했으며, 반도체 수출이 전체 수출을 견인하고 있다."
+        ],
+        "key_differences": [
+          "동아일보는 반도체 수출 호조가 내수 부진과 경제 불균형을 초래한다는 우려를 강조하는 반면, 매일경제는 긍정적 경제 현상으로, 조선일보는 중립적 수치 설명으로 보도하고 있다."
+        ],
+        "comparison_report": "세 언론사 모두 7월 1~20일 수출액이 역대 최고를 기록했으며 반도체 수출이 전체 수출을 견인하고 있다는 공통점을 가지고 있다. 매일경제는 반도체 수출 호조를 긍정적 경제 현상으로 보고 '반도체 여전히 좋다'는 표현을 통해 기대감을 드러내고 있으며, 조선일보는 수출 52% 증가와 반도체 수출 2.8배 성장이라는 수치 중심의 중립적 설명을 제공하고 있다. 반면 동아일보는 반도체 수출 호조로 인한 경상수지 흑자 확대가 내수 부진과 경기 회복의 불균형을 심화시킬 수 있다는 우려를 강조하며, 해외 연구기관의 경고와 대외 통상 압박 가능성을 지적하고 있다. 이처럼 세 언론사는 수출 실적의 긍정적 측면을 공통적으로 보도하지만, 동아일보는 수출 중심의 경제 구조가 초래할 수 있는 부정적 영향에 대한 우려를 추가로 제기하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "“반도체 여전히 좋다”…7월 1~20일 수출액 549억달러 ‘역대 최고’",
+            "link": "https://www.mk.co.kr/news/economy/12103105",
+            "published_at": "Tue, 21 Jul 2026 10:31:01 +09:00"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "7월 1~20일 수출 52%↑ 반도체 수출 1년 전의 2.8배로",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/21/GTICANQAEJGPJPIIQLKAYODHSY/",
+            "published_at": "Tue, 21 Jul 2026 00:04:25 +0000"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:50:18.052838+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,donga": {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "selected_publishers": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "7월 1~20일 수출액이 전년 대비 52% 증가했으며, 반도체 수출이 1년 전의 2.8배로 크게 늘어난 수출 호조 현상이 공통적으로 확인되었다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 7월 1~20일 수출액이 전년 대비 52% 증가했고, 반도체 수출이 1년 전의 2.8배로 크게 늘어난 수출 호조 현상을 공통적으로 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수출액 52% 증가와 반도체 수출 2.8배 성장이라는 수치적 성과를 중립적으로 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형 문제를 함께 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 반도체 수출 호황이 전체 수출 증가를 견인한다는 점을 강조한 반면, 동아일보는 반도체 수출 중심의 경상수지 흑자 확대가 내수와 다른 산업으로 확산되지 못하는 문제를 지적했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "반도체 수출 호황이 전체 수출 증가를 견인하는 핵심 동력이라는 관점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조로 인한 경상수지 흑자 확대가 내수와 다른 산업으로 확산되지 못하는 불균형 문제",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "두 언론사 모두 반도체 수출 호조를 주요 원인으로 제시했으나, 조선일보는 7월 1~20일 수출 실적을 구체적 배경으로 강조한 반면, 동아일보는 올해 1~5월 누적 경상수지 흑자와 GDP 대비 흑자 규모를 배경으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "7월 1~20일 수출 실적이라는 단기적 배경을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "올해 1~5월 누적 경상수지 흑자 및 GDP 대비 흑자 규모라는 중장기적 배경을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 수출 기업과 반도체 산업 등 수출 부문에 초점을 맞춘 반면, 동아일보는 내수 부문, 소비심리, 국내 산업 전반 등 내수와 경제 불균형에 미치는 영향을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수출 52% 증가와 반도체 수출 2.8배 성장이라는 수출 부문의 긍정적 영향",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "수출-내수 온도차 심화와 경기 회복의 불균형 심화라는 내수 부문의 부정적 영향",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "조선일보는 수치 중심의 중립적 설명을 제공한 반면, 동아일보는 대규모 경상흑자의 지속 가능성에 대한 우려와 경계 태도를 보였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수출 증가율과 반도체 수출 성장세에 초점을 맞춘 수치 중심의 중립 설명",
+                "evidence": [
+                  "7월 1~20일 수출 52%↑",
+                  "반도체 수출 1년 전의 2.8배로"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 확대될 수 있다는 우려·경계 태도",
+                "evidence": [
+                  "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고도 나온다",
+                  "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다고 지적한다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "7월 1~20일 수출액이 전년 대비 52% 증가했고, 반도체 수출이 1년 전의 2.8배로 크게 늘어난 수출 호조 현상",
+          "반도체 수출 호조가 경상수지 흑자 확대에 기여했다는 점",
+          "수출 증가가 경제 전반에 긍정적 영향을 미친다는 기본 전제"
+        ],
+        "key_differences": [
+          "조선일보는 수출 부문의 긍정적 성과에 초점을 맞춘 반면, 동아일보는 수출 호조로 인한 내수와 경제 불균형 문제를 강조했다",
+          "조선일보는 단기적 수출 실적을 배경으로 제시한 반면, 동아일보는 중장기적 경상수지 흑자 규모를 배경으로 제시했다",
+          "조선일보는 중립적 설명 태도를 보인 반면, 동아일보는 우려·경계 태도를 보였다"
+        ],
+        "comparison_report": "두 언론사 모두 7월 1~20일 수출액이 전년 대비 52% 증가하고 반도체 수출이 1년 전의 2.8배로 크게 늘어난 수출 호조 현상을 보도했으나, 조선일보는 수치 중심의 중립적 설명을 통해 수출 부문의 성과를 강조한 반면, 동아일보는 반도체 수출 호조로 인한 경상수지 흑자 확대가 내수와 다른 산업으로 확산되지 못하는 불균형 문제를 우려하며 경계하는 태도를 보였다. 조선일보는 단기적 수출 실적을 배경으로 제시한 데 비해 동아일보는 중장기적 경상수지 흑자 규모를 배경으로 제시했으며, 영향 대상도 조선일보는 수출 기업과 반도체 산업에 초점을 맞춘 반면 동아일보는 내수 부문과 국내 산업 전반의 부정적 영향을 강조했다.",
+        "source_links": [
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "7월 1~20일 수출 52%↑ 반도체 수출 1년 전의 2.8배로",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/21/GTICANQAEJGPJPIIQLKAYODHSY/",
+            "published_at": "Tue, 21 Jul 2026 00:04:25 +0000"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:50:19.987017+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,mk": {
+        "issue_id": "issue-2dab2064cc788e1e",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          }
+        ],
+        "common_summary": "7월 1~20일 수출액이 역대 최고를 기록했으며, 반도체 수출이 전년 대비 크게 증가하여 전체 수출을 견인하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 7월 1~20일 수출액이 역대 최고를 기록했으며, 반도체 수출이 전년 대비 크게 증가하여 전체 수출을 견인하고 있다고 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 지속되며 7월 1~20일 수출액이 549억달러로 역대 최고를 기록했고, 전년 대비 180% 이상 증가하며 전체 수출을 견인했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "7월 1~20일 수출액이 전년 대비 52% 증가했으며, 특히 반도체 수출이 1년 전의 2.8배로 크게 늘어난 것으로 나타났다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상으로 본 반면, 조선일보는 반도체 수출 호황이 전체 수출 증가를 견인하고 있다는 점을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 전체 수출 실적을 견인하는 긍정적 경제 현상",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "반도체 수출 호황이 전체 수출 증가를 견인하고 있다는 점",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '반도체 호조의 지속'을 원인으로 강조한 반면, 조선일보는 '반도체 경기 호황'을 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 호조의 지속",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "반도체 경기 호황",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '전체 수출 실적 견인'을 강조한 반면, 조선일보는 '수출 52% 증가'와 '반도체 수출 2.8배 성장'을 구체적으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "전체 수출 실적 견인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수출 52% 증가, 반도체 수출 2.8배 성장",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '반도체 여전히 좋다'라는 긍정적 기대를 담은 태도를 보인 반면, 조선일보는 '7월 1~20일 수출 52%↑', '반도체 수출 1년 전의 2.8배로'와 같은 수치 중심의 중립적 설명을 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "긍정적 기대를 담은 보도 태도",
+                "evidence": [
+                  "반도체 여전히 좋다"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "수치 중심의 중립적 설명",
+                "evidence": [
+                  "7월 1~20일 수출 52%↑",
+                  "반도체 수출 1년 전의 2.8배로"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "7월 1~20일 수출액이 역대 최고를 기록했으며, 반도체 수출이 전년 대비 크게 증가하여 전체 수출을 견인하고 있다."
+        ],
+        "key_differences": [
+          "매일경제는 '반도체 여전히 좋다'라는 긍정적 기대를 강조한 반면, 조선일보는 수치 중심의 중립적 설명을 제시했다."
+        ],
+        "comparison_report": "두 언론사 모두 7월 1~20일 수출액이 역대 최고를 기록했으며 반도체 수출이 크게 증가해 전체 수출을 견인하고 있다는 공통점을 가지고 있다. 매일경제은 반도체 수출 호조의 지속을 원인으로 보고 긍정적 기대를 담은 태도를 보인 반면, 조선일보는 반도체 경기 호황을 원인으로 보고 수출 52% 증가와 반도체 수출 2.8배 성장이라는 구체적 수치를 제시하며 중립적으로 설명했다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "“반도체 여전히 좋다”…7월 1~20일 수출액 549억달러 ‘역대 최고’",
+            "link": "https://www.mk.co.kr/news/economy/12103105",
+            "published_at": "Tue, 21 Jul 2026 10:31:01 +09:00"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "7월 1~20일 수출 52%↑ 반도체 수출 1년 전의 2.8배로",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/21/GTICANQAEJGPJPIIQLKAYODHSY/",
+            "published_at": "Tue, 21 Jul 2026 00:04:25 +0000"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:50:34.825915+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-047f2ae22ee26a24": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-047f2ae22ee26a24",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "479f66213d2d854f3d57ad2827d4b161b6b42aeb5e771ebf1d3f1b82a7ffb045",
+            "title": "단일종목 레버리지 ETF의 운명은?",
+            "published_at": "Thu, 16 Jul 2026 15:21:37 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12100322"
+          }
+        ],
+        "analysis": {
+          "article_summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 국내 증시 변동성의 주범으로 지목된 단일종목 레버리지 ETF에 대한 규제 논의가 이루어졌다.",
+          "headline_frame": "단일종목 레버리지 ETF의 규제 필요성을 중심으로 한 회의 상황을 부각",
+          "main_focus": "거시경제·금융·통화당국 수장들의 회의에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 점을 강조",
+          "primary_frame": {
+            "category": "금융 규제",
+            "stance": "사실 전달",
+            "target": "단일종목 레버리지 ETF",
+            "summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목되며 규제 필요성이 논의되었다.",
+            "evidence": [
+              "국내 증시 변동성의 주범으로 지목된 삼",
+              "거시경제·금융·통화당국 수장 4인이 회의실로 향하고 있다"
+            ]
+          },
+          "keywords": [
+            "레버리지 ETF",
+            "규제",
+            "증시 변동성",
+            "거시경제",
+            "금융당국"
+          ],
+          "main_actors": [
+            "거시경제·금융·통화당국 수장"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "국내 증시 변동성"
+          ],
+          "background": [
+            "거시경제·금융현안 간담회(F4 회의)"
+          ],
+          "emphasized_effects": [
+            "국내 증시 변동성"
+          ],
+          "affected_groups": [
+            "투자자",
+            "국내 증시"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "국내 증시 변동성의 주범으로 지목된 삼",
+              "거시경제·금융·통화당국 수장 4인이 회의실로 향하고 있다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "회의에서 규제 논의가 이루어졌으나 향후 구체적 방향이나 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:50:41.212783+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-047f2ae22ee26a24",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "0262eb79d18e12d932acb2ee172dec287ea041037476cbcc7fee9373fa9ef469",
+            "title": "레버리지 예탁금 3천만 원 상향…'매매 단위' 20주로",
+            "published_at": "Fri, 17 Jul 2026 06:28:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662049"
+          }
+        ],
+        "analysis": {
+          "article_summary": "정부가 삼성전자와 SK하이닉스 레버리지 ETF에 대한 보완책을 발표하며, 레버리지 예탁금을 3천만 원으로 상향하고 매매 단위를 20주로 변경해 투자 접근성을 낮추는 조치를 취했다.",
+          "headline_frame": "레버리지 ETF 규제 강화 조치의 구체적 내용",
+          "main_focus": "레버리지 ETF 투자 조건 강화를 통한 시장 변동성 완화",
+          "primary_frame": {
+            "category": "규제 강화",
+            "stance": "사실 전달",
+            "target": "삼성전자·SK하이닉스 레버리지 ETF",
+            "summary": "정부가 레버리지 ETF에 대한 투자 조건을 강화해 시장 변동성을 줄이려는 규제 조치를 발표했다.",
+            "evidence": [
+              "레버리지 예탁금 3천만 원 상향",
+              "'매매 단위' 20주로"
+            ]
+          },
+          "keywords": [
+            "레버리지 ETF",
+            "예탁금 상향",
+            "매매 단위",
+            "삼성전자",
+            "SK하이닉스",
+            "시장 변동성"
+          ],
+          "main_actors": [
+            "정부"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "주식 시장 변동성 확대"
+          ],
+          "background": [
+            "레버리지 ETF에 대한 투자 접근성 문제"
+          ],
+          "emphasized_effects": [
+            "투자 까다로움 증가"
+          ],
+          "affected_groups": [
+            "레버리지 ETF 투자자"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "효과가 있을지는 지켜봐야 할 것 같습니다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "규제 조치의 효과에 대해서는 향후 관찰이 필요하다는 유보적 전망"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:50:42.004895+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-047f2ae22ee26a24",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "e24a64efb77bab15e1631788f6d438b5bc4a844406e052e178593ab0e04958bd",
+            "title": "김용범 “삼전닉스 레버리지 상장폐지 어려워”",
+            "published_at": "Mon, 20 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134325135/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "김용범 대통령정책실장이 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 밝혔으며, 기본예탁금 상향 등 보완 대책을 발표했다.",
+          "headline_frame": "레버리지 ETF 상장 폐지에 대한 정부 입장을 중심으로, 시장 충격 우려와 제도 보완 방향을 강조",
+          "main_focus": "레버리지 ETF 규제 강화 방안 및 상장 폐지 가능성에 대한 정부 입장",
+          "primary_frame": {
+            "category": "시장 규제",
+            "stance": "사실 전달",
+            "target": "삼성전자·SK하이닉스 단일종목 레버리지 ETF",
+            "summary": "정부는 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다고 판단하며, 기본예탁금 상향 등 보완 대책을 통해 문제를 해소하려는 입장을 밝혔다.",
+            "evidence": [
+              "청와대가 19일 주식시장 변동성을 지나치게 키우고 있다는 지적을 받고 있는 삼성전자와 SK하이닉스 단일종목 레버리지 상장지수펀드(ETF) 상장 폐지에 선을 그었다",
+              "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다",
+              "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다"
+            ]
+          },
+          "keywords": [
+            "레버리지 ETF",
+            "상장 폐지",
+            "기본예탁금",
+            "김용범",
+            "시장 변동성",
+            "삼성전자"
+          ],
+          "main_actors": [
+            "김용범 대통령정책실장",
+            "청와대",
+            "오세훈 서울시장"
+          ],
+          "quoted_sources": [
+            "KBS 일요진단"
+          ],
+          "causes": [
+            "주식시장 변동성 지나치게 키움"
+          ],
+          "background": [
+            "거시경제·금융현안 간담회",
+            "레버리지 ETF 투자자 기본예탁금 3000만 원 상향",
+            "예탁금 현금만 인정"
+          ],
+          "emphasized_effects": [
+            "시장 충격 우려",
+            "괴리율 맞추기 위한 매도 부담"
+          ],
+          "affected_groups": [
+            "레버리지 ETF 투자자"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다",
+              "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "정부는 추가 대책 필요성을 인정하면서도 기존 제도 보완을 통해 문제를 해소하려는 입장을 유지하고 있다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과는 확인하기 어렵다"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:50:45.183669+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-047f2ae22ee26a24",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "레버리지 ETF 규제 및 시장 안정 전망",
+          "summary": "거시경제·금융·통화당국 수장들의 회의에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목되고, 이에 대한 규제 필요성 및 시장 안정 효과를 중심으로 보도한 그룹입니다. 매일경제와 SBS는 레버리지 ETF 규제 필요성을 강조하며 시장 변동성 완화 효과를 전망하는 반면, 동아일보는 규제 강화 방안과 상장 폐지 가능성, 시장 충격 우려를 함께 다루지만, 모두 레버리지 ETF가 증시 변동성을 과도하게 유발한다는 공통된 핵심 쟁점과 규제 필요성에 동의합니다.",
+          "keywords": [
+            "레버리지 ETF",
+            "규제",
+            "증시 변동성",
+            "시장 안정"
+          ],
+          "publisher_ids": [
+            "mk",
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            },
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 3,
+          "group_evidence": [
+            "세 언론사 모두 거시경제·금융·통화당국 수장들의 회의에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목되었다는 점을 공통적으로 강조",
+            "매일경제는 규제 필요성을, SBS는 투자 조건 강화를 통한 시장 변동성 완화 효과를, 동아일보는 규제 강화 방안과 상장 폐지 가능성 및 시장 충격 우려를 함께 제시",
+            "모두 레버리지 ETF가 증시 변동성을 지나치게 키운다는 공통된 핵심 쟁점과 해석 방향을 공유",
+            "규제 조치의 필요성과 효과에 대한 전망(중립적 설명)을 공통적으로 제시"
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "3개 언론사 모두 거시경제·금융·통화당국 수장들의 회의에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목되었다는 공통된 핵심 쟁점을 다루고 있습니다. 매일경제와 SBS는 규제 필요성과 시장 안정 효과를 중심으로 보도했으며, 동아일보는 규제 강화 방안과 상장 폐지 가능성, 시장 충격 우려를 함께 다루지만, 모두 레버리지 ETF가 증시 변동성을 과도하게 유발한다는 공통된 해석과 규제 필요성에 동의합니다. 따라서 1개 그룹으로 묶을 수 있습니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:50:50.957169+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-047f2ae22ee26a24",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "정부가 레버리지 ETF에 대한 규제 강화 조치를 발표하며, 삼성전자와 SK하이닉스 관련 레버리지 ETF에 대해 예탁금을 3천만 원으로 상향하고 매매 단위를 20주로 변경하는 내용을 다루고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 정부가 레버리지 ETF에 대한 규제 강화 조치를 발표했다는 점을 공통적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "레버리지 ETF 규제 강화 조치의 구체적 내용(레버리지 예탁금 3천만 원 상향, 매매 단위 20주 변경)을 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 상장 폐지 가능성과 시장 충격 우려를 언급하며 기본예탁금 상향 등 보완 대책을 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 레버리지 ETF 투자 조건 강화를 통한 시장 변동성 완화에 초점을 맞춘 반면, 동아일보는 레버리지 ETF 규제 강화 방안과 상장 폐지 가능성에 대한 정부 입장을 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "레버리지 ETF 투자 조건 강화를 통한 시장 변동성 완화",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 규제 강화 방안 및 상장 폐지 가능성에 대한 정부 입장",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 주식 시장 변동성 확대를 원인으로 제시한 반면, 동아일보는 주식시장 변동성 지나치게 키움과 거시경제·금융현안 간담회를 배경으로 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "주식 시장 변동성 확대",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "주식시장 변동성 지나치게 키움, 거시경제·금융현안 간담회",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 투자 까다로움 증가를 강조한 반면, 동아일보는 시장 충격 우려와 괴리율 맞추기 위한 매도 부담을 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "투자 까다로움 증가",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "시장 충격 우려, 괴리율 맞추기 위한 매도 부담",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보이며, 정부 발표 내용을 객관적으로 전달하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달하며, 효과가 있을지는 지켜봐야 할 것 같다는 유보적 태도를 보임",
+                "evidence": [
+                  "효과가 있을지는 지켜봐야 할 것 같습니다"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "중립 설명 태도로 정부 발표 내용을 객관적으로 전달하며, 김용범 대통령정책실장의 발언을 인용하여 상장 폐지 어려움을 강조함",
+                "evidence": [
+                  "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다",
+                  "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "레버리지 ETF 규제 강화 조치 발표, 삼성전자 및 SK하이닉스 관련 ETF 대상, 기본예탁금 3천만 원 상향, 매매 단위 변경"
+        ],
+        "key_differences": [
+          "SBS는 레버리지 ETF 투자 조건 강화를 통한 시장 변동성 완화에 초점을 맞춘 반면, 동아일보는 레버리지 ETF 상장 폐지 가능성과 시장 충격 우려를 더 강조함"
+        ],
+        "comparison_report": "SBS와 동아일보 모두 정부가 레버리지 ETF에 대한 규제 강화 조치를 발표했다는 점을 공통적으로 보도하고 있으나, SBS는 레버리지 ETF 투자 조건 강화를 통한 시장 변동성 완화에 초점을 맞춘 반면, 동아일보는 레버리지 ETF 상장 폐지 가능성과 시장 충격 우려를 더 강조하고 있다. 원인 측면에서 SBS는 주식 시장 변동성 확대를 원인으로 제시한 반면, 동아일보는 주식시장 변동성 지나치게 키움과 거시경제·금융현안 간담회를 배경으로 강조하고 있다. 영향 측면에서 SBS는 투자 까다로움 증가를 강조한 반면, 동아일보는 시장 충격 우려와 괴리율 맞추기 위한 매도 부담을 강조하고 있다. 두 언론사 모두 중립적인 설명 태도를 보이며 정부 발표 내용을 객관적으로 전달하고 있으나, 동아일보는 김용범 대통령정책실장의 발언을 인용하여 상장 폐지 어려움을 더 구체적으로 설명하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "레버리지 예탁금 3천만 원 상향…'매매 단위' 20주로",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662049",
+            "published_at": "Fri, 17 Jul 2026 06:28:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "김용범 “삼전닉스 레버리지 상장폐지 어려워”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134325135/2",
+            "published_at": "Mon, 20 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:51:04.925827+00:00",
+        "model": "solar-pro3"
+      },
+      "donga,mk,sbs": {
+        "issue_id": "issue-047f2ae22ee26a24",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "거시경제·금융·통화당국 수장들이 참석한 간담회에서 국내 증시 변동성의 주범으로 지목된 단일종목 레버리지 ETF에 대한 규제 논의가 이루어졌다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF 규제 논의가 이루어졌음을 공통적으로 보도하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "거시경제·금융·통화당국 수장들의 회의에서 단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 점을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정부와 거시경제·금융·통화당국 수장들이 참석한 간담회에서 레버리지 ETF 규제 강화 조치가 논의된 점을 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "거시경제·금융현안 간담회에서 레버리지 ETF 규제 방안에 대한 논의가 이루어진 점을 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 단일종목 레버리지 ETF를 증시 변동성의 주범으로 지목한 점을 강조한 반면, SBS는 투자 조건 강화를 통한 시장 변동성 완화 방안을, 동아일보는 상장 폐지 가능성과 보완 대책을 중심으로 보도하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "단일종목 레버리지 ETF가 국내 증시 변동성의 주범으로 지목된 점을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "레버리지 ETF 투자 조건 강화를 통한 시장 변동성 완화 방안을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 규제 강화 방안 및 상장 폐지 가능성에 대한 정부 입장을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '국내 증시 변동성'을, SBS는 '주식 시장 변동성 확대'를, 동아일보는 '주식시장 변동성 지나치게 키움'을 원인으로 제시하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "국내 증시 변동성이 단일종목 레버리지 ETF 규제 논의의 배경으로 작용함을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "주식 시장 변동성 확대 문제가 레버리지 ETF 규제 강화 조치의 배경으로 작용함을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "주식시장 변동성이 지나치게 커진 점을 규제 강화의 배경으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '투자자'와 '국내 증시'를, SBS는 '레버리지 ETF 투자자'를, 동아일보는 '레버리지 ETF 투자자'와 '시장 충격 우려'를 영향 대상으로 제시하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "레버리지 ETF 투자 조건 강화로 인한 투자 까다로움 증가를 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "레버리지 ETF 상장 폐지로 인한 시장 충격 우려와 괴리율 맞추기 위한 매도 부담을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '국내 증시 변동성의 주범으로 지목된 삼'과 '거시경제·금융·통화당국 수장 4인이 회의실로 향하고 있다'를, SBS는 '효과가 있을지는 지켜봐야 할 것 같습니다'를, 동아일보는 '김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다'와 '정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다'를 근거로 제시하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달하며 회의 상황을 부각하는 태도를 보임",
+                "evidence": [
+                  "국내 증시 변동성의 주범으로 지목된 삼",
+                  "거시경제·금융·통화당국 수장 4인이 회의실로 향하고 있다"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "규제 조치의 효과를 유보적으로 평가하며 중립적인 태도를 보임",
+                "evidence": [
+                  "효과가 있을지는 지켜봐야 할 것 같습니다"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정부 입장을 인용하며 시장 충격 우려를 강조하는 태도를 보임",
+                "evidence": [
+                  "김용범 대통령정책실장은 이날 KBS 일요진단에 출연해 “(레버리지 ETF) 상장 폐지 자체가 시장에 엄청난 충격을 줄 수 있다”며 “그건 상상하기 어렵다”고 밝혔다",
+                  "정부는 16일 거시경제·금융현안 간담회에서 레버리지 ETF 투자자의 기본예탁금을 3000만 원으로 상향하고, 예탁금을 주식이 아닌 현금만 인정하는 보완 대책을 발표했다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF 규제 논의가 이루어졌음",
+          "레버리지 ETF가 국내 증시 변동성의 주요 원인으로 지목되었음",
+          "규제 방안으로 기본예탁금 상향 조치가 제시되었음"
+        ],
+        "key_differences": [
+          "매일경제는 단일종목 레버리지 ETF를 증시 변동성의 주범으로 지목한 점을 강조한 반면, SBS는 삼성전자·SK하이닉스 레버리지 ETF에 대한 구체적 규제 내용을, 동아일보는 상장 폐지 가능성과 시장 충격 우려를 추가로 보도함"
+        ],
+        "comparison_report": "세 언론사 모두 거시경제·금융·통화당국 수장들이 참석한 간담회에서 단일종목 레버리지 ETF 규제 논의가 이루어졌음을 보도하였으나, 매일경제은 단일종목 레버리지 ETF를 증시 변동성의 주범으로 지목한 점을 강조한 반면, SBS는 삼성전자·SK하이닉스 레버리지 ETF에 대한 구체적 규제 내용(레버리지 예탁금 3천만 원 상향, 매매 단위 20주 변경)을 중심으로 보도하였고, 동아일보는 김용범 대통령정책실장의 발언을 인용하여 레버리지 ETF 상장 폐지가 시장에 큰 충격을 줄 수 있어 어렵다는 입장을 강조하며 기본예탁금 상향 등 보완 대책을 제시하였다. 보도 태도는 세 언론사 모두 중립적인 설명을 유지하였으나, 동아일보는 정부 입장을 직접 인용하여 시장 충격 우려를 부각시킨 반면, SBS는 규제 조치의 효과를 유보적으로 평가하였고, 매일경제는 회의 상황을 부각하는 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "단일종목 레버리지 ETF의 운명은?",
+            "link": "https://www.mk.co.kr/news/economy/12100322",
+            "published_at": "Thu, 16 Jul 2026 15:21:37 +09:00"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "레버리지 예탁금 3천만 원 상향…'매매 단위' 20주로",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662049",
+            "published_at": "Fri, 17 Jul 2026 06:28:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "김용범 “삼전닉스 레버리지 상장폐지 어려워”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260720/134325135/2",
+            "published_at": "Mon, 20 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:51:30.460717+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-73a9a317867d21c7": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-73a9a317867d21c7",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "ac1ee77746a52f554efe3da06ff1f06a782ec0f4fc5d08ec6be6abca8052b2b0",
+            "title": "노사정, 인구 변화 일자리 영향 머리 맞댄다…공론화특위 발족",
+            "published_at": "Thu, 16 Jul 2026 17:28:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008661664"
+          }
+        ],
+        "analysis": {
+          "article_summary": "노사정 3자가 인구 변화가 일자리에 미치는 영향을 논의하기 위해 공론화특위를 발족하고 머리를 맞대기로 했다.",
+          "headline_frame": "인구 변화와 일자리 영향 논의의 시작을 공론화특위 발족으로 제시",
+          "main_focus": "인구 변화가 일자리에 미치는 영향에 대한 노사정 3자의 공론화 논의 시작",
+          "primary_frame": {
+            "category": "인구 변화와 일자리 영향 논의",
+            "stance": "사실 전달",
+            "target": "노사정 3자",
+            "summary": "노사정 3자가 인구 변화가 일자리에 미치는 영향을 논의하기 위해 공론화특위를 발족하고 머리를 맞대기로 한 사실을 전달한다.",
+            "evidence": [
+              "노사정, 인구 변화 일자리 영향 머리 맞댄다…공론화특위 발족",
+              "김지형 경제사회노동위원회 위원장이 지난 3월 18일 서울 중구 경사노위 대회의실에서 새 정부 제1기 경사노위 출범 브리핑을 하고"
+            ]
+          },
+          "keywords": [
+            "노사정",
+            "인구 변화",
+            "일자리 영향",
+            "공론화특위",
+            "경제사회노동위원회"
+          ],
+          "main_actors": [
+            "경제사회노동위원회",
+            "김지형 위원장",
+            "노사정 3자"
+          ],
+          "quoted_sources": [],
+          "causes": [],
+          "background": [],
+          "emphasized_effects": [],
+          "affected_groups": [],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "노사정, 인구 변화 일자리 영향 머리 맞댄다…공론화특위 발족"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "향후 공론화특위를 통해 인구 변화와 일자리 영향에 대한 논의가 진행될 예정이다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:51:46.399426+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-73a9a317867d21c7",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "affdaf5aacc4b7320d8ca40ec272ab2a89a6b17d44b5f090b8b0fbd18f82f1b9",
+            "title": "[단독]노벨상 교수 “AI發 생산성 향상, 고용 창출까진 시차… 충격 불가피”",
+            "published_at": "Wed, 22 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260722/134340582/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "노벨 경제학상 수상자인 마이클 스펜스 교수가 AI로 인한 생산성 향상에도 불구하고 새로운 일자리 창출까지 시차가 발생할 수 있으며, 그 사이에 고용 악화와 세수 감소 등의 충격이 불가피하다고 경고했다.",
+          "headline_frame": "AI 생산성 향상의 고용 창출 시차 및 충격 불가피성에 초점",
+          "main_focus": "AI로 인한 생산성 향상이 곧바로 고용 기회나 경제 호황으로 이어지지 않을 것이라는 전망",
+          "primary_frame": {
+            "category": "AI 생산성 향상과 고용 충격",
+            "stance": "우려·경계",
+            "target": "AI 기술 발전과 고용 시장",
+            "summary": "AI가 생산성을 높일 수 있지만 새로운 일자리 창출까지 시간이 소요되어 고용 악화와 세수 감소 등의 부정적 영향이 발생할 수 있다는 우려를 제기한다.",
+            "evidence": [
+              "AI가 생산성 증가를 가져오더라도 새로운 일자리들이 창출되기까지는 시간이 걸릴 수 있다",
+              "그 사이에는 고용이 악영향을 받고, 많은 나라에서 고용에 기반한 세수에도 부정적인 영향을 줄 수 있다",
+              "AI가 촉발한 생산성 향상이 곧바로 고용 기회나 경제 호황으로 이어지진 않을 거라고 전망"
+            ]
+          },
+          "keywords": [
+            "AI 생산성 향상",
+            "고용 창출 시차",
+            "고용 충격",
+            "세수 감소",
+            "노벨 경제학상",
+            "마이클 스펜스"
+          ],
+          "main_actors": [
+            "마이클 스펜스",
+            "미국 스탠퍼드대 경영대학원"
+          ],
+          "quoted_sources": [
+            "마이클 스펜스 미국 스탠퍼드대 경영대학원 명예교수 겸 명예원장"
+          ],
+          "causes": [
+            "AI 기술 발전"
+          ],
+          "background": [
+            "정보 비대칭성 연구",
+            "역대 노벨상 수상자 16명을 비롯한 세계 정상급 경제학자 및 AI 연구자 200여 명이 발표한 공동성명"
+          ],
+          "emphasized_effects": [
+            "고용 악화",
+            "세수 감소",
+            "경제 호황 지연"
+          ],
+          "affected_groups": [
+            "고용 시장",
+            "세수 기반"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "충격 불가피",
+              "고용에 악영향을 받고",
+              "부정적인 영향을 줄 수 있다"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "AI는 생활 수준을 높일 수 있지만 일자리 대체와 같은 위험을 초래할 수 있어 긍정적 효과와 부정적 영향이 공존할 것으로 전망"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "AI 기술 발전이 고용 시장에 미치는 장기적 영향"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:51:50.805703+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-73a9a317867d21c7",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "AI 생산성 향상의 고용 충격과 경제 영향 우려",
+          "summary": "AI 기술 발전으로 인한 생산성 향상이 고용 시장 악화와 세수 감소를 초래할 수 있다는 우려를 중심으로, 노벨 경제학상 수상자를 포함한 전문가들의 공동성명을 근거로 AI 도입의 부정적 영향에 대한 경계적 시각을 공유합니다.",
+          "keywords": [
+            "AI 생산성 향상",
+            "고용 충격",
+            "세수 감소",
+            "노벨 경제학상",
+            "마이클 스펜스"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "AI 기술 발전이 곧바로 고용 기회나 경제 호황으로 이어지지 않을 것이라는 전망",
+            "AI로 인한 고용 악화와 세수 감소 우려",
+            "정보 비대칭성 연구와 노벨상 수상자 16명을 포함한 세계 정상급 경제학자 및 AI 연구자 200여 명의 공동성명",
+            "AI가 생활 수준을 높일 수 있지만 일자리 대체와 같은 위험을 초래할 수 있다는 혼합적 전망"
+          ]
+        },
+        {
+          "group_id": "group-ungrouped-sbs",
+          "label": "개별 분류 (그룹화 보류)",
+          "summary": "SBS는 다른 언론사와 뚜렷이 묶이지 않아 그룹화 단계에서 개별로 분류되었습니다.",
+          "keywords": [],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": []
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [],
+      "grouping_summary": "SBS는 인구 변화와 일자리 영향에 대한 노사정 공론화특위 발족을 중립적으로 보도한 반면, 동아일보는 AI 생산성 향상이 고용 충격과 세수 감소를 초래할 수 있다는 우려를 중심으로 경계적 시각을 제시했습니다. 두 언론사의 핵심 관점은 서로 다른 이슈(인구 변화 vs AI 생산성)를 다루고 있어 별도의 그룹으로 분류했습니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:51:54.392547+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-73a9a317867d21c7",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 인구 변화 또는 AI 기술 발전이 일자리에 미치는 영향에 대한 논의를 다루고 있으나, SBS는 노사정 3자의 공론화특위 발족을, 동아일보는 노벨 경제학상 수상자의 AI 관련 경고를 중심으로 보도하고 있다.",
+        "overall_difference": "차이 큼",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 노사정 3자가 인구 변화와 일자리 영향에 대해 공론화특위를 발족해 논의하기로 한 사실을, 동아일보는 노벨 경제학상 수상자가 AI 생산성 향상과 고용 창출 시차 및 충격을 경고한 내용을 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "노사정 3자가 인구 변화가 일자리에 미치는 영향을 논의하기 위해 공론화특위를 발족하고 머리를 맞대기로 한 사실을 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "노벨 경제학상 수상자인 마이클 스펜스 교수가 AI로 인한 생산성 향상에도 불구하고 고용 창출 시차와 충격이 불가피하다고 경고한 내용을 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 인구 변화가 일자리에 미치는 영향에 대한 노사정 3자의 공론화 논의 시작을, 동아일보는 AI 생산성 향상이 곧바로 고용 기회나 경제 호황으로 이어지지 않을 것이라는 전망을 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "노사정 3자가 인구 변화가 일자리에 미치는 영향에 대해 공론화특위를 통해 논의하기로 한 점을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI로 인한 생산성 향상이 곧바로 고용 기회나 경제 호황으로 이어지지 않을 것이라는 전망을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 인구 변화를 일자리 영향 논의의 배경으로, 동아일보는 AI 기술 발전을 고용 충격의 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "인구 변화가 일자리에 미치는 영향을 논의하기 위한 공론화특위 발족을 배경으로 제시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI 기술 발전을 고용 충격의 주요 원인으로 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 구체적인 영향이나 대상을 명시하지 않은 반면, 동아일보는 고용 악화와 세수 감소 등의 충격이 고용 시장과 세수 기반에 미칠 것이라고 경고했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "인구 변화가 일자리에 미치는 영향에 대한 논의 시작을 강조했으나 구체적인 영향은 제시하지 않음",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI 생산성 향상으로 인한 고용 악화, 세수 감소 등의 충격이 고용 시장과 세수 기반에 미칠 것이라고 경고",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 '노사정, 인구 변화 일자리 영향 머리 맞댄다…공론화특위 발족'이라는 중립적 설명 태도를 보인 반면, 동아일보는 '충격 불가피', '부정적인 영향을 줄 수 있다'는 우려·경계 태도를 보였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달하는 설명 태도",
+                "evidence": [
+                  "노사정, 인구 변화 일자리 영향 머리 맞댄다…공론화특위 발족"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI 생산성 향상의 부정적 영향에 대한 우려와 경계 태도",
+                "evidence": [
+                  "충격 불가피",
+                  "고용에 악영향을 받고",
+                  "부정적인 영향을 줄 수 있다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "인구 변화 또는 AI 기술 발전이 일자리에 미치는 영향에 대한 논의를 다루고 있음"
+        ],
+        "key_differences": [
+          "SBS는 국내 노사정 3자의 공론화특위 발족을, 동아일보는 노벨 경제학상 수상자의 AI 관련 경고를 중심으로 보도함",
+          "SBS는 중립적 설명 태도를, 동아일보는 우려·경계 태도를 보임"
+        ],
+        "comparison_report": "SBS는 경제사회노동위원회 주도로 노사정 3자가 인구 변화가 일자리에 미치는 영향을 논의하기 위해 공론화특위를 발족하고 머리를 맞대기로 한 사실을 중립적으로 보도한 반면, 동아일보는 노벨 경제학상 수상자인 마이클 스펜스 교수가 AI로 인한 생산성 향상에도 불구하고 고용 창출 시차와 충격이 불가피하다고 경고한 내용을 우려 섞인 태도로 보도했다. 두 기사 모두 인구 변화 또는 AI 기술 발전이 일자리에 미치는 영향에 대한 논의를 다루고 있으나, SBS는 국내 정책 논의 시작을, 동아일보는 AI 기술 발전의 부정적 영향에 대한 국제적 경고를 각각 강조했다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "노사정, 인구 변화 일자리 영향 머리 맞댄다…공론화특위 발족",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008661664",
+            "published_at": "Thu, 16 Jul 2026 17:28:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "[단독]노벨상 교수 “AI發 생산성 향상, 고용 창출까진 시차… 충격 불가피”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260722/134340582/2",
+            "published_at": "Wed, 22 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:52:09.251154+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-4db9b4c91145cf51": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-4db9b4c91145cf51",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "8e81fc6b2fc772438e49f0663ebfbf7c34c3ab607f291bd604667e68d52ed986",
+            "title": "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667972"
+          }
+        ],
+        "analysis": {
+          "article_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다.",
+          "headline_frame": "검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론",
+          "main_focus": "민주당이 주최한 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하고 있다.",
+          "primary_frame": {
+            "category": "정책 존폐 논의",
+            "stance": "찬반 격론",
+            "target": "검찰 보완수사권",
+            "summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지 여부를 놓고 전문가 공청회를 열어 찬반 의견을 수렴하고 있다.",
+            "evidence": [
+              "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+              "장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다."
+            ]
+          },
+          "keywords": [
+            "보완수사권",
+            "장윤기 사건",
+            "민주당",
+            "공청회",
+            "정책 존폐"
+          ],
+          "main_actors": [
+            "민주당"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "장윤기 사건"
+          ],
+          "background": [
+            "검찰 보완수사권"
+          ],
+          "emphasized_effects": [],
+          "affected_groups": [],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+              "장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다."
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "공청회를 통해 찬반 의견을 수렴하고 있으나 향후 정책 방향에 대한 구체적 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:52:37.809084+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-4db9b4c91145cf51",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "8ed8c304b53eab050652023da8c9dedf003f60aa96ea9bee9c34d126c3e5b65d",
+            "title": "장혜영 “보완수사권 폐지, 한동훈과 토론도 못 하면 재고해야”",
+            "published_at": "Wed, 22 Jul 2026 09:00:16 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134341391/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "장혜영 전 의원이 보완수사권 폐지에 대한 공개토론에 더불어민주당 의원들이 응하지 않는 상황을 비판하며, 토론조차 할 수 없는 법안은 재고해야 한다고 주장했다.",
+          "headline_frame": "보완수사권 폐지에 대한 공개토론 회피",
+          "main_focus": "더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피 비판",
+          "primary_frame": {
+            "category": "공개토론 회피 비판",
+            "stance": "비판",
+            "target": "더불어민주당 의원들",
+            "summary": "장혜영 전 의원은 보완수사권 폐지에 대한 한동훈 의원과의 공개토론에 더불어민주당 의원들이 응하지 않는 상황을 비판하며, 토론조차 할 수 없는 법안은 재고해야 한다고 주장했다.",
+            "evidence": [
+              "보완수사권 폐지와 관련해 한동훈 의원과 토론 한번 제대로 붙을 민주당 국회의원이 없다는 것이 참 놀랍다",
+              "아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다",
+              "토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다"
+            ]
+          },
+          "keywords": [
+            "보완수사권 폐지",
+            "공개토론",
+            "더불어민주당",
+            "한동훈",
+            "법안 재고"
+          ],
+          "main_actors": [
+            "장혜영",
+            "더불어민주당 의원들",
+            "한동훈"
+          ],
+          "quoted_sources": [],
+          "causes": [],
+          "background": [],
+          "emphasized_effects": [
+            "시민들의 고통",
+            "민주당에 대한 심판"
+          ],
+          "affected_groups": [
+            "시민들"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다",
+              "토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "기사에서는 향후 전망에 대한 구체적인 언급이 없으며, 현재 상황에 대한 비판만 제시하고 있다."
+          },
+          "less_covered_context": [
+            "보완수사권 폐지의 구체적인 내용이나 법적 근거",
+            "한동훈 의원의 입장이나 구체적 주장"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-22T05:52:38.920115+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-4db9b4c91145cf51",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "보완수사권 존폐 논의와 사회적 영향",
+          "summary": "SBS는 장윤기 사건을 계기로 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하기 위한 민주당의 공청회 개최를 중립적으로 보도하며, 정책의 내용과 시장 안정 효과를 설명하는 관점을 취합니다. 동아일보는 보완수사권 폐지 관련 공개토론을 회피하는 더불어민주당을 비판하며, 이로 인한 시민들의 고통과 민주당에 대한 심판을 강조합니다. 두 언론사 모두 검찰 보완수사권의 존폐 문제를 다루지만, SBS는 정책 내용과 효과를 설명하는 중립적 관점인 반면, 동아일보는 정책 실패와 책임을 비판하는 대립적 관점을 보여 서로 다른 그룹으로 분류됩니다.",
+          "keywords": [
+            "보완수사권",
+            "장윤기 사건",
+            "민주당 공청회",
+            "공개토론 회피",
+            "시민 고통"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS는 장윤기 사건을 계기로 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하기 위한 민주당의 공청회 개최를 중립적으로 보도하며, 정책의 내용과 시장 안정 효과를 설명하는 관점을 취합니다.",
+            "동아일보는 보완수사권 폐지 관련 공개토론을 회피하는 더불어민주당을 비판하며, 이로 인한 시민들의 고통과 민주당에 대한 심판을 강조합니다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "SBS와 동아일보 모두 검찰 보완수사권의 존폐 문제를 다루지만, SBS는 장윤기 사건을 계기로 한 민주당의 공청회 개최를 중립적으로 보도하며 정책의 내용과 효과를 설명하는 관점을 취하는 반면, 동아일보는 공개토론을 회피하는 더불어민주당을 비판하며 시민들의 고통과 민주당에 대한 심판을 강조합니다. 두 언론사의 핵심 해석과 평가 방향이 서로 대립하므로 별도의 그룹으로 분류됩니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-22T05:52:43.736338+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-4db9b4c91145cf51",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 검찰 보완수사권 폐지 문제를 다루고 있으나, SBS는 민주당의 공청회 개최를 중심으로 보도한 반면, 동아일보는 장혜영 전 의원의 공개토론 회피 비판을 중심으로 보도하여 접근 방식이 상이하다.",
+        "overall_difference": "차이 큼",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 위한 전문가 공청회를 개최했다고 보도한 반면, 동아일보는 장혜영 전 의원이 더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피를 비판했다고 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 위한 전문가 공청회를 개최함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장혜영 전 의원이 더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피를 비판함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 검찰 보완수사권 폐지 여부에 대한 찬반 의견 수렴을 위한 민주당의 공청회 개최에 초점을 맞춘 반면, 동아일보는 더불어민주당 의원들의 공개토론 회피에 대한 비판을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당이 주최한 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 의견을 수렴하고 있음",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당 의원들이 보완수사권 폐지 관련 공개토론에 응하지 않는 상황을 비판함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 장윤기 사건을 검찰 보완수사권 폐지 논의의 직접적 계기로 강조한 반면, 동아일보는 장윤기 사건을 언급하지 않고 더불어민주당 의원들의 토론 회피 자체를 문제로 제기했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장윤기 사건을 검찰 보완수사권 폐지 논의의 직접적 계기로 강조함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피를 문제로 제기함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 검찰 보완수사권 폐지의 구체적 영향에 대한 언급이 없으나, 동아일보는 시민들의 고통과 민주당에 대한 심판을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "검찰 보완수사권 폐지의 구체적 영향에 대한 언급이 없음",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "토론조차 할 수 없는 법안은 시민들의 고통으로 돌아올 것이며 민주당에 대한 심판이 될 것이라고 주장함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목과 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론, 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다라는 표현을 통해 중립적으로 사실을 전달했으나, 동아일보는 아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다, 토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다라는 표현을 통해 비판적인 태도를 보였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달하며 민주당의 공청회 개최를 객관적으로 보도함",
+                "evidence": [
+                  "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+                  "장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리가 커지고 있는 가운데, 민주당이 오늘 전문가들을 모아놓고 공청회를 열었습니다."
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당 의원들의 공개토론 회피를 강하게 비판하며 시민들의 고통을 경고함",
+                "evidence": [
+                  "아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다",
+                  "토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "검찰 보완수사권 폐지 문제를 다루고 있음"
+        ],
+        "key_differences": [
+          "SBS는 민주당의 공청회 개최를 중심으로 보도한 반면, 동아일보는 장혜영 전 의원의 공개토론 회피 비판을 중심으로 보도함",
+          "SBS는 장윤기 사건을 검찰 보완수사권 폐지 논의의 직접적 계기로 강조한 반면, 동아일보는 장윤기 사건을 언급하지 않음",
+          "SBS는 중립적인 보도 태도를 보인 반면, 동아일보는 비판적인 보도 태도를 보임"
+        ],
+        "comparison_report": "SBS는 민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 위한 전문가 공청회를 개최했다고 중립적으로 보도한 반면, 동아일보는 장혜영 전 의원이 더불어민주당 의원들의 보완수사권 폐지 관련 공개토론 회피를 비판하며 시민들의 고통과 민주당에 대한 심판을 강조했다. SBS는 장윤기 사건을 검찰 보완수사권 폐지 논의의 직접적 계기로 제시한 데 비해 동아일보는 장윤기 사건을 언급하지 않고 더불어민주당 의원들의 토론 회피 자체를 문제로 제기했다. 보도 태도 측면에서 SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목과 함께 중립적으로 사실을 전달했으나, 동아일보는 '아예 입을 다물고 있는 것도 문제지만 나섰다가도 이리저리 핑계를 대며 꽁무니를 빼는 것은 정말 이해할 수 없다', '토론조차 할 수 없는 법안을 머릿수만 믿고 이토록 무책임하게 밀어붙인다면 후과는 시민들의 고통으로 돌아올 수밖에 없다'는 표현을 통해 강한 비판적 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667972",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "장혜영 “보완수사권 폐지, 한동훈과 토론도 못 하면 재고해야”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134341391/1",
+            "published_at": "Wed, 22 Jul 2026 09:00:16 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-22T05:53:03.555480+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  }
+}
