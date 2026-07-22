@@ -492,16 +492,26 @@ async function runIssueAnalysis(candidate) {
   if (summaryEl) summaryEl.textContent = "언론사별 분석과 그룹화를 진행하고 있습니다. 잠시만 기다려 주세요.";
 
   try {
-    const response = await fetch('/api/issue', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(candidate)
-    });
+    // 핫토픽 카드는 배치 시점(build_featured_issues.py)에 언론사별 분석·
+    // 그룹화·조합별 비교를 이미 다 계산해뒀을 수 있다. 그 경우 API 호출
+    // 없이 정적 데이터로 바로 렌더링하고, 없으면(검색으로 들어온 이슈 등)
+    // 기존처럼 실시간으로 계산한다.
+    let data = await resolvePrecomputedIssueData(candidate);
 
-    const data = await response.json();
+    if (!data) {
+      const response = await fetch('/api/issue', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(candidate)
+      });
 
-    if (!response.ok || !data.success) {
-      throw new Error(data.error || "이슈 분석에 실패했습니다.");
+      const fetched = await response.json();
+
+      if (!response.ok || !fetched.success) {
+        throw new Error(fetched.error || "이슈 분석에 실패했습니다.");
+      }
+
+      data = fetched;
     }
 
     const publisherAnalyses = data.publisher_analyses || [];
@@ -922,6 +932,69 @@ function makeDetailComparisonCacheKey(issueId, selectedAnalyses) {
     .join(",");
 
   return `${issueId}|${sortedPublisherIds}`;
+}
+
+// data/issue_details.json은 핫토픽 카드마다 미리 계산된 언론사별 분석·
+// 그룹화·조합별 비교를 담은 정적 파일이다(build_featured_issues.py가
+// 6시간마다 배치로 생성). 홈 화면 카드 클릭이 몰려도 이 파일 하나만
+// 읽으면 되므로 세션 안에서 한 번만 fetch해서 재사용한다.
+let issueDetailsPromise = null;
+
+function loadPrecomputedIssueDetails() {
+  if (!issueDetailsPromise) {
+    issueDetailsPromise = fetch('./data/issue_details.json')
+      .then(response => (response.ok ? response.json() : {}))
+      .catch(() => ({}));
+  }
+
+  return issueDetailsPromise;
+}
+
+// 핫토픽 카드로 들어온 이슈면 사전 계산된 데이터를 찾아 반환하고,
+// 검색으로 들어온 이슈처럼 미리 계산되지 않은 경우엔 null을 반환해
+// runIssueAnalysis가 기존 실시간 /api/issue 경로로 넘어가게 한다.
+async function resolvePrecomputedIssueData(candidate) {
+  try {
+    const details = await loadPrecomputedIssueDetails();
+    const precomputed = details[candidate.issue_id];
+
+    if (
+      !precomputed ||
+      !Array.isArray(precomputed.publisher_analyses) ||
+      precomputed.publisher_analyses.length < 2
+    ) {
+      return null;
+    }
+
+    // 조합별 비교 결과를 미리 캐시에 채워둔다. 이후 상단 "공통 내용
+    // 요약" 카드든 하단 상세 대조표든, 어떤 언론사 조합을 보든
+    // fetchComparisonData가 이 캐시를 먼저 찾아 API 호출 없이 반환한다.
+    Object.entries(precomputed.comparisons || {}).forEach(
+      ([comboKey, comparisonResult]) => {
+        const publisherIds = comboKey.split(",").filter(Boolean);
+        if (publisherIds.length < 2) return;
+
+        const cacheKey = makeDetailComparisonCacheKey(
+          candidate.issue_id,
+          publisherIds.map(publisherId => ({ publisher_id: publisherId }))
+        );
+
+        detailComparisonCache.set(cacheKey, comparisonResult);
+      }
+    );
+
+    return {
+      issue_id: candidate.issue_id,
+      issue_title: candidate.issue_title,
+      query: candidate.query,
+      publisher_analyses: precomputed.publisher_analyses,
+      publisher_grouping: precomputed.publisher_grouping || { groups: [] },
+    };
+
+  } catch (error) {
+    console.error("사전 계산된 이슈 데이터 조회 실패:", error);
+    return null;
+  }
 }
 
 // 동일한 언론사 조합에 대한 /api/compare 요청을 한 곳에서 관리한다.
