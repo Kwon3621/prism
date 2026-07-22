@@ -60,7 +60,9 @@ def build_precomputed_comparisons(
     publisher_analyses: list[dict],
 ) -> dict[str, dict]:
     """
-    가능한 모든 2~4개 언론사 조합의 비교 결과를 미리 계산한다.
+    가능한 모든 2~4개 언론사 조합의 비교 결과와, "이슈 전체 언론사"
+    조합(공통 내용 요약 카드용, app.js:renderOverallCommonSummary 참고)의
+    비교 결과를 미리 계산한다.
 
     실시간 요청에서는 방문자마다 다른 조합을 고를 수 있어 조합 전체를
     미리 계산해두면 동시 접속이 몰릴 때 Solar 호출이 조합 수만큼
@@ -68,12 +70,21 @@ def build_precomputed_comparisons(
     트래픽 압박이 없는 배치 시점(6시간마다 한 번)이라, 조합을 전부
     미리 계산해도 부담이 없다 — 방문자는 어떤 조합을 고르든 이미
     계산된 결과를 정적으로 받기만 하면 된다.
+
+    상세 대조표는 UI상 2~4개까지만 선택 가능하지만(app.js:
+    initPublisherSelector), 공통 내용 요약은 그 4개 제한과 무관하게 이슈에
+    포함된 언론사 전체를 compare.py에 보낸다. 언론사가 5~6곳이면 "전체"
+    조합이 2~4개 범위 밖이라 별도로 추가해준다.
     """
-    max_size = min(MAX_COMPARISON_SIZE, len(publisher_analyses))
+    max_combo_size = min(MAX_COMPARISON_SIZE, len(publisher_analyses))
+    sizes = set(range(MIN_COMPARISON_SIZE, max_combo_size + 1))
+
+    if len(publisher_analyses) > MAX_COMPARISON_SIZE:
+        sizes.add(len(publisher_analyses))
 
     combos_by_key = {
         ",".join(sorted(item["publisher_id"] for item in combo)): list(combo)
-        for size in range(MIN_COMPARISON_SIZE, max_size + 1)
+        for size in sizes
         for combo in itertools.combinations(publisher_analyses, size)
     }
 

@@ -61,6 +61,12 @@ ALLOWED_DIMENSIONS = {
     "보도 태도·근거",
 }
 
+# 이슈 하나에 들어올 수 있는 최대 언론사 수(issue_builder.py의
+# DEFAULT_PUBLISHER_LIMIT과 동일). 상세 대조표는 UI상 최대 4개까지만
+# 선택하게 해뒀지만(app.js:initPublisherSelector), 이슈 전체 언론사
+# 기준 "공통 내용 요약"은 4개로 자르지 않고 이 상한까지 전부 보낸다.
+MAX_PUBLISHERS = 6
+
 # evidence(판단 근거)는 "보도 태도·근거" 항목에만 붙인다 — 원래 의도가
 # "왜 그렇게 판단했는지" 근거가 필요한 건 보도 태도뿐이었는데, 한때
 # 4개 항목 모두에 evidence를 요구·표시하게 만들어서 비교 항목 전체에
@@ -215,9 +221,9 @@ def normalize_publisher_analyses(
             "비교하려면 최소 2개 언론사가 필요합니다."
         )
 
-    if len(values) > 4:
+    if len(values) > MAX_PUBLISHERS:
         raise ValueError(
-            "한 번에 최대 4개 언론사만 비교할 수 있습니다."
+            f"한 번에 최대 {MAX_PUBLISHERS}개 언론사만 비교할 수 있습니다."
         )
 
     normalized = []
@@ -1019,7 +1025,7 @@ def compare_publishers(
     use_cache: bool = True,
 ) -> dict:
     """
-    선택된 2~4개 언론사의 분석 결과를 비교한다.
+    선택된 2~MAX_PUBLISHERS개 언론사의 분석 결과를 비교한다.
     """
     normalized_analyses = (
         normalize_publisher_analyses(

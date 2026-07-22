@@ -568,7 +568,11 @@ async function runIssueAnalysis(candidate) {
 }
 
 // [1단계 보조 함수] "AI 공통 내용 요약" 카드에 이슈 묶음 전체 언론사 기준 공통 내용을 채운다.
-// /api/compare는 한 번에 최대 4개 언론사만 받으므로, 4개를 넘으면 대표로 앞 4개만 사용한다.
+// 예전엔 앞 4개 언론사만 대표로 뽑아 보냈는데, 이 "앞 4개"가 실제로는
+// 언론사별 분석(analyze_issue_batch)이 병렬로 끝나는 순서라 중요도와
+// 무관하고 호출마다 달라질 수 있었다. 이제는 이슈에 포함된 언론사
+// 전체(최대 MAX_PUBLISHERS, compare.py 참고)를 그대로 보내 전체 기준
+// 공통 내용을 반영한다.
 async function renderOverallCommonSummary(publisherAnalyses) {
   const container = document.getElementById(
     'compare-overall-common-summary'
@@ -582,7 +586,7 @@ async function renderOverallCommonSummary(publisherAnalyses) {
     return;
   }
 
-  const selectedAnalyses = publisherAnalyses.slice(0, 4);
+  const selectedAnalyses = publisherAnalyses;
 
   try {
     const data = await fetchComparisonData(
