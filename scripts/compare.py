@@ -899,6 +899,69 @@ def validate_comparison_result(
     return normalized_result
 
 
+def _generate_comparison_once(
+    client: OpenAI,
+    prompt: str,
+    issue_id: str,
+    normalized_analyses: list[dict],
+) -> dict:
+    """
+    Solar 비교를 최대 MAX_RETRIES회까지 시도해서 검증된 결과 하나를
+    만든다. (실패=예외 발생 시에만 재시도한다. "판단 어려움"처럼
+    형식은 정상이지만 내용이 애매한 경우는 여기서 재시도하지 않고
+    compare_publishers()가 별도로 판단한다.)
+    """
+    last_error = None
+
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
+        try:
+            print(
+                "[Solar 비교] "
+                f"{attempt}/{MAX_RETRIES}"
+            )
+
+            raw_result = (
+                request_solar_comparison(
+                    client=client,
+                    prompt=prompt,
+                )
+            )
+
+            return validate_comparison_result(
+                result=raw_result,
+                issue_id=issue_id,
+                publisher_analyses=(
+                    normalized_analyses
+                ),
+            )
+
+        except Exception as error:
+            last_error = error
+
+            print(
+                "[비교 실패] "
+                f"{attempt}/{MAX_RETRIES}: "
+                f"{error}"
+            )
+
+            if attempt < MAX_RETRIES:
+                time.sleep(
+                    wait_seconds_for_retry(
+                        error,
+                        attempt,
+                    )
+                )
+
+    raise RuntimeError(
+        "언론사 비교가 "
+        f"{MAX_RETRIES}회 모두 실패했습니다: "
+        f"{last_error}"
+    )
+
+
 def compare_publishers(
     client: OpenAI,
     publisher_analyses: list[dict],
@@ -943,74 +1006,60 @@ def compare_publishers(
         ),
     )
 
-    last_error = None
+    result = _generate_comparison_once(
+        client,
+        prompt,
+        issue_id,
+        normalized_analyses,
+    )
 
-    for attempt in range(
-        1,
-        MAX_RETRIES + 1,
-    ):
+    # overall_difference="판단 어려움"은 validate_comparison_result를
+    # 정상 통과한 값이라 위에서 재시도되지 않는다. 그런데 실측 결과
+    # 분석 근거가 있는데도 Solar가 무난하게 "판단 어려움"으로 얼버무리는
+    # 경우가 있어서, 이 경우에 한해 딱 한 번만 더 시도한다(실시간
+    # 요청에서도 쓰이므로 배치처럼 여러 번 반복하지 않고 1회로 제한).
+    # 재시도해도 여전히 "판단 어려움"이거나 재시도 자체가 실패하면,
+    # 정말 판단하기 어려운 조합일 가능성이 커서 첫 결과를 그대로 쓴다.
+    if result.get("overall_difference") == "판단 어려움":
+        print(
+            "[비교 재시도] overall_difference=판단 어려움 → 1회 재시도"
+        )
+
         try:
-            print(
-                "[Solar 비교] "
-                f"{attempt}/{MAX_RETRIES}"
+            retried_result = _generate_comparison_once(
+                client,
+                prompt,
+                issue_id,
+                normalized_analyses,
             )
 
-            raw_result = (
-                request_solar_comparison(
-                    client=client,
-                    prompt=prompt,
-                )
-            )
-
-            validated_result = (
-                validate_comparison_result(
-                    result=raw_result,
-                    issue_id=issue_id,
-                    publisher_analyses=(
-                        normalized_analyses
-                    ),
-                )
-            )
-
-            save_comparison(
-                issue_id=issue_id,
-                publisher_ids=publisher_ids,
-                result=validated_result,
-            )
-
-            print(
-                "[비교 완료] "
-                + ", ".join(
-                    item["publisher"]
-                    for item
-                    in normalized_analyses
-                )
-            )
-
-            return validated_result
+            if (
+                retried_result.get("overall_difference")
+                != "판단 어려움"
+            ):
+                result = retried_result
 
         except Exception as error:
-            last_error = error
-
             print(
-                "[비교 실패] "
-                f"{attempt}/{MAX_RETRIES}: "
-                f"{error}"
+                f"[비교 재시도 실패] {error}"
             )
 
-            if attempt < MAX_RETRIES:
-                time.sleep(
-                    wait_seconds_for_retry(
-                        error,
-                        attempt,
-                    )
-                )
-
-    raise RuntimeError(
-        "언론사 비교가 "
-        f"{MAX_RETRIES}회 모두 실패했습니다: "
-        f"{last_error}"
+    save_comparison(
+        issue_id=issue_id,
+        publisher_ids=publisher_ids,
+        result=result,
     )
+
+    print(
+        "[비교 완료] "
+        + ", ".join(
+            item["publisher"]
+            for item
+            in normalized_analyses
+        )
+    )
+
+    return result
 
 
 def analyze_input_data(
