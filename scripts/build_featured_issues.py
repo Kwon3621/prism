@@ -34,7 +34,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from analysis import analyze_issue_batch, create_client
+from analysis import analyze_issue_batch, create_client, group_publishers
 from compare import compare_publishers
 from issue_builder import build_candidate_from_keyword, extract_query_keywords
 
@@ -53,6 +53,51 @@ MAX_COMPARISON_SIZE = 4
 # 방식으로 동시에 호출하되 Upstage 쪽에 한 번에 너무 몰리지 않도록
 # 동시 실행 수는 제한한다.
 MAX_COMPARISON_WORKERS = 8
+
+# compare_publishers()는 내부적으로 이미 3회 재시도하지만, 그래도 실패하면
+# 그 조합은 정적 파일에서 빠지고 방문 시 실시간 계산으로 샌다. 배치는
+# 트래픽 압박이 없는 시점이라 통째로 몇 번 더 재시도해서 최대한 모든
+# 조합을 정적 데이터로 남긴다.
+MAX_COMBO_RETRY_ATTEMPTS = 3
+
+# Publisher Grouping이 언론사를 누락시키면(Solar 응답 누락) analysis.py가
+# "개별 분류 (그룹화 보류)"로 복구하는데, 실시간 요청은 응답성을 위해
+# 그 결과를 그대로 쓴다. 배치는 여유가 있으니 그룹화 보류가 없는 깨끗한
+# 결과가 나올 때까지 몇 번 더 시도해본다.
+MAX_GROUPING_RETRIES = 5
+
+
+def _compare_combo_with_retries(
+    client,
+    combo: list[dict],
+) -> dict:
+    """
+    compare_publishers()가 내부 3회 재시도까지 다 실패해도, 배치
+    시점이라 부담 없이 통째로 몇 번 더 시도해서 최대한 정적 데이터로
+    남긴다. 마지막 시도까지 실패하면 그 에러를 그대로 올려서 호출부가
+    이 조합만 결과에서 빼도록 한다.
+    """
+    last_error: Exception | None = None
+
+    for attempt in range(1, MAX_COMBO_RETRY_ATTEMPTS + 1):
+        try:
+            return compare_publishers(
+                client=client,
+                publisher_analyses=combo,
+            )
+        except Exception as error:
+            last_error = error
+
+            combo_key = ",".join(
+                sorted(item["publisher_id"] for item in combo)
+            )
+
+            print(
+                f"    [조합 비교 재시도] {combo_key} "
+                f"{attempt}/{MAX_COMBO_RETRY_ATTEMPTS}: {error}"
+            )
+
+    raise last_error
 
 
 def build_precomputed_comparisons(
@@ -95,9 +140,9 @@ def build_precomputed_comparisons(
     ) as executor:
         future_to_key = {
             executor.submit(
-                compare_publishers,
-                client=client,
-                publisher_analyses=combo,
+                _compare_combo_with_retries,
+                client,
+                combo,
             ): combo_key
             for combo_key, combo in combos_by_key.items()
         }
@@ -111,6 +156,73 @@ def build_precomputed_comparisons(
                 print(f"    [조합 비교 실패] {combo_key}: {error}")
 
     return comparisons
+
+
+def _count_pending_groups(grouping_result: dict) -> int:
+    """
+    Publisher Grouping이 언론사를 누락시켜 코드가 복구한 "그룹화 보류"
+    항목이 몇 개나 섞여 있는지 센다. 복구된 그룹은 analysis.py:
+    validate_grouping_result에서 group_id를 "group-ungrouped-"로 붙인다.
+    """
+    return sum(
+        1
+        for group in grouping_result.get("groups", [])
+        if str(group.get("group_id", "")).startswith("group-ungrouped-")
+    )
+
+
+def build_complete_grouping(
+    client,
+    publisher_analyses: list[dict],
+) -> dict:
+    """
+    그룹화 보류 없는 Publisher Grouping 결과가 나올 때까지 재시도한다.
+
+    실시간 요청은 응답성을 위해 Solar가 언론사를 누락시키면 그 자리를
+    "개별 분류(그룹화 보류)"로 즉시 복구하고 넘어가지만(analysis.py:
+    group_publishers), 배치는 트래픽 압박이 없으니 깨끗한 결과가 나올
+    때까지 통째로 다시 시도해볼 여유가 있다. 매번 완전히 새로 Solar를
+    부르므로(캐시 없음) 시도할 때마다 다른 결과가 나올 수 있다.
+    끝까지 깨끗한 결과가 안 나오면, 시도한 것들 중 그룹화 보류가 가장
+    적었던 결과를 쓴다.
+    """
+    best_result = None
+    best_pending_count = None
+
+    for attempt in range(1, MAX_GROUPING_RETRIES + 1):
+        try:
+            result = group_publishers(
+                client=client,
+                publisher_analyses=publisher_analyses,
+            )
+        except Exception as error:
+            print(
+                f"    [그룹화 재시도] {attempt}/{MAX_GROUPING_RETRIES} "
+                f"호출 실패: {error}"
+            )
+            continue
+
+        pending_count = _count_pending_groups(result)
+
+        if pending_count == 0:
+            return result
+
+        if best_pending_count is None or pending_count < best_pending_count:
+            best_result = result
+            best_pending_count = pending_count
+
+        print(
+            f"    [그룹화 재시도] {attempt}/{MAX_GROUPING_RETRIES}: "
+            f"그룹화 보류 {pending_count}건 발생, 다시 시도"
+        )
+
+    print(
+        f"    [그룹화] {MAX_GROUPING_RETRIES}회 시도해도 그룹화 보류가 "
+        f"남아 있어 그중 가장 적은(그룹화 보류 {best_pending_count}건) "
+        "결과를 사용합니다."
+    )
+
+    return best_result
 
 
 def build_featured_issues() -> dict:
@@ -179,11 +291,31 @@ def build_featured_issues() -> dict:
                 if len(publisher_analyses) < 2:
                     continue
 
+                publisher_grouping = analysis_result[
+                    "publisher_grouping"
+                ]
+
+                # analyze_issue_batch가 내부적으로 이미 한 번 그룹화를
+                # 했는데, 언론사가 누락돼 "그룹화 보류"로 복구된 상태라면
+                # 정적 데이터에 그대로 남기지 않고 깨끗한 결과가 나올
+                # 때까지 몇 번 더 시도해본다.
+                if _count_pending_groups(publisher_grouping) > 0:
+                    print(
+                        "    [그룹화] 그룹화 보류 발생, 재시도: "
+                        f"{candidate['issue_title']}"
+                    )
+
+                    retried_grouping = build_complete_grouping(
+                        client,
+                        publisher_analyses,
+                    )
+
+                    if retried_grouping is not None:
+                        publisher_grouping = retried_grouping
+
                 issue_details[issue_id] = {
                     "publisher_analyses": publisher_analyses,
-                    "publisher_grouping": analysis_result[
-                        "publisher_grouping"
-                    ],
+                    "publisher_grouping": publisher_grouping,
                     "comparisons": build_precomputed_comparisons(
                         client,
                         publisher_analyses,
