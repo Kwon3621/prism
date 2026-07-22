@@ -555,6 +555,11 @@ async function runIssueAnalysis(candidate) {
       }
 
       data = fetched;
+
+      // 백엔드가 그룹화와 동시에 계산해둔 기본 비교 조합(전체/앞 4개,
+      // analyze_issue_with_default_comparisons)을 캐시에 미리 채워서,
+      // 공통 요약/상세 대조표가 별도 /api/compare 호출 없이 바로 뜨게 한다.
+      populateComparisonCache(data.issue_id, data.default_comparisons);
     }
 
     const publisherAnalyses = data.publisher_analyses || [];
@@ -1008,6 +1013,29 @@ function loadPrecomputedIssueDetails() {
   return issueDetailsPromise;
 }
 
+// comparisonsByKey(콤마로 이은 정렬된 publisher_id 문자열 -> 비교 결과)를
+// detailComparisonCache에 미리 채워둔다. 핫토픽 정적 데이터
+// (resolvePrecomputedIssueData)와 실시간 /api/issue 응답의
+// default_comparisons(analyze_issue_with_default_comparisons, 그룹화와
+// 동시에 계산됨) 둘 다 같은 형태라 이 함수 하나로 채운다. 이후 상단
+// "공통 내용 요약" 카드든 하단 상세 대조표든, fetchComparisonData가 이
+// 캐시를 먼저 찾아 API 호출 없이 반환한다.
+function populateComparisonCache(issueId, comparisonsByKey) {
+  Object.entries(comparisonsByKey || {}).forEach(
+    ([comboKey, comparisonResult]) => {
+      const publisherIds = comboKey.split(",").filter(Boolean);
+      if (publisherIds.length < 2) return;
+
+      const cacheKey = makeDetailComparisonCacheKey(
+        issueId,
+        publisherIds.map(publisherId => ({ publisher_id: publisherId }))
+      );
+
+      detailComparisonCache.set(cacheKey, comparisonResult);
+    }
+  );
+}
+
 // 핫토픽 카드로 들어온 이슈면 사전 계산된 데이터를 찾아 반환하고,
 // 검색으로 들어온 이슈처럼 미리 계산되지 않은 경우엔 null을 반환해
 // runIssueAnalysis가 기존 실시간 /api/issue 경로로 넘어가게 한다.
@@ -1024,22 +1052,7 @@ async function resolvePrecomputedIssueData(candidate) {
       return null;
     }
 
-    // 조합별 비교 결과를 미리 캐시에 채워둔다. 이후 상단 "공통 내용
-    // 요약" 카드든 하단 상세 대조표든, 어떤 언론사 조합을 보든
-    // fetchComparisonData가 이 캐시를 먼저 찾아 API 호출 없이 반환한다.
-    Object.entries(precomputed.comparisons || {}).forEach(
-      ([comboKey, comparisonResult]) => {
-        const publisherIds = comboKey.split(",").filter(Boolean);
-        if (publisherIds.length < 2) return;
-
-        const cacheKey = makeDetailComparisonCacheKey(
-          candidate.issue_id,
-          publisherIds.map(publisherId => ({ publisher_id: publisherId }))
-        );
-
-        detailComparisonCache.set(cacheKey, comparisonResult);
-      }
-    );
+    populateComparisonCache(candidate.issue_id, precomputed.comparisons);
 
     return {
       issue_id: candidate.issue_id,

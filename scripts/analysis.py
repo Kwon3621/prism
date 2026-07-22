@@ -1526,14 +1526,18 @@ def group_publishers(
         f"{last_error}"
     )
 
-def analyze_issue_batch(
+def analyze_publishers_only(
     input_data: dict,
     use_cache: bool = True,
 ) -> dict:
     """
-    B팀이 전달한 이슈별 publishers 배열을 순회하며
-    각 언론사를 독립적으로 분석하고,
-    완료된 결과로 Publisher Grouping을 실행한다.
+    이슈별 publishers 배열을 순회하며 각 언론사를 독립적으로 분석한다.
+
+    Publisher Grouping은 포함하지 않는다 — analyze_issue_batch()가 이
+    결과에 이어서 그룹화를 실행한다. api/index.py가 "언론사별 분석이
+    끝나는 즉시 그룹화와 기본 비교 조합을 동시에 시작"하고 싶을 때
+    (그룹화와 비교는 서로 결과가 필요 없고 둘 다 이 분석 결과만
+    있으면 되므로) 이 함수만 따로 불러 쓸 수 있도록 분리했다.
     """
     issue_id = clean_string(
         input_data.get("issue_id")
@@ -1719,13 +1723,6 @@ def analyze_issue_batch(
             "Publisher Grouping을 실행할 수 없습니다."
         )
 
-    grouping_result = group_publishers(
-        client=client,
-        publisher_analyses=(
-            publisher_analyses
-        ),
-    )
-
     return {
         "issue_id": issue_id,
         "issue_title": issue_title,
@@ -1739,9 +1736,6 @@ def analyze_issue_batch(
         "publisher_analyses": (
             publisher_analyses
         ),
-        "publisher_grouping": (
-            grouping_result
-        ),
         "failed_publishers": (
             failed_publishers
         ),
@@ -1750,11 +1744,42 @@ def analyze_issue_batch(
             if failed_publishers
             else "success"
         ),
+    }
+
+
+def analyze_issue_batch(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    B팀이 전달한 이슈별 publishers 배열을 순회하며
+    각 언론사를 독립적으로 분석하고,
+    완료된 결과로 Publisher Grouping을 실행한다.
+
+    analyze_publishers_only() + group_publishers()를 그대로 이어붙인
+    래퍼다 — 배치 스크립트(build_featured_issues.py)처럼 "언론사별
+    분석과 그룹화가 둘 다 필요하고, 겹쳐 실행할 실시간 지연시간 이점이
+    없는" 호출부는 이 함수를 그대로 쓰면 된다.
+    """
+    analysis_result = analyze_publishers_only(
+        input_data,
+        use_cache=use_cache,
+    )
+
+    grouping_result = group_publishers(
+        client=create_client(),
+        publisher_analyses=analysis_result["publisher_analyses"],
+    )
+
+    return {
+        **analysis_result,
+        "publisher_grouping": grouping_result,
         "processed_at": datetime.now(
             timezone.utc
         ).isoformat(),
     }
-    
+
+
 def parse_arguments() -> argparse.Namespace:
     """
     명령행 실행 옵션을 정의한다.
