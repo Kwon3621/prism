@@ -560,32 +560,37 @@ async function runIssueAnalysis(candidate) {
 // [1단계 보조 함수] "AI 공통 내용 요약" 카드에 이슈 묶음 전체 언론사 기준 공통 내용을 채운다.
 // /api/compare는 한 번에 최대 4개 언론사만 받으므로, 4개를 넘으면 대표로 앞 4개만 사용한다.
 async function renderOverallCommonSummary(publisherAnalyses) {
-  const container = document.getElementById('compare-overall-common-summary');
+  const container = document.getElementById(
+    'compare-overall-common-summary'
+  );
+
   if (!container) return;
 
   if (publisherAnalyses.length < 2) {
-    container.textContent = "공통 내용을 분석할 언론사가 부족합니다.";
+    container.textContent =
+      "공통 내용을 분석할 언론사가 부족합니다.";
     return;
   }
 
+  const selectedAnalyses = publisherAnalyses.slice(0, 4);
+
   try {
-    const response = await fetch('/api/compare', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ publisher_analyses: publisherAnalyses.slice(0, 4) })
-    });
+    const data = await fetchComparisonData(
+      selectedAnalyses
+    );
 
-    const data = await response.json();
-
-    if (!response.ok || !data.success) {
-      throw new Error(data.error || "공통 내용 분석에 실패했습니다.");
-    }
-
-    container.textContent = data.common_summary || "공통 내용을 찾지 못했습니다.";
+    container.textContent =
+      data.common_summary ||
+      "공통 내용을 찾지 못했습니다.";
 
   } catch (error) {
-    console.error("전체 공통 내용 렌더링 실패:", error);
-    container.textContent = "공통 내용을 불러오지 못했습니다.";
+    console.error(
+      "전체 공통 내용 렌더링 실패:",
+      error
+    );
+
+    container.textContent =
+      "공통 내용을 불러오지 못했습니다.";
   }
 }
 
@@ -903,7 +908,12 @@ function initPublisherSelector(publisherAnalyses) {
 // 프론트는 매번 "비교 분석 중입니다..." placeholder를 띄운 뒤 새로
 // fetch하는 구조라, 서버가 즉시 응답해도 화면에는 짧게라도 로딩이
 // 깜빡였다. 이미 본 조합은 요청 자체 없이 바로 렌더링한다.
+// 언론사 조합별 완료된 비교 결과를 저장한다.
 const detailComparisonCache = new Map();
+
+// 같은 조합의 요청이 이미 진행 중이면 새 요청을 만들지 않고
+// 기존 Promise를 공유한다.
+const detailComparisonPromiseCache = new Map();
 
 function makeDetailComparisonCacheKey(issueId, selectedAnalyses) {
   const sortedPublisherIds = selectedAnalyses
@@ -912,6 +922,74 @@ function makeDetailComparisonCacheKey(issueId, selectedAnalyses) {
     .join(",");
 
   return `${issueId}|${sortedPublisherIds}`;
+}
+
+// 동일한 언론사 조합에 대한 /api/compare 요청을 한 곳에서 관리한다.
+// 완료된 결과가 있으면 즉시 반환하고,
+// 요청이 진행 중이면 같은 Promise를 반환해 Solar 중복 호출을 막는다.
+async function fetchComparisonData(selectedAnalyses) {
+  if (!Array.isArray(selectedAnalyses) || selectedAnalyses.length < 2) {
+    throw new Error("비교할 언론사가 2개 이상 필요합니다.");
+  }
+
+  const issueId = selectedAnalyses[0].issue_id;
+  const cacheKey = makeDetailComparisonCacheKey(
+    issueId,
+    selectedAnalyses
+  );
+
+  const cachedResult = detailComparisonCache.get(cacheKey);
+
+  if (cachedResult) {
+    return cachedResult;
+  }
+
+  const pendingPromise = detailComparisonPromiseCache.get(cacheKey);
+
+  if (pendingPromise) {
+    return pendingPromise;
+  }
+
+  const requestPromise = (async () => {
+    try {
+      const response = await fetch('/api/compare', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          publisher_analyses: selectedAnalyses
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(
+          data.error || "비교 분석에 실패했습니다."
+        );
+      }
+
+      detailComparisonCache.set(
+        cacheKey,
+        data
+      );
+
+      return data;
+
+    } finally {
+      detailComparisonPromiseCache.delete(
+        cacheKey
+      );
+    }
+  })();
+
+  detailComparisonPromiseCache.set(
+    cacheKey,
+    requestPromise
+  );
+
+  return requestPromise;
 }
 
 // [3단계 함수] 선택된 언론사 조합으로 /api/compare 호출 후 4대 항목 + 발행시각 테이블 렌더링
@@ -956,20 +1034,14 @@ async function renderDetailComparison(publisherAnalyses, selectedSet) {
   `;
 
   try {
-    const response = await fetch('/api/compare', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ publisher_analyses: selectedAnalyses })
-    });
+    const data = await fetchComparisonData(
+      selectedAnalyses
+    );
 
-    const data = await response.json();
-
-    if (!response.ok || !data.success) {
-      throw new Error(data.error || "비교 분석에 실패했습니다.");
-    }
-
-    detailComparisonCache.set(cacheKey, data);
-    renderDetailComparisonTable(tableContainer, data);
+    renderDetailComparisonTable(
+      tableContainer,
+      data
+    );
 
   } catch (error) {
     // 백엔드가 3회 재시도 후에도 실패하면 "3회 모두 실패했습니다: ..." 같은
