@@ -1,7 +1,12 @@
+import hashlib
+import uuid
+import requests
 import argparse
 import json
 import os
+import threading
 import time
+
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -27,6 +32,310 @@ DEFAULT_INPUT_PATH = Path(
 DEFAULT_OUTPUT_PATH = Path(
     "data/publisher_analyses.json"
 )
+UPSTASH_REDIS_REST_URL = os.getenv(
+    "UPSTASH_REDIS_REST_URL",
+    "",
+).rstrip("/")
+
+UPSTASH_REDIS_REST_TOKEN = os.getenv(
+    "UPSTASH_REDIS_REST_TOKEN",
+    "",
+)
+
+DISTRIBUTED_LOCK_TTL_SECONDS = 300
+DISTRIBUTED_RESULT_TTL_SECONDS = 21600
+DISTRIBUTED_WAIT_TIMEOUT_SECONDS = 310
+DISTRIBUTED_POLL_INTERVAL_SECONDS = 1
+def is_distributed_single_flight_enabled() -> bool:
+    """
+    Upstash Redis 환경변수가 모두 설정되어 있는지 확인한다.
+    """
+    return bool(
+        UPSTASH_REDIS_REST_URL
+        and UPSTASH_REDIS_REST_TOKEN
+    )
+
+
+def execute_redis_command(
+    *command_parts: Any,
+) -> Any:
+    """
+    Upstash REST API를 통해 Redis 명령 하나를 실행한다.
+    """
+    if not is_distributed_single_flight_enabled():
+        raise RuntimeError(
+            "Upstash Redis 환경변수가 설정되지 않았습니다."
+        )
+
+    response = requests.post(
+        UPSTASH_REDIS_REST_URL,
+        headers={
+            "Authorization": (
+                f"Bearer {UPSTASH_REDIS_REST_TOKEN}"
+            ),
+            "Content-Type": "application/json",
+        },
+        json=list(command_parts),
+        timeout=10,
+    )
+
+    response.raise_for_status()
+
+    response_data = response.json()
+
+    if not isinstance(response_data, dict):
+        raise RuntimeError(
+            "Upstash Redis 응답 형식이 올바르지 않습니다."
+        )
+
+    redis_error = response_data.get("error")
+
+    if redis_error:
+        raise RuntimeError(
+            f"Upstash Redis 명령 실패: {redis_error}"
+        )
+
+    return response_data.get("result")
+
+def build_distributed_single_flight_keys(
+    single_flight_key: str,
+) -> tuple[str, str]:
+    """
+    긴 요청 키를 SHA-256 해시로 변환해
+    Redis lock 키와 결과 키를 만든다.
+    """
+    key_hash = hashlib.sha256(
+        single_flight_key.encode("utf-8")
+    ).hexdigest()
+
+    lock_key = (
+        f"prism:singleflight:lock:{key_hash}"
+    )
+    result_key = (
+        f"prism:singleflight:result:{key_hash}"
+    )
+
+    return lock_key, result_key
+def try_acquire_distributed_lock(
+    lock_key: str,
+    owner_token: str,
+) -> bool:
+    """
+    Redis에 lock이 없을 때만 새 lock을 만든다.
+    """
+    result = execute_redis_command(
+        "SET",
+        lock_key,
+        owner_token,
+        "NX",
+        "EX",
+        DISTRIBUTED_LOCK_TTL_SECONDS,
+    )
+
+    return result == "OK"
+_SINGLE_FLIGHT_LOCK = threading.Lock()
+_SINGLE_FLIGHT_JOBS: dict[str, dict[str, Any]] = {}
+
+def get_distributed_result(
+    result_key: str,
+) -> dict | None:
+    """
+    Redis에 저장된 완료 결과를 읽는다.
+    결과가 없으면 None을 반환한다.
+    """
+    stored_result = execute_redis_command(
+        "GET",
+        result_key,
+    )
+
+    if stored_result is None:
+        return None
+
+    if not isinstance(stored_result, str):
+        raise RuntimeError(
+            "Redis에 저장된 분석 결과 형식이 올바르지 않습니다."
+        )
+
+    parsed_result = json.loads(
+        stored_result
+    )
+
+    if not isinstance(parsed_result, dict):
+        raise RuntimeError(
+            "Redis 분석 결과가 객체 형식이 아닙니다."
+        )
+
+    return parsed_result
+def save_distributed_result(
+    result_key: str,
+    result: dict,
+) -> None:
+    """
+    완료된 분석 결과를 Redis에 TTL과 함께 저장한다.
+    """
+    serialized_result = json.dumps(
+        result,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
+
+    execute_redis_command(
+        "SET",
+        result_key,
+        serialized_result,
+        "EX",
+        DISTRIBUTED_RESULT_TTL_SECONDS,
+    )
+def release_distributed_lock(
+    lock_key: str,
+    owner_token: str,
+) -> None:
+    """
+    현재 요청이 소유한 lock일 때만 안전하게 삭제한다.
+    """
+    release_script = """
+    if redis.call("GET", KEYS[1]) == ARGV[1] then
+        return redis.call("DEL", KEYS[1])
+    end
+    return 0
+    """
+
+    execute_redis_command(
+        "EVAL",
+        release_script,
+        1,
+        lock_key,
+        owner_token,
+    )
+def wait_for_distributed_result(
+    lock_key: str,
+    result_key: str,
+) -> dict | None:
+    """
+    다른 인스턴스의 분석 완료 결과를 기다린다.
+
+    결과가 저장되면 반환한다.
+    lock이 사라졌는데 결과가 없으면 None을 반환해
+    현재 요청이 다시 lock 획득을 시도하게 한다.
+    """
+    deadline = (
+        time.monotonic()
+        + DISTRIBUTED_WAIT_TIMEOUT_SECONDS
+    )
+
+    while time.monotonic() < deadline:
+        shared_result = get_distributed_result(
+            result_key
+        )
+
+        if shared_result is not None:
+            return shared_result
+
+        current_lock = execute_redis_command(
+            "GET",
+            lock_key,
+        )
+
+        if current_lock is None:
+            return None
+
+        time.sleep(
+            DISTRIBUTED_POLL_INTERVAL_SECONDS
+        )
+
+    raise TimeoutError(
+        "동일 분석의 선행 작업 완료를 "
+        "기다리는 시간이 초과되었습니다."
+    )
+
+def build_issue_single_flight_key(
+    input_data: dict,
+) -> str:
+    """
+    같은 이슈·같은 언론사·같은 기사 구성인지 판단할 키를 만든다.
+    """
+    publishers = input_data.get(
+        "publishers",
+        [],
+    )
+
+    normalized_publishers = []
+
+    if isinstance(publishers, list):
+        for publisher_item in publishers:
+            if not isinstance(
+                publisher_item,
+                dict,
+            ):
+                continue
+
+            articles = publisher_item.get(
+                "articles",
+                [],
+            )
+
+            normalized_articles = []
+
+            if isinstance(articles, list):
+                for article in articles:
+                    if not isinstance(
+                        article,
+                        dict,
+                    ):
+                        continue
+
+                    normalized_articles.append(
+                        {
+                            "article_id": clean_string(
+                                article.get(
+                                    "article_id"
+                                )
+                            ),
+                            "updated_at": clean_string(
+                                article.get(
+                                    "updated_at"
+                                )
+                            ),
+                        }
+                    )
+
+            normalized_articles.sort(
+                key=lambda article: (
+                    article["article_id"],
+                    article["updated_at"],
+                )
+            )
+
+            normalized_publishers.append(
+                {
+                    "publisher_id": clean_string(
+                        publisher_item.get(
+                            "publisher_id"
+                        )
+                    ),
+                    "articles": normalized_articles,
+                }
+            )
+
+    normalized_publishers.sort(
+        key=lambda publisher: (
+            publisher["publisher_id"]
+        )
+    )
+
+    return json.dumps(
+        {
+            "issue_id": clean_string(
+                input_data.get(
+                    "issue_id"
+                )
+            ),
+            "publishers": normalized_publishers,
+        },
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
 
 
 def load_json(path: Path) -> dict:
@@ -1631,7 +1940,7 @@ def group_publishers(
         f"{last_error}"
     )
 
-def analyze_issue_batch(
+def _analyze_issue_batch_impl(
     input_data: dict,
     use_cache: bool = True,
 ) -> dict:
@@ -1860,6 +2169,275 @@ def analyze_issue_batch(
         ).isoformat(),
     }
     
+
+def analyze_issue_batch(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    동일한 이슈 분석 요청을 하나의 실행 작업으로 병합한다.
+
+    1. 같은 Python 프로세스에서는 threading 기반으로 병합한다.
+    2. 서로 다른 Vercel 인스턴스에서는 Upstash Redis로 병합한다.
+    3. 반환값은 기존 _analyze_issue_batch_impl()의 dict를 그대로 사용한다.
+    """
+    single_flight_key = (
+        build_issue_single_flight_key(
+            input_data
+        )
+    )
+
+    with _SINGLE_FLIGHT_LOCK:
+        current_job = (
+            _SINGLE_FLIGHT_JOBS.get(
+                single_flight_key
+            )
+        )
+
+        if current_job is None:
+            current_job = {
+                "event": threading.Event(),
+                "result": None,
+                "error": None,
+            }
+
+            _SINGLE_FLIGHT_JOBS[
+                single_flight_key
+            ] = current_job
+
+            is_local_owner = True
+        else:
+            is_local_owner = False
+
+    if not is_local_owner:
+        print(
+            "[요청 병합] 같은 인스턴스의 "
+            "선행 분석 완료 대기"
+        )
+
+        current_job["event"].wait()
+
+        if current_job["error"] is not None:
+            raise RuntimeError(
+                "동일 이슈 분석의 선행 작업이 "
+                "실패했습니다."
+            ) from current_job["error"]
+
+        shared_result = current_job[
+            "result"
+        ]
+
+        if not isinstance(
+            shared_result,
+            dict,
+        ):
+            raise RuntimeError(
+                "동일 이슈 분석의 공유 결과가 "
+                "없습니다."
+            )
+
+        print(
+            "[요청 병합] 같은 인스턴스의 "
+            "완료 결과 재사용"
+        )
+
+        return shared_result
+
+    try:
+        if not is_distributed_single_flight_enabled():
+            result = _analyze_issue_batch_impl(
+                input_data=input_data,
+                use_cache=use_cache,
+            )
+
+            current_job["result"] = result
+            return result
+
+        lock_key, result_key = (
+            build_distributed_single_flight_keys(
+                single_flight_key
+            )
+        )
+
+        owner_token = uuid.uuid4().hex
+
+        redis_errors = (
+            requests.RequestException,
+            json.JSONDecodeError,
+            RuntimeError,
+            ValueError,
+        )
+
+        if not use_cache:
+            try:
+                execute_redis_command(
+                    "DEL",
+                    result_key,
+                )
+            except redis_errors as redis_error:
+                print(
+                    "[분산 요청 병합] 기존 결과 삭제 실패: "
+                    f"{redis_error}"
+                )
+
+        if use_cache:
+            try:
+                existing_result = (
+                    get_distributed_result(
+                        result_key
+                    )
+                )
+            except redis_errors as redis_error:
+                print(
+                    "[분산 요청 병합] Redis 결과 조회 실패, "
+                    "기존 분석 방식으로 진행: "
+                    f"{redis_error}"
+                )
+
+                result = _analyze_issue_batch_impl(
+                    input_data=input_data,
+                    use_cache=use_cache,
+                )
+
+                current_job["result"] = result
+                return result
+
+            if existing_result is not None:
+                print(
+                    "[분산 요청 병합] Redis 완료 결과 재사용"
+                )
+
+                current_job[
+                    "result"
+                ] = existing_result
+
+                return existing_result
+
+        while True:
+            try:
+                is_distributed_owner = (
+                    try_acquire_distributed_lock(
+                        lock_key=lock_key,
+                        owner_token=owner_token,
+                    )
+                )
+            except redis_errors as redis_error:
+                print(
+                    "[분산 요청 병합] Redis lock 획득 실패, "
+                    "기존 분석 방식으로 진행: "
+                    f"{redis_error}"
+                )
+
+                result = _analyze_issue_batch_impl(
+                    input_data=input_data,
+                    use_cache=use_cache,
+                )
+
+                current_job["result"] = result
+                return result
+
+            if is_distributed_owner:
+                print(
+                    "[분산 요청 병합] 분산 lock 획득, "
+                    "분석 시작"
+                )
+
+                try:
+                    result = _analyze_issue_batch_impl(
+                        input_data=input_data,
+                        use_cache=use_cache,
+                    )
+
+                    try:
+                        save_distributed_result(
+                            result_key=result_key,
+                            result=result,
+                        )
+                    except redis_errors as redis_error:
+                        print(
+                            "[분산 요청 병합] 결과 저장 실패: "
+                            f"{redis_error}"
+                        )
+
+                    current_job["result"] = result
+                    return result
+
+                finally:
+                    try:
+                        release_distributed_lock(
+                            lock_key=lock_key,
+                            owner_token=owner_token,
+                        )
+                    except redis_errors as redis_error:
+                        print(
+                            "[분산 요청 병합] lock 해제 실패: "
+                            f"{redis_error}"
+                        )
+
+            print(
+                "[분산 요청 병합] 다른 인스턴스의 "
+                "선행 분석 완료 대기"
+            )
+
+            try:
+                shared_result = (
+                    wait_for_distributed_result(
+                        lock_key=lock_key,
+                        result_key=result_key,
+                    )
+                )
+            except TimeoutError:
+                print(
+                    "[분산 요청 병합] 대기 시간 초과, "
+                    "lock 재획득 시도"
+                )
+                continue
+            except redis_errors as redis_error:
+                print(
+                    "[분산 요청 병합] Redis 대기 실패, "
+                    "기존 분석 방식으로 진행: "
+                    f"{redis_error}"
+                )
+
+                result = _analyze_issue_batch_impl(
+                    input_data=input_data,
+                    use_cache=use_cache,
+                )
+
+                current_job["result"] = result
+                return result
+
+            if shared_result is not None:
+                print(
+                    "[분산 요청 병합] 다른 인스턴스의 "
+                    "완료 결과 재사용"
+                )
+
+                current_job[
+                    "result"
+                ] = shared_result
+
+                return shared_result
+
+            print(
+                "[분산 요청 병합] 선행 작업 결과 없음, "
+                "lock 재획득 시도"
+            )
+
+    except Exception as error:
+        current_job["error"] = error
+        raise
+
+    finally:
+        current_job["event"].set()
+
+        with _SINGLE_FLIGHT_LOCK:
+            _SINGLE_FLIGHT_JOBS.pop(
+                single_flight_key,
+                None,
+            )
+
+
 def parse_arguments() -> argparse.Namespace:
     """
     명령행 실행 옵션을 정의한다.
