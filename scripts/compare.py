@@ -7,6 +7,8 @@
 
 import argparse
 import json
+import os
+import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -63,6 +65,35 @@ ALLOWED_DIFFERENCE_LEVELS = {
     "유사함",
     "판단 어려움",
 }
+
+
+# 같은 Vercel 인스턴스 안에서 동일 비교 요청이 동시에 들어오면
+# 첫 번째 요청만 Solar 비교를 실행하고, 나머지 요청은 그 결과를 기다린다.
+# 여러 Vercel 인스턴스 사이의 중복 실행까지 막으려면 이후 Upstash 기반
+# 분산 락으로 확장해야 한다.
+_SINGLE_FLIGHT_LOCK = threading.Lock()
+_SINGLE_FLIGHT_JOBS: dict[str, dict[str, Any]] = {}
+
+
+def build_single_flight_key(
+    issue_id: str,
+    publisher_ids: list[str],
+) -> str:
+    """
+    언론사 순서가 달라도 같은 비교 요청으로 인식할 키를 만든다.
+    """
+    normalized_publishers = sorted(
+        set(publisher_ids)
+    )
+
+    return json.dumps(
+        {
+            "issue_id": issue_id,
+            "publisher_ids": normalized_publishers,
+        },
+        ensure_ascii=False,
+        sort_keys=True,
+    )
 
 
 def load_json(path: Path) -> dict:
@@ -984,6 +1015,9 @@ def compare_publishers(
 ) -> dict:
     """
     선택된 2~MAX_PUBLISHERS개 언론사의 분석 결과를 비교한다.
+
+    같은 프로세스에서 동일한 이슈와 언론사 조합이 동시에 요청되면
+    첫 번째 요청만 Solar를 호출하고, 나머지는 그 결과를 공유한다.
     """
     normalized_analyses = (
         normalize_publisher_analyses(
@@ -1014,68 +1048,142 @@ def compare_publishers(
 
             return cached_result
 
-    prompt = build_comparison_prompt(
-        issue_id=issue_id,
-        publisher_analyses=(
-            normalized_analyses
-        ),
-    )
-
-    result = _generate_comparison_once(
-        client,
-        prompt,
-        issue_id,
-        normalized_analyses,
-    )
-
-    # overall_difference="판단 어려움"은 validate_comparison_result를
-    # 정상 통과한 값이라 위에서 재시도되지 않는다. 그런데 실측 결과
-    # 분석 근거가 있는데도 Solar가 무난하게 "판단 어려움"으로 얼버무리는
-    # 경우가 있어서, 이 경우에 한해 딱 한 번만 더 시도한다(실시간
-    # 요청에서도 쓰이므로 배치처럼 여러 번 반복하지 않고 1회로 제한).
-    # 재시도해도 여전히 "판단 어려움"이거나 재시도 자체가 실패하면,
-    # 정말 판단하기 어려운 조합일 가능성이 커서 첫 결과를 그대로 쓴다.
-    if result.get("overall_difference") == "판단 어려움":
-        print(
-            "[비교 재시도] overall_difference=판단 어려움 → 1회 재시도"
-        )
-
-        try:
-            retried_result = _generate_comparison_once(
-                client,
-                prompt,
-                issue_id,
-                normalized_analyses,
-            )
-
-            if (
-                retried_result.get("overall_difference")
-                != "판단 어려움"
-            ):
-                result = retried_result
-
-        except Exception as error:
-            print(
-                f"[비교 재시도 실패] {error}"
-            )
-
-    save_comparison(
+    single_flight_key = build_single_flight_key(
         issue_id=issue_id,
         publisher_ids=publisher_ids,
-        result=result,
     )
 
-    print(
-        "[비교 완료] "
-        + ", ".join(
-            item["publisher"]
-            for item
-            in normalized_analyses
+    with _SINGLE_FLIGHT_LOCK:
+        current_job = _SINGLE_FLIGHT_JOBS.get(
+            single_flight_key
         )
-    )
 
-    return result
+        if current_job is None:
+            current_job = {
+                "event": threading.Event(),
+                "result": None,
+                "error": None,
+            }
 
+            _SINGLE_FLIGHT_JOBS[
+                single_flight_key
+            ] = current_job
+
+            is_owner = True
+        else:
+            is_owner = False
+
+    if not is_owner:
+        print(
+            "[요청 병합] 동일 비교 작업 완료 대기"
+        )
+
+        current_job["event"].wait()
+
+        if current_job["error"] is not None:
+            raise RuntimeError(
+                "동일 비교 요청의 선행 작업이 "
+                "실패했습니다."
+            ) from current_job["error"]
+
+        shared_result = current_job["result"]
+
+        if not isinstance(
+            shared_result,
+            dict,
+        ):
+            raise RuntimeError(
+                "동일 비교 요청의 공유 결과가 "
+                "없습니다."
+            )
+
+        print(
+            "[요청 병합] 완료 결과 재사용"
+        )
+
+        return shared_result
+
+    try:
+        prompt = build_comparison_prompt(
+            issue_id=issue_id,
+            publisher_analyses=(
+                normalized_analyses
+            ),
+        )
+
+        result = _generate_comparison_once(
+            client,
+            prompt,
+            issue_id,
+            normalized_analyses,
+        )
+
+        # 최신 main의 품질 보완 로직을 그대로 유지한다.
+        # 분석 근거가 있는데도 overall_difference를
+        # "판단 어려움"으로 반환한 경우에만 한 번 더 시도한다.
+        if (
+            result.get("overall_difference")
+            == "판단 어려움"
+        ):
+            print(
+                "[비교 재시도] "
+                "overall_difference=판단 어려움 "
+                "→ 1회 재시도"
+            )
+
+            try:
+                retried_result = (
+                    _generate_comparison_once(
+                        client,
+                        prompt,
+                        issue_id,
+                        normalized_analyses,
+                    )
+                )
+
+                if (
+                    retried_result.get(
+                        "overall_difference"
+                    )
+                    != "판단 어려움"
+                ):
+                    result = retried_result
+
+            except Exception as error:
+                print(
+                    f"[비교 재시도 실패] {error}"
+                )
+
+        save_comparison(
+            issue_id=issue_id,
+            publisher_ids=publisher_ids,
+            result=result,
+        )
+
+        print(
+            "[비교 완료] "
+            + ", ".join(
+                item["publisher"]
+                for item in normalized_analyses
+            )
+        )
+
+        current_job["result"] = result
+
+        return result
+
+    except Exception as error:
+        current_job["error"] = error
+        raise
+
+    finally:
+        current_job["event"].set()
+
+        with _SINGLE_FLIGHT_LOCK:
+            _SINGLE_FLIGHT_JOBS.pop(
+                single_flight_key,
+                None,
+            )
 
 def analyze_input_data(
     input_data: dict,
