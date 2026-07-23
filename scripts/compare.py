@@ -14,19 +14,23 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from dotenv import load_dotenv
 from openai import OpenAI
 
 from cache import (
     get_comparison,
     save_comparison,
 )
+from solar_client import (
+    MAX_RETRIES,
+    MODEL_NAME,
+    REQUEST_TIMEOUT_SECONDS,
+    clean_string,
+    clean_string_list,
+    create_client,
+    request_solar_completion,
+    wait_seconds_for_retry,
+)
 
-
-MODEL_NAME = "solar-pro3"
-REQUEST_TIMEOUT_SECONDS = 60
-MAX_RETRIES = 3
-RETRY_WAIT_SECONDS = 2
 
 DEFAULT_INPUT_PATH = Path(
     "data/publisher_analyses.json"
@@ -42,6 +46,12 @@ ALLOWED_DIMENSIONS = {
     "강조한 영향·대상",
     "보도 태도·근거",
 }
+
+# 이슈 하나에 들어올 수 있는 최대 언론사 수(issue_builder.py의
+# DEFAULT_PUBLISHER_LIMIT과 동일). 상세 대조표는 UI상 최대 4개까지만
+# 선택하게 해뒀지만(app.js:initPublisherSelector), 이슈 전체 언론사
+# 기준 "공통 내용 요약"은 4개로 자르지 않고 이 상한까지 전부 보낸다.
+MAX_PUBLISHERS = 6
 
 # evidence(판단 근거)는 "보도 태도·근거" 항목에만 붙인다 — 원래 의도가
 # "왜 그렇게 판단했는지" 근거가 필요한 건 보도 태도뿐이었는데, 한때
@@ -133,77 +143,6 @@ def save_json(
         )
 
 
-def create_client() -> OpenAI:
-    """
-    Upstage API 클라이언트를 생성한다.
-    """
-    load_dotenv()
-
-    api_key = os.getenv(
-        "UPSTAGE_API_KEY"
-    )
-
-    if not api_key:
-        raise ValueError(
-            "UPSTAGE_API_KEY가 설정되지 않았습니다. "
-            ".env 파일을 확인하세요."
-        )
-
-    return OpenAI(
-        api_key=api_key,
-        base_url="https://api.upstage.ai/v1",
-    )
-
-
-def clean_string(value: Any) -> str:
-    """
-    문자열을 정리한다.
-    """
-    if not isinstance(value, str):
-        return ""
-
-    return value.strip()
-
-
-def clean_string_list(
-    values: Any,
-    max_items: int = 10,
-) -> list[str]:
-    """
-    문자열 배열의 빈 값과 중복을 제거한다.
-    """
-    if not isinstance(values, list):
-        return []
-
-    cleaned = []
-    seen = set()
-
-    for value in values:
-        if not isinstance(value, str):
-            continue
-
-        value = value.strip()
-
-        if not value:
-            continue
-
-        normalized = value.replace(
-            " ",
-            "",
-        )
-
-        if normalized in seen:
-            continue
-
-        seen.add(normalized)
-        cleaned.append(value)
-
-        if len(cleaned) >= max_items:
-            break
-
-    return cleaned
-
-
 def normalize_text_for_duplicate_check(value: Any) -> str:
     """공백만 제거해서 비교한다 (summary가 기사 제목을 그대로 복사했는지
     확인하는 용도라, 구두점까지 봐줄 필요는 없다)."""
@@ -226,9 +165,9 @@ def normalize_publisher_analyses(
             "비교하려면 최소 2개 언론사가 필요합니다."
         )
 
-    if len(values) > 4:
+    if len(values) > MAX_PUBLISHERS:
         raise ValueError(
-            "한 번에 최대 4개 언론사만 비교할 수 있습니다."
+            f"한 번에 최대 {MAX_PUBLISHERS}개 언론사만 비교할 수 있습니다."
         )
 
     normalized = []
@@ -593,49 +532,16 @@ def request_solar_comparison(
 ) -> dict:
     """
     Solar API를 호출하고 JSON 결과를 반환한다.
+    (실제 호출·파싱 로직은 solar_client.request_solar_completion 참고 —
+    analysis.py의 request_solar_analysis와 거의 동일했던 걸 통합했다.)
     """
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0,
-        timeout=REQUEST_TIMEOUT_SECONDS,
+    return request_solar_completion(
+        client,
+        prompt,
+        empty_error="Solar 비교 결과가 비어 있습니다.",
+        decode_error="Solar 비교 결과를 JSON으로 해석할 수 없습니다.",
+        type_error="Solar 비교 결과가 JSON 객체가 아닙니다.",
     )
-
-    content = (
-        response
-        .choices[0]
-        .message
-        .content
-    )
-
-    if not content:
-        raise ValueError(
-            "Solar 비교 결과가 비어 있습니다."
-        )
-
-    try:
-        result = json.loads(content)
-
-    except json.JSONDecodeError as error:
-        raise ValueError(
-            "Solar 비교 결과를 JSON으로 "
-            "해석할 수 없습니다."
-        ) from error
-
-    if not isinstance(result, dict):
-        raise ValueError(
-            "Solar 비교 결과가 JSON 객체가 아닙니다."
-        )
-
-    return result
 
 
 def collect_source_links(
@@ -835,21 +741,36 @@ def validate_comparison_result(
             )
 
         if dimension == EVIDENCE_REQUIRED_DIMENSION:
-            for detail in normalized_details:
-                # difference_level이 "판단 어려움"이 아니라면, 그 판단에
-                # 쓰인 evidence가 언론사마다 최소 1개는 있어야 한다.
-                # summary(태도)만 쓰고 evidence를 비워두는 응답을 여기서
-                # 걸러 재시도시킨다.
+            # difference_level이 "판단 어려움"이 아니라면, 그 판단에 쓰인
+            # evidence가 언론사마다 최소 1개는 있어야 한다는 게 원래
+            # 의도였다. 예전엔 이걸 어기면 통째로 예외를 던져 재시도시켰는데,
+            # 실측 결과 특정 언론사 기사에 애초에 인용할 만한 "보도 태도"
+            # 표현 자체가 없어서 재시도해도 계속 실패하는 경우가 있었다
+            # (예: 동아일보 기사에 근거로 쓸 문구가 없어 5번을 재시도해도
+            # 안 됨). 그 한 항목 때문에 이미 잘 나온 common_summary까지
+            # 포함한 전체 응답이 통째로 날아가는 게 더 문제라, 이제는
+            # 예외 대신 이 항목의 difference_level만 "판단 어려움"으로
+            # 낮추고 나머지는 그대로 살린다.
+            missing_evidence_publishers = [
+                detail["publisher"]
+                for detail in normalized_details
                 if (
                     difference_level != "판단 어려움"
                     and not detail["evidence"]
-                ):
-                    raise ValueError(
-                        f"'{dimension}' 항목의 "
-                        f"{detail['publisher']} evidence가 "
-                        "비어 있습니다."
-                    )
+                )
+            ]
 
+            if missing_evidence_publishers:
+                print(
+                    f"[비교 검증] '{dimension}' 항목의 "
+                    f"{', '.join(missing_evidence_publishers)} evidence가 "
+                    "비어 있어 difference_level을 '판단 어려움'으로 "
+                    "낮춥니다."
+                )
+
+                difference_level = "판단 어려움"
+
+            for detail in normalized_details:
                 # summary는 "이 언론사가 보인 태도"를 설명해야지, 기사
                 # 제목을 그대로 옮겨서는 안 된다(프롬프트에 명시했지만
                 # 실측 결과 모델이 종종 어김 — summary와 evidence가
@@ -1024,16 +945,79 @@ def validate_comparison_result(
     return normalized_result
 
 
+def _generate_comparison_once(
+    client: OpenAI,
+    prompt: str,
+    issue_id: str,
+    normalized_analyses: list[dict],
+) -> dict:
+    """
+    Solar 비교를 최대 MAX_RETRIES회까지 시도해서 검증된 결과 하나를
+    만든다. (실패=예외 발생 시에만 재시도한다. "판단 어려움"처럼
+    형식은 정상이지만 내용이 애매한 경우는 여기서 재시도하지 않고
+    compare_publishers()가 별도로 판단한다.)
+    """
+    last_error = None
+
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1,
+    ):
+        try:
+            print(
+                "[Solar 비교] "
+                f"{attempt}/{MAX_RETRIES}"
+            )
+
+            raw_result = (
+                request_solar_comparison(
+                    client=client,
+                    prompt=prompt,
+                )
+            )
+
+            return validate_comparison_result(
+                result=raw_result,
+                issue_id=issue_id,
+                publisher_analyses=(
+                    normalized_analyses
+                ),
+            )
+
+        except Exception as error:
+            last_error = error
+
+            print(
+                "[비교 실패] "
+                f"{attempt}/{MAX_RETRIES}: "
+                f"{error}"
+            )
+
+            if attempt < MAX_RETRIES:
+                time.sleep(
+                    wait_seconds_for_retry(
+                        error,
+                        attempt,
+                    )
+                )
+
+    raise RuntimeError(
+        "언론사 비교가 "
+        f"{MAX_RETRIES}회 모두 실패했습니다: "
+        f"{last_error}"
+    )
+
+
 def compare_publishers(
     client: OpenAI,
     publisher_analyses: list[dict],
     use_cache: bool = True,
 ) -> dict:
     """
-    선택된 2~4개 언론사의 분석 결과를 비교한다.
+    선택된 2~MAX_PUBLISHERS개 언론사의 분석 결과를 비교한다.
 
     같은 프로세스에서 동일한 이슈와 언론사 조합이 동시에 요청되면
-    첫 번째 요청만 Solar를 호출하고, 나머지는 그 작업의 결과를 공유한다.
+    첫 번째 요청만 Solar를 호출하고, 나머지는 그 결과를 공유한다.
     """
     normalized_analyses = (
         normalize_publisher_analyses(
@@ -1080,9 +1064,11 @@ def compare_publishers(
                 "result": None,
                 "error": None,
             }
+
             _SINGLE_FLIGHT_JOBS[
                 single_flight_key
             ] = current_job
+
             is_owner = True
         else:
             is_owner = False
@@ -1096,14 +1082,19 @@ def compare_publishers(
 
         if current_job["error"] is not None:
             raise RuntimeError(
-                "동일 비교 요청의 선행 작업이 실패했습니다."
+                "동일 비교 요청의 선행 작업이 "
+                "실패했습니다."
             ) from current_job["error"]
 
         shared_result = current_job["result"]
 
-        if not isinstance(shared_result, dict):
+        if not isinstance(
+            shared_result,
+            dict,
+        ):
             raise RuntimeError(
-                "동일 비교 요청의 공유 결과가 없습니다."
+                "동일 비교 요청의 공유 결과가 "
+                "없습니다."
             )
 
         print(
@@ -1120,75 +1111,66 @@ def compare_publishers(
             ),
         )
 
-        last_error = None
+        result = _generate_comparison_once(
+            client,
+            prompt,
+            issue_id,
+            normalized_analyses,
+        )
 
-        for attempt in range(
-            1,
-            MAX_RETRIES + 1,
+        # 최신 main의 품질 보완 로직을 그대로 유지한다.
+        # 분석 근거가 있는데도 overall_difference를
+        # "판단 어려움"으로 반환한 경우에만 한 번 더 시도한다.
+        if (
+            result.get("overall_difference")
+            == "판단 어려움"
         ):
+            print(
+                "[비교 재시도] "
+                "overall_difference=판단 어려움 "
+                "→ 1회 재시도"
+            )
+
             try:
-                print(
-                    "[Solar 비교] "
-                    f"{attempt}/{MAX_RETRIES}"
-                )
-
-                raw_result = (
-                    request_solar_comparison(
-                        client=client,
-                        prompt=prompt,
+                retried_result = (
+                    _generate_comparison_once(
+                        client,
+                        prompt,
+                        issue_id,
+                        normalized_analyses,
                     )
                 )
 
-                validated_result = (
-                    validate_comparison_result(
-                        result=raw_result,
-                        issue_id=issue_id,
-                        publisher_analyses=(
-                            normalized_analyses
-                        ),
+                if (
+                    retried_result.get(
+                        "overall_difference"
                     )
-                )
-
-                save_comparison(
-                    issue_id=issue_id,
-                    publisher_ids=publisher_ids,
-                    result=validated_result,
-                )
-
-                print(
-                    "[비교 완료] "
-                    + ", ".join(
-                        item["publisher"]
-                        for item
-                        in normalized_analyses
-                    )
-                )
-
-                current_job["result"] = (
-                    validated_result
-                )
-
-                return validated_result
+                    != "판단 어려움"
+                ):
+                    result = retried_result
 
             except Exception as error:
-                last_error = error
-
                 print(
-                    "[비교 실패] "
-                    f"{attempt}/{MAX_RETRIES}: "
-                    f"{error}"
+                    f"[비교 재시도 실패] {error}"
                 )
 
-                if attempt < MAX_RETRIES:
-                    time.sleep(
-                        RETRY_WAIT_SECONDS
-                    )
-
-        raise RuntimeError(
-            "언론사 비교가 "
-            f"{MAX_RETRIES}회 모두 실패했습니다: "
-            f"{last_error}"
+        save_comparison(
+            issue_id=issue_id,
+            publisher_ids=publisher_ids,
+            result=result,
         )
+
+        print(
+            "[비교 완료] "
+            + ", ".join(
+                item["publisher"]
+                for item in normalized_analyses
+            )
+        )
+
+        current_job["result"] = result
+
+        return result
 
     except Exception as error:
         current_job["error"] = error

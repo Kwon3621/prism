@@ -3,8 +3,10 @@ import uuid
 import requests
 import argparse
 import json
+
 import os
 import threading
+
 import time
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -12,19 +14,23 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from dotenv import load_dotenv
 from openai import OpenAI
 
 from cache import (
     get_publisher_analysis,
     save_publisher_analysis,
 )
+from solar_client import (
+    MAX_RETRIES,
+    MODEL_NAME,
+    REQUEST_TIMEOUT_SECONDS,
+    clean_string,
+    clean_string_list,
+    create_client,
+    request_solar_completion,
+    wait_seconds_for_retry,
+)
 
-
-MODEL_NAME = "solar-pro3"
-REQUEST_TIMEOUT_SECONDS = 60
-MAX_RETRIES = 3
-RETRY_WAIT_SECONDS = 2
 
 DEFAULT_INPUT_PATH = Path(
     "data/representative_articles.json"
@@ -383,82 +389,6 @@ def save_json(
             ensure_ascii=False,
             indent=2,
         )
-
-
-def create_client() -> OpenAI:
-    """
-    환경변수의 Upstage API 키로 클라이언트를 생성한다.
-    """
-    load_dotenv()
-
-    api_key = os.getenv(
-        "UPSTAGE_API_KEY"
-    )
-
-    if not api_key:
-        raise ValueError(
-            "UPSTAGE_API_KEY가 설정되지 않았습니다. "
-            ".env 파일을 확인하세요."
-        )
-
-    return OpenAI(
-        api_key=api_key,
-        base_url="https://api.upstage.ai/v1",
-    )
-
-
-def clean_string(value: Any) -> str:
-    """
-    문자열이 아닌 값은 빈 문자열로 바꾸고
-    문자열의 앞뒤 공백을 제거한다.
-    """
-    if not isinstance(value, str):
-        return ""
-
-    return value.strip()
-
-
-def clean_string_list(
-    values: Any,
-    max_items: int = 8,
-) -> list[str]:
-    """
-    문자열 배열을 정리한다.
-
-    - 빈 값 제거
-    - 중복 제거
-    - 최대 개수 제한
-    """
-    if not isinstance(values, list):
-        return []
-
-    cleaned_values = []
-    seen = set()
-
-    for value in values:
-        if not isinstance(value, str):
-            continue
-
-        value = value.strip()
-
-        if not value:
-            continue
-
-        normalized = value.replace(
-            " ",
-            "",
-        )
-
-        if normalized in seen:
-            continue
-
-        seen.add(normalized)
-        cleaned_values.append(value)
-
-        if len(cleaned_values) >= max_items:
-            break
-
-    return cleaned_values
 
 
 def normalize_articles(
@@ -1019,48 +949,10 @@ def request_solar_analysis(
 ) -> dict:
     """
     Solar API를 호출하고 JSON 응답을 파싱한다.
+    (실제 호출·파싱 로직은 solar_client.request_solar_completion 참고 —
+    compare.py의 request_solar_comparison과 거의 동일했던 걸 통합했다.)
     """
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt,
-            }
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0,
-        timeout=REQUEST_TIMEOUT_SECONDS,
-    )
-
-    content = (
-        response
-        .choices[0]
-        .message
-        .content
-    )
-
-    if not content:
-        raise ValueError(
-            "Solar 응답 내용이 비어 있습니다."
-        )
-
-    try:
-        result = json.loads(content)
-
-    except json.JSONDecodeError as error:
-        raise ValueError(
-            "Solar 응답을 JSON으로 해석할 수 없습니다."
-        ) from error
-
-    if not isinstance(result, dict):
-        raise ValueError(
-            "Solar 응답이 JSON 객체가 아닙니다."
-        )
-
-    return result
+    return request_solar_completion(client, prompt)
 
 
 def analyze_publisher(
@@ -1169,7 +1061,10 @@ def analyze_publisher(
 
             if attempt < MAX_RETRIES:
                 time.sleep(
-                    RETRY_WAIT_SECONDS
+                    wait_seconds_for_retry(
+                        error,
+                        attempt,
+                    )
                 )
 
     raise RuntimeError(
@@ -1931,7 +1826,10 @@ def group_publishers(
 
             if attempt < MAX_RETRIES:
                 time.sleep(
-                    RETRY_WAIT_SECONDS
+                    wait_seconds_for_retry(
+                        error,
+                        attempt,
+                    )
                 )
 
     raise RuntimeError(
@@ -1940,14 +1838,19 @@ def group_publishers(
         f"{last_error}"
     )
 
-def _analyze_issue_batch_impl(
+
+def analyze_publishers_only(
     input_data: dict,
     use_cache: bool = True,
 ) -> dict:
     """
-    B팀이 전달한 이슈별 publishers 배열을 순회하며
-    각 언론사를 독립적으로 분석하고,
-    완료된 결과로 Publisher Grouping을 실행한다.
+    이슈별 publishers 배열을 순회하며 각 언론사를 독립적으로 분석한다.
+
+    Publisher Grouping은 포함하지 않는다 — analyze_issue_batch()가 이
+    결과에 이어서 그룹화를 실행한다. api/index.py가 "언론사별 분석이
+    끝나는 즉시 그룹화와 기본 비교 조합을 동시에 시작"하고 싶을 때
+    (그룹화와 비교는 서로 결과가 필요 없고 둘 다 이 분석 결과만
+    있으면 되므로) 이 함수만 따로 불러 쓸 수 있도록 분리했다.
     """
     issue_id = clean_string(
         input_data.get("issue_id")
@@ -2133,13 +2036,6 @@ def _analyze_issue_batch_impl(
             "Publisher Grouping을 실행할 수 없습니다."
         )
 
-    grouping_result = group_publishers(
-        client=client,
-        publisher_analyses=(
-            publisher_analyses
-        ),
-    )
-
     return {
         "issue_id": issue_id,
         "issue_title": issue_title,
@@ -2153,9 +2049,6 @@ def _analyze_issue_batch_impl(
         "publisher_analyses": (
             publisher_analyses
         ),
-        "publisher_grouping": (
-            grouping_result
-        ),
         "failed_publishers": (
             failed_publishers
         ),
@@ -2164,6 +2057,36 @@ def _analyze_issue_batch_impl(
             if failed_publishers
             else "success"
         ),
+    }
+
+
+def _analyze_issue_batch_impl(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    B팀이 전달한 이슈별 publishers 배열을 순회하며
+    각 언론사를 독립적으로 분석하고,
+    완료된 결과로 Publisher Grouping을 실행한다.
+
+    analyze_publishers_only() + group_publishers()를 그대로 이어붙인
+    래퍼다 — 배치 스크립트(build_featured_issues.py)처럼 "언론사별
+    분석과 그룹화가 둘 다 필요하고, 겹쳐 실행할 실시간 지연시간 이점이
+    없는" 호출부는 이 함수를 그대로 쓰면 된다.
+    """
+    analysis_result = analyze_publishers_only(
+        input_data,
+        use_cache=use_cache,
+    )
+
+    grouping_result = group_publishers(
+        client=create_client(),
+        publisher_analyses=analysis_result["publisher_analyses"],
+    )
+
+    return {
+        **analysis_result,
+        "publisher_grouping": grouping_result,
         "processed_at": datetime.now(
             timezone.utc
         ).isoformat(),
@@ -2436,6 +2359,7 @@ def analyze_issue_batch(
                 single_flight_key,
                 None,
             )
+
 
 
 def parse_arguments() -> argparse.Namespace:

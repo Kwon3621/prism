@@ -17,14 +17,10 @@ from typing import Any
 
 from openai import OpenAI
 
-from analysis import (
-    MAX_RETRIES,
-    RETRY_WAIT_SECONDS,
-    clean_string,
-    request_solar_analysis,
-)
+from analysis import request_solar_analysis
 from cache import get_keyword_extraction, save_keyword_extraction
 from search_engine import search_with_context
+from solar_client import MAX_RETRIES, clean_string, wait_seconds_for_retry
 from vector_store import get_records_data_version
 
 
@@ -457,7 +453,7 @@ def build_issue_candidates(
             )
 
             if attempt < MAX_RETRIES:
-                time.sleep(RETRY_WAIT_SECONDS)
+                time.sleep(wait_seconds_for_retry(error, attempt))
 
     if event_groups is None:
         raise RuntimeError(
@@ -1003,7 +999,7 @@ def _extract_and_score_keywords(
             )
 
             if attempt < MAX_RETRIES:
-                time.sleep(RETRY_WAIT_SECONDS)
+                time.sleep(wait_seconds_for_retry(error, attempt))
 
     if raw_keywords is None:
         raise RuntimeError(
