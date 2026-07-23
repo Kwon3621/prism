@@ -47,9 +47,31 @@ UPSTASH_REDIS_REST_TOKEN = os.getenv(
     "",
 )
 
-DISTRIBUTED_LOCK_TTL_SECONDS = 300
+# api/index.py의 Vercel maxDuration(vercel.json:
+# functions."api/index.py".maxDuration)과 반드시 맞춰야 한다. 이 값을
+# 벗어나게 오래 기다리게 하면, 실제 함수가 끝나기 훨씬 전에 Vercel
+# 플랫폼이 함수를 강제 종료시켜서 "우아하게 결과를 공유받는" 이 기능의
+# 의도가 무의미해진다(대기 중이던 방문자는 정상 응답 대신 504를 본다).
+VERCEL_FUNCTION_MAX_DURATION_SECONDS = 60
+
+# 정상적으로 실행 중인 소유 인스턴스가 maxDuration 안에 끝나기 전에
+# lock이 먼저 만료되지 않도록 약간의 여유만 둔다. 소유 인스턴스가 도중에
+# 플랫폼에 의해 강제 종료되면(release_distributed_lock이 실행되지 못함)
+# 이 TTL만큼만 지나면 lock이 자동으로 풀린다 — 예전 300초는
+# maxDuration(60초)의 5배라 죽은 lock을 그만큼 쓸데없이 오래 쥐고 있었다.
+DISTRIBUTED_LOCK_TTL_SECONDS = (
+    VERCEL_FUNCTION_MAX_DURATION_SECONDS + 5
+)
 DISTRIBUTED_RESULT_TTL_SECONDS = 21600
-DISTRIBUTED_WAIT_TIMEOUT_SECONDS = 310
+
+# 대기하는 쪽 요청도 결국 같은 maxDuration 안에서 응답을 끝내야 한다.
+# JSON 직렬화 등 남은 처리 시간을 위해 몇 초 버퍼를 두고, 이 예산을 다
+# 쓰면(_run_with_single_flight 참고) 더 기다리지 않고 직접 분석을
+# 실행한다 — 이미 소진된 예산으로 계속 대기하다 플랫폼에 강제 종료되는
+# 것보다, 약간의 중복 실행을 감수하고 응답을 끝내는 편이 낫다.
+DISTRIBUTED_SINGLE_FLIGHT_DEADLINE_SECONDS = (
+    VERCEL_FUNCTION_MAX_DURATION_SECONDS - 15
+)
 DISTRIBUTED_POLL_INTERVAL_SECONDS = 1
 def is_distributed_single_flight_enabled() -> bool:
     """
@@ -215,6 +237,7 @@ def release_distributed_lock(
 def wait_for_distributed_result(
     lock_key: str,
     result_key: str,
+    timeout_seconds: float,
 ) -> dict | None:
     """
     다른 인스턴스의 분석 완료 결과를 기다린다.
@@ -222,10 +245,22 @@ def wait_for_distributed_result(
     결과가 저장되면 반환한다.
     lock이 사라졌는데 결과가 없으면 None을 반환해
     현재 요청이 다시 lock 획득을 시도하게 한다.
+
+    timeout_seconds는 호출부(_run_with_single_flight)가 남은 전체 대기
+    예산(DISTRIBUTED_SINGLE_FLIGHT_DEADLINE_SECONDS)에서 계산해 넘긴다 —
+    이 함수가 매번 고정된 시간만큼 새로 기다리면, 루프가 여러 번 돌 때
+    전체 대기 시간이 한도 없이 늘어나 결국 Vercel의 maxDuration을
+    넘기게 된다.
     """
+    if timeout_seconds <= 0:
+        raise TimeoutError(
+            "동일 분석의 선행 작업 완료를 "
+            "기다리는 시간이 초과되었습니다."
+        )
+
     deadline = (
         time.monotonic()
-        + DISTRIBUTED_WAIT_TIMEOUT_SECONDS
+        + timeout_seconds
     )
 
     while time.monotonic() < deadline:
@@ -549,75 +584,29 @@ def build_publisher_prompt(
 3. main_focus
 해당 언론사가 기사에서 가장 중요하게 다루는 핵심 관점을 설명합니다.
 
-4. primary_frame
-기사에서 가장 중심적으로 나타나는 프레임을 다음 구조로 정리합니다.
-
-- category:
-  기사가 사건을 바라보는 중심 문제 유형을 짧은 자유형 문자열로 작성합니다.
-
-- stance:
-  프레임의 대상이나 상황에 대해 기사에서 나타나는 평가 또는 입장 방향을
-  짧은 자유형 문자열로 작성합니다.
-
-- target:
-  해당 프레임이 주로 향하는 인물·집단·기관·정책·제도·현상 등을
-  짧은 자유형 문자열로 작성합니다.
-
-- summary:
-  category, stance, target이 기사에서 어떻게 나타나는지 1~2문장으로
-  구체적으로 설명합니다.
-
-- evidence:
-  해당 프레임을 판단한 근거가 되는 제목 또는 RSS 설명의 실제 표현을
-  배열로 제시합니다.
-
-category, stance, target에는 미리 정해진 선택지가 없습니다.
-다른 기사 및 언론사와 비교할 수 있도록 지나치게 길거나 추상적인 표현은 피하고,
-핵심 의미가 드러나는 간결한 표현을 사용하세요.
-
-summary는 headline_frame이나 main_focus를 그대로 반복하지 말고,
-어떤 대상을 어떤 문제 유형과 입장으로 다루는지가 드러나도록 작성하세요.
-
-primary_frame은 기사에서 확인되는 가장 중심적인 보도 구성을 반드시 정리하세요.
-기사 제목이나 RSS 설명에서 중심 대상, 문제 유형, 강조 방향 중 하나라도
-확인할 수 있다면 category, stance, target, summary를 작성해야 합니다.
-
-stance는 반드시 긍정·부정과 같은 평가만 의미하지 않습니다.
-평가가 뚜렷하지 않은 설명 기사에서는
-"사실 전달", "상황 강조", "피해 조명", "전망 제시"처럼
-기사의 서술 방향을 자유형 문자열로 작성할 수 있습니다.
-
-evidence에는 primary_frame을 판단하는 데 사용한 제목 또는 RSS 설명의
-실제 표현을 최소 1개 이상 제시하세요.
-
-기사 제목과 RSS 설명이 모두 비어 있거나,
-프레임을 판단할 실제 표현이 전혀 없는 경우에만
-category, stance, target, summary를 빈 문자열로 작성하고
-evidence를 빈 배열로 작성하세요.
-
-5. keywords
+4. keywords
 기사의 핵심 개념을 3~6개 제시합니다.
 인물명과 기관명은 제외합니다.
 
-6. main_actors
+5. main_actors
 기사에서 주요 행동 주체로 다뤄지는 인물·집단·기관을 제시합니다.
 
-7. quoted_sources
+6. quoted_sources
 기사 설명에서 직접 인용하거나 입장을 전달한 대상이 확인되면 제시합니다.
 
-8. causes
+7. causes
 기사에서 사건의 직접적인 원인으로 강조한 내용을 제시합니다.
 
-9. background
+8. background
 사건을 이해하기 위한 제도적·사회적·경제적 배경으로 다룬 내용을 제시합니다.
 
-10. emphasized_effects
+9. emphasized_effects
 기사에서 중요하게 다룬 결과·영향·위험·변화를 제시합니다.
 
-11. affected_groups
+10. affected_groups
 기사에서 영향을 받는 대상으로 강조한 사람·집단·기관을 제시합니다.
 
-12. tone
+11. tone
 보도 태도를 category와 evidence로 구분합니다.
 
 category는 다음 중 하나만 사용하세요.
@@ -634,7 +623,7 @@ evidence에는 해당 태도를 판단한 실제 제목 또는 RSS 설명 표현
 판단할 근거를 정말 찾을 수 없는 경우에만 category를 "판단 어려움"으로
 쓰고 evidence를 비워두세요.
 
-13. outlook
+12. outlook
 기사에서 향후 전망이 확인되면 direction과 summary로 정리합니다.
 
 direction은 다음 중 하나만 사용하세요.
@@ -644,7 +633,7 @@ direction은 다음 중 하나만 사용하세요.
 - 중립
 - 전망 없음
 
-14. less_covered_context
+13. less_covered_context
 현재 제공된 기사에서 상대적으로 확인하기 어려운 관련 맥락을 제시합니다.
 기사에 없는 사실을 새로 만들어서는 안 됩니다.
 예: "정책 시행 이후의 구체적 효과는 확인하기 어렵다."
@@ -667,13 +656,6 @@ direction은 다음 중 하나만 사용하세요.
     "article_summary": "",
     "headline_frame": "",
     "main_focus": "",
-    "primary_frame": {{
-      "category": "",
-      "stance": "",
-      "target": "",
-      "summary": "",
-      "evidence": []
-    }},
     "keywords": [],
     "main_actors": [],
     "quoted_sources": [],
@@ -722,13 +704,6 @@ def validate_analysis_result(
         raise ValueError(
             "Solar 응답에 analysis 객체가 없습니다."
         )
-
-    primary_frame = analysis.get(
-        "primary_frame"
-    )
-
-    if not isinstance(primary_frame, dict):
-        primary_frame = {}
 
     tone = analysis.get("tone")
 
@@ -824,34 +799,6 @@ def validate_analysis_result(
                     "main_focus"
                 )
             ),
-            "primary_frame": {
-                "category": clean_string(
-                    primary_frame.get(
-                        "category"
-                    )
-                ),
-                "stance": clean_string(
-                    primary_frame.get(
-                        "stance"
-                    )
-                ),
-                "target": clean_string(
-                    primary_frame.get(
-                        "target"
-                    )
-                ),
-                "summary": clean_string(
-                    primary_frame.get(
-                        "summary"
-                    )
-                ),
-                "evidence": clean_string_list(
-                    primary_frame.get(
-                        "evidence"
-                    ),
-                    max_items=5,
-                ),
-            },
             "keywords": clean_string_list(
                 analysis.get("keywords"),
                 max_items=6,
@@ -1410,6 +1357,15 @@ def build_grouping_prompt(
 - 중심 쟁점과 해석 방향은 같고 세부 사례, 피해 대상의 표현,
   근거 수치 또는 강조 강도만 다른 경우
 
+위 예시들은 그룹을 나누거나 합치는 "판단 기준"을 설명하기 위한 것일 뿐,
+실제 입력된 기사 내용이 아닙니다. 지금 입력된 이슈가 규제나 시장과
+무관하더라도 이 예시 문장을 그대로 재사용하지 마세요.
+label, summary, group_evidence, grouping_summary, contrast_statement에는
+"규제 조치", "시장 안정 효과", "시장 과열", "국민 피해", "정책 실패",
+"제도의 위험성과 부작용"처럼 위 예시에 나온 표현을 그대로 옮겨 쓰지 말고,
+반드시 아래 "언론사별 Structured Output"에 실제로 주어진 핵심 관점·
+원인·배경·영향·보도 태도 표현만 근거로 사용하세요.
+
 그룹화 원칙:
 - 현재 제공된 기사 분석 결과만 사용하세요.
 - 앞서 제시한 핵심 관점 기준을 우선 적용하고,
@@ -1443,6 +1399,9 @@ def build_grouping_prompt(
 - 별도 그룹으로 나눈 경우에는
   어떤 핵심 의미나 평가 방향이 충돌하는지 설명하세요.
 - group_contrasts에는 그룹 간 핵심 관점 차이를 직접 대조하세요.
+- summary와 group_evidence는 위에서 예시로 든 문장을 복사하지 말고,
+  이번 입력에 실제로 등장하는 핵심 관점·원인·배경·영향·보도 태도만
+  근거로 작성하세요.
 
 반드시 아래 JSON 구조로만 응답하세요.
 
@@ -1480,6 +1439,186 @@ def build_grouping_prompt(
 
 {grouping_text}
 """.strip()
+
+
+# build_grouping_prompt의 "반드시 분리해야 하는 예시"/"같은 그룹으로 묶을 수
+# 있는 예시"/"추가 분리 예시"/그룹명 예시에 쓰인 문장을 그대로 옮긴 신호다.
+# Solar가 이 판단 기준용 예시를 실제 이슈 내용인 것처럼 label/summary/
+# group_evidence/grouping_summary/contrast_statement에 그대로 복사해 넣는
+# 경우가 실측 확인됐다(예: "장동혁 장외 정치" 이슈 summary에 "규제 조치의
+# 내용과 시장 안정 효과"가 그대로 등장 — 이 이슈는 규제나 시장과 무관함).
+#
+# 각 신호 문구에는 "grounding_keywords"를 함께 붙였다. 신호 문구가 출력에
+# 나타나도, 그 이슈의 실제 입력 분석 결과(main_focus/원인·배경/영향/보도
+# 태도/키워드)에 grounding_keywords 중 하나라도 실제로 등장한다면 우연이
+# 아니라 정말 그 주제(예: 레버리지 ETF 규제)를 다루는 이슈라고 보고 통과시킨다.
+# 이렇게 하지 않으면 실제로 규제·시장 관련 이슈에서도 계속 재시도가
+# 걸리는 오탐이 생긴다.
+GROUPING_PROMPT_EXAMPLE_SIGNALS: list[tuple[str, list[str]]] = [
+    ("규제 조치", ["규제"]),
+    ("시장 안정", ["시장"]),
+    ("시장 과열", ["시장"]),
+    ("국민 피해", ["국민", "피해"]),
+    ("정책 실패", ["정책", "실패"]),
+    ("제도의 필요성과 기대 효과", ["제도", "효과"]),
+    ("제도의 위험성과 부작용", ["제도", "부작용"]),
+    ("특정 주체의 책임 추궁", ["책임", "추궁"]),
+    ("투자 위험과 부작용", ["투자", "부작용"]),
+]
+
+
+def build_grounding_text(
+    publisher_analyses: list[dict[str, Any]],
+    publisher_ids: set[str] | None = None,
+) -> str:
+    """
+    언론사별 분석 결과 중 실제로 주어진 핵심 관점·원인·배경·영향·보도
+    태도·키워드만 모아 하나의 문자열로 합친다. 그룹화 결과에 등장한 표현이
+    프롬프트 예시가 아니라 이 실제 입력에서 나온 것인지 대조하는 용도다.
+    publisher_ids를 주면 그 언론사들의 분석만, 안 주면 전체를 모은다.
+    """
+    sections = []
+
+    for item in publisher_analyses:
+        if (
+            publisher_ids is not None
+            and item.get("publisher_id") not in publisher_ids
+        ):
+            continue
+
+        analysis = item.get("analysis") or {}
+        tone = analysis.get("tone") or {}
+
+        sections.append(
+            " ".join(
+                str(value)
+                for value in [
+                    analysis.get("headline_frame", ""),
+                    analysis.get("main_focus", ""),
+                    " ".join(analysis.get("keywords", []) or []),
+                    " ".join(analysis.get("causes", []) or []),
+                    " ".join(analysis.get("background", []) or []),
+                    " ".join(
+                        analysis.get("emphasized_effects", []) or []
+                    ),
+                    " ".join(
+                        analysis.get("affected_groups", []) or []
+                    ),
+                    tone.get("category", ""),
+                    " ".join(tone.get("evidence", []) or []),
+                ]
+                if value
+            )
+        )
+
+    return " ".join(sections)
+
+
+def find_ungrounded_example_signal(
+    text: str,
+    grounding_text: str,
+) -> str | None:
+    """
+    text에 그룹화 프롬프트의 예시 신호 문구가 등장하는데, 그 이슈의 실제
+    입력 분석 결과(grounding_text)에는 관련 근거가 전혀 없으면 그 신호
+    문구를 반환한다. 실제 근거가 있으면(예: 진짜 규제·시장 이슈) None을
+    반환해 통과시킨다.
+    """
+    normalized_text = str(text or "")
+
+    for signal_phrase, grounding_keywords in (
+        GROUPING_PROMPT_EXAMPLE_SIGNALS
+    ):
+        if signal_phrase not in normalized_text:
+            continue
+
+        if any(
+            keyword in grounding_text
+            for keyword in grounding_keywords
+        ):
+            continue
+
+        return signal_phrase
+
+    return None
+
+
+def check_grouping_result_for_example_leakage(
+    normalized_groups: list[dict[str, Any]],
+    normalized_contrasts: list[dict[str, Any]],
+    grouping_summary: str,
+    publisher_analyses: list[dict[str, Any]],
+) -> None:
+    """
+    그룹화 결과에 프롬프트 예시 문구가 실제 근거 없이 그대로 남아 있으면
+    예외를 던져 재시도시킨다(group_publishers의 MAX_RETRIES, 배치의
+    build_complete_grouping이 이 예외를 잡아 다시 시도한다).
+    """
+    for group in normalized_groups:
+        # "그룹화 보류" 복구 그룹은 코드가 만든 고정 문구라 검사 대상이 아니다.
+        if str(group.get("group_id", "")).startswith(
+            "group-ungrouped-"
+        ):
+            continue
+
+        output_text = " ".join(
+            [
+                str(group.get("label") or ""),
+                str(group.get("summary") or ""),
+                *[
+                    str(evidence)
+                    for evidence in group.get(
+                        "group_evidence", []
+                    )
+                ],
+            ]
+        )
+
+        group_grounding_text = build_grounding_text(
+            publisher_analyses,
+            publisher_ids=set(
+                group.get("publisher_ids", [])
+            ),
+        )
+
+        leaked_signal = find_ungrounded_example_signal(
+            output_text,
+            group_grounding_text,
+        )
+
+        if leaked_signal:
+            raise ValueError(
+                "그룹화 결과에 프롬프트 예시 문구로 보이는 표현이 "
+                f"실제 근거 없이 등장했습니다: '{leaked_signal}' "
+                f"(그룹: {group.get('label')})"
+            )
+
+    issue_grounding_text = build_grounding_text(
+        publisher_analyses
+    )
+
+    for contrast in normalized_contrasts:
+        leaked_signal = find_ungrounded_example_signal(
+            contrast.get("contrast_statement"),
+            issue_grounding_text,
+        )
+
+        if leaked_signal:
+            raise ValueError(
+                "group_contrasts에 프롬프트 예시 문구로 보이는 표현이 "
+                f"실제 근거 없이 등장했습니다: '{leaked_signal}'"
+            )
+
+    leaked_signal = find_ungrounded_example_signal(
+        grouping_summary,
+        issue_grounding_text,
+    )
+
+    if leaked_signal:
+        raise ValueError(
+            "grouping_summary에 프롬프트 예시 문구로 보이는 표현이 "
+            f"실제 근거 없이 등장했습니다: '{leaked_signal}'"
+        )
 
 
 def validate_grouping_result(
@@ -1729,6 +1868,17 @@ def validate_grouping_result(
                 }
             )
 
+    grouping_summary = clean_string(
+        result.get("grouping_summary")
+    )
+
+    check_grouping_result_for_example_leakage(
+        normalized_groups,
+        normalized_contrasts,
+        grouping_summary,
+        publisher_analyses,
+    )
+
     return {
         "issue_id": issue_id,
         "groups": normalized_groups,
@@ -1738,11 +1888,7 @@ def validate_grouping_result(
         "group_contrasts": (
             normalized_contrasts
         ),
-        "grouping_summary": clean_string(
-            result.get(
-                "grouping_summary"
-            )
-        ),
+        "grouping_summary": grouping_summary,
         "evidence_limit": (
             "기사 제목과 RSS 설명을 기반으로 "
             "생성된 언론사별 분석 결과 기준"
@@ -2238,7 +2384,35 @@ def _run_with_single_flight(
 
                 return existing_result
 
+        # 이 요청 자신도 Vercel maxDuration 안에서 응답을 끝내야 하므로,
+        # "다른 인스턴스를 기다리는" 전체 시간을 하나의 예산으로 관리한다
+        # (반복마다 새로 고정 시간을 기다리면 루프가 여러 번 돌 때 전체
+        # 대기 시간이 한도 없이 늘어난다).
+        single_flight_deadline = (
+            time.monotonic()
+            + DISTRIBUTED_SINGLE_FLIGHT_DEADLINE_SECONDS
+        )
+
         while True:
+            remaining_wait_seconds = (
+                single_flight_deadline
+                - time.monotonic()
+            )
+
+            if remaining_wait_seconds <= 0:
+                print(
+                    "[분산 요청 병합] 대기 예산 소진, "
+                    "직접 분석으로 전환"
+                )
+
+                result = runner(
+                    input_data=input_data,
+                    use_cache=use_cache,
+                )
+
+                current_job["result"] = result
+                return result
+
             try:
                 is_distributed_owner = (
                     try_acquire_distributed_lock(
@@ -2309,6 +2483,10 @@ def _run_with_single_flight(
                     wait_for_distributed_result(
                         lock_key=lock_key,
                         result_key=result_key,
+                        timeout_seconds=(
+                            single_flight_deadline
+                            - time.monotonic()
+                        ),
                     )
                 )
             except TimeoutError:
