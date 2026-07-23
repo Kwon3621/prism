@@ -12,8 +12,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
-
+from typing import Any, Callable
 from openai import OpenAI
 
 from cache import (
@@ -1839,7 +1838,7 @@ def group_publishers(
     )
 
 
-def analyze_publishers_only(
+def _analyze_publishers_only_impl(
     input_data: dict,
     use_cache: bool = True,
 ) -> dict:
@@ -2074,7 +2073,7 @@ def _analyze_issue_batch_impl(
     분석과 그룹화가 둘 다 필요하고, 겹쳐 실행할 실시간 지연시간 이점이
     없는" 호출부는 이 함수를 그대로 쓰면 된다.
     """
-    analysis_result = analyze_publishers_only(
+    analysis_result = _analyze_publishers_only_impl(
         input_data,
         use_cache=use_cache,
     )
@@ -2093,20 +2092,23 @@ def _analyze_issue_batch_impl(
     }
     
 
-def analyze_issue_batch(
+def _run_with_single_flight(
     input_data: dict,
-    use_cache: bool = True,
+    use_cache: bool,
+    operation_name: str,
+    runner: Callable[..., dict],
 ) -> dict:
     """
     동일한 이슈 분석 요청을 하나의 실행 작업으로 병합한다.
 
     1. 같은 Python 프로세스에서는 threading 기반으로 병합한다.
     2. 서로 다른 Vercel 인스턴스에서는 Upstash Redis로 병합한다.
-    3. 반환값은 기존 _analyze_issue_batch_impl()의 dict를 그대로 사용한다.
+    3. runner가 반환한 dict 구조를 변경하지 않고 그대로 반환한다.
     """
     single_flight_key = (
-        build_issue_single_flight_key(
-            input_data
+            f"{operation_name}:"
+            + build_issue_single_flight_key(
+        input_data
         )
     )
 
@@ -2168,7 +2170,7 @@ def analyze_issue_batch(
 
     try:
         if not is_distributed_single_flight_enabled():
-            result = _analyze_issue_batch_impl(
+            result = runner(
                 input_data=input_data,
                 use_cache=use_cache,
             )
@@ -2217,7 +2219,7 @@ def analyze_issue_batch(
                     f"{redis_error}"
                 )
 
-                result = _analyze_issue_batch_impl(
+                result = runner(
                     input_data=input_data,
                     use_cache=use_cache,
                 )
@@ -2251,7 +2253,7 @@ def analyze_issue_batch(
                     f"{redis_error}"
                 )
 
-                result = _analyze_issue_batch_impl(
+                result = runner(
                     input_data=input_data,
                     use_cache=use_cache,
                 )
@@ -2266,7 +2268,7 @@ def analyze_issue_batch(
                 )
 
                 try:
-                    result = _analyze_issue_batch_impl(
+                    result = runner(
                         input_data=input_data,
                         use_cache=use_cache,
                     )
@@ -2322,7 +2324,7 @@ def analyze_issue_batch(
                     f"{redis_error}"
                 )
 
-                result = _analyze_issue_batch_impl(
+                result = runner(
                     input_data=input_data,
                     use_cache=use_cache,
                 )
@@ -2360,7 +2362,38 @@ def analyze_issue_batch(
                 None,
             )
 
+def analyze_publishers_only(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    언론사별 분석 요청을 single-flight로 병합한다.
 
+    api/index.py가 직접 호출하는 실시간 분석 경로다.
+    Publisher Grouping은 이 함수의 결과를 받은 뒤 별도로 실행한다.
+    """
+    return _run_with_single_flight(
+        input_data=input_data,
+        use_cache=use_cache,
+        operation_name="publishers_only",
+        runner=_analyze_publishers_only_impl,
+    )
+
+
+def analyze_issue_batch(
+    input_data: dict,
+    use_cache: bool = True,
+) -> dict:
+    """
+    언론사별 분석과 Publisher Grouping 전체 요청을
+    single-flight로 병합한다.
+    """
+    return _run_with_single_flight(
+        input_data=input_data,
+        use_cache=use_cache,
+        operation_name="issue_batch",
+        runner=_analyze_issue_batch_impl,
+    )
 
 def parse_arguments() -> argparse.Namespace:
     """
