@@ -8,6 +8,7 @@
 import argparse
 import json
 import os
+import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -54,6 +55,35 @@ ALLOWED_DIFFERENCE_LEVELS = {
     "유사함",
     "판단 어려움",
 }
+
+
+# 같은 Vercel 인스턴스 안에서 동일 비교 요청이 동시에 들어오면
+# 첫 번째 요청만 Solar 비교를 실행하고, 나머지 요청은 그 결과를 기다린다.
+# 여러 Vercel 인스턴스 사이의 중복 실행까지 막으려면 이후 Upstash 기반
+# 분산 락으로 확장해야 한다.
+_SINGLE_FLIGHT_LOCK = threading.Lock()
+_SINGLE_FLIGHT_JOBS: dict[str, dict[str, Any]] = {}
+
+
+def build_single_flight_key(
+    issue_id: str,
+    publisher_ids: list[str],
+) -> str:
+    """
+    언론사 순서가 달라도 같은 비교 요청으로 인식할 키를 만든다.
+    """
+    normalized_publishers = sorted(
+        set(publisher_ids)
+    )
+
+    return json.dumps(
+        {
+            "issue_id": issue_id,
+            "publisher_ids": normalized_publishers,
+        },
+        ensure_ascii=False,
+        sort_keys=True,
+    )
 
 
 def load_json(path: Path) -> dict:
@@ -1001,6 +1031,9 @@ def compare_publishers(
 ) -> dict:
     """
     선택된 2~4개 언론사의 분석 결과를 비교한다.
+
+    같은 프로세스에서 동일한 이슈와 언론사 조합이 동시에 요청되면
+    첫 번째 요청만 Solar를 호출하고, 나머지는 그 작업의 결과를 공유한다.
     """
     normalized_analyses = (
         normalize_publisher_analyses(
@@ -1031,79 +1064,144 @@ def compare_publishers(
 
             return cached_result
 
-    prompt = build_comparison_prompt(
+    single_flight_key = build_single_flight_key(
         issue_id=issue_id,
-        publisher_analyses=(
-            normalized_analyses
-        ),
+        publisher_ids=publisher_ids,
     )
 
-    last_error = None
+    with _SINGLE_FLIGHT_LOCK:
+        current_job = _SINGLE_FLIGHT_JOBS.get(
+            single_flight_key
+        )
 
-    for attempt in range(
-        1,
-        MAX_RETRIES + 1,
-    ):
-        try:
-            print(
-                "[Solar 비교] "
-                f"{attempt}/{MAX_RETRIES}"
+        if current_job is None:
+            current_job = {
+                "event": threading.Event(),
+                "result": None,
+                "error": None,
+            }
+            _SINGLE_FLIGHT_JOBS[
+                single_flight_key
+            ] = current_job
+            is_owner = True
+        else:
+            is_owner = False
+
+    if not is_owner:
+        print(
+            "[요청 병합] 동일 비교 작업 완료 대기"
+        )
+
+        current_job["event"].wait()
+
+        if current_job["error"] is not None:
+            raise RuntimeError(
+                "동일 비교 요청의 선행 작업이 실패했습니다."
+            ) from current_job["error"]
+
+        shared_result = current_job["result"]
+
+        if not isinstance(shared_result, dict):
+            raise RuntimeError(
+                "동일 비교 요청의 공유 결과가 없습니다."
             )
 
-            raw_result = (
-                request_solar_comparison(
-                    client=client,
-                    prompt=prompt,
+        print(
+            "[요청 병합] 완료 결과 재사용"
+        )
+
+        return shared_result
+
+    try:
+        prompt = build_comparison_prompt(
+            issue_id=issue_id,
+            publisher_analyses=(
+                normalized_analyses
+            ),
+        )
+
+        last_error = None
+
+        for attempt in range(
+            1,
+            MAX_RETRIES + 1,
+        ):
+            try:
+                print(
+                    "[Solar 비교] "
+                    f"{attempt}/{MAX_RETRIES}"
                 )
-            )
 
-            validated_result = (
-                validate_comparison_result(
-                    result=raw_result,
+                raw_result = (
+                    request_solar_comparison(
+                        client=client,
+                        prompt=prompt,
+                    )
+                )
+
+                validated_result = (
+                    validate_comparison_result(
+                        result=raw_result,
+                        issue_id=issue_id,
+                        publisher_analyses=(
+                            normalized_analyses
+                        ),
+                    )
+                )
+
+                save_comparison(
                     issue_id=issue_id,
-                    publisher_analyses=(
-                        normalized_analyses
-                    ),
-                )
-            )
-
-            save_comparison(
-                issue_id=issue_id,
-                publisher_ids=publisher_ids,
-                result=validated_result,
-            )
-
-            print(
-                "[비교 완료] "
-                + ", ".join(
-                    item["publisher"]
-                    for item
-                    in normalized_analyses
-                )
-            )
-
-            return validated_result
-
-        except Exception as error:
-            last_error = error
-
-            print(
-                "[비교 실패] "
-                f"{attempt}/{MAX_RETRIES}: "
-                f"{error}"
-            )
-
-            if attempt < MAX_RETRIES:
-                time.sleep(
-                    RETRY_WAIT_SECONDS
+                    publisher_ids=publisher_ids,
+                    result=validated_result,
                 )
 
-    raise RuntimeError(
-        "언론사 비교가 "
-        f"{MAX_RETRIES}회 모두 실패했습니다: "
-        f"{last_error}"
-    )
+                print(
+                    "[비교 완료] "
+                    + ", ".join(
+                        item["publisher"]
+                        for item
+                        in normalized_analyses
+                    )
+                )
 
+                current_job["result"] = (
+                    validated_result
+                )
+
+                return validated_result
+
+            except Exception as error:
+                last_error = error
+
+                print(
+                    "[비교 실패] "
+                    f"{attempt}/{MAX_RETRIES}: "
+                    f"{error}"
+                )
+
+                if attempt < MAX_RETRIES:
+                    time.sleep(
+                        RETRY_WAIT_SECONDS
+                    )
+
+        raise RuntimeError(
+            "언론사 비교가 "
+            f"{MAX_RETRIES}회 모두 실패했습니다: "
+            f"{last_error}"
+        )
+
+    except Exception as error:
+        current_job["error"] = error
+        raise
+
+    finally:
+        current_job["event"].set()
+
+        with _SINGLE_FLIGHT_LOCK:
+            _SINGLE_FLIGHT_JOBS.pop(
+                single_flight_key,
+                None,
+            )
 
 def analyze_input_data(
     input_data: dict,
