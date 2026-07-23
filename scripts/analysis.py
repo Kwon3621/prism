@@ -983,21 +983,43 @@ def analyze_publisher(
     ]
 
     if use_cache:
-        cached_result = (
-            get_publisher_analysis(
-                issue_id=issue_id,
-                publisher_id=publisher_id,
-                article_ids=article_ids,
-            )
+        cache_lookup_started_at = time.perf_counter()
+
+        print(
+            f"[CACHE LOOKUP START] "
+            f"publisher={publisher}"
+        )
+
+        cached_result = get_publisher_analysis(
+            issue_id=issue_id,
+            publisher_id=publisher_id,
+            article_ids=article_ids,
+        )
+
+        cache_lookup_seconds = (
+                time.perf_counter()
+                - cache_lookup_started_at
         )
 
         if cached_result:
             print(
-                f"[캐시 사용] "
-                f"{publisher} 분석 결과"
+                f"[CACHE HIT] "
+                f"publisher={publisher} "
+                f"lookup_seconds={cache_lookup_seconds:.3f}"
             )
 
             return cached_result
+
+        print(
+            f"[CACHE MISS] "
+            f"publisher={publisher} "
+            f"lookup_seconds={cache_lookup_seconds:.3f}"
+        )
+    else:
+        print(
+            f"[CACHE DISABLED] "
+            f"publisher={publisher}"
+        )
 
     prompt = build_publisher_prompt(
         issue_id=issue_id,
@@ -1014,14 +1036,28 @@ def analyze_publisher(
         MAX_RETRIES + 1,
     ):
         try:
+            solar_started_at = time.perf_counter()
+
             print(
-                f"[Solar 분석] {publisher} "
-                f"{attempt}/{MAX_RETRIES}"
+                f"[SOLAR CALL START] "
+                f"publisher={publisher} "
+                f"attempt={attempt}/{MAX_RETRIES}"
             )
 
             raw_result = request_solar_analysis(
                 client=client,
                 prompt=prompt,
+            )
+
+            solar_seconds = (
+                    time.perf_counter()
+                    - solar_started_at
+            )
+
+            print(
+                f"[SOLAR CALL END] "
+                f"publisher={publisher} "
+                f"solar_seconds={solar_seconds:.3f}"
             )
 
             validated_result = (
