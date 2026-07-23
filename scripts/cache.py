@@ -24,6 +24,7 @@ else:
 
 PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
 COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
+ISSUE_RESULT_CACHE_DIR = CACHE_ROOT / "issue_results"
 KEYWORD_EXTRACTION_CACHE_DIR = CACHE_ROOT / "keyword_extraction"
 
 # analysis.py/compare.py의 Solar 프롬프트나 검증 로직을 바꾸면 이 값을
@@ -317,6 +318,11 @@ def ensure_cache_directories() -> None:
         exist_ok=True,
     )
 
+    ISSUE_RESULT_CACHE_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
     KEYWORD_EXTRACTION_CACHE_DIR.mkdir(
         parents=True,
         exist_ok=True,
@@ -384,6 +390,70 @@ def make_comparison_cache_key(
         PROMPT_VERSION,
         issue_id,
         sorted(publisher_ids),
+    )
+
+
+def make_issue_result_cache_key(
+    input_data: dict,
+) -> str:
+    """
+    ?? ?? ?? ?? ??? ?? ?? ???.
+
+    ?? ???? ?? ?? ?? ?? ?? ??? ????
+    ??? ?? ?? ????.
+    """
+    publishers = input_data.get("publishers", [])
+    normalized_publishers = []
+
+    if isinstance(publishers, list):
+        for publisher_item in publishers:
+            if not isinstance(publisher_item, dict):
+                continue
+
+            articles = publisher_item.get("articles", [])
+            normalized_articles = []
+
+            if isinstance(articles, list):
+                for article in articles:
+                    if not isinstance(article, dict):
+                        continue
+
+                    normalized_articles.append(
+                        {
+                            "article_id": str(
+                                article.get("article_id") or ""
+                            ).strip(),
+                            "updated_at": str(
+                                article.get("updated_at") or ""
+                            ).strip(),
+                        }
+                    )
+
+            normalized_articles.sort(
+                key=lambda item: (
+                    item["article_id"],
+                    item["updated_at"],
+                )
+            )
+
+            normalized_publishers.append(
+                {
+                    "publisher_id": str(
+                        publisher_item.get("publisher_id") or ""
+                    ).strip(),
+                    "articles": normalized_articles,
+                }
+            )
+
+    normalized_publishers.sort(
+        key=lambda item: item["publisher_id"]
+    )
+
+    return make_cache_key(
+        "issue-analysis-result",
+        PROMPT_VERSION,
+        str(input_data.get("issue_id") or "").strip(),
+        normalized_publishers,
     )
 
 
@@ -597,6 +667,80 @@ def save_comparison(
     )
 
     return cache_path
+
+def get_issue_result(
+    input_data: dict,
+) -> dict | None:
+    """
+    ?? ?? ??? ??? ??? ????.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_issue_result_cache_key(
+        input_data
+    )
+
+    cache_path = (
+        ISSUE_RESULT_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cached_data = _read_hybrid_cache(
+        "issue_analysis_result",
+        cache_key,
+        cache_path,
+    )
+
+    if not cached_data:
+        return None
+
+    result = cached_data.get("result")
+
+    if not isinstance(result, dict):
+        return None
+
+    return result
+
+
+def save_issue_result(
+    input_data: dict,
+    result: dict,
+) -> Path:
+    """
+    ?? ?? ??? ??? ??? ????.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_issue_result_cache_key(
+        input_data
+    )
+
+    cache_path = (
+        ISSUE_RESULT_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cache_data = {
+        "cache_type": "issue_analysis_result",
+        "cache_key": cache_key,
+        "issue_id": str(
+            input_data.get("issue_id") or ""
+        ).strip(),
+        "created_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "result": result,
+    }
+
+    _write_hybrid_cache(
+        "issue_analysis_result",
+        cache_key,
+        cache_path,
+        cache_data,
+    )
+
+    return cache_path
+
 
 def make_keyword_extraction_cache_key(
     query: str,

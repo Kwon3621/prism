@@ -26,6 +26,10 @@ from analysis import (  # noqa: E402
     group_publishers,
 )
 from compare import analyze_input_data as analyze_comparison_input  # noqa: E402
+from cache import (  # noqa: E402
+    get_issue_result,
+    save_issue_result,
+)
 
 
 app = Flask(__name__)
@@ -75,6 +79,24 @@ def analyze_issue_with_default_comparisons(body: dict) -> dict:
     (app.js:resolvePrecomputedIssueData가 핫토픽 정적 데이터에 쓰는 것과
     같은 방식).
     """
+    cached_result = get_issue_result(body)
+
+    if cached_result is not None:
+        app.logger.info(
+            "Issue analysis result cache hit: issue_id=%s",
+            body.get("issue_id"),
+        )
+
+        return {
+            **cached_result,
+            "issue_result_cache_hit": True,
+        }
+
+    app.logger.info(
+        "Issue analysis result cache miss: issue_id=%s",
+        body.get("issue_id"),
+    )
+
     analysis_result = analyze_publishers_only(
         body,
         use_cache=True,
@@ -126,11 +148,21 @@ def analyze_issue_with_default_comparisons(body: dict) -> dict:
                     error,
                 )
 
-    return {
+    result = {
         **analysis_result,
         "publisher_grouping": grouping_result,
         "default_comparisons": default_comparisons,
         "processed_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+    save_issue_result(
+        input_data=body,
+        result=result,
+    )
+
+    return {
+        **result,
+        "issue_result_cache_hit": False,
     }
 
 
