@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import tempfile
+import requests
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -35,6 +36,272 @@ PROMPT_VERSION = "2026-07-21-tone-only-evidence"
 # 바뀌어도 다른 쪽 캐시까지 전부 무효화되는 걸 피하기 위해서다.
 KEYWORD_EXTRACTION_PROMPT_VERSION = "2026-07-21-cache-with-articles"
 
+
+
+UPSTASH_REDIS_REST_URL = os.getenv(
+    "UPSTASH_REDIS_REST_URL",
+    "",
+).rstrip("/")
+
+UPSTASH_REDIS_REST_TOKEN = os.getenv(
+    "UPSTASH_REDIS_REST_TOKEN",
+    "",
+)
+
+CACHE_TTL_SECONDS = int(
+    os.getenv(
+        "PRISM_CACHE_TTL_SECONDS",
+        "21600",
+    )
+)
+
+
+def is_remote_cache_enabled() -> bool:
+    """
+    Upstash Redis 환경변수가 모두 있으면 원격 캐시를 사용한다.
+    """
+    return bool(
+        UPSTASH_REDIS_REST_URL
+        and UPSTASH_REDIS_REST_TOKEN
+    )
+
+
+def _execute_redis_command(
+    *command_parts: Any,
+) -> Any:
+    """
+    Upstash REST API로 Redis 명령 하나를 실행한다.
+    """
+    if not is_remote_cache_enabled():
+        raise RuntimeError(
+            "Upstash Redis 환경변수가 설정되지 않았습니다."
+        )
+
+    response = requests.post(
+        UPSTASH_REDIS_REST_URL,
+        headers={
+            "Authorization": (
+                f"Bearer {UPSTASH_REDIS_REST_TOKEN}"
+            ),
+            "Content-Type": "application/json",
+        },
+        json=list(command_parts),
+        timeout=10,
+    )
+    response.raise_for_status()
+
+    response_data = response.json()
+
+    if not isinstance(response_data, dict):
+        raise RuntimeError(
+            "Upstash Redis 응답 형식이 올바르지 않습니다."
+        )
+
+    redis_error = response_data.get("error")
+
+    if redis_error:
+        raise RuntimeError(
+            f"Upstash Redis 명령 실패: {redis_error}"
+        )
+
+    return response_data.get("result")
+
+
+def _remote_cache_key(
+    cache_type: str,
+    cache_key: str,
+) -> str:
+    """
+    single-flight 키와 충돌하지 않도록 결과 캐시 전용 namespace를 쓴다.
+    """
+    return f"prism:cache:{cache_type}:{cache_key}"
+
+
+def _read_remote_cache(
+    cache_type: str,
+    cache_key: str,
+) -> dict | None:
+    """
+    Upstash에서 캐시 문서를 읽는다. 장애 시 None으로 폴백한다.
+    """
+    if not is_remote_cache_enabled():
+        return None
+
+    redis_key = _remote_cache_key(
+        cache_type,
+        cache_key,
+    )
+
+    try:
+        stored_value = _execute_redis_command(
+            "GET",
+            redis_key,
+        )
+    except (
+        requests.RequestException,
+        json.JSONDecodeError,
+        RuntimeError,
+        ValueError,
+    ) as error:
+        print(
+            f"[UPSTASH CACHE ERROR] "
+            f"type={cache_type} operation=get "
+            f"error={error}"
+        )
+        return None
+
+    if stored_value is None:
+        print(
+            f"[UPSTASH CACHE MISS] "
+            f"type={cache_type}"
+        )
+        return None
+
+    if not isinstance(stored_value, str):
+        print(
+            f"[UPSTASH CACHE INVALID] "
+            f"type={cache_type}"
+        )
+        return None
+
+    try:
+        cached_data = json.loads(
+            stored_value
+        )
+    except json.JSONDecodeError:
+        print(
+            f"[UPSTASH CACHE INVALID JSON] "
+            f"type={cache_type}"
+        )
+        return None
+
+    if not isinstance(cached_data, dict):
+        return None
+
+    print(
+        f"[UPSTASH CACHE HIT] "
+        f"type={cache_type}"
+    )
+
+    return cached_data
+
+
+def _write_remote_cache(
+    cache_type: str,
+    cache_key: str,
+    cache_data: dict,
+) -> bool:
+    """
+    Upstash에 캐시 문서를 TTL과 함께 저장한다.
+    """
+    if not is_remote_cache_enabled():
+        return False
+
+    redis_key = _remote_cache_key(
+        cache_type,
+        cache_key,
+    )
+
+    serialized_data = json.dumps(
+        cache_data,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
+
+    try:
+        _execute_redis_command(
+            "SET",
+            redis_key,
+            serialized_data,
+            "EX",
+            CACHE_TTL_SECONDS,
+        )
+    except (
+        requests.RequestException,
+        json.JSONDecodeError,
+        RuntimeError,
+        ValueError,
+    ) as error:
+        print(
+            f"[UPSTASH CACHE ERROR] "
+            f"type={cache_type} operation=set "
+            f"error={error}"
+        )
+        return False
+
+    print(
+        f"[UPSTASH CACHE SAVE] "
+        f"type={cache_type} "
+        f"ttl_seconds={CACHE_TTL_SECONDS}"
+    )
+
+    return True
+
+
+def _read_hybrid_cache(
+    cache_type: str,
+    cache_key: str,
+    cache_path: Path,
+) -> dict | None:
+    """
+    원격 캐시를 우선 조회하고, 없거나 장애면 로컬 파일로 폴백한다.
+    로컬 적중 시 원격 캐시를 다시 채운다.
+    """
+    remote_data = _read_remote_cache(
+        cache_type,
+        cache_key,
+    )
+
+    if remote_data is not None:
+        return remote_data
+
+    local_data = _read_cache_file(
+        cache_path
+    )
+
+    if local_data is None:
+        return None
+
+    print(
+        f"[LOCAL CACHE HIT] "
+        f"type={cache_type}"
+    )
+
+    _write_remote_cache(
+        cache_type,
+        cache_key,
+        local_data,
+    )
+
+    return local_data
+
+
+def _write_hybrid_cache(
+    cache_type: str,
+    cache_key: str,
+    cache_path: Path,
+    cache_data: dict,
+) -> None:
+    """
+    Upstash에 저장하고 로컬 파일에도 보조 사본을 남긴다.
+    원격 장애가 나도 기존 로컬 개발 방식은 유지된다.
+    """
+    _write_remote_cache(
+        cache_type,
+        cache_key,
+        cache_data,
+    )
+
+    try:
+        _write_cache_file(
+            cache_path,
+            cache_data,
+        )
+    except OSError as error:
+        print(
+            f"[LOCAL CACHE SAVE ERROR] "
+            f"type={cache_type} error={error}"
+        )
 
 def ensure_cache_directories() -> None:
     """
@@ -192,8 +459,10 @@ def get_publisher_analysis(
         / f"{cache_key}.json"
     )
 
-    cached_data = _read_cache_file(
-        cache_path
+    cached_data = _read_hybrid_cache(
+        "publisher_analysis",
+        cache_key,
+        cache_path,
     )
 
     if not cached_data:
@@ -241,7 +510,9 @@ def save_publisher_analysis(
         "result": result,
     }
 
-    _write_cache_file(
+    _write_hybrid_cache(
+        "publisher_analysis",
+        cache_key,
         cache_path,
         cache_data,
     )
@@ -268,8 +539,10 @@ def get_comparison(
         / f"{cache_key}.json"
     )
 
-    cached_data = _read_cache_file(
-        cache_path
+    cached_data = _read_hybrid_cache(
+        "publisher_comparison",
+        cache_key,
+        cache_path,
     )
 
     if not cached_data:
@@ -316,7 +589,9 @@ def save_comparison(
         "result": result,
     }
 
-    _write_cache_file(
+    _write_hybrid_cache(
+        "publisher_comparison",
+        cache_key,
         cache_path,
         cache_data,
     )
@@ -360,8 +635,10 @@ def get_keyword_extraction(
         / f"{cache_key}.json"
     )
 
-    cached_data = _read_cache_file(
-        cache_path
+    cached_data = _read_hybrid_cache(
+        "keyword_extraction",
+        cache_key,
+        cache_path,
     )
 
     if not cached_data:
@@ -409,7 +686,9 @@ def save_keyword_extraction(
         "result": result,
     }
 
-    _write_cache_file(
+    _write_hybrid_cache(
+        "keyword_extraction",
+        cache_key,
         cache_path,
         cache_data,
     )

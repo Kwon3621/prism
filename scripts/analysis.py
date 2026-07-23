@@ -30,7 +30,6 @@ from solar_client import (
     wait_seconds_for_retry,
 )
 
-
 DEFAULT_INPUT_PATH = Path(
     "data/representative_articles.json"
 )
@@ -73,6 +72,8 @@ DISTRIBUTED_SINGLE_FLIGHT_DEADLINE_SECONDS = (
     VERCEL_FUNCTION_MAX_DURATION_SECONDS - 15
 )
 DISTRIBUTED_POLL_INTERVAL_SECONDS = 1
+
+
 def is_distributed_single_flight_enabled() -> bool:
     """
     Upstash Redis 환경변수가 모두 설정되어 있는지 확인한다.
@@ -84,7 +85,7 @@ def is_distributed_single_flight_enabled() -> bool:
 
 
 def execute_redis_command(
-    *command_parts: Any,
+        *command_parts: Any,
 ) -> Any:
     """
     Upstash REST API를 통해 Redis 명령 하나를 실행한다.
@@ -124,8 +125,9 @@ def execute_redis_command(
 
     return response_data.get("result")
 
+
 def build_distributed_single_flight_keys(
-    single_flight_key: str,
+        single_flight_key: str,
 ) -> tuple[str, str]:
     """
     긴 요청 키를 SHA-256 해시로 변환해
@@ -143,9 +145,11 @@ def build_distributed_single_flight_keys(
     )
 
     return lock_key, result_key
+
+
 def try_acquire_distributed_lock(
-    lock_key: str,
-    owner_token: str,
+        lock_key: str,
+        owner_token: str,
 ) -> bool:
     """
     Redis에 lock이 없을 때만 새 lock을 만든다.
@@ -160,11 +164,14 @@ def try_acquire_distributed_lock(
     )
 
     return result == "OK"
+
+
 _SINGLE_FLIGHT_LOCK = threading.Lock()
 _SINGLE_FLIGHT_JOBS: dict[str, dict[str, Any]] = {}
 
+
 def get_distributed_result(
-    result_key: str,
+        result_key: str,
 ) -> dict | None:
     """
     Redis에 저장된 완료 결과를 읽는다.
@@ -193,9 +200,11 @@ def get_distributed_result(
         )
 
     return parsed_result
+
+
 def save_distributed_result(
-    result_key: str,
-    result: dict,
+        result_key: str,
+        result: dict,
 ) -> None:
     """
     완료된 분석 결과를 Redis에 TTL과 함께 저장한다.
@@ -213,9 +222,11 @@ def save_distributed_result(
         "EX",
         DISTRIBUTED_RESULT_TTL_SECONDS,
     )
+
+
 def release_distributed_lock(
-    lock_key: str,
-    owner_token: str,
+        lock_key: str,
+        owner_token: str,
 ) -> None:
     """
     현재 요청이 소유한 lock일 때만 안전하게 삭제한다.
@@ -234,6 +245,8 @@ def release_distributed_lock(
         lock_key,
         owner_token,
     )
+
+
 def wait_for_distributed_result(
     lock_key: str,
     result_key: str,
@@ -288,8 +301,9 @@ def wait_for_distributed_result(
         "기다리는 시간이 초과되었습니다."
     )
 
+
 def build_issue_single_flight_key(
-    input_data: dict,
+        input_data: dict,
 ) -> str:
     """
     같은 이슈·같은 언론사·같은 기사 구성인지 판단할 키를 만든다.
@@ -304,8 +318,8 @@ def build_issue_single_flight_key(
     if isinstance(publishers, list):
         for publisher_item in publishers:
             if not isinstance(
-                publisher_item,
-                dict,
+                    publisher_item,
+                    dict,
             ):
                 continue
 
@@ -319,8 +333,8 @@ def build_issue_single_flight_key(
             if isinstance(articles, list):
                 for article in articles:
                     if not isinstance(
-                        article,
-                        dict,
+                            article,
+                            dict,
                     ):
                         continue
 
@@ -388,8 +402,8 @@ def load_json(path: Path) -> dict:
         )
 
     with path.open(
-        "r",
-        encoding="utf-8",
+            "r",
+            encoding="utf-8",
     ) as file:
         data = json.load(file)
 
@@ -402,8 +416,8 @@ def load_json(path: Path) -> dict:
 
 
 def save_json(
-    path: Path,
-    data: dict,
+        path: Path,
+        data: dict,
 ) -> None:
     """
     결과를 UTF-8 JSON 파일로 저장한다.
@@ -414,8 +428,8 @@ def save_json(
     )
 
     with path.open(
-        "w",
-        encoding="utf-8",
+            "w",
+            encoding="utf-8",
     ) as file:
         json.dump(
             data,
@@ -426,7 +440,7 @@ def save_json(
 
 
 def normalize_articles(
-    articles: Any,
+        articles: Any,
 ) -> list[dict]:
     """
     대표 기사 입력값을 분석에 필요한 공통 구조로 정리한다.
@@ -449,8 +463,8 @@ def normalize_articles(
     normalized_articles = []
 
     for index, article in enumerate(
-        articles,
-        start=1,
+            articles,
+            start=1,
     ):
         if not isinstance(article, dict):
             raise ValueError(
@@ -499,7 +513,7 @@ def normalize_articles(
 
 
 def build_article_text(
-    articles: list[dict],
+        articles: list[dict],
 ) -> str:
     """
     대표 기사 목록을 Solar 프롬프트에 넣을 텍스트로 변환한다.
@@ -507,8 +521,8 @@ def build_article_text(
     sections = []
 
     for index, article in enumerate(
-        articles,
-        start=1,
+            articles,
+            start=1,
     ):
         sections.append(
             f"""
@@ -528,11 +542,11 @@ RSS 설명: {article["description"]}
 
 
 def build_publisher_prompt(
-    issue_id: str,
-    issue_title: str,
-    publisher_id: str,
-    publisher: str,
-    articles: list[dict],
+        issue_id: str,
+        issue_title: str,
+        publisher_id: str,
+        publisher: str,
+        articles: list[dict],
 ) -> str:
     """
     언론사 한 곳의 대표 기사 1~2개를 분석하기 위한
@@ -682,12 +696,71 @@ direction은 다음 중 하나만 사용하세요.
 """.strip()
 
 
+def build_fallback_article_summary(
+        source_articles: list[dict],
+) -> str:
+    """
+    Solar가 article_summary를 비웠을 때 입력 기사 제목만으로
+    사실을 추가하지 않는 최소 요약을 만든다.
+    """
+    titles = [
+        clean_string(article.get("title"))
+        for article in source_articles
+        if isinstance(article, dict)
+           and clean_string(article.get("title"))
+    ]
+
+    if not titles:
+        return ""
+
+    if len(titles) == 1:
+        return (
+            f'대표 기사는 "{titles[0]}" 관련 내용을 다룹니다.'
+        )
+
+    return (
+        f'대표 기사들은 "{titles[0]}"와 '
+        f'"{titles[1]}" 관련 내용을 다룹니다.'
+    )
+
+
+def build_fallback_main_focus(
+        analysis: dict,
+        source_articles: list[dict],
+) -> str:
+    """
+    main_focus가 비었을 때 Solar가 이미 반환한 다른 분석 항목을
+    우선 사용하고, 그것도 없으면 기사 제목을 기준으로 최소 보완한다.
+    """
+    cleaned_headline_frame = clean_string(
+        analysis.get("headline_frame")
+    )
+
+    if cleaned_headline_frame:
+        return cleaned_headline_frame
+
+    titles = [
+        clean_string(article.get("title"))
+        for article in source_articles
+        if isinstance(article, dict)
+           and clean_string(article.get("title"))
+    ]
+
+    if not titles:
+        return ""
+
+    return (
+        f'기사 제목에서 확인되는 "{titles[0]}" 관련 내용을 '
+        "핵심적으로 다룹니다."
+    )
+
+
 def validate_analysis_result(
-    result: Any,
-    issue_id: str,
-    publisher_id: str,
-    publisher: str,
-    source_articles: list[dict],
+        result: Any,
+        issue_id: str,
+        publisher_id: str,
+        publisher: str,
+        source_articles: list[dict],
 ) -> dict:
     """
     Solar 결과가 고정된 Structured Output을 따르는지 검사하고,
@@ -740,8 +813,8 @@ def validate_analysis_result(
     # "판단 어려움"이 아닌 태도를 붙였다면 근거 없이 통과시키지 않는다 —
     # 근거를 못 찾으면 category 자체를 "판단 어려움"으로 썼어야 한다.
     if (
-        tone_category != "판단 어려움"
-        and not tone_evidence
+            tone_category != "판단 어려움"
+            and not tone_evidence
     ):
         raise ValueError(
             f"tone.category가 '{tone_category}'인데 "
@@ -761,8 +834,8 @@ def validate_analysis_result(
     )
 
     if (
-        outlook_direction
-        not in allowed_outlook_directions
+            outlook_direction
+            not in allowed_outlook_directions
     ):
         outlook_direction = "전망 없음"
 
@@ -784,20 +857,31 @@ def validate_analysis_result(
             for article in source_articles
         ],
         "analysis": {
-            "article_summary": clean_string(
-                analysis.get(
-                    "article_summary"
-                )
+            "article_summary": (
+                    clean_string(
+                        analysis.get(
+                            "article_summary"
+                        )
+                    )
+                    or build_fallback_article_summary(
+                source_articles
+            )
             ),
             "headline_frame": clean_string(
                 analysis.get(
                     "headline_frame"
                 )
             ),
-            "main_focus": clean_string(
-                analysis.get(
-                    "main_focus"
-                )
+            "main_focus": (
+                    clean_string(
+                        analysis.get(
+                            "main_focus"
+                        )
+                    )
+                    or build_fallback_main_focus(
+                analysis,
+                source_articles,
+            )
             ),
             "keywords": clean_string_list(
                 analysis.get("keywords"),
@@ -876,22 +960,22 @@ def validate_analysis_result(
         "analysis"
     ]["article_summary"]:
         raise ValueError(
-            "article_summary가 비어 있습니다."
+            "article_summary를 생성할 기사 제목이 없습니다."
         )
 
     if not normalized_result[
         "analysis"
     ]["main_focus"]:
         raise ValueError(
-            "main_focus가 비어 있습니다."
+            "main_focus를 생성할 분석 근거가 없습니다."
         )
 
     return normalized_result
 
 
 def request_solar_analysis(
-    client: OpenAI,
-    prompt: str,
+        client: OpenAI,
+        prompt: str,
 ) -> dict:
     """
     Solar API를 호출하고 JSON 응답을 파싱한다.
@@ -902,13 +986,13 @@ def request_solar_analysis(
 
 
 def analyze_publisher(
-    client: OpenAI,
-    issue_id: str,
-    issue_title: str,
-    publisher_id: str,
-    publisher: str,
-    articles: list[dict],
-    use_cache: bool = True,
+        client: OpenAI,
+        issue_id: str,
+        issue_title: str,
+        publisher_id: str,
+        publisher: str,
+        articles: list[dict],
+        use_cache: bool = True,
 ) -> dict:
     """
     언론사 한 곳의 대표 기사 1~2개를 분석한다.
@@ -930,21 +1014,43 @@ def analyze_publisher(
     ]
 
     if use_cache:
-        cached_result = (
-            get_publisher_analysis(
-                issue_id=issue_id,
-                publisher_id=publisher_id,
-                article_ids=article_ids,
-            )
+        cache_lookup_started_at = time.perf_counter()
+
+        print(
+            f"[CACHE LOOKUP START] "
+            f"publisher={publisher}"
+        )
+
+        cached_result = get_publisher_analysis(
+            issue_id=issue_id,
+            publisher_id=publisher_id,
+            article_ids=article_ids,
+        )
+
+        cache_lookup_seconds = (
+                time.perf_counter()
+                - cache_lookup_started_at
         )
 
         if cached_result:
             print(
-                f"[캐시 사용] "
-                f"{publisher} 분석 결과"
+                f"[CACHE HIT] "
+                f"publisher={publisher} "
+                f"lookup_seconds={cache_lookup_seconds:.3f}"
             )
 
             return cached_result
+
+        print(
+            f"[CACHE MISS] "
+            f"publisher={publisher} "
+            f"lookup_seconds={cache_lookup_seconds:.3f}"
+        )
+    else:
+        print(
+            f"[CACHE DISABLED] "
+            f"publisher={publisher}"
+        )
 
     prompt = build_publisher_prompt(
         issue_id=issue_id,
@@ -957,18 +1063,32 @@ def analyze_publisher(
     last_error = None
 
     for attempt in range(
-        1,
-        MAX_RETRIES + 1,
+            1,
+            MAX_RETRIES + 1,
     ):
         try:
+            solar_started_at = time.perf_counter()
+
             print(
-                f"[Solar 분석] {publisher} "
-                f"{attempt}/{MAX_RETRIES}"
+                f"[SOLAR CALL START] "
+                f"publisher={publisher} "
+                f"attempt={attempt}/{MAX_RETRIES}"
             )
 
             raw_result = request_solar_analysis(
                 client=client,
                 prompt=prompt,
+            )
+
+            solar_seconds = (
+                    time.perf_counter()
+                    - solar_started_at
+            )
+
+            print(
+                f"[SOLAR CALL END] "
+                f"publisher={publisher} "
+                f"solar_seconds={solar_seconds:.3f}"
             )
 
             validated_result = (
@@ -1021,8 +1141,8 @@ def analyze_publisher(
 
 
 def analyze_input_data(
-    input_data: dict,
-    use_cache: bool = True,
+        input_data: dict,
+        use_cache: bool = True,
 ) -> dict:
     """
     JSON 입력 파일에서 언론사 한 곳의 정보를 읽고 분석한다.
@@ -1079,8 +1199,10 @@ def analyze_input_data(
         articles=articles,
         use_cache=use_cache,
     )
+
+
 def normalize_grouping_analyses(
-    publisher_analyses: Any,
+        publisher_analyses: Any,
 ) -> list[dict]:
     """
     Publisher Grouping에 사용할 언론사별 분석 결과를 검증한다.
@@ -1100,7 +1222,7 @@ def normalize_grouping_analyses(
     issue_ids = set()
 
     for index, item in enumerate(
-        publisher_analyses
+            publisher_analyses
     ):
         if not isinstance(item, dict):
             raise ValueError(
@@ -1171,7 +1293,7 @@ def normalize_grouping_analyses(
 
 
 def build_grouping_text(
-    publisher_analyses: list[dict],
+        publisher_analyses: list[dict],
 ) -> str:
     """
     언론사별 Structured Output을 그룹화용 텍스트로 변환한다.
@@ -1194,45 +1316,45 @@ def build_grouping_text(
 
 핵심 키워드:
 {json.dumps(
-    analysis.get("keywords", []),
-    ensure_ascii=False,
-)}
+                analysis.get("keywords", []),
+                ensure_ascii=False,
+            )}
 
 강조된 원인:
 {json.dumps(
-    analysis.get("causes", []),
-    ensure_ascii=False,
-)}
+                analysis.get("causes", []),
+                ensure_ascii=False,
+            )}
 
 강조된 배경:
 {json.dumps(
-    analysis.get("background", []),
-    ensure_ascii=False,
-)}
+                analysis.get("background", []),
+                ensure_ascii=False,
+            )}
 
 강조된 영향:
 {json.dumps(
-    analysis.get("emphasized_effects", []),
-    ensure_ascii=False,
-)}
+                analysis.get("emphasized_effects", []),
+                ensure_ascii=False,
+            )}
 
 영향 대상:
 {json.dumps(
-    analysis.get("affected_groups", []),
-    ensure_ascii=False,
-)}
+                analysis.get("affected_groups", []),
+                ensure_ascii=False,
+            )}
 
 보도 태도:
 {json.dumps(
-    analysis.get("tone", {}),
-    ensure_ascii=False,
-)}
+                analysis.get("tone", {}),
+                ensure_ascii=False,
+            )}
 
 향후 전망:
 {json.dumps(
-    analysis.get("outlook", {}),
-    ensure_ascii=False,
-)}
+                analysis.get("outlook", {}),
+                ensure_ascii=False,
+            )}
 """.strip()
         )
 
@@ -1242,8 +1364,8 @@ def build_grouping_text(
 
 
 def build_grouping_prompt(
-    issue_id: str,
-    publisher_analyses: list[dict],
+        issue_id: str,
+        publisher_analyses: list[dict],
 ) -> str:
     """
     언론사별 분석 결과를 핵심 관점과 보도 경향에 따라
@@ -1622,9 +1744,9 @@ def check_grouping_result_for_example_leakage(
 
 
 def validate_grouping_result(
-    result: Any,
-    issue_id: str,
-    publisher_analyses: list[dict],
+        result: Any,
+        issue_id: str,
+        publisher_analyses: list[dict],
 ) -> dict:
     """
     Solar의 Publisher Grouping 결과를 검증하고
@@ -1668,8 +1790,8 @@ def validate_grouping_result(
     seen_group_ids = set()
 
     for index, group in enumerate(
-        groups,
-        start=1,
+            groups,
+            start=1,
     ):
         if not isinstance(group, dict):
             raise ValueError(
@@ -1704,8 +1826,8 @@ def validate_grouping_result(
             )
 
             if (
-                publisher_id
-                not in expected_publishers
+                    publisher_id
+                    not in expected_publishers
             ):
                 continue
 
@@ -1767,8 +1889,8 @@ def validate_grouping_result(
         )
 
     missing_publishers = (
-        set(expected_publishers)
-        - assigned_publishers
+            set(expected_publishers)
+            - assigned_publishers
     )
 
     # Solar가 드물게 언론사 하나를 그룹 목록에서 누락시키는 경우
@@ -1819,8 +1941,8 @@ def validate_grouping_result(
     if isinstance(raw_contrasts, list):
         for contrast in raw_contrasts:
             if not isinstance(
-                contrast,
-                dict,
+                    contrast,
+                    dict,
             ):
                 continue
 
@@ -1832,8 +1954,8 @@ def validate_grouping_result(
             )
 
             if not isinstance(
-                contrast_group_ids,
-                list,
+                    contrast_group_ids,
+                    list,
             ):
                 continue
 
@@ -1842,7 +1964,7 @@ def validate_grouping_result(
                 for group_id
                 in contrast_group_ids
                 if clean_string(group_id)
-                in group_ids
+                   in group_ids
             ]
 
             if len(valid_group_ids) < 2:
@@ -1902,8 +2024,8 @@ def validate_grouping_result(
 
 
 def group_publishers(
-    client: OpenAI,
-    publisher_analyses: list[dict],
+        client: OpenAI,
+        publisher_analyses: list[dict],
 ) -> dict:
     """
     동일 이슈의 언론사별 Structured Output을
@@ -1929,8 +2051,8 @@ def group_publishers(
     last_error = None
 
     for attempt in range(
-        1,
-        MAX_RETRIES + 1,
+            1,
+            MAX_RETRIES + 1,
     ):
         try:
             print(
@@ -1985,8 +2107,8 @@ def group_publishers(
 
 
 def _analyze_publishers_only_impl(
-    input_data: dict,
-    use_cache: bool = True,
+        input_data: dict,
+        use_cache: bool = True,
 ) -> dict:
     """
     이슈별 publishers 배열을 순회하며 각 언론사를 독립적으로 분석한다.
@@ -2049,12 +2171,12 @@ def _analyze_publishers_only_impl(
     valid_publisher_items = []
 
     for index, publisher_item in enumerate(
-        publishers,
-        start=1,
+            publishers,
+            start=1,
     ):
         if not isinstance(
-            publisher_item,
-            dict,
+                publisher_item,
+                dict,
         ):
             failed_publishers.append(
                 {
@@ -2130,10 +2252,10 @@ def _analyze_publishers_only_impl(
         )
 
     with ThreadPoolExecutor(
-        max_workers=max(
-            len(valid_publisher_items),
-            1,
-        ),
+            max_workers=max(
+                len(valid_publisher_items),
+                1,
+            ),
     ) as executor:
         future_to_item = {
             executor.submit(
@@ -2206,8 +2328,8 @@ def _analyze_publishers_only_impl(
 
 
 def _analyze_issue_batch_impl(
-    input_data: dict,
-    use_cache: bool = True,
+        input_data: dict,
+        use_cache: bool = True,
 ) -> dict:
     """
     B팀이 전달한 이슈별 publishers 배열을 순회하며
@@ -2236,13 +2358,13 @@ def _analyze_issue_batch_impl(
             timezone.utc
         ).isoformat(),
     }
-    
+
 
 def _run_with_single_flight(
-    input_data: dict,
-    use_cache: bool,
-    operation_name: str,
-    runner: Callable[..., dict],
+        input_data: dict,
+        use_cache: bool,
+        operation_name: str,
+        runner: Callable[..., dict],
 ) -> dict:
     """
     동일한 이슈 분석 요청을 하나의 실행 작업으로 병합한다.
@@ -2255,7 +2377,7 @@ def _run_with_single_flight(
             f"{operation_name}:"
             + build_issue_single_flight_key(
         input_data
-        )
+    )
     )
 
     with _SINGLE_FLIGHT_LOCK:
@@ -2299,8 +2421,8 @@ def _run_with_single_flight(
         ]
 
         if not isinstance(
-            shared_result,
-            dict,
+                shared_result,
+                dict,
         ):
             raise RuntimeError(
                 "동일 이슈 분석의 공유 결과가 "
@@ -2540,9 +2662,10 @@ def _run_with_single_flight(
                 None,
             )
 
+
 def analyze_publishers_only(
-    input_data: dict,
-    use_cache: bool = True,
+        input_data: dict,
+        use_cache: bool = True,
 ) -> dict:
     """
     언론사별 분석 요청을 single-flight로 병합한다.
@@ -2559,8 +2682,8 @@ def analyze_publishers_only(
 
 
 def analyze_issue_batch(
-    input_data: dict,
-    use_cache: bool = True,
+        input_data: dict,
+        use_cache: bool = True,
 ) -> dict:
     """
     언론사별 분석과 Publisher Grouping 전체 요청을
@@ -2572,6 +2695,7 @@ def analyze_issue_batch(
         operation_name="issue_batch",
         runner=_analyze_issue_batch_impl,
     )
+
 
 def parse_arguments() -> argparse.Namespace:
     """
