@@ -25,6 +25,14 @@
     {
       "source": "/api/compare",
       "destination": "/api/index"
+    },
+    {
+      "source": "/api/issue-snapshot",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/api/issue-snapshot/:issueId",
+      "destination": "/api/index"
     }
   ]
 }

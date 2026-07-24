@@ -26,6 +26,7 @@ from analysis import (  # noqa: E402
     group_publishers,
 )
 from compare import analyze_input_data as analyze_comparison_input  # noqa: E402
+from cache import get_issue_snapshot, save_issue_snapshot  # noqa: E402
 
 
 app = Flask(__name__)
@@ -344,6 +345,123 @@ def compare_api():
 
     except Exception as error:
         app.logger.exception("언론사 비교 API 실행 실패")
+
+        return jsonify(
+            {
+                "success": False,
+                "error": str(error),
+            }
+        ), 500
+
+
+def _normalize_issue_snapshot(body: dict) -> dict:
+    """
+    /api/issue-snapshot 저장 요청 바디를 검증하고 정리한다.
+
+    공유 버튼이 보내는 currentIssue에는 화면 표시용 필드(title/summary/
+    mediaNames 등)도 섞여 있지만, 복원에 실제로 필요한 건 이 5개뿐이다.
+    """
+    issue_id = str(body.get("issue_id") or "").strip()
+    issue_title = str(body.get("issue_title") or "").strip()
+    query = str(body.get("query") or "").strip()
+    publisher_analyses = body.get("publisher_analyses")
+    publisher_grouping = body.get("publisher_grouping")
+
+    if not issue_id:
+        raise ValueError("issue_id가 없습니다.")
+
+    if (
+        not isinstance(publisher_analyses, list)
+        or len(publisher_analyses) < 2
+    ):
+        raise ValueError(
+            "publisher_analyses는 언론사 2곳 이상을 담은 배열이어야 합니다."
+        )
+
+    if not isinstance(publisher_grouping, dict):
+        publisher_grouping = {"groups": []}
+
+    return {
+        "issue_id": issue_id,
+        "issue_title": issue_title,
+        "query": query,
+        "publisher_analyses": publisher_analyses,
+        "publisher_grouping": publisher_grouping,
+    }
+
+
+@app.post("/api/issue-snapshot")
+def save_issue_snapshot_api():
+    """
+    "공유" 버튼을 누른 시점의 분석 스냅샷을 저장한다.
+
+    sessionStorage 핸드오프가 안 통하는 상황(다른 브라우저·기기로 공유
+    링크를 열었을 때)에 대비해, 서버에 issue_id 기준으로 스냅샷을 남겨둔다.
+    """
+    body = request.get_json(silent=True) or {}
+
+    try:
+        snapshot = _normalize_issue_snapshot(body)
+        save_issue_snapshot(snapshot["issue_id"], snapshot)
+
+        return jsonify({"success": True})
+
+    except ValueError as error:
+        return jsonify(
+            {
+                "success": False,
+                "error": str(error),
+            }
+        ), 400
+
+    except Exception as error:
+        app.logger.exception("이슈 스냅샷 저장 API 실행 실패")
+
+        return jsonify(
+            {
+                "success": False,
+                "error": str(error),
+            }
+        ), 500
+
+
+@app.get("/api/issue-snapshot/<issue_id>")
+def get_issue_snapshot_api(issue_id):
+    """
+    공유 링크를 통해 들어왔을 때, sessionStorage 핸드오프 대신 조회할
+    서버 스냅샷. 없으면(TTL 만료 등) 404를 반환해 프론트가 기존
+    재검색 폴백으로 자연스럽게 넘어가게 한다.
+    """
+    issue_id = str(issue_id or "").strip()
+
+    if not issue_id:
+        return jsonify(
+            {
+                "success": False,
+                "error": "issue_id가 없습니다.",
+            }
+        ), 400
+
+    try:
+        snapshot = get_issue_snapshot(issue_id)
+
+        if not snapshot:
+            return jsonify(
+                {
+                    "success": False,
+                    "error": "저장된 스냅샷이 없습니다.",
+                }
+            ), 404
+
+        return jsonify(
+            {
+                "success": True,
+                **snapshot,
+            }
+        )
+
+    except Exception as error:
+        app.logger.exception("이슈 스냅샷 조회 API 실행 실패")
 
         return jsonify(
             {

@@ -25,6 +25,7 @@ else:
 PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
 COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
 KEYWORD_EXTRACTION_CACHE_DIR = CACHE_ROOT / "keyword_extraction"
+ISSUE_SNAPSHOT_CACHE_DIR = CACHE_ROOT / "issue_snapshots"
 
 # analysis.py/compare.py의 Solar 프롬프트나 검증 로직을 바꾸면 이 값을
 # 올린다. 캐시 키에 포함시켜서, 예전 프롬프트로 만들어진 결과가 새 로직
@@ -52,6 +53,16 @@ CACHE_TTL_SECONDS = int(
     os.getenv(
         "PRISM_CACHE_TTL_SECONDS",
         "21600",
+    )
+)
+
+# 공유 링크(issue_snapshot)는 분석 결과 캐시(6시간)보다 훨씬 오래 살아있어야
+# 한다 — 공유 후 며칠 뒤에 링크를 열어도 재검색 없이 그대로 복원되는 게
+# 목적이므로, 뉴스 보관 기간(generate_news.py: RETENTION_DAYS=30일)에 맞춘다.
+ISSUE_SNAPSHOT_TTL_SECONDS = int(
+    os.getenv(
+        "PRISM_ISSUE_SNAPSHOT_TTL_SECONDS",
+        str(60 * 60 * 24 * 30),
     )
 )
 
@@ -190,6 +201,7 @@ def _write_remote_cache(
     cache_type: str,
     cache_key: str,
     cache_data: dict,
+    ttl_seconds: int = CACHE_TTL_SECONDS,
 ) -> bool:
     """
     Upstash에 캐시 문서를 TTL과 함께 저장한다.
@@ -214,7 +226,7 @@ def _write_remote_cache(
             redis_key,
             serialized_data,
             "EX",
-            CACHE_TTL_SECONDS,
+            ttl_seconds,
         )
     except (
         requests.RequestException,
@@ -232,7 +244,7 @@ def _write_remote_cache(
     print(
         f"[UPSTASH CACHE SAVE] "
         f"type={cache_type} "
-        f"ttl_seconds={CACHE_TTL_SECONDS}"
+        f"ttl_seconds={ttl_seconds}"
     )
 
     return True
@@ -242,10 +254,13 @@ def _read_hybrid_cache(
     cache_type: str,
     cache_key: str,
     cache_path: Path,
+    ttl_seconds: int = CACHE_TTL_SECONDS,
 ) -> dict | None:
     """
     원격 캐시를 우선 조회하고, 없거나 장애면 로컬 파일로 폴백한다.
-    로컬 적중 시 원격 캐시를 다시 채운다.
+    로컬 적중 시 원격 캐시를 다시 채운다(이때도 원래 저장 시와 같은
+    ttl_seconds를 써야, 6시간보다 오래 살아야 하는 이슈 스냅샷 같은 캐시가
+    로컬 폴백을 한 번 거치면서 TTL이 짧게 되돌아가지 않는다).
     """
     remote_data = _read_remote_cache(
         cache_type,
@@ -271,6 +286,7 @@ def _read_hybrid_cache(
         cache_type,
         cache_key,
         local_data,
+        ttl_seconds,
     )
 
     return local_data
@@ -281,6 +297,7 @@ def _write_hybrid_cache(
     cache_key: str,
     cache_path: Path,
     cache_data: dict,
+    ttl_seconds: int = CACHE_TTL_SECONDS,
 ) -> None:
     """
     Upstash에 저장하고 로컬 파일에도 보조 사본을 남긴다.
@@ -290,6 +307,7 @@ def _write_hybrid_cache(
         cache_type,
         cache_key,
         cache_data,
+        ttl_seconds,
     )
 
     try:
@@ -318,6 +336,11 @@ def ensure_cache_directories() -> None:
     )
 
     KEYWORD_EXTRACTION_CACHE_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    ISSUE_SNAPSHOT_CACHE_DIR.mkdir(
         parents=True,
         exist_ok=True,
     )
@@ -691,6 +714,92 @@ def save_keyword_extraction(
         cache_key,
         cache_path,
         cache_data,
+    )
+
+    return cache_path
+
+
+def make_issue_snapshot_cache_key(issue_id: str) -> str:
+    """
+    공유 링크 스냅샷의 캐시 키를 만든다. 언론사별 분석 캐시와 달리
+    PROMPT_VERSION을 포함하지 않는다 — 이건 Solar가 생성한 결과가 아니라
+    이미 검증까지 끝난 분석 결과를 그대로 보관해두는 것뿐이라, 프롬프트가
+    바뀌어도 예전에 공유된 스냅샷은 그대로 유효해야 한다.
+    """
+    return make_cache_key(
+        "issue-snapshot",
+        str(issue_id or "").strip(),
+    )
+
+
+def get_issue_snapshot(issue_id: str) -> dict | None:
+    """
+    공유 링크가 참조하는 이슈 스냅샷(issue_id/issue_title/query/
+    publisher_analyses/publisher_grouping)을 조회한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_issue_snapshot_cache_key(issue_id)
+
+    cache_path = (
+        ISSUE_SNAPSHOT_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cached_data = _read_hybrid_cache(
+        "issue_snapshot",
+        cache_key,
+        cache_path,
+        ISSUE_SNAPSHOT_TTL_SECONDS,
+    )
+
+    if not cached_data:
+        return None
+
+    result = cached_data.get("result")
+
+    if not isinstance(result, dict):
+        return None
+
+    return result
+
+
+def save_issue_snapshot(
+    issue_id: str,
+    snapshot: dict,
+) -> Path:
+    """
+    "공유" 버튼을 누른 시점의 분석 결과 스냅샷을 저장한다.
+
+    저장 시점의 publisher_analyses/publisher_grouping을 통째로 들고 있어서,
+    나중에(다른 브라우저·기기에서도) 재검색 없이 그대로 복원할 수 있다 —
+    sessionStorage 기반 핸드오프가 안 되는 공유 링크를 위한 서버 쪽 대응.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_issue_snapshot_cache_key(issue_id)
+
+    cache_path = (
+        ISSUE_SNAPSHOT_CACHE_DIR
+        / f"{cache_key}.json"
+    )
+
+    cache_data = {
+        "cache_type": "issue_snapshot",
+        "cache_key": cache_key,
+        "issue_id": issue_id,
+        "created_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "result": snapshot,
+    }
+
+    _write_hybrid_cache(
+        "issue_snapshot",
+        cache_key,
+        cache_path,
+        cache_data,
+        ISSUE_SNAPSHOT_TTL_SECONDS,
     )
 
     return cache_path

@@ -202,6 +202,31 @@ function initShare() {
   document.querySelectorAll('[data-share]').forEach(btn => {
     btn.addEventListener('click', async () => {
       const url = window.location.href;
+
+      // 공유 링크는 sessionStorage 핸드오프를 못 쓴다(다른 브라우저·기기로
+      // 열릴 수 있어서). 그래서 공유 시점의 분석 스냅샷을 서버에 저장해두고,
+      // 받는 쪽 compare.html이 이 스냅샷을 그대로 복원하게 한다
+      // (resolveSharedIssueSnapshot 참고). 저장이 실패해도 공유 자체(링크
+      // 복사)는 그대로 진행한다 — 이 경우 예전처럼 issue_id 재검색으로
+      // 자연스럽게 대체된다.
+      if (currentIssue && currentIssue.issue_id && Array.isArray(currentIssue.publisher_analyses)) {
+        try {
+          await fetch('/api/issue-snapshot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              issue_id: currentIssue.issue_id,
+              issue_title: currentIssue.issue_title,
+              query: currentIssue.query,
+              publisher_analyses: currentIssue.publisher_analyses,
+              publisher_grouping: currentIssue.publisher_grouping,
+            })
+          });
+        } catch (error) {
+          console.error('공유 스냅샷 저장 실패:', error);
+        }
+      }
+
       try {
         if (navigator.share) {
           await navigator.share({ title: document.title, url });
@@ -212,6 +237,28 @@ function initShare() {
       } catch (_) {}
     });
   });
+}
+
+// 공유 링크로 들어왔을 때(sessionStorage 핸드오프 없음) 서버에 저장된
+// 스냅샷을 조회한다. 있으면 재검색 없이 그대로 복원하고, 없으면(TTL
+// 만료·공유 시 저장 실패 등) null을 반환해 기존 issue_id 재검색 폴백으로
+// 넘어가게 한다.
+async function resolveSharedIssueSnapshot(issueId) {
+  try {
+    const response = await fetch(`/api/issue-snapshot/${encodeURIComponent(issueId)}`);
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    if (!data.success || !Array.isArray(data.publisher_analyses) || data.publisher_analyses.length < 2) {
+      return null;
+    }
+
+    return data;
+
+  } catch (error) {
+    console.error('공유 스냅샷 조회 실패:', error);
+    return null;
+  }
 }
 
 // 저장된 이슈의 "분석 보기" 링크를 만든다. issue_id가 있으면(스냅샷 저장
@@ -408,6 +455,19 @@ async function renderComparePage() {
     if (analysisSections) analysisSections.style.display = '';
     await runIssueAnalysis(handoffCandidate);
     return;
+  }
+
+  // sessionStorage 핸드오프가 없다(같은 탭 클릭이 아니거나, 다른 브라우저·
+  // 기기로 공유 링크를 열었을 때). issue_id가 있으면 재검색보다 먼저 서버에
+  // 저장된 공유 스냅샷을 확인해서, 있으면 재검색 없이 그대로 복원한다.
+  if (issueIdParam) {
+    const sharedSnapshot = await resolveSharedIssueSnapshot(issueIdParam);
+
+    if (sharedSnapshot) {
+      if (analysisSections) analysisSections.style.display = '';
+      await runIssueAnalysis(sharedSnapshot);
+      return;
+    }
   }
 
   if (!q) {
