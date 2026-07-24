@@ -410,6 +410,31 @@ async function renderComparePage() {
     return;
   }
 
+  // 공유 링크를 다른 브라우저/기기에서 열면 sessionStorage 핸드오프가 없다.
+  // 이 경우 q로 바로 재검색(Solar 재실행, 결과가 매번 조금씩 달라질 수 있음)
+  // 하기 전에, 서버에 저장된 스냅샷(issue_id 단독 키)을 먼저 시도한다.
+  // 있으면 저장 시점의 분석 결과가 브라우저와 무관하게 그대로 복원된다.
+  if (issueIdParam) {
+    try {
+      const snapshotResponse = await fetch(`/api/issue/${encodeURIComponent(issueIdParam)}`);
+      if (snapshotResponse.ok) {
+        const snapshotData = await snapshotResponse.json();
+        if (
+          snapshotData.success &&
+          Array.isArray(snapshotData.publisher_analyses) &&
+          snapshotData.publisher_analyses.length >= 2
+        ) {
+          if (analysisSections) analysisSections.style.display = '';
+          await runIssueAnalysis(snapshotData);
+          return;
+        }
+      }
+    } catch (error) {
+      // 스냅샷 조회 실패는 치명적이지 않다 — 아래 q 재검색으로 자연스럽게 대체된다.
+      console.warn("이슈 스냅샷 조회 실패:", error);
+    }
+  }
+
   if (!q) {
     if (titleEl) titleEl.textContent = "비교할 검색어가 없습니다.";
     return;
