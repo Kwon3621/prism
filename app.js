@@ -342,7 +342,7 @@ function renderSaved() {
           <p>${item.summary}</p>
           <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <small style="color: #94a3b8;">분석 매체: ${(item.mediaNames || []).join(', ')}</small>
-            <a class="btn btn-secondary btn-sm" data-saved-issue-index="${idx}" href="${buildSavedIssueHref(item)}">분석 보기</a>
+            <a class="btn btn-secondary btn-sm" data-saved-issue-index="${idx}" href="${buildSavedIssueHref(item)}" style="white-space: nowrap;">분석 보기</a>
           </div>
         </article>
       `).join('');
