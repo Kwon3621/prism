@@ -28,9 +28,10 @@ from analysis import (  # noqa: E402
 from compare import analyze_input_data as analyze_comparison_input  # noqa: E402
 from cache import (  # noqa: E402
     get_issue_result,
+    get_issue_snapshot,
     save_issue_result,
+    save_issue_snapshot,
 )
-
 
 app = Flask(__name__)
 
@@ -160,12 +161,45 @@ def analyze_issue_with_default_comparisons(body: dict) -> dict:
         result=result,
     )
 
+    save_issue_snapshot(
+        issue_id=result.get("issue_id"),
+        snapshot={
+            "issue_id": result.get("issue_id"),
+            "issue_title": result.get("issue_title"),
+            "query": result.get("query"),
+            "publisher_analyses": result.get("publisher_analyses"),
+            "publisher_grouping": result.get("publisher_grouping"),
+        },
+    )
+
     return {
         **result,
         "issue_result_cache_hit": False,
     }
 
+@app.get("/api/issue/<issue_id>")
+def issue_snapshot_api(issue_id: str):
+    """
+    공유 링크(compare.html?issue_id=...)를 다른 브라우저에서 열었을 때,
+    sessionStorage 핸드오프가 없어도 저장 시점의 분석 스냅샷을 그대로
+    복원하기 위한 조회 전용 엔드포인트.
+    """
+    snapshot = get_issue_snapshot(issue_id)
 
+    if snapshot is None:
+        return jsonify(
+            {
+                "success": False,
+                "error": "저장된 이슈 스냅샷을 찾을 수 없습니다.",
+            }
+        ), 404
+
+    return jsonify(
+        {
+            "success": True,
+            **snapshot,
+        }
+    )
 
 @app.get("/api/health")
 def health_api():

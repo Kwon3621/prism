@@ -25,6 +25,7 @@ else:
 PUBLISHER_CACHE_DIR = CACHE_ROOT / "publisher_analysis"
 COMPARISON_CACHE_DIR = CACHE_ROOT / "comparisons"
 ISSUE_RESULT_CACHE_DIR = CACHE_ROOT / "issue_results"
+ISSUE_SNAPSHOT_CACHE_DIR = CACHE_ROOT / "issue_snapshots"
 KEYWORD_EXTRACTION_CACHE_DIR = CACHE_ROOT / "keyword_extraction"
 
 # analysis.py/compare.py의 Solar 프롬프트나 검증 로직을 바꾸면 이 값을
@@ -319,6 +320,11 @@ def ensure_cache_directories() -> None:
     )
 
     ISSUE_RESULT_CACHE_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    ISSUE_SNAPSHOT_CACHE_DIR.mkdir(
         parents=True,
         exist_ok=True,
     )
@@ -741,7 +747,71 @@ def save_issue_result(
 
     return cache_path
 
+def make_issue_snapshot_cache_key(issue_id: str) -> str:
+    """
+    공유 링크 복원용 이슈 스냅샷 캐시 키를 만든다.
+    issue_id만으로 조회할 수 있어야 하므로, 다른 필드는 섞지 않는다.
+    """
+    return make_cache_key(
+        "issue-snapshot",
+        str(issue_id or "").strip(),
+    )
 
+
+def get_issue_snapshot(issue_id: str) -> dict | None:
+    """
+    issue_id만으로 저장된 이슈 분석 스냅샷을 조회한다.
+    공유 링크를 다른 브라우저에서 열었을 때 sessionStorage가 없어도
+    저장 시점의 분석 결과를 그대로 복원하기 위해 사용한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_issue_snapshot_cache_key(issue_id)
+    cache_path = ISSUE_SNAPSHOT_CACHE_DIR / f"{cache_key}.json"
+
+    cached_data = _read_hybrid_cache(
+        "issue_snapshot",
+        cache_key,
+        cache_path,
+    )
+
+    if not cached_data:
+        return None
+
+    snapshot = cached_data.get("snapshot")
+    if not isinstance(snapshot, dict):
+        return None
+
+    return snapshot
+
+
+def save_issue_snapshot(issue_id: str, snapshot: dict) -> Path:
+    """
+    이슈 분석 스냅샷을 issue_id 단독 키로 저장한다.
+    공유 링크가 다른 브라우저에서도 저장 시점 그대로 복원되도록 한다.
+    """
+    ensure_cache_directories()
+
+    cache_key = make_issue_snapshot_cache_key(issue_id)
+    cache_path = ISSUE_SNAPSHOT_CACHE_DIR / f"{cache_key}.json"
+
+    cache_data = {
+        "cache_type": "issue_snapshot",
+        "cache_key": cache_key,
+        "issue_id": str(issue_id or "").strip(),
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "snapshot": snapshot,
+    }
+
+    _write_hybrid_cache(
+        "issue_snapshot",
+        cache_key,
+        cache_path,
+        cache_data,
+    )
+
+    return cache_path
+    
 def make_keyword_extraction_cache_key(
     query: str,
     data_version: str,
