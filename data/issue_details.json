@@ -1,1343 +1,82 @@
 {
-  "issue-bbaa38f8342e0f9e": {
+  "issue-36ce871158d1b1d4": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-bbaa38f8342e0f9e",
-        "publisher_id": "chosun",
-        "publisher": "조선일보",
-        "articles": [
-          {
-            "article_id": "dfd312f27ce2f0c004e052c35ffd684721787749ee5b9bf10307216c5a5a2312",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/"
-          }
-        ],
-        "analysis": {
-          "article_summary": "장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회를 방문해 장외 행보를 이어갔다.",
-          "headline_frame": "제헌절 행사 불참과 올림픽공원 집회 참석이라는 두 가지 행보",
-          "main_focus": "장외 집회에서 부정선거 재선거와 당일투표 수개표를 요구하는 구호 외침 및 정치 개혁 촉구",
-          "keywords": [
-            "부정선거 재선거",
-            "당일투표 수개표",
-            "선관위 개혁",
-            "선거제 개혁"
-          ],
-          "main_actors": [
-            "장동혁",
-            "국민의힘"
-          ],
-          "quoted_sources": [
-            "장동혁"
-          ],
-          "causes": [
-            "40일 넘게 우리 정치가 해결책을 내놓지 못함"
-          ],
-          "background": [
-            "제헌절 국회 기념 행사"
-          ],
-          "emphasized_effects": [
-            "선관위 개혁",
-            "선거제 개혁"
-          ],
-          "affected_groups": [
-            "집회 참석자들"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 정치 개혁 방향에 대한 구체적 전망 제시 없음"
-          },
-          "less_covered_context": [
-            "제헌절 불참에 대한 구체적 사유",
-            "집회 참석자들의 구체적 반응",
-            "국회 기념 행사 불참에 대한 공식 입장"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:41:57.333030+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-bbaa38f8342e0f9e",
+        "issue_id": "issue-36ce871158d1b1d4",
         "publisher_id": "sbs",
         "publisher": "SBS",
         "articles": [
           {
-            "article_id": "be6a6928c34cb0c6290fe7a995010e54c81c26957d929d5c08015f301987d335",
-            "title": "국민의힘 \"'정치특검' 사무실 임대료만 64억\"",
-            "published_at": "Sun, 19 Jul 2026 11:50:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008663877"
+            "article_id": "b82754c7322d66aa83f5d091ce393b65604c7a8493baf1473c432892bb98902a",
+            "title": "민주, '1심 시장직 상실형' 오세훈에 \"죄 인정하고 정치적 책임져야\"",
+            "published_at": "Wed, 22 Jul 2026 17:58:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669909"
           }
         ],
         "analysis": {
-          "article_summary": "국민의힘은 이재명 정부에서 출범한 3대 특검(내란·김건희·순직해병)과 2차 종합특검의 수사력 부족과 과도한 예산 사용을 비판하며, 특히 사무실 임대료와 인테리어 비용으로 220억 원 중 29.3%가 사용되었다고 지적했다.",
-          "headline_frame": "정치특검의 과도한 예산 사용, 특히 사무실 임대료 낭비",
-          "main_focus": "특검팀의 수사력 부족과 천문학적 혈세 낭비 문제",
+          "article_summary": "더불어민주당은 정치자금법 위반 혐의로 1심에서 시장직 상실형을 선고받은 오세훈 서울시장에 대해 죄를 인정하고 법적·정치적 책임을 다해야 한다고 요구했다.",
+          "headline_frame": "민주당의 요구와 오세훈 시장의 책임 촉구",
+          "main_focus": "민주당의 오세훈 시장 비판과 법적·정치적 책임 요구",
           "keywords": [
-            "특검 예산",
-            "사무실 임대료",
-            "혈세 낭비",
-            "수사력 부족",
-            "정치보복용 특검"
+            "정치자금법 위반",
+            "1심 유죄",
+            "시장직 상실형",
+            "정치 브로커",
+            "여론조사 비용 대납"
           ],
           "main_actors": [
-            "국민의힘",
-            "장동혁 대표",
-            "최보윤 당 수석대변인",
-            "민중기 특검"
-          ],
-          "quoted_sources": [
-            "최보윤 당 수석대변인"
-          ],
-          "causes": [
-            "거대 여당의 특검 강행",
-            "초호화 사무실 임차"
-          ],
-          "background": [
-            "이재명 정부에서 출범한 3대 특검(내란·김건희·순직해병)과 2차 종합특검"
-          ],
-          "emphasized_effects": [
-            "국민 혈세 낭비",
-            "수사 본질과 무관한 비용 지출"
-          ],
-          "affected_groups": [
-            "국민"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "정치보복용 특검 강행과 천문학적 혈세 낭비를 즉각 중단하라",
-              "물 쓰듯 탕진했다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "기사에서는 향후 전망이나 방향성에 대한 구체적인 언급이 없음"
-          },
-          "less_covered_context": [
-            "특검 수사 진행 상황",
-            "특검의 구체적 수사 내용",
-            "특검 사무실의 실제 활용도"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:41:58.084412+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-bbaa38f8342e0f9e",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "fa4e013904d1f5a4af1541555cdd1c43b26222f6e16c6989d9f7639ab3902c1b",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "국민의힘 장동혁 대표가 제헌절 경축식 대신 6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 선거관리위원회 개혁과 선거제도 개혁을 촉구하며 장외 정치 활동을 이어갔다.",
-          "headline_frame": "제헌절 경축식 불참과 장외 정치 활동을 대비시켜 정치적 선택을 부각",
-          "main_focus": "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-          "keywords": [
-            "장외 정치",
-            "재선거",
-            "선거관리위원회 개혁",
-            "선거제도 개혁",
-            "투표용지 부족 사태",
-            "강성 지지층"
-          ],
-          "main_actors": [
-            "국민의힘 장동혁 대표",
-            "박성훈 국민의힘 수석대변인"
-          ],
-          "quoted_sources": [
-            "장동혁 대표"
-          ],
-          "causes": [
-            "6·3 지방선거 투표용지 부족 사태"
-          ],
-          "background": [
-            "제78주년 제헌절",
-            "18년 만에 공휴일로 재지정된 제헌절 경축식"
-          ],
-          "emphasized_effects": [
-            "선거관리위원회 개혁",
-            "선거제도 개혁"
-          ],
-          "affected_groups": [
-            "6·3 지방선거 유권자",
-            "청년"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 선거관리위원회 개혁과 선거제도 개혁 추진 여부에 대한 전망"
-          },
-          "less_covered_context": [
-            "집회 참여자들의 구체적인 반응이나 여론 조사 결과",
-            "장동혁 대표의 구체적인 선거제도 개혁 방안"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:41:58.122290+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-bbaa38f8342e0f9e",
-      "groups": [
-        {
-          "group_id": "group-001",
-          "label": "장외 집회와 선거제도 개혁 촉구",
-          "summary": "제헌절 행사 불참과 장외 집회를 통해 선거제도 개혁을 촉구하는 비판적 보도",
-          "keywords": [
-            "장외 집회",
-            "선거제도 개혁",
-            "부정선거 재선거",
-            "선관위 개혁"
-          ],
-          "publisher_ids": [
-            "chosun",
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 2,
-          "group_evidence": [
-            "제헌절 행사 불참과 장외 집회 참석을 대비시켜 정치 개혁 촉구",
-            "부정선거 재선거와 당일투표 수개표를 요구하는 구호 외침",
-            "6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-            "선관위 개혁 및 선거제 개혁을 중심 쟁점으로 다룸",
-            "40일 넘게 우리 정치가 해결책을 내놓지 못했다는 원인 제시",
-            "6·3 지방선거 투표용지 부족 사태를 원인으로 지목"
-          ]
-        },
-        {
-          "group_id": "group-002",
-          "label": "정치특검 예산 낭비 비판",
-          "summary": "정치특검의 과도한 예산 사용, 특히 사무실 임대료 낭비를 비판하는 보도",
-          "keywords": [
-            "특검 예산",
-            "혈세 낭비",
-            "사무실 임대료",
-            "수사력 부족"
-          ],
-          "publisher_ids": [
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "정치특검의 과도한 예산 사용, 특히 사무실 임대료 낭비 문제 제기",
-            "특검팀의 수사력 부족과 천문학적 혈세 낭비 지적",
-            "거대 여당의 특검 강행과 초호화 사무실 임차를 원인으로 제시",
-            "국민 혈세 낭비와 수사 본질과 무관한 비용 지출을 영향 강조",
-            "정치보복용 특검이라는 비판적 표현 사용",
-            "혈세 낭비를 물 쓰듯 탕진했다고 비판"
-          ]
-        }
-      ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-001",
-            "group-002"
-          ],
-          "contrast_statement": "group-001은 제헌절 행사 불참과 장외 집회를 통해 선거제도 개혁을 촉구하는 반면, group-002는 정치특검의 과도한 예산 사용, 특히 사무실 임대료 낭비를 비판하며 혈세 낭비 문제를 강조한다. 전자는 선거제도 개혁을 중심 쟁점으로 삼고 후자는 특검 예산 낭비를 중심 쟁점으로 삼아 핵심 해석과 평가 방향이 서로 다르다."
-        }
-      ],
-      "grouping_summary": "3개 언론사는 핵심 관점에 따라 2개 그룹으로 분류된다. 조선일보와 동아일보는 제헌절 행사 불참과 장외 집회를 통해 선거제도 개혁을 촉구하는 비판적 보도를, SBS는 정치특검의 과도한 예산 사용, 특히 사무실 임대료 낭비를 비판하는 보도를 했다. 두 그룹은 각각 선거제도 개혁과 특검 예산 낭비라는 서로 다른 핵심 쟁점을 중심으로 사건을 해석하고 있어 별도의 그룹으로 구분된다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-23T10:42:04.499632+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "chosun,sbs": {
-        "issue_id": "issue-bbaa38f8342e0f9e",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "두 언론사 모두 국민의힘의 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에 참석한 사실을 보도하며, 정치 개혁 및 특검 관련 이슈를 다루고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회를 방문해 장외 행보를 이어갔다는 사실을 공통적으로 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표의 제헌절 행사 불참과 올림픽공원 집회 참석이라는 두 가지 행보",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "장동혁 대표의 제헌절 행사 불참 및 장외 집회 참석",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "차이 큼",
-            "contrast_statement": "조선일보는 장외 집회에서 부정선거 재선거와 당일투표 수개표를 요구하는 구호를 외치며 정치 개혁을 촉구한 장동혁 대표의 행보에 초점을 맞춘 반면, SBS는 정치특검의 수사력 부족과 과도한 예산 사용, 특히 사무실 임대료 낭비에 대한 비판을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장외 집회에서 부정선거 재선거와 당일투표 수개표를 요구하는 구호 외침 및 정치 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치특검의 수사력 부족과 과도한 예산 사용, 특히 사무실 임대료 낭비 비판",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "차이 큼",
-            "contrast_statement": "조선일보는 '40일 넘게 우리 정치가 해결책을 내놓지 못함'을 원인으로 제시한 반면, SBS는 '거대 여당의 특검 강행'과 '초호화 사무실 임차'를 원인으로 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "40일 넘게 우리 정치가 해결책을 내놓지 못한 상황",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "거대 여당의 특검 강행과 초호화 사무실 임차",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "차이 큼",
-            "contrast_statement": "조선일보는 '선관위 개혁'과 '선거제 개혁'을 강조하고 집회 참석자들을 영향 대상으로 삼은 반면, SBS는 '국민 혈세 낭비'와 '수사 본질과 무관한 비용 지출'을 강조하며 국민을 영향 대상으로 삼고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "선관위 개혁 및 선거제 개혁 촉구, 집회 참석자들 대상",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "국민 혈세 낭비와 수사 본질과 무관한 비용 지출 문제",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "조선일보는 '40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송'이라는 표현을 통해 비판적 태도를 보인 반면, SBS는 '정치보복용 특검 강행과 천문학적 혈세 낭비를 즉각 중단하라', '물 쓰듯 탕진했다'는 표현을 통해 강한 비판 태도를 보이고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "정치 개혁 촉구 및 제헌절 불참에 대한 죄송함 표현",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치보복용 특검 강행과 혈세 낭비에 대한 강한 비판",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "장동혁 국민의힘 대표의 제헌절 국회 기념 행사 불참 및 장외 집회 참석",
-          "정치 개혁 또는 특검 관련 이슈 보도",
-          "국민의힘의 공식 입장 또는 대변인 발언 인용"
-        ],
-        "key_differences": [
-          "조선일보는 부정선거 재선거와 선거제 개혁을 강조하는 반면, SBS는 정치특검의 예산 낭비와 수사력 부족을 강조함",
-          "조선일보는 '40일 넘게 해결책 없음'을 원인으로 제시한 반면, SBS는 '거대 여당의 특검 강행'을 원인으로 제시함",
-          "조선일보는 집회 참석자들을 영향 대상으로 삼은 반면, SBS는 국민을 영향 대상으로 삼음"
-        ],
-        "comparison_report": "조선일보와 SBS 모두 장동혁 국민의힘 대표의 제헌절 행사 불참 및 장외 집회 참석 사실을 보도하지만, 조선일보는 장외 집회에서 부정선거 재선거와 당일투표 수개표를 요구하는 구호를 외치며 정치 개혁을 촉구한 행보에 초점을 맞추고 '40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송'이라는 비판적 태도를 보인 반면, SBS는 정치특검의 수사력 부족과 과도한 예산 사용, 특히 사무실 임대료 낭비에 대한 비판을 강조하며 '정치보복용 특검 강행과 천문학적 혈세 낭비를 즉각 중단하라', '물 쓰듯 탕진했다'는 강한 비판 태도를 보이고 있다. 두 언론사 모두 국민의힘의 공식 입장을 인용하지만, 조선일보는 선거제 개혁을, SBS는 특검 예산 문제를 주요 쟁점으로 다루고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "국민의힘 \"'정치특검' 사무실 임대료만 64억\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008663877",
-            "published_at": "Sun, 19 Jul 2026 11:50:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:42:14.179621+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,sbs": {
-        "issue_id": "issue-bbaa38f8342e0f9e",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "두 언론사 모두 국민의힘의 특정 정치적 행보에 대한 비판적 보도를 다루고 있으나, SBS는 특검 예산 낭비에 초점을 맞추고 동아일보는 제헌절 경축식 불참과 선거제도 개혁 촉구에 초점을 맞추고 있어 공통점이 거의 없음",
-        "overall_difference": "차이 큼",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 정치특검의 예산 낭비를, 동아일보는 제헌절 경축식 불참과 선거제도 개혁 촉구를 다루고 있어 직접적인 공통 내용을 확인하기 어려움",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치특검의 수사력 부족과 사무실 임대료 낭비 문제 비판",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석 보도",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 특검의 수사력 부족과 혈세 낭비를, 동아일보는 제헌절 경축식 불참을 통한 선거제도 개혁 촉구를 핵심 관점으로 제시함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치보복용 특검의 수사력 부족과 천문학적 혈세 낭비 문제 비판",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참을 통한 선거관리위원회 및 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 거대 여당의 특검 강행과 초호화 사무실 임차를 원인으로, 동아일보는 6·3 지방선거 투표용지 부족 사태를 원인으로 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "거대 여당의 특검 강행과 초호화 사무실 임차로 인한 예산 낭비",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 투표용지 부족 사태 발생",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 국민 혈세 낭비를, 동아일보는 선거관리위원회 개혁과 청년 유권자 영향을 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "국민 혈세 낭비와 수사 본질과 무관한 비용 지출",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "선거관리위원회 개혁 및 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '정치보복용 특검 강행과 천문학적 혈세 낭비를 즉각 중단하라', '물 쓰듯 탕진했다'는 표현을 사용한 강한 비판 태도를, 동아일보는 '강성 지지층 결집에 집중한다는 비판도 나온다'는 표현을 사용한 비교적 절제된 비판 태도를 보임",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치보복용 특검 강행과 혈세 낭비에 대한 강한 비판 태도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참에 대한 당내 비판과 선거제도 개혁 촉구 보도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "두 언론사 모두 국민의힘의 특정 정치적 행보에 대한 비판적 보도를 하고 있음"
-        ],
-        "key_differences": [
-          "SBS는 정치특검의 예산 낭비 문제를, 동아일보는 제헌절 경축식 불참과 선거제도 개혁 촉구 문제를 다루고 있음"
-        ],
-        "comparison_report": "SBS는 정치특검의 수사력 부족과 사무실 임대료 낭비 등 혈세 낭비를 강하게 비판하며 '물 쓰듯 탕진했다'는 표현을 사용한 반면, 동아일보는 국민의힘 장동혁 대표의 제헌절 경축식 불참을 보도하면서 '강성 지지층 결집에 집중한다는 비판도 나온다'며 선거제도 개혁을 촉구하는 비교적 절제된 비판 태도를 보임. 두 언론사 모두 국민의힘의 정치적 행보에 대한 비판적 시각을 담고 있으나, 다루는 이슈와 강조점에서 큰 차이를 보임",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "국민의힘 \"'정치특검' 사무실 임대료만 64억\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008663877",
-            "published_at": "Sun, 19 Jul 2026 11:50:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:42:16.823442+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga": {
-        "issue_id": "issue-bbaa38f8342e0f9e",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "두 언론사 모두 국민의힘 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 부정선거 재선거와 당일투표 수개표, 선관위 개혁 및 선거제 개혁을 촉구한 장외 행보를 보도했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 선거제도 개혁을 촉구했다고 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "제헌절 행사 불참과 올림픽공원 집회 참석이라는 두 가지 행보",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참과 장외 정치 활동을 대비시켜 정치적 선택을 부각",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보가 부정선거 재선거와 당일투표 수개표, 선관위 개혁을 강조한 반면, 동아일보는 6·3 지방선거 투표용지 부족 사태를 배경으로 선거제도 개혁을 촉구했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장외 집회에서 부정선거 재선거와 당일투표 수개표를 요구하며 선관위 개혁을 촉구하는 정치 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보가 '40일 넘게 우리 정치가 해결책을 내놓지 못함'을 원인으로 제시한 반면, 동아일보는 '6·3 지방선거 투표용지 부족 사태'를 구체적 배경으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "40일 넘게 우리 정치가 해결책을 내놓지 못한 상황",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 투표용지 부족 사태",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보가 집회 참석자들을 대상으로 한 영향을 강조한 반면, 동아일보는 6·3 지방선거 유권자와 청년을 영향 대상으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "집회 참석자들을 대상으로 한 선관위 개혁 및 선거제 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 유권자와 청년을 대상으로 한 선거관리위원회 개혁 및 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "두 언론사 모두 비판적인 태도를 보였으나, 조선일보는 '40일 넘게 해결책을 내놓지 못해 죄송'이라는 장동혁의 발언을 직접 인용한 반면, 동아일보는 '강성 지지층 결집에 집중한다는 비판'을 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁의 '40일 넘게 해결책을 내놓지 못해 죄송'이라는 발언을 통해 비판적 태도를 전달",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "당내에서 제헌절 경축식 불참과 강성 지지층 결집에 대한 비판이 나온다는 점을 보도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "장동혁 대표의 제헌절 국회 기념 행사 불참과 잠실 올림픽공원 집회 참석",
-          "선거관리위원회 개혁 및 선거제도 개혁 촉구",
-          "장외 정치 활동을 통한 정치 개혁 메시지 전달"
-        ],
-        "key_differences": [
-          "조선일보가 '40일 넘게 해결책 미제시'를 원인으로 강조한 반면, 동아일보는 '6·3 지방선거 투표용지 부족 사태'를 구체적 배경으로 제시",
-          "조선일보가 집회 참석자들을 영향 대상으로 한 반면, 동아일보는 6·3 지방선거 유권자와 청년을 영향 대상으로 제시",
-          "조선일보가 장동혁의 직접 발언을 인용한 반면, 동아일보는 당내 비판 여론을 보도"
-        ],
-        "comparison_report": "조선일보와 동아일보 모두 국민의힘 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 잠실 올림픽공원 집회에 참석해 선거제도 개혁을 촉구한 장외 행보를 보도했다. 두 언론사 모두 비판적인 보도 태도를 보였으나, 조선일보는 '40일 넘게 해결책을 내놓지 못해 죄송'이라는 장동혁의 발언을 직접 인용하며 정치 교착 상태를 원인으로 강조한 반면, 동아일보는 '6·3 지방선거 투표용지 부족 사태'를 구체적 배경으로 제시하고 '강성 지지층 결집에 집중한다는 당내 비판'을 보도했다. 영향 대상에서도 조선일보는 집회 참석자들을, 동아일보는 6·3 지방선거 유권자와 청년을 강조해 차이를 보였다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:42:18.050614+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga,sbs": {
-        "issue_id": "issue-bbaa38f8342e0f9e",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "국민의힘 장동혁 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에 참석한 사실을 보도하며, 선거관리위원회 개혁과 선거제도 개혁을 촉구하는 내용을 담고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 장외 집회에 참석한 사실을 보도한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표의 제헌절 행사 불참과 올림픽공원 집회 참석",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "장동혁 대표의 제헌절 행사 불참과 장외 집회 참석",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "장동혁 대표의 제헌절 경축식 불참과 장외 집회 참석",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 선거제도 개혁을 강조하는 반면, SBS는 정치특검의 예산 낭비를 비판한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장외 집회에서 부정선거 재선거와 당일투표 수개표를 요구하는 구호 외침 및 정치 개혁 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치특검의 수사력 부족과 과도한 예산 사용, 특히 사무실 임대료 낭비 비판",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참석을 통한 선거제도 개혁 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 6·3 지방선거 투표용지 부족 사태를 원인으로 강조하는 반면, SBS는 거대 여당의 특검 강행을 원인으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "40일 넘게 우리 정치가 해결책을 내놓지 못함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "거대 여당의 특검 강행과 초호화 사무실 임차",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "6·3 지방선거 투표용지 부족 사태",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 선거관리위원회 개혁과 선거제도 개혁을 강조하는 반면, SBS는 국민 혈세 낭비를 강조한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "선관위 개혁 및 선거제 개혁",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "국민 혈세 낭비와 수사 본질과 무관한 비용 지출",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "선거관리위원회 개혁 및 선거제도 개혁",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 동아일보는 비판적 태도를 보이는 반면, SBS는 정치특검의 예산 낭비에 대해 강한 비판을 제기한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "장동혁 대표의 발언을 인용해 정치 개혁 촉구 및 사과하는 비판적 태도",
-                "evidence": [
-                  "40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치보복용 특검 강행과 천문학적 혈세 낭비를 즉각 중단하라는 비판적 태도",
-                "evidence": [
-                  "정치보복용 특검 강행과 천문학적 혈세 낭비를 즉각 중단하라",
-                  "물 쓰듯 탕진했다"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "제헌절 경축식 불참에 대한 당내 비판과 강성 지지층 결집에 대한 비판적 태도",
-                "evidence": [
-                  "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "장동혁 국민의힘 대표의 제헌절 행사 불참과 장외 집회 참석",
-          "선거관리위원회 개혁과 선거제도 개혁 촉구",
-          "국민의힘의 장외 정치 활동 보도"
-        ],
-        "key_differences": [
-          "조선일보와 동아일보는 6·3 지방선거 투표용지 부족 사태를 배경으로 선거제도 개혁을 강조하는 반면, SBS는 정치특검의 예산 낭비를 비판한다.",
-          "SBS는 사무실 임대료와 인테리어 비용에 대한 구체적 금액(220억 원 중 29.3%)을 제시하는 반면, 조선일보와 동아일보는 구체적 금액을 제시하지 않는다."
-        ],
-        "comparison_report": "조선일보와 동아일보는 장동혁 국민의힘 대표가 제헌절 국회 기념 행사에 불참하고 6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 선거제도 개혁을 촉구한 사실을 보도하며, 비판적 태도를 보인다. SBS는 동일한 제헌절 불참 사실을 보도하지만, 정치특검의 과도한 예산 사용, 특히 사무실 임대료 낭비(220억 원 중 29.3%)를 비판하는 데 초점을 맞춘다. 조선일보와 동아일보는 선거제도 개혁을 강조하는 반면, SBS는 국민 혈세 낭비를 강조한다. 보도 태도 측면에서 조선일보와 동아일보는 비판적이지만, SBS는 정치특검의 예산 낭비에 대해 더 강한 비판을 제기한다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "장동혁, 제헌절 행사 대신 올림픽공원 집회 참석… “40일 넘게 해결책 내놓지 못해 죄송”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/17/GU2TCZJTMU2WEODGGA3GGMDFGE/",
-            "published_at": "Fri, 17 Jul 2026 09:54:10 +0000"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "국민의힘 \"'정치특검' 사무실 임대료만 64억\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008663877",
-            "published_at": "Sun, 19 Jul 2026 11:50:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
-            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
-            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:42:20.246830+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-e98b77c25431a361": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-e98b77c25431a361",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "369cab835434c74b7c7e6827a21ded7b8c3d5b933d309d27159b7d89b1f0fde5",
-            "title": "김민석 “반명 분열주의 심판해야”… 정청래 “집토끼 나가면 총선 불안”",
-            "published_at": "Tue, 21 Jul 2026 04:30:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260721/134332714/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "더불어민주당 전당대회에서 정청래 전 대표가 전통 지지층 우선론을 주장하고, 김민석 전 국무총리가 반명 분열주의 심판을 요구하며 계파 간 갈등이 확산되고 있다.",
-          "headline_frame": "정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 '반명 분열주의 심판' 주장을 대비시켜 계파 갈등을 부각",
-          "main_focus": "더불어민주당 내 계파 간 갈등 및 전당대회를 앞둔 당내 경쟁 구도",
-          "keywords": [
-            "집토끼 우선론",
-            "반명 분열주의",
-            "전당대회",
-            "계파 갈등"
-          ],
-          "main_actors": [
-            "정청래",
-            "김민석",
-            "송영길"
-          ],
-          "quoted_sources": [
-            "정청래",
-            "김민석",
-            "송영길"
-          ],
-          "causes": [
-            "검찰 보완수사권 전면 폐지 미해결",
-            "유시민 작가의 '재건축론' 비판"
-          ],
-          "background": [
-            "더불어민주당 8·17 전당대회",
-            "이재명 대통령의 외연 확장 시도"
-          ],
-          "emphasized_effects": [
-            "총선 불안",
-            "당정 갈등"
-          ],
-          "affected_groups": [
-            "더불어민주당 지지층",
-            "국민의힘 지지층"
-          ],
-          "tone": {
-            "category": "갈등 강조",
-            "evidence": [
-              "정청래 “집토끼 나가면 총선 불안”",
-              "김민석 “반명 분열주의 심판해야”",
-              "송영길 전 대표는 “국민의힘에서 가장 지지도가 높은 사람이 정 전 대표”라며 국민의힘 지지층의 역선택 가능성을 제기하며 공세를 폈다"
-            ]
-          },
-          "outlook": {
-            "direction": "혼합",
-            "summary": "전당대회를 앞두고 계파 간 갈등이 심화될 가능성과 동시에 당내 통합 필요성도 제기되고 있다."
-          },
-          "less_covered_context": [
-            "검찰 보완수사권 전면 폐지에 대한 구체적 입장",
-            "이재명 대통령의 외연 확장 시도에 대한 구체적 평가"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:42:25.133286+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-e98b77c25431a361",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "c6d7e804f1606542566d0cc98cf3cd28426f076d717e546477519d2ba189e2d6",
-            "title": "[정치쇼] 최민희 \"민주 전대 기탁금 나도 '헉' 할 정도…최고위원 되면 청년 배려할 것\"",
-            "published_at": "Tue, 21 Jul 2026 10:31:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008666470"
-          }
-        ],
-        "analysis": {
-          "article_summary": "더불어민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 입장을 다루며, 청년 배려와 당내 일베 문화 침투에 대한 우려를 언급한다.",
-          "headline_frame": "기탁금 인상 규모와 청년 배려 필요성",
-          "main_focus": "민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응과 당내 청년 배려 및 일베 문화 침투에 대한 우려",
-          "keywords": [
-            "기탁금 인상",
-            "청년 배려",
-            "일베 문화",
-            "전당대회"
-          ],
-          "main_actors": [
-            "최민희",
-            "더불어민주당"
-          ],
-          "quoted_sources": [
-            "최민희"
-          ],
-          "causes": [
-            "당원 160만 되면서 경비 상승"
-          ],
-          "background": [
-            "민생개혁 전대 필요성",
-            "총선 경선 방식"
-          ],
-          "emphasized_effects": [
-            "청년 배려 필요",
-            "일베 문화 침투 우려",
-            "보완수사권 폐지 이견"
-          ],
-          "affected_groups": [
-            "청년 당원"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "기탁금 인상? 당원 160만 되면서 경비 올라",
-              "청년 아닌 나도 '헉' 할 정도, 청년 배려 있어야"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "민주당 전당대회가 민생개혁 방향으로 진행되어야 한다는 의견 제시"
-          },
-          "less_covered_context": [
-            "정청래 최고위원의 구체적 입장",
-            "기탁금 인상 결정에 대한 당내 찬반 의견 분포",
-            "기탁금 인상 이후 청년 당원 참여 변화 전망"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:42:26.078737+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-e98b77c25431a361",
-      "groups": [
-        {
-          "group_id": "group-01",
-          "label": "민주당 전당대회 계파 갈등 및 당내 경쟁 구도",
-          "summary": "더불어민주당 전당대회를 앞두고 계파 간 갈등과 경쟁 구도를 중심으로 보도하며, 검찰 보완수사권 폐지 미해결, 유시민 '재건축론' 비판 등을 원인으로 지목하고, 이재명 대통령의 외연 확장 시도와 총선 불안을 영향 대상으로 분석",
-          "keywords": [
-            "집토끼 우선론",
-            "반명 분열주의",
-            "전당대회",
-            "계파 갈등",
-            "검찰 보완수사권 전면 폐지 미해결",
-            "유시민 재건축론 비판"
-          ],
-          "publisher_ids": [
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "더불어민주당 내 계파 간 갈등 및 전당대회를 앞둔 당내 경쟁 구도를 핵심 쟁점으로 다룸",
-            "정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 '반명 분열주의 심판' 주장을 대비시켜 계파 갈등을 부각",
-            "검찰 보완수사권 전면 폐지 미해결을 계파 갈등의 원인으로 지목",
-            "유시민 작가의 '재건축론' 비판을 계파 간 이견의 배경으로 제시",
-            "이재명 대통령의 외연 확장 시도를 계파 갈등의 촉발 요인으로 분석",
-            "총선 불안과 당정 갈등을 주요 영향으로 전망"
-          ]
-        },
-        {
-          "group_id": "group-02",
-          "label": "민주당 전당대회 청년 배려 및 일베 문화 우려",
-          "summary": "민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응을 중심으로 청년 배려 필요성과 일베 문화 침투 우려를 강조하며, 당원 수 증가에 따른 경비 상승을 원인으로 제시하고, 민생개혁 전대 필요성을 전망",
-          "keywords": [
-            "기탁금 인상",
-            "청년 배려",
-            "일베 문화",
-            "전당대회",
-            "당원 160만",
-            "민생개혁 전대"
-          ],
-          "publisher_ids": [
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응을 핵심 쟁점으로 다룸",
-            "청년 배려 필요성과 일베 문화 침투 우려를 주요 해석 방향으로 제시",
-            "당원 160만 증가로 인한 경비 상승을 기탁금 인상의 원인으로 지목",
-            "민생개혁 전대 필요성을 강조하며 중립적으로 설명"
-          ]
-        }
-      ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-01",
-            "group-02"
-          ],
-          "contrast_statement": "동아일보는 더불어민주당 내 계파 간 갈등과 경쟁 구도를 중심으로 검찰 보완수사권 폐지 미해결, 유시민 '재건축론' 비판 등을 원인으로 지목하며 총선 불안을 강조하는 반면, SBS는 민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응을 중심으로 청년 배려 필요성과 일베 문화 침투 우려를 강조하며 당원 수 증가에 따른 경비 상승을 원인으로 제시한다. 두 언론사 모두 민주당 전당대회를 다루지만, 동아일보는 계파 갈등과 정치적 불안정을, SBS는 청년 배려와 일베 문화 우려를 핵심 쟁점으로 삼아 서로 다른 해석 방향을 보인다."
-        }
-      ],
-      "grouping_summary": "두 언론사 모두 더불어민주당 전당대회를 다루지만, 동아일보(donga)는 당내 계파 간 갈등과 경쟁 구도, 검찰 보완수사권 폐지 미해결, 유시민 '재건축론' 비판 등을 중심으로 총선 불안을 강조하는 갈등 강조 태도를 보인 반면, SBS(sbs)는 최고위원 기탁금 인상과 청년 배려 필요성, 일베 문화 침투 우려를 중심으로 민생개혁 전대 필요성을 제시하는 중립 설명 태도를 보였다. 핵심 관점이 서로 대립하거나 양립하기 어려운 방향으로 해석되어 별도의 그룹으로 분류하였다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-23T10:42:32.853666+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-e98b77c25431a361",
-        "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "두 언론사 모두 더불어민주당 전당대회를 배경으로 당내 갈등 또는 경쟁 구도를 다루고 있으나, 동아일보가 정청래와 김민석의 계파 갈등을 강조하는 반면 SBS는 최고위원 기탁금 인상과 청년 배려 문제를 중심으로 보도하고 있다.",
-        "overall_difference": "차이 큼",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 정청래 전 대표와 김민석 전 국무총리의 대립을 중심으로 계파 갈등을 보도하는 반면, SBS는 더불어민주당 전당대회 최고위원 기탁금 인상과 최민희 의원의 입장을 중심으로 청년 배려 문제를 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 '반명 분열주의 심판' 주장을 대비시켜 계파 갈등을 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "더불어민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응과 당내 청년 배려 및 일베 문화 침투에 대한 우려",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 전당대회 직전 계파 간 경쟁 구도와 갈등 확산을 핵심 관점으로 보는 반면, SBS는 기탁금 인상 결정에 대한 당내 반응과 청년 배려 필요성을 핵심 관점으로 삼고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "더불어민주당 내 계파 간 갈등 및 전당대회를 앞둔 당내 경쟁 구도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응과 당내 청년 배려 및 일베 문화 침투에 대한 우려",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 검찰 보완수사권 전면 폐지 미해결, 유시민 작가의 '재건축론' 비판, 이재명 대통령의 외연 확장 시도를 원인으로 강조하는 반면, SBS는 당원 수 증가에 따른 경비 상승(160만)을 주요 배경으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "검찰 보완수사권 전면 폐지 미해결, 유시민 작가의 '재건축론' 비판, 이재명 대통령의 외연 확장 시도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "당원 160만 되면서 경비 상승",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 총선 불안과 당정 갈등을 주요 영향으로 보는 반면, SBS는 청년 배려 필요성과 일베 문화 침투 우려를 강조하고, 보완수사권 폐지 이견도 함께 언급한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "총선 불안, 당정 갈등",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "청년 배려 필요, 일베 문화 침투 우려, 보완수사권 폐지 이견",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 갈등 강조 태도로 정청래와 김민석의 대립적 발언을 직접 인용하며 계파 갈등을 부각하는 반면, SBS는 중립 설명 태도로 기탁금 인상 규모와 청년 배려 필요성에 대한 최민희 의원의 발언을 중심으로 보도한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "정청래와 김민석의 대립적 발언을 직접 인용하며 계파 갈등을 부각하는 갈등 강조 태도",
-                "evidence": [
-                  "정청래 “집토끼 나가면 총선 불안”",
-                  "김민석 “반명 분열주의 심판해야”",
-                  "송영길 전 대표는 “국민의힘에서 가장 지지도가 높은 사람이 정 전 대표”라며 국민의힘 지지층의 역선택 가능성을 제기하며 공세를 폈다"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "기탁금 인상 규모와 청년 배려 필요성에 대한 최민희 의원의 발언을 중심으로 설명하는 중립 설명 태도",
-                "evidence": [
-                  "기탁금 인상? 당원 160만 되면서 경비 올라",
-                  "청년 아닌 나도 '헉' 할 정도, 청년 배려 있어야"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "두 언론사 모두 더불어민주당 전당대회를 배경으로 당내 문제를 다루고 있다."
-        ],
-        "key_differences": [
-          "동아일보는 정청래와 김민석의 계파 갈등을 중심으로 총선 불안을 강조하는 반면, SBS는 최고위원 기탁금 인상과 청년 배려 문제를 중심으로 중립적으로 보도한다."
-        ],
-        "comparison_report": "동아일보는 정청래 전 대표의 '집토끼 우선론'과 김민석 전 국무총리의 '반명 분열주의 심판' 주장을 대비시켜 계파 갈등을 부각하고 총선 불안을 강조하는 갈등 강조 태도를 보인 반면, SBS는 더불어민주당 전당대회 최고위원 기탁금 인상에 대한 최민희 의원의 반응을 중심으로 청년 배려 필요성과 일베 문화 침투 우려를 중립적으로 설명하는 태도를 보였다. 두 언론사 모두 더불어민주당 전당대회를 다루지만, 동아일보가 계파 간 경쟁 구도와 갈등 확산에 초점을 맞춘 데 비해 SBS는 기탁금 인상 결정과 청년 당원 배려 문제에 초점을 맞추며 상대적으로 다른 맥락과 태도를 보였다.",
-        "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "김민석 “반명 분열주의 심판해야”… 정청래 “집토끼 나가면 총선 불안”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260721/134332714/2",
-            "published_at": "Tue, 21 Jul 2026 04:30:00 +0900"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 최민희 \"민주 전대 기탁금 나도 '헉' 할 정도…최고위원 되면 청년 배려할 것\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008666470",
-            "published_at": "Tue, 21 Jul 2026 10:31:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:42:45.484183+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-cd4cf453bfad04f0": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-cd4cf453bfad04f0",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "b47f6120f0b679d7e404e149da1e6ab53a067cef719a3daee863d509cdb1fa5e",
-            "title": "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\"",
-            "published_at": "Wed, 22 Jul 2026 16:18:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669646"
-          }
-        ],
-        "analysis": {
-          "article_summary": "국민의힘이 오세훈 서울시장의 1심 벌금 1000만원 판결에 대해 '정치 판결'이라며 여당무죄·야당유죄라는 이중 잣대를 비판하는 입장을 밝혔다.",
-          "headline_frame": "국민의힘의 정치적 비판 프레임",
-          "main_focus": "국민의힘의 오세훈 1심 판결에 대한 정치적 비판",
-          "keywords": [
-            "정치 판결",
-            "여당무죄",
-            "야당유죄",
-            "여론 조사",
-            "비용 대납"
-          ],
-          "main_actors": [
-            "국민의힘",
+            "더불어민주당",
+            "강준현 수석대변인",
             "오세훈 서울시장",
-            "명태균"
+            "정청래 전 대표",
+            "박주민 의원"
           ],
           "quoted_sources": [
-            "국민의힘"
+            "강준현 수석대변인",
+            "정청래 전 대표",
+            "박주민 의원"
           ],
           "causes": [
-            "정치 브로커 명태균 씨로부터 여론조사 결과를 받아보고 후원자에게 비용을 대납하게 한 혐의"
+            "정치 브로커에게 여론조사 결과 제공",
+            "후원자에게 여론조사 비용 대납"
           ],
           "background": [
-            "오세훈 서울시장의 1심 벌금 1000만원 판결"
+            "6·3 지방선거",
+            "민주당의 서울시장 후보 경선"
           ],
           "emphasized_effects": [
-            "정치 판결에 대한 비판",
-            "여당무죄·야당유죄 이중 잣대"
+            "시장직 상실형 선고",
+            "2심에서의 더 무거운 판결 기대"
           ],
           "affected_groups": [
-            "국민의힘",
+            "민주당",
             "오세훈 서울시장"
           ],
           "tone": {
             "category": "비판",
             "evidence": [
-              "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\""
+              "'사필귀정'의 결과",
+              "뻔뻔한 태도를 일관해왔다",
+              "구차한 변명은 설 자리가 없다"
             ]
           },
           "outlook": {
-            "direction": "중립",
-            "summary": "국민의힘의 비판 입장만 제시되었으며 향후 전망이나 방향성은 구체적으로 언급되지 않았다."
+            "direction": "부정",
+            "summary": "민주당은 2심에서 더 무거운 판결이 내려지길 바라며, 오세훈 시장의 사퇴도 촉구하고 있다."
           },
           "less_covered_context": [
-            "오세훈 시장의 구체적인 혐의 내용",
-            "1심 판결의 법적 근거",
-            "향후 재판 진행 방향"
+            "오세훈 시장의 구체적인 입장이나 반응",
+            "1심 판결에 대한 법적 분석",
+            "정치 브로커의 신원이나 역할"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:42:50.642173+00:00",
+        "analyzed_at": "2026-07-23T21:39:54.840573+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-cd4cf453bfad04f0",
+        "issue_id": "issue-36ce871158d1b1d4",
         "publisher_id": "donga",
         "publisher": "동아일보",
         "articles": [
@@ -1349,16 +88,16 @@
           }
         ],
         "analysis": {
-          "article_summary": "오세훈 서울시장이 1심에서 당선무효형인 벌금 1000만원을 선고받은 사건에 대해 더불어민주당은 '사필귀정'이라고 평가한 반면 국민의힘은 '정치 판결'이라고 반발하며, 무소속 한동훈 의원은 1심 유죄 판결에 의문을 제기했다.",
-          "headline_frame": "제목은 여야의 상반된 반응과 대법원 선고 시점을 동시에 부각하여 정치적 대립 구도를 강조한다.",
-          "main_focus": "더불어민주당과 국민의힘의 상반된 입장, 무소속 한동훈 의원의 비판, 서울시 내부의 반응을 통해 사건의 정치적 파장을 다각도로 조명한다.",
+          "article_summary": "오세훈 서울시장이 1심에서 벌금 1000만 원의 당선무효형을 선고받은 사건에 대해 더불어민주당은 '사필귀정'이라 평가한 반면 국민의힘은 '정치 판결'이라며 반발했고, 무소속 한동훈 의원은 1심 유죄 판결에 의문을 제기했다.",
+          "headline_frame": "정치권 반응과 1심 판결 결과에 초점",
+          "main_focus": "1심 유죄 판결에 대한 여야 및 무소속 의원의 상반된 반응",
           "keywords": [
+            "정치자금법 위반",
+            "여론조사용역",
+            "후원자의 대납",
             "사필귀정",
             "정치 판결",
-            "당선무효형",
-            "벌금 1000만원",
-            "여론조사용역",
-            "정치자금법 위반"
+            "민주주의 훼손"
           ],
           "main_actors": [
             "더불어민주당",
@@ -1366,8 +105,7 @@
             "오세훈 서울시장",
             "강준현 더불어민주당 수석대변인",
             "박성훈 국민의힘 수석대변인",
-            "한동훈 무소속 의원",
-            "서울시"
+            "한동훈 무소속 의원"
           ],
           "quoted_sources": [
             "강준현 더불어민주당 수석대변인",
@@ -1375,93 +113,118 @@
             "한동훈 무소속 의원"
           ],
           "causes": [
-            "오세훈 시장이 정치브로커에 의뢰한 여론조사를 선거에 활용한 사실",
-            "여론조사 비용을 후원자에게 대납시킨 사실"
+            "오세훈 시장이 정치브로커에 의뢰한 여론조사를 선거에 활용",
+            "여론조사용역 비용을 후원자에게 대납"
           ],
           "background": [
             "정치자금법 위반",
             "선거제도 훼손"
           ],
           "emphasized_effects": [
-            "당선무효형",
-            "정치권 갈등 심화",
-            "대법원 선고 대기"
+            "오세훈 시장 당선무효형 가능성",
+            "내년초 대법원 선고 예정"
           ],
           "affected_groups": [
             "더불어민주당",
             "국민의힘",
-            "서울시",
-            "무소속 의원"
+            "서울시"
           ],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다",
-              "국민의힘 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다",
-              "무소속 한동훈 의원도 페이스북에서 “1심 유죄 판결은 관련자 증언의 신빙성이 떨어지고 비약이 많아 납득하기 어렵다”고 했다"
+              "오세훈 서울시장에게 22일 1심에서 당선무효형인 벌금 1000만 원이 선고되자 더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다. 반면 국민의힘은 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다."
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "대법원 선고는 내년 초에 예정되어 있으며, 1심 판결에 대한 여야의 상반된 입장으로 인해 향후 정치적 갈등이 지속될 전망이다."
+            "summary": "내년초 대법원 선고가 예정되어 있어 최종 결과는 아직 불확실하다."
           },
           "less_covered_context": [
-            "오세훈 시장의 구체적인 범죄 행위 내용",
-            "여론조사용역 비용 대납의 구체적 금액",
-            "서울시 내부의 구체적인 대응 방안"
+            "오세훈 시장의 구체적인 여론조사용역 내용",
+            "후원자의 대납 금액 및 경위",
+            "여론조사용역 의뢰 정치브로커의 신원"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:42:51.877762+00:00",
+        "analyzed_at": "2026-07-23T21:40:00.120544+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-cd4cf453bfad04f0",
+      "issue_id": "issue-36ce871158d1b1d4",
       "groups": [
         {
           "group_id": "group-1",
-          "label": "정치 판결에 대한 여야 대립과 비판",
-          "summary": "오세훈 서울시장의 1심 판결에 대해 국민의힘은 '정치 판결'로 비판하며 여당무죄·야당유죄 이중 잣대를 지적하고, 더불어민주당은 '사필귀정'으로 사법의 정의를 강조하며, 무소속 한동훈 의원은 1심 유죄 판결에 대한 신빙성 문제를 제기한다. 양측 모두 판결을 정치적 관점에서 해석하고 있으며, 향후 대법원 선고까지 갈등이 지속될 것으로 전망한다.",
+          "label": "정치자금법 위반과 시장 책임 비판",
+          "summary": "민주당의 오세훈 시장 비판과 법적·정치적 책임 요구, 1심 유죄 판결에 대한 민주당의 비판 및 사퇴 촉구",
           "keywords": [
-            "정치 판결",
-            "여당무죄·야당유죄",
-            "사필귀정",
-            "당선무효형",
-            "대법원 선고 대기"
+            "정치자금법 위반",
+            "1심 유죄",
+            "시장직 상실형",
+            "정치 브로커",
+            "여론조사 비용 대납"
           ],
           "publisher_ids": [
-            "sbs",
-            "donga"
+            "sbs"
           ],
           "publishers": [
             {
               "publisher_id": "sbs",
               "publisher": "SBS"
-            },
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "민주당은 오세훈 시장의 정치자금법 위반(1심 유죄, 시장직 상실형)을 비판하며 법적·정치적 책임을 요구하고 있다. '사필귀정'의 결과라며 뻔뻔한 태도와 구차한 변명을 비판하고, 2심에서 더 무거운 판결과 사퇴를 촉구하고 있다."
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "1심 판결에 대한 여야 반응",
+          "summary": "1심 유죄 판결에 대한 여야 및 무소속 의원의 상반된 반응, 사법 정의와 선거제도 훼손 논란",
+          "keywords": [
+            "정치자금법 위반",
+            "여론조사용역",
+            "후원자의 대납",
+            "사필귀정",
+            "정치 판결",
+            "민주주의 훼손"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
             {
               "publisher_id": "donga",
               "publisher": "동아일보"
             }
           ],
-          "publisher_count": 2,
+          "publisher_count": 1,
           "group_evidence": [
-            "두 언론사 모두 오세훈 서울시장의 1심 판결을 정치적 관점에서 해석하고 있다. SBS는 국민의힘의 입장에서 '정치 판결', '여당무죄', '야당유죄'라는 이중 잣대를 비판하며, 동아일보는 더불어민주당의 '사필귀정' 입장과 국민의힘의 '사법 정의를 무너뜨린 정치 판결' 반발, 무소속 한동훈 의원의 1심 유죄 판결에 대한 신빙성 문제를 함께 보도한다. 양측 모두 판결을 정치적 대립 구도의 핵심으로 보고 있으며, 향후 대법원 선고까지 갈등이 지속될 것으로 전망한다."
+            "1심 유죄 판결(벌금 1000만 원, 당선무효형 가능성)에 대해 민주당은 '사필귀정'이라 비판하며, 국민의힘은 '사법 정의를 무너뜨린 정치 판결'이라 반발하고 있다. 선거제도 훼손과 민주주의 훼손을 우려하는 중립적 설명."
           ]
         }
       ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "오세훈 서울시장의 1심 판결에 대해 SBS는 국민의힘의 정치적 비판 프레임에 초점을 맞추고, 동아일보는 여야의 상반된 반응과 무소속 의원의 비판까지 포함하여 사건의 정치적 파장을 다각도로 조명한다. 두 언론사 모두 판결을 정치적 관점에서 해석하며, 향후 대법원 선고까지 갈등이 지속될 것으로 전망하는 공통점을 보인다.",
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "SBS는 민주당의 관점에서 오세훈 시장의 정치자금법 위반과 시장직 상실형을 비판하며 사퇴와 2심에서의 더 무거운 판결을 촉구하는 반면, 동아일보는 1심 판결에 대한 여야 및 무소속 의원의 상반된 반응(민주당의 '사필귀정' vs 국민의힘의 '정치 판결' 비판)을 중립적으로 설명하며 사법 정의와 선거제도 훼손 논란을 다루고 있다."
+        }
+      ],
+      "grouping_summary": "SBS는 민주당의 관점에서 오세훈 시장의 정치자금법 위반과 시장직 상실형을 비판하며 사퇴와 2심에서의 더 무거운 판결을 촉구하는 반면, 동아일보는 1심 판결에 대한 여야 및 무소속 의원의 상반된 반응(민주당의 '사필귀정' vs 국민의힘의 '정치 판결' 비판)을 중립적으로 설명하며 사법 정의와 선거제도 훼손 논란을 다루고 있다. 두 언론사는 동일한 1심 유죄 판결을 다루지만, SBS는 민주당 비판에 초점을 맞추고 동아일보는 여야 반응 비교에 초점을 맞추어 서로 다른 핵심 관점을 보인다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-23T10:42:55.974498+00:00",
+      "grouped_at": "2026-07-23T21:40:10.905574+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,sbs": {
-        "issue_id": "issue-cd4cf453bfad04f0",
+        "issue_id": "issue-36ce871158d1b1d4",
         "selected_publishers": [
           {
             "publisher_id": "sbs",
@@ -1472,24 +235,24 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "오세훈 서울시장의 1심 벌금 1000만원 판결에 대해 국민의힘은 '정치 판결'이라며 여당무죄·야당유죄라는 이중 잣대를 비판하고, 더불어민주당은 '사필귀정'이라고 평가한 사건이 공통적으로 다뤄졌다.",
+        "common_summary": "오세훈 서울시장이 1심에서 정치자금법 위반 혐의로 벌금 1000만 원의 당선무효형을 선고받은 사건에 대해 더불어민주당은 법적·정치적 책임을 요구했고, 국민의힘은 정치 판결이라며 반발했으며, 무소속 한동훈 의원은 유죄 판결에 의문을 제기했다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 오세훈 서울시장의 1심 벌금 1000만원 판결과 이에 대한 여야의 상반된 반응을 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 오세훈 서울시장의 1심 당선무효형 선고와 더불어민주당의 비판, 국민의힘의 반발, 무소속 의원의 의문을 공통적으로 보도했다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "국민의힘이 오세훈 1심 판결을 '정치 판결'로 규정하고 여당무죄·야당유죄 이중 잣대를 비판하는 입장을 보도했다.",
+                "summary": "오세훈 시장의 1심 유죄 판결과 민주당의 책임 요구를 중심으로 보도",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "더불어민주당은 '사필귀정', 국민의힘은 '정치 판결', 무소속 한동훈 의원은 1심 유죄 판결에 의문을 제기하는 등 여야와 무소속 의원의 상반된 반응을 보도했다.",
+                "summary": "1심 판결 결과와 여야 및 무소속 의원의 상반된 반응을 종합적으로 전달",
                 "evidence": []
               }
             ]
@@ -1497,18 +260,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 국민의힘의 정치적 비판에 초점을 맞춘 반면, 동아일보는 여야와 무소속 의원의 상반된 입장을 다각도로 조명했다.",
+            "contrast_statement": "SBS는 민주당의 오세훈 시장 비판과 책임 요구에 초점을 맞춘 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응을 강조했다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "국민의힘의 오세훈 1심 판결에 대한 정치적 비판과 여당무죄·야당유죄 이중 잣대 주장을 강조했다.",
+                "summary": "더불어민주당의 오세훈 시장 비판과 법적·정치적 책임 요구",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "더불어민주당의 '사필귀정' 평가, 국민의힘의 '정치 판결' 반발, 무소속 한동훈 의원의 비판 등 사건의 정치적 파장을 다각도로 조명했다.",
+                "summary": "1심 유죄 판결에 대한 여야 및 무소속 의원의 상반된 반응",
                 "evidence": []
               }
             ]
@@ -1516,18 +279,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '여론 조사 비용 대납'을 주요 원인으로 강조한 반면, 동아일보는 '정치 브로커 명태균'과 '정치자금법 위반'을 함께 언급했다.",
+            "contrast_statement": "SBS는 정치 브로커에게 여론조사 결과 제공과 후원자의 비용 대납을 원인으로 강조한 반면, 동아일보는 정치브로커에 의뢰한 여론조사 활용과 선거제도 훼손을 배경으로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "오세훈 시장이 정치 브로커 명태균 씨로부터 여론조사 결과를 받아보고 후원자에게 비용을 대납하게 한 혐의를 주요 원인으로 강조했다.",
+                "summary": "정치 브로커에게 여론조사 결과 제공 및 후원자의 비용 대납",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "오세훈 시장이 정치브로커에 의뢰한 여론조사를 선거에 활용하고 비용을 후원자에게 대납시킨 사실과 정치자금법 위반을 강조했다.",
+                "summary": "정치브로커에 의뢰한 여론조사를 선거에 활용한 점과 선거제도 훼손",
                 "evidence": []
               }
             ]
@@ -1535,18 +298,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '정치 판결에 대한 비판'과 '여당무죄·야당유죄 이중 잣대'를 강조한 반면, 동아일보는 '당선무효형', '정치권 갈등 심화', '대법원 선고 대기' 등 구체적 영향과 대상을 제시했다.",
+            "contrast_statement": "SBS는 시장직 상실형과 2심에서의 더 무거운 판결 기대를 강조한 반면, 동아일보는 당선무효형 가능성과 내년초 대법원 선고를 주요 영향으로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정치 판결에 대한 비판과 여당무죄·야당유죄 이중 잣대라는 정치적 비판을 강조했다.",
+                "summary": "시장직 상실형 선고와 2심에서의 더 무거운 판결 기대",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "당선무효형, 정치권 갈등 심화, 대법원 선고 대기 등 구체적 영향과 더불어민주당·국민의힘·서울시·무소속 의원 등 다양한 대상을 제시했다.",
+                "summary": "당선무효형 가능성과 내년초 대법원 선고 예정",
                 "evidence": []
               }
             ]
@@ -1554,43 +317,46 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '비판' 태도로 국민의힘의 주장을 직접 인용한 반면, 동아일보는 '중립 설명' 태도로 여야와 무소속 의원의 발언을 균형 있게 전달했다.",
+            "contrast_statement": "SBS는 '사필귀정', '뻔뻔한 태도', '구차한 변명' 등의 표현을 사용해 비판적인 태도를 보인 반면, 동아일보는 '사필귀정'과 '정치 판결'이라는 양측의 주장을 중립적으로 설명하며 보도했다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "국민의힘의 '오세훈 1심, 정치 판결…여당무죄·야당유죄' 발언을 직접 인용하며 비판적 태도를 보였다.",
+                "summary": "민주당의 비판과 오세훈 시장의 책임을 강조하는 비판적 태도",
                 "evidence": [
-                  "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\""
+                  "'사필귀정'의 결과",
+                  "뻔뻔한 태도를 일관해왔다",
+                  "구차한 변명은 설 자리가 없다"
                 ]
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "더불어민주당, 국민의힘, 무소속 한동훈 의원의 발언을 균형 있게 인용하며 중립적으로 설명했다.",
+                "summary": "여야 및 무소속 의원의 상반된 반응을 중립적으로 설명하는 태도",
                 "evidence": [
-                  "더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다",
-                  "국민의힘 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다",
-                  "무소속 한동훈 의원도 페이스북에서 “1심 유죄 판결은 관련자 증언의 신빙성이 떨어지고 비약이 많아 납득하기 어렵다”고 했다"
+                  "오세훈 서울시장에게 22일 1심에서 당선무효형인 벌금 1000만 원이 선고되자 더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다. 반면 국민의힘은 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다."
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "오세훈 서울시장의 1심 벌금 1000만원 판결과 이에 대한 여야의 상반된 반응"
+          "오세훈 서울시장의 1심 당선무효형 선고",
+          "더불어민주당의 비판과 국민의힘의 반발",
+          "무소속 한동훈 의원의 유죄 판결에 대한 의문 제기"
         ],
         "key_differences": [
-          "SBS는 국민의힘의 정치적 비판 프레임에 집중한 반면, 동아일보는 여야와 무소속 의원의 상반된 입장을 다각도로 조명했다."
+          "SBS는 민주당의 책임 요구에 초점을 맞춘 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응을 종합적으로 보도함",
+          "SBS는 '뻔뻔한 태도', '구차한 변명' 등 감정적 표현을 사용한 반면, 동아일보는 중립적인 설명 태도를 유지함"
         ],
-        "comparison_report": "SBS는 국민의힘의 '정치 판결' 비판과 여당무죄·야당유죄 이중 잣대 주장을 중심으로 보도했으며, 동아일보는 더불어민주당의 '사필귀정' 평가, 국민의힘의 반발, 무소속 한동훈 의원의 비판 등 다양한 정치적 입장을 균형 있게 전달하며 사건의 법적·정치적 파장을 종합적으로 조명했다.",
+        "comparison_report": "SBS와 동아일보 모두 오세훈 서울시장의 1심 정치자금법 위반 유죄 판결과 민주당의 비판, 국민의힘의 반발, 무소속 의원의 의문을 공통적으로 보도했으나, SBS는 민주당의 책임 요구를 중심으로 비판적인 태도를 보인 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응을 중립적으로 설명하며 보도했다. SBS는 정치 브로커와 후원자의 구체적 행위를 원인으로 강조한 데 비해 동아일보는 정치브로커에 의뢰한 여론조사 활용과 선거제도 훼손을 배경으로 제시했다. 영향 측면에서는 SBS가 시장직 상실형과 2심에서의 더 무거운 판결 기대를 강조한 반면, 동아일보는 당선무효형 가능성과 내년초 대법원 선고를 주요 영향으로 제시했다.",
         "source_links": [
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "국민의힘 \"오세훈 1심, 정치 판결…여당무죄·야당유죄\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669646",
-            "published_at": "Wed, 22 Jul 2026 16:18:00 +0900"
+            "title": "민주, '1심 시장직 상실형' 오세훈에 \"죄 인정하고 정치적 책임져야\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669909",
+            "published_at": "Wed, 22 Jul 2026 17:58:00 +0900"
           },
           {
             "publisher_id": "donga",
@@ -1602,1094 +368,596 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-23T10:43:08.556485+00:00",
+        "compared_at": "2026-07-23T21:40:25.604837+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-233315d91c5f3aaa": {
+  "issue-f0c2443e7d531519": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-233315d91c5f3aaa",
+        "issue_id": "issue-f0c2443e7d531519",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "fa4e013904d1f5a4af1541555cdd1c43b26222f6e16c6989d9f7639ab3902c1b",
+            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
+            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "국민의힘 장동혁 대표가 제헌절 경축식에 불참하고 6·3 지방선거 투표용지 부족 사태 규탄 집회에 참석해 선거관리위원회 개혁과 선거제도 개혁을 촉구하며 장외 정치 활동을 이어갔다.",
+          "headline_frame": "제헌절 경축식 불참과 장외 정치 활동을 대비시켜 정치적 선택을 부각",
+          "main_focus": "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참여, 그리고 선거제도 개혁 촉구",
+          "keywords": [
+            "장외 정치",
+            "재선거",
+            "투표용지 부족",
+            "선거관리위원회 개혁",
+            "선거제도 개혁"
+          ],
+          "main_actors": [
+            "국민의힘 장동혁 대표",
+            "박성훈 수석대변인"
+          ],
+          "quoted_sources": [
+            "40일 넘게 우리 정치가 해결책을 내놓지 못해 죄송하다",
+            "반드시 선거관리위원회를 개혁하고, 선거제도 개혁을 이뤄내겠다",
+            "부정선거 재선거 당일투표 수개표"
+          ],
+          "causes": [
+            "6·3 지방선거 투표용지 부족 사태"
+          ],
+          "background": [
+            "제78주년 제헌절",
+            "18년 만에 공휴일로 재지정된 제헌절 경축식"
+          ],
+          "emphasized_effects": [
+            "강성 지지층 결집",
+            "장외 정치 활동"
+          ],
+          "affected_groups": [
+            "국민의힘 당내",
+            "6·3 지방선거 유권자"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "기사에서는 향후 전망에 대한 구체적인 언급이 없어 중립으로 판단"
+          },
+          "less_covered_context": [
+            "집회 참여자들의 구체적인 반응이나 여론 조사 결과",
+            "선거관리위원회 개혁의 구체적인 방안이나 일정",
+            "다른 정당이나 정치인들의 반응"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-23T21:40:32.001802+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-f0c2443e7d531519",
         "publisher_id": "sbs",
         "publisher": "SBS",
         "articles": [
           {
-            "article_id": "dd4c7c5a5445d8ea3ccc671d6c49945891b68e7ebe38d7a3e57c87b075e936e8",
-            "title": "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄",
-            "published_at": "Thu, 23 Jul 2026 08:24:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008670597"
+            "article_id": "680b9117e8d29a4bff38adf204dc2adfa2b603d9844e4d32bb783b3ae563072f",
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586"
           }
         ],
         "analysis": {
-          "article_summary": "한국 경제가 2분기 0.6% 성장하며 예상보다 가파른 성장세를 지속했으며, 이는 반도체 수출 호조가 중동발 악재를 상쇄한 결과로 분석된다.",
-          "headline_frame": "반도체 수출 호조를 통한 경제 성장",
-          "main_focus": "반도체 수출 호조가 중동발 악재를 상쇄하며 한국 경제의 예상보다 가파른 성장세를 지속한 점",
+          "article_summary": "조갑제 대표는 SBS 정치쇼에서 국민의힘 장동혁 대표의 제헌절 기념식 불참을 징계감이라고 지적하며, 2028년 공천 배제 명단 1번으로 장동혁을 지목하고 부정선거론자 및 계엄 동조자 등 70~80명을 명단에 포함시킬 것이라고 밝혔다.",
+          "headline_frame": "조갑제의 2028년 국민의힘 공천 배제 명단 발표와 장동혁 대표의 제헌절 불참을 징계감이라고 규정하는 내용",
+          "main_focus": "조갑제 대표가 국민의힘 장동혁 대표의 제헌절 불참을 징계감이라고 비판하고, 2028년 공천 배제 명단 1번으로 장동혁을 지목하며 부정선거론자 및 계엄 동조자 등 70~80명을 명단에 포함시킬 것이라고 주장하는 내용",
           "keywords": [
-            "반도체 수출",
-            "경제 성장",
-            "중동발 악재",
-            "2분기"
+            "2028 공천 배제 명단",
+            "제헌절 불참",
+            "징계감",
+            "부정선거론자",
+            "계엄 동조자",
+            "조갑제"
           ],
           "main_actors": [
-            "한국 경제"
+            "조갑제",
+            "장동혁",
+            "국민의힘"
+          ],
+          "quoted_sources": [
+            "조갑제"
+          ],
+          "causes": [
+            "제헌절 기념식 불참"
+          ],
+          "background": [
+            "이승만 61주기 참석 불참",
+            "부실선거와 부정선거 구별",
+            "문해력의 문제"
+          ],
+          "emphasized_effects": [
+            "2028년 공천 배제 명단 발표",
+            "부정선거론자 및 계엄 동조자 70~80명 명단 포함"
+          ],
+          "affected_groups": [
+            "국민의힘",
+            "장동혁"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\"",
+              "국힘 장동혁 대표 제헌절 기념식 불참은 징계감"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "조갑제는 외부에서 명단을 만들면 효과적일 것이라고 언급했으나, 구체적인 향후 전망이나 방향성은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "조갑제의 명단 작성 방법 및 구체적 기준",
+            "국민의힘 내부의 반응 및 대응",
+            "장동혁 대표의 불참에 대한 직접적 해명"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-23T21:40:32.020868+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-f0c2443e7d531519",
+      "groups": [
+        {
+          "group_id": "dong-a",
+          "label": "장외 정치 활동과 선거제도 개혁 촉구",
+          "summary": "동아일보는 장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참여를 대비시켜, 선거관리위원회 개혁과 선거제도 개혁을 촉구하는 장외 정치 활동을 중심으로 보도했습니다. 이는 당내 강성 지지층 결집을 위한 정치적 선택으로 해석하며 비판적인 태도를 보였습니다.",
+          "keywords": [
+            "장외 정치",
+            "재선거",
+            "투표용지 부족",
+            "선거관리위원회 개혁",
+            "선거제도 개혁"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참여를 대비시켜 정치적 선택을 부각",
+            "6·3 지방선거 투표용지 부족 사태를 규탄하며 선거관리위원회 개혁과 선거제도 개혁을 촉구",
+            "당내 강성 지지층 결집을 위한 장외 정치 활동으로 해석하며 비판"
+          ]
+        },
+        {
+          "group_id": "sbs",
+          "label": "제헌절 불참을 징계감으로 규정하고 2028년 공천 배제 명단 발표",
+          "summary": "SBS는 조갑제 대표의 주장을 중심으로, 장동혁 대표의 제헌절 경축식 불참을 징계감이라고 규정하고 2028년 국민의힘 공천 배제 명단 1번으로 장동혁을 지목하는 내용을 보도했습니다. 부정선거론자 및 계엄 동조자 70~80명을 명단에 포함시킬 것이라고 주장하며, 부실선거와 부정선거 구별 및 문해력의 문제를 강조했습니다.",
+          "keywords": [
+            "2028 공천 배제 명단",
+            "제헌절 불참",
+            "징계감",
+            "부정선거론자",
+            "계엄 동조자",
+            "조갑제"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "조갑제 대표가 장동혁 대표의 제헌절 불참을 징계감이라고 비판",
+            "2028년 국민의힘 공천 배제 명단 1번으로 장동혁을 지목",
+            "부정선거론자 및 계엄 동조자 70~80명을 명단에 포함시킬 것이라고 주장",
+            "이승만 61주기 참석 불참과 부실선거와 부정선거 구별, 문해력의 문제를 강조"
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "dong-a",
+            "sbs"
+          ],
+          "contrast_statement": "동아일보는 장동혁 대표의 제헌절 불참을 6·3 지방선거 투표용지 부족 사태 규탄과 선거제도 개혁 촉구라는 장외 정치 활동의 일환으로 해석하며 당내 강성 지지층 결집을 위한 정치적 선택으로 보도했습니다. 반면 SBS는 조갑제 대표의 주장을 중심으로 제헌절 불참을 징계감이라고 규정하고, 2028년 국민의힘 공천 배제 명단 1번으로 장동혁을 지목하며 부정선거론자 및 계엄 동조자 70~80명을 명단에 포함시킬 것이라고 주장하는 내용을 보도했습니다. 동아일보는 선거제도 개혁을 촉구하는 긍정적 개혁 방향을 제시한 반면, SBS는 제헌절 불참을 징계감이라고 규정하며 정치적 배제와 부정적 평가를 강조했습니다."
+        }
+      ],
+      "grouping_summary": "두 언론사 모두 장동혁 대표의 제헌절 경축식 불참을 다루었으나, 동아일보는 이를 6·3 지방선거 투표용지 부족 사태 규탄과 선거제도 개혁 촉구라는 장외 정치 활동의 맥락에서 해석하며 당내 정치적 선택으로 보도한 반면, SBS는 조갑제 대표의 주장을 중심으로 제헌절 불참을 징계감이라고 규정하고 2028년 공천 배제 명단 발표라는 정치적 배제와 부정적 평가를 강조했습니다. 핵심 관점과 평가 방향이 서로 대립하여 별도의 그룹으로 분류되었습니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-23T21:40:48.137824+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-f0c2443e7d531519",
+        "selected_publishers": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "국민의힘 장동혁 대표의 제헌절 경축식 불참과 관련된 정치적 상황을 다루고 있으나, 동아일보는 장동혁 대표의 직접적인 장외 활동과 선거제도 개혁 촉구를, SBS는 조갑제의 2028년 공천 배제 명단 발표를 중심으로 보도하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 국민의힘 장동혁 대표의 제헌절 경축식 불참을 보도하고 있으나, 동아일보는 해당 불참을 계기로 한 장동혁 대표의 장외 정치 활동을, SBS는 조갑제의 비판을 통한 2028년 공천 배제 명단 발표를 중심으로 다루고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장동혁 대표의 제헌절 경축식 불참과 6·3 지방선거 투표용지 부족 사태 규탄 집회 참여, 선거관리위원회 및 선거제도 개혁 촉구",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제가 국민의힘 장동혁 대표의 제헌절 불참을 징계감이라고 규정하고 2028년 공천 배제 명단 1번으로 장동혁을 지목한 내용",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 장동혁 대표의 선거제도 개혁 촉구 및 장외 정치 활동을, SBS는 조갑제의 2028년 공천 배제 명단 발표를 통한 징계 주장을 핵심 관점으로 제시하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "장동혁 대표의 제헌절 불참을 계기로 한 선거관리위원회 개혁 및 선거제도 개혁 촉구",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제의 2028년 국민의힘 공천 배제 명단 발표와 장동혁 대표에 대한 징계 주장",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 6·3 지방선거 투표용지 부족 사태를 원인으로 강조하는 반면, SBS는 제헌절 기념식 불참 자체를 원인으로 규정하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "6·3 지방선거 투표용지 부족 사태",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "제헌절 기념식 불참",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 강성 지지층 결집과 당내 영향을, SBS는 2028년 공천 배제 명단 발표와 부정선거론자·계엄 동조자 명단 포함을 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "강성 지지층 결집 및 당내 영향",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "2028년 공천 배제 명단 발표 및 부정선거론자·계엄 동조자 70~80명 명단 포함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 당내 비판을 보도하며 비판적 태도를, SBS는 조갑제의 발언을 직접 인용하며 비판적 태도를 보이고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "당내 비판을 보도하며 비판적 태도를 보임",
+                "evidence": [
+                  "당내에선 장 대표가 18년 만에 공휴일로 재지정된 제헌절 경축식에는 불참한 채 강성 지지층 결집에 집중한다는 비판도 나온다"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조갑제의 발언을 직접 인용하며 비판적 태도를 보임",
+                "evidence": [
+                  "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\"",
+                  "국힘 장동혁 대표 제헌절 기념식 불참은 징계감"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "국민의힘 장동혁 대표의 제헌절 경축식 불참"
+        ],
+        "key_differences": [
+          "동아일보는 장동혁 대표의 선거제도 개혁 촉구 및 장외 활동을, SBS는 조갑제의 2028년 공천 배제 명단 발표를 중심으로 보도"
+        ],
+        "comparison_report": "동아일보와 SBS 모두 국민의힘 장동혁 대표의 제헌절 경축식 불참을 보도하지만, 동아일보가 장동혁 대표의 직접적인 장외 정치 활동과 선거제도 개혁 촉구를 강조하는 반면, SBS는 조갑제의 비판을 통해 2028년 공천 배제 명단 발표를 중심으로 보도하고 있다. 두 언론사 모두 비판적 태도를 보이지만, 동아일보는 당내 비판을, SBS는 조갑제의 발언을 직접 인용하여 보도하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "제헌절 경축식 불참 장동혁 “재선거” 장외정치",
+            "link": "https://www.donga.com/news/Politics/article/all/20260717/134319216/2",
+            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-23T21:41:17.823673+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-afbcf07bbd233d22": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-afbcf07bbd233d22",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "c924e323ec9abf062261541ddfbeb27e8d7cd07c2a2ed6d34087d7304519030a",
+            "title": "2분기도 '깜짝' 성장 희소식…코스피 '7천' 회복",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672157"
+          }
+        ],
+        "analysis": {
+          "article_summary": "반도체 수출 호조로 우리 경제가 2분기에도 깜짝 성장했으며, 코스피가 7천 선을 회복했다.",
+          "headline_frame": "반도체 수출 호조에 따른 경제 성장과 코스피 회복을 중심으로 구성",
+          "main_focus": "반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향",
+          "keywords": [
+            "반도체 수출 호조",
+            "2분기 성장",
+            "코스피 회복",
+            "경제 성장",
+            "국민소득 4만 달러"
+          ],
+          "main_actors": [
+            "우리 경제",
+            "코스피"
           ],
           "quoted_sources": [],
           "causes": [
             "반도체 수출 호조"
           ],
           "background": [
-            "중동발 악재"
+            "2분기 경제 성장",
+            "코스피 7천 선 회복"
           ],
           "emphasized_effects": [
-            "예상보다 가파른 성장세 지속"
+            "경제 성장",
+            "코스피 회복",
+            "1인당 국민소득 4만 달러 달성 가능성"
           ],
           "affected_groups": [
-            "한국 경제"
+            "경제 전반",
+            "주식 시장"
           ],
           "tone": {
-            "category": "중립 설명",
+            "category": "기대",
             "evidence": [
-              "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄"
+              "2분기도 '깜짝' 성장 희소식",
+              "코스피 '7천' 회복"
             ]
           },
           "outlook": {
-            "direction": "중립",
-            "summary": "반도체 수출 호조가 경제 성장을 견인했으나 중동발 악재 상쇄 여부에 대한 구체적 전망은 제시되지 않음"
+            "direction": "긍정",
+            "summary": "올해 3% 성장, 1인당 국민소득 4만 달러 달성 가능성 전망"
           },
           "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "반도체 수출 호조의 지속 가능성",
-            "중동발 악재의 구체적 내용"
+            "반도체 수출 호조의 구체적 원인",
+            "코스피 7천 선 회복의 구체적 배경"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:43:19.909409+00:00",
+        "analyzed_at": "2026-07-23T21:41:30.720405+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-233315d91c5f3aaa",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "5f3b8a00a8637c21c6d5e3aa63549706d68d1e6da8a6be5c8bed47537e751113",
-            "title": "年 7%대 주담대 더 오른다… 물가안정 기대속 영끌족 비상",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315507/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "한국은행이 3년 6개월 만에 기준금리를 인상했으며, 반도체 초호황으로 경기 회복세가 뚜렷해지면서 고물가와 고환율 안정 기대가 생겼으나, 주택담보대출 금리가 연 8%대로 오를 것으로 보여 영끌족들의 상환 부담이 커질 전망이다.",
-          "headline_frame": "금리 인상과 물가 안정 기대, 주택담보대출 금리 상승 및 영끌족 부담 증가",
-          "main_focus": "기준금리 인상으로 인한 물가 안정 기대와 주택담보대출 금리 상승으로 인한 개인 대출 상환 부담 증가",
-          "keywords": [
-            "기준금리 인상",
-            "물가 안정",
-            "고환율",
-            "반도체 초호황",
-            "주택담보대출 금리",
-            "영끌족"
-          ],
-          "main_actors": [
-            "한국은행 금융통화위원회",
-            "영끌족"
-          ],
-          "quoted_sources": [
-            "한국은행"
-          ],
-          "causes": [
-            "고물가",
-            "고환율",
-            "반도체 초호황으로 인한 경기 회복세"
-          ],
-          "background": [
-            "소비자 물가 상승률 3.1%(5월), 3.2%(6월)",
-            "수입 물가 상승률 20.5%",
-            "생산자 물가 상승률 8.5%"
-          ],
-          "emphasized_effects": [
-            "물가 안정 기대",
-            "고환율 안정 기대",
-            "주택담보대출 금리 연 8%대 상승",
-            "영끌족 상환 부담 증가"
-          ],
-          "affected_groups": [
-            "주택담보대출을 받은 개인"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "한국은행이 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다",
-              "반도체 초호황으로 경기 회복세가 뚜렷해지면서 금리를 올려도 경제가 견딜 수 있다고 판단한 것이다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 추가 금리 인상 예고로 고물가와 고환율이 안정될지 주목되나, 대출 금리 상승으로 인한 개인 부담은 증가할 전망"
-          },
-          "less_covered_context": [
-            "금리 인상이 기업 투자나 고용에 미치는 영향",
-            "반도체 호황이 지속될지에 대한 전망",
-            "정부의 물가 안정 대책"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:43:20.067624+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-233315d91c5f3aaa",
+        "issue_id": "issue-afbcf07bbd233d22",
         "publisher_id": "mk",
         "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "c6c1a8f5ce42666b2b58dc61fc9d39d47ab39cdc80c0688c35b50fbd2aac7fc5",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12105057"
+            "article_id": "788f006559d226320e251acbe9278a7e300e88d5f10407d76953575d7bbf725e",
+            "title": "수출·내수 쌍끌이…\"올 성장률 3%도 가능\"",
+            "published_at": "Thu, 23 Jul 2026 17:39:25 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12105728"
           }
         ],
         "analysis": {
-          "article_summary": "한국은행이 발표한 올해 2분기 실질 국내총생산(GDP) 성장률이 0.6%를 기록했으며, 이는 반도체 중심의 수출 호조에 힘입은 것으로 나타났다.",
-          "headline_frame": "반도체 수출 호조를 중심으로 한 GDP 성장률 상승",
-          "main_focus": "반도체 수출 호조가 경제 성장률에 미친 긍정적 영향",
-          "keywords": [
-            "반도체 수출 호조",
-            "GDP 성장률",
-            "한국은행",
-            "실질 국내총생산"
-          ],
-          "main_actors": [
-            "한국은행"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "반도체 중심 수출 호조"
-          ],
-          "background": [
-            "2분기(4~6월) 경제 성장률"
-          ],
-          "emphasized_effects": [
-            "0.6% 성장"
-          ],
-          "affected_groups": [
-            "한국 경제"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "반도체 수출 호조가 경제 성장률에 긍정적 영향을 미쳤으나, 향후 전망에 대한 구체적 언급은 없음"
-          },
-          "less_covered_context": [
-            "1분기 성장률 1.8%와의 비교",
-            "반도체 수출 호조의 구체적 원인",
-            "향후 경제 전망에 대한 구체적 예측"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:43:20.815921+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-233315d91c5f3aaa",
-      "groups": [
-        {
-          "group_id": "group-semiconductor-growth",
-          "label": "반도체 수출 호조와 경제 성장",
-          "summary": "반도체 수출 호조가 한국 경제의 예상보다 가파른 성장세를 지속한 점을 중심으로, 중동발 악재를 상쇄하며 경제 성장을 견인했다는 공통된 핵심 관점을 가진 언론사 그룹",
+          "article_summary": "올해 2분기 한국 경제가 예상보다 강한 성장세를 보인 것은 반도체 수출 호조와 내수 회복이 동시에 작용했기 때문이다.",
+          "headline_frame": "수출과 내수의 동시 회복",
+          "main_focus": "반도체 수출 호조와 내수 회복을 통한 경제 성장 전망",
           "keywords": [
             "반도체 수출",
-            "경제 성장",
-            "중동발 악재"
-          ],
-          "publisher_ids": [
-            "sbs",
-            "mk"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            },
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
-            }
-          ],
-          "publisher_count": 2,
-          "group_evidence": [
-            "SBS와 매일경제 모두 반도체 수출 호조가 한국 경제의 예상보다 가파른 성장세(2분기 0.6% 성장)를 지속한 점을 핵심 쟁점으로 다루고 있으며, SBS는 중동발 악재 상쇄를, 매일경제는 2분기 경제 성장률 상승을 강조하지만, 모두 반도체 수출 호조를 통한 경제 성장이라는 동일한 해석 방향을 공유함",
-            "두 언론사 모두 중립 설명 태도를 보이며, 반도체 수출 호조가 경제 성장에 미친 긍정적 영향을 중심으로 보도하고 있음"
-          ]
-        },
-        {
-          "group_id": "group-interest-rate-impact",
-          "label": "금리 인상과 개인 대출 부담",
-          "summary": "기준금리 인상으로 인한 물가 안정 기대와 주택담보대출 금리 상승으로 인한 개인 대출 상환 부담 증가라는 상반된 영향을 강조한 언론사 그룹",
-          "keywords": [
-            "기준금리 인상",
-            "물가 안정",
-            "주택담보대출 금리",
-            "영끌족 부담"
-          ],
-          "publisher_ids": [
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "동아일보는 기준금리 인상이 고물가를 잡기 위한 조치임을 설명하면서도, 동시에 주택담보대출 금리 연 8%대 상승과 영끌족 상환 부담 증가라는 부정적 영향을 강조함",
-            "이는 물가 안정 기대와 개인 대출 부담 증가라는 두 가지 상반된 영향을 동시에 보도하는 독특한 해석 방향을 보여줌"
-          ]
-        }
-      ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-semiconductor-growth",
-            "group-interest-rate-impact"
-          ],
-          "contrast_statement": "SBS와 매일경제는 반도체 수출 호조가 한국 경제의 예상보다 가파른 성장세(2분기 0.6% 성장)를 지속한 점을 핵심 쟁점으로 다루며, 중동발 악재 상쇄 또는 2분기 경제 성장률 상승이라는 공통된 해석 방향을 보이는 반면, 동아일보는 기준금리 인상이 고물가를 잡기 위한 조치임을 설명하면서도 주택담보대출 금리 상승으로 인한 영끌족 상환 부담 증가라는 부정적 영향을 강조하여, 경제 성장에 대한 긍정적 해석과 개인 대출 부담 증가라는 부정적 해석이 공존하는 독특한 관점을 보여줌"
-        }
-      ],
-      "grouping_summary": "총 3개 언론사 중 SBS와 매일경제는 반도체 수출 호조를 통한 경제 성장이라는 동일한 핵심 관점을 공유하며 하나의 그룹으로 묶였고, 동아일보는 기준금리 인상과 관련된 두 가지 상반된 영향(물가 안정 기대와 개인 대출 부담 증가)을 동시에 보도하는 독특한 해석 방향을 보여 별도의 그룹으로 분류됨",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-23T10:43:26.853725+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-233315d91c5f3aaa",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "한국 경제가 2분기 0.6% 성장하며 예상보다 가파른 성장세를 지속했고, 이는 반도체 수출 호조가 중동발 악재를 상쇄한 결과로 분석된다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국 경제의 2분기 0.6% 성장과 반도체 수출 호조를 공통점으로 제시하지만, SBS는 중동발 악재 상쇄에 초점을 맞추고 동아일보는 기준금리 인상과의 연계성을 추가로 언급한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "2분기 한국 경제 0.6% 성장과 반도체 수출 호조를 중동발 악재 상쇄로 설명",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "2분기 한국 경제 0.6% 성장과 반도체 수출 호조를 기준금리 인상 배경으로 제시",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 반도체 수출 호조가 중동발 악재를 상쇄하며 경제 성장을 지속한 점을 강조하는 반면, 동아일보는 기준금리 인상을 통해 물가 안정과 개인 대출 부담 증가라는 이중적 영향을 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하며 예상보다 가파른 성장세 지속",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "기준금리 인상으로 물가 안정 기대와 주택담보대출 금리 상승에 따른 영끌족 부담 증가",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 반도체 수출 호조를 주요 원인으로, 동아일보는 고물가·고환율과 반도체 초호황을 복합적으로 원인으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄한 것이 경제 성장의 주요 원인",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가·고환율과 반도체 초호황으로 인한 경기 회복세가 기준금리 인상의 배경",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 한국 경제 전반의 성장세 지속을, 동아일보는 물가 안정 기대와 주택담보대출 금리 상승에 따른 영끌족 부담 증가를 강조한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "예상보다 가파른 성장세 지속",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "물가 안정·고환율 안정 기대와 주택담보대출 금리 연 8%대 상승으로 영끌족 상환 부담 증가",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄'라는 중립적 설명을, 동아일보는 '한국은행이 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다' 등의 중립적 설명을 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며 반도체 수출 호조와 중동발 악재 상쇄를 객관적으로 서술",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며 기준금리 인상의 배경과 영끌족 부담 증가를 객관적으로 서술",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "한국 경제의 2분기 0.6% 성장, 반도체 수출 호조, 중동발 악재 상쇄"
-        ],
-        "key_differences": [
-          "SBS는 중동발 악재 상쇄에 초점을 맞춘 반면, 동아일보는 기준금리 인상과 물가 안정 기대 및 주택담보대출 금리 상승을 추가로 강조"
-        ],
-        "comparison_report": "SBS와 동아일보 모두 한국 경제의 2분기 0.6% 성장과 반도체 수출 호조를 공통점으로 제시하지만, SBS는 중동발 악재 상쇄를 통한 경제 성장 지속에 초점을 맞춘 반면, 동아일보는 기준금리 인상을 통해 물가 안정과 고환율 안정 기대를 제시하면서도 주택담보대출 금리 상승에 따른 영끌족 부담 증가라는 부정적 영향을 강조한다. 두 언론사 모두 중립적 설명 태도를 보이지만, SBS는 경제 성장 요인에, 동아일보는 금리 정책의 다각적 영향에 더 많은 비중을 둔다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008670597",
-            "published_at": "Thu, 23 Jul 2026 08:24:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "年 7%대 주담대 더 오른다… 물가안정 기대속 영끌족 비상",
-            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315507/2",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:43:36.727676+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,mk": {
-        "issue_id": "issue-233315d91c5f3aaa",
-        "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "한국은행이 기준금리를 인상했으며, 반도체 초호황으로 경기 회복세가 뚜렷해진 상황에서 고물가와 고환율 안정 기대가 생겼으나, 주택담보대출 금리가 연 8%대로 오를 것으로 보여 영끌족들의 상환 부담이 커질 전망이다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국은행의 기준금리 인상과 반도체 초호황으로 인한 경기 회복세를 공통적으로 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "기준금리 인상, 반도체 초호황, 고물가·고환율 안정 기대, 주택담보대출 금리 상승 및 영끌족 부담 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "기준금리 인상, 반도체 수출 호조, 2분기 GDP 성장률 0.6%",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 기준금리 인상으로 인한 물가 안정 기대와 주택담보대출 금리 상승으로 인한 개인 부담 증가를 동시에 강조하는 반면, 매일경제는 반도체 수출 호조가 경제 성장률에 미친 긍정적 영향에 초점을 맞추고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "기준금리 인상으로 물가 안정 기대와 주택담보대출 금리 상승으로 인한 영끌족 상환 부담 증가를 동시에 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 경제 성장률에 미친 긍정적 영향을 중심으로 보도",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 고물가, 고환율, 반도체 초호황을 원인으로 제시하는 반면, 매일경제는 반도체 중심 수출 호조만을 원인으로 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가, 고환율, 반도체 초호황으로 인한 경기 회복세를 금리 인상의 배경으로 제시",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 중심 수출 호조를 2분기 GDP 성장률 상승의 주요 원인으로 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 주택담보대출 금리 상승으로 인한 영끌족의 상환 부담 증가를 구체적으로 언급하는 반면, 매일경제는 한국 경제 전체의 0.6% 성장을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "주택담보대출 금리 연 8%대 상승으로 영끌족의 상환 부담 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조로 인한 한국 경제 0.6% 성장",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "동아일보는 '고물가를 잡기 위한 조치'와 '경제가 견딜 수 있다고 판단'한 중립적 설명을 제시하는 반면, 매일경제는 '[속보]'라는 표현을 사용해 신속한 정보 전달 태도를 보이고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가 대응을 위한 중립적 설명과 경제 회복 가능성에 대한 객관적 판단",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "속보 표현을 통한 신속한 정보 전달 태도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "한국은행의 기준금리 인상 결정",
-          "반도체 초호황/수출 호조가 경기 회복 및 경제 성장에 기여했다는 점",
-          "고물가와 고환율 안정 기대"
-        ],
-        "key_differences": [
-          "동아일보는 주택담보대출 금리 상승과 영끌족 부담 증가를 구체적으로 다루는 반면, 매일경제는 GDP 성장률 수치에 집중"
-        ],
-        "comparison_report": "동아일보와 매일경제는 모두 한국은행의 기준금리 인상과 반도체 초호황을 공통 배경으로 다루지만, 동아일보가 물가 안정 기대와 주택담보대출 금리 상승으로 인한 영끌족의 상환 부담 증가를 동시에 강조하는 반면, 매일경제는 반도체 수출 호조가 경제 성장률에 미친 긍정적 영향에 초점을 맞추고 있다. 보도 태도 측면에서 동아일보는 고물가 대응을 위한 중립적 설명과 경제 회복 가능성에 대한 객관적 판단을 제시하는 반면, 매일경제는 '[속보]'라는 표현을 사용해 신속한 정보 전달 태도를 보이고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "年 7%대 주담대 더 오른다… 물가안정 기대속 영끌족 비상",
-            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315507/2",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "link": "https://www.mk.co.kr/news/economy/12105057",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:43:37.389144+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,mk,sbs": {
-        "issue_id": "issue-233315d91c5f3aaa",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "한국 경제가 2분기 0.6% 성장하며 예상보다 가파른 성장세를 지속했으며, 이는 반도체 수출 호조가 중동발 악재를 상쇄한 결과로 분석된다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "SBS, 동아일보, 매일경제 모두 한국 경제가 2분기 0.6% 성장했으며, 반도체 수출 호조가 주요 성장 동력으로 작용했다고 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "2분기 한국 경제 0.6% 성장과 반도체 수출 호조를 통한 중동발 악재 상쇄",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "한국은행의 기준금리 인상과 반도체 초호황으로 인한 경기 회복세",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조에 힘입은 2분기 실질 GDP 성장률 0.6% 기록",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS와 매일경제는 반도체 수출 호조를 통한 경제 성장에 초점을 맞춘 반면, 동아일보는 기준금리 인상과 물가 안정 기대, 주택담보대출 금리 상승에 따른 개인 부담 증가를 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하며 예상보다 가파른 성장세 지속",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "기준금리 인상으로 물가 안정 기대와 주택담보대출 금리 상승에 따른 영끌족 부담 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 GDP 성장률 상승에 미친 긍정적 영향",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS와 매일경제는 반도체 수출 호조를 주요 원인으로 제시한 반면, 동아일보는 고물가, 고환율, 반도체 초호황으로 인한 경기 회복세를 복합적으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄한 결과",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가, 고환율, 반도체 초호황으로 인한 경기 회복세가 기준금리 인상의 배경",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 중심의 수출 호조가 GDP 성장률 상승의 원인",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 한국 경제 전반의 성장세 지속을, 동아일보는 주택담보대출을 받은 개인의 상환 부담 증가를, 매일경제는 한국 경제 전체의 0.6% 성장을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "예상보다 가파른 성장세 지속",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "주택담보대출 금리 연 8%대 상승으로 영끌족 상환 부담 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "한국 경제 0.6% 성장",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄'라는 제목으로 중립적 설명을, 동아일보는 '한국은행이 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다' 등의 표현으로 중립적 설명을, 매일경제는 '[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%'라는 제목으로 중립적 설명을 했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며 반도체 수출 호조와 중동발 악재 상쇄를 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며 기준금리 인상의 배경과 영끌족 부담 증가를 설명",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며 속보 형식으로 GDP 성장률 상승을 강조",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "한국 경제가 2분기 0.6% 성장했으며, 반도체 수출 호조가 주요 성장 동력으로 작용했다는 점",
-          "한국은행의 기준금리 인상(동아일보) 또는 경제 성장률 발표(매일경제)와 관련된 공식 발표 내용을 인용했다는 점",
-          "모두 중립적인 설명 태도를 유지하며 사실 전달에 초점을 맞췄다는 점"
-        ],
-        "key_differences": [
-          "동아일보는 기준금리 인상과 물가 안정 기대, 주택담보대출 금리 상승에 따른 개인 부담 증가를 강조한 반면, SBS와 매일경제는 반도체 수출 호조를 통한 경제 성장에 초점을 맞췄다.",
-          "동아일보는 고물가, 고환율, 반도체 초호황으로 인한 경기 회복세를 복합적으로 강조한 반면, SBS는 중동발 악재 상쇄를, 매일경제는 반도체 중심 수출 호조만을 강조했다."
-        ],
-        "comparison_report": "SBS, 동아일보, 매일경제는 모두 한국 경제가 2분기 0.6% 성장했으며, 반도체 수출 호조가 주요 성장 동력으로 작용했다고 보도했다. SBS와 매일경제는 반도체 수출 호조를 통한 경제 성장에 초점을 맞춘 반면, 동아일보는 한국은행의 기준금리 인상과 물가 안정 기대, 주택담보대출 금리 상승에 따른 영끌족 부담 증가를 강조했다. SBS는 중동발 악재 상쇄를, 동아일보는 고물가·고환율과 반도체 초호황으로 인한 경기 회복세를, 매일경제는 반도체 중심 수출 호조만을 원인으로 제시했다. 영향 측면에서는 SBS와 매일경제가 한국 경제 전반의 성장세 지속을, 동아일보는 주택담보대출을 받은 개인의 상환 부담 증가를 강조했다. 보도 태도는 세 언론사 모두 중립적 설명을 유지했으나, 동아일보는 '한국은행이 3년 6개월 만에 기준금리를 올린 것은 고물가를 잡기 위한 조치다'와 같은 구체적 근거를 제시한 반면, SBS는 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄', 매일경제는 '[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%'라는 제목으로 핵심 내용을 압축해 전달했다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008670597",
-            "published_at": "Thu, 23 Jul 2026 08:24:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "年 7%대 주담대 더 오른다… 물가안정 기대속 영끌족 비상",
-            "link": "https://www.donga.com/news/Economy/article/all/20260716/134315507/2",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "link": "https://www.mk.co.kr/news/economy/12105057",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:43:39.691039+00:00",
-        "model": "solar-pro3"
-      },
-      "mk,sbs": {
-        "issue_id": "issue-233315d91c5f3aaa",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "한국 경제가 2분기 0.6% 성장하며 예상보다 가파른 성장세를 지속했고, 이는 반도체 수출 호조가 중동발 악재를 상쇄한 결과로 분석된다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국 경제가 2분기 0.6% 성장했으며, 반도체 수출 호조가 주요 성장 동력으로 작용했다고 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "2분기 한국 경제 0.6% 성장과 반도체 수출 호조의 긍정적 영향",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "한국은행 발표 2분기 실질 GDP 성장률 0.6%와 반도체 수출 호조의 연관성",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 반도체 수출 호조가 중동발 악재를 상쇄했다는 점을 강조한 반면, 매일경제는 반도체 수출 호조가 GDP 성장률에 미친 긍정적 영향에 초점을 맞췄다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하며 예상보다 가파른 성장세 지속",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 경제 성장률에 미친 긍정적 영향",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 중동발 악재를 배경으로 제시한 반면, 매일경제는 2분기(4~6월) 경제 성장률 자체를 배경으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄한 결과",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 중심의 수출 호조가 2분기 GDP 성장률 상승의 원인",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '예상보다 가파른 성장세 지속'을 강조한 반면, 매일경제는 '0.6% 성장'이라는 구체적 수치에 초점을 맞췄다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "예상보다 가파른 성장세 지속",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "0.6% 성장",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄'라는 중립적 설명을, 매일경제는 '[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%'라는 속보 형식의 중립적 설명을 사용했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며 중동발 악재 상쇄를 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "속보 형식으로 반도체 수출 호조와 GDP 성장률 상승을 중립적으로 전달",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "한국 경제의 2분기 0.6% 성장",
-          "반도체 수출 호조가 성장의 주요 원인",
-          "경제 성장률 상승에 대한 중립적 설명"
-        ],
-        "key_differences": [
-          "SBS는 중동발 악재를 배경으로 제시한 반면, 매일경제는 중동발 악재를 언급하지 않음",
-          "SBS는 '예상보다 가파른 성장세 지속'을 강조한 반면, 매일경제는 '0.6% 성장'이라는 구체적 수치에 초점을 맞춤"
-        ],
-        "comparison_report": "SBS와 매일경제는 모두 한국 경제가 2분기 0.6% 성장했으며 반도체 수출 호조가 주요 성장 동력이라고 보도했다. SBS는 중동발 악재를 배경으로 제시하며 반도체 수출 호조가 이를 상쇄했다는 점을 강조한 반면, 매일경제는 중동발 악재를 언급하지 않고 반도체 수출 호조가 GDP 성장률에 미친 긍정적 영향에 초점을 맞췄다. 두 언론사 모두 중립적 설명 태도를 보였으나, SBS는 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄'라는 표현을, 매일경제는 '[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%'라는 속보 형식의 표현을 사용해 보도 태도를 구분했다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008670597",
-            "published_at": "Thu, 23 Jul 2026 08:24:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "link": "https://www.mk.co.kr/news/economy/12105057",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-23T10:43:42.064008+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-ea30cc69fac16287": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-ea30cc69fac16287",
-        "publisher_id": "mk",
-        "publisher": "매일경제",
-        "articles": [
-          {
-            "article_id": "359d0d2892dcf058415a1dcfadd49c8dbe706fb19862a0709184d5cb1636af88",
-            "title": "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”",
-            "published_at": "Thu, 16 Jul 2026 13:49:12 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12100191"
-          }
-        ],
-        "analysis": {
-          "article_summary": "한국은행 금융통화위원회가 기준금리를 2.50%에서 2.75%로 0.25%p 인상했으며, 신현송 총재는 물가 안정 수렴 시까지 추가 대응 가능성을 열어두겠다고 밝혔다.",
-          "headline_frame": "금리 인상 결정과 신현송 총재의 향후 대응 가능성을 중심으로 구성",
-          "main_focus": "기준금리 인상 결정과 물가 안정을 위한 추가 조치 가능성",
-          "keywords": [
-            "기준금리 인상",
-            "물가 안정",
-            "금융통화위원회",
-            "신현송 총재"
+            "내수 회복",
+            "성장률",
+            "경제 성장"
           ],
           "main_actors": [
-            "한국은행",
-            "신현송 총재"
+            "한국 경제"
           ],
-          "quoted_sources": [
-            "신현송 총재"
-          ],
+          "quoted_sources": [],
           "causes": [
-            "물가수준 안정적 수렴"
+            "반도체 수출 호조",
+            "내수 회복"
           ],
           "background": [
-            "한국은행 금융통화위원회 결정"
+            "중동발 유가 상승",
+            "대외 불확실성"
           ],
           "emphasized_effects": [
-            "증시 변동성",
-            "실물경제 중요성"
+            "성장률 3% 달성 가능성"
           ],
           "affected_groups": [
-            "일반 경제 주체"
+            "한국 경제"
           ],
           "tone": {
-            "category": "중립 설명",
+            "category": "기대",
             "evidence": [
-              "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”"
+              "'올 성장률 3%도 가능'"
             ]
           },
           "outlook": {
-            "direction": "중립",
-            "summary": "물가 안정 수렴 시까지 추가 금리 인상 가능성 열어둠"
+            "direction": "긍정",
+            "summary": "반도체 수출 호조와 내수 회복이 지속될 경우 성장률 3% 달성 가능"
           },
           "less_covered_context": [
-            "금리 인상이 가계 부채나 기업 투자에 미치는 구체적 영향"
+            "중동발 유가 상승의 구체적 영향",
+            "대외 불확실성의 구체적 내용"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:43:46.406428+00:00",
+        "analyzed_at": "2026-07-23T21:41:30.775066+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-ea30cc69fac16287",
+        "issue_id": "issue-afbcf07bbd233d22",
         "publisher_id": "donga",
         "publisher": "동아일보",
         "articles": [
           {
-            "article_id": "a0989f67a2245dbe7b627571165c22d841aae78dc30e1a222e85a3db09e87724",
-            "title": "3년6개월만에 금리 인상… 연내 더 올린다",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260717/134315499/2"
+            "article_id": "19e8a4f4688a5533218ff0ae6cffcc69221796c6adfe1443ef6519bc6e1ea0ff",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1"
           }
         ],
         "analysis": {
-          "article_summary": "한국은행이 3년 6개월 만에 기준금리를 0.25%p 인상해 연 2.75%로 결정했으며, 연내 추가 인상 가능성을 시사했다.",
-          "headline_frame": "금리 인상 시점과 향후 추가 인상 가능성",
-          "main_focus": "물가 상승 억제와 가계빚 증가 진정을 위한 기준금리 인상 결정",
+          "article_summary": "반도체 수출 호조로 올해 1~5월 누적 경상수지 흑자가 1413억 달러로 지난해 연간 흑자(1230억 달러)를 넘어섰으나, 소비심리 위축과 내수 부진으로 경기 회복의 불균형이 심화되고 있다.",
+          "headline_frame": "반도체 수출 호조가 경상수지 흑자를 기록적으로 확대했으나, 수출-내수 간 온도차가 커지고 있다는 점을 강조",
+          "main_focus": "반도체 수출로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형 심화",
           "keywords": [
-            "기준금리 인상",
-            "물가 상승 억제",
-            "가계빚 증가",
-            "원-달러 환율 상승",
-            "연 3%대 기준금리"
+            "경상수지 흑자",
+            "반도체 수출",
+            "수출-내수 온도차",
+            "소비심리 위축",
+            "내수 부진"
           ],
           "main_actors": [
-            "한국은행 금융통화위원회"
+            "한국은행",
+            "해외 연구기관"
           ],
-          "quoted_sources": [],
+          "quoted_sources": [
+            "한국은행 경제통계시스템(ECOS)",
+            "해외 연구기관"
+          ],
           "causes": [
-            "고물가",
-            "원-달러 환율 상승",
-            "대출 증가"
+            "반도체 수출 호조"
           ],
           "background": [
-            "2023년 1월 이후 3년 6개월 만의 금리 인상",
-            "반도체 초호황으로 성장세가 강한 경제 상황"
+            "GDP 대비 경상수지 흑자 확대",
+            "수출 호조가 소비와 산업 전반의 투자 회복으로 충분히 확산하지 못하는 상황"
           ],
           "emphasized_effects": [
-            "고물가 억제",
-            "원-달러 환율 상승 억제",
-            "가계빚 증가 진정",
-            "대출 이자 부담 증가"
+            "경기 회복의 불균형 심화",
+            "대외 통상 압박 가능성",
+            "산업간 성장 격차 확대"
           ],
           "affected_groups": [
-            "대출을 받은 개인",
-            "대출을 받은 기업"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "3년6개월만에 금리 인상… 연내 더 올린다",
-              "한국은행 금융통화위원회가 16일 3년 6개월 만에 기준금리를 올리며 앞으로도 추가로 금리를 인상할 뜻을 밝혔다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "연내 연 3%대 기준금리 시대 개막 전망"
-          },
-          "less_covered_context": [
-            "금리 인상이 경기 침체 가능성에 미치는 영향",
-            "금리 인상이 부동산 시장에 미치는 구체적 영향"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:43:46.666073+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-ea30cc69fac16287",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "ba4670ce2a1ba6e7a729400d7c4432c0b2d5915684969821f92e77bae72dacc9",
-            "title": "42개월 만에 기준금리 인상…'빚투·영끌' 부담↑",
-            "published_at": "Fri, 17 Jul 2026 06:30:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662050"
-          }
-        ],
-        "analysis": {
-          "article_summary": "한국은행이 42개월 만에 기준금리를 0.25%포인트 인상하며 금리 인상 사이클에 진입했음을 시사했고, 이로 인해 '빚투'와 '영끌' 등 대출 부담이 증가할 것으로 전망되었다.",
-          "headline_frame": "금리 인상 사이클 진입과 대출 부담 증가",
-          "main_focus": "기준금리 인상이 '빚투'와 '영끌' 등 대출 부담에 미치는 영향",
-          "keywords": [
-            "기준금리 인상",
-            "금리 인상 사이클",
-            "빚투",
-            "영끌",
-            "대출 부담"
-          ],
-          "main_actors": [
-            "한국은행"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "성장률과 물가가 당초 예상보다 높게 나타남"
-          ],
-          "background": [
-            "42개월 만에 기준금리 인상"
-          ],
-          "emphasized_effects": [
-            "빚투·영끌 부담 증가"
-          ],
-          "affected_groups": [
-            "대출 이용자"
+            "소비자",
+            "내수 산업"
           ],
           "tone": {
             "category": "우려·경계",
             "evidence": [
-              "'빚투·영끌' 부담↑"
+              "커지는 ‘수출-내수 온도차’",
+              "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고",
+              "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다"
             ]
           },
           "outlook": {
-            "direction": "중립",
-            "summary": "금리 인상 사이클 진입으로 향후 추가 인상 가능성 시사"
+            "direction": "혼합",
+            "summary": "반도체 수출 호조는 지속되나 내수 부진과 경제 불균형 심화로 인해 긍정적 효과와 우려가 동시에 존재"
           },
           "less_covered_context": [
-            "금리 인상이 물가 안정에 미치는 구체적 효과",
-            "금리 인상이 기업 투자 및 고용에 미치는 영향"
+            "정책 시행 이후의 구체적 효과",
+            "반도체 수출 호조의 지속 가능성",
+            "내수 회복을 위한 구체적 정책 방안"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:43:47.278404+00:00",
+        "analyzed_at": "2026-07-23T21:41:35.559243+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-ea30cc69fac16287",
+      "issue_id": "issue-afbcf07bbd233d22",
       "groups": [
         {
-          "group_id": "group-1",
-          "label": "금리 인상과 물가 안정 전망",
-          "summary": "기준금리 인상을 물가 안정 및 경제 안정을 위한 조치로 보고, 향후 추가 인상 가능성을 열어두는 중립적 설명",
+          "group_id": "group-semiconductor-growth",
+          "label": "반도체 수출 호조와 경제 성장 전망",
+          "summary": "반도체 수출 호조가 경제 성장과 코스피 회복을 이끌며, 1인당 국민소득 4만 달러 달성 가능성을 전망하는 긍정적 시각",
           "keywords": [
-            "기준금리 인상",
-            "물가 안정",
-            "추가 금리 인상 가능성"
+            "반도체 수출 호조",
+            "경제 성장",
+            "코스피 회복",
+            "1인당 국민소득 4만 달러"
           ],
           "publisher_ids": [
+            "sbs",
             "mk",
-            "donga",
-            "sbs"
+            "donga"
           ],
           "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
             {
               "publisher_id": "mk",
               "publisher": "매일경제"
@@ -2697,69 +965,55 @@
             {
               "publisher_id": "donga",
               "publisher": "동아일보"
-            },
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
             }
           ],
           "publisher_count": 3,
           "group_evidence": [
-            "세 언론사 모두 기준금리 인상을 물가 안정 또는 고물가 억제를 위한 조치로 해석하며, 향후 추가 인상 가능성을 열어두고 있음",
-            "mk는 물가 안정 위한 추가 조치 가능성, dong은 고물가 억제 및 가계빚 진정, sbs는 빚투·영끌 부담 증가를 언급하지만 모두 금리 인상 사이클 진입으로 해석",
-            "세 언론사 모두 중립 설명 태도를 보이며, 금리 인상의 필요성과 향후 전망을 중심으로 보도"
+            "세 언론사 모두 반도체 수출 호조를 경제 성장의 핵심 동력으로 보고 있으며, SBS는 코스피 회복과 국민소득 4만 달러 달성 가능성을, MK는 성장률 3% 달성 가능성을, Donga는 수출 호조의 지속성을 전망함",
+            "SBS와 MK는 내수 회복을 추가로 강조하지만, Donga는 내수 부진과 수출-내수 간 불균형을 지적함",
+            "Donga는 우려를 표명하지만, 핵심 해석은 반도체 수출 호조가 경제 성장을 견인한다는 점에서 SBS와 MK와 일치함"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 기준금리 인상을 물가 안정 및 경제 안정을 위한 조치로 보고, 향후 추가 인상 가능성을 열어두는 중립적 설명을 제공함. mk는 물가 안정 위한 추가 조치 가능성을, dong은 고물가 억제와 가계빚 진정을, sbs는 빚투·영끌 부담 증가를 강조하지만, 모두 금리 인상 사이클 진입과 물가 안정이라는 공통된 핵심 관점을 공유함.",
+      "grouping_summary": "세 언론사 모두 반도체 수출 호조를 경제 성장의 주요 요인으로 해석하지만, SBS와 MK는 긍정적 전망에 초점을 맞추고 Donga는 수출-내수 간 불균형 심화에 대한 우려를 추가로 제기함",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-23T10:43:50.482853+00:00",
+      "grouped_at": "2026-07-23T21:41:39.681560+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "donga,mk,sbs": {
-        "issue_id": "issue-ea30cc69fac16287",
+      "mk,sbs": {
+        "issue_id": "issue-afbcf07bbd233d22",
         "selected_publishers": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
           }
         ],
-        "common_summary": "한국은행이 기준금리를 2.50%에서 2.75%로 0.25%p 인상했으며, 향후 추가 인상 가능성을 시사한 내용을 공통적으로 다루고 있다.",
+        "common_summary": "두 언론사 모두 2026년 2분기 한국 경제의 강한 성장세를 반도체 수출 호조와 내수 회복의 동시 작용으로 설명하고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 한국은행의 기준금리 인상(2.50%→2.75%)과 향후 추가 인상 가능성을 공통적으로 보도하고 있다.",
+            "contrast_statement": "SBS는 '2분기 깜짝 성장'과 '코스피 7천 선 회복'을, 매일경제는 '수출·내수 쌍끌이 성장'과 '성장률 3% 달성 가능성'을 공통적으로 강조하고 있다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "기준금리 0.25%p 인상과 신현송 총재의 추가 대응 가능성 언급",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3년 6개월 만의 기준금리 인상과 연내 추가 인상 가능성 시사",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "42개월 만의 기준금리 인상과 '빚투·영끌' 부담 증가 전망",
+                "summary": "2분기 경제 성장과 코스피 회복을 긍정적 희소식으로 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "수출과 내수 동시 회복을 통한 경제 성장 전망 제시",
                 "evidence": []
               }
             ]
@@ -2767,24 +1021,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 물가 안정 수렴을 위한 추가 조치 가능성에 초점을 둔 반면, 동아일보와 SBS는 각각 물가 상승 억제와 대출 부담 증가라는 구체적 영향에 중점을 두고 있다.",
+            "contrast_statement": "SBS는 반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향에 초점을 맞춘 반면, 매일경제는 반도체 수출과 내수 회복을 통한 경제 성장 전망을 균형 있게 다루고 있다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "물가 안정 수렴 시까지 추가 대응 가능성을 열어둔 기준금리 인상 결정",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "물가 상승 억제와 가계빚 증가 진정을 위한 기준금리 인상 결정",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "금리 인상 사이클 진입과 '빚투·영끌' 등 대출 부담 증가 전망",
+                "summary": "반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조와 내수 회복을 통한 경제 성장 전망 제시",
                 "evidence": []
               }
             ]
@@ -2792,24 +1040,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 고물가, 원-달러 환율 상승, 대출 증가를 원인으로 강조한 반면, SBS는 성장률과 물가 예상치 상승을, 매일경제는 물가수준 안정적 수렴을 배경으로 제시했다.",
+            "contrast_statement": "SBS는 '반도체 수출 호조'를 주요 원인으로, 매일경제는 '반도체 수출 호조'와 '내수 회복'을 동시에 원인으로 제시하고 있다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "물가수준 안정적 수렴을 위한 금융통화위원회 결정",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가, 원-달러 환율 상승, 대출 증가를 배경으로 한 3년 6개월 만의 금리 인상",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "성장률과 물가 예상치 상승을 배경으로 한 42개월 만의 금리 인상",
+                "summary": "반도체 수출 호조를 경제 성장의 주요 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조와 내수 회복을 경제 성장의 동시 원인으로 제시",
                 "evidence": []
               }
             ]
@@ -2817,18 +1059,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 대출 이자 부담 증가와 가계빚 진정을, SBS는 '빚투·영끌' 부담 증가를, 매일경제는 증시 변동성과 실물경제 중요성을 강조했다.",
+            "contrast_statement": "SBS는 '1인당 국민소득 4만 달러 달성 가능성'을 포함한 광범위한 영향을, 매일경제는 '성장률 3% 달성 가능성'에 초점을 맞추고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "증시 변동성 및 실물경제 중요성 강조",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "경제 성장, 코스피 회복, 1인당 국민소득 4만 달러 달성 가능성 등 광범위한 영향 강조",
                 "evidence": []
               },
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가 억제, 원-달러 환율 상승 억제, 가계빚 증가 진정, 대출 이자 부담 증가",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "성장률 3% 달성 가능성에 집중",
                 "evidence": []
               }
             ]
@@ -2836,69 +1078,56 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "매일경제는 중립적 설명 태도를 보인 반면, SBS는 우려·경계 태도를, 동아일보는 중립 설명 태도를 유지했으나 제목에서 '연내 더 올린다'는 표현을 사용해 약간 더 강한 어조를 보였다.",
+            "contrast_statement": "SBS는 '2분기도 '깜짝' 성장 희소식', '코스피 '7천' 회복'이라는 표현을 통해 긍정적 기대를, 매일경제는 '올 성장률 3%도 가능'이라는 제목으로 낙관적 전망을 제시하고 있다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며 신현송 총재의 발언을 인용",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "중립 설명 태도로 금리 인상 결정과 향후 추가 인상 가능성을 전달",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "우려·경계 태도로 '빚투·영끌' 부담 증가를 강조",
+                "summary": "긍정적 희소식과 낙관적 전망 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "낙관적 전망 제시",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "한국은행의 기준금리 인상(2.50%→2.75%)",
-          "향후 추가 인상 가능성 시사",
-          "금리 인상 결정 주체로서 한국은행 금융통화위원회 언급"
+          "2026년 2분기 한국 경제의 강한 성장세",
+          "반도체 수출 호조의 긍정적 역할",
+          "경제 성장에 대한 낙관적 전망"
         ],
         "key_differences": [
-          "매일경제는 물가 안정 수렴을 위한 추가 조치 가능성에 초점을 둔 반면, 동아일보와 SBS는 각각 물가 상승 억제와 대출 부담 증가라는 구체적 영향에 중점을 둠",
-          "SBS는 '빚투·영끌' 등 대출 부담 증가를 우려·경계하는 태도를 보인 반면, 매일경제는 중립적 설명 태도를 유지함"
+          "SBS는 코스피 7천 선 회복을 구체적으로 언급한 반면, 매일경제는 내수 회복을 추가로 강조",
+          "SBS는 1인당 국민소득 4만 달러 달성 가능성을 제시한 반면, 매일경제는 성장률 3% 달성 가능성에 집중"
         ],
-        "comparison_report": "세 언론사 모두 한국은행의 기준금리 인상(2.50%→2.75%)과 향후 추가 인상 가능성을 공통적으로 보도했으나, 강조점과 보도 태도에서 차이를 보인다. 매일경제는 신현송 총재의 발언을 중심으로 물가 안정 수렴을 위한 추가 조치 가능성을 중립적으로 설명한 반면, 동아일보는 물가 상승 억제와 가계빚 진정을 위한 금리 인상 결정이라는 정책적 관점을, SBS는 '빚투·영끌' 등 대출 부담 증가를 우려·경계하는 태도를 보였다. 원인 측면에서는 동아일보는 고물가·환율·대출 증가를, SBS는 성장률과 물가 예상치 상승을, 매일경제는 물가수준 안정적 수렴을 강조했다. 영향 대상도 매일경제는 증시·실물경제, 동아일보는 대출 이용자, SBS는 '빚투·영끌' 대출자를 각각 다르게 설정했다.",
+        "comparison_report": "SBS와 매일경제는 2026년 2분기 한국 경제의 강한 성장세를 반도체 수출 호조와 내수 회복의 동시 작용으로 설명하고 있으나, SBS는 코스피 7천 선 회복을 구체적으로 강조하며 1인당 국민소득 4만 달러 달성 가능성을 제시한 반면, 매일경제는 내수 회복을 추가로 강조하고 성장률 3% 달성 가능성에 초점을 맞추고 있다. 두 언론사 모두 긍정적 기대를 전달하지만, SBS는 주식시장 회복에, 매일경제는 내수 회복에 더 많은 비중을 두고 있다.",
         "source_links": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”",
-            "link": "https://www.mk.co.kr/news/economy/12100191",
-            "published_at": "Thu, 16 Jul 2026 13:49:12 +09:00"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "3년6개월만에 금리 인상… 연내 더 올린다",
-            "link": "https://www.donga.com/news/Economy/article/all/20260717/134315499/2",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "42개월 만에 기준금리 인상…'빚투·영끌' 부담↑",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662050",
-            "published_at": "Fri, 17 Jul 2026 06:30:00 +0900"
+            "title": "2분기도 '깜짝' 성장 희소식…코스피 '7천' 회복",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672157",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "수출·내수 쌍끌이…\"올 성장률 3%도 가능\"",
+            "link": "https://www.mk.co.kr/news/economy/12105728",
+            "published_at": "Thu, 23 Jul 2026 17:39:25 +09:00"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-23T10:44:01.472979+00:00",
+        "compared_at": "2026-07-23T21:41:51.408848+00:00",
         "model": "solar-pro3"
       },
       "donga,mk": {
-        "issue_id": "issue-ea30cc69fac16287",
+        "issue_id": "issue-afbcf07bbd233d22",
         "selected_publishers": [
           {
             "publisher_id": "mk",
@@ -2909,24 +1138,24 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "한국은행이 기준금리를 2.50%에서 2.75%로 0.25%p 인상했으며, 신현송 총재는 물가 안정 수렴 시까지 추가 대응 가능성을 열어두겠다고 밝혔다.",
+        "common_summary": "두 언론사 모두 2026년 2분기 한국 경제의 강한 성장세를 반도체 수출 호조와 내수 회복(또는 내수 부진)의 상호작용으로 설명하고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국은행의 기준금리 인상(2.50%→2.75%)과 신현송 총재의 추가 대응 가능성을 공통적으로 보도했다.",
+            "contrast_statement": "두 언론사 모두 2026년 2분기 한국 경제의 강한 성장세를 반도체 수출 호조와 내수 관련 요인으로 설명하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "기준금리 인상 결정과 신현송 총재의 향후 추가 대응 가능성",
+                "summary": "반도체 수출 호조와 내수 회복을 동시에 강조하며 2분기 경제 성장 전망을 긍정적으로 제시",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "3년 6개월 만의 기준금리 인상 및 연내 추가 인상 가능성",
+                "summary": "반도체 수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형을 지적하며 경기 회복의 불균형 심화 가능성을 경고",
                 "evidence": []
               }
             ]
@@ -2934,18 +1163,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 '물가 안정 수렴 시까지 추가 조치 가능성'에 초점을 둔 반면, 동아일보는 '물가 상승 억제와 가계빚 증가 진정'을 위한 금리 인상으로 관점을 제시했다.",
+            "contrast_statement": "매일경제는 반도체 수출과 내수 회복을 통한 경제 성장 전망에 초점을 맞춘 반면, 동아일보는 수출 호조와 내수 부진 사이의 불균형 심화에 주목했다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "기준금리 인상 결정과 물가 안정을 위한 추가 조치 가능성",
+                "summary": "반도체 수출 호조와 내수 회복을 통한 경제 성장 전망",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "물가 상승 억제와 가계빚 증가 진정을 위한 기준금리 인상 결정",
+                "summary": "반도체 수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형 심화",
                 "evidence": []
               }
             ]
@@ -2953,18 +1182,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 '물가수준 안정적 수렴'을 원인으로 강조한 반면, 동아일보는 '고물가', '원-달러 환율 상승', '대출 증가'를 주요 원인으로 제시했다.",
+            "contrast_statement": "매일경제는 반도체 수출 호조와 내수 회복을 주요 원인으로 제시한 반면, 동아일보는 반도체 수출 호조를 강조하면서도 내수 부진의 배경을 추가로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "물가수준 안정적 수렴",
+                "summary": "반도체 수출 호조와 내수 회복",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "고물가, 원-달러 환율 상승, 대출 증가",
+                "summary": "반도체 수출 호조, 내수 부진, GDP 대비 경상수지 흑자 확대",
                 "evidence": []
               }
             ]
@@ -2972,108 +1201,109 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 '증시 변동성'과 '실물경제 중요성'을 강조한 반면, 동아일보는 '고물가 억제', '원-달러 환율 상승 억제', '가계빚 증가 진정', '대출 이자 부담 증가'를 주요 영향으로 제시했다.",
+            "contrast_statement": "매일경제는 성장률 3% 달성 가능성을 긍정적 영향으로 강조한 반면, 동아일보는 경기 회복의 불균형 심화와 대외 통상 압박 가능성을 부정적 영향으로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "증시 변동성, 실물경제 중요성",
+                "summary": "성장률 3% 달성 가능성",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "고물가 억제, 원-달러 환율 상승 억제, 가계빚 증가 진정, 대출 이자 부담 증가",
+                "summary": "경기 회복의 불균형 심화, 대외 통상 압박 가능성, 산업간 성장 격차 확대",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 '금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”'라는 제목으로 중립 설명 태도를 보인 반면, 동아일보는 '3년6개월만에 금리 인상… 연내 더 올린다'라는 제목으로 중립 설명 태도를 보였다.",
+            "difference_level": "차이 큼",
+            "contrast_statement": "매일경제는 '올 성장률 3%도 가능'이라는 표현을 통해 긍정적 기대를 전달한 반면, 동아일보는 '커지는 수출-내수 온도차'와 해외 연구기관의 경고를 인용하며 우려·경계 태도를 보였다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며 금리 인상 기조와 신현송 총재의 추가 대응 가능성을 강조함",
+                "summary": "반도체 수출 호조와 내수 회복을 긍정적으로 평가하며 성장률 3% 달성 가능성을 기대함",
                 "evidence": [
-                  "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”"
+                  "'올 성장률 3%도 가능'"
                 ]
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며 3년 6개월 만의 금리 인상과 연내 추가 인상 가능성을 강조함",
+                "summary": "반도체 수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형을 우려하며 경계하는 태도를 보임",
                 "evidence": [
-                  "3년6개월만에 금리 인상… 연내 더 올린다",
-                  "한국은행 금융통화위원회가 16일 3년 6개월 만에 기준금리를 올리며 앞으로도 추가로 금리를 인상할 뜻을 밝혔다"
+                  "커지는 '수출-내수 온도차'",
+                  "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고",
+                  "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "한국은행의 기준금리 인상(2.50%→2.75%)",
-          "신현송 총재의 향후 추가 대응 가능성 언급",
-          "금리 인상 결정에 대한 중립적 설명 태도"
+          "반도체 수출 호조가 한국 경제 성장에 긍정적 영향을 미쳤다는 점",
+          "2026년 2분기 한국 경제의 강한 성장세 확인"
         ],
         "key_differences": [
-          "동아일보는 '고물가', '원-달러 환율 상승', '대출 증가'를 주요 원인으로 제시한 반면, 매일경제는 '물가수준 안정적 수렴'을 원인으로 제시함",
-          "동아일보는 '가계빚 증가 진정'과 '대출 이자 부담 증가'를 구체적 영향으로 강조한 반면, 매일경제는 '증시 변동성'과 '실물경제 중요성'을 강조함"
+          "매일경제는 내수 회복을 강조한 반면, 동아일보는 내수 부진을 지적함",
+          "매일경제는 성장률 3% 달성 가능성을 긍정적 전망으로 제시한 반면, 동아일보는 경기 회복의 불균형 심화와 대외 통상 압박 가능성을 부정적 전망으로 제시함",
+          "매일경제는 '기대' 태도를 보인 반면, 동아일보는 '우려·경계' 태도를 보임"
         ],
-        "comparison_report": "두 언론사 모두 한국은행의 기준금리 인상(2.50%→2.75%)과 신현송 총재의 추가 대응 가능성을 보도했으나, 동아일보는 '고물가', '원-달러 환율 상승', '대출 증가'를 주요 원인으로 제시하고 '가계빚 증가 진정', '대출 이자 부담 증가' 등의 구체적 영향을 강조한 반면, 매일경제는 '물가수준 안정적 수렴'을 원인으로 제시하고 '증시 변동성'과 '실물경제 중요성'을 강조했다. 두 언론사 모두 중립적 설명 태도를 보였으나, 동아일보는 '3년 6개월 만의 금리 인상'이라는 시간적 맥락을 추가로 부각시켰다.",
+        "comparison_report": "매일경제와 동아일보는 2026년 2분기 한국 경제의 강한 성장세를 다루었으나, 매일경제은 반도체 수출 호조와 내수 회복을 동시에 강조하며 성장률 3% 달성 가능성을 긍정적으로 전망한 반면, 동아일보는 반도체 수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형을 지적하며 경기 회복의 불균형 심화와 대외 통상 압박 가능성을 우려했다. 두 언론사 모두 반도체 수출 호조를 주요 요인으로 보았으나, 내수에 대한 해석과 전망에서 차이를 보였으며, 보도 태도 역시 매일경제은 기대, 동아일보는 우려·경계라는 상반된 태도를 보였다.",
         "source_links": [
           {
             "publisher_id": "mk",
             "publisher": "매일경제",
-            "title": "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”",
-            "link": "https://www.mk.co.kr/news/economy/12100191",
-            "published_at": "Thu, 16 Jul 2026 13:49:12 +09:00"
+            "title": "수출·내수 쌍끌이…\"올 성장률 3%도 가능\"",
+            "link": "https://www.mk.co.kr/news/economy/12105728",
+            "published_at": "Thu, 23 Jul 2026 17:39:25 +09:00"
           },
           {
             "publisher_id": "donga",
             "publisher": "동아일보",
-            "title": "3년6개월만에 금리 인상… 연내 더 올린다",
-            "link": "https://www.donga.com/news/Economy/article/all/20260717/134315499/2",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-23T10:44:01.597892+00:00",
+        "compared_at": "2026-07-23T21:41:55.359317+00:00",
         "model": "solar-pro3"
       },
       "donga,sbs": {
-        "issue_id": "issue-ea30cc69fac16287",
+        "issue_id": "issue-afbcf07bbd233d22",
         "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
           }
         ],
-        "common_summary": "한국은행이 3년 6개월 만에 기준금리를 0.25%p 인상해 연 2.75%로 결정했으며, 연내 추가 인상 가능성을 시사했다.",
+        "common_summary": "두 언론사 모두 반도체 수출 호조가 경제 지표에 긍정적 영향을 미쳤음을 보도했으나, SBS는 2분기 성장과 코스피 회복에 초점을 맞춘 반면, 동아일보는 경상수지 흑자 확대와 수출-내수 간 불균형 심화를 강조했다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국은행의 기준금리 인상 결정과 연내 추가 인상 가능성을 공통적으로 보도했다.",
+            "contrast_statement": "두 언론사 모두 반도체 수출 호조가 경제 성장에 긍정적 영향을 미쳤음을 공통적으로 보도했으나, SBS는 2분기 성장과 코스피 회복을, 동아일보는 경상수지 흑자 확대와 수출-내수 간 온도차를 강조했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "한국은행의 기준금리 인상 결정과 향후 추가 인상 가능성",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "한국은행의 기준금리 인상 및 금리 인상 사이클 진입",
+                "summary": "반도체 수출 호조로 2분기 깜짝 성장과 코스피 7천 선 회복을 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조로 경상수지 흑자 1413억 달러 달성 및 수출-내수 불균형 심화 보도",
                 "evidence": []
               }
             ]
@@ -3081,18 +1311,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 물가 상승 억제와 가계빚 증가 진정을 위한 정책적 결정으로 본 반면, SBS는 대출 부담 증가라는 영향에 초점을 맞췄다.",
+            "contrast_statement": "SBS는 반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향에 초점을 맞춘 반면, 동아일보는 반도체 수출로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형 심화를 우려했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "물가 상승 억제와 가계빚 증가 진정을 위한 기준금리 인상 결정",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "기준금리 인상이 '빚투'와 '영끌' 등 대출 부담에 미치는 영향",
+                "summary": "반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형 심화",
                 "evidence": []
               }
             ]
@@ -3100,18 +1330,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 고물가, 원-달러 환율 상승, 대출 증가를 원인으로 강조한 반면, SBS는 성장률과 물가 예상치 상승을 주요 배경으로 제시했다.",
+            "contrast_statement": "두 언론사 모두 반도체 수출 호조를 주요 원인으로 제시했으나, SBS는 2분기 경제 성장과 코스피 회복을 배경으로, 동아일보는 GDP 대비 경상수지 흑자 확대와 수출 호조의 내수 확산 부진을 배경으로 강조했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가, 원-달러 환율 상승, 대출 증가",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "성장률과 물가가 당초 예상보다 높게 나타남",
+                "summary": "2분기 경제 성장과 코스피 7천 선 회복을 배경으로 반도체 수출 호조 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "GDP 대비 경상수지 흑자 확대와 수출 호조의 내수 확산 부진을 배경으로 반도체 수출 호조 강조",
                 "evidence": []
               }
             ]
@@ -3119,108 +1349,113 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 고물가 억제, 환율 상승 억제, 가계빚 진정, 대출 이자 부담 증가를 강조한 반면, SBS는 '빚투'와 '영끌' 부담 증가만을 주요 영향으로 제시했다.",
+            "contrast_statement": "SBS는 경제 성장과 코스피 회복, 1인당 국민소득 4만 달러 달성 가능성을 강조한 반면, 동아일보는 경기 회복의 불균형 심화, 대외 통상 압박 가능성, 산업간 성장 격차 확대를 우려했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "고물가 억제, 원-달러 환율 상승 억제, 가계빚 증가 진정, 대출 이자 부담 증가",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "'빚투·영끌' 부담 증가",
+                "summary": "경제 성장, 코스피 회복, 1인당 국민소득 4만 달러 달성 가능성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "경기 회복의 불균형 심화, 대외 통상 압박 가능성, 산업간 성장 격차 확대",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 중립적으로 사실을 설명하는 태도를 보인 반면, SBS는 '빚투·영끌' 부담 증가에 대한 우려를 강조하는 경계적 태도를 보였다.",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "SBS는 '2분기도 깜짝 성장 희소식', '코스피 7천 회복' 등 긍정적 표현을 사용한 반면, 동아일보는 '커지는 수출-내수 온도차', '해외 연구기관의 경고' 등 우려·경계 표현을 사용했다.",
             "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "3년6개월만에 금리 인상… 연내 더 올린다",
-                  "한국은행 금융통화위원회가 16일 3년 6개월 만에 기준금리를 올리며 앞으로도 추가로 금리를 인상할 뜻을 밝혔다"
-                ]
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "대출 부담 증가에 대한 우려를 경계하는 태도",
-                "evidence": [
-                  "'빚투·영끌' 부담↑"
-                ]
+                "summary": "반도체 수출 호조에 따른 경제 성장과 코스피 회복을 긍정적으로 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조로 인한 경상수지 흑자 확대와 수출-내수 간 불균형 심화를 우려하며 경계하는 태도",
+                "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "한국은행의 기준금리 인상 결정",
-          "연내 추가 인상 가능성 시사",
-          "금리 인상 기간(3년 6개월/42개월)"
+          "반도체 수출 호조가 경제 지표에 긍정적 영향을 미쳤다는 점",
+          "2분기 경제 성장 및 경상수지 흑자 확대라는 공통적 경제 상황",
+          "수출 호조가 경제 회복의 주요 동력이라는 인식"
         ],
         "key_differences": [
-          "동아일보는 물가 억제와 가계빚 진정을 정책적 목표로 강조한 반면, SBS는 대출 부담 증가라는 영향에 초점을 맞춤",
-          "동아일보는 고물가, 환율 상승, 대출 증가를 원인으로 제시한 반면, SBS는 성장률과 물가 예상치 상승을 배경으로 제시"
+          "SBS는 2분기 성장과 코스피 회복에 초점을 맞춘 긍정적 보도 태도를 보인 반면, 동아일보는 경상수지 흑자 확대와 수출-내수 간 불균형 심화를 우려하며 경계하는 태도를 보였다.",
+          "SBS는 1인당 국민소득 4만 달러 달성 가능성을 강조한 반면, 동아일보는 대외 통상 압박 가능성과 산업간 성장 격차 확대를 우려했다."
         ],
-        "comparison_report": "동아일보와 SBS 모두 한국은행의 기준금리 인상 결정과 연내 추가 인상 가능성을 보도했으나, 동아일보가 물가 상승 억제와 가계빚 증가 진정이라는 정책적 관점에 초점을 맞춘 중립적 설명을 제공한 반면, SBS는 '빚투'와 '영끌' 등 대출 부담 증가에 대한 우려를 강조하는 경계적 태도를 보였다. 원인 측면에서 동아일보는 고물가, 원-달러 환율 상승, 대출 증가를 강조한 데 비해 SBS는 성장률과 물가 예상치 상승을 주요 배경으로 제시했다. 영향 측면에서 동아일보는 고물가 억제, 환율 상승 억제, 가계빚 진정, 대출 이자 부담 증가 등 다각적 영향을 다룬 반면, SBS는 대출 이용자 대상 '빚투·영끌' 부담 증가만을 강조했다.",
+        "comparison_report": "SBS와 동아일보 모두 반도체 수출 호조가 우리 경제에 긍정적 영향을 미쳤음을 보도했으나, SBS는 2분기 깜짝 성장과 코스피 7천 선 회복을 중심으로 긍정적 전망을 제시한 반면, 동아일보는 경상수지 흑자 1413억 달러 달성과 함께 수출-내수 간 온도차 확대, 경기 회복의 불균형 심화, 대외 통상 압박 가능성 등 우려 요소를 강조했다. SBS는 경제 성장과 주식 시장 회복을 낙관적으로 보도한 데 비해, 동아일보는 한국은행과 해외 연구기관의 데이터를 인용하며 불균형 심화에 대한 경계 태도를 보였다.",
         "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "3년6개월만에 금리 인상… 연내 더 올린다",
-            "link": "https://www.donga.com/news/Economy/article/all/20260717/134315499/2",
-            "published_at": "Fri, 17 Jul 2026 01:40:00 +0900"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "42개월 만에 기준금리 인상…'빚투·영끌' 부담↑",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662050",
-            "published_at": "Fri, 17 Jul 2026 06:30:00 +0900"
+            "title": "2분기도 '깜짝' 성장 희소식…코스피 '7천' 회복",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672157",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-23T10:44:02.031219+00:00",
+        "compared_at": "2026-07-23T21:41:56.285432+00:00",
         "model": "solar-pro3"
       },
-      "mk,sbs": {
-        "issue_id": "issue-ea30cc69fac16287",
+      "donga,mk,sbs": {
+        "issue_id": "issue-afbcf07bbd233d22",
         "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
           {
             "publisher_id": "mk",
             "publisher": "매일경제"
           },
           {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
+            "publisher_id": "donga",
+            "publisher": "동아일보"
           }
         ],
-        "common_summary": "한국은행이 기준금리를 2.50%에서 2.75%로 0.25%p 인상했으며, 신현송 총재는 물가 안정 수렴 시까지 추가 대응 가능성을 열어두겠다고 밝혔다.",
+        "common_summary": "반도체 수출 호조가 한국 경제에 긍정적 영향을 미치고 있으나, SBS와 매일경제는 주로 긍정적 효과에 초점을 맞춘 반면 동아일보는 수출-내수 간 불균형 심화를 우려하며 경계하는 태도를 보인다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국은행의 기준금리 인상(2.50%→2.75%)과 신현송 총재의 추가 대응 가능성을 공통적으로 보도했다.",
+            "contrast_statement": "SBS와 매일경제는 반도체 수출 호조로 인한 2분기 경제 성장과 코스피 회복을 긍정적으로 보도한 반면, 동아일보는 반도체 수출 호조로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형을 강조했다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "기준금리 인상 결정과 신현송 총재의 향후 대응 가능성을 중심으로 보도",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "42개월 만의 기준금리 인상과 '빚투·영끌' 부담 증가를 중심으로 보도",
+                "summary": "반도체 수출 호조로 2분기 경제가 '깜짝' 성장하고 코스피가 7천 선을 회복했다는 긍정적 소식",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출과 내수 회복이 동시에 작용해 예상보다 강한 2분기 성장세를 보였다는 전망",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조로 경상수지 흑자가 확대되었으나 소비심리 위축과 내수 부진으로 경기 회복의 불균형이 심화되고 있다는 우려",
                 "evidence": []
               }
             ]
@@ -3228,18 +1463,24 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 물가 안정을 위한 추가 조치 가능성에 초점을 둔 반면, SBS는 금리 인상이 대출 부담에 미치는 영향에 초점을 두었다.",
+            "contrast_statement": "SBS와 매일경제는 반도체 수출 호조의 긍정적 효과를 강조한 반면, 동아일보는 수출 호조와 내수 부진 사이의 불균형 심화를 핵심 관점으로 제시했다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "기준금리 인상 결정과 물가 안정을 위한 추가 조치 가능성",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "금리 인상이 '빚투'와 '영끌' 등 대출 부담에 미치는 영향",
+                "summary": "반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조와 내수 회복을 통한 경제 성장 전망",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출로 인한 경상수지 흑자 확대와 내수 부진 사이의 불균형 심화",
                 "evidence": []
               }
             ]
@@ -3247,18 +1488,24 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 물가수준 안정적 수렴을 원인으로 제시한 반면, SBS는 성장률과 물가 예상치 상승을 원인으로 강조했다.",
+            "contrast_statement": "SBS와 매일경제는 반도체 수출 호조를 주요 원인으로 강조한 반면, 동아일보는 반도체 수출 호조와 함께 내수 부진 상황을 배경으로 제시했다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "물가수준 안정적 수렴을 위한 기준금리 인상",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "성장률과 물가가 당초 예상보다 높게 나타난 배경",
+                "summary": "반도체 수출 호조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조와 내수 회복",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조와 내수 부진",
                 "evidence": []
               }
             ]
@@ -3266,18 +1513,24 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 증시 변동성과 실물경제 중요성을 강조한 반면, SBS는 '빚투·영끌' 부담 증가를 강조했다.",
+            "contrast_statement": "SBS와 매일경제는 경제 성장과 코스피 회복을 강조한 반면, 동아일보는 경기 회복의 불균형 심화와 대외 통상 압박 가능성을 경고했다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "증시 변동성 및 실물경제 중요성",
-                "evidence": []
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "대출 이용자('빚투·영끌')의 부담 증가",
+                "summary": "경제 성장, 코스피 회복, 1인당 국민소득 4만 달러 달성 가능성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "성장률 3% 달성 가능성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "경기 회복의 불균형 심화, 대외 통상 압박 가능성, 산업간 성장 격차 확대",
                 "evidence": []
               }
             ]
@@ -3285,352 +1538,349 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 중립적으로 사실을 설명한 반면, SBS는 '빚투·영끌' 부담 증가에 대해 우려·경계하는 태도를 보였다.",
+            "contrast_statement": "SBS와 매일경제는 '기대' 태도로 긍정적 소식을 전달한 반면, 동아일보는 '우려·경계' 태도로 불균형 심화를 경계했다.",
             "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”"
-                ]
-              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "대출 부담 증가에 대해 우려·경계하는 태도",
+                "summary": "사실관계를 중립적으로 전달하며 긍정적 소식을 기대적으로 보도함",
                 "evidence": [
-                  "'빚투·영끌' 부담↑"
+                  "2분기도 '깜짝' 성장 희소식",
+                  "코스피 '7천' 회복"
+                ]
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "긍정적 전망을 제시하며 기대적으로 보도함",
+                "evidence": [
+                  "'올 성장률 3%도 가능'"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "불균형 심화를 우려하며 경계하는 태도로 보도함",
+                "evidence": [
+                  "커지는 '수출-내수 온도차'",
+                  "대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 함께 확대될 수 있다는 해외 연구기관의 경고",
+                  "대외 통상 압박과 산업간 성장 격차가 동시에 커질 수 있다"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "한국은행의 기준금리 인상(2.50%→2.75%)",
-          "신현송 총재의 추가 대응 가능성 언급",
-          "금리 인상이 경제 전반에 미칠 영향에 대한 보도"
+          "반도체 수출 호조가 한국 경제에 긍정적 영향을 미치고 있다는 점",
+          "2분기 경제 성장에 대한 보도"
         ],
         "key_differences": [
-          "매일경제는 물가 안정을 위한 추가 조치 가능성에 초점을 둔 반면, SBS는 금리 인상이 대출 부담('빚투·영끌')에 미치는 영향에 초점을 둠",
-          "매일경제는 중립적 설명 태도를 보인 반면, SBS는 우려·경계하는 태도를 보임"
+          "SBS와 매일경제는 경제 성장과 코스피 회복을 긍정적으로 강조한 반면, 동아일보는 수출-내수 간 불균형 심화를 우려하며 경계하는 태도를 보였다."
         ],
-        "comparison_report": "두 언론사 모두 한국은행의 기준금리 인상(2.50%→2.75%)과 신현송 총재의 추가 대응 가능성을 보도했으나, 매일경제은 물가 안정을 위한 추가 조치 가능성에 초점을 두고 중립적으로 사실을 설명한 반면, SBS는 42개월 만의 금리 인상 사이클 진입과 이로 인한 '빚투·영끌' 등 대출 부담 증가에 대해 우려·경계하는 태도를 보였다.",
+        "comparison_report": "SBS와 매일경제는 반도체 수출 호조로 인한 2분기 경제 성장과 코스피 회복을 긍정적으로 보도한 반면, 동아일보는 반도체 수출 호조로 경상수지 흑자가 확대되었으나 소비심리 위축과 내수 부진으로 경기 회복의 불균형이 심화되고 있다고 우려하며 경계하는 태도를 보였다. SBS는 '깜짝' 성장과 코스피 '7천' 회복을 희소식으로 전달했고, 매일경제는 수출과 내수 쌍끌이 효과로 '올 성장률 3%도 가능'하다고 전망했다. 반면 동아일보는 '커지는 수출-내수 온도차'를 강조하며 대규모 경상흑자가 장기화할 경우 국내외 경제 불균형이 확대될 수 있다는 해외 연구기관의 경고를 인용해 우려를 표명했다.",
         "source_links": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "금리 인상 기조 밝힌…신현송 한은 총재 “모든 가능성 열어두겠다”",
-            "link": "https://www.mk.co.kr/news/economy/12100191",
-            "published_at": "Thu, 16 Jul 2026 13:49:12 +09:00"
-          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "42개월 만에 기준금리 인상…'빚투·영끌' 부담↑",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662050",
-            "published_at": "Fri, 17 Jul 2026 06:30:00 +0900"
+            "title": "2분기도 '깜짝' 성장 희소식…코스피 '7천' 회복",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672157",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "수출·내수 쌍끌이…\"올 성장률 3%도 가능\"",
+            "link": "https://www.mk.co.kr/news/economy/12105728",
+            "published_at": "Thu, 23 Jul 2026 17:39:25 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체가 이끈 기록적 경상흑자…커지는 ‘수출-내수 온도차’",
+            "link": "https://www.donga.com/news/Economy/article/all/20260719/134320608/1",
+            "published_at": "Sun, 19 Jul 2026 08:19:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-23T10:44:03.784493+00:00",
+        "compared_at": "2026-07-23T21:41:57.450590+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-d29e3ab864fe5cfa": {
+  "issue-9a64ad62caee806e": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-d29e3ab864fe5cfa",
-        "publisher_id": "mk",
-        "publisher": "매일경제",
+        "issue_id": "issue-9a64ad62caee806e",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
         "articles": [
           {
-            "article_id": "cac9a4d0049059f853d8c1bd2634fc575cfae460567941043ae8b0e4b469e84e",
-            "title": "中企 연체율, 대기업의 4배 … 금리인상 기조에 '좌불안석'",
-            "published_at": "Fri, 17 Jul 2026 17:43:24 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12101086"
+            "article_id": "58f4a7d9ba352cd72f4e3138afa0c683e5f8f3fa734ea9c494f0e145313a8099",
+            "title": "최태원 \"SK하이닉스 주가 우상향…가만히 갖고 있으면 돼\"",
+            "published_at": "Fri, 17 Jul 2026 12:05:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662350"
           }
         ],
         "analysis": {
-          "article_summary": "기준금리 인상 사이클이 본격화되면서 중소기업과 자영업자의 연체율이 대기업 대비 4배 수준으로 치솟고 있으며, 이로 인한 재정 부담이 더욱 커질 것으로 예상된다.",
-          "headline_frame": "중소기업 연체율이 대기업 대비 4배라는 수치적 비교를 통해 금리 인상 기조에 따른 중소기업의 재정 불안정을 강조",
-          "main_focus": "금리 인상 기조에 따른 중소기업과 자영업자의 연체율 상승 및 재정 부담 증가 문제",
+          "article_summary": "최태원 대한상의 회장이 SK하이닉스 주가가 장기적으로 우상향할 것이라고 전망하며, 메모리 수요가 AI 성장으로 인해 기하급수적으로 늘어날 것이라고 설명했다.",
+          "headline_frame": "최태원 회장의 SK하이닉스 주가 상승 전망 및 투자 조언",
+          "main_focus": "AI 성장에 따른 메모리 수요 증가와 SK하이닉스 주가의 장기적 상승 가능성에 대한 전망",
           "keywords": [
-            "연체율",
-            "금리인상",
-            "중소기업",
-            "재정 부담",
-            "좌불안석"
+            "AI 성장",
+            "메모리 수요",
+            "주가 우상향",
+            "투자 조언"
           ],
           "main_actors": [
-            "중소기업",
-            "자영업자"
+            "최태원 대한상의 회장",
+            "권석준 성균관대학교 교수",
+            "이재욱 서울대학교 AI연구원장"
           ],
-          "quoted_sources": [],
+          "quoted_sources": [
+            "최태원 대한상의 회장"
+          ],
           "causes": [
-            "기준금리 인상 사이클 시작",
-            "경기 침체",
-            "소비 부진"
+            "AI 성장",
+            "메모리 수요 증가"
           ],
           "background": [
-            "금리 인상 기조",
-            "연체율 상승"
+            "대한상의 하계포럼",
+            "한국경제의 AI 성장을 위한 아젠다 대담"
           ],
           "emphasized_effects": [
-            "재정 부담 증가",
-            "좌불안석"
+            "주가의 급격한 상승 가능성",
+            "재산 보전 방법으로서의 장기 보유"
           ],
           "affected_groups": [
-            "중소기업",
-            "자영업자"
+            "SK하이닉스 주주"
           ],
           "tone": {
-            "category": "우려·경계",
+            "category": "기대",
             "evidence": [
-              "좌불안석"
+              "'가만히 갖고 있으면 돼'",
+              "'메모리는 계속 필요하기 때문에 시간을 두면 우상향으로 간다'",
+              "'전망이 좋아지면 올라갔다가'"
             ]
           },
           "outlook": {
-            "direction": "부정",
-            "summary": "기준금리 인상 기조가 지속될 경우 중소기업과 자영업자의 재정 부담이 더욱 커질 것으로 전망"
+            "direction": "긍정",
+            "summary": "AI 성장으로 인한 메모리 수요 증가로 SK하이닉스 주가가 장기적으로 우상향할 것으로 전망"
           },
           "less_covered_context": [
-            "정책 대응 방안",
-            "연체율 상승의 구체적 원인 분석",
-            "금리 인상이 다른 경제 부문에 미치는 영향"
+            "구체적인 주가 상승 시기나 목표 가격",
+            "SK하이닉스의 현재 재무 상태나 실적 전망",
+            "경쟁사 대비 SK하이닉크의 경쟁력"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:44:08.362420+00:00",
+        "analyzed_at": "2026-07-23T21:42:01.731264+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-d29e3ab864fe5cfa",
+        "issue_id": "issue-9a64ad62caee806e",
         "publisher_id": "donga",
         "publisher": "동아일보",
         "articles": [
           {
-            "article_id": "e09c58a0f62dd2e45670361dd4b4b22e212732a1d9ded1d057a86f88bbbf508e",
-            "title": "中企 상반기 수출 첫 640억달러 돌파…수출기업도 역대 최다",
-            "published_at": "Thu, 23 Jul 2026 12:17:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260723/134350292/1"
+            "article_id": "81299879593e45723408426c0a20624cd6152166eba8b395c95a1d9e02ef1b46",
+            "title": "최태원 “SK하이닉스株 우상향, 샀다 팔았다 말고 갖고 있어라”",
+            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260717/134319262/2"
           }
         ],
         "analysis": {
-          "article_summary": "2026년 상반기 중소기업 수출액이 640억 달러로 역대 상반기 최고치를 기록했으며, 수출 기업 수도 8만490개사로 역대 가장 많았다.",
-          "headline_frame": "중소기업 수출 실적의 역대 최고치 돌파",
-          "main_focus": "수출액 및 수출 기업 수의 역대 최고 기록",
+          "article_summary": "최태원 대한상공회의소 회장이 AI 성장으로 인한 메모리 수요 확대를 근거로 SK하이닉스 주가가 장기적으로 우상향할 것이라고 전망하며, 단기 변동성에 대한 우려를 경계하고 장기 보유를 권고했다.",
+          "headline_frame": "최태원 회장의 SK하이닉스 주가 장기 전망 및 투자 조언",
+          "main_focus": "AI 성장에 따른 메모리 수요 확대를 근거로 한 SK하이닉스 주가의 장기적 우상향 전망",
           "keywords": [
-            "중소기업 수출액",
-            "수출 기업 수",
-            "역대 최고",
-            "화장품 수출",
-            "유럽 수출",
-            "북미 수출"
+            "AI 성장",
+            "메모리 수요",
+            "주가 우상향",
+            "장기 보유",
+            "단기 변동성"
           ],
           "main_actors": [
-            "중소벤처기업부"
+            "최태원",
+            "대한상공회의소",
+            "SK하이닉스"
           ],
-          "quoted_sources": [],
+          "quoted_sources": [
+            "최태원 대한상공회의소 회장"
+          ],
           "causes": [
-            "해외 인공지능(AI) 반도체 수요 확대",
-            "반도체 단가 상승"
+            "AI 성장으로 인한 메모리 수요 확대"
           ],
           "background": [
-            "2026년 상반기 중소기업 수출 동향"
+            "반도체 기업들의 주가 변동성",
+            "대한상의 제주포럼 ‘한국 경제의 AI 성장을 위한 어젠다’ 대담"
           ],
           "emphasized_effects": [
-            "수출액 11.6% 증가",
-            "수출 기업 수 2.4% 증가"
+            "장기적 주가 상승",
+            "단기 변동성 가능성"
           ],
           "affected_groups": [
-            "중소기업"
+            "SK하이닉스 주주",
+            "투자자"
           ],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "올해 상반기(1~6월) 중소기업 수출액과 수출기업 수가 나란히 역대 상반기 최고치를 기록했다",
-              "수출액은 처음으로 600억 달러를 넘어섰고",
-              "수출 기업 수도 8만 개를 돌파했다"
+              "최태원 “SK하이닉스株 우상향, 샀다 팔았다 말고 갖고 계시라”",
+              "메모리 수요가 계속 늘어날 것이라고 강조했다",
+              "단기 변동성에는 선을 그었다"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "향후 수출 동향에 대한 구체적 전망은 제시되지 않음"
+            "summary": "AI 성장에 따른 메모리 수요 확대로 SK하이닉스 주가가 장기적으로 우상향할 것으로 전망되나, 단기 변동성에 대한 우려도 함께 제기됨"
           },
           "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "금리 부담이나 연체율 상승에 대한 언급 없음"
+            "SK하이닉스의 구체적인 재무 실적이나 기술 개발 현황",
+            "다른 반도체 기업들의 주가 전망 비교",
+            "정부의 반도체 산업 지원 정책"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-23T10:44:08.652429+00:00",
+        "analyzed_at": "2026-07-23T21:42:04.428866+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-d29e3ab864fe5cfa",
+      "issue_id": "issue-9a64ad62caee806e",
       "groups": [
         {
-          "group_id": "group-01",
-          "label": "금리 인상과 중소기업 재정 부담 우려",
-          "summary": "금리 인상 기조에 따른 중소기업과 자영업자의 연체율 상승 및 재정 부담 증가 문제를 중심으로, 경기 침체와 소비 부진을 배경으로 재정 부담 증가와 좌불안석 상태를 우려하는 보도 태도",
+          "group_id": "group-1",
+          "label": "AI 성장과 메모리 수요 확대에 따른 SK하이닉스 주가 전망",
+          "summary": "두 언론사 모두 AI 성장에 따른 메모리 수요 확대를 핵심 원인으로 보고, SK하이닉스 주가의 장기적 우상향 가능성을 긍정적으로 전망하며, 최태원 회장의 투자 조언을 중심으로 보도하고 있습니다.",
           "keywords": [
-            "금리인상",
-            "중소기업",
-            "연체율",
-            "재정 부담",
-            "좌불안석"
+            "AI 성장",
+            "메모리 수요 확대",
+            "주가 우상향",
+            "장기 보유"
           ],
           "publisher_ids": [
-            "mk"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "금리 인상 기조에 따른 중소기업과 자영업자의 연체율 상승 및 재정 부담 증가 문제를 핵심 쟁점으로 다루고 있으며, 기준금리 인상 사이클 시작과 경기 침체, 소비 부진을 원인으로 지목하고, 재정 부담 증가와 좌불안석 상태를 우려·경계의 태도로 보도함"
-          ]
-        },
-        {
-          "group_id": "group-02",
-          "label": "중소기업 수출 실적 역대 최고 기록",
-          "summary": "2026년 상반기 중소기업 수출 동향과 역대 최고 수출액 및 수출 기업 수 기록을 중심으로, 해외 AI 반도체 수요 확대와 단가 상승을 원인으로 하여 수출 증가를 중립적으로 설명하는 보도 태도",
-          "keywords": [
-            "수출액",
-            "수출 기업 수",
-            "역대 최고",
-            "AI 반도체",
-            "유럽 수출",
-            "북미 수출"
-          ],
-          "publisher_ids": [
+            "sbs",
             "donga"
           ],
           "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
             {
               "publisher_id": "donga",
               "publisher": "동아일보"
             }
           ],
-          "publisher_count": 1,
+          "publisher_count": 2,
           "group_evidence": [
-            "중소기업 수출 실적의 역대 최고치 돌파를 핵심 쟁점으로 다루며, 2026년 상반기 수출 동향과 해외 AI 반도체 수요 확대, 반도체 단가 상승을 원인으로 제시하고, 수출액 11.6% 증가 및 수출 기업 수 2.4% 증가를 중립적으로 설명하는 보도 태도"
+            "두 언론사 모두 AI 성장에 따른 메모리 수요 증가를 핵심 원인으로 지목하고 있습니다.",
+            "SK하이닉스 주가의 장기적 상승 가능성을 공통적으로 전망하고 있습니다.",
+            "최태원 회장의 '가만히 갖고 있으면 돼', '메모리는 계속 필요하기 때문에 시간을 두면 우상향으로 간다'는 투자 조언을 인용하고 있습니다.",
+            "단기 변동성에 대한 언급은 있으나, 이는 주가 전망의 핵심 방향을 바꾸지 않는 보조적 설명입니다.",
+            "대한상의 포럼에서의 발언을 근거로 하여 한국경제와 AI 성장의 연관성을 강조하고 있습니다."
           ]
         }
       ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-01",
-            "group-02"
-          ],
-          "contrast_statement": "매일경제는 금리 인상 기조에 따른 중소기업과 자영업자의 연체율 상승 및 재정 부담 증가 문제를 우려·경계의 태도로 보도하는 반면, 동아일보는 2026년 상반기 중소기업 수출 동향과 역대 최고 수출액 및 수출 기업 수 기록을 중립적으로 설명하며 해외 AI 반도체 수요 확대와 단가 상승을 원인으로 제시함"
-        }
-      ],
-      "grouping_summary": "두 언론사는 동일한 중소기업 관련 이슈를 다루지만, 매일경제는 금리 인상과 경기 침체라는 부정적 맥락에서 중소기업의 재정 부담과 연체율 문제를 우려하는 반면, 동아일보는 수출 실적의 긍정적 성과를 중립적으로 보도하여 핵심 관점과 평가 방향이 상반됨",
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 AI 성장에 따른 메모리 수요 확대를 핵심 쟁점으로 보고, SK하이닉스 주가의 장기적 우상향 가능성을 긍정적으로 전망하며 최태원 회장의 투자 조언을 중심으로 보도하고 있습니다. SBS는 '재산 보전 방법으로서의 장기 보유'를 강조하고, 동아일보는 '단기 변동성 가능성'을 추가로 언급하지만, 이는 핵심 해석인 장기 상승 전망을 보완하거나 수정하는 수준이며 서로 대립하는 평가 방향이 아닙니다. 따라서 두 언론사는 동일한 그룹으로 분류할 수 있습니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-23T10:44:13.938978+00:00",
+      "grouped_at": "2026-07-23T21:42:07.274967+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "donga,mk": {
-        "issue_id": "issue-d29e3ab864fe5cfa",
+      "donga,sbs": {
+        "issue_id": "issue-9a64ad62caee806e",
         "selected_publishers": [
           {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
+            "publisher_id": "sbs",
+            "publisher": "SBS"
           },
           {
             "publisher_id": "donga",
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "두 언론사 모두 중소기업 관련 경제 동향을 다루고 있으나, 매일경제는 금리 인상에 따른 연체율 문제를, 동아일보는 수출 실적 호조를 각각 강조하고 있다.",
-        "overall_difference": "차이 큼",
+        "common_summary": "최태원 대한상의 회장이 AI 성장으로 인한 메모리 수요 증가를 근거로 SK하이닉스 주가가 장기적으로 우상향할 것이라고 전망하며, 단기 변동성에 대한 우려를 경계하고 장기 보유를 권고한 내용이 공통적으로 확인된다.",
+        "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 중소기업 관련 경제 이슈를 다루고 있으나, 매일경제는 금리 인상과 연체율 문제를, 동아일보는 수출 실적 호조를 각각 주요 내용으로 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 최태원 대한상의 회장의 SK하이닉스 주가 장기 상승 전망과 AI 성장에 따른 메모리 수요 증가 근거를 동일하게 보도하였다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "금리 인상 사이클 본격화로 인한 중소기업과 자영업자의 연체율 상승 및 재정 부담 증가 문제",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "최태원 회장의 SK하이닉스 주가 우상향 전망 및 AI 성장에 따른 메모리 수요 증가 설명",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "2026년 상반기 중소기업 수출액 640억 달러 돌파 및 수출 기업 수 8만490개사 역대 최고 기록",
+                "summary": "최태원 회장의 SK하이닉스 주가 장기 우상향 전망과 단기 변동성 경계, 장기 보유 권고",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "차이 큼",
-            "contrast_statement": "매일경제는 금리 인상에 따른 중소기업의 재정 불안정을 우려하는 관점을, 동아일보는 수출 실적 호조를 긍정적으로 평가하는 관점을 보이고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 AI 성장과 메모리 수요 증가를 통한 주가 상승 가능성에 초점을 맞춘 반면, 동아일보는 AI 성장에 따른 메모리 수요 확대를 근거로 한 SK하이닉스 주가의 장기적 우상향 전망을 강조하였다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "금리 인상 기조에 따른 중소기업과 자영업자의 연체율 상승 및 재정 부담 증가 문제",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "AI 성장에 따른 메모리 수요 증가와 SK하이닉스 주가의 장기적 상승 가능성 전망",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "중소기업 수출액과 수출 기업 수의 역대 최고 기록 달성",
+                "summary": "AI 성장에 따른 메모리 수요 확대를 근거로 한 SK하이닉스 주가의 장기적 우상향 전망",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조된 원인·배경",
-            "difference_level": "차이 큼",
-            "contrast_statement": "매일경제는 기준금리 인상 사이클 시작과 경기 침체, 소비 부진을 원인으로 강조한 반면, 동아일보는 해외 AI 반도체 수요 확대와 반도체 단가 상승을 주요 원인으로 제시하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 AI 성장과 메모리 수요 증가를 주요 원인으로 제시한 반면, 동아일보는 AI 성장으로 인한 메모리 수요 확대를 원인으로 강조하였다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "기준금리 인상 사이클 시작, 경기 침체, 소비 부진",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "AI 성장과 메모리 수요 증가",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "해외 AI 반도체 수요 확대, 반도체 단가 상승",
+                "summary": "AI 성장으로 인한 메모리 수요 확대",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조한 영향·대상",
-            "difference_level": "차이 큼",
-            "contrast_statement": "매일경제는 중소기업과 자영업자의 재정 부담 증가를 강조한 반면, 동아일보는 수출 기업 수 증가와 수출액 증가를 주요 영향으로 제시하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 주가 급격한 상승 가능성과 재산 보전 방법으로서의 장기 보유를 강조한 반면, 동아일보는 장기적 주가 상승과 단기 변동성 가능성을 함께 언급하였다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "중소기업과 자영업자의 재정 부담 증가",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "주가의 급격한 상승 가능성과 재산 보전 방법으로서의 장기 보유",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "수출액 11.6% 증가, 수출 기업 수 2.4% 증가",
+                "summary": "장기적 주가 상승과 단기 변동성 가능성",
                 "evidence": []
               }
             ]
@@ -3638,49 +1888,371 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "매일경제는 '좌불안석'이라는 표현을 통해 우려를 나타내는 반면, 동아일보는 '역대 최고'라는 표현을 통해 중립적으로 사실을 설명하고 있다.",
+            "contrast_statement": "SBS는 최태원 회장의 발언을 '가만히 갖고 있으면 돼', '메모리는 계속 필요하기 때문에 시간을 두면 우상향으로 간다' 등의 표현을 통해 낙관적인 기대감으로 전달한 반면, 동아일보는 '최태원 “SK하이닉스株 우상향, 샀다 팔았다 말고 갖고 계시라”', '단기 변동성에는 선을 그었다' 등의 표현을 통해 중립적으로 설명하였다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "우려·경계 태도로 중소기업 연체율 문제를 강조",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "낙관적인 기대감으로 최태원 회장의 발언을 인용하여 주가 상승을 강조함",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "중립 설명 태도로 수출 실적 호조를 객관적으로 전달",
+                "summary": "중립적으로 최태원 회장의 발언을 인용하여 주가 전망과 단기 변동성 경계를 설명",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "두 언론사 모두 중소기업 관련 경제 이슈를 다루고 있음"
+          "최태원 대한상의 회장의 SK하이닉스 주가 장기 상승 전망",
+          "AI 성장에 따른 메모리 수요 증가 근거",
+          "단기 변동성 경계 및 장기 보유 권고"
         ],
         "key_differences": [
-          "매일경제는 금리 인상에 따른 연체율 문제를 강조한 반면, 동아일보는 수출 실적 호조를 강조함"
+          "SBS는 주가 상승 가능성을 낙관적으로 강조한 반면, 동아일보는 중립적으로 설명하며 단기 변동성 가능성을 함께 언급함",
+          "SBS는 '가만히 갖고 있으면 돼' 등의 표현을 사용한 반면, 동아일보는 '샀다 팔았다 말고 갖고 계시라' 등의 표현을 사용함"
         ],
-        "comparison_report": "매일경제는 기준금리 인상 사이클 본격화로 중소기업과 자영업자의 연체율이 대기업 대비 4배 수준으로 치솟으며 재정 부담이 커질 것이라고 우려하는 반면, 동아일보는 2026년 상반기 중소기업 수출액이 640억 달러로 역대 상반기 최고치를 기록하고 수출 기업 수도 8만490개사로 역대 최다를 달성했다고 중립적으로 보도하고 있다. 두 언론사 모두 중소기업 관련 경제 동향을 다루지만, 매일경제는 금리 인상과 연체율 문제를, 동아일보는 수출 실적 호조를 각각 주요 관점으로 삼고 있으며, 매일경제는 '좌불안석'이라는 표현을 통해 우려를 나타내는 반면 동아일보는 '역대 최고'라는 표현을 통해 사실을 객관적으로 전달하고 있다.",
+        "comparison_report": "SBS와 동아일보 모두 최태원 대한상의 회장의 SK하이닉스 주가 장기 상승 전망을 보도했으나, SBS는 AI 성장과 메모리 수요 증가를 근거로 낙관적인 기대감을 강조하며 '가만히 갖고 있으면 돼' 등의 표현을 사용한 반면, 동아일보는 AI 성장으로 인한 메모리 수요 확대를 근거로 중립적으로 설명하며 단기 변동성 가능성을 함께 언급하였다. 두 언론사 모두 대한상의 포럼에서 나온 발언을 인용했으나, SBS는 주가 상승 가능성에 초점을 맞춘 반면 동아일보는 전망과 함께 단기 변동성에 대한 경계도 포함하였다.",
         "source_links": [
           {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "中企 연체율, 대기업의 4배 … 금리인상 기조에 '좌불안석'",
-            "link": "https://www.mk.co.kr/news/economy/12101086",
-            "published_at": "Fri, 17 Jul 2026 17:43:24 +09:00"
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "최태원 \"SK하이닉스 주가 우상향…가만히 갖고 있으면 돼\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662350",
+            "published_at": "Fri, 17 Jul 2026 12:05:00 +0900"
           },
           {
             "publisher_id": "donga",
             "publisher": "동아일보",
-            "title": "中企 상반기 수출 첫 640억달러 돌파…수출기업도 역대 최다",
-            "link": "https://www.donga.com/news/Economy/article/all/20260723/134350292/1",
-            "published_at": "Thu, 23 Jul 2026 12:17:00 +0900"
+            "title": "최태원 “SK하이닉스株 우상향, 샀다 팔았다 말고 갖고 있어라”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260717/134319262/2",
+            "published_at": "Sat, 18 Jul 2026 01:40:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-23T10:44:28.976036+00:00",
+        "compared_at": "2026-07-23T21:42:19.610455+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-036e0ea540f5ae56": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-036e0ea540f5ae56",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "8e81fc6b2fc772438e49f0663ebfbf7c34c3ab607f291bd604667e68d52ed986",
+            "title": "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667972"
+          }
+        ],
+        "analysis": {
+          "article_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리를 반영해 전문가 공청회를 개최했다.",
+          "headline_frame": "검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론",
+          "main_focus": "민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 사회적 논의",
+          "keywords": [
+            "보완수사권",
+            "장윤기 사건",
+            "공청회",
+            "민주당"
+          ],
+          "main_actors": [
+            "민주당",
+            "검찰"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "장윤기 사건"
+          ],
+          "background": [
+            "검찰 보완수사권 폐지 우려"
+          ],
+          "emphasized_effects": [
+            "사회적 목소리"
+          ],
+          "affected_groups": [
+            "검찰"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "공청회를 통해 찬반 의견을 수렴하고 향후 정책 방향을 모색할 것으로 보인다."
+          },
+          "less_covered_context": [
+            "공청회에서 제시된 구체적인 정책 대안",
+            "검찰과 경찰 간 수사권 조정 방안"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-23T21:42:51.309047+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-036e0ea540f5ae56",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "fb72077b570825a42da077bd7caa5cae73af07f1a4d386fe76d299fd20b6c31f",
+            "title": "與, 보완수사권 폐지 이르면 이달말 처리 방침… 전대 영향 차단",
+            "published_at": "Thu, 23 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260723/134348195/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "더불어민주당이 검사 보완수사권 전면 폐지 방침을 공식화하고 입법 속도전에 나섰으며, 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위해 논의를 서두르고 있다.",
+          "headline_frame": "보완수사권 폐지 방침과 입법 속도전, 전당대회 영향 차단",
+          "main_focus": "보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단",
+          "keywords": [
+            "보완수사권 폐지",
+            "입법 속도전",
+            "전당대회 영향 차단",
+            "형사소송법 보완책"
+          ],
+          "main_actors": [
+            "더불어민주당",
+            "한병도 대표 직무대행 겸 원내대표"
+          ],
+          "quoted_sources": [
+            "한병도 대표 직무대행 겸 원내대표"
+          ],
+          "causes": [
+            "보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것"
+          ],
+          "background": [
+            "더불어민주당 지도부가 검사 보완수사권 문제 숙의를 위한 정책의원총회를 연 지 하루 만에"
+          ],
+          "emphasized_effects": [
+            "보완수사권 폐지에 따른 부작용 차단"
+          ],
+          "affected_groups": [
+            "성폭력·아동 대상 사건 등 사회적 약자 대상 범죄"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "더불어민주당 지도부가 검사 보완수사권 문제 숙의를 위한 정책의원총회를 연 지 하루 만에 보완수사권 전면 폐지 방침을 공식화하며 입법 속도전에 나섰다",
+              "보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위해 서둘러 논의를 매듭지으려 한다는 분석이 나온다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "민주당은 국회 법제사법위원회 법안심사1소위원회에서 23일까지 심사를 최대한 마무리한 뒤 입법 절차를 진행할 예정이다."
+          },
+          "less_covered_context": [
+            "보완수사권 폐지에 따른 구체적인 부작용 차단 방안",
+            "보완수사권 폐지 이후 검찰의 수사 권한 변화"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-07-23T21:42:51.637173+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-036e0ea540f5ae56",
+      "groups": [
+        {
+          "group_id": "group-01",
+          "label": "보완수사권 폐지 방침과 사회적 논의",
+          "summary": "민주당의 공청회 개최를 통해 검찰 보완수사권 폐지 여부에 대한 사회적 논의가 진행되고 있으며, 입법 속도전을 통해 전당대회 쟁점화를 차단하려는 움직임이 나타나고 있다.",
+          "keywords": [
+            "보완수사권 폐지",
+            "공청회",
+            "입법 속도전",
+            "전당대회 영향 차단"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "두 언론사 모두 검찰 보완수사권 폐지 여부에 대한 사회적 논의와 입법 과정을 중심으로 보도하고 있다.",
+            "SBS는 민주당의 전문가 공청회를 통해 보완수사권 존폐 문제를 둘러싼 찬반 격론을 보도하며 중립적으로 설명하고 있다.",
+            "동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 강조하며 중립적으로 보도하고 있다.",
+            "두 언론사 모두 보완수사권 폐지가 사회적 약자 대상 범죄(성폭력·아동 대상 사건 등)에 미칠 영향을 언급하고 있다.",
+            "SBS는 '장윤기 사건'을 강조된 원인으로, 동아일보는 '보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것'을 강조된 원인으로 제시하고 있으나, 이는 동일한 사건에 대한 서로 다른 해석 방향이며 핵심 관점 자체는 동일하다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "SBS와 동아일보 모두 검찰 보완수사권 폐지 여부에 대한 사회적 논의와 입법 과정을 중심으로 보도하고 있으며, 핵심 관점은 동일하다. SBS는 민주당의 공청회를 통한 찬반 격론을, 동아일보는 입법 속도전과 전당대회 쟁점화 차단을 강조하지만, 이는 동일한 사건에 대한 서로 다른 해석 방향이며 핵심 관점 자체는 동일하다. 두 언론사 모두 보완수사권 폐지가 사회적 약자 대상 범죄에 미칠 영향을 언급하고 있으며, 보도 태도는 중립적이다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-07-23T21:42:59.131418+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-036e0ea540f5ae56",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리를 반영해 전문가 공청회를 개최했다는 내용이 두 언론사 모두에서 확인된다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리를 반영해 전문가 공청회를 개최했다는 점을 공통적으로 보도한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리를 반영해 전문가 공청회를 개최했다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "더불어민주당이 검사 보완수사권 전면 폐지 방침을 공식화하고 입법 속도전에 나섰다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론에 초점을 맞춘 반면, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단에 주목한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 사회적 논의를 조명한다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 강조한다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 장윤기 사건을 직접적인 원인으로 강조한 반면, 동아일보는 보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위한 배경으로 설명한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장윤기 사건을 검찰 보완수사권 폐지 우려의 직접적인 계기로 제시한다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위한 배경으로 설명한다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 사회적 목소리를 영향 대상으로 언급한 반면, 동아일보는 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄를 영향 대상으로 특정한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "검찰 보완수사권 폐지에 대한 사회적 우려의 목소리를 강조한다.",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "보완수사권 폐지에 따른 부작용 차단을 강조하며, 특히 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄를 영향 대상으로 제시한다.",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목으로 중립적 설명을 제공한 반면, 동아일보는 '與, 보완수사권 폐지 이르면 이달말 처리 방침… 전대 영향 차단'이라는 제목으로 입법 속도전과 전당대회 영향 차단을 부각하는 태도를 보인다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론을 중립적으로 설명하며 보도한다.",
+                "evidence": [
+                  "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 영향 차단을 부각하는 태도를 보인다.",
+                "evidence": [
+                  "더불어민주당 지도부가 검사 보완수사권 문제 숙의를 위한 정책의원총회를 연 지 하루 만에 보완수사권 전면 폐지 방침을 공식화하며 입법 속도전에 나섰다",
+                  "보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위해 서둘러 논의를 매듭지으려 한다는 분석이 나온다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리를 반영해 전문가 공청회를 개최했다는 점",
+          "검찰 보완수사권 폐지 여부에 대한 사회적 논의가 진행되고 있다는 점"
+        ],
+        "key_differences": [
+          "SBS는 검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론에 초점을 맞춘 반면, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 강조한다.",
+          "SBS는 장윤기 사건을 직접적인 원인으로 제시한 반면, 동아일보는 보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위한 배경으로 설명한다.",
+          "SBS는 사회적 목소리를 영향 대상으로 언급한 반면, 동아일보는 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄를 구체적인 영향 대상으로 제시한다."
+        ],
+        "comparison_report": "SBS와 동아일보 모두 민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리를 반영해 전문가 공청회를 개최했다는 공통점을 보도하지만, SBS는 검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론에 초점을 맞춘 중립적 설명을 제공하는 반면, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 부각하는 태도를 보인다. 원인 측면에서 SBS는 장윤기 사건을 직접적인 계기로 제시한 데 비해 동아일보는 전당대회 영향 차단을 위한 배경으로 설명하며, 영향 대상에서도 SBS는 사회적 목소리 일반을 언급한 반면 동아일보는 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄를 구체적으로 제시한다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "'보완수사권' 정책 의총…'존폐' 놓고 찬반 격론",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008667972",
+            "published_at": "Tue, 21 Jul 2026 22:03:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "與, 보완수사권 폐지 이르면 이달말 처리 방침… 전대 영향 차단",
+            "link": "https://www.donga.com/news/Politics/article/all/20260723/134348195/2",
+            "published_at": "Thu, 23 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-07-23T21:43:18.811726+00:00",
         "model": "solar-pro3"
       }
     }
