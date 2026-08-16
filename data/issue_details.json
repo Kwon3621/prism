@@ -1,1376 +1,8 @@
 {
-  "issue-67f41ed18156f17c": {
+  "issue-c6cd9bb1d64b28fa": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-67f41ed18156f17c",
-        "publisher_id": "hankyung",
-        "publisher": "한국경제",
-        "articles": [
-          {
-            "article_id": "d09464551b88d0cb5141cb7d3044b92119eb22bd79131d9c1c600f7d538b1b95",
-            "title": "'검찰개혁 팬덤 정치'에 맞선 與의원",
-            "published_at": "Fri, 24 Jul 2026 18:07:31 +0900",
-            "link": "https://www.hankyung.com/article/2026072449571"
-          }
-        ],
-        "analysis": {
-          "article_summary": "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 내용이 기사에 담겨 있다.",
-          "headline_frame": "제목은 '검찰개혁 팬덤 정치'라는 표현을 통해 검찰개혁 관련 정치적 팬덤 현상을 부각시키고, 이에 맞서는 여당 의원의 행동을 중심으로 사건을 프레임화했다.",
-          "main_focus": "기사는 검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 입장을 강조하며, 정치적 대립 구도를 부각시키는 데 초점을 맞추고 있다.",
-          "keywords": [
-            "검찰개혁",
-            "보완수사권",
-            "팬덤 정치",
-            "與의원",
-            "정치"
-          ],
-          "main_actors": [
-            "더불어민주당 의원들",
-            "검찰개혁 팬덤"
-          ],
-          "quoted_sources": [
-            "더불어민주당 의원들"
-          ],
-          "causes": [
-            "검찰개혁 보완수사권 폐지 논란"
-          ],
-          "background": [
-            "검찰개혁 관련 정치적 팬덤 현상"
-          ],
-          "emphasized_effects": [
-            "팬덤 정치에 대한 비판",
-            "정치적 대립 구도"
-          ],
-          "affected_groups": [
-            "더불어민주당 의원들"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "'검찰개혁 팬덤 정치'에 맞선 與의원"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "기사 제목과 설명만으로는 향후 전망에 대한 구체적인 내용이 확인되지 않는다."
-          },
-          "less_covered_context": [
-            "검찰개혁 보완수사권 폐지의 구체적 내용",
-            "해당 논란의 법적·제도적 근거",
-            "다른 정당의 입장"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:46:32.764214+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-67f41ed18156f17c",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "fe28f266d3b2117db031a0d1b9b53d759daeabc7131f808e65ab4fb706cabe0a",
-            "title": "[정치쇼] 권영철 \"보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것\"",
-            "published_at": "Fri, 17 Jul 2026 09:41:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662252"
-          }
-        ],
-        "analysis": {
-          "article_summary": "SBS는 권영철 의원의 발언을 중심으로 보완수사권 폐지 논란의 핵심 쟁점을 다루며, 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중 문제를 지적하고 있다.",
-          "headline_frame": "권영철 의원의 발언을 통해 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중 문제를 부각",
-          "main_focus": "보완수사권 폐지 여부에 따른 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성",
-          "keywords": [
-            "보완수사권",
-            "검찰 부활",
-            "경찰 권한",
-            "공소청-중수청법",
-            "정권 내주기"
-          ],
-          "main_actors": [
-            "권영철",
-            "검찰",
-            "경찰",
-            "정청래"
-          ],
-          "quoted_sources": [
-            "권영철"
-          ],
-          "causes": [
-            "보완수사권 남겨두면 검찰 부활 가능성",
-            "경찰에 대한 과도한 권한 집중"
-          ],
-          "background": [
-            "지난 3월 공소청-중수청법 통과로 검찰 해체",
-            "박종철 고문치사 사건",
-            "김근태 고문사건"
-          ],
-          "emphasized_effects": [
-            "검찰 부활 가능성",
-            "정권 내주기",
-            "비상식적 권력 집중"
-          ],
-          "affected_groups": [
-            "국민",
-            "경찰"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것",
-              "검찰 견제한다고 경찰에 힘 몰아준다? 비상식적"
-            ]
-          },
-          "outlook": {
-            "direction": "혼합",
-            "summary": "보완수사권 폐지 시 검찰 부활 가능성과 경찰 권한 집중 문제가 동시에 제기되며, 두 가지 상반된 결과에 대한 우려가 혼재"
-          },
-          "less_covered_context": [
-            "보완수사권 폐지 시 구체적인 수사 공백 발생 가능성",
-            "검찰과 경찰 간 협력 체계 변화",
-            "국제적 비교 사례"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:46:39.234870+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-67f41ed18156f17c",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "0d9ec51c8332d610c88851633260b78d46ef9dec51eb25d4a56f2da33b181382",
-            "title": "김남희, 보완수사권 대신 ‘전건송치 부활’ 담은 형소법 발의",
-            "published_at": "Fri, 24 Jul 2026 09:35:05 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260724/134356619/1"
-          }
-        ],
-        "analysis": {
-          "article_summary": "김남희 더불어민주당 의원이 검사의 보완수사권 폐지와 전건송치 부활을 골자로 한 형사소송법 개정안을 대표 발의했다.",
-          "headline_frame": "보완수사권 폐지와 전건송치 부활이라는 제도적 대안을 중심으로 한 법안 발의",
-          "main_focus": "수사·기소 분리 원칙 유지와 부실수사·피해자 보호 공백 방지를 위한 형사소송법 개정 방안",
-          "keywords": [
-            "보완수사권 폐지",
-            "전건송치 부활",
-            "형사소송법 개정안",
-            "수사·기소 분리",
-            "부실수사 방지",
-            "피해자 보호"
-          ],
-          "main_actors": [
-            "김남희 더불어민주당 의원",
-            "정치권",
-            "사법경찰관",
-            "검사"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "보완수사권 폐지로 인한 부실수사 우려",
-            "피해자 보호 공백"
-          ],
-          "background": [
-            "10월 공소청과 중대범죄수사청 출범 예정",
-            "수사·기소 분리 원칙"
-          ],
-          "emphasized_effects": [
-            "부실수사 방지",
-            "피해자 보호 강화"
-          ],
-          "affected_groups": [
-            "피해자",
-            "사법경찰관",
-            "검사"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "김남희 더불어민주당 의원이 검사의 보완수사권을 폐지하는 대신 경찰이 수사한 사건을 모두 검사에게 송치하는 ‘전건 송치’를 담은 형사소송법 개정안을 대표 발의했다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "10월 공소청과 중대범죄수사청 출범을 앞두고 수사·기소 분리 원칙을 유지하면서도 부실수사와 피해자 보호 공백을 막기 위한 개정 방향 제시"
-          },
-          "less_covered_context": [
-            "개정안이 실제 수사 현장에 미칠 구체적 영향",
-            "검찰과 경찰 간 협의 절차의 실효성",
-            "개정안에 대한 다른 정당이나 전문가들의 반응"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:46:39.254385+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-67f41ed18156f17c",
-      "groups": [
-        {
-          "group_id": "group-01",
-          "label": "검찰개혁 보완수사권 폐지 논란",
-          "summary": "검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 정치적 대립 구도를 부각시키는 관점",
-          "keywords": [
-            "검찰개혁",
-            "보완수사권 폐지",
-            "팬덤 정치",
-            "정치적 대립"
-          ],
-          "publisher_ids": [
-            "hankyung"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "hankyung",
-              "publisher": "한국경제"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "기사는 검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 입장을 강조하며, 정치적 대립 구도를 부각시키는 데 초점을 맞추고 있다.",
-            "제목은 '검찰개혁 팬덤 정치'라는 표현을 통해 검찰개혁 관련 정치적 팬덤 현상을 부각시키고, 이에 맞서는 여당 의원의 행동을 중심으로 사건을 프레임화했다."
-          ]
-        },
-        {
-          "group_id": "group-02",
-          "label": "보완수사권 폐지에 따른 검찰 부활 및 경찰 권한 집중 우려",
-          "summary": "보완수사권 폐지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 비판하는 관점",
-          "keywords": [
-            "보완수사권 폐지",
-            "검찰 부활",
-            "경찰 권한 집중",
-            "정권 내주기"
-          ],
-          "publisher_ids": [
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "보완수사권 폐지 여부에 따른 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성",
-            "보완수사권 남겨두면 검찰 부활 가능성, 검찰에 대한 견제 수단으로 경찰에 힘을 몰아주는 것은 비상식적 권력 집중이라는 비판",
-            "공소청-중수청법 통과로 검찰 해체, 박종철 고문치사 사건, 김근태 고문사건 등 과거 사례를 배경으로 검찰 부활과 정권 내주기 우려 제기"
-          ]
-        },
-        {
-          "group_id": "group-03",
-          "label": "보완수사권 폐지와 전건송치 부활을 통한 수사·기소 분리 원칙 강화",
-          "summary": "보완수사권 폐지를 통해 수사·기소 분리 원칙을 유지하고 부실수사 및 피해자 보호 공백을 방지하기 위한 제도적 대안을 제시하는 관점",
-          "keywords": [
-            "보완수사권 폐지",
-            "전건송치 부활",
-            "형사소송법 개정",
-            "수사·기소 분리",
-            "부실수사 방지",
-            "피해자 보호"
-          ],
-          "publisher_ids": [
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "보완수사권 폐지와 전건송치 부활이라는 제도적 대안을 중심으로 한 법안 발의",
-            "보완수사권 폐지로 인한 부실수사 우려와 피해자 보호 공백을 방지하기 위해 수사·기소 분리 원칙을 유지하면서도 부실수사와 피해자 보호 공백을 막기 위한 개정 방향 제시",
-            "10월 공소청과 중대범죄수사청 출범을 앞두고 수사·기소 분리 원칙을 유지하면서도 부실수사와 피해자 보호 공백을 막기 위한 개정 방향 제시"
-          ]
-        }
-      ],
-      "group_count": 3,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-01",
-            "group-02"
-          ],
-          "contrast_statement": "hankyung은 검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 정치적 대립 구도를 부각시키는 반면, sbs는 보완수사권 폐지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 비판하며 비상식적 권력 집중 문제를 제기한다. 두 언론사 모두 보완수사권 폐지를 다루지만, hankyung은 정치적 팬덤 현상에 대한 대립 구도를, sbs는 검찰 부활과 경찰 권한 집중이라는 제도적 위험을 강조하여 핵심 해석이 대립한다."
-        },
-        {
-          "group_ids": [
-            "group-02",
-            "group-03"
-          ],
-          "contrast_statement": "sbs는 보완수사권 폐지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 비판하며 비상식적 권력 집중 문제를 제기하는 반면, donga는 보완수사권 폐지를 통해 수사·기소 분리 원칙을 유지하고 부실수사 및 피해자 보호 공백을 방지하기 위한 제도적 대안을 제시한다. 두 언론사 모두 보완수사권 폐지를 다루지만, sbs는 검찰 부활과 경찰 권한 집중이라는 부정적 결과를, donga는 수사·기소 분리 원칙 강화와 부실수사 방지라는 긍정적 효과를 강조하여 핵심 해석이 대립한다."
-        }
-      ],
-      "grouping_summary": "3개 언론사는 모두 검찰개혁 보완수사권 폐지 논란을 다루지만, 핵심 관점이 상이하다. hankyung은 정치적 팬덤 현상에 맞서는 여당 의원의 행동을 중심으로 정치적 대립 구도를 부각시키는 반면, sbs는 보완수사권 폐지로 인한 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 비판한다. donga는 보완수사권 폐지를 통해 수사·기소 분리 원칙을 유지하고 부실수사 및 피해자 보호 공백을 방지하기 위한 제도적 대안을 제시한다. 따라서 3개 그룹으로 분리하여 각각의 핵심 쟁점과 해석 방향을 명확히 구분하였다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:46:46.306805+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-67f41ed18156f17c",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "보완수사권 폐지와 관련된 법적·제도적 쟁점을 다루고 있으며, 검찰 권한 재편과 수사·기소 분리 원칙에 대한 논의가 포함되어 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 보완수사권 폐지와 관련된 법적 쟁점을 다루고 있으나, SBS는 권영철 의원의 발언을 중심으로 검찰 부활 가능성을, 동아일보는 김남희 의원의 형사소송법 개정안을 중심으로 전건송치 부활을 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중 문제를 지적",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지와 전건송치 부활을 골자로 한 형사소송법 개정안 발의",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 보완수사권 유지 시 검찰 부활과 경찰 권한 집중의 위험성을 강조하는 반면, 동아일보는 수사·기소 분리 원칙 유지와 부실수사·피해자 보호 공백 방지를 위한 제도적 대안을 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "수사·기소 분리 원칙 유지와 부실수사·피해자 보호 공백 방지를 위한 형사소송법 개정 방안",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 보완수사권 유지 시 검찰 부활 가능성과 박종철·김근태 고문치사 사건 등을 배경으로 한 경찰 권한 집중 문제를 강조하는 반면, 동아일보는 보완수사권 폐지로 인한 부실수사 우려와 10월 공소청·중대범죄수사청 출범 예정이라는 제도적 배경을 강조한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 남겨두면 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지로 인한 부실수사 우려와 수사·기소 분리 원칙",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 검찰 부활 가능성과 정권 내주기, 비상식적 권력 집중을 국민 대상으로 경고하는 반면, 동아일보는 부실수사 방지와 피해자 보호 강화를 피해자·사법경찰관·검사를 대상으로 강조한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "검찰 부활 가능성과 정권 내주기, 비상식적 권력 집중으로 인한 국민 피해 우려",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "부실수사 방지와 피해자 보호 강화로 인한 사법경찰관·검사의 역할 변화",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 보완수사권 유지 시 검찰 부활과 경찰 권한 집중을 비판하는 비판적 태도를 보이는 반면, 동아일보는 김남희 의원의 형사소송법 개정안 발의를 중립적으로 설명하는 태도를 보인다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것, 검찰 견제한다고 경찰에 힘 몰아준다? 비상식적이라는 비판적 태도",
-                "evidence": [
-                  "보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것",
-                  "검찰 견제한다고 경찰에 힘 몰아준다? 비상식적"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "김남희 더불어민주당 의원이 검사의 보완수사권을 폐지하는 대신 경찰이 수사한 사건을 모두 검사에게 송치하는 ‘전건 송치’를 담은 형사소송법 개정안을 대표 발의했다는 중립적 설명",
-                "evidence": [
-                  "김남희 더불어민주당 의원이 검사의 보완수사권을 폐지하는 대신 경찰이 수사한 사건을 모두 검사에게 송치하는 ‘전건 송치’를 담은 형사소송법 개정안을 대표 발의했다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "보완수사권 폐지와 관련된 법적·제도적 쟁점",
-          "검찰 권한 재편에 대한 논의",
-          "수사·기소 분리 원칙에 대한 언급"
-        ],
-        "key_differences": [
-          "SBS는 권영철 의원의 발언을 통해 보완수사권 유지 시 검찰 부활 가능성을 강조하는 반면, 동아일보는 김남희 의원의 형사소송법 개정안을 통해 보완수사권 폐지와 전건송치 부활을 제시한다.",
-          "SBS는 경찰에 대한 과도한 권한 집중을 비판하는 반면, 동아일보는 부실수사 방지와 피해자 보호 강화를 강조한다."
-        ],
-        "comparison_report": "SBS와 동아일보는 모두 보완수사권 폐지와 관련된 법적 쟁점을 다루지만, SBS는 권영철 의원의 발언을 중심으로 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중을 비판하는 반면, 동아일보는 김남희 의원의 형사소송법 개정안을 통해 보완수사권 폐지와 전건송치 부활을 제시하며 수사·기소 분리 원칙 유지와 부실수사·피해자 보호 공백 방지를 강조한다. SBS는 비판적 태도를 보이며 국민 대상 영향을 경고하는 데 비해, 동아일보는 중립적으로 법안 내용을 설명하는 태도를 보인다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 권영철 \"보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662252",
-            "published_at": "Fri, 17 Jul 2026 09:41:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "김남희, 보완수사권 대신 ‘전건송치 부활’ 담은 형소법 발의",
-            "link": "https://www.donga.com/news/Politics/article/all/20260724/134356619/1",
-            "published_at": "Fri, 24 Jul 2026 09:35:05 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-24T21:46:55.694351+00:00",
-        "model": "solar-pro3"
-      },
-      "hankyung,sbs": {
-        "issue_id": "issue-67f41ed18156f17c",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "두 언론사 모두 보완수사권 폐지 논란과 관련하여 검찰개혁에 대한 정치적 팬덤 현상을 비판하며, 더불어민주당 의원들의 반대 입장을 다루고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서 반대 입장을 표명했다는 점을 공통적으로 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 내용을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "권영철 의원의 발언을 중심으로 보완수사권 폐지 논란의 핵심 쟁점을 다루며, 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중 문제를 지적",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 검찰개혁 팬덤 정치에 맞서는 정치적 대립 구도를 강조한 반면, SBS는 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 중심으로 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 입장을 강조하며 정치적 대립 구도를 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 폐지 여부에 따른 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 지적",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 검찰개혁 관련 정치적 팬덤 현상을 원인으로 강조한 반면, SBS는 지난 3월 공소청-중수청법 통과로 인한 검찰 해체와 박종철·김근태 고문사건을 배경으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 관련 정치적 팬덤 현상이 보완수사권 폐지 논란의 주요 원인으로 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "지난 3월 공소청-중수청법 통과로 검찰 해체와 박종철·김근태 고문사건을 배경으로 보완수사권 폐지 논란의 원인을 설명",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 팬덤 정치에 대한 비판과 정치적 대립 구도를 강조한 반면, SBS는 검찰 부활 가능성과 정권 내주기, 비상식적 권력 집중이 국민에게 미칠 영향을 지적했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "팬덤 정치에 대한 비판과 정치적 대립 구도가 더불어민주당 의원들에게 미치는 영향을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중이 국민에게 미칠 영향을 지적",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "한국경제는 '검찰개혁 팬덤 정치'에 맞선 여당 의원의 행동을 비판적으로 보도한 반면, SBS는 권영철 의원의 발언을 인용해 보완수사권 유지 시 검찰 부활과 경찰 권한 집중의 위험성을 비판적으로 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 팬덤 정치에 맞선 여당 의원의 행동을 비판적으로 보도하며 정치적 대립 구도를 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "권영철 의원의 발언을 인용해 보완수사권 유지 시 검찰 부활과 경찰 권한 집중의 위험성을 비판적으로 보도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서 반대 입장을 표명했다는 점",
-          "검찰개혁에 대한 정치적 팬덤 현상을 비판적으로 다루고 있다는 점"
-        ],
-        "key_differences": [
-          "한국경제는 팬덤 정치에 맞서는 정치적 대립 구도를 강조한 반면, SBS는 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 구체적으로 지적"
-        ],
-        "comparison_report": "한국경제와 SBS 모두 보완수사권 폐지 논란에서 더불어민주당 의원들의 반대 입장을 다루었으나, 한국경제는 검찰개혁 팬덤 정치에 맞서는 정치적 대립 구도를 강조한 반면, SBS는 권영철 의원의 발언을 중심으로 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 비판적으로 보도했다. 두 언론사 모두 팬덤 정치를 비판하지만, SBS는 검찰 부활과 경찰 권한 집중이 국민에게 미칠 영향에 더 초점을 맞췄고, 한국경제는 정치적 팬덤 현상에 대한 비판에 더 중점을 두었다.",
-        "source_links": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "'검찰개혁 팬덤 정치'에 맞선 與의원",
-            "link": "https://www.hankyung.com/article/2026072449571",
-            "published_at": "Fri, 24 Jul 2026 18:07:31 +0900"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 권영철 \"보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662252",
-            "published_at": "Fri, 17 Jul 2026 09:41:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-24T21:46:55.929456+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,hankyung,sbs": {
-        "issue_id": "issue-67f41ed18156f17c",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 내용이 공통적으로 확인된다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 점을 공통적으로 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 내용을 보도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "권영철 의원의 발언을 중심으로 보완수사권 폐지 논란의 핵심 쟁점을 다루며 팬덤 정치에 맞서는 입장을 보도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "김남희 의원이 보완수사권 폐지와 전건송치 부활을 골자로 한 형사소송법 개정안을 대표 발의했다는 내용을 보도",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 팬덤 정치에 맞서는 정치적 대립 구도를, SBS는 보완수사권 유지 시 검찰 부활 가능성과 경찰 권한 집중 문제를, 동아일보는 수사·기소 분리 원칙 유지와 부실수사·피해자 보호 공백 방지를 위한 제도적 대안을 핵심 관점으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 입장을 강조하며 정치적 대립 구도를 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 폐지 여부에 따른 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중의 위험성을 지적",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지로 인한 부실수사 우려와 피해자 보호 공백을 방지하기 위한 수사·기소 분리 원칙 기반의 형사소송법 개정 방안을 제시",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 검찰개혁 관련 정치적 팬덤 현상을, SBS는 지난 3월 공소청-중수청법 통과로 인한 검찰 해체와 박종철·김근태 고문사건을, 동아일보는 10월 공소청과 중대범죄수사청 출범 예정과 수사·기소 분리 원칙을 각각 강조된 배경으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 관련 정치적 팬덤 현상이 보완수사권 폐지 논란의 주요 원인으로 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "지난 3월 공소청-중수청법 통과로 검찰 해체와 박종철·김근태 고문사건을 배경으로 보완수사권 유지 시 검찰 부활 가능성을 지적",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "10월 공소청과 중대범죄수사청 출범 예정과 수사·기소 분리 원칙을 배경으로 보완수사권 폐지로 인한 부실수사 우려를 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 팬덤 정치에 대한 비판과 정치적 대립 구도를, SBS는 검찰 부활 가능성과 정권 내주기, 비상식적 권력 집중을, 동아일보는 부실수사 방지와 피해자 보호 강화를 각각 영향 및 대상으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "팬덤 정치에 대한 비판과 정치적 대립 구도가 주요 영향으로 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중으로 인한 정권 내주기 및 비상식적 권력 집중이 주요 영향",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지로 인한 부실수사 방지와 피해자 보호 강화가 주요 영향",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "한국경제는 '검찰개혁 팬덤 정치'에 맞선 여당 의원의 행동을 비판적으로 보도했고, SBS는 권영철 의원의 발언을 인용해 보완수사권 유지 시 검찰 부활과 경찰 권한 집중 문제를 비판적으로 지적했으며, 동아일보는 김남희 의원의 형사소송법 개정안 발의를 중립적으로 설명했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 팬덤 정치에 맞선 여당 의원의 행동을 비판적으로 보도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "권영철 의원의 발언을 인용해 보완수사권 유지 시 검찰 부활과 경찰 권한 집중 문제를 비판적으로 지적",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "김남희 의원의 형사소송법 개정안 발의를 중립적으로 설명",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 점",
-          "보완수사권 폐지 논란이 검찰개혁과 관련된 정치적 쟁점이라는 점"
-        ],
-        "key_differences": [
-          "한국경제는 팬덤 정치에 맞서는 정치적 대립 구도를, SBS는 검찰 부활 가능성과 경찰 권한 집중 문제를, 동아일보는 수사·기소 분리 원칙과 부실수사·피해자 보호 공백 방지를 위한 제도적 대안을 각각 핵심 관점으로 제시"
-        ],
-        "comparison_report": "세 언론사 모두 더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 공통점을 가지고 있으나, 한국경제는 팬덤 정치에 맞서는 정치적 대립 구도를, SBS는 보완수사권 유지 시 검찰 부활 가능성과 경찰에 대한 과도한 권한 집중 문제를, 동아일보는 수사·기소 분리 원칙 유지와 부실수사·피해자 보호 공백 방지를 위한 형사소송법 개정 방안을 각각 핵심 관점으로 제시했다. 보도 태도 측면에서는 한국경제가 비판적, SBS가 비판적, 동아일보는 중립적 설명을 보였으며, 강조된 배경으로는 한국경제가 정치적 팬덤 현상, SBS가 공소청-중수청법 통과와 고문사건, 동아일보는 공소청·중대범죄수사청 출범 예정과 수사·기소 분리 원칙을 각각 강조했다.",
-        "source_links": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "'검찰개혁 팬덤 정치'에 맞선 與의원",
-            "link": "https://www.hankyung.com/article/2026072449571",
-            "published_at": "Fri, 24 Jul 2026 18:07:31 +0900"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 권영철 \"보완수사권 남겨두면 검찰 부활한다? 국민들 속이는 것\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008662252",
-            "published_at": "Fri, 17 Jul 2026 09:41:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "김남희, 보완수사권 대신 ‘전건송치 부활’ 담은 형소법 발의",
-            "link": "https://www.donga.com/news/Politics/article/all/20260724/134356619/1",
-            "published_at": "Fri, 24 Jul 2026 09:35:05 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-24T21:47:02.039823+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,hankyung": {
-        "issue_id": "issue-67f41ed18156f17c",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 내용이 공통적으로 확인된다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 내용을 공통적으로 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 반대 입장을 표명했다는 사실을 전달",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "김남희 의원이 보완수사권 폐지 대신 전건송치 부활을 담은 형사소송법 개정안을 대표 발의했다는 사실을 전달",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 팬덤 정치에 맞서는 정치적 대립 구도를 강조한 반면, 동아일보는 수사·기소 분리 원칙과 제도적 대안을 중심으로 한 법안 발의에 초점을 맞추고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 보완수사권 폐지 논란에서 더불어민주당 의원들이 팬덤 정치에 맞서는 입장을 강조하며 정치적 대립 구도를 부각",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지로 인한 부실수사 우려와 피해자 보호 공백을 방지하기 위한 수사·기소 분리 원칙 유지 및 전건송치 부활을 담은 형사소송법 개정 방안을 제시",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 검찰개혁 관련 정치적 팬덤 현상을 배경으로 제시한 반면, 동아일보는 보완수사권 폐지로 인한 부실수사 우려와 10월 공소청·중대범죄수사청 출범 예정이라는 제도적 배경을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 보완수사권 폐지 논란에서 팬덤 정치 현상이 발생하고 있다는 점을 배경으로 제시",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지로 인한 부실수사 우려와 피해자 보호 공백, 그리고 10월 공소청과 중대범죄수사청 출범 예정이라는 제도적 배경을 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 팬덤 정치에 대한 비판과 정치적 대립 구도를 강조한 반면, 동아일보는 부실수사 방지와 피해자 보호 강화라는 구체적 영향을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "팬덤 정치에 대한 비판과 정치적 대립 구도가 형성되었다는 점을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지로 인한 부실수사 방지와 피해자 보호 강화라는 구체적 영향을 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "한국경제는 '검찰개혁 팬덤 정치'라는 표현을 통해 비판적 태도를 보인 반면, 동아일보는 '김남희 의원이 보완수사권을 폐지하는 대신 전건송치를 담은 형사소송법 개정안을 대표 발의했다'는 중립적 설명을 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "검찰개혁 팬덤 정치 현상에 대해 비판적 태도를 보이며, 이에 맞서는 여당 의원의 행동을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "김남희 의원의 형사소송법 개정안 대표 발의를 중립적으로 설명하며, 제도적 내용과 배경을 객관적으로 전달",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 공통점",
-          "보완수사권 폐지와 관련된 형사소송법 개정 논의가 진행되고 있다는 점"
-        ],
-        "key_differences": [
-          "한국경제는 팬덤 정치 비판에 초점을 맞춘 반면, 동아일보는 보완수사권 폐지의 구체적 대안인 전건송치 부활을 담은 법안 발의에 초점을 맞춤",
-          "한국경제는 정치적 대립 구도를 강조한 반면, 동아일보는 수사·기소 분리 원칙과 제도적 배경을 중립적으로 설명함"
-        ],
-        "comparison_report": "한국경제와 동아일보 모두 더불어민주당 의원들이 검찰개혁 보완수사권 폐지 논란에 대해 팬덤 정치를 비판하며 반대 입장을 표명했다는 공통점을 가지고 있으나, 한국경제는 '검찰개혁 팬덤 정치'라는 표현을 통해 정치적 대립 구도를 부각시키는 비판적 태도를 보인 반면, 동아일보는 김남희 의원이 보완수사권 폐지 대신 전건송치 부활을 담은 형사소송법 개정안을 대표 발의한 사실을 중립적으로 설명하며 수사·기소 분리 원칙과 제도적 배경을 강조하고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "'검찰개혁 팬덤 정치'에 맞선 與의원",
-            "link": "https://www.hankyung.com/article/2026072449571",
-            "published_at": "Fri, 24 Jul 2026 18:07:31 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "김남희, 보완수사권 대신 ‘전건송치 부활’ 담은 형소법 발의",
-            "link": "https://www.donga.com/news/Politics/article/all/20260724/134356619/1",
-            "published_at": "Fri, 24 Jul 2026 09:35:05 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-24T21:47:29.044507+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-0ee845fb89ec5173": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-0ee845fb89ec5173",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "b82754c7322d66aa83f5d091ce393b65604c7a8493baf1473c432892bb98902a",
-            "title": "민주, '1심 시장직 상실형' 오세훈에 \"죄 인정하고 정치적 책임져야\"",
-            "published_at": "Wed, 22 Jul 2026 17:58:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669909"
-          }
-        ],
-        "analysis": {
-          "article_summary": "더불어민주당은 오세훈 서울시장이 정치자금법 위반으로 1심에서 시장직 상실형을 선고받은 데 대해 죄를 인정하고 법적·정치적 책임을 다해야 한다고 요구했다.",
-          "headline_frame": "민주당의 요구와 오세훈 시장의 죄 인정 및 정치적 책임 촉구",
-          "main_focus": "오세훈 시장의 정치자금법 위반 혐의에 대한 민주당의 비판과 법적·정치적 책임 요구",
-          "keywords": [
-            "정치자금법 위반",
-            "시장직 상실형",
-            "정치 브로커",
-            "여론조사",
-            "비용 대납"
-          ],
-          "main_actors": [
-            "더불어민주당",
-            "강준현 수석대변인",
-            "오세훈 서울시장",
-            "정청래 전 대표",
-            "박주민 의원"
-          ],
-          "quoted_sources": [
-            "강준현 수석대변인",
-            "정청래 전 대표",
-            "박주민 의원"
-          ],
-          "causes": [
-            "정치 브로커에게 여론조사 결과 제공",
-            "후원자에게 비용 대납"
-          ],
-          "background": [
-            "6·3 지방선거",
-            "민주당의 서울시장 후보 경선"
-          ],
-          "emphasized_effects": [
-            "시장직 상실형 선고",
-            "2심에서의 더 무거운 판결 기대"
-          ],
-          "affected_groups": [
-            "민주당",
-            "오세훈 시장"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "'사필귀정'의 결과",
-              "뻔뻔한 태도를 일관해왔다",
-              "구차한 변명은 설 자리가 없다"
-            ]
-          },
-          "outlook": {
-            "direction": "혼합",
-            "summary": "민주당은 2심에서 더 무거운 판결을 기대하지만 시장직 상실형은 다행스럽다고 평가"
-          },
-          "less_covered_context": [
-            "오세훈 시장의 구체적인 범죄 금액",
-            "정치 브로커의 신원",
-            "후원자의 신원"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:47:34.664113+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-0ee845fb89ec5173",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "03627f58d7ab8d43c553f95fae9acdf927d9642c5d057402cce77e90ffb8c30b",
-            "title": "민주 “사필귀정” 국힘 “정치 판결”…오세훈 대법선고는 내년초",
-            "published_at": "Wed, 22 Jul 2026 17:17:00 +0900",
-            "link": "https://www.donga.com/news/Society/article/all/20260722/134344864/1"
-          }
-        ],
-        "analysis": {
-          "article_summary": "오세훈 서울시장이 1심에서 당선무효형인 벌금 1000만원을 선고받은 사건에 대해 더불어민주당은 '사필귀정'이라고 평가한 반면 국민의힘은 '정치 판결'이라고 반발하며, 무소속 한동훈 의원은 1심 유죄 판결에 의문을 제기했다.",
-          "headline_frame": "정치권 반응과 향후 전망",
-          "main_focus": "1심 판결에 대한 여야 및 무소속 의원의 상반된 반응과 향후 대법원 선고 시기",
-          "keywords": [
-            "사필귀정",
-            "정치 판결",
-            "당선무효형",
-            "벌금 1000만원",
-            "여론조사용역",
-            "정치자금법 위반"
-          ],
-          "main_actors": [
-            "더불어민주당",
-            "국민의힘",
-            "오세훈 서울시장",
-            "강준현 더불어민주당 수석대변인",
-            "박성훈 국민의힘 수석대변인",
-            "한동훈 무소속 의원"
-          ],
-          "quoted_sources": [
-            "강준현 더불어민주당 수석대변인",
-            "박성훈 국민의힘 수석대변인",
-            "한동훈 무소속 의원"
-          ],
-          "causes": [
-            "오세훈 시장이 정치브로커에 의뢰한 여론조사를 선거에 활용",
-            "여론조사용역 비용을 후원자에게 대납"
-          ],
-          "background": [
-            "정치자금법 위반",
-            "선거제도 훼손"
-          ],
-          "emphasized_effects": [
-            "당선무효형",
-            "정치권 갈등 심화"
-          ],
-          "affected_groups": [
-            "더불어민주당",
-            "국민의힘",
-            "서울시"
-          ],
-          "tone": {
-            "category": "갈등 강조",
-            "evidence": [
-              "민주 “사필귀정” 국힘 “정치 판결”…",
-              "더불어민주당 “명백한 범죄에 대한 사필귀정의 결과”라고 날을 세웠다",
-              "국민의힘 “사법 정의를 무너뜨린 정치 판결”이라고 반발했다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "오세훈 시장의 대법원 선고는 내년 초로 예상되며, 1심 판결에 대한 여야의 상반된 입장이 지속되고 있다."
-          },
-          "less_covered_context": [
-            "오세훈 시장의 구체적인 범죄 행위 입증 과정",
-            "여론조사용역 비용 대납의 구체적 금액 및 경위",
-            "서울시 내부 반응의 구체적 내용"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:47:49.789787+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-0ee845fb89ec5173",
-      "groups": [
-        {
-          "group_id": "group-1",
-          "label": "정치자금법 위반과 시장직 상실형 비판",
-          "summary": "오세훈 시장의 정치자금법 위반 혐의에 대한 민주당의 법적·정치적 책임 요구와 비판",
-          "keywords": [
-            "정치자금법 위반",
-            "시장직 상실형",
-            "정치 브로커",
-            "비용 대납"
-          ],
-          "publisher_ids": [
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "오세훈 시장의 정치자금법 위반 혐의에 대한 민주당의 비판과 법적·정치적 책임 요구",
-            "정치 브로커에게 여론조사 결과 제공 및 후원자에게 비용 대납을 원인으로 지목",
-            "시장직 상실형 선고와 2심에서의 더 무거운 판결 기대를 영향으로 강조",
-            "민주당의 '사필귀정' 결과 주장과 오세훈 시장의 뻔뻔한 태도 비판 등 부정적 보도 태도"
-          ]
-        },
-        {
-          "group_id": "group-2",
-          "label": "정치권 갈등과 향후 전망",
-          "summary": "1심 판결에 대한 여야 및 무소속 의원의 상반된 반응과 대법원 선고 시기 전망",
-          "keywords": [
-            "사필귀정",
-            "당선무효형",
-            "정치 판결",
-            "여론조사용역"
-          ],
-          "publisher_ids": [
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "1심 판결에 대한 여야 및 무소속 의원의 상반된 반응",
-            "더불어민주당은 '사필귀정' 결과 주장, 국민의힘은 '정치 판결' 반발",
-            "당선무효형 및 벌금 1000만원 선고와 정치권 갈등 심화를 영향으로 강조",
-            "대법원 선고 시기 내년 초 예상 등 중립적 전망 제시"
-          ]
-        }
-      ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-1",
-            "group-2"
-          ],
-          "contrast_statement": "SBS는 민주당의 관점에서 오세훈 시장의 정치자금법 위반과 시장직 상실형에 대한 법적·정치적 책임을 비판하는 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응을 통해 정치권 갈등을 강조하고 대법원 선고 시기 등 중립적 전망을 제시한다."
-        }
-      ],
-      "grouping_summary": "SBS는 민주당의 비판 관점에서 오세훈 시장의 정치자금법 위반과 시장직 상실형에 초점을 맞춘 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응을 통해 정치권 갈등과 향후 전망을 중심으로 보도하였다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:47:54.915483+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-0ee845fb89ec5173",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "오세훈 서울시장이 1심에서 정치자금법 위반으로 벌금 1000만원을 선고받고 시장직 상실형을 선고받은 사건에 대해 더불어민주당은 법적·정치적 책임을 요구했고, 국민의힘은 정치 판결이라고 반발했으며, 무소속 한동훈 의원은 유죄 판결에 의문을 제기했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 오세훈 시장의 1심 정치자금법 위반 유죄 판결과 시장직 상실형 선고를 보도하며, 더불어민주당의 비판과 국민의힘의 반발을 함께 다루었다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "오세훈 시장의 정치자금법 위반 유죄 판결과 시장직 상실형을 보도하며 민주당의 비판과 국민의힘의 반발을 함께 전달함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "오세훈 시장의 1심 유죄 판결과 시장직 상실형을 보도하며 여야 및 무소속 의원의 상반된 반응을 함께 전달함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 민주당의 비판과 법적·정치적 책임 요구에 초점을 맞춘 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응과 향후 대법원 선고 시기를 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "오세훈 시장의 정치자금법 위반 혐의에 대한 민주당의 비판과 법적·정치적 책임 요구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "1심 판결에 대한 여야 및 무소속 의원의 상반된 반응과 향후 대법원 선고 시기",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 정치 브로커에게 여론조사를 제공하고 후원자에게 비용을 대납한 것을 원인으로 제시했으나, SBS는 6·3 지방선거와 민주당 경선 배경을, 동아일보는 선거제도 훼손을 배경으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치 브로커에게 여론조사 결과 제공 및 후원자에게 비용 대납을 원인으로 제시",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "정치 브로커에 의뢰한 여론조사를 선거에 활용한 것과 선거제도 훼손을 배경으로 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 시장직 상실형과 2심에서의 더 무거운 판결 기대를, 동아일보는 당선무효형과 정치권 갈등 심화를 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "시장직 상실형 선고와 2심에서의 더 무거운 판결 기대",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "당선무효형과 정치권 갈등 심화",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '사필귀정', '뻔뻔한 태도', '구차한 변명' 등의 표현을 통해 비판적인 태도를 보인 반면, 동아일보는 '사필귀정'과 '정치 판결'이라는 대립적 표현을 강조하며 갈등 구조를 부각시켰다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "민주당의 비판과 오세훈 시장의 뻔뻔한 태도를 강조하는 비판적 보도 태도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "여야 및 무소속 의원의 상반된 반응을 강조하며 갈등 구조를 부각하는 보도 태도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "오세훈 시장의 1심 정치자금법 위반 유죄 판결과 시장직 상실형 선고",
-          "더불어민주당의 비판과 국민의힘의 반발",
-          "정치 브로커에게 여론조사를 제공하고 후원자에게 비용을 대납한 것이 원인"
-        ],
-        "key_differences": [
-          "SBS는 민주당의 비판과 법적·정치적 책임 요구에 초점을 맞춘 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응과 향후 대법원 선고 시기를 강조함",
-          "SBS는 '뻔뻔한 태도'와 '구차한 변명' 등 개인적 비판을 강조한 반면, 동아일보는 '사필귀정'과 '정치 판결' 등 대립적 표현을 통해 갈등 구조를 부각함"
-        ],
-        "comparison_report": "SBS와 동아일보 모두 오세훈 시장의 1심 정치자금법 위반 유죄 판결과 시장직 상실형을 보도하며 민주당의 비판과 국민의힘의 반발을 다루었으나, SBS는 민주당의 법적·정치적 책임 요구와 오세훈 시장의 개인적 태도를 강조한 반면, 동아일보는 여야 및 무소속 의원의 상반된 반응과 향후 대법원 선고 시기를 강조하며 갈등 구조를 부각시켰다. 두 언론사 모두 정치 브로커에게 여론조사를 제공하고 후원자에게 비용을 대납한 것을 원인으로 제시했으나, SBS는 6·3 지방선거와 민주당 경선 배경을, 동아일보는 선거제도 훼손을 배경으로 강조했다. SBS는 '사필귀정', '뻔뻔한 태도', '구차한 변명' 등의 표현을 통해 비판적인 태도를 보인 반면, 동아일보는 '사필귀정'과 '정치 판결'이라는 대립적 표현을 강조하며 갈등 구조를 부각시켰다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "민주, '1심 시장직 상실형' 오세훈에 \"죄 인정하고 정치적 책임져야\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008669909",
-            "published_at": "Wed, 22 Jul 2026 17:58:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "민주 “사필귀정” 국힘 “정치 판결”…오세훈 대법선고는 내년초",
-            "link": "https://www.donga.com/news/Society/article/all/20260722/134344864/1",
-            "published_at": "Wed, 22 Jul 2026 17:17:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-24T21:48:35.148427+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-46354b5c46cae499": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-46354b5c46cae499",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "a293802680ffc5a19cbd072959cd747b30b86f0a23544d0bf55b06de9ab82720",
-            "title": "친청계, 당원에 최고위원 투표 배분 논란…정청래 “늘 있었던 일”",
-            "published_at": "Mon, 20 Jul 2026 21:59:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260720/134330821/1"
-          }
-        ],
-        "analysis": {
-          "article_summary": "더불어민주당 최고위원 예비경선을 앞두고 친명계와 친청계가 '생일별 투표 가이드라인'과 '청년홀대론'을 두고 공개 충돌했으며, 친청계는 당원 1명이 후보 2명에게 표를 행사하는 제도에서 특정 후보 3명에게 표를 배분해 당선 확률을 높이려는 전략을 펼치고 있다.",
-          "headline_frame": "친청계의 '생일별 투표 전략'과 친명계의 '파당 정치' 비판을 중심으로 한 당내 갈등",
-          "main_focus": "최고위원 선거에서 친청계가 당원들의 출생월에 따라 표를 배분하는 전략과 이에 대한 친명계의 비판",
-          "keywords": [
-            "생일별 투표 전략",
-            "최고위원 선거",
-            "파당 정치",
-            "청년홀대론",
-            "지지층 투표 가이드라인"
-          ],
-          "main_actors": [
-            "정청래",
-            "황명선",
-            "최민희",
-            "이성윤",
-            "한민수"
-          ],
-          "quoted_sources": [
-            "황명선 최고위원"
-          ],
-          "causes": [
-            "최고위원 선거에서 당원 1명이 후보 2명에게 표를 행사하는 제도"
-          ],
-          "background": [
-            "더불어민주당 8·17 전당대회 당 대표·최고위원 예비경선"
-          ],
-          "emphasized_effects": [
-            "당 분열 우려",
-            "특정 후보 당선 확률 상승"
-          ],
-          "affected_groups": [
-            "더불어민주당 당원",
-            "최고위원 후보"
-          ],
-          "tone": {
-            "category": "갈등 강조",
-            "evidence": [
-              "친명(친이재명)계와 친청(친정청래)계가 ‘지지층 투표 가이드라인’과 ‘청년홀대론’을 두고 공개 충돌했다",
-              "당을 분열시키는 행위라고 비판한 것"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "전당대회 예비경선 결과에 따라 당내 갈등이 심화될 수 있으나, 구체적인 향후 전망은 제시되지 않음"
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "다른 계파들의 입장",
-            "투표 배분 전략의 장기적 영향"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:48:40.593819+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-46354b5c46cae499",
+        "issue_id": "issue-c6cd9bb1d64b28fa",
         "publisher_id": "sbs",
         "publisher": "SBS",
         "articles": [
@@ -1382,21 +14,20 @@
           }
         ],
         "analysis": {
-          "article_summary": "임미애 의원은 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 맞지 않는 행태라고 지적했다.",
-          "headline_frame": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 대한 문제 제기",
-          "main_focus": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 대한 문제 제기",
+          "article_summary": "임미애 의원은 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 맞지 않는 행태와 당내 갈등 조장을 지적했다.",
+          "headline_frame": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 대한 우려를 제기",
+          "main_focus": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며, 집권여당 리더십에 대한 우려를 제기",
           "keywords": [
             "공포 마케팅",
             "최고위원 선거",
             "집권여당 리더십",
-            "유시민 발언",
-            "정청래"
+            "당내 갈등",
+            "유시민 발언"
           ],
           "main_actors": [
-            "임미애",
             "정청래",
             "유시민",
-            "더불어민주당"
+            "임미애"
           ],
           "quoted_sources": [
             "임미애"
@@ -1407,56 +38,778 @@
           ],
           "background": [
             "민주당 전국정당화",
-            "TK 당세 작은 곳",
-            "당원 2%밖에...가중치보다 성장 기회 보장"
+            "TK 당세",
+            "당원 2% 가중치"
           ],
           "emphasized_effects": [
-            "정청래가 지난 1년간 당내 갈등을 스스로 만들어왔다",
-            "정청래의 과도한 공포 마케팅"
+            "당내 갈등 조장",
+            "지지층 결집"
           ],
           "affected_groups": [
-            "더불어민주당",
-            "정청래 최고위원 선거 출마자",
-            "민주당 당원"
+            "더불어민주당"
           ],
           "tone": {
             "category": "비판",
             "evidence": [
               "정청래 공포 마케팅 그만해야",
               "정청래, 집권여당 리더십에 맞지 않아",
-              "정청래, 과도한 공포 마케팅...그렇게 자신 없나",
-              "유시민, 李 저격? 투표 시기 맞춘 지지층 결집용",
-              "李 근저당 설정? 매수인 봐준 것, 비판 한심해"
+              "정청래, 과도한 공포 마케팅"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "기사에서는 향후 전망에 대한 구체적인 언급이 없으며, 현재 상황에 대한 비판만 제시됨"
+            "summary": "기사에서는 향후 전망에 대한 구체적인 언급이 없어 중립으로 판단"
           },
           "less_covered_context": [
-            "정청래 최고위원의 구체적인 정책 제안이나 공약",
+            "정청래 최고위원의 구체적인 정책 제안",
             "민주당 최고위원 선거의 전체 후보군 및 경쟁 구도",
-            "정청래와 유시민 발언의 정확한 맥락과 배경"
+            "TK 지역 외 다른 지역의 당세 현황"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:48:40.799915+00:00",
+        "analyzed_at": "2026-08-16T18:28:25.785525+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-c6cd9bb1d64b28fa",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "053e3bb446ba563be553de8e80eccf254d3b223a75cdeefc393e7498245292fb",
+            "title": "與 최고위, 친청계 ‘생일별 최고위원 투표’ 놓고 공개 충돌",
+            "published_at": "Tue, 21 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260721/134332710/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "더불어민주당 최고위원 예비경선을 앞두고 친명계와 친청계가 '지지층 투표 가이드라인'과 '청년홀대론'을 두고 공개 충돌했다. 친청계는 당원 출생월에 따라 친청계 후보 3명 중 2명을 배분해 투표를 독려하고 있으며, 친명계는 이를 파당 정치 행위로 비판했다.",
+          "headline_frame": "친청계의 '생일별 최고위원 투표' 전략을 중심으로 한 당내 공개 충돌",
+          "main_focus": "친청계가 당원 출생월에 따라 친청계 최고위원 후보 3명 중 2명을 배분해 투표를 독려하는 전략과 이에 대한 친명계의 비판",
+          "keywords": [
+            "생일별 투표 전략",
+            "최고위원 예비경선",
+            "파당 정치",
+            "청년홀대론",
+            "지지층 투표 가이드라인"
+          ],
+          "main_actors": [
+            "황명선 최고위원",
+            "정청래 전 대표",
+            "최민희 의원",
+            "이성윤 의원",
+            "한민수 의원",
+            "더불어민주당"
+          ],
+          "quoted_sources": [
+            "황명선 최고위원"
+          ],
+          "causes": [
+            "친청계 최고위원 후보 3명(최민희 이성윤 한민수 의원) 중 2명을 배분해 투표를 독려하는 전략"
+          ],
+          "background": [
+            "더불어민주당 8·17 전당대회 당 대표·최고위원 예비경선",
+            "권리당원 1명이 후보 2명에게 표를 행사하는 최고위원 선거 제도"
+          ],
+          "emphasized_effects": [
+            "당을 분열시키는 행위",
+            "노골적인 파당 정치 행위"
+          ],
+          "affected_groups": [
+            "더불어민주당 당원",
+            "친청계 최고위원 후보 3명"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "노골적인 파당 정치 행위를 멈춰야 한다",
+              "특정인에게 맹목적으로 충성하는 파당 정치라는 비판을 피할 수"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "전당대회 당 대표·최고위원 예비경선 결과에 따라 당내 갈등이 지속될 수 있으나, 구체적인 향후 전망은 제시되지 않음"
+          },
+          "less_covered_context": [
+            "청년홀대론의 구체적 내용",
+            "친청계 전략의 장기적 효과",
+            "전당대회 이후 당내 화합 방안"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:28:26.283167+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-46354b5c46cae499",
+      "issue_id": "issue-c6cd9bb1d64b28fa",
+      "groups": [
+        {
+          "group_id": "group-001",
+          "label": "공포 마케팅과 리더십 비판",
+          "summary": "SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 대한 우려를 제기하고, 동아일보는 친청계의 생일별 투표 전략을 파당 정치로 비판하며 당내 갈등을 조장하는 행위를 지적하고 있다. 두 언론사 모두 더불어민주당의 리더십 문제와 당내 갈등을 핵심 쟁점으로 삼고 있으며, 비판적인 태도를 보이고 있다.",
+          "keywords": [
+            "공포 마케팅",
+            "리더십 비판",
+            "파당 정치",
+            "당내 갈등"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 대한 우려를 제기하고 있다.",
+            "동아일보는 친청계의 생일별 투표 전략을 파당 정치로 비판하며 당내 갈등을 조장하는 행위를 지적하고 있다.",
+            "두 언론사 모두 더불어민주당의 리더십 문제와 당내 갈등을 핵심 쟁점으로 삼고 있으며, 비판적인 태도를 보이고 있다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "SBS와 동아일보 모두 더불어민주당의 리더십 문제와 당내 갈등을 핵심 쟁점으로 삼고 있으며, 비판적인 태도를 보이고 있다. SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 대한 우려를 제기하고, 동아일보는 친청계의 생일별 투표 전략을 파당 정치로 비판하며 당내 갈등을 조장하는 행위를 지적하고 있다. 두 언론사 모두 더불어민주당의 리더십 문제와 당내 갈등을 핵심 쟁점으로 삼고 있으며, 비판적인 태도를 보이고 있다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-16T18:28:29.257563+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-c6cd9bb1d64b28fa",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "더불어민주당 최고위원 예비경선을 앞두고 친청계와 친명계 간 당내 갈등이 공개 충돌로 표출되었으며, 양측 모두 상대 진영의 전략을 비판하며 파당 정치 행위를 지적했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "SBS와 동아일보 모두 더불어민주당 최고위원 예비경선 과정에서 친청계와 친명계 간 공개 충돌을 보도하며, 양측이 상대 진영의 전략을 파당 정치 행위로 비판했다는 공통점을 확인할 수 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 대한 우려를 제기",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "친청계의 '생일별 최고위원 투표' 전략을 중심으로 한 당내 공개 충돌을 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 집권여당 리더십에 부합하지 않는 행태로 비판한 반면, 동아일보는 친청계의 '생일별 투표' 전략을 파당 정치 행위로 규정하며 당내 갈등 조장을 핵심 관점으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래 최고위원의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십에 대한 우려를 제기",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "친청계의 '생일별 최고위원 투표' 전략을 파당 정치 행위로 규정하고 친명계의 비판을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 정청래의 공포 마케팅과 유시민의 발언을 강조된 원인으로 제시한 반면, 동아일보는 친청계 최고위원 후보 3명 중 2명을 배분하는 '생일별 투표' 전략을 강조된 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래의 공포 마케팅과 유시민의 발언을 집권여당 리더십에 맞지 않는 행태의 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "친청계 최고위원 후보 3명 중 2명을 배분하는 '생일별 투표' 전략을 파당 정치 행위의 원인으로 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 정청래의 공포 마케팅이 지지층 결집을 유도한다고 본 반면, 동아일보는 친청계의 생일별 투표 전략이 당을 분열시키고 친청계 후보 3명에게 영향을 미친다고 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래의 공포 마케팅이 집권여당 리더십에 맞지 않으며 지지층 결집을 유도한다고 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "친청계의 생일별 투표 전략이 당을 분열시키는 파당 정치 행위이며 친청계 후보 3명에게 영향을 미친다고 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "SBS는 '정청래 공포 마케팅 그만해야', '정청래, 집권여당 리더십에 맞지 않아' 등의 표현을 통해 비판적인 태도를 보인 반면, 동아일보는 '노골적인 파당 정치 행위를 멈춰야 한다', '특정인에게 맹목적으로 충성하는 파당 정치라는 비판을 피할 수' 등의 표현을 통해 비판적인 태도를 보였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정청래와 유시민의 발언을 비판하며 집권여당 리더십에 대한 우려를 제기하는 비판적 태도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "친청계의 생일별 투표 전략을 파당 정치 행위로 규정하며 비판적인 태도",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "더불어민주당 최고위원 예비경선 과정에서 친청계와 친명계 간 공개 충돌 발생",
+          "양측 모두 상대 진영의 전략을 파당 정치 행위로 비판",
+          "집권여당 리더십에 대한 우려 제기"
+        ],
+        "key_differences": [
+          "SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 주요 쟁점으로 다룬 반면, 동아일보는 친청계의 '생일별 투표' 전략을 중심으로 보도"
+        ],
+        "comparison_report": "SBS와 동아일보 모두 더불어민주당 최고위원 예비경선 과정에서 친청계와 친명계 간 공개 충돌을 보도하며 파당 정치 행위를 비판했지만, SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 집권여당 리더십에 부합하지 않는 행태로 비판한 반면, 동아일보는 친청계의 '생일별 최고위원 투표' 전략을 파당 정치 행위로 규정하며 당내 갈등 조장을 강조했다. 두 언론사 모두 비판적인 보도 태도를 보였으나, SBS는 정청래와 유시민의 발언을 직접 인용하며 비판했고, 동아일보는 친청계 후보 3명의 생일별 투표 전략을 구체적으로 설명하며 비판했다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치쇼] 임미애 \"정청래 공포 마케팅 그만해야…유시민 발언도 지지층 결집용\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008668562",
+            "published_at": "Wed, 22 Jul 2026 10:35:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "與 최고위, 친청계 ‘생일별 최고위원 투표’ 놓고 공개 충돌",
+            "link": "https://www.donga.com/news/Politics/article/all/20260721/134332710/2",
+            "published_at": "Tue, 21 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-16T18:28:39.000040+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-cfab437fd72e324a": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-cfab437fd72e324a",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "cb42977546ab55fe185c371be518fdb06762a58a0173994cd5c3b3e6f5ccb2fe",
+            "title": "[정치쇼] 김용 \"친청 생일 투표 지침에 충격…초등학교 반장선거도 이렇게 안 한다, 반민주적\"",
+            "published_at": "Fri, 24 Jul 2026 11:21:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672761"
+          }
+        ],
+        "analysis": {
+          "article_summary": "김용 민주당 최고위원 후보가 친청(親靑) 생일 투표 지침에 대해 반민주적이라며 비판하고, 신천지 전당대회 개입설에 대한 개연성을 언급했으나 정쟁 수단으로 사용해서는 안 된다고 강조했다.",
+          "headline_frame": "친청 생일 투표 지침의 반민주적 성격과 김용 후보의 비판",
+          "main_focus": "김용 후보의 친청 생일 투표 지침에 대한 비판과 신천지 전당대회 개입설에 대한 언급",
+          "keywords": [
+            "친청 생일 투표 지침",
+            "반민주적",
+            "본경선",
+            "신천지 개입설",
+            "전당대회"
+          ],
+          "main_actors": [
+            "김용",
+            "민주당",
+            "친청"
+          ],
+          "quoted_sources": [
+            "김용 민주당 최고위원 후보"
+          ],
+          "causes": [
+            "친청 생일 투표 지침"
+          ],
+          "background": [
+            "민주당 예비경선 결과 발표",
+            "전당대회 정쟁 수단화 우려"
+          ],
+          "emphasized_effects": [
+            "반민주적 행태",
+            "인위적 연대 유치"
+          ],
+          "affected_groups": [
+            "민주당 최고위원 후보",
+            "민주당 당원"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "친청 '투표 지침' 통한 듯, 1인 1표제 정신 안 맞아",
+              "반민주적 행태, 본경선은 정정당당하게 치르자"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "신천지 개입설이 정쟁 수단으로 쓰이면 안 된다는 입장이 제시되었으나, 향후 전당대회 방향에 대한 구체적 전망은 제시되지 않았다."
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "초등학교 반장선거와의 비교에 대한 구체적 근거"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:28:42.706062+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-cfab437fd72e324a",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "e9b726ac0ee13a2b16e8ace507e519019650917672ac05c56f674e4e4eda94bd",
+            "title": "김민석, ‘신천지 전대 개입설’ 제기… 정청래 “황당한 네거티브”",
+            "published_at": "Wed, 22 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134340592/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "더불어민주당 당권 주자들이 신천지의 전당대회 개입설을 두고 논쟁을 벌였으며, 김민석 전 총리는 개입설을 제기한 반면 정청래 전 대표는 이를 황당한 네거티브로 반박했다.",
+          "headline_frame": "신천지 전당대회 개입설을 둘러싼 당권 주자들의 난타전",
+          "main_focus": "신천지 개입설을 제기한 김민석 전 총리와 이를 반박한 정청래 전 대표의 대립 구도",
+          "keywords": [
+            "신천지 개입설",
+            "전당대회 예비경선",
+            "네거티브",
+            "정교 유착"
+          ],
+          "main_actors": [
+            "김민석 전 국무총리",
+            "정청래 전 대표",
+            "더불어민주당"
+          ],
+          "quoted_sources": [
+            "정청래"
+          ],
+          "causes": [
+            "신천지 특검 미진행"
+          ],
+          "background": [
+            "민주당 내 계파 간 내전 양상",
+            "정청래 지도부 체제 시절 통일교·신천지 정교 유착 비리 의혹"
+          ],
+          "emphasized_effects": [
+            "민주당 전당대회의 조기 과열",
+            "당권 주자들 간 난타전"
+          ],
+          "affected_groups": [
+            "더불어민주당 당권 주자들"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "신천지 개입설을 두고 난타전을 벌였다",
+              "정청래 전 대표는 '황당한 네거티브'라고 맞섰다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "민주당 전당대회가 계파 간 내전으로 비화되고 있다는 지적이 제기되었다."
+          },
+          "less_covered_context": [
+            "신천지 개입설의 구체적 증거",
+            "정청래 차량 습격 사건의 상세 내용"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:28:42.894952+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-cfab437fd72e324a",
       "groups": [
         {
           "group_id": "group-01",
-          "label": "당내 갈등 및 투표 전략 비판",
-          "summary": "두 언론사 모두 더불어민주당 최고위원 선거 과정에서 발생하는 당내 갈등과 특정 투표 전략에 대한 비판을 중심으로 보도하고 있습니다. 동아일보가 친청계의 '생일별 투표 전략'과 친명계의 '파당 정치' 비판을 다룬 반면, SBS는 정청래 최고위원의 '공포 마케팅'과 유시민의 발언을 비판하며 집권여당 리더십 문제를 제기하고 있습니다. 두 기사 모두 당내 분열을 우려하며 특정 후보의 당선 확률을 높이는 전략에 대한 부정적 시각을 공유하고 있습니다.",
+          "label": "친청 생일 투표 지침 비판과 신천지 개입설",
+          "summary": "SBS는 김용 후보의 친청 생일 투표 지침에 대한 반민주적 비판과 신천지 전당대회 개입설을 중심으로 보도했으며, 동아일보는 신천지 개입설을 둘러싼 당권 주자들의 대립 구도를 다루었으나, 두 언론사 모두 신천지 개입설과 관련된 반민주적 행태 및 당내 정쟁에 초점을 맞추고 있다.",
           "keywords": [
-            "최고위원 선거",
-            "당내 갈등",
-            "투표 전략",
-            "리더십 비판"
+            "친청 생일 투표 지침",
+            "반민주적",
+            "신천지 개입설",
+            "전당대회"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS는 김용 후보의 친청 생일 투표 지침이 1인 1표제 정신에 어긋나는 반민주적 행태로 본경선을 정정당당하게 치러야 한다는 비판을 제기했으며, 신천지 전당대회 개입설을 함께 언급했다.",
+            "동아일보는 신천지 개입설을 제기한 김민석 전 총리와 이를 반박한 정청래 전 대표의 대립 구도를 보도하며, 신천지 특검 미진행과 정교 유착 의혹을 배경으로 민주당 전당대회의 조기 과열과 당권 주자들 간 난타전을 강조했다."
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 신천지 개입설과 관련된 반민주적 행태 및 당내 정쟁에 초점을 맞추고 있으며, SBS는 김용 후보의 친청 생일 투표 지침에 대한 비판을, 동아일보는 당권 주자들의 대립 구도를 다루었으나, 핵심 쟁점과 해석 방향이 대체로 일치하여 같은 그룹으로 묶었다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-16T18:28:46.204997+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-cfab437fd72e324a",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "SBS와 동아일보 모두 더불어민주당 전당대회와 관련된 논란(신천지 개입설 및 친청 생일 투표 지침)을 다루고 있으나, SBS는 김용 후보의 친청 지침 비판을, 동아일보는 김민석-정청래 간 신천지 개입설 논쟁을 중심으로 보도하였다.",
+        "overall_difference": "차이 큼",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 더불어민주당 전당대회와 관련된 논란(신천지 개입설 및 친청 생일 투표 지침)을 다루고 있으나, SBS는 김용 후보의 친청 지침 비판을, 동아일보는 김민석-정청래 간 신천지 개입설 논쟁을 중심으로 보도하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "친청 생일 투표 지침에 대한 김용 후보의 비판과 신천지 전당대회 개입설의 개연성을 언급",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "신천지 전당대회 개입설을 제기한 김민석 전 총리와 이를 반박한 정청래 전 대표의 대립 구도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 친청 생일 투표 지침의 반민주적 성격을 비판하는 김용 후보의 입장을 강조한 반면, 동아일보는 신천지 개입설을 둘러싼 당권 주자들의 난타전을 중립적으로 설명하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "친청 생일 투표 지침이 1인 1표제 정신에 어긋나는 반민주적 행태라고 비판",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "신천지 전당대회 개입설을 제기한 김민석 전 총리와 황당한 네거티브라고 반박한 정청래 전 대표의 대립 구도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 친청 생일 투표 지침을 강조된 원인으로 제시한 반면, 동아일보는 신천지 특검 미진행과 정교 유착 의혹을 강조된 배경으로 제시하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "친청 생일 투표 지침이 반민주적 행태를 유발한 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "신천지 특검 미진행과 정청래 지도부 시절 통일교·신천지 정교 유착 비리 의혹을 배경으로 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 반민주적 행태와 인위적 연대 유치가 민주당 최고위원 후보 및 당원에게 미치는 영향을 강조한 반면, 동아일보는 민주당 전당대회의 조기 과열과 당권 주자들 간 난타전이 미치는 영향을 강조하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "친청 생일 투표 지침으로 인한 반민주적 행태와 인위적 연대 유치가 민주당 최고위원 후보 및 당원에게 미치는 영향",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "신천지 개입설을 둘러싼 논쟁으로 인한 민주당 전당대회의 조기 과열과 당권 주자들 간 난타전",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "차이 큼",
+            "contrast_statement": "SBS는 친청 생일 투표 지침을 반민주적이라고 비판하며 강한 비판적 태도를 보인 반면, 동아일보는 신천지 개입설을 둘러싼 당권 주자들의 난타전을 중립적으로 설명하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "친청 생일 투표 지침을 반민주적이라고 비판하며 강한 비판적 태도를 보임",
+                "evidence": [
+                  "친청 '투표 지침' 통한 듯, 1인 1표제 정신 안 맞아",
+                  "반민주적 행태, 본경선은 정정당당하게 치르자"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "신천지 개입설을 둘러싼 당권 주자들의 난타전을 중립적으로 설명",
+                "evidence": [
+                  "신천지 개입설을 두고 난타전을 벌였다",
+                  "정청래 전 대표는 '황당한 네거티브'라고 맞섰다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "더불어민주당 전당대회와 관련된 논란(신천지 개입설 및 친청 생일 투표 지침)을 다루고 있음"
+        ],
+        "key_differences": [
+          "SBS는 김용 후보의 친청 생일 투표 지침 비판을 중심으로 반민주적 성격을 강조한 반면, 동아일보는 김민석 전 총리와 정청래 전 대표 간 신천지 개입설 논쟁을 중심으로 보도함"
+        ],
+        "comparison_report": "SBS는 김용 민주당 최고위원 후보가 친청 생일 투표 지침을 반민주적이라고 비판하며 1인 1표제 정신을 강조하는 비판적 보도를 한 반면, 동아일보는 김민석 전 총리가 신천지 전당대회 개입설을 제기하고 정청래 전 대표가 이를 황당한 네거티브라고 반박하는 당권 주자들의 난타전을 중립적으로 설명하였다. SBS는 친청 지침이 반민주적 행태와 인위적 연대 유치를 유발한다고 보았고, 동아일보는 신천지 특검 미진행과 정교 유착 의혹을 배경으로 민주당 전당대회의 조기 과열과 당권 주자들 간 갈등을 강조하였다. 두 언론사 모두 더불어민주당 전당대회 관련 논란을 다루었으나, SBS는 특정 후보의 비판을, 동아일보는 계파 간 대립 구도를 중심으로 보도하여 보도 태도와 강조점에서 큰 차이를 보인다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치쇼] 김용 \"친청 생일 투표 지침에 충격…초등학교 반장선거도 이렇게 안 한다, 반민주적\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672761",
+            "published_at": "Fri, 24 Jul 2026 11:21:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "김민석, ‘신천지 전대 개입설’ 제기… 정청래 “황당한 네거티브”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260722/134340592/2",
+            "published_at": "Wed, 22 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-16T18:28:55.918476+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-74828de7e6bfdacd": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-74828de7e6bfdacd",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "ea169276c5e2023b542003a548f674f3a63790cf9cbda97004a11b5ef5d7b135",
+            "title": "‘포스트 장동혁’ 안 보여…張 ‘올공 정치’ 바라만 보는 국힘",
+            "published_at": "Sun, 19 Jul 2026 08:21:42 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260719/134320632/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "장동혁 국민의힘 대표가 당내 비판에도 불구하고 올림픽공원 집회 등 장외 정치 활동에 집중하며 리더십 상실과 '포스트 장동혁' 부재에 따른 교착 상태가 지속되고 있다.",
+          "headline_frame": "장동혁 대표의 리더십 상실과 '포스트 장동혁' 부재, 장외 정치 집중",
+          "main_focus": "국민의힘의 리더십 공백과 교착 상태, 장동혁 대표의 장외 정치 활동",
+          "keywords": [
+            "리더십 상실",
+            "포스트 장동혁 부재",
+            "장외 정치",
+            "교착 상태",
+            "올공 정치"
+          ],
+          "main_actors": [
+            "장동혁",
+            "국민의힘"
+          ],
+          "quoted_sources": [
+            "펜앤마이크"
+          ],
+          "causes": [
+            "당내 싸늘한 시선",
+            "리더십 상실"
+          ],
+          "background": [
+            "제헌절 행사 불참",
+            "올림픽공원 집회 참석"
+          ],
+          "emphasized_effects": [
+            "출구 없는 교착 상태",
+            "리더십 공백"
+          ],
+          "affected_groups": [
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "리더십이 상실됐다는 평가",
+              "출구 없는 교착 상태"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "리더십 공백과 장외 정치 지속으로 당 내 갈등이 심화될 가능성과 동시에 '포스트 장동혁' 부재에 따른 장기적 교착 상태가 우려된다."
+          },
+          "less_covered_context": [
+            "구체적인 당내 갈등 양상",
+            "장외 정치 활동의 구체적 정책 제안 내용"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:29:00.177298+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-74828de7e6bfdacd",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "680b9117e8d29a4bff38adf204dc2adfa2b603d9844e4d32bb783b3ae563072f",
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586"
+          }
+        ],
+        "analysis": {
+          "article_summary": "조갑제 대표가 2028년 국민의힘 공천 배제 명단 작성 계획을 밝히며 장동혁 대표를 1순위로 지목하고, 장동혁 대표의 제헌절 기념식 불참과 이승만 61주기 불참, 부정선거 관련 발언 등을 비판적으로 언급했다.",
+          "headline_frame": "조갑제 대표의 '2028년 공천 배제 명단' 작성 계획과 장동혁 대표를 1순위로 지목한 내용을 중심으로, 장동혁 대표의 과거 행사 불참 및 부정선거 관련 발언을 부각시켰다.",
+          "main_focus": "조갑제 대표가 보수 진영 내에서 장동혁 대표의 거취 문제를 제기하고, 2028년 공천 배제 명단 작성 계획을 통해 당내 갈등 가능성을 시사한 점에 초점을 맞췄다.",
+          "keywords": [
+            "2028 공천 배제 명단",
+            "장동혁",
+            "제헌절 기념식 불참",
+            "이승만 61주기 불참",
+            "부정선거",
+            "올공 정치"
+          ],
+          "main_actors": [
+            "조갑제",
+            "장동혁",
+            "정점식",
+            "김태현"
+          ],
+          "quoted_sources": [
+            "조갑제"
+          ],
+          "causes": [
+            "장동혁 대표의 제헌절 기념식 불참",
+            "이승만 61주기 불참",
+            "부정선거 관련 발언"
+          ],
+          "background": [
+            "보수 진영 내 공천 갈등",
+            "2028년 총선 대비 공천 준비",
+            "보수 진영의 부정선거론"
+          ],
+          "emphasized_effects": [
+            "2028년 공천 배제 명단 작성 가능성",
+            "보수 진영 내 갈등 심화",
+            "장동혁 대표의 정치적 입지 약화"
+          ],
+          "affected_groups": [
+            "국민의힘",
+            "보수 진영 유권자",
+            "장동혁 지지자"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\""
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "조갑제 대표의 명단 작성 계획으로 당내 갈등이 심화될 가능성과 동시에, 장동혁 대표의 정치적 입지가 약화될 수 있는 전망이 제시되었다."
+          },
+          "less_covered_context": [
+            "2028년 공천 배제 명단의 구체적 기준",
+            "장동혁 대표의 구체적 대응 방안",
+            "국민의힘 지도부의 공식 입장"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:29:01.005900+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-74828de7e6bfdacd",
+      "groups": [
+        {
+          "group_id": "leadership-gap",
+          "label": "리더십 공백과 장외 정치",
+          "summary": "국민의힘의 리더십 상실과 교착 상태를 중심으로, 장동혁 대표의 장외 정치 활동과 '포스트 장동혁' 부재 문제를 공통으로 지적하며 우려를 표명",
+          "keywords": [
+            "리더십 상실",
+            "교착 상태",
+            "장외 정치",
+            "포스트 장동혁 부재"
           ],
           "publisher_ids": [
             "donga",
@@ -1474,22 +827,23 @@
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "동아일보는 친청계의 '생일별 투표 전략'과 친명계의 '파당 정치' 비판을 중심으로 최고위원 선거에서의 당내 갈등을 보도하고 있으며, 당원 1명이 후보 2명에게 표를 행사하는 제도가 특정 후보 당선 확률을 높이는 원인으로 지목하고 있습니다.",
-            "SBS는 정청래 최고위원의 '공포 마케팅'과 유시민의 발언을 비판하며 집권여당 리더십에 대한 문제를 제기하고 있습니다. 정청래의 과도한 공포 마케팅이 지난 1년간 당내 갈등을 유발했다고 평가하고 있습니다."
+            "두 언론사 모두 국민의힘의 리더십 공백과 교착 상태를 핵심 쟁점으로 다루고 있으며, 장동혁 대표의 장외 정치 활동을 리더십 상실의 주요 원인으로 지목",
+            "동아일보는 '리더십 상실'과 '포스트 장동혁 부재'를, SBS는 '2028년 공천 배제 명단'과 '제헌절 기념식 불참'을 통해 리더십 공백 문제를 설명",
+            "두 언론사 모두 리더십 상실로 인한 출구 없는 교착 상태와 당내 갈등 심화를 우려하며, 장동혁 대표의 정치적 입지 약화를 전망"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 더불어민주당 최고위원 선거 과정에서 발생하는 당내 갈등과 특정 투표 전략에 대한 비판을 중심으로 보도하고 있습니다. 동아일보가 친청계의 '생일별 투표 전략'과 친명계의 '파당 정치' 비판을 다룬 반면, SBS는 정청래 최고위원의 '공포 마케팅'과 유시민의 발언을 비판하며 집권여당 리더십 문제를 제기하고 있습니다. 두 기사 모두 당내 분열을 우려하며 특정 후보의 당선 확률을 높이는 전략에 대한 부정적 시각을 공유하고 있습니다.",
+      "grouping_summary": "두 언론사 모두 국민의힘의 리더십 공백과 교착 상태를 핵심 쟁점으로 삼고 있으며, 장동혁 대표의 장외 정치 활동을 리더십 상실의 주요 원인으로 지적하고 있다. SBS는 조갑제 대표의 2028년 공천 배제 명단 작성 계획을 구체적으로 언급하지만, 이는 리더십 공백 문제를 부각시키는 수단으로 사용되며, 동아일보의 '포스트 장동혁 부재' 문제와 본질적으로 동일한 해석 방향을 공유한다. 두 언론사 모두 리더십 상실로 인한 당내 갈등 심화와 장기적 교착 상태를 우려하는 유사한 보도 태도를 보인다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:48:44.984254+00:00",
+      "grouped_at": "2026-08-16T18:29:03.942950+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,sbs": {
-        "issue_id": "issue-46354b5c46cae499",
+        "issue_id": "issue-74828de7e6bfdacd",
         "selected_publishers": [
           {
             "publisher_id": "donga",
@@ -1500,24 +854,24 @@
             "publisher": "SBS"
           }
         ],
-        "common_summary": "더불어민주당 최고위원 예비경선을 앞두고 친명계와 친청계가 당내 갈등을 빚고 있으며, 정청래 최고위원의 발언과 전략에 대한 비판이 제기되고 있다.",
+        "common_summary": "국민의힘의 리더십 공백과 교착 상태가 지속되고 있으며, 장동혁 대표의 장외 정치 집중 및 제헌절 행사 불참 등이 공통적으로 지적되었다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 더불어민주당 최고위원 예비경선 과정에서 친명계와 친청계 간 갈등이 발생하고 있음을 보도하고 있다.",
+            "contrast_statement": "두 언론사 모두 국민의힘의 리더십 상실과 교착 상태를 공통적으로 보도하며, 장동혁 대표의 장외 정치 집중 및 제헌절 행사 불참을 주요 내용으로 다루었다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "친청계의 생일별 투표 가이드라인과 친명계의 비판을 중심으로 한 당내 갈등 상황을 전달",
+                "summary": "리더십 상실과 교착 상태, 장동혁 대표의 장외 정치 집중 및 제헌절 불참을 중심으로 국민의힘의 현 상황을 보도했다.",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래 최고위원의 공포 마케팅과 유시민 발언을 비판하며 집권여당 리더십 문제를 제기",
+                "summary": "조갑제 대표의 2028년 공천 배제 명단 작성 계획과 장동혁 대표의 제헌절 및 이승만 행사 불참을 통해 리더십 문제를 부각시켰다.",
                 "evidence": []
               }
             ]
@@ -1525,18 +879,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 친청계의 투표 배분 전략에 초점을 맞춘 반면, SBS는 정청래의 공포 마케팅과 유시민 발언에 대한 비판을 강조하고 있다.",
+            "contrast_statement": "동아일보는 리더십 상실과 교착 상태에 초점을 맞춘 반면, SBS는 조갑제 대표의 공천 배제 명단 작성 계획을 통해 당내 갈등 가능성을 강조했다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "친청계의 생일별 투표 가이드라인과 친명계의 파당 정치 비판을 중심으로 한 최고위원 선거 갈등",
+                "summary": "국민의힘의 리더십 공백과 교착 상태를 주요 문제로 보고, 장동혁 대표의 장외 정치 활동을 원인으로 제시했다.",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래 최고위원의 공포 마케팅과 유시민 발언을 비판하며 집권여당 리더십에 대한 문제 제기",
+                "summary": "조갑제 대표가 2028년 공천 배제 명단을 작성하겠다는 계획을 밝히며, 장동혁 대표의 거취 문제를 당내 갈등의 핵심으로 제시했다.",
                 "evidence": []
               }
             ]
@@ -1544,18 +898,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 최고위원 선거 제도를 원인으로 제시한 반면, SBS는 정청래의 공포 마케팅과 유시민의 발언을 주요 원인으로 다루고 있다.",
+            "contrast_statement": "동아일보는 리더십 상실과 당내 싸늘한 시선을 원인으로 강조한 반면, SBS는 장동혁 대표의 제헌절 기념식 불참, 이승만 61주기 불참, 부정선거 관련 발언을 주요 배경으로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "최고위원 선거에서 당원 1명이 후보 2명에게 표를 행사하는 제도를 원인으로 강조",
+                "summary": "리더십 상실과 당내 싸늘한 시선이 리더십 공백의 주요 원인으로 작용했다고 분석했다.",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래의 공포 마케팅과 유시민의 발언을 집권여당 리더십 문제의 주요 원인으로 제시",
+                "summary": "장동혁 대표의 제헌절 기념식 불참, 이승만 61주기 불참, 부정선거 관련 발언이 보수 진영 내 갈등의 배경으로 작용했다.",
                 "evidence": []
               }
             ]
@@ -1563,460 +917,145 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 당 분열 우려와 특정 후보 당선 확률 상승을, SBS는 정청래의 갈등 유발과 과도한 공포 마케팅의 영향을 강조하고 있다.",
+            "contrast_statement": "동아일보는 국민의힘 전체의 교착 상태를 강조한 반면, SBS는 2028년 공천 배제 명단 작성 가능성과 보수 진영 내 갈등 심화, 장동혁 대표의 정치적 입지 약화를 구체적으로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "당 분열 우려와 특정 후보 당선 확률 상승을 영향 및 대상으로 제시",
+                "summary": "리더십 공백으로 인한 출구 없는 교착 상태가 국민의힘 전체에 영향을 미친다고 보도했다.",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래가 당내 갈등을 유발하고 과도한 공포 마케팅으로 출마자에게 부정적 영향을 미친다고 주장",
+                "summary": "2028년 공천 배제 명단 작성 가능성과 보수 진영 내 갈등 심화, 장동혁 대표의 정치적 입지 약화가 주요 영향으로 제시되었다.",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "동아일보는 당내 갈등을 중립적으로 전달하는 반면, SBS는 정청래와 유시민에 대한 강한 비판적 태도를 보이고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 리더십 상실과 교착 상태에 대한 우려·경계 태도를 보인 반면, SBS는 조갑제 대표의 발언을 인용하며 비판적 태도를 취했다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "친명계와 친청계의 공개 충돌을 사실적으로 전달하며 갈등 상황을 중립적으로 보도",
-                "evidence": []
+                "summary": "리더십이 상실됐다는 평가와 출구 없는 교착 상태에 대한 우려·경계 태도를 보였다.",
+                "evidence": [
+                  "리더십이 상실됐다는 평가",
+                  "출구 없는 교착 상태"
+                ]
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정청래와 유시민의 발언을 강하게 비판하며 집권여당 리더십에 대한 문제 제기",
-                "evidence": []
+                "summary": "조갑제 대표의 발언을 인용하며 장동혁 대표에 대한 비판적 태도를 보였다.",
+                "evidence": [
+                  "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\""
+                ]
               }
             ]
           }
         ],
         "similarities": [
-          "더불어민주당 최고위원 예비경선 과정에서 친명계와 친청계 간 갈등이 발생하고 있음",
-          "정청래 최고위원이 당내 논란의 중심에 있음"
+          "국민의힘의 리더십 공백과 교착 상태",
+          "장동혁 대표의 장외 정치 집중",
+          "제헌절 행사 불참"
         ],
         "key_differences": [
-          "동아일보는 친청계의 투표 배분 전략을 주요 쟁점으로 다루는 반면, SBS는 정청래의 공포 마케팅과 유시민의 발언을 비판하며 집권여당 리더십 문제를 제기"
+          "동아일보는 리더십 상실과 교착 상태에 초점을 맞춘 반면, SBS는 조갑제 대표의 2028년 공천 배제 명단 작성 계획을 통해 당내 갈등 가능성을 제시했다.",
+          "동아일보는 리더십 상실과 당내 싸늘한 시선을 원인으로 강조한 반면, SBS는 장동혁 대표의 제헌절 기념식 불참, 이승만 61주기 불참, 부정선거 관련 발언을 주요 배경으로 제시했다.",
+          "동아일보는 국민의힘 전체의 교착 상태를 강조한 반면, SBS는 2028년 공천 배제 명단 작성 가능성과 보수 진영 내 갈등 심화, 장동혁 대표의 정치적 입지 약화를 구체적으로 제시했다.",
+          "동아일보는 우려·경계 태도를 보인 반면, SBS는 조갑제 대표의 발언을 인용하며 비판적 태도를 취했다."
         ],
-        "comparison_report": "동아일보는 친청계의 생일별 투표 가이드라인과 친명계의 비판을 중심으로 최고위원 선거 제도의 문제점을 보도하며 당내 갈등을 중립적으로 전달하고 있다. 반면 SBS는 정청래 최고위원의 공포 마케팅과 유시민의 발언을 강하게 비판하며 집권여당 리더십에 맞지 않는 행태라고 지적하고 있다. 두 언론사 모두 더불어민주당 최고위원 예비경선 과정에서 발생하는 갈등을 다루고 있으나, 동아일보가 제도적 측면에 초점을 맞춘 반면 SBS는 인물 중심의 비판적 접근을 취하고 있다.",
+        "comparison_report": "동아일보와 SBS 모두 국민의힘의 리더십 공백과 교착 상태를 보도했으나, 동아일보가 리더십 상실과 교착 상태에 대한 우려·경계 태도를 보인 반면 SBS는 조갑제 대표의 2028년 공천 배제 명단 작성 계획을 통해 장동혁 대표의 거취 문제를 비판적으로 조명했다. 두 언론사 모두 장동혁 대표의 제헌절 행사 불참을 지적했으나, SBS는 이승만 61주기 불참과 부정선거 관련 발언까지 추가로 언급하며 보다 광범위한 비판을 가했다. 동아일보가 리더십 상실과 당내 싸늘한 시선을 원인으로 제시한 데 비해 SBS는 보수 진영 내 공천 갈등과 2028년 총선 대비 공천 준비 상황을 배경으로 제시했다. 결과적으로 동아일보가 국민의힘 전체의 교착 상태를 강조한 반면 SBS는 2028년 공천 배제 명단 작성 가능성과 보수 진영 내 갈등 심화, 장동혁 대표의 정치적 입지 약화 등 구체적인 영향을 제시했다.",
         "source_links": [
           {
             "publisher_id": "donga",
             "publisher": "동아일보",
-            "title": "친청계, 당원에 최고위원 투표 배분 논란…정청래 “늘 있었던 일”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260720/134330821/1",
-            "published_at": "Mon, 20 Jul 2026 21:59:00 +0900"
+            "title": "‘포스트 장동혁’ 안 보여…張 ‘올공 정치’ 바라만 보는 국힘",
+            "link": "https://www.donga.com/news/Politics/article/all/20260719/134320632/1",
+            "published_at": "Sun, 19 Jul 2026 08:21:42 +0900"
           },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "[정치쇼] 임미애 \"정청래 공포 마케팅 그만해야…유시민 발언도 지지층 결집용\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008668562",
-            "published_at": "Wed, 22 Jul 2026 10:35:00 +0900"
+            "title": "조갑제 \"'2028 국힘 공천 배제 명단' 만들 것…1번은 장동혁\" [정치쇼]",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008664586",
+            "published_at": "Mon, 20 Jul 2026 09:33:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-24T21:49:16.897970+00:00",
+        "compared_at": "2026-08-16T18:29:13.854046+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-4d02cc9e7bcf3547": {
+  "issue-8fd6d5edf157d65d": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-4d02cc9e7bcf3547",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "9ef41cab1b30f0d1eda3b2f4827474fd1e3d5c7ac25b911d9629758587047d79",
-            "title": "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\"",
-            "published_at": "Fri, 24 Jul 2026 11:18:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673137"
-          }
-        ],
-        "analysis": {
-          "article_summary": "구윤철 부총리는 24일 민생물가 특별관리 관계장관 태스크포스를 주재하며 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성을 긍정적으로 전망했다.",
-          "headline_frame": "경제 성장률과 1인당 GNI 달성 가능성에 초점",
-          "main_focus": "올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
-          "keywords": [
-            "경제 성장률",
-            "1인당 GNI",
-            "4만달러",
-            "민생물가 특별관리",
-            "태스크포스"
-          ],
-          "main_actors": [
-            "구윤철 부총리 겸 재정경제부 장관"
-          ],
-          "quoted_sources": [
-            "구윤철 부총리 겸 재정경제부 장관"
-          ],
-          "causes": [
-            "민생물가 특별관리 관계장관 태스크포스 주재"
-          ],
-          "background": [
-            "민생물가 특별관리 관계장관 태스크포스"
-          ],
-          "emphasized_effects": [
-            "올해 3% 성장",
-            "1인당 GNI 4만달러 달성"
-          ],
-          "affected_groups": [
-            "민생물가"
-          ],
-          "tone": {
-            "category": "기대",
-            "evidence": [
-              "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\""
-            ]
-          },
-          "outlook": {
-            "direction": "긍정",
-            "summary": "올해 3% 성장과 1인당 GNI 4만달러 달성 가능성이 매우 높아졌다는 전망"
-          },
-          "less_covered_context": [
-            "구체적인 정책 수단이나 실행 계획",
-            "성장률 달성을 위한 구체적 조건이나 위험 요인"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:49:33.573371+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-4d02cc9e7bcf3547",
+        "issue_id": "issue-8fd6d5edf157d65d",
         "publisher_id": "mk",
         "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "fb81e88e2c6d675893a8bf074b4172e30b6591be01955d1bc22902ac8f77c11f",
-            "title": "2년차 들어서는 구윤철 “하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라”",
-            "published_at": "Mon, 20 Jul 2026 11:09:02 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12102215"
+            "article_id": "c6c1a8f5ce42666b2b58dc61fc9d39d47ab39cdc80c0688c35b50fbd2aac7fc5",
+            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
+            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12105057"
           }
         ],
         "analysis": {
-          "article_summary": "구윤철 부총리가 취임 1주년을 맞아 하반기 경제 현안으로 관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등을 언급하며 국민 체감 변화에 역량을 집중할 것을 당부했다.",
-          "headline_frame": "구윤철 부총리의 취임 1주년 메시지와 하반기 경제 현안 대응을 중심으로 구성",
-          "main_focus": "하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응 및 국민 체감 변화 달성을 위한 역량 집중 요청",
+          "article_summary": "한국은행이 발표한 올해 2분기 실질 국내총생산(GDP) 성장률이 0.6%로, 전분기 1.8% 대비 둔화되었으나 반도체 중심의 수출 호조가 성장을 견인한 것으로 나타났다.",
+          "headline_frame": "반도체 수출 호조를 중심으로 한 2분기 GDP 성장률 발표",
+          "main_focus": "반도체 수출 호조가 2분기 GDP 성장률에 미친 긍정적 영향",
           "keywords": [
-            "하반기 경제 현안",
-            "관세협상",
-            "중동전쟁",
-            "3高 리스크",
-            "청년고용 둔화",
-            "국민 체감 변화"
+            "반도체 수출 호조",
+            "GDP 성장률",
+            "한국은행",
+            "실질 국내총생산"
           ],
           "main_actors": [
-            "구윤철 부총리 겸 재정경제부 장관"
+            "한국은행"
           ],
           "quoted_sources": [],
           "causes": [
-            "관세협상",
-            "중동전쟁",
-            "3高 리스크",
-            "청년고용 둔화"
+            "반도체 중심 수출 호조"
           ],
           "background": [
-            "취임 1주년"
+            "2026년 2분기(4~6월)"
           ],
           "emphasized_effects": [
-            "국민 체감 변화"
+            "0.6% 성장"
           ],
           "affected_groups": [
-            "국민"
+            "한국 경제"
           ],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "2년차 들어서는 구윤철 “하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라”"
+              "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "하반기 경제 현안 대응을 위한 역량 집중 요청"
+            "summary": "전분기 대비 성장률 둔화가 나타났으나 수출 호조가 성장을 뒷받침한 것으로 분석됨"
           },
           "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "구체적인 대응 방안"
+            "전분기 대비 성장률 둔화 원인",
+            "반도체 외 다른 수출 품목의 동향",
+            "내수 경제 상황"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:49:38.791116+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-4d02cc9e7bcf3547",
-      "groups": [
-        {
-          "group_id": "growth-outlook",
-          "label": "경제 성장률과 1인당 GNI 달성 전망",
-          "summary": "SBS는 올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시하며, 민생물가 특별관리 태스크포스를 통해 이를 달성하기 위한 정부 노력을 강조하고 있습니다. 매일경제도 구윤철 부총리의 취임 1주년 메시지를 통해 하반기 경제 현안 대응을 언급하지만, 국민 체감 변화 달성을 위한 역량 집중을 요청하는 중립적 설명을 하고 있습니다. 두 언론사 모두 경제 성장률과 국민 체감 변화를 핵심 쟁점으로 다루고 있으며, SBS는 긍정적 전망, 매일경제는 중립적 설명을 통해 경제 성장 달성을 위한 정부 대응을 공통적으로 강조하고 있습니다.",
-          "keywords": [
-            "경제 성장률",
-            "1인당 GNI",
-            "4만달러",
-            "민생물가 특별관리",
-            "태스크포스",
-            "하반기 경제 현안"
-          ],
-          "publisher_ids": [
-            "sbs",
-            "mk"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            },
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
-            }
-          ],
-          "publisher_count": 2,
-          "group_evidence": [
-            "SBS는 구윤철 부총리의 발언을 인용하여 올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시하고 있습니다. 매일경제도 구윤철 부총리의 취임 1주년 메시지를 통해 하반기 경제 현안 대응을 언급하며 국민 체감 변화 달성을 위한 역량 집중을 요청하고 있습니다. 두 언론사 모두 경제 성장률과 국민 체감 변화를 핵심 쟁점으로 다루고 있으며, SBS는 긍정적 전망, 매일경제는 중립적 설명을 통해 경제 성장 달성을 위한 정부 대응을 공통적으로 강조하고 있습니다."
-          ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "SBS와 매일경제는 모두 구윤철 부총리의 발언을 중심으로 경제 성장률과 국민 체감 변화를 핵심 쟁점으로 다루고 있습니다. SBS는 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을, 매일경제는 하반기 경제 현안 대응을 위한 역량 집중을 요청하는 중립적 설명을 하고 있습니다. 두 언론사 모두 경제 성장 달성을 위한 정부 대응을 공통적으로 강조하고 있으며, 핵심 관점이 대체로 일치하여 하나의 그룹으로 묶을 수 있습니다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:49:42.377702+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "mk,sbs": {
-        "issue_id": "issue-4d02cc9e7bcf3547",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "구윤철 부총리는 경제 성장률과 1인당 GNI 달성 가능성에 대해 긍정적으로 전망하며, 민생물가 특별관리 태스크포스를 주재한 내용을 다루고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "SBS는 경제 성장률과 1인당 GNI 달성 가능성에 초점을 맞춘 반면, 매일경제는 구윤철 부총리의 취임 1주년 메시지와 하반기 경제 현안 대응을 중심으로 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "취임 1주년을 맞아 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중 요청",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 경제 성장 목표 달성에 대한 낙관적 전망을 강조한 반면, 매일경제는 하반기 경제 현안 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "올해 3% 성장과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중 요청",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 민생물가 특별관리 태스크포스 주재를 배경으로 제시한 반면, 매일경제는 구윤철 부총리의 취임 1주년을 배경으로 삼고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "민생물가 특별관리 관계장관 태스크포스 주재",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "구윤철 부총리 취임 1주년",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 경제 성장률과 1인당 GNI 달성이라는 구체적 경제 지표를 강조한 반면, 매일경제는 국민 체감 변화라는 포괄적 영향을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "올해 3% 성장 및 1인당 GNI 4만달러 달성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "국민 체감 변화",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 구윤철 부총리의 발언을 인용해 경제 성장 가능성에 대한 기대감을 강조한 반면, 매일경제는 취임 1주년 메시지와 하반기 경제 현안 대응을 중립적으로 설명하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "구윤철 부총리의 발언을 인용해 경제 성장 가능성에 대한 기대감을 강조함",
-                "evidence": [
-                  "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\""
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "취임 1주년 메시지와 하반기 경제 현안 대응을 중립적으로 설명함",
-                "evidence": [
-                  "2년차 들어서는 구윤철 “하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라”"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "구윤철 부총리가 경제 관련 주요 발언을 했다는 점",
-          "민생물가 특별관리 태스크포스와 관련된 내용을 다루고 있다는 점"
-        ],
-        "key_differences": [
-          "SBS는 경제 성장률과 1인당 GNI 달성 가능성에 초점을 맞춘 반면, 매일경제는 하반기 경제 현안 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청하고 있다."
-        ],
-        "comparison_report": "SBS는 구윤철 부총리의 발언을 인용해 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 강조한 반면, 매일경제는 구윤철 부총리 취임 1주년을 맞아 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청하고 있다. SBS는 민생물가 특별관리 태스크포스 주재를 배경으로 제시한 데 비해 매일경제는 취임 1주년을 배경으로 삼고 있으며, SBS는 구체적 경제 지표를 강조한 반면 매일경제는 국민 체감 변화라는 포괄적 영향을 강조하고 있다. 보도 태도 측면에서 SBS는 기대감을 강조한 반면 매일경제는 중립적으로 설명하고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673137",
-            "published_at": "Fri, 24 Jul 2026 11:18:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "2년차 들어서는 구윤철 “하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라”",
-            "link": "https://www.mk.co.kr/news/economy/12102215",
-            "published_at": "Mon, 20 Jul 2026 11:09:02 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-07-24T21:49:51.821794+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-f4e1a8f069f40589": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-f4e1a8f069f40589",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "3895946a51cdf848173dfd31cb270c1ec876c88b24d3f3e507b370e894619cf8",
-            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
-            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "2분기 한국 경제가 전년 동기 대비 3.7% 성장하며 두 개 분기 연속 3%대 성장세를 이어갔고, 반도체 수출 호조가 주요 동력으로 작용했다.",
-          "headline_frame": "반도체 수출 호조를 통한 2분기 성장률 3.7% 달성",
-          "main_focus": "반도체 수출 호조가 2분기 성장률 3.7% 달성에 미친 영향과 한국은행의 향후 금리 인상 전망",
-          "keywords": [
-            "반도체 수출 호조",
-            "2분기 성장률",
-            "3.7% 성장",
-            "한국은행",
-            "기준금리 인상"
-          ],
-          "main_actors": [
-            "한국은행",
-            "한국 경제"
-          ],
-          "quoted_sources": [
-            "한국은행"
-          ],
-          "causes": [
-            "반도체 수출 호조"
-          ],
-          "background": [
-            "실질 GDP는 물가 변동의 영향이 제거된 지표",
-            "수출이 급증"
-          ],
-          "emphasized_effects": [
-            "두 개 분기 연속 3%대 성장세",
-            "시장 전망치를 웃도는 성장률"
-          ],
-          "affected_groups": [
-            "한국 경제"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "올해 2분기(4∼6월) 한국 경제가 지난해 같은 기간보다 3.7% 성장한 것으로 나타났다",
-              "시장 전망치를 웃도는 성장률이 확인된 만큼, 한국은행이 다음 달에도 기준금리를 추가로 인상할 것이란 전망에 힘이 실리고 있다"
-            ]
-          },
-          "outlook": {
-            "direction": "긍정",
-            "summary": "한국은행이 다음 달에도 기준금리를 추가로 인상할 것이란 전망"
-          },
-          "less_covered_context": [
-            "실질 GDP와 국내총소득(GDI)이 증가세를 이어간 구체적 메커니즘",
-            "수출 증가의 지속 가능성에 대한 분석"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:49:57.065504+00:00",
+        "analyzed_at": "2026-08-16T18:29:23.906529+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-f4e1a8f069f40589",
+        "issue_id": "issue-8fd6d5edf157d65d",
         "publisher_id": "sbs",
         "publisher": "SBS",
         "articles": [
@@ -2030,7 +1069,7 @@
         "analysis": {
           "article_summary": "2분기 한국 경제가 0.6% 성장하며 예상보다 가파른 성장세를 보였고, 반도체 수출 호조가 중동발 악재를 상쇄하는 데 기여했다.",
           "headline_frame": "반도체 수출 호조를 통한 중동발 악재 상쇄",
-          "main_focus": "반도체 수출 호조가 2분기 경제 성장률에 미친 긍정적 영향",
+          "main_focus": "반도체 수출 호조가 2분기 경제 성장률 0.6% 달성에 미친 긍정적 영향",
           "keywords": [
             "반도체 수출",
             "2분기 성장률",
@@ -2050,7 +1089,7 @@
           ],
           "emphasized_effects": [
             "예상보다 가파른 성장세",
-            "성장률 0.6%"
+            "성장률 0.6% 달성"
           ],
           "affected_groups": [
             "한국 경제"
@@ -2063,93 +1102,162 @@
           },
           "outlook": {
             "direction": "중립",
-            "summary": "반도체 수출 호조가 경제 성장을 견인했으나 중동발 악재 지속 가능성 언급"
+            "summary": "반도체 수출 호조가 지속될 경우 경제 성장세 유지 가능성"
           },
           "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "반도체 수출 호조의 지속 가능성"
+            "중동발 악재의 구체적 내용",
+            "반도체 수출 증가의 세부 원인"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:49:59.345507+00:00",
+        "analyzed_at": "2026-08-16T18:29:24.013242+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-8fd6d5edf157d65d",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "3895946a51cdf848173dfd31cb270c1ec876c88b24d3f3e507b370e894619cf8",
+            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
+            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "2026년 2분기 한국 경제가 전년 동기 대비 3.7% 성장하며 두 개 분기 연속 3%대 성장세를 이어갔고, 반도체 수출 호조가 주요 동력으로 작용했다.",
+          "headline_frame": "반도체 수출 호조를 통한 2분기 성장률 3.7% 달성",
+          "main_focus": "반도체 수출 증가가 2분기 성장률 3.7% 달성의 주요 원인임을 강조",
+          "keywords": [
+            "반도체 수출 호조",
+            "2분기 성장률",
+            "3.7% 성장",
+            "한국은행",
+            "기준금리 인상 전망"
+          ],
+          "main_actors": [
+            "한국은행",
+            "한국 경제"
+          ],
+          "quoted_sources": [
+            "한국은행"
+          ],
+          "causes": [
+            "반도체 수출 호조",
+            "IT 품목 수출 증가"
+          ],
+          "background": [
+            "실질 GDP는 물가 변동의 영향이 제거된 지표",
+            "국내총소득(GDI) 증가"
+          ],
+          "emphasized_effects": [
+            "두 개 분기 연속 3%대 성장세",
+            "시장 전망치 웃도는 성장률"
+          ],
+          "affected_groups": [
+            "한국 경제"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "올해 2분기(4∼6월) 한국 경제가 지난해 같은 기간보다 3.7% 성장한 것으로 나타났다",
+              "시장 전망치를 웃도는 성장률이 확인된 만큼, 한국은행이 다음 달에도 기준금리를 추가로 인상할 것이란 전망에 힘이 실리고 있다"
+            ]
+          },
+          "outlook": {
+            "direction": "긍정",
+            "summary": "한국은행이 다음 달에도 기준금리를 추가로 인상할 가능성이 높아짐"
+          },
+          "less_covered_context": [
+            "실질 GDP와 국내총소득(GDI)이 증가세를 이어간 구체적 메커니즘",
+            "기준금리 인상이 가계와 기업에 미칠 구체적 영향"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:29:24.486546+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-f4e1a8f069f40589",
+      "issue_id": "issue-8fd6d5edf157d65d",
       "groups": [
         {
           "group_id": "growth-impact",
-          "label": "반도체 수출 호조와 성장률 영향",
-          "summary": "두 언론사 모두 반도체 수출 호조가 2분기 한국 경제 성장률에 미친 긍정적 영향을 중심으로 보도하며, 중동발 악재와의 상쇄 관계도 공통적으로 언급",
+          "label": "반도체 수출 호조와 성장률 상승 효과",
+          "summary": "세 언론사 모두 반도체 수출 호조가 2분기 한국 경제 성장률 상승에 미친 긍정적 영향을 중심으로 보도하며, 수출 호조의 경제적 효과를 중립적으로 설명하고 있다.",
           "keywords": [
             "반도체 수출 호조",
-            "2분기 성장률",
-            "한국 경제"
+            "GDP 성장률 상승"
           ],
           "publisher_ids": [
-            "donga",
-            "sbs"
+            "mk",
+            "sbs",
+            "donga"
           ],
           "publishers": [
             {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
+              "publisher_id": "mk",
+              "publisher": "매일경제"
             },
             {
               "publisher_id": "sbs",
               "publisher": "SBS"
+            },
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
             }
           ],
-          "publisher_count": 2,
+          "publisher_count": 3,
           "group_evidence": [
-            "두 언론사 모두 반도체 수출 호조가 2분기 성장률 3.7% 달성에 미친 긍정적 영향을 핵심 쟁점으로 다룸",
-            "동아일보는 3.7% 성장률과 시장 전망치 상회, 한국은행의 금리 인상 전망을 강조",
-            "SBS는 중동발 악재 상쇄와 0.6% 성장률, 반도체 수출 호조의 견인 효과를 강조",
-            "두 기사 모두 반도체 수출 호조를 긍정적 요인으로 해석하며, 한국 경제 성장에 미친 영향을 중심으로 보도"
+            "세 언론사 모두 반도체 수출 호조가 2분기 GDP 성장률 상승에 미친 긍정적 영향을 핵심 쟁점으로 다루고 있다.",
+            "mk는 반도체 수출 호조가 0.6% 성장에 미친 영향을, sbs는 중동발 악재 상쇄를 통한 성장세 유지를, donga는 3.7% 성장률 달성의 주요 원인으로 반도체 수출 증가를 강조하고 있다.",
+            "모두 수출 호조의 경제적 효과를 중립적으로 설명하며, 향후 수출 지속 시 성장세 유지 가능성을 전망하고 있다."
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 반도체 수출 호조가 2분기 한국 경제 성장률에 미친 긍정적 영향을 핵심 쟁점으로 보도하며, 중동발 악재와의 상쇄 관계도 공통적으로 언급. 동아일보는 3.7% 성장률과 시장 전망치 상회, 한국은행의 금리 인상 전망을 강조하고, SBS는 중동발 악재 상쇄와 0.6% 성장률, 반도체 수출 호조의 견인 효과를 강조하지만, 핵심 해석과 평가 방향은 대체로 일치하여 동일 그룹으로 분류",
+      "grouping_summary": "세 언론사 모두 반도체 수출 호조가 2분기 한국 경제 성장률 상승에 미친 긍정적 영향을 중심으로 보도하며, 수출 호조의 경제적 효과를 중립적으로 설명하고 있다. mk는 0.6% 성장 수치를, sbs는 중동발 악재 상쇄를 통한 성장세 유지를, donga는 3.7% 성장률 달성과 기준금리 인상 전망까지 연결하여 보도하고 있으나, 핵심 쟁점과 해석 방향은 모두 수출 호조의 긍정적 효과에 초점을 맞추고 있어 하나의 그룹으로 묶을 수 있다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:50:07.864462+00:00",
+      "grouped_at": "2026-08-16T18:29:28.189317+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-f4e1a8f069f40589",
+      "mk,sbs": {
+        "issue_id": "issue-8fd6d5edf157d65d",
         "selected_publishers": [
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
+            "publisher_id": "mk",
+            "publisher": "매일경제"
           },
           {
             "publisher_id": "sbs",
             "publisher": "SBS"
           }
         ],
-        "common_summary": "2분기 한국 경제가 성장세를 기록했으며, 반도체 수출 호조가 주요 동력으로 작용한 것으로 나타났다.",
+        "common_summary": "한국은행은 2026년 2분기 실질 GDP 성장률이 0.6%로 전분기 1.8% 대비 둔화되었으나, 반도체 중심의 수출 호조가 성장을 견인했다고 발표했다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 2분기 한국 경제의 성장세와 반도체 수출 호조를 주요 내용으로 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 한국은행의 2026년 2분기 실질 GDP 성장률 0.6% 발표와 반도체 수출 호조의 성장 견인 효과를 공통적으로 보도했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "2분기 한국 경제가 전년 동기 대비 3.7% 성장하며 두 개 분기 연속 3%대 성장세를 이어갔고, 반도체 수출 호조가 주요 동력으로 작용했다고 보도",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "한국은행의 2분기 GDP 성장률 0.6% 발표와 반도체 수출 호조의 성장 견인 효과를 중립적으로 설명",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "2분기 한국 경제가 0.6% 성장하며 예상보다 가파른 성장세를 보였고, 반도체 수출 호조가 중동발 악재를 상쇄하는 데 기여했다고 보도",
+                "summary": "한국은행의 2분기 GDP 성장률 0.6% 발표와 반도체 수출 호조의 성장 견인 효과를 중립적으로 설명",
                 "evidence": []
               }
             ]
@@ -2157,18 +1265,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 반도체 수출 호조가 성장률에 미친 영향과 한국은행의 금리 인상 전망을 함께 강조한 반면, SBS는 반도체 수출 호조의 긍정적 영향만을 중점적으로 보도했다.",
+            "contrast_statement": "매일경제는 반도체 수출 호조가 2분기 GDP 성장률에 미친 긍정적 영향을 강조한 반면, SBS는 반도체 수출 호조가 중동발 악재를 상쇄하는 데 기여했다는 관점을 추가로 제시했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 수출 호조가 2분기 성장률 3.7% 달성에 미친 영향과 한국은행의 향후 금리 인상 전망을 함께 제시",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 2분기 GDP 성장률에 미친 긍정적 영향",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "반도체 수출 호조가 2분기 경제 성장률에 미친 긍정적 영향만을 중점적으로 보도",
+                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하며 2분기 경제 성장률 0.6% 달성에 기여한 긍정적 영향",
                 "evidence": []
               }
             ]
@@ -2176,18 +1284,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 반도체 수출 호조를 주요 원인으로 제시했으나, SBS는 중동발 악재라는 배경을 추가로 강조했다.",
+            "contrast_statement": "두 언론사 모두 반도체 수출 호조를 주요 원인으로 제시했으나, SBS는 중동발 악재라는 추가 배경을 강조했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 수출 호조를 2분기 성장률 3.7% 달성의 주요 원인으로 강조",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 중심의 수출 호조",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하는 데 기여했다는 배경을 함께 강조",
+                "summary": "반도체 수출 호조와 중동발 악재",
                 "evidence": []
               }
             ]
@@ -2195,18 +1303,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 두 개 분기 연속 3%대 성장세라는 장기적 흐름을 강조한 반면, SBS는 예상보다 가파른 성장세라는 단기적 성과에 초점을 맞췄다.",
+            "contrast_statement": "매일경제는 0.6% 성장이라는 수치적 결과에 초점을 맞춘 반면, SBS는 예상보다 가파른 성장세라는 표현을 추가로 사용해 긍정적 평가를 강조했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "두 개 분기 연속 3%대 성장세라는 장기적 흐름을 강조",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "0.6% 성장",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "예상보다 가파른 성장세라는 단기적 성과를 강조",
+                "summary": "예상보다 가파른 성장세 및 성장률 0.6% 달성",
                 "evidence": []
               }
             ]
@@ -2214,41 +1322,41 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보였으나, 동아일보가 한국은행 관계자의 발언을 인용하여 근거를 제시한 반면 SBS는 제목에서 중동발 악재 상쇄라는 표현을 사용했다.",
+            "contrast_statement": "두 언론사 모두 중립 설명 태도를 보였으나, 매일경제 기사는 '속보' 표현을, SBS 기사는 '중동발 악재 상쇄'라는 구체적 설명을 사용해 차이를 나타냈다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "한국은행 관계자의 발언을 인용하여 중립적으로 설명하며, 향후 금리 인상 전망을 함께 제시",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달하며 속보 형식으로 발표",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "제목에서 중동발 악재 상쇄라는 표현을 사용하여 중립적으로 설명",
+                "summary": "사실관계를 중립적으로 전달하며 중동발 악재 상쇄라는 구체적 설명을 추가",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "2분기 한국 경제의 성장세",
-          "반도체 수출 호조가 주요 동력으로 작용",
-          "한국 경제 전반에 미친 긍정적 영향"
+          "한국은행의 2026년 2분기 실질 GDP 성장률 0.6% 발표",
+          "반도체 수출 호조가 성장을 견인했다는 점",
+          "성장률 수치 0.6%",
+          "한국 경제에 미친 영향"
         ],
         "key_differences": [
-          "성장률 수치 차이(동아일보: 3.7%, SBS: 0.6%)",
-          "한국은행 금리 인상 전망 언급 여부",
-          "중동발 악재 상쇄라는 배경 설명 포함 여부"
+          "SBS는 중동발 악재라는 추가 배경을 강조하여 반도체 수출 호조의 역할을 더 포괄적으로 해석했다",
+          "SBS는 '예상보다 가파른 성장세'라는 표현을 사용해 긍정적 평가를 더 강조했다"
         ],
-        "comparison_report": "동아일보와 SBS 모두 2분기 한국 경제의 성장세를 보도했으나, 동아일보가 3.7%라는 높은 성장률과 한국은행의 금리 인상 전망을 강조한 반면 SBS는 0.6%라는 낮은 성장률과 중동발 악재 상쇄라는 배경을 함께 보도했다. 두 언론사 모두 반도체 수출 호조를 주요 원인으로 제시했으나, 동아일보가 장기적 성장 흐름을, SBS는 단기적 성과를 강조했으며, 보도 태도에서는 동아일보가 한국은행 관계자의 발언을 인용한 반면 SBS는 제목에서 중동발 악재 상쇄라는 표현을 사용했다.",
+        "comparison_report": "매일경제와 SBS 모두 한국은행의 2026년 2분기 실질 GDP 성장률 0.6% 발표와 반도체 수출 호조의 성장 견인 효과를 중립적으로 보도했으나, SBS는 중동발 악재라는 추가 배경을 강조하며 '예상보다 가파른 성장세'라는 표현을 사용해 긍정적 평가를 더 부각시켰다. 반면 매일경제는 전분기 대비 성장률 둔화(1.8%→0.6%)와 반도체 외 다른 수출 품목 및 내수 상황에 대한 맥락을 상대적으로 덜 다루었다.",
         "source_links": [
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
-            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2",
-            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
+            "link": "https://www.mk.co.kr/news/economy/12105057",
+            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
           },
           {
             "publisher_id": "sbs",
@@ -2260,172 +1368,651 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-24T21:50:36.606298+00:00",
+        "compared_at": "2026-08-16T18:29:35.986904+00:00",
+        "model": "solar-pro3"
+      },
+      "donga,mk": {
+        "issue_id": "issue-8fd6d5edf157d65d",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "두 언론사 모두 한국은행의 2026년 2분기 실질 GDP 성장률 발표를 다루며, 반도체 수출 호조가 성장을 견인한 주요 요인으로 작용했다고 보도했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 한국은행의 2분기 실질 GDP 성장률 발표를 보도하며, 반도체 수출 호조가 성장을 견인한 주요 요인임을 공통적으로 확인했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "한국은행의 2분기 실질 GDP 성장률 0.6% 발표와 반도체 수출 호조의 성장 견인 효과를 중립적으로 설명",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "한국은행의 2분기 실질 GDP 성장률 3.7% 발표와 반도체 수출 호조의 성장 견인 효과를 중립적으로 설명",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 수출 호조가 2분기 GDP 성장률에 미친 긍정적 영향을 강조한 반면, 동아일보는 반도체 수출 증가가 3.7% 성장률 달성의 주요 원인임을 보다 구체적으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 2분기 GDP 성장률에 미친 긍정적 영향에 초점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 증가가 2분기 3.7% 성장률 달성의 주요 원인임을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 중심 수출 호조를 주요 원인으로 제시한 반면, 동아일보는 반도체 수출 호조와 함께 IT 품목 수출 증가를 추가 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 중심 수출 호조를 2분기 성장의 주요 원인으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조와 IT 품목 수출 증가를 주요 원인으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 0.6% 성장이라는 수치적 결과에 초점을 맞춘 반면, 동아일보는 두 개 분기 연속 3%대 성장세 유지와 시장 전망치 상회라는 맥락적 영향을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "0.6% 성장이라는 수치적 결과를 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "두 개 분기 연속 3%대 성장세 유지와 시장 전망치 상회라는 맥락적 영향을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "매일경제는 '[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%'라는 제목 프레임으로 속보 성격을 강조한 반면, 동아일보는 '반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”'이라는 제목으로 성장률 수치와 한은의 전망을 함께 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "속보 성격을 강조하며 반도체 수출 호조와 0.6% 성장률 수치를 중립적으로 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "성장률 수치와 한은의 3%대 예상 전망을 함께 제시하며 중립적으로 전달",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "한국은행의 2026년 2분기 실질 GDP 성장률 발표 보도",
+          "반도체 수출 호조가 성장을 견인한 주요 요인이라는 공통 인식",
+          "두 언론사 모두 중립 설명 태도를 보임"
+        ],
+        "key_differences": [
+          "성장률 수치 차이(매일경제 0.6% vs 동아일보 3.7%)",
+          "동아일보가 기준금리 인상 전망을 추가로 언급"
+        ],
+        "comparison_report": "매일경제와 동아일보는 모두 한국은행의 2026년 2분기 실질 GDP 성장률 발표를 보도했으나, 매일경제은 전분기 대비 0.6% 성장이라는 수치적 결과에 초점을 맞춘 반면, 동아일보는 전년 동기 대비 3.7% 성장이라는 맥락적 결과와 함께 기준금리 인상 전망을 추가로 제시했다. 두 언론사 모두 반도체 수출 호조를 주요 원인으로 강조했으나, 동아일보는 IT 품목 수출 증가를 추가 원인으로 제시했고, 매일경제은 속보 성격을 강조한 반면 동아일보는 성장률 수치와 한은의 전망을 함께 제시하는 보도 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
+            "link": "https://www.mk.co.kr/news/economy/12105057",
+            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2",
+            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-16T18:29:37.225155+00:00",
+        "model": "solar-pro3"
+      },
+      "donga,sbs": {
+        "issue_id": "issue-8fd6d5edf157d65d",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "2분기 한국 경제가 성장세를 보였으며, 반도체 수출 호조가 주요 동력으로 작용한 것으로 분석된다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 2분기 한국 경제의 성장세와 반도체 수출 호조를 주요 내용으로 다루고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "2분기 한국 경제가 0.6% 성장하며 예상보다 가파른 성장세를 보였고, 반도체 수출 호조가 중동발 악재를 상쇄하는 데 기여했다고 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "2026년 2분기 한국 경제가 전년 동기 대비 3.7% 성장하며 두 개 분기 연속 3%대 성장세를 이어갔고, 반도체 수출 호조가 주요 동력으로 작용했다고 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 반도체 수출 호조의 긍정적 영향에 초점을 맞춘 반면, 동아일보는 반도체 수출 증가가 성장률 달성의 주요 원인임을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 2분기 경제 성장률 0.6% 달성에 미친 긍정적 영향을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 증가가 2분기 성장률 3.7% 달성의 주요 원인임을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 반도체 수출 호조를 주요 원인으로 제시한 반면, 동아일보는 반도체 수출 호조와 IT 품목 수출 증가를 함께 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 2분기 경제 성장률 상승의 주요 원인이라고 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조와 IT 품목 수출 증가를 2분기 성장률 상승의 원인으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 예상보다 가파른 성장세라는 표현을 사용한 반면, 동아일보는 두 개 분기 연속 3%대 성장세라는 표현을 사용했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "예상보다 가파른 성장세 및 성장률 0.6% 달성을 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "두 개 분기 연속 3%대 성장세 및 시장 전망치 웃도는 성장률을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "SBS는 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄'라는 제목으로 중립적으로 설명했고, 동아일보는 '반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”'이라는 제목으로 중립적으로 설명하며 한국은행을 인용했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달하며, 기사 제목에서 '2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄'라고 명시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "사실관계를 중립적으로 전달하며, 기사 제목에서 '반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”'이라고 명시하고 한국은행을 인용",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "2분기 한국 경제의 성장세, 반도체 수출 호조의 주요 역할, 경제 성장률 상승"
+        ],
+        "key_differences": [
+          "성장률 수치 차이(0.6% vs 3.7%), 중동발 악재 언급 여부, 한국은행 인용 여부, 성장률 표현 방식(예상보다 가파른 vs 두 개 분기 연속 3%대)"
+        ],
+        "comparison_report": "SBS와 동아일보 모두 2분기 한국 경제의 성장세를 보도했으나, SBS는 0.6% 성장률과 중동발 악재 상쇄를 강조한 반면, 동아일보는 3.7% 성장률과 한국은행 인용을 통해 기준금리 인상 전망을 추가로 제시했다. 두 언론사 모두 반도체 수출 호조를 주요 원인으로 제시했으나, SBS는 중동발 악재와의 상쇄 효과를, 동아일보는 IT 품목 수출 증가와 함께 두 개 분기 연속 3%대 성장세라는 표현을 사용했다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008670597",
+            "published_at": "Thu, 23 Jul 2026 08:24:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2",
+            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-16T18:29:37.406603+00:00",
+        "model": "solar-pro3"
+      },
+      "donga,mk,sbs": {
+        "issue_id": "issue-8fd6d5edf157d65d",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          }
+        ],
+        "common_summary": "2026년 2분기 한국 경제가 성장했으며, 반도체 수출 호조가 주요 동력으로 작용했다는 점이 세 언론사 모두에서 공통적으로 확인되었다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 2026년 2분기 한국 경제의 성장과 반도체 수출 호조를 공통적으로 보도하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "2026년 2분기 실질 GDP 성장률 0.6% 발표 및 반도체 수출 호조의 성장 견인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "2026년 2분기 한국 경제 0.6% 성장 및 반도체 수출로 중동발 악재 상쇄",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "2026년 2분기 한국 경제 전년 동기 대비 3.7% 성장 및 반도체 수출 호조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 수출 호조의 긍정적 영향을, SBS는 중동발 악재 상쇄 효과를, 동아일보는 성장률 3.7% 달성의 주요 원인임을 각각 강조하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 호조가 2분기 GDP 성장률에 미친 긍정적 영향",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하며 예상보다 가파른 성장세 달성에 기여",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 증가가 2분기 성장률 3.7% 달성의 주요 원인임을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 반도체 중심 수출 호조를, SBS는 중동발 악재를 배경으로, 동아일보는 반도체 수출 호조와 IT 품목 수출 증가를 원인으로 제시하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 중심 수출 호조가 2026년 2분기 성장의 주요 원인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 중동발 악재를 상쇄하는 배경",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "반도체 수출 호조와 IT 품목 수출 증가가 2분기 성장률 3.7% 달성의 원인",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 0.6% 성장을, SBS는 예상보다 가파른 성장세 및 성장률 0.6% 달성을, 동아일보는 두 개 분기 연속 3%대 성장세 및 시장 전망치 웃도는 성장률을 각각 강조하였다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "0.6% 성장",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "예상보다 가파른 성장세 및 성장률 0.6% 달성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "두 개 분기 연속 3%대 성장세 및 시장 전망치 웃도는 성장률",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 중립적인 설명 태도를 보이며, 사실 전달에 중점을 두었다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "올해 2분기(4∼6월) 한국 경제가 지난해 같은 기간보다 3.7% 성장한 것으로 나타났다",
+                  "시장 전망치를 웃도는 성장률이 확인된 만큼, 한국은행이 다음 달에도 기준금리를 추가로 인상할 것이란 전망에 힘이 실리고 있다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "2026년 2분기 한국 경제의 성장",
+          "반도체 수출 호조가 주요 동력으로 작용",
+          "한국은행 발표 내용 인용"
+        ],
+        "key_differences": [
+          "동아일보가 전년 동기 대비 3.7% 성장률을 강조한 반면, 매일경제와 SBS는 전분기 대비 0.6% 성장률을 강조"
+        ],
+        "comparison_report": "세 언론사 모두 2026년 2분기 한국 경제의 성장과 반도체 수출 호조를 공통적으로 보도하였으나, 매일경제와 SBS는 전분기 대비 0.6% 성장률을, 동아일보는 전년 동기 대비 3.7% 성장률을 강조하였다. 매일경제와 SBS는 반도체 수출 호조의 긍정적 영향을 중심으로 보도하였고, 동아일보는 반도체 수출 호조와 IT 품목 수출 증가를 원인으로 제시하였다. SBS는 중동발 악재 상쇄 효과를 추가로 언급하였으며, 동아일보는 시장 전망치 웃도는 성장률과 기준금리 인상 전망을 함께 보도하였다. 세 언론사 모두 중립적인 설명 태도를 보이며 사실 전달에 중점을 두었다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
+            "link": "https://www.mk.co.kr/news/economy/12105057",
+            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "2분기 한국 경제 0.6% 성장…반도체 수출로 중동발 악재 상쇄",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008670597",
+            "published_at": "Thu, 23 Jul 2026 08:24:00 +0900"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2",
+            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-16T18:29:38.872321+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-1598f76db817d169": {
+  "issue-4d02cc9e7bcf3547": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-1598f76db817d169",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
+        "issue_id": "issue-4d02cc9e7bcf3547",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "b36f5a1189d9672e062a05292b267ec6b41e31e4acd831788962d05309514462",
-            "title": "李 “불법-편법 동원된 부동산 불로소득, 국민통합 저해 주범”",
-            "published_at": "Tue, 21 Jul 2026 17:11:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260721/134337312/1"
+            "article_id": "fb81e88e2c6d675893a8bf074b4172e30b6591be01955d1bc22902ac8f77c11f",
+            "title": "2년차 들어서는 구윤철 “하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라”",
+            "published_at": "Mon, 20 Jul 2026 11:09:02 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12102215"
           }
         ],
         "analysis": {
-          "article_summary": "이재명 대통령은 부동산 불로소득이 국민통합 저해의 주범이라며 부동산 문제 정상화와 세제 개편 의지를 밝혔다.",
-          "headline_frame": "부동산 불로소득을 국민통합 저해의 주범으로 규정",
-          "main_focus": "부동산 불로소득 문제 해결을 통한 국민통합 및 사회적 역동성 복원",
+          "article_summary": "구윤철 부총리가 취임 1주년을 맞아 하반기 경제 현안으로 관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등을 언급하며 국민 체감 변화에 역량을 집중할 것을 당부했다.",
+          "headline_frame": "구윤철 부총리의 취임 1주년 메시지와 하반기 경제 현안 대응을 중심으로 구성",
+          "main_focus": "하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응 및 국민 체감 변화 달성을 위한 역량 집중 요청",
           "keywords": [
-            "부동산 불로소득",
-            "국민통합",
-            "부동산 세제 개편",
-            "부동산 시장 안정",
-            "실수요자 지원"
+            "하반기 경제 현안",
+            "국민 체감 변화",
+            "3高 리스크",
+            "청년고용 둔화",
+            "관세협상",
+            "중동전쟁"
           ],
           "main_actors": [
-            "이재명 대통령"
+            "구윤철 부총리 겸 재정경제부 장관"
           ],
           "quoted_sources": [],
           "causes": [
-            "불법-편법 동원된 부동산 불로소득"
+            "관세협상",
+            "중동전쟁"
           ],
           "background": [
-            "부동산 시장 불안정",
-            "자산 불평등",
-            "가계 부채",
-            "청년 고통 및 소외"
+            "취임 1주년",
+            "2년차"
           ],
           "emphasized_effects": [
-            "사회적 역동성 복원",
-            "양극화 완화"
+            "국민 체감 변화"
           ],
           "affected_groups": [
-            "청년"
-          ],
-          "tone": {
-            "category": "우려·경계",
-            "evidence": [
-              "불법과 편법이 동원되는 부동산 불로소득은 우리 사회의 공정과 상식을 파괴하고 국민 통합을 저해하는 가장 큰 주범"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "부동산 대토론회(23일)를 앞두고 보유세 등 세제 개편 의지 강조"
-          },
-          "less_covered_context": [
-            "구체적인 세제 개편 방안",
-            "공급 대책의 구체적 내용"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:51:04.351579+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-1598f76db817d169",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "4cb0f69df3aa7a88c1360bfc653e549f81ad9b472e74ee8cadcc6d48253f29eb",
-            "title": "부동산 정책 향방은…마무리 발언서 \"어려움 감수\" (풀영상)",
-            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672235"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이재명 대통령이 부동산 정책 토론회에서 '똘똘한 한 채' 선호 현상이 사회에 심각한 문제를 야기했다고 지적하며, 정책 향방에 대한 마무리 발언을 했다.",
-          "headline_frame": "부동산 정책 토론회의 마무리 발언과 '똘똘한 한 채' 현상에 대한 문제 제기",
-          "main_focus": "이재명 대통령의 부동산 정책 토론회 마무리 발언과 '똘똘한 한 채' 현상이 사회에 미치는 부정적 영향에 대한 지적",
-          "keywords": [
-            "부동산 정책",
-            "똘똘한 한 채",
-            "토론회",
-            "사회 문제"
-          ],
-          "main_actors": [
-            "이재명 대통령"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "똘똘한 한 채 선호 현상"
-          ],
-          "background": [
-            "부동산 정책 토론회"
-          ],
-          "emphasized_effects": [
-            "사회에 심각한 문제 야기"
-          ],
-          "affected_groups": [
-            "사회"
+            "국민"
           ],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "부동산 정책 토론회를 열었습니다",
-              "똘똘한 한 채를 선호하는 현상이 \"사회에 심각한 문제를 야기했다\"고 지적했습니다"
+              "2년차 들어서는 구윤철 \"하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라\""
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "토론회 마무리 발언에서 정책 향방에 대한 추가 언급 없이 '어려움 감수' 발언만 확인됨"
+            "summary": "하반기 경제 현안 대응을 위한 역량 집중 요청"
           },
           "less_covered_context": [
-            "구체적인 정책 대안이나 해결 방안",
-            "토론회에 참석한 다른 패널들의 의견",
-            "부동산 시장의 구체적 통계나 데이터"
+            "정책 시행 이후의 구체적 효과",
+            "구체적인 대응 방안"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:51:15.123764+00:00",
+        "analyzed_at": "2026-08-16T18:29:42.325212+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-4d02cc9e7bcf3547",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "9ef41cab1b30f0d1eda3b2f4827474fd1e3d5c7ac25b911d9629758587047d79",
+            "title": "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\"",
+            "published_at": "Fri, 24 Jul 2026 11:18:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673137"
+          }
+        ],
+        "analysis": {
+          "article_summary": "구윤철 부총리는 24일 민생물가 특별관리 관계장관 태스크포스를 주재하며 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성을 긍정적으로 전망했다.",
+          "headline_frame": "경제 성장률과 1인당 GNI 달성 가능성에 초점",
+          "main_focus": "올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
+          "keywords": [
+            "경제 성장",
+            "3% 성장",
+            "1인당 GNI",
+            "4만달러",
+            "민생물가 특별관리",
+            "태스크포스"
+          ],
+          "main_actors": [
+            "구윤철 부총리 겸 재정경제부 장관"
+          ],
+          "quoted_sources": [
+            "구윤철 부총리 겸 재정경제부 장관"
+          ],
+          "causes": [
+            "민생물가 특별관리 관계장관 태스크포스 주재"
+          ],
+          "background": [
+            "민생물가 특별관리 관계장관 태스크포스"
+          ],
+          "emphasized_effects": [
+            "올해 3% 성장 가능성",
+            "1인당 GNI 4만달러 달성 가능성"
+          ],
+          "affected_groups": [
+            "민생물가"
+          ],
+          "tone": {
+            "category": "기대",
+            "evidence": [
+              "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\""
+            ]
+          },
+          "outlook": {
+            "direction": "긍정",
+            "summary": "올해 3% 성장과 1인당 GNI 4만달러 달성 가능성이 매우 높아졌다는 전망"
+          },
+          "less_covered_context": [
+            "구체적인 정책 수단이나 실행 계획",
+            "성장률 달성을 위한 구체적 조건이나 전제"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-16T18:29:42.765695+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-1598f76db817d169",
+      "issue_id": "issue-4d02cc9e7bcf3547",
       "groups": [
         {
-          "group_id": "group-01",
-          "label": "부동산 불로소득 문제 해결 및 국민통합 복원",
-          "summary": "부동산 불로소득 문제 해결을 통한 국민통합 및 사회적 역동성 복원이라는 핵심 관점을 공유하며, 불법-편법 동원된 부동산 불로소득을 주요 원인으로 지적하고 청년을 중심으로 한 양극화 완화를 강조하는 보도 태도를 보임",
+          "group_id": "group-1",
+          "label": "하반기 경제 현안 대응 및 국민 체감 변화",
+          "summary": "구윤철 부총리의 취임 1주년을 맞아 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청하는 관점",
           "keywords": [
-            "부동산 불로소득",
-            "국민통합",
-            "부동산 세제 개편",
-            "부동산 시장 안정",
-            "실수요자 지원",
-            "사회적 역동성 복원"
+            "하반기 경제 현안",
+            "국민 체감 변화",
+            "3高 리스크",
+            "청년고용 둔화",
+            "관세협상",
+            "중동전쟁"
           ],
           "publisher_ids": [
-            "donga"
+            "mk"
           ],
           "publishers": [
             {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
+              "publisher_id": "mk",
+              "publisher": "매일경제"
             }
           ],
           "publisher_count": 1,
           "group_evidence": [
-            "동아일보는 부동산 불로소득 문제 해결을 통한 국민통합 및 사회적 역동성 복원을 핵심 관점으로 제시하며, 불법-편법 동원된 부동산 불로소득을 주요 원인으로 지적하고 청년을 중심으로 한 양극화 완화를 강조함",
-            "SBS는 이재명 대통령의 부동산 정책 토론회 마무리 발언과 '똘똘한 한 채' 현상을 다루지만, 이는 동아일보가 제시한 부동산 불로소득 문제와 본질적으로 동일한 쟁점을 다루며, 사회적 문제 야기라는 측면에서 국민통합 저해라는 해석과 일치함"
+            "구윤철 부총리가 취임 1주년을 맞아 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청함",
+            "하반기 경제 현안 대응을 위한 2년차 역량 집중 요청"
           ]
         },
         {
-          "group_id": "group-ungrouped-sbs",
-          "label": "개별 분류 (그룹화 보류)",
-          "summary": "SBS는 다른 언론사와 뚜렷이 묶이지 않아 그룹화 단계에서 개별로 분류되었습니다.",
-          "keywords": [],
+          "group_id": "group-2",
+          "label": "경제 성장 및 1인당 GNI 달성 가능성",
+          "summary": "올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
+          "keywords": [
+            "경제 성장",
+            "3% 성장",
+            "1인당 GNI",
+            "4만달러",
+            "민생물가 특별관리",
+            "태스크포스"
+          ],
           "publisher_ids": [
             "sbs"
           ],
@@ -2436,48 +2023,59 @@
             }
           ],
           "publisher_count": 1,
-          "group_evidence": []
+          "group_evidence": [
+            "구윤철 부총리가 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성이 매우 높아졌다고 긍정적으로 전망함",
+            "민생물가 특별관리 관계장관 태스크포스를 통한 경제 성장 및 소득 목표 달성 가능성 강조"
+          ]
         }
       ],
       "group_count": 2,
-      "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 부동산 불로소득 문제를 핵심 쟁점으로 다루며, 국민통합 저해와 사회적 역동성 복원이라는 동일한 해석 방향을 공유함. 동아일보가 부동산 세제 개편과 실수요자 지원을 구체적으로 제시하는 반면, SBS는 정책 토론회와 '똘똘한 한 채' 현상에 초점을 맞추지만, 이는 동일한 문제의 다른 측면을 설명하는 것으로 판단되어 하나의 그룹으로 묶음",
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "mk는 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청하는 반면, sbs는 올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시함"
+        }
+      ],
+      "grouping_summary": "mk는 구윤철 부총리의 취임 1주년을 계기로 하반기 경제 현안 대응과 국민 체감 변화 달성을 위한 역량 집중을 요청하는 중립적 설명 관점을 보인 반면, sbs는 올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시함. 두 언론사는 구윤철 부총리의 발언을 인용하지만, mk는 경제 현안 대응과 국민 체감 변화에 초점을 맞추고, sbs는 경제 성장 및 소득 목표 달성 가능성에 초점을 맞추어 서로 다른 핵심 관점을 보임",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:51:21.900503+00:00",
+      "grouped_at": "2026-08-16T18:29:47.433564+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-1598f76db817d169",
+      "mk,sbs": {
+        "issue_id": "issue-4d02cc9e7bcf3547",
         "selected_publishers": [
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
+            "publisher_id": "mk",
+            "publisher": "매일경제"
           },
           {
             "publisher_id": "sbs",
             "publisher": "SBS"
           }
         ],
-        "common_summary": "이재명 대통령이 부동산 문제와 관련된 발언을 통해 국민통합 저해 요인을 지적하고 정책 방향을 제시했다.",
+        "common_summary": "구윤철 부총리가 경제 현안을 언급하며 하반기 경제 정책 방향을 제시한 내용을 다루고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 이재명 대통령이 부동산 관련 발언을 통해 국민통합 저해 요인을 지적했다는 점에서 공통점을 보인다.",
+            "contrast_statement": "두 언론사 모두 구윤철 부총리가 경제 현안을 언급하며 하반기 경제 정책 방향을 제시한 내용을 다루고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "부동산 불로소득이 국민통합 저해의 주범이라고 규정하며 부동산 문제 정상화와 세제 개편 의지를 밝혔다.",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "구윤철 부총리의 취임 1주년 메시지와 하반기 경제 현안 대응을 중심으로 구성",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "부동산 정책 토론회에서 '똘똘한 한 채' 선호 현상이 사회에 심각한 문제를 야기했다고 지적했다.",
+                "summary": "구윤철 부총리가 민생물가 특별관리 관계장관 태스크포스를 주재하며 경제 성장률과 1인당 GNI 달성 가능성을 전망한 내용",
                 "evidence": []
               }
             ]
@@ -2485,18 +2083,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 부동산 불로소득 문제 해결을 통한 국민통합 및 사회적 역동성 복원을 강조한 반면, SBS는 '똘똘한 한 채' 현상이 사회에 미치는 부정적 영향에 초점을 맞췄다.",
+            "contrast_statement": "매일경제는 하반기 경제 현안 대응과 국민 체감 변화 달성을 강조한 반면, SBS는 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "부동산 불로소득 문제 해결을 통한 국민통합 및 사회적 역동성 복원",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응 및 국민 체감 변화 달성을 위한 역량 집중 요청",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "'똘똘한 한 채' 현상이 사회에 미치는 부정적 영향 지적",
+                "summary": "올해 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
                 "evidence": []
               }
             ]
@@ -2504,18 +2102,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 불법·편법 동원된 부동산 불로소득을 원인으로 제시한 반면, SBS는 '똘똘한 한 채' 선호 현상을 원인으로 강조했다.",
+            "contrast_statement": "매일경제는 취임 1주년과 2년차를 배경으로 하반기 경제 현안을 강조한 반면, SBS는 민생물가 특별관리 관계장관 태스크포스 주재를 배경으로 경제 전망을 제시했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "불법-편법 동원된 부동산 불로소득이 국민통합 저해의 주범",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "취임 1주년 및 2년차 시작을 배경으로 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화) 대응을 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "'똘똘한 한 채' 선호 현상이 사회에 심각한 문제를 야기",
+                "summary": "민생물가 특별관리 관계장관 태스크포스 주재를 배경으로 올해 3% 성장 및 1인당 GNI 4만달러 달성 가능성을 전망",
                 "evidence": []
               }
             ]
@@ -2523,18 +2121,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 청년을 대상으로 한 양극화 완화와 사회적 역동성 복원을 강조한 반면, SBS는 사회 전반에 미치는 부정적 영향을 강조했다.",
+            "contrast_statement": "매일경제는 국민 체감 변화를 강조한 반면, SBS는 민생물가를 대상으로 한 경제 성장률과 1인당 GNI 달성 가능성을 강조했다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "청년 대상 양극화 완화 및 사회적 역동성 복원",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "국민 체감 변화 달성을 위한 역량 집중 요청",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "사회에 심각한 문제 야기",
+                "summary": "민생물가를 대상으로 한 올해 3% 성장 및 1인당 GNI 4만달러 달성 가능성 전망",
                 "evidence": []
               }
             ]
@@ -2542,55 +2140,54 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 부동산 불로소득의 부정적 영향을 우려·경계하는 태도를 보인 반면, SBS는 토론회 마무리 발언을 중립적으로 설명하는 태도를 보였다.",
+            "contrast_statement": "매일경제는 중립적으로 경제 현안을 설명하는 태도를 보인 반면, SBS는 긍정적인 전망을 제시하는 태도를 보였다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "부동산 불로소득이 공정과 상식을 파괴하고 국민 통합을 저해한다는 우려를 경계하는 태도",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달하며 하반기 경제 현안 대응을 설명",
                 "evidence": [
-                  "불법과 편법이 동원되는 부동산 불로소득은 우리 사회의 공정과 상식을 파괴하고 국민 통합을 저해하는 가장 큰 주범"
+                  "2년차 들어서는 구윤철 \"하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라\""
                 ]
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "부동산 정책 토론회와 '똘똘한 한 채' 현상에 대한 중립적 설명 태도",
+                "summary": "경제 성장률과 1인당 GNI 달성 가능성에 대해 긍정적인 전망을 제시",
                 "evidence": [
-                  "부동산 정책 토론회를 열었습니다",
-                  "똘똘한 한 채를 선호하는 현상이 \"사회에 심각한 문제를 야기했다\"고 지적했습니다"
+                  "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\""
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "이재명 대통령이 부동산 관련 발언을 통해 국민통합 저해 요인을 지적했다는 점",
-          "부동산 불로소득 또는 '똘똘한 한 채' 현상이 사회적 문제를 야기한다는 인식"
+          "구윤철 부총리가 경제 현안을 언급하며 하반기 경제 정책 방향을 제시한 점",
+          "구윤철 부총리가 주요 행위자로 등장한 점"
         ],
         "key_differences": [
-          "동아일보는 부동산 불로소득을 국민통합 저해의 주범으로 규정하고 세제 개편 의지를 강조한 반면, SBS는 '똘똘한 한 채' 선호 현상에 초점을 맞추고 구체적 정책 대안 제시 없이 토론회 마무리 발언만 보도했다."
+          "매일경제는 하반기 경제 현안 대응과 국민 체감 변화에 초점을 맞춘 반면, SBS는 경제 성장률과 1인당 GNI 달성 가능성에 대한 긍정적 전망에 초점을 맞춤"
         ],
-        "comparison_report": "동아일보와 SBS 모두 이재명 대통령의 부동산 관련 발언을 보도했으나, 동아일보가 부동산 불로소득을 국민통합 저해의 주범으로 규정하고 세제 개편 의지를 강조한 반면, SBS는 '똘똘한 한 채' 선호 현상이 사회에 미치는 부정적 영향에 초점을 맞추며 토론회 마무리 발언을 중립적으로 설명했다. 동아일보가 청년 대상 양극화 완화와 사회적 역동성 복원을 강조한 데 비해 SBS는 사회 전반에 미치는 부정적 영향을 강조했으며, 동아일보가 부동산 불로소득의 부정적 영향에 대해 우려·경계하는 태도를 보인 반면 SBS는 보다 중립적인 설명 태도를 보였다.",
+        "comparison_report": "매일경제는 구윤철 부총리의 취임 1주년 메시지를 중심으로 하반기 경제 현안(관세협상, 중동전쟁, 3高 리스크, 청년고용 둔화 등)에 대한 대응과 국민 체감 변화 달성을 위한 역량 집중을 강조한 반면, SBS는 구윤철 부총리가 민생물가 특별관리 관계장관 태스크포스를 주재한 내용을 바탕으로 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시했다. 두 언론사 모두 구윤철 부총리를 주요 행위자로 다루었으나, 매일경제는 중립적인 설명 태도를 보인 데 비해 SBS는 긍정적인 전망을 제시하는 태도를 보였다.",
         "source_links": [
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "李 “불법-편법 동원된 부동산 불로소득, 국민통합 저해 주범”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260721/134337312/1",
-            "published_at": "Tue, 21 Jul 2026 17:11:00 +0900"
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "2년차 들어서는 구윤철 “하반기 경제 현안 산적…국민 체감 변화에 역량 집중해달라”",
+            "link": "https://www.mk.co.kr/news/economy/12102215",
+            "published_at": "Mon, 20 Jul 2026 11:09:02 +09:00"
           },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "부동산 정책 향방은…마무리 발언서 \"어려움 감수\" (풀영상)",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672235",
-            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900"
+            "title": "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673137",
+            "published_at": "Fri, 24 Jul 2026 11:18:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-24T21:51:45.296193+00:00",
+        "compared_at": "2026-08-16T18:29:56.292756+00:00",
         "model": "solar-pro3"
       }
     }
@@ -2610,19 +2207,17 @@
           }
         ],
         "analysis": {
-          "article_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리에 대응해 전문가 공청회를 개최하며 보완수사권의 존폐를 놓고 찬반 격론을 벌였다.",
-          "headline_frame": "보완수사권의 존폐 문제를 둘러싼 찬반 격론",
-          "main_focus": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 우려하는 사회적 목소리에 대응해 전문가 공청회를 열고 보완수사권의 존폐를 논의하는 과정",
+          "article_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다.",
+          "headline_frame": "검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론",
+          "main_focus": "민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 논의",
           "keywords": [
             "보완수사권",
             "공청회",
             "장윤기 사건",
-            "존폐",
-            "찬반"
+            "존폐"
           ],
           "main_actors": [
             "민주당",
-            "전문가",
             "검찰"
           ],
           "quoted_sources": [],
@@ -2630,13 +2225,13 @@
             "장윤기 사건"
           ],
           "background": [
-            "검찰 보완수사권 폐지 우려"
+            "검찰 보완수사권"
           ],
           "emphasized_effects": [
-            "사회적 목소리"
+            "사회적 우려"
           ],
           "affected_groups": [
-            "검찰"
+            "전문가"
           ],
           "tone": {
             "category": "중립 설명",
@@ -2646,17 +2241,16 @@
           },
           "outlook": {
             "direction": "중립",
-            "summary": "공청회를 통해 보완수사권 존폐에 대한 찬반 논의가 진행되었으나 향후 전망은 구체적으로 제시되지 않음"
+            "summary": "공청회를 통해 찬반 논의가 진행되었으나 향후 전망은 명시되지 않음"
           },
           "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "보완수사권 폐지 시 수사 체계 변화",
-            "관련 법률 개정 절차"
+            "공청회 이후 구체적인 정책 결정 방향",
+            "보완수사권 폐지에 대한 검찰 측의 공식 입장"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:51:50.650575+00:00",
+        "analyzed_at": "2026-08-16T18:30:14.581848+00:00",
         "model": "solar-pro3"
       },
       {
@@ -2682,7 +2276,7 @@
             "형사소송법 보완책"
           ],
           "main_actors": [
-            "더불어민주당 지도부",
+            "더불어민주당",
             "한병도 대표 직무대행 겸 원내대표"
           ],
           "quoted_sources": [
@@ -2704,8 +2298,7 @@
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "더불어민주당 지도부가 검사 보완수사권 문제 숙의를 위한 정책의원총회를 연 지 하루 만에 보완수사권 전면 폐지 방침을 공식화하며 입법 속도전에 나섰다",
-              "보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위해 서둘러 논의를 매듭지으려 한다는 분석이 나온다"
+              "더불어민주당 지도부가 검사 보완수사권 문제 숙의를 위한 정책의원총회를 연 지 하루 만에 보완수사권 전면 폐지 방침을 공식화하며 입법 속도전에 나섰다."
             ]
           },
           "outlook": {
@@ -2714,13 +2307,12 @@
           },
           "less_covered_context": [
             "보완수사권 폐지에 따른 구체적인 부작용 사례",
-            "형사소송법 보완책의 구체적 내용",
-            "보완수사권 폐지에 대한 검찰 및 법조계 반응"
+            "형사소송법 보완책의 구체적 내용"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-07-24T21:51:51.601031+00:00",
+        "analyzed_at": "2026-08-16T18:30:14.788739+00:00",
         "model": "solar-pro3"
       }
     ],
@@ -2728,16 +2320,13 @@
       "issue_id": "issue-036e0ea540f5ae56",
       "groups": [
         {
-          "group_id": "group-01",
-          "label": "보완수사권 존폐 논의와 입법 추진",
-          "summary": "SBS는 장윤기 사건을 계기로 검찰 보완수사권 존폐를 논의하는 사회적 맥락과 전문가 공청회를 중심으로 보도했고, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 강조하며 사회적 약자 대상 범죄 영향까지 다루었습니다. 두 언론사 모두 보완수사권의 존폐 문제를 핵심 쟁점으로 삼고 있으며, SBS는 중립적 설명, 동아일보는 입법 추진 및 부작용 차단을 위한 중립적 설명을 제시했습니다.",
+          "group_id": "group-1",
+          "label": "보완수사권 폐지 방침과 사회적 우려",
+          "summary": "민주당의 보완수사권 폐지 방침과 입법 속도전, 그리고 이로 인한 사회적 우려를 중심으로 한 보도",
           "keywords": [
-            "보완수사권",
-            "공청회",
-            "장윤기 사건",
-            "존폐",
+            "보완수사권 폐지",
             "입법 속도전",
-            "전당대회 영향 차단"
+            "사회적 우려"
           ],
           "publisher_ids": [
             "sbs",
@@ -2755,18 +2344,18 @@
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "SBS는 장윤기 사건을 계기로 검찰 보완수사권 존폐를 논의하는 사회적 맥락과 전문가 공청회를 중심으로 보도",
-            "동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 강조하며 사회적 약자 대상 범죄 영향까지 다룸",
-            "두 언론사 모두 보완수사권의 존폐 문제를 핵심 쟁점으로 삼고 있으며, SBS는 중립적 설명, 동아일보는 입법 추진 및 부작용 차단을 위한 중립적 설명을 제시"
+            "SBS는 민주당의 전문가 공청회를 통해 보완수사권 존폐 문제를 둘러싼 찬반 격론을 보도하며, 장윤기 사건을 중심으로 사회적 우려를 강조함",
+            "동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 그리고 전당대회 쟁점화 차단을 보도하며, 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄에 대한 영향을 강조함",
+            "두 언론사 모두 보완수사권 폐지라는 핵심 쟁점을 다루되, SBS는 찬반 논의와 사회적 우려를, 동아일보는 입법 추진 과정과 사회적 약자 보호 측면을 강조하여 보완수사권 폐지에 대한 공통된 핵심 관점을 공유함"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "SBS와 동아일보 모두 보완수사권의 존폐 문제를 핵심 쟁점으로 다루었으나, SBS는 장윤기 사건을 계기로 한 사회적 논의와 공청회에 초점을 맞춘 반면, 동아일보는 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 강조했습니다. 두 언론사 모두 중립적 설명 태도를 유지했으나, SBS는 보완수사권 존폐 자체에 대한 찬반 논의를, 동아일보는 폐지 방침의 입법 추진 및 부작용 차단을 중심으로 보도했습니다.",
+      "grouping_summary": "SBS와 동아일보 모두 민주당의 보완수사권 폐지 방침을 주요 쟁점으로 보도하며, SBS는 전문가 공청회를 통한 찬반 논의와 사회적 우려를, 동아일보는 입법 속도전과 사회적 약자 대상 범죄 영향 차단을 강조함. 두 언론사 모두 보완수사권 폐지에 대한 공통된 핵심 관점을 가지고 있으나, SBS는 찬반 격론이라는 해석 방향을, 동아일보는 입법 추진이라는 해석 방향을 보여줌.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-07-24T21:51:55.733518+00:00",
+      "grouped_at": "2026-08-16T18:30:17.533292+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
@@ -2782,24 +2371,24 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 존폐를 놓고 전문가 공청회를 개최하며 찬반 격론을 벌인 내용을 다루고 있다.",
+        "common_summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다는 내용이 두 언론사 모두에서 확인된다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "SBS는 장윤기 사건을 계기로 검찰 보완수사권 존폐를 놓고 전문가 공청회를 개최한 사실을, 동아일보는 더불어민주당이 검사 보완수사권 전면 폐지 방침을 공식화하고 입법 속도전에 나선 사실을 보도하여, 보완수사권 존폐 논의라는 공통 주제를 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다는 사실을 공통적으로 보도한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "장윤기 사건을 계기로 검찰 보완수사권 존폐를 놓고 전문가 공청회를 개최한 사실을 보도",
+                "summary": "민주당이 장윤기 사건을 계기로 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다.",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "더불어민주당이 검사 보완수사권 전면 폐지 방침을 공식화하고 입법 속도전에 나선 사실을 보도",
+                "summary": "더불어민주당이 검사 보완수사권 전면 폐지 방침을 공식화하고 입법 속도전에 나섰다.",
                 "evidence": []
               }
             ]
@@ -2807,18 +2396,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 보완수사권 존폐를 놓고 찬반 격론이 벌어진 과정을, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 핵심 관점으로 제시하고 있다.",
+            "contrast_statement": "SBS는 검찰 보완수사권 존폐 문제를 둘러싼 찬반 논의에 초점을 맞춘 반면, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단에 더 중점을 둔다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "보완수사권 존폐를 놓고 찬반 격론이 벌어진 과정을 보도",
+                "summary": "민주당의 전문가 공청회를 통해 검찰 보완수사권 폐지 여부에 대한 찬반 논의.",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 전당대회 쟁점화 차단을 핵심 관점으로 제시",
+                "summary": "보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 그리고 전당대회 쟁점화 차단.",
                 "evidence": []
               }
             ]
@@ -2826,18 +2415,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 장윤기 사건을 강조된 원인으로, 동아일보는 보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위한 배경을 강조하고 있다.",
+            "contrast_statement": "SBS는 장윤기 사건을 직접적인 원인으로 강조한 반면, 동아일보는 장윤기 사건보다는 전당대회 쟁점화 차단을 더 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "장윤기 사건을 강조된 원인으로 제시",
+                "summary": "장윤기 사건을 검찰 보완수사권 폐지 찬반 논의의 계기로 강조.",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "보완수사권 문제가 8·17 전당대회 쟁점으로 번지는 것을 차단하기 위한 배경을 강조",
+                "summary": "8·17 전당대회 쟁점으로 번지는 것을 차단하기 위한 조치로 강조.",
                 "evidence": []
               }
             ]
@@ -2845,18 +2434,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 사회적 목소리를 영향 대상으로, 동아일보는 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄와 형사소송법 보완책 마련을 영향 대상으로 강조하고 있다.",
+            "contrast_statement": "SBS는 사회적 우려를 강조한 반면, 동아일보는 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄에 대한 영향과 형사소송법 보완책 마련을 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "사회적 목소리를 영향 대상으로 강조",
+                "summary": "검찰 보완수사권 폐지에 따른 사회적 우려.",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "성폭력·아동 대상 사건 등 사회적 약자 대상 범죄와 형사소송법 보완책 마련을 영향 대상으로 강조",
+                "summary": "보완수사권 폐지에 따른 부작용 차단과 성폭력·아동 대상 사건 등 사회적 약자 대상 범죄에 대한 영향.",
                 "evidence": []
               }
             ]
@@ -2864,30 +2453,33 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목으로 중립 설명 태도를, 동아일보는 '與, 보완수사권 폐지 이르면 이달말 처리 방침… 전대 영향 차단'이라는 제목으로 중립 설명 태도를 보이고 있다.",
+            "contrast_statement": "SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론이라는 제목으로 중립적으로 설명하며, 동아일보는 '與, 보완수사권 폐지 이르면 이달말 처리 방침… 전대 영향 차단'이라는 제목으로 입법 속도와 전당대회 차단을 강조하는 태도를 보인다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "보완수사권 정책 의총에서 찬반 격론이 벌어진 사실을 중립적으로 설명",
+                "summary": "사실관계를 중립적으로 전달하며 검찰 보완수사권 존폐 문제를 둘러싼 찬반 격론을 설명.",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "보완수사권 폐지 방침과 입법 속도전, 전당대회 영향 차단을 중립적으로 설명",
+                "summary": "입법 속도전과 전당대회 영향 차단을 강조하는 보도 태도.",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "보완수사권 존폐 논의, 장윤기 사건, 전문가 공청회/정책의원총회, 사회적 목소리/전당대회 영향 차단"
+          "민주당이 검찰 보완수사권 폐지를 둘러싼 찬반 논의를 위해 전문가 공청회를 개최했다는 점",
+          "검찰 보완수사권 폐지 논의가 사회적 관심사라는 점"
         ],
         "key_differences": [
-          "SBS는 보완수사권 존폐를 놓고 찬반 격론이 벌어진 과정을, 동아일보는 보완수사권 전면 폐지 방침과 입법 속도전을 강조"
+          "SBS는 장윤기 사건을 직접적인 계기로 강조한 반면, 동아일보는 전당대회 쟁점화 차단을 더 강조함",
+          "SBS는 사회적 우려를 강조한 반면, 동아일보는 성폭력·아동 대상 범죄 등 구체적 영향 대상을 강조함",
+          "SBS는 중립적 설명 태도를 보인 반면, 동아일보는 입법 속도와 전당대회 차단을 강조하는 태도를 보임"
         ],
-        "comparison_report": "SBS와 동아일보 모두 민주당이 장윤기 사건을 계기로 검찰 보완수사권 문제를 다루고 있으나, SBS는 전문가 공청회를 통한 찬반 격론 과정에 초점을 맞춘 반면, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 8·17 전당대회 쟁점화 차단을 핵심 내용으로 보도하고 있다. SBS는 장윤기 사건을 강조된 원인으로, 동아일보는 전당대회 쟁점화 차단을 강조된 배경으로 제시하고 있으며, 영향 대상에서도 SBS는 사회적 목소리, 동아일보는 사회적 약자 대상 범죄와 형사소송법 보완책을 강조하고 있다. 두 언론사 모두 중립 설명 태도를 보이고 있으나, SBS는 '보완수사권' 정책 의총…'존폐' 놓고 찬반 격론, 동아일보는 '與, 보완수사권 폐지 이르면 이달말 처리 방침… 전대 영향 차단'이라는 제목으로 보도 태도를 나타내고 있다.",
+        "comparison_report": "SBS와 동아일보 모두 민주당이 검찰 보완수사권 폐지를 둘러싼 전문가 공청회를 개최했다는 공통점을 보도하지만, SBS는 장윤기 사건을 계기로 한 찬반 논의에 초점을 맞추고 사회적 우려를 강조한 반면, 동아일보는 보완수사권 전면 폐지 방침의 공식화와 입법 속도전, 그리고 8·17 전당대회 쟁점화 차단을 더 강조하며 성폭력·아동 대상 범죄 등 사회적 약자 대상 범죄에 대한 구체적 영향을 부각시켰다. 보도 태도 측면에서 SBS는 중립적 설명을, 동아일보는 입법 속도와 전당대회 차단을 강조하는 태도를 보였다.",
         "source_links": [
           {
             "publisher_id": "sbs",
@@ -2906,7 +2498,7 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-07-24T21:52:07.183587+00:00",
+        "compared_at": "2026-08-16T18:30:26.051421+00:00",
         "model": "solar-pro3"
       }
     }
