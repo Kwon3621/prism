@@ -1,221 +1,207 @@
 {
-  "issue-60d35953f5574906": {
+  "issue-fd885997954a2648": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-60d35953f5574906",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
+        "issue_id": "issue-fd885997954a2648",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "9d1bf2bf4db2e3f9948242786581c065120ddeaeaac54e5373b5b00de839aa0b",
-            "title": "국힘 중징계 4인 “정치적 숙청”…중진도 “민심까지 징계할순 없어”",
-            "published_at": "Fri, 21 Aug 2026 12:23:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134518312/1"
+            "article_id": "8524ae76c4f44237b2341f4249d412c3acd1d5e3218b85c326721ebeddd434c3",
+            "title": "“사법 정치꾼” vs “의회 독재”…조희대 ‘대법관 제청’ 놓고 여야 정면충돌",
+            "published_at": "Wed, 19 Aug 2026 16:37:52 +09:00",
+            "link": "https://www.mk.co.kr/news/politics/12131322"
           }
         ],
         "analysis": {
-          "article_summary": "국민의힘 중앙윤리위원회가 조경태, 권영진, 서범수, 진종오 의원의 당원권을 정지하는 중징계를 의결하자, 징계 당사자들은 '정치적 숙청'이라며 법적 대응과 재심을 검토하고, 중진 의원들은 '민심까지 징계할 수 없다'며 장동혁 지도부를 비판했다.",
-          "headline_frame": "정치적 숙청",
-          "main_focus": "징계 당사자들의 반발과 법적 대응 가능성, 중진 의원들의 지도부 비판",
+          "article_summary": "국회 법제사법위원회가 조희대 대법원장의 국회 출석을 요구하며 대법관 후보 제청을 둘러싼 여야 공방이 정면충돌 양상으로 번지고 있다.",
+          "headline_frame": "조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 여야의 정면충돌",
+          "main_focus": "대법관 제청 과정에서 발생한 여야 간의 정치적 대립과 충돌 양상",
           "keywords": [
-            "정치적 숙청",
-            "당원권 정지",
-            "법적 대응",
-            "재심",
-            "민심 징계"
+            "대법관 제청",
+            "정면충돌",
+            "사법 정치꾼",
+            "의회 독재",
+            "법제사법위원회"
           ],
           "main_actors": [
-            "조경태",
-            "권영진",
-            "서범수",
-            "진종오",
-            "장동혁",
-            "국민의힘 중앙윤리위원회"
-          ],
-          "quoted_sources": [
-            "조경태",
-            "권영진",
-            "진종오",
-            "김태호"
-          ],
-          "causes": [
-            "윤리위의 정치적 숙청 도구 전락"
-          ],
-          "background": [
-            "국민의힘 중앙윤리위원회의 징계 의결"
-          ],
-          "emphasized_effects": [
-            "법적 대응 가능성",
-            "재심 청구",
-            "지도부 비판"
-          ],
-          "affected_groups": [
-            "국민의힘 당원",
-            "민심"
-          ],
-          "tone": {
-            "category": "비판",
-            "evidence": [
-              "정치적 숙청의 도구로 전락했다",
-              "민심까지 징계할 수 없다"
-            ]
-          },
-          "outlook": {
-            "direction": "혼합",
-            "summary": "징계 당사자들의 법적 대응과 재심 검토, 중진 의원들의 지도부 비판으로 당내 갈등이 심화될 전망"
-          },
-          "less_covered_context": [
-            "징계 처분의 구체적 기준",
-            "윤리위 내부 논의 과정",
-            "향후 당내 여론 변화"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:10:41.823574+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-60d35953f5574906",
-        "publisher_id": "chosun",
-        "publisher": "조선일보",
-        "articles": [
-          {
-            "article_id": "b811325b0ddae32cd3ea9632b835a892c671fc3447bc8584db9f59dc82da9846",
-            "title": "[정치 인사이드] 한여름밤의 무더기 징계…국힘 내홍 일촉즉발",
-            "published_at": "Thu, 20 Aug 2026 12:22:12 +0000",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/20/GJSGKMTDGMYTKMJVG5TDEZTBGM/"
-          }
-        ],
-        "analysis": {
-          "article_summary": "국민의힘 중앙윤리위원회가 비당권파 현역 의원 4명에 대해 당원권 정지 중징계를 결정했으며, 이 중 3명은 1년 6개월 이상의 징계로 다음 총선 출마가 사실상 불가능해졌다.",
-          "headline_frame": "무더기 징계와 당내 갈등",
-          "main_focus": "국민의힘 중앙윤리위원회의 징계 결정과 이로 인한 당내 갈등 심화",
-          "keywords": [
-            "무더기 징계",
-            "당원권 정지",
-            "중징계",
-            "비당권파",
-            "총선 출마 제한"
-          ],
-          "main_actors": [
-            "국민의힘 중앙윤리위원회",
-            "조경태",
-            "진종오",
-            "권영진",
-            "비당권파 현역 의원"
+            "조희대 대법원장",
+            "국회 법제사법위원회",
+            "여야"
           ],
           "quoted_sources": [],
           "causes": [
-            "국민의힘 중앙윤리위원회의 징계 결정"
+            "대법관 후보 제청",
+            "국회 출석 요구"
           ],
           "background": [
-            "국민의힘 중앙윤리위원회의 징계 권한"
+            "국회 법제사법위원회 전체회의"
           ],
           "emphasized_effects": [
-            "다음 총선 출마 길 차단",
-            "당내 갈등 점입가경"
+            "정면충돌 양상"
           ],
           "affected_groups": [
-            "비당권파 현역 의원",
-            "국민의힘"
+            "대법원",
+            "국회"
           ],
           "tone": {
-            "category": "우려·경계",
+            "category": "갈등 강조",
             "evidence": [
-              "한여름밤의 무더기 징계",
-              "국힘 내홍 일촉즉발"
+              "정면충돌",
+              "사법 정치꾼 vs 의회 독재"
             ]
           },
           "outlook": {
-            "direction": "혼합",
-            "summary": "징계 철회 여부에 따라 당내 갈등이 완화될 수도 있으나, 총선 출마 제한으로 인해 갈등이 장기화될 가능성도 있다."
+            "direction": "중립",
+            "summary": "향후 법사위 전체회의 결과에 따라 대법관 제청 절차가 진행될 것으로 보인다."
           },
           "less_covered_context": [
-            "징계 철회 절차 및 가능성",
-            "징계 대상 의원들의 구체적 입장",
-            "당내 다른 계파들의 반응"
+            "대법관 후보 제청 절차의 구체적 법적 근거",
+            "조희대 대법원장의 국회 출석 요구 배경"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:10:42.241574+00:00",
+        "analyzed_at": "2026-08-22T06:38:55.886037+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-fd885997954a2648",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "8053a2fb462dcee7cba76dd6a5e2934e489dc124e66662f29eece9192b2b373e",
+            "title": "[정치사냥꾼] 대법관 '서면 제청' 파문…여야 모두 '집안싸움' 격화",
+            "published_at": "Fri, 21 Aug 2026 19:40:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716131"
+          }
+        ],
+        "analysis": {
+          "article_summary": "대법관 임명 과정에서 발생한 '서면 제청' 파문을 다루며, 여야 간 갈등이 집안싸움으로 격화되고 있음을 보도한다.",
+          "headline_frame": "대법관 '서면 제청' 파문과 여야 간 '집안싸움' 격화",
+          "main_focus": "대법관 임명 절차의 서면 제청 파문이 여야 간 내부 갈등으로 확대되는 상황을 중점적으로 다룬다.",
+          "keywords": [
+            "대법관",
+            "서면 제청",
+            "파문",
+            "여야",
+            "집안싸움"
+          ],
+          "main_actors": [
+            "대법관",
+            "여야"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "대법관 임명 과정의 서면 제청"
+          ],
+          "background": [
+            "대법관 임명 절차"
+          ],
+          "emphasized_effects": [
+            "여야 간 집안싸움 격화"
+          ],
+          "affected_groups": [
+            "대법관",
+            "여야"
+          ],
+          "tone": {
+            "category": "갈등 강조",
+            "evidence": [
+              "대법관 '서면 제청' 파문",
+              "여야 모두 '집안싸움' 격화"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "대법관 임명 절차의 서면 제청 파문이 여야 간 갈등으로 확대되는 상황을 보도하며, 향후 전망에 대한 구체적 언급은 없다."
+          },
+          "less_covered_context": [
+            "파문의 구체적 발생 경위",
+            "관련 법조인 또는 외부 전문가의 입장"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:38:55.946761+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-60d35953f5574906",
+      "issue_id": "issue-fd885997954a2648",
       "groups": [
         {
           "group_id": "group-01",
-          "label": "징계 결정과 당내 갈등 심화",
-          "summary": "두 언론사 모두 국민의힘 중앙윤리위원회의 징계 결정을 핵심 쟁점으로 다루며, 징계로 인한 당내 갈등 심화와 법적 대응 가능성을 공통적으로 강조하고 있습니다.",
+          "label": "대법관 제청 갈등과 정치적 대립",
+          "summary": "대법관 제청 과정에서 발생한 여야 간의 정치적 대립과 충돌 양상을 중심으로, 국회 출석 요구와 서면 제청 파문을 둘러싼 갈등 상황을 강조한다.",
           "keywords": [
-            "징계 결정",
-            "당내 갈등",
-            "법적 대응",
-            "재심"
+            "대법관 제청",
+            "정면충돌",
+            "서면 제청 파문",
+            "여야 갈등"
           ],
           "publisher_ids": [
-            "donga",
-            "chosun"
+            "mk",
+            "sbs"
           ],
           "publishers": [
             {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
+              "publisher_id": "mk",
+              "publisher": "매일경제"
             },
             {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
+              "publisher_id": "sbs",
+              "publisher": "SBS"
             }
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "동아일보는 징계 당사자들의 반발과 법적 대응 가능성, 중진 의원들의 지도부 비판을 중심으로 보도하며, 윤리위의 정치적 숙청 도구 전락이라는 원인을 지적하고 있습니다.",
-            "조선일보는 무더기 징계와 당내 갈등 심화를 핵심 관점으로 제시하며, 징계 결정으로 인한 다음 총선 출마 길 차단과 비당권파 현역 의원에 대한 영향을 강조하고 있습니다."
+            "대법관 제청 과정에서 발생한 여야 간의 정치적 대립과 충돌 양상",
+            "대법관 임명 절차의 서면 제청 파문이 여야 간 내부 갈등으로 확대되는 상황",
+            "국회 출석 요구와 서면 제청 파문을 둘러싼 갈등 상황"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 국민의힘 중앙윤리위원회의 징계 결정을 중심 쟁점으로 삼고 있으며, 징계로 인한 당내 갈등 심화와 법적 대응 가능성을 공통적으로 보도하고 있습니다. 동아일보는 윤리위의 정치적 숙청 도구 전락이라는 비판적 시각을, 조선일보는 무더기 징계로 인한 총선 출마 제한과 당내 갈등 장기화에 대한 우려·경계 태도를 보이고 있으나, 핵심 해석과 평가 방향이 대체로 일치하여 하나의 그룹으로 묶을 수 있습니다.",
+      "grouping_summary": "두 언론사 모두 대법관 제청 과정에서 발생한 여야 간의 정치적 대립과 갈등 양상을 핵심 쟁점으로 다루고 있으며, 국회 출석 요구와 서면 제청 파문을 둘러싼 충돌 상황을 강조한다. 핵심 관점과 해석 방향이 대체로 일치하여 같은 그룹으로 분류하였다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T01:10:45.927473+00:00",
+      "grouped_at": "2026-08-22T06:38:58.953653+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "chosun,donga": {
-        "issue_id": "issue-60d35953f5574906",
+      "mk,sbs": {
+        "issue_id": "issue-fd885997954a2648",
         "selected_publishers": [
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
+            "publisher_id": "mk",
+            "publisher": "매일경제"
           },
           {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
+            "publisher_id": "sbs",
+            "publisher": "SBS"
           }
         ],
-        "common_summary": "국민의힘 중앙윤리위원회가 조경태, 권영진, 서범수, 진종오 의원에 대한 당원권 정지 중징계를 의결했으며, 징계 당사자들은 정치적 숙청이라며 반발하고 법적 대응을 검토했다.",
+        "common_summary": "대법관 임명 과정에서 발생한 '서면 제청' 파문을 다루며, 여야 간 갈등이 집안싸움으로 격화되고 있음을 보도한다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 국민의힘 중앙윤리위원회의 조경태, 권영진, 서범수, 진종오 의원에 대한 당원권 정지 중징계 의결을 보도하며, 징계 당사자들의 반발과 법적 대응 가능성을 공통적으로 확인했다.",
+            "contrast_statement": "두 언론사 모두 대법관 임명 과정에서 발생한 '서면 제청' 파문과 여야 간 갈등을 다루고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "국민의힘 중앙윤리위원회의 조경태, 권영진, 서범수, 진종오 의원에 대한 당원권 정지 중징계 의결",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "대법관 후보 제청 과정에서 발생한 여야 간 정면충돌 양상을 보도",
                 "evidence": []
               },
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "국민의힘 중앙윤리위원회의 비당권파 현역 의원 4명에 대한 무더기 징계 결정",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "대법관 임명 절차의 서면 제청 파문이 여야 간 집안싸움으로 확대되는 상황을 보도",
                 "evidence": []
               }
             ]
@@ -223,18 +209,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 징계 당사자들의 반발과 법적 대응 가능성에 초점을 맞춘 반면, 조선일보는 중앙윤리위원회의 징계 결정과 이로 인한 당내 갈등 심화를 주요 관점으로 제시했다.",
+            "contrast_statement": "매일경제는 대법관 후보 제청 과정의 정치적 대립을, SBS는 대법관 임명 절차의 서면 제청 파문을 중심으로 보도한다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "징계 당사자들의 반발과 법적 대응 가능성",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "대법관 제청 과정에서 발생한 여야 간의 정치적 대립과 충돌 양상",
                 "evidence": []
               },
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "중앙윤리위원회의 징계 결정과 당내 갈등 심화",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "대법관 임명 절차의 서면 제청 파문이 여야 간 내부 갈등으로 확대되는 상황",
                 "evidence": []
               }
             ]
@@ -242,18 +228,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 윤리위의 정치적 숙청 도구 전락 가능성을 원인으로 강조한 반면, 조선일보는 윤리위의 징계 권한 행사를 배경으로 제시했다.",
+            "contrast_statement": "매일경제는 대법관 후보 제청 및 국회 출석 요구를, SBS는 대법관 임명 절차의 서면 제청 파문을 강조한다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "윤리위의 정치적 숙청 도구 전락",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "대법관 후보 제청 및 국회 법제사법위원회 전체회의에서의 출석 요구",
                 "evidence": []
               },
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "윤리위의 징계 권한 행사",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "대법관 임명 절차의 서면 제청 파문",
                 "evidence": []
               }
             ]
@@ -261,18 +247,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 법적 대응 가능성과 재심 청구, 지도부 비판을 강조한 반면, 조선일보는 다음 총선 출마 길 차단과 당내 갈등 점입가경을 주요 영향으로 제시했다.",
+            "contrast_statement": "매일경제는 대법원과 국회 간 정면충돌 양상을, SBS는 여야 간 집안싸움 격화를 강조한다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "법적 대응 가능성, 재심 청구, 지도부 비판",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "정면충돌 양상으로 번지는 여야 간 대립으로 인한 대법원과 국회 간 갈등",
                 "evidence": []
               },
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "다음 총선 출마 길 차단, 당내 갈등 점입가경",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "여야 간 집안싸움 격화로 인한 대법관 임명 절차의 혼란",
                 "evidence": []
               }
             ]
@@ -280,130 +266,65 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 '정치적 숙청'이라는 프레임으로 비판적인 태도를 보인 반면, 조선일보는 '한여름밤의 무더기 징계'라는 표현으로 우려와 경계하는 태도를 보였다.",
+            "contrast_statement": "두 언론사 모두 갈등 상황을 강조하지만, 매일경제은 '사법 정치꾼'과 '의회 독재' 표현을, SBS는 '집안싸움' 표현을 사용한다.",
             "publisher_details": [
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "정치적 숙청 프레임으로 비판적인 보도 태도",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "정면충돌과 사법 정치꾼 vs 의회 독재라는 표현을 통해 갈등을 강조함",
                 "evidence": [
-                  "정치적 숙청의 도구로 전락했다",
-                  "민심까지 징계할 수 없다"
+                  "정면충돌",
+                  "사법 정치꾼 vs 의회 독재"
                 ]
               },
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "한여름밤의 무더기 징계 표현으로 우려와 경계하는 보도 태도",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "대법관 '서면 제청' 파문과 여야 모두 '집안싸움' 격화라는 표현을 통해 갈등을 강조함",
                 "evidence": [
-                  "한여름밤의 무더기 징계",
-                  "국힘 내홍 일촉즉발"
+                  "대법관 '서면 제청' 파문",
+                  "여야 모두 '집안싸움' 격화"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "국민의힘 중앙윤리위원회의 조경태, 권영진, 서범수, 진종오 의원에 대한 당원권 정지 중징계 의결",
-          "징계 당사자들의 반발 및 법적 대응 가능성",
-          "국민의힘 당내 갈등 심화"
+          "대법관 임명 과정에서 발생한 서면 제청 파문과 여야 간 갈등을 다루고 있음",
+          "대법관 임명 절차의 문제점을 지적하며 갈등 상황을 보도함"
         ],
         "key_differences": [
-          "동아일보는 징계 당사자들의 반발과 법적 대응을 강조한 반면, 조선일보는 중앙윤리위원회의 징계 결정과 총선 출마 제한을 강조함",
-          "동아일보는 '정치적 숙청'이라는 비판적 프레임을 사용한 반면, 조선일보는 '무더기 징계'라는 우려적 표현을 사용함"
+          "매일경제는 대법관 후보 제청 및 국회 출석 요구를, SBS는 대법관 임명 절차의 서면 제청 파문을 강조함",
+          "매일경제는 '사법 정치꾼'과 '의회 독재' 표현을, SBS는 '집안싸움' 표현을 사용하여 갈등 상황을 묘사함"
         ],
-        "comparison_report": "동아일보와 조선일보는 모두 국민의힘 중앙윤리위원회의 조경태, 권영진, 서범수, 진종오 의원에 대한 당원권 정지 중징계 의결을 보도했으나, 동아일보가 징계 당사자들의 반발과 법적 대응 가능성에 초점을 맞춘 반면, 조선일보는 중앙윤리위원회의 징계 결정과 이로 인한 총선 출마 제한 및 당내 갈등 심화를 주요 관점으로 제시했다. 동아일보가 '정치적 숙청'이라는 비판적 프레임을 사용한 데 비해, 조선일보는 '한여름밤의 무더기 징계'라는 표현으로 우려와 경계하는 태도를 보였다.",
+        "comparison_report": "매일경제와 SBS 모두 대법관 임명 과정에서 발생한 서면 제청 파문과 여야 간 갈등을 보도하지만, 매일경제는 대법관 후보 제청 및 국회 출석 요구를 중심으로 정치적 대립과 충돌 양상을 강조하는 반면, SBS는 대법관 임명 절차의 서면 제청 파문이 여야 간 집안싸움으로 확대되는 상황을 중점적으로 다룬다. 두 언론사 모두 갈등 상황을 강조하지만, 매일경제는 '사법 정치꾼'과 '의회 독재'라는 표현을, SBS는 '집안싸움'이라는 표현을 사용하여 갈등 상황을 묘사한다.",
         "source_links": [
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "국힘 중징계 4인 “정치적 숙청”…중진도 “민심까지 징계할순 없어”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134518312/1",
-            "published_at": "Fri, 21 Aug 2026 12:23:00 +0900"
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "“사법 정치꾼” vs “의회 독재”…조희대 ‘대법관 제청’ 놓고 여야 정면충돌",
+            "link": "https://www.mk.co.kr/news/politics/12131322",
+            "published_at": "Wed, 19 Aug 2026 16:37:52 +09:00"
           },
           {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "[정치 인사이드] 한여름밤의 무더기 징계…국힘 내홍 일촉즉발",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/20/GJSGKMTDGMYTKMJVG5TDEZTBGM/",
-            "published_at": "Thu, 20 Aug 2026 12:22:12 +0000"
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치사냥꾼] 대법관 '서면 제청' 파문…여야 모두 '집안싸움' 격화",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716131",
+            "published_at": "Fri, 21 Aug 2026 19:40:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T01:10:54.950963+00:00",
+        "compared_at": "2026-08-22T06:39:09.134669+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-b666287e48eaaebf": {
+  "issue-28516451cbb7be90": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-b666287e48eaaebf",
-        "publisher_id": "chosun",
-        "publisher": "조선일보",
-        "articles": [
-          {
-            "article_id": "761227773e405e3438f010770c74932dd649f51bc68e69102056a74363b9c92c",
-            "title": "[부동산 대토론회] 세금 올려 미래 세대 피해 막겠다는 李, 기준 모호한 통계 제시·거주이전 자유 침해 우려도",
-            "published_at": "Thu, 23 Jul 2026 09:36:18 +0000",
-            "link": "https://www.chosun.com/economy/real_estate/2026/07/23/GY4DKZTGMRQWKNJYMZQWMODCMQ/"
-          }
-        ],
-        "analysis": {
-          "article_summary": "부동산 정책 국민 대토론회에서 보유세와 거래세 등 세금 인상을 통해 집값 상승이 국민 경제의 시한폭탄이 되는 것을 사전에 차단하겠다는 주장이 제기되었으나, 기준 모호한 통계 제시와 거주이전 자유 침해 우려가 함께 언급되었다.",
-          "headline_frame": "세금 인상을 통한 미래 세대 피해 방지와 동시에 기준 모호한 통계 제시 및 거주이전 자유 침해 우려를 동시에 강조",
-          "main_focus": "세금 인상을 통한 부동산 시장 안정화 시도와 그로 인한 거주이전 자유 침해 가능성",
-          "keywords": [
-            "보유세",
-            "거래세",
-            "세금 인상",
-            "부동산 시장",
-            "시한폭탄",
-            "미래 세대 피해"
-          ],
-          "main_actors": [
-            "李"
-          ],
-          "quoted_sources": [
-            "이것 언젠가 터집니다. 어느 세대에 누가 당할지는 모르지만 대한민국에 엄청난 충격을 주겠죠. 터지면 치명적입니다. 저는 이제 좀 정치적 손해를 보더라도 대비는 해야 되겠다 생각해요."
-          ],
-          "causes": [
-            "부동산 시장의 집값 상승이 국민 경제의 시한폭탄으로 작용할 가능성"
-          ],
-          "background": [
-            "부동산 정책 국민 대토론회"
-          ],
-          "emphasized_effects": [
-            "부동산 시장의 집값 상승이 국민 경제에 미칠 충격",
-            "거주이전 자유 침해 우려"
-          ],
-          "affected_groups": [
-            "미래 세대"
-          ],
-          "tone": {
-            "category": "우려·경계",
-            "evidence": [
-              "기준 모호한 통계 제시",
-              "거주이전 자유 침해 우려도"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "세금 인상을 통한 부동산 시장 안정화 시도와 그로 인한 부작용 가능성에 대한 논의가 진행 중이나 구체적 전망은 제시되지 않음"
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "다른 정당이나 전문가들의 구체적 입장"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:10:58.943798+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-b666287e48eaaebf",
+        "issue_id": "issue-28516451cbb7be90",
         "publisher_id": "sbs",
         "publisher": "SBS",
         "articles": [
@@ -415,14 +336,14 @@
           }
         ],
         "analysis": {
-          "article_summary": "조은희 의원은 대통령 주재 부동산 대토론회에서 이재명 정부의 부동산 정책이 문재인 정부의 정책을 답습하고 있으며, 토론회의 핵심은 증세라고 주장했다.",
-          "headline_frame": "부동산 대토론회의 핵심을 '증세'로 규정하고, 이재명 정책이 문재인 정부와 유사하다는 점을 강조",
-          "main_focus": "부동산 대토론회에서 논의된 정책의 본질은 세금 인상(증세)이며, 이재명 정부의 부동산 정책이 문재인 정부의 길을 그대로 따라가고 있다는 비판",
+          "article_summary": "조은희 의원은 대통령 주재 부동산 대토론회를 평가하며, 이재명 정부의 부동산 정책이 문재인 정부의 정책을 그대로 답습하고 있으며, 토론회의 핵심은 세금 인상이라고 주장했다.",
+          "headline_frame": "부동산 대토론회의 핵심을 '증세'로 규정하고, 이재명 정부의 정책이 문재인 정부의 길을 그대로 따라가고 있다는 비판 프레임을 제시",
+          "main_focus": "이재명 정부의 부동산 정책이 문재인 정부의 정책을 답습하고 있으며, 부동산 대토론회에서 세금 인상이 주요 논점이라는 점을 강조",
           "keywords": [
             "부동산 대토론회",
             "증세",
             "이재명 부동산정책",
-            "문재인 정부",
+            "문재인 정책",
             "보유세 인상"
           ],
           "main_actors": [
@@ -433,14 +354,14 @@
             "조은희"
           ],
           "causes": [
-            "부동산 대토론회"
+            "이재명 정부의 부동산 정책이 문재인 정부의 정책을 그대로 답습하고 있다는 점"
           ],
           "background": [
-            "대통령 주재 부동산 대토론회"
+            "대통령 주재로 열린 부동산 대토론회"
           ],
           "emphasized_effects": [
-            "세금 인상",
-            "부동산세 전체 인상"
+            "보유세 3배 인상 가능성",
+            "세금 인상"
           ],
           "affected_groups": [
             "국민"
@@ -449,7 +370,6 @@
             "category": "비판",
             "evidence": [
               "이재명 부동산정책, 문재인의 길 똑같이 가고 있어",
-              "부동산토론회 핵심은 증세",
               "보유세 3배 인상이 정상?"
             ]
           },
@@ -458,34 +378,779 @@
             "summary": "부동산 대토론회에 대한 야당의 비판적 시각이 제시되었으나, 향후 정책 방향에 대한 구체적 전망은 제시되지 않음"
           },
           "less_covered_context": [
-            "부동산 대토론회에서 논의된 구체적인 정책 내용",
-            "증세 외의 다른 정책 대안",
-            "토론회에 참석한 다른 정당이나 전문가들의 의견"
+            "부동산 대토론회에서 논의된 구체적인 정책 대안이나 해결 방안",
+            "토론회에 참석한 다른 정당이나 참석자들의 반응"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:11:00.467094+00:00",
+        "analyzed_at": "2026-08-22T06:39:13.474365+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-28516451cbb7be90",
+        "publisher_id": "chosun",
+        "publisher": "조선일보",
+        "articles": [
+          {
+            "article_id": "761227773e405e3438f010770c74932dd649f51bc68e69102056a74363b9c92c",
+            "title": "[부동산 대토론회] 세금 올려 미래 세대 피해 막겠다는 李, 기준 모호한 통계 제시·거주이전 자유 침해 우려도",
+            "published_at": "Thu, 23 Jul 2026 09:36:18 +0000",
+            "link": "https://www.chosun.com/economy/real_estate/2026/07/23/GY4DKZTGMRQWKNJYMZQWMODCMQ/"
+          }
+        ],
+        "analysis": {
+          "article_summary": "부동산 정책 국민 대토론회에서 보유세와 거래세 인상 등을 통해 집값 상승이 국민 경제에 미칠 시한폭탄 효과를 차단하겠다는 주장이 제기되었으나, 통계 기준의 모호성과 거주이전 자유 침해 우려가 함께 언급되었다.",
+          "headline_frame": "세금 인상을 통한 미래 세대 피해 방지와 동시에 통계 기준 모호성 및 거주이전 자유 침해 우려를 동시에 부각",
+          "main_focus": "부동산 시장 안정을 위한 세금 인상 정책의 필요성과 함께 정책의 부작용 및 우려 사항을 균형 있게 조명",
+          "keywords": [
+            "보유세",
+            "거래세",
+            "부동산 시장",
+            "미래 세대",
+            "시한폭탄",
+            "통계 기준"
+          ],
+          "main_actors": [
+            "李"
+          ],
+          "quoted_sources": [
+            "이것 언젠가 터집니다. 어느 세대에 누가 당할지는 모르지만 대한민국에 엄청난 충격을 주겠죠. 터지면 치명적입니다. 저는 이제 좀 정치적 손해를 보더라도 대비는 해야 되겠다 생각해요."
+          ],
+          "causes": [
+            "집값 상승이 국민 경제의 시한폭탄으로 작용할 가능성"
+          ],
+          "background": [
+            "부동산 정책 국민 대토론회"
+          ],
+          "emphasized_effects": [
+            "미래 세대 피해",
+            "대한민국에 엄청난 충격",
+            "치명적 결과"
+          ],
+          "affected_groups": [
+            "미래 세대"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "[부동산 대토론회] 세금 올려 미래 세대 피해 막겠다는 李, 기준 모호한 통계 제시·거주이전 자유 침해 우려도"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "세금 인상을 통한 부동산 시장 안정화와 부작용 우려 사이의 균형적 접근 필요성 제시"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "다른 정당이나 전문가의 구체적 대안 제시"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:39:13.963858+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-b666287e48eaaebf",
+      "issue_id": "issue-28516451cbb7be90",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "부동산 정책 비판과 증세 우려",
+          "summary": "SBS는 이재명 정부의 부동산 정책이 문재인 정부의 정책을 답습하며 보유세 3배 인상 가능성을 비판적으로 보도하고, 조선일보는 세금 인상을 통한 부동산 시장 안정 필요성과 함께 통계 기준 모호성 및 거주이전 자유 침해 우려를 균형 있게 조명하며 중립적 설명을 시도했습니다.",
+          "keywords": [
+            "부동산 대토론회",
+            "증세",
+            "보유세 인상",
+            "문재인 정책 답습",
+            "미래 세대 피해",
+            "통계 기준 모호성"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "chosun"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS는 이재명 정부의 부동산 정책이 문재인 정부의 정책을 그대로 답습하고 있으며, 부동산 대토론회에서 세금 인상이 주요 논점이라는 점을 비판적으로 강조",
+            "조선일보는 부동산 시장 안정을 위한 세금 인상 정책의 필요성을 인정하면서도 통계 기준 모호성 및 거주이전 자유 침해 우려를 동시에 부각하여 균형 잡힌 시각을 제시"
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 부동산 대토론회와 세금 인상 정책을 다루었으나, SBS는 문재인 정부와의 정책 답습을 비판하며 보유세 3배 인상 가능성을 부정적으로 해석한 반면, 조선일보는 세금 인상의 필요성과 부작용을 균형 있게 조명하며 중립적 설명을 시도했습니다. 핵심 쟁점은 유사하나 평가 방향이 달라 별도의 그룹으로 분류했습니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-22T06:39:16.964352+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "chosun,sbs": {
+        "issue_id": "issue-28516451cbb7be90",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          }
+        ],
+        "common_summary": "조은희 의원과 이재명 정부의 부동산 정책을 둘러싼 대토론회 관련 내용으로, SBS는 문재인 정부 정책 답습과 세금 인상을, 조선일보는 보유세·거래세 인상과 미래 세대 피해 우려를 주요 논점으로 다루었다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 대통령 주재 부동산 대토론회에서 이재명 정부의 부동산 정책을 비판적으로 조명하며, 세금 인상 문제를 주요 논점으로 다루었다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "조은희 의원의 발언을 통해 이재명 정부의 부동산 정책이 문재인 정부의 정책을 답습하고 있으며, 부동산 대토론회의 핵심은 세금 인상이라고 주장함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "부동산 정책 국민 대토론회에서 보유세와 거래세 인상을 통한 집값 상승 차단 주장이 제기되었으나 통계 기준 모호성과 거주이전 자유 침해 우려도 함께 언급됨",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 이재명 정부의 정책이 문재인 정부의 길을 답습하고 있다는 점을 강조한 반면, 조선일보는 세금 인상 정책의 필요성과 부작용을 균형 있게 조명함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 정부의 부동산 정책이 문재인 정부의 정책을 그대로 답습하고 있으며, 토론회의 핵심은 세금 인상이라는 비판 프레임",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "부동산 시장 안정을 위한 세금 인상 정책의 필요성과 함께 통계 기준 모호성 및 거주이전 자유 침해 우려를 균형 있게 조명",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 문재인 정부 정책 답습 자체를 원인으로 강조한 반면, 조선일보는 집값 상승이 국민 경제의 시한폭탄으로 작용할 가능성을 주요 배경으로 제시함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 정부의 부동산 정책이 문재인 정부의 정책을 그대로 답습하고 있다는 점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "집값 상승이 국민 경제의 시한폭탄으로 작용할 가능성",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 보유세 3배 인상 가능성과 세금 인상 영향을 강조한 반면, 조선일보는 미래 세대 피해와 대한민국에 미칠 충격적 결과를 주요 영향으로 제시함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "보유세 3배 인상 가능성과 세금 인상",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "미래 세대 피해, 대한민국에 엄청난 충격, 치명적 결과",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "SBS는 '비판' 태도로 이재명 정부의 정책 답습과 보유세 3배 인상 가능성을 강조한 반면, 조선일보는 '중립 설명' 태도로 세금 인상 필요성과 부작용 우려를 균형 있게 보도함",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 부동산정책을 문재인 정부의 길을 그대로 따라가고 있다고 비판하며 보유세 3배 인상이 정상인지 의문을 제기함",
+                "evidence": [
+                  "이재명 부동산정책, 문재인의 길 똑같이 가고 있어",
+                  "보유세 3배 인상이 정상?"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "세금 인상을 통한 미래 세대 피해 방지 주장과 함께 통계 기준 모호성 및 거주이전 자유 침해 우려를 중립적으로 설명",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "대통령 주재 부동산 대토론회에서 이재명 정부의 부동산 정책을 비판적으로 조명",
+          "세금 인상 문제를 주요 논점으로 다룸",
+          "조은희 의원의 발언을 인용하여 정책 비판"
+        ],
+        "key_differences": [
+          "SBS는 문재인 정부 정책 답습에 초점을 맞춘 비판 프레임, 조선일보는 세금 인상 정책의 필요성과 부작용을 균형 있게 조명",
+          "SBS는 보유세 3배 인상 가능성을 강조한 반면, 조선일보는 미래 세대 피해와 대한민국에 미칠 충격적 결과를 주요 영향으로 제시"
+        ],
+        "comparison_report": "SBS와 조선일보는 모두 대통령 주재 부동산 대토론회에서 이재명 정부의 부동산 정책을 비판적으로 다루었으나, SBS는 문재인 정부 정책 답습과 보유세 3배 인상 가능성에 초점을 맞춘 비판적인 태도를 보인 반면, 조선일보는 세금 인상 정책의 필요성과 함께 통계 기준 모호성 및 거주이전 자유 침해 우려를 균형 있게 조명하는 중립적인 태도를 보였다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치쇼] 조은희 \"이재명 부동산정책, 문재인의 길 똑같이 가고 있어…부동산토론회 핵심은 증세\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672763",
+            "published_at": "Fri, 24 Jul 2026 11:25:00 +0900"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "[부동산 대토론회] 세금 올려 미래 세대 피해 막겠다는 李, 기준 모호한 통계 제시·거주이전 자유 침해 우려도",
+            "link": "https://www.chosun.com/economy/real_estate/2026/07/23/GY4DKZTGMRQWKNJYMZQWMODCMQ/",
+            "published_at": "Thu, 23 Jul 2026 09:36:18 +0000"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-22T06:39:37.617622+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-a9dda741d37289cd": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-a9dda741d37289cd",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "88fb58541c23dfada672293ed132848e0ec2b3430248b08e82ab052bfa7b5a59",
+            "title": "“중동전쟁에 유럽경제 흔들린다더니”…AI가 만든 ‘성장률 2배’ 반전",
+            "published_at": "Sun, 16 Aug 2026 15:06:08 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12128940"
+          }
+        ],
+        "analysis": {
+          "article_summary": "AI 기술 발전과 반도체 가격 상승이 한국·대만의 고성장을 지속시키는 반면, 유럽은 AI 및 국방 지출 증가로 성장률이 예상보다 2배 상승했으나 미국은 수입국으로서 성장률이 저조한 경제 지형의 변화를 보여준다.",
+          "headline_frame": "AI가 경제 지형을 변화시켜 중동전쟁으로 인한 유럽 경제 위기 예상과 달리 성장률이 2배로 반전된 상황을 강조",
+          "main_focus": "AI와 반도체 가격 변동이 주요 경제 주체(한국, 대만, 유럽, 미국, 중국)의 성장률에 미친 차별적 영향을 분석",
+          "keywords": [
+            "AI",
+            "성장률",
+            "반도체 가격",
+            "경제 지형",
+            "유럽",
+            "미국"
+          ],
+          "main_actors": [
+            "한국",
+            "대만",
+            "유럽",
+            "미국",
+            "중국"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "AI 기술 발전",
+            "반도체 가격 대폭 상승",
+            "AI 및 국방 지출 증가"
+          ],
+          "background": [
+            "유로존의 AI·국방 지출 증가",
+            "수입국인 미국의 성장률 저조",
+            "중국의 내수 부진"
+          ],
+          "emphasized_effects": [
+            "한국·대만의 고성장을 지속",
+            "유럽의 성장률 예상치 대비 2배 상승",
+            "미국의 성장률 저조"
+          ],
+          "affected_groups": [
+            "한국",
+            "대만",
+            "유럽",
+            "미국",
+            "중국"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "AI가 바꿔놓은 경제지형",
+              "성장률 예상치 대비 2배"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "AI와 반도체 가격 변동이 주요 경제 주체들의 성장률에 미친 차별적 영향이 지속될 것으로 보이나 구체적 전망은 제시되지 않음"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "반도체 가격 상승의 장기적 영향",
+            "AI 기술 발전의 구체적 메커니즘"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:39:54.324262+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-a9dda741d37289cd",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "c924e323ec9abf062261541ddfbeb27e8d7cd07c2a2ed6d34087d7304519030a",
+            "title": "2분기도 '깜짝' 성장 희소식…코스피 '7천' 회복",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672157"
+          }
+        ],
+        "analysis": {
+          "article_summary": "반도체 수출 호조로 우리 경제가 2분기에도 깜짝 성장했으며, 코스피가 7천 선을 회복했다.",
+          "headline_frame": "반도체 수출 호조에 따른 경제 성장 및 코스피 회복",
+          "main_focus": "반도체 수출 호조가 경제 성장과 코스피 회복에 미친 긍정적 영향",
+          "keywords": [
+            "반도체 수출 호조",
+            "2분기 성장",
+            "코스피 회복",
+            "3% 성장 전망",
+            "1인당 국민소득 4만 달러"
+          ],
+          "main_actors": [
+            "우리 경제",
+            "코스피"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "반도체 수출 호조"
+          ],
+          "background": [
+            "2분기 경제 성장",
+            "코스피 7천 선 회복"
+          ],
+          "emphasized_effects": [
+            "경제 성장",
+            "코스피 회복",
+            "3% 성장 전망",
+            "1인당 국민소득 4만 달러 달성 가능성"
+          ],
+          "affected_groups": [
+            "일반 국민",
+            "투자자"
+          ],
+          "tone": {
+            "category": "기대",
+            "evidence": [
+              "2분기도 '깜짝' 성장 희소식",
+              "코스피 '7천' 회복"
+            ]
+          },
+          "outlook": {
+            "direction": "긍정",
+            "summary": "올해 3% 성장, 1인당 국민소득 4만 달러 달성 가능성 전망"
+          },
+          "less_covered_context": [
+            "반도체 수출 호조의 구체적 원인",
+            "수출 호조가 지속될 수 있는 조건",
+            "반도체 산업 외 다른 경제 부문의 상황"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:39:54.630681+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-a9dda741d37289cd",
+      "groups": [
+        {
+          "group_id": "growth-impact-group",
+          "label": "AI와 반도체 가격 변동이 경제 성장률에 미친 차별적 영향",
+          "summary": "AI 기술 발전과 반도체 가격 변동이 주요 경제 주체(한국, 대만, 유럽, 미국, 중국)의 성장률에 미친 차별적 영향을 분석한 관점",
+          "keywords": [
+            "AI",
+            "성장률",
+            "반도체 가격",
+            "경제 지형"
+          ],
+          "publisher_ids": [
+            "mk"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "AI 기술 발전과 반도체 가격 상승이 한국·대만의 고성장을 지속시키고 유럽의 성장률 예상치 대비 2배 상승을 이끌었다는 차별적 영향 분석",
+            "유로존의 AI·국방 지출 증가와 중국의 내수 부진을 배경으로 한 경제 지형 변화 설명",
+            "미국 성장률 저조와의 대비를 통해 AI·반도체가 경제 성장에 미친 차별적 효과 강조"
+          ]
+        },
+        {
+          "group_id": "market-recovery-group",
+          "label": "반도체 수출 호조와 코스피 회복을 통한 경제 성장 전망",
+          "summary": "반도체 수출 호조가 2분기 경제 성장과 코스피 회복을 이끌며 3% 성장 및 1인당 국민소득 4만 달러 달성 가능성을 전망하는 긍정적 관점",
+          "keywords": [
+            "반도체 수출 호조",
+            "코스피 회복",
+            "경제 성장"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "반도체 수출 호조가 2분기 성장과 코스피 7천 선 회복을 이끌었다는 긍정적 영향 분석",
+            "2분기 '깜짝' 성장 희소식과 코스피 회복을 통해 경제 회복 기대감 강조",
+            "올해 3% 성장 및 1인당 국민소득 4만 달러 달성 가능성 전망"
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "growth-impact-group",
+            "market-recovery-group"
+          ],
+          "contrast_statement": "매일경제는 AI와 반도체 가격 변동이 주요 경제 주체들의 성장률에 미친 차별적 영향을 중립적으로 분석한 반면, SBS는 반도체 수출 호조가 코스피 회복과 1인당 국민소득 4만 달러 달성 가능성을 이끌며 경제 성장을 긍정적으로 전망하는 관점을 제시했다."
+        }
+      ],
+      "grouping_summary": "두 언론사 모두 AI와 반도체가 경제 성장에 미치는 영향을 다루었으나, 매일경제(mk)는 AI 기술 발전과 반도체 가격 변동이 한국·대만·유럽·미국·중국 등 주요 경제 주체들의 성장률에 미친 차별적 영향을 중립적으로 분석한 반면, SBS(sbs)는 반도체 수출 호조가 2분기 경제 성장과 코스피 회복을 이끌며 3% 성장 및 1인당 국민소득 4만 달러 달성 가능성을 긍정적으로 전망하는 관점을 제시했다. 핵심 관점이 서로 다르므로 별도 그룹으로 분류하였다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-22T06:39:58.605665+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "mk,sbs": {
+        "issue_id": "issue-a9dda741d37289cd",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "AI 기술 발전과 반도체 가격 상승이 글로벌 경제 성장률에 미치는 영향에 대한 분석",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 AI 기술 발전과 반도체 가격 상승이 경제 성장률에 영향을 미쳤음을 언급",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "AI 기술 발전과 반도체 가격 상승이 한국·대만의 고성장과 유럽의 성장률 상승을 견인하는 요인으로 작용",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 2분기 경제 성장과 코스피 회복을 이끈 주요 원인으로 분석",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 AI·반도체가 국가별 성장률에 미친 차별적 영향을 분석한 반면, SBS는 반도체 수출 호조의 긍정적 효과에 초점",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "AI와 반도체 가격 변동이 한국, 대만, 유럽, 미국, 중국 등 주요 경제 주체별 성장률에 미친 차별적 영향을 분석",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 우리 경제의 2분기 성장과 코스피 회복에 미친 긍정적 영향을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 AI 기술 발전과 반도체 가격 상승을 주요 원인으로 제시한 반면, SBS는 반도체 수출 호조만을 강조",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "AI 기술 발전과 반도체 가격 대폭 상승이 한국·대만의 고성장과 유럽의 성장률 상승을 이끈 주요 원인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조가 2분기 경제 성장과 코스피 회복의 직접적 원인으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 한국·대만·유럽·미국의 성장률 변화를 구체적으로 제시한 반면, SBS는 일반 국민과 투자자에게 미치는 긍정적 영향을 강조",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "한국·대만의 고성장 지속, 유럽의 성장률 예상치 대비 2배 상승, 미국의 성장률 저조 등 국가별 성장률 변화",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "경제 성장, 코스피 회복, 3% 성장 전망, 1인당 국민소득 4만 달러 달성 가능성 등 일반 국민과 투자자에게 미치는 긍정적 영향",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "매일경제는 중립적으로 경제 지형 변화를 설명한 반면, SBS는 긍정적인 기대 어조로 보도",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "AI가 경제 지형을 변화시켜 중동전쟁 예상과 달리 유럽 성장률이 2배로 반전된 상황을 중립적으로 설명",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체 수출 호조로 2분기 깜짝 성장과 코스피 7천 선 회복을 긍정적으로 기대하며 보도",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "AI 기술 발전과 반도체 가격 상승이 경제 성장률에 영향을 미쳤다는 점",
+          "한국·대만의 고성장 지속",
+          "유럽과 미국의 성장률 변화"
+        ],
+        "key_differences": [
+          "매일경제는 AI 기술 발전과 반도체 가격 상승을 주요 원인으로 제시한 반면, SBS는 반도체 수출 호조만을 강조",
+          "매일경제는 국가별 성장률 변화를 구체적으로 분석한 반면, SBS는 일반 국민과 투자자에게 미치는 긍정적 영향을 강조"
+        ],
+        "comparison_report": "매일경제는 AI 기술 발전과 반도체 가격 상승이 한국, 대만, 유럽, 미국 등 주요 경제 주체별 성장률에 미친 차별적 영향을 중립적으로 분석한 반면, SBS는 반도체 수출 호조가 우리 경제의 2분기 성장과 코스피 회복을 이끈 긍정적 요인으로 기대 어조로 보도했다. 두 언론사 모두 AI 및 반도체 관련 경제 변화를 다루었으나, 매일경제은 글로벌 경제 지형 변화를 포괄적으로 분석한 데 비해 SBS는 국내 경제 지표와 시장 반응에 초점을 맞췄다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "“중동전쟁에 유럽경제 흔들린다더니”…AI가 만든 ‘성장률 2배’ 반전",
+            "link": "https://www.mk.co.kr/news/economy/12128940",
+            "published_at": "Sun, 16 Aug 2026 15:06:08 +09:00"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "2분기도 '깜짝' 성장 희소식…코스피 '7천' 회복",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672157",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-22T06:40:06.567911+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-708682df4009b39d": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-708682df4009b39d",
+        "publisher_id": "chosun",
+        "publisher": "조선일보",
+        "articles": [
+          {
+            "article_id": "312da3cb47bc1c4ace12a94985bbbd0511b7c54eceb53d2a7c232c6e36116155",
+            "title": "李대통령 지지율 43%…취임 후 최저[리얼미터]",
+            "published_at": "Mon, 17 Aug 2026 00:18:33 +0000",
+            "link": "https://www.chosun.com/economy/economy_general/2026/08/17/G42TSYZZMUYWKNDDHBTGCMJVMM/"
+          }
+        ],
+        "analysis": {
+          "article_summary": "리얼미터 조사 결과 이재명 대통령의 국정 지지도가 취임 이후 최저치인 43.0%를 기록했으며, 5주 연속 하락세를 보이고 있다.",
+          "headline_frame": "지지율 수치와 취임 후 최저 기록",
+          "main_focus": "리얼미터 여론조사 결과를 통한 국정 지지도 하락 현황",
+          "keywords": [
+            "지지율 하락",
+            "리얼미터",
+            "국정 수행",
+            "긍정 평가",
+            "부정 평가"
+          ],
+          "main_actors": [
+            "이재명 대통령",
+            "리얼미터"
+          ],
+          "quoted_sources": [
+            "리얼미터"
+          ],
+          "causes": [],
+          "background": [],
+          "emphasized_effects": [
+            "지지율 5주 연속 하락",
+            "취임 후 최저치 기록"
+          ],
+          "affected_groups": [
+            "국민"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "리얼미터가 에너지경제신문 의뢰로 지난 10∼14일 전국 18세 이상 2511명을 대상으로 조사한 결과, 이 대통령 국정 수행에 대한 긍정 평가는 43.0%로 집계됐다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "리얼미터 조사에서 5주 연속 하락세가 지속되고 있으나 향후 전망에 대한 구체적 언급은 없음"
+          },
+          "less_covered_context": [
+            "지지율 하락의 구체적 원인",
+            "정책별 평가",
+            "향후 지지율 변동 전망"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:40:11.108026+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-708682df4009b39d",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "c955b4dd9293fbc09726fac04f26fec2f41ac25f5e2f7bbcc6a9d6338915d223",
+            "title": "李 긍정-부정평가 45% 동률…與 새대표 선출에도 41%로 변화없어",
+            "published_at": "Fri, 21 Aug 2026 10:39:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260821/134517801/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "한국갤럽 조사에서 이재명 대통령의 국정 지지율이 긍정 45%, 부정 45%로 동률을 기록했으며, 긍정 평가는 직전 대비 1%포인트 상승, 부정 평가는 1%포인트 하락한 것으로 나타났다.",
+          "headline_frame": "이재명 대통령의 국정 지지율 긍정-부정 평가 동률 상황을 중심으로 보도",
+          "main_focus": "여론조사 결과를 통해 이재명 대통령의 국정 수행 평가에 대한 긍정·부정 동률 현상과 그 변화 추이를 분석",
+          "keywords": [
+            "국정 지지율",
+            "긍정 평가",
+            "부정 평가",
+            "동률",
+            "여론조사"
+          ],
+          "main_actors": [
+            "이재명 대통령",
+            "한국갤럽"
+          ],
+          "quoted_sources": [
+            "한국갤럽"
+          ],
+          "causes": [
+            "부동산 정책"
+          ],
+          "background": [
+            "한국갤럽이 18~20일 전국 만 18세 이상 유권자 1004명을 대상으로 실시한 여론조사",
+            "전화면접 방식, 95% 신뢰수준에 표본오차 ±3.1%포인트"
+          ],
+          "emphasized_effects": [
+            "긍정 평가 1%포인트 상승",
+            "부정 평가 1%포인트 하락"
+          ],
+          "affected_groups": [
+            "유권자"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "한국갤럽이 18~20일 전국 만 18세 이상 유권자 1004명을 대상으로 실시해 이날 발표한 여론조사"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "긍정 평가가 소폭 상승했으나 부정 평가와 동률을 이룬 상황에서 향후 지지율 변화 추이가 주목됨"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "향후 지지율 변화 추이"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:40:11.745153+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-708682df4009b39d",
       "groups": [
         {
           "group_id": "group-001",
-          "label": "세금 인상과 시장 안정 시도",
-          "summary": "두 언론사 모두 부동산 시장 안정화를 위한 세금 인상 정책을 핵심 쟁점으로 다루고 있으며, 조선일보가 거주이전 자유 침해 우려를, SBS가 문재인 정부와의 유사성 및 증세 비판을 추가로 강조하지만, 정책의 본질과 시장 안정 시도라는 핵심 해석은 일치합니다.",
+          "label": "국정 지지율 하락 및 동률 현상 분석",
+          "summary": "두 언론사 모두 이재명 대통령의 국정 수행 평가에 대한 여론조사 결과를 중심으로 보도하며, 지지율 하락 또는 긍정·부정 동률이라는 상반된 현상을 분석하지만, 모두 중립적인 설명 태도를 유지하고 있다.",
           "keywords": [
-            "보유세",
-            "거래세",
-            "세금 인상",
-            "부동산 시장",
-            "부동산 대토론회"
+            "국정 지지율",
+            "리얼미터",
+            "한국갤럽",
+            "긍정 평가",
+            "부정 평가",
+            "동률"
           ],
           "publisher_ids": [
             "chosun",
-            "sbs"
+            "donga"
           ],
           "publishers": [
             {
@@ -493,56 +1158,56 @@
               "publisher": "조선일보"
             },
             {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
+              "publisher_id": "donga",
+              "publisher": "동아일보"
             }
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "조선일보: 세금 인상을 통한 부동산 시장 안정화 시도와 그로 인한 거주이전 자유 침해 가능성",
-            "SBS: 부동산 대토론회에서 논의된 정책의 본질은 세금 인상(증세)이며, 이재명 정부의 부동산 정책이 문재인 정부의 길을 그대로 따라가고 있다는 비판"
+            "조선일보: 리얼미터 여론조사 결과를 통해 국정 지지도 하락 현황을 중립적으로 설명하며, 5주 연속 하락 및 취임 후 최저치 기록을 강조",
+            "동아일보: 한국갤럽 여론조사 결과를 통해 긍정·부정 평가 동률 현상을 중립적으로 분석하며, 긍정 평가 소폭 상승 및 부정 평가 소폭 하락을 강조"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "조선일보와 SBS 모두 부동산 시장 안정화를 위한 세금 인상 정책을 핵심 쟁점으로 다루고 있습니다. 조선일보는 세금 인상이 거주이전 자유 침해로 이어질 수 있다는 우려를, SBS는 이재명 정부의 정책이 문재인 정부의 증세 정책을 답습하고 있다는 비판을 추가로 제시하지만, 두 언론사 모두 정책의 본질과 시장 안정 시도라는 핵심 해석 방향은 동일합니다. 따라서 두 언론사는 같은 그룹으로 묶을 수 있습니다.",
+      "grouping_summary": "두 언론사 모두 이재명 대통령의 국정 수행 평가에 대한 여론조사 결과를 보도하지만, 조선일보가 지지율 하락 추세를 강조하는 반면 동아일보는 긍정·부정 평가 동률이라는 상반된 현상을 중립적으로 분석하고 있다. 핵심 관점은 모두 여론조사 결과에 기반한 국정 수행 평가 분석으로 유사하나, 강조되는 구체적 수치와 변화 추이에서 차이를 보인다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T01:11:04.348400+00:00",
+      "grouped_at": "2026-08-22T06:40:15.632625+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "chosun,sbs": {
-        "issue_id": "issue-b666287e48eaaebf",
+      "chosun,donga": {
+        "issue_id": "issue-708682df4009b39d",
         "selected_publishers": [
           {
             "publisher_id": "chosun",
             "publisher": "조선일보"
           },
           {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
+            "publisher_id": "donga",
+            "publisher": "동아일보"
           }
         ],
-        "common_summary": "부동산 정책 국민 대토론회에서 세금 인상을 통한 집값 상승 억제 방안이 논의되었으며, 기준 모호한 통계 제시와 거주이전 자유 침해 우려가 함께 언급되었다.",
+        "common_summary": "두 언론사 모두 이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도하며, 각각 리얼미터와 한국갤럽의 조사 결과를 인용하고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 부동산 정책 국민 대토론회에서 세금 인상을 통한 집값 상승 억제 방안을 다루었으며, 기준 모호한 통계 제시와 거주이전 자유 침해 우려를 공통적으로 언급했다.",
+            "contrast_statement": "두 언론사 모두 이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "세금 인상을 통한 집값 상승 억제 방안과 기준 모호한 통계 제시 및 거주이전 자유 침해 우려를 동시에 강조",
+                "summary": "리얼미터 조사 결과 이재명 대통령의 국정 지지도가 취임 이후 최저치인 43.0%를 기록했으며, 5주 연속 하락세를 보이고 있음을 보도",
                 "evidence": []
               },
               {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "부동산 대토론회에서 논의된 정책의 본질을 세금 인상(증세)으로 규정하고 이재명 정부의 부동산 정책이 문재인 정부와 유사하다는 점을 강조",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "한국갤럽 조사 결과 이재명 대통령의 국정 지지율이 긍정 45%, 부정 45%로 동률을 기록했으며, 긍정 평가는 직전 대비 1%포인트 상승, 부정 평가는 1%포인트 하락했음을 보도",
                 "evidence": []
               }
             ]
@@ -550,18 +1215,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 세금 인상을 통한 부동산 시장 안정화 시도와 그로 인한 거주이전 자유 침해 가능성에 초점을 맞춘 반면, SBS는 부동산 대토론회의 핵심을 '증세'로 규정하고 이재명 정부의 부동산 정책이 문재인 정부의 길을 그대로 따라가고 있다는 비판에 초점을 두었다.",
+            "contrast_statement": "조선일보는 리얼미터 조사 결과를 통한 국정 지지도 하락 현황을 강조하는 반면, 동아일보는 한국갤럽 조사 결과를 통해 긍정·부정 평가의 동률 현상과 변화 추이를 분석하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "세금 인상을 통한 부동산 시장 안정화 시도와 그로 인한 거주이전 자유 침해 가능성",
+                "summary": "리얼미터 여론조사 결과를 통해 국정 지지도 하락 현황을 파악하는 데 초점",
                 "evidence": []
               },
               {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "부동산 대토론회에서 논의된 정책의 본질은 세금 인상(증세)이며, 이재명 정부의 부동산 정책이 문재인 정부와 유사하다는 비판",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "한국갤럽 여론조사 결과를 통해 긍정·부정 평가의 동률 현상과 변화 추이를 분석하는 데 초점",
                 "evidence": []
               }
             ]
@@ -569,18 +1234,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 부동산 시장의 집값 상승이 국민 경제의 시한폭탄으로 작용할 가능성을 원인으로 제시했으나, 조선일보는 '부동산 정책 국민 대토론회'를 배경으로 강조한 반면 SBS는 '대통령 주재 부동산 대토론회'를 배경으로 이재명 정부의 문재인 정부 답습 가능성을 강조했다.",
+            "contrast_statement": "동아일보는 부동산 정책을 강조 배경으로 제시한 반면, 조선일보는 구체적인 원인을 제시하지 않았다.",
             "publisher_details": [
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "부동산 시장의 집값 상승이 국민 경제의 시한폭탄으로 작용할 가능성",
+                "summary": "리얼미터 조사 방법 및 표본 규모 등 조사 개요를 간략히 언급",
                 "evidence": []
               },
               {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "부동산 대토론회에서 논의된 정책의 본질은 세금 인상(증세)이며, 이재명 정부의 부동산 정책이 문재인 정부와 유사하다는 점",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "부동산 정책을 강조 배경으로 제시하며 한국갤럽 조사의 표본 및 조사 방식에 대한 상세 정보 제공",
                 "evidence": []
               }
             ]
@@ -588,18 +1253,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 부동산 시장의 집값 상승이 국민 경제에 미칠 충격과 거주이전 자유 침해 우려를 강조한 반면, SBS는 세금 인상과 부동산세 전체 인상이 국민에게 미칠 영향을 강조했다.",
+            "contrast_statement": "동아일보는 긍정 평가 1%포인트 상승과 부정 평가 1%포인트 하락을 강조한 반면, 조선일보는 지지율 5주 연속 하락과 취임 후 최저치 기록을 강조했다.",
             "publisher_details": [
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "부동산 시장의 집값 상승이 국민 경제에 미칠 충격과 거주이전 자유 침해 우려",
+                "summary": "지지율 5주 연속 하락과 취임 후 최저치 기록이라는 부정적 영향 강조",
                 "evidence": []
               },
               {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "세금 인상과 부동산세 전체 인상이 국민에게 미칠 영향",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "긍정 평가 1%포인트 상승과 부정 평가 1%포인트 하락이라는 긍정적 변화 강조",
                 "evidence": []
               }
             ]
@@ -607,1295 +1272,164 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "조선일보는 '우려·경계' 태도로 기준 모호한 통계 제시와 거주이전 자유 침해 우려를 강조한 반면, SBS는 '비판' 태도로 이재명 부동산정책이 문재인 정부의 길을 똑같이 가고 있으며 보유세 3배 인상이 정상인지에 대한 의문을 제기했다.",
+            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보이지만, 동아일보는 부동산 정책을 강조 배경으로 제시하며 조선일보는 조사 방법 및 표본 규모를 간략히 언급한다.",
             "publisher_details": [
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "기준 모호한 통계 제시와 거주이전 자유 침해 우려를 우려·경계의 태도로 전달",
+                "summary": "리얼미터 조사 결과를 중립적으로 설명하며 지지율 하락 현황을 전달",
                 "evidence": []
               },
               {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "이재명 부동산정책이 문재인 정부의 길을 똑같이 가고 있다는 비판과 보유세 3배 인상에 대한 의문 제기",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "한국갤럽 조사 결과를 중립적으로 설명하며 부동산 정책을 강조 배경으로 제시",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "부동산 정책 국민 대토론회에서 세금 인상을 통한 집값 상승 억제 방안 논의",
-          "기준 모호한 통계 제시",
-          "거주이전 자유 침해 우려"
+          "이재명 대통령의 국정 지지율에 대한 여론조사 결과 보도",
+          "리얼미터와 한국갤럽의 조사 결과를 각각 인용하여 지지율 현황을 전달"
         ],
         "key_differences": [
-          "조선일보는 세금 인상을 통한 부동산 시장 안정화 시도와 거주이전 자유 침해 가능성에 초점을 둔 반면, SBS는 이재명 정부의 부동산 정책이 문재인 정부와 유사하다는 비판에 초점을 둠",
-          "조선일보는 '우려·경계' 태도를 보인 반면 SBS는 '비판' 태도를 보임"
+          "조선일보는 지지율 하락(43.0%)을 강조하는 반면, 동아일보는 긍정·부정 평가 동률(45%)을 강조함",
+          "동아일보는 부동산 정책을 강조 배경으로 제시한 반면, 조선일보는 구체적인 원인을 제시하지 않음",
+          "동아일보는 한국갤럽 조사의 표본 및 조사 방식에 대한 상세 정보를 제공한 반면, 조선일보는 리얼미터 조사의 개요만 간략히 언급"
         ],
-        "comparison_report": "두 언론사 모두 부동산 정책 국민 대토론회에서 세금 인상을 통한 집값 상승 억제 방안을 다루었으나, 조선일보는 세금 인상을 통한 시장 안정화 시도와 그로 인한 거주이전 자유 침해 가능성에 우려를 표명한 반면, SBS는 이재명 정부의 부동산 정책이 문재인 정부의 길을 그대로 따라가고 있다는 비판에 초점을 두고 보유세 3배 인상에 대한 의문을 제기하며 비판적인 태도를 보였다.",
+        "comparison_report": "조선일보와 동아일보 모두 이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도하지만, 조선일보가 리얼미터 조사 결과를 통해 지지율 하락(43.0%)과 5주 연속 하락세를 강조하는 반면, 동아일보는 한국갤럽 조사 결과를 통해 긍정·부정 평가 동률(45%)과 긍정 평가 1%포인트 상승, 부정 평가 1%포인트 하락을 강조하고 있다. 두 언론사 모두 중립적인 설명 태도를 보이지만, 동아일보는 부동산 정책을 강조 배경으로 제시하며 조사의 표본 및 방식에 대한 상세 정보를 제공하는 반면, 조선일보는 조사 방법 및 표본 규모를 간략히 언급하는 데 그쳤다.",
         "source_links": [
           {
             "publisher_id": "chosun",
             "publisher": "조선일보",
-            "title": "[부동산 대토론회] 세금 올려 미래 세대 피해 막겠다는 李, 기준 모호한 통계 제시·거주이전 자유 침해 우려도",
-            "link": "https://www.chosun.com/economy/real_estate/2026/07/23/GY4DKZTGMRQWKNJYMZQWMODCMQ/",
-            "published_at": "Thu, 23 Jul 2026 09:36:18 +0000"
+            "title": "李대통령 지지율 43%…취임 후 최저[리얼미터]",
+            "link": "https://www.chosun.com/economy/economy_general/2026/08/17/G42TSYZZMUYWKNDDHBTGCMJVMM/",
+            "published_at": "Mon, 17 Aug 2026 00:18:33 +0000"
           },
           {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 조은희 \"이재명 부동산정책, 문재인의 길 똑같이 가고 있어…부동산토론회 핵심은 증세\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672763",
-            "published_at": "Fri, 24 Jul 2026 11:25:00 +0900"
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "李 긍정-부정평가 45% 동률…與 새대표 선출에도 41%로 변화없어",
+            "link": "https://www.donga.com/news/Politics/article/all/20260821/134517801/2",
+            "published_at": "Fri, 21 Aug 2026 10:39:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T01:11:15.925831+00:00",
+        "compared_at": "2026-08-22T06:40:26.722194+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-861f8b19209cfc0f": {
+  "issue-2416ecea5f67bb30": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-861f8b19209cfc0f",
-        "publisher_id": "hankyung",
-        "publisher": "한국경제",
+        "issue_id": "issue-2416ecea5f67bb30",
+        "publisher_id": "hani",
+        "publisher": "한겨레",
         "articles": [
           {
-            "article_id": "2690915d1d344ef3fd7f8a302a775c5866d7e153a354f6eda6210a9b9299b090",
-            "title": "8월 1~20일 수출 56.0%·반도체 198.8% 증가…역대 최대",
-            "published_at": "Fri, 21 Aug 2026 09:02:32 +0900",
-            "link": "https://www.hankyung.com/article/2026082138707"
+            "article_id": "53a9e09660e5d62cfeae50aba4a57c934551ad84a6bd2eec28404f4c9e1396e8",
+            "title": "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”",
+            "published_at": "발행 시간 정보 없음",
+            "link": "https://www.hani.co.kr/arti/society/labor/1273922.html"
           }
         ],
         "analysis": {
-          "article_summary": "8월 1일부터 20일까지의 수출액이 전년 대비 56.0% 증가했으며, 특히 반도체 수출은 198.8% 급증해 역대 최대 증가율을 기록했다.",
-          "headline_frame": "수출 증가율과 반도체 수출 급증에 초점을 맞추고 있으며, '역대 최대'라는 표현을 통해 기록적 성과를 강조하고 있다.",
-          "main_focus": "수출 회복과 반도체 산업의 호황을 중심으로 경제 회복의 긍정적 신호로 해석하고 있다.",
+          "article_summary": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 지속하고 있음을 밝혔다.",
+          "headline_frame": "민주노총의 숙의형 사회적 대화 기구 논의 지속과 경사노위법 개정을 통한 정부 교섭",
+          "main_focus": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있다는 점",
           "keywords": [
-            "수출 증가",
-            "반도체 호황",
-            "역대 최대",
-            "경제 회복"
+            "숙의형 사회적 대화 기구",
+            "경사노위법 개정",
+            "정부 교섭"
           ],
           "main_actors": [
-            "한국 수출",
-            "반도체 산업"
+            "민주노총"
           ],
           "quoted_sources": [],
           "causes": [
-            "반도체 수요 증가"
+            "경사노위법 개정"
           ],
           "background": [
-            "8월 1~20일 기간"
+            "사회적 대화 기구"
           ],
           "emphasized_effects": [
-            "수출액 56.0% 증가",
-            "반도체 수출 198.8% 증가"
+            "정부 교섭"
           ],
-          "affected_groups": [
-            "한국 경제"
-          ],
+          "affected_groups": [],
           "tone": {
-            "category": "기대",
+            "category": "중립 설명",
             "evidence": [
-              "역대 최대"
+              "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”"
             ]
           },
           "outlook": {
-            "direction": "긍정",
-            "summary": "반도체 호황이 지속될 경우 수출 회복과 경제 성장에 긍정적 영향을 미칠 것으로 전망된다."
+            "direction": "중립",
+            "summary": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있음"
           },
-          "less_covered_context": [
-            "반도체 호황의 지속 가능성",
-            "수출 증가의 구체적 품목 구성"
-          ],
+          "less_covered_context": [],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:11:29.476092+00:00",
+        "analyzed_at": "2026-08-22T06:40:38.583871+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-861f8b19209cfc0f",
+        "issue_id": "issue-2416ecea5f67bb30",
         "publisher_id": "mk",
         "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "c6c1a8f5ce42666b2b58dc61fc9d39d47ab39cdc80c0688c35b50fbd2aac7fc5",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12105057"
+            "article_id": "2389ee7bbc66e659017c675d7d30889f0f2c11246cb6ebfec18f8591fab5d1b7",
+            "title": "민주노총, 사회적 대화 복귀 추진",
+            "published_at": "Thu, 23 Jul 2026 22:46:41 +09:00",
+            "link": "https://www.mk.co.kr/news/society/12106056"
           }
         ],
         "analysis": {
-          "article_summary": "한국은행이 발표한 올해 2분기 실질 국내총생산(GDP) 성장률이 0.6%를 기록했으며, 이는 반도체 중심의 수출 호조에 힘입은 것으로 나타났다.",
-          "headline_frame": "반도체 수출 호조가 2분기 GDP 성장률 0.6% 달성의 주요 요인으로 강조됨",
-          "main_focus": "반도체 수출 호조가 경제 성장률에 미친 긍정적 영향",
-          "keywords": [
-            "반도체 수출",
-            "GDP 성장률",
-            "경제 성장",
-            "수출 호조"
-          ],
-          "main_actors": [
-            "한국은행",
-            "한국 경제"
-          ],
-          "quoted_sources": [
-            "한국은행"
-          ],
-          "causes": [
-            "반도체 중심의 수출 호조"
-          ],
-          "background": [
-            "2분기(4~6월) 경제 성장률"
-          ],
-          "emphasized_effects": [
-            "0.6% GDP 성장률 달성"
-          ],
-          "affected_groups": [
-            "한국 경제"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 전망에 대한 구체적 언급은 없으나, 반도체 수출 호조가 경제 성장에 긍정적 영향을 미친 것으로 평가됨"
-          },
-          "less_covered_context": [
-            "1분기 성장률 1.8%와의 비교",
-            "반도체 수출 호조의 구체적 원인",
-            "향후 경제 전망에 대한 구체적 예측"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:11:30.068688+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-861f8b19209cfc0f",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "1e4049c6bf2c2d7cb51c17cde2dcfea2aecebf39368902e92648a54f9de99de2",
-            "title": "반도체 호황에 충북 광공업 생산 27.8% 증가",
-            "published_at": "Thu, 20 Aug 2026 00:30:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260819/134506917/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "반도체 호황으로 충북의 광공업 생산이 27.8% 증가했으며, 전국 광공업 생산은 2.0% 늘었다. 전국 수출액은 57.5% 증가했으나 지역별로 생산 및 수출 증감이 엇갈렸다.",
-          "headline_frame": "반도체 호황이 충북 광공업 생산 증가에 미친 영향",
-          "main_focus": "반도체 호황이 지역별 광공업 생산 및 수출 증감에 미친 차별적 영향",
-          "keywords": [
-            "반도체 호황",
-            "광공업 생산",
-            "충북",
-            "수출 증가",
-            "지역경제 동향"
-          ],
-          "main_actors": [
-            "SK하이닉스",
-            "청주 공장",
-            "국가데이터처",
-            "전국 17개 시도"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "반도체 호황"
-          ],
-          "background": [
-            "2026년 2분기 지역경제동향",
-            "전국 광공업 생산 통계",
-            "수출액 통계"
-          ],
-          "emphasized_effects": [
-            "충북 광공업 생산 27.8% 증가",
-            "전국 광공업 생산 2.0% 증가",
-            "전국 수출액 57.5% 증가",
-            "지역별 생산 및 수출 증감 엇갈림"
-          ],
-          "affected_groups": [
-            "충북",
-            "경기",
-            "충남",
-            "전남",
-            "서울",
-            "경남"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "반도체 호황에 힘입어 올 2분기(4∼6월) 충북의 광공업 생산이 30% 가까이 늘고 경기·충남의 수출도 크게 증가한 것으로 나타났다",
-              "전국 광공업 생산은 1년 전보다 2.0% 늘었다",
-              "전국 수출액은 2755억1000만 달러로 1년 전보다 57.5% 증가했다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "반도체 호황이 지속되나 지역별 경기 회복세는 엇갈릴 것으로 보인다."
-          },
-          "less_covered_context": [
-            "반도체 호황의 지속 가능성",
-            "지역별 생산 감소의 구체적 원인",
-            "반도체 산업 외 다른 산업의 동향"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:11:30.563500+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-861f8b19209cfc0f",
-      "groups": [
-        {
-          "group_id": "group-1",
-          "label": "반도체 호황과 수출 회복",
-          "summary": "반도체 수출 급증이 한국 경제 전반의 수출 회복과 성장에 미친 긍정적 영향을 중심으로 분석한 그룹",
-          "keywords": [
-            "반도체 호황",
-            "수출 증가",
-            "경제 회복"
-          ],
-          "publisher_ids": [
-            "hankyung",
-            "mk",
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "hankyung",
-              "publisher": "한국경제"
-            },
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 3,
-          "group_evidence": [
-            "세 언론사 모두 반도체 수출 호조를 핵심 쟁점으로 삼고 있으며, 이를 통해 한국 경제의 수출 회복과 성장 가능성을 긍정적으로 해석하고 있음",
-            "hankyung은 '역대 최대' 수출 증가율을 강조하며 경제 회복의 신호로 평가",
-            "mk는 반도체 수출 호조가 2분기 GDP 성장률 0.6% 달성의 주요 요인이라고 중립적으로 설명",
-            "donga는 반도체 호황이 충북 등 특정 지역의 광공업 생산 증가에 미친 차별적 영향을 분석하며, 전국적 수출 증가(57.5%)와 지역별 차이를 함께 제시"
-          ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 반도체 수출 호조를 중심으로 한국 경제의 수출 회복과 성장 가능성을 긍정적으로 보도하고 있으며, 세부적으로는 전국적 수출 증가, GDP 성장률 기여, 지역별 생산 영향 등 다양한 측면을 다루고 있으나 핵심 해석과 평가 방향은 일치함",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-08-22T01:11:33.976211+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,mk": {
-        "issue_id": "issue-861f8b19209cfc0f",
-        "selected_publishers": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "한국은행과 동아일보 모두 2026년 2분기(4~6월) 경제 성장률 및 생산·수출 동향을 보도하며, 반도체 호황이 주요 요인으로 작용했음을 공통적으로 확인했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 2026년 2분기(4~6월) 경제 지표와 반도체 호황의 연관성을 보도했으나, 매일경제는 전국 GDP 성장률 0.6%에 초점을 맞춘 반면 동아일보는 지역별 생산 및 수출 증감을 구체적으로 분석했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "2026년 2분기 실질 GDP 성장률 0.6% 달성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "2026년 2분기 지역별 광공업 생산 및 수출 증감 현황",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 반도체 수출 호조가 경제 성장률에 미친 긍정적 영향을 강조한 반면, 동아일보는 반도체 호황이 지역별 광공업 생산 및 수출에 미친 차별적 영향을 분석했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 경제 성장률에 미친 긍정적 영향",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 호황이 지역별 광공업 생산 및 수출 증감에 미친 차별적 영향",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 반도체 호황을 주요 원인으로 제시했으나, 매일경제는 수출 호조에 초점을 맞춘 반면 동아일보는 반도체 호황이 지역경제에 미친 영향을 배경으로 분석했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 중심의 수출 호조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 호황",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 한국 경제 전체의 0.6% GDP 성장률 달성을 강조한 반면, 동아일보는 충북(27.8% 증가), 경기·충남(수출 증가), 전국(2.0% 생산 증가) 등 지역별 구체적 영향을 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "한국 경제 전체의 0.6% GDP 성장률 달성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "충북 광공업 생산 27.8% 증가, 전국 광공업 생산 2.0% 증가, 전국 수출액 57.5% 증가 등 지역별 영향",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "매일경제는 '[속보]'라는 제목 프레임으로 신속한 정보 전달에 중점을 둔 반면, 동아일보는 '반도체 호황에 충북 광공업 생산 27.8% 증가'라는 구체적 제목과 함께 지역별 통계를 상세히 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "속보 형식의 신속한 정보 전달 태도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "지역별 구체적 통계와 사례를 제시하는 상세 분석 태도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "2026년 2분기(4~6월) 경제 지표와 반도체 호황의 연관성 보도",
-          "반도체 호황이 경제 성장에 긍정적 영향을 미쳤다는 점 강조"
-        ],
-        "key_differences": [
-          "매일경제는 전국 GDP 성장률 0.6%에 초점을 맞춘 반면, 동아일보는 지역별 생산 및 수출 증감을 구체적으로 분석"
-        ],
-        "comparison_report": "매일경제와 동아일보 모두 2026년 2분기 반도체 호황이 경제 성장에 미친 영향을 보도했으나, 매일경제는 한국은행 발표를 바탕으로 전국 GDP 성장률 0.6% 달성에 초점을 맞춘 반면, 동아일보는 지역별 광공업 생산 및 수출 증감을 구체적으로 분석했다. 매일경제는 '[속보]'라는 제목 프레임으로 신속한 정보 전달에 중점을 둔 반면, 동아일보는 '반도체 호황에 충북 광공업 생산 27.8% 증가'라는 구체적 제목과 함께 지역별 통계를 상세히 제시했다. 두 언론사 모두 반도체 호황을 주요 원인으로 제시했으나, 매일경제는 수출 호조에 초점을 맞춘 반면 동아일보는 반도체 호황이 지역경제에 미친 차별적 영향을 강조했다.",
-        "source_links": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "link": "https://www.mk.co.kr/news/economy/12105057",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "반도체 호황에 충북 광공업 생산 27.8% 증가",
-            "link": "https://www.donga.com/news/Economy/article/all/20260819/134506917/2",
-            "published_at": "Thu, 20 Aug 2026 00:30:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T01:11:42.509817+00:00",
-        "model": "solar-pro3"
-      },
-      "hankyung,mk": {
-        "issue_id": "issue-861f8b19209cfc0f",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "한국경제와 매일경제는 모두 반도체 수출 호조를 경제 성장의 주요 동력으로 보고 있으며, 수출 증가가 한국 경제에 미치는 긍정적 영향을 강조하고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 반도체 수출 호조가 경제 성장에 기여했다는 점을 공통적으로 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "8월 1~20일 수출 56.0% 증가와 반도체 수출 198.8% 급증이라는 구체적 수치를 제시하며 수출 회복을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "한국은행 발표를 인용해 2분기 GDP 성장률 0.6% 달성의 주요 요인으로 반도체 수출 호조를 제시",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 수출 회복과 반도체 산업 호황을 경제 회복의 긍정적 신호로 해석하는 반면, 매일경제는 반도체 수출 호조가 GDP 성장률에 미친 구체적 영향에 초점을 맞추고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "수출 증가와 반도체 호황을 경제 회복의 긍정적 신호로 해석",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 2분기 GDP 성장률 0.6% 달성의 주요 요인임을 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 8월 1~20일 기간의 수출 데이터를 배경으로 반도체 수요 증가를 원인으로 제시한 반면, 매일경제는 2분기(4~6월) 경제 성장률과 한국은행 발표를 배경으로 반도체 중심의 수출 호조를 원인으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "8월 1~20일 기간의 수출 데이터를 배경으로 반도체 수요 증가를 원인으로 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "2분기(4~6월) 경제 성장률과 한국은행 발표를 배경으로 반도체 중심의 수출 호조를 원인으로 제시",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 수출액과 반도체 수출 증가율이라는 구체적 수치를 강조한 반면, 매일경제는 0.6% GDP 성장률 달성이라는 거시적 경제 지표를 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "수출액 56.0% 증가와 반도체 수출 198.8% 증가라는 구체적 수치를 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "0.6% GDP 성장률 달성이라는 거시적 경제 지표를 강조",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 '역대 최대'라는 표현을 통해 기록적 성과를 강조하는 기대적 태도를 보인 반면, 매일경제는 '[속보]'라는 표현을 통해 한국은행 발표를 중립적으로 전달하는 설명적 태도를 보였다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "기록적 성과를 강조하는 기대적 태도",
-                "evidence": [
-                  "역대 최대"
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "한국은행 발표를 중립적으로 전달하는 설명적 태도",
-                "evidence": [
-                  "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "반도체 수출 호조가 한국 경제 성장에 기여했다는 점",
-          "수출 증가가 경제 회복의 긍정적 신호로 작용했다는 점"
-        ],
-        "key_differences": [
-          "한국경제는 8월 1~20일 수출 데이터에 초점을 맞춘 반면, 매일경제는 2분기 GDP 성장률에 초점을 맞춤",
-          "한국경제는 '역대 최대'라는 표현을 통해 성과를 강조한 반면, 매일경제는 '[속보]'라는 표현을 통해 중립적으로 전달"
-        ],
-        "comparison_report": "한국경제는 8월 1~20일 수출 56.0% 증가와 반도체 수출 198.8% 급증이라는 구체적 수치를 제시하며 '역대 최대'라는 표현을 통해 기록적 성과를 강조하는 기대적 태도를 보였다. 반면 매일경제는 한국은행 발표를 인용해 2분기 GDP 성장률 0.6% 달성의 주요 요인으로 반도체 수출 호조를 제시하며 '[속보]'라는 표현을 통해 중립적으로 설명하는 태도를 보였다. 두 언론사 모두 반도체 수출 호조가 한국 경제에 긍정적 영향을 미쳤다는 점은 공통적으로 보도했으나, 한국경제은 수출 회복의 구체적 수치와 기록적 성과에 초점을 맞춘 반면, 매일경제는 거시적 경제 성장률과 공식 발표 내용을 중심으로 보도했다.",
-        "source_links": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "8월 1~20일 수출 56.0%·반도체 198.8% 증가…역대 최대",
-            "link": "https://www.hankyung.com/article/2026082138707",
-            "published_at": "Fri, 21 Aug 2026 09:02:32 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "link": "https://www.mk.co.kr/news/economy/12105057",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T01:11:43.935438+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,hankyung": {
-        "issue_id": "issue-861f8b19209cfc0f",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "8월 1일부터 20일까지의 수출액이 전년 대비 크게 증가했으며, 반도체 수출이 급증해 역대 최대 증가율을 기록한 것으로 나타났다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 8월 1~20일 기간 수출액이 전년 대비 크게 증가했으며, 반도체 수출이 급증했다는 사실을 공통적으로 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "8월 1~20일 수출 56.0% 증가, 반도체 수출 198.8% 급증",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "8월 1~20일 수출액 57.5% 증가, 반도체 호황으로 충북 광공업 생산 27.8% 증가",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 수출 회복과 반도체 호황을 경제 회복의 긍정적 신호로 해석한 반면, 동아일보는 반도체 호황이 지역별 광공업 생산 및 수출에 미친 차별적 영향을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "수출 회복과 반도체 산업 호황을 경제 회복의 긍정적 신호로 해석",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 호황이 지역별 광공업 생산 및 수출 증감에 미친 차별적 영향",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 반도체 수요 증가를 수출 증가의 주요 원인으로 제시하지만, 한국경제은 8월 1~20일 기간을, 동아일보는 2026년 2분기 지역경제동향과 전국 통계를 배경으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "8월 1~20일 기간 반도체 수요 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "2026년 2분기 지역경제동향, 전국 광공업 생산 및 수출액 통계",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 한국 경제 전체에 미친 영향을 강조한 반면, 동아일보는 충북, 경기, 충남, 전남, 서울, 경남 등 특정 지역과 산업에 미친 차별적 영향을 구체적으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "한국 경제 전체에 대한 수출 증가 및 반도체 수출 급증의 긍정적 영향",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "충북 광공업 생산 27.8% 증가, 전국 광공업 생산 2.0% 증가, 전국 수출액 57.5% 증가, 지역별 생산 및 수출 증감 엇갈림",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "한국경제는 '역대 최대'라는 표현을 통해 기록적 성과를 강조하는 기대 태도를 보인 반면, 동아일보는 중립적으로 통계 수치를 설명하며 지역별 차이를 객관적으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "기록적 성과를 강조하는 기대 태도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "중립적으로 통계 수치를 설명하며 지역별 차이를 객관적으로 제시하는 태도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "8월 1~20일 기간 수출액이 전년 대비 크게 증가했으며, 반도체 수출이 급증했다는 사실",
-          "반도체 수요 증가가 수출 증가의 주요 원인이라는 점",
-          "수출 증가가 한국 경제에 긍정적 영향을 미친다는 점"
-        ],
-        "key_differences": [
-          "한국경제는 수출 회복과 반도체 호황을 경제 회복의 긍정적 신호로 해석한 반면, 동아일보는 지역별 광공업 생산 및 수출 증감의 차별적 영향을 강조함",
-          "한국경제는 '역대 최대'라는 표현을 통해 기록적 성과를 강조한 반면, 동아일보는 중립적으로 통계 수치를 설명하며 지역별 차이를 객관적으로 제시함"
-        ],
-        "comparison_report": "두 언론사 모두 8월 1~20일 기간 수출액이 전년 대비 크게 증가하고 반도체 수출이 급증했다는 공통점을 보도하고 있으나, 한국경제은 수출 회복과 반도체 호황을 경제 회복의 긍정적 신호로 해석하며 '역대 최대'라는 표현을 통해 기록적 성과를 강조한 반면, 동아일보는 반도체 호황이 지역별 광공업 생산 및 수출 증감에 미친 차별적 영향을 중립적으로 설명하며 충북, 경기, 충남 등 특정 지역과 산업에 미친 구체적 영향을 제시하고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "8월 1~20일 수출 56.0%·반도체 198.8% 증가…역대 최대",
-            "link": "https://www.hankyung.com/article/2026082138707",
-            "published_at": "Fri, 21 Aug 2026 09:02:32 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "반도체 호황에 충북 광공업 생산 27.8% 증가",
-            "link": "https://www.donga.com/news/Economy/article/all/20260819/134506917/2",
-            "published_at": "Thu, 20 Aug 2026 00:30:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T01:11:44.751604+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,hankyung,mk": {
-        "issue_id": "issue-861f8b19209cfc0f",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "8월 1일부터 20일까지의 수출액이 전년 대비 56.0% 증가했으며, 특히 반도체 수출은 198.8% 급증해 역대 최대 증가율을 기록했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "한국경제와 동아일보는 8월 1~20일 수출액이 전년 대비 56.0% 증가했다고 보도했으며, 매일경제도 반도체 수출 호조가 경제 성장에 기여했다고 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "8월 1~20일 수출액이 전년 대비 56.0% 증가했으며, 반도체 수출은 198.8% 급증해 역대 최대 증가율을 기록했다고 보도했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 2분기 GDP 성장률 0.6% 달성의 주요 요인으로 작용했다고 보도했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 호황으로 충북 광공업 생산이 27.8% 증가했으며, 전국 광공업 생산은 2.0% 늘었다고 보도했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 수출 회복과 반도체 산업 호황을 경제 회복의 긍정적 신호로 해석했고, 매일경제는 반도체 수출 호조가 GDP 성장률에 미친 긍정적 영향을 강조했으며, 동아일보는 반도체 호황이 지역별 광공업 생산 및 수출 증감에 미친 차별적 영향을 분석했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "수출 회복과 반도체 산업의 호황을 중심으로 경제 회복의 긍정적 신호로 해석했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 수출 호조가 경제 성장률에 미친 긍정적 영향을 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 호황이 지역별 광공업 생산 및 수출 증감에 미친 차별적 영향을 분석했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 반도체 수요 증가를 수출 증가의 원인으로 강조했고, 매일경제는 반도체 중심의 수출 호조를 2분기 GDP 성장률의 배경으로 제시했으며, 동아일보는 반도체 호황을 광공업 생산 증가의 원인으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "반도체 수요 증가를 수출 증가의 원인으로 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "반도체 중심의 수출 호조를 2분기 GDP 성장률의 배경으로 제시했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 호황을 광공업 생산 증가의 원인으로 제시했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 수출액과 반도체 수출 증가를 한국 경제에 미친 영향으로 강조했고, 매일경제는 0.6% GDP 성장률 달성을 한국 경제에 미친 영향으로 보도했으며, 동아일보는 충북, 경기, 충남, 전남, 서울, 경남 등 지역별 생산 및 수출 증감을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "수출액 56.0% 증가와 반도체 수출 198.8% 증가를 한국 경제에 미친 영향으로 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "0.6% GDP 성장률 달성을 한국 경제에 미친 영향으로 보도했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "충북 광공업 생산 27.8% 증가, 전국 광공업 생산 2.0% 증가, 전국 수출액 57.5% 증가 등 지역별 생산 및 수출 증감을 강조했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 '역대 최대'라는 표현을 통해 기록적 성과를 기대적으로 전달했고, 매일경제는 '[속보]'라는 표현을 사용해 중립적으로 사실을 전달했으며, 동아일보는 '반도체 호황에 힘입어'라는 표현을 통해 중립적으로 설명했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "기록적 성과를 기대적으로 전달하는 태도를 보였다.",
-                "evidence": [
-                  "역대 최대"
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "중립적으로 사실을 전달하는 태도를 보였다.",
-                "evidence": [
-                  "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "중립적으로 사실을 전달하는 태도를 보였다.",
-                "evidence": [
-                  "반도체 호황에 힘입어 올 2분기(4∼6월) 충북의 광공업 생산이 30% 가까이 늘고 경기·충남의 수출도 크게 증가한 것으로 나타났다",
-                  "전국 광공업 생산은 1년 전보다 2.0% 늘었다",
-                  "전국 수출액은 2755억1000만 달러로 1년 전보다 57.5% 증가했다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "반도체 수출 호조가 경제 성장에 긍정적인 영향을 미쳤다는 점을 공통적으로 보도했다.",
-          "수출액 증가와 반도체 수출 급증이라는 핵심 데이터를 공유했다."
-        ],
-        "key_differences": [
-          "한국경제는 8월 1~20일 수출 데이터에 초점을 맞춘 반면, 매일경제는 2분기 GDP 성장률에 초점을 맞췄다.",
-          "동아일보는 지역별 생산 및 수출 증감의 차별적 영향을 구체적으로 분석한 반면, 다른 두 언론사는 전국 단위 데이터에 집중했다."
-        ],
-        "comparison_report": "한국경제, 매일경제, 동아일보는 모두 반도체 수출 호조가 한국 경제에 긍정적인 영향을 미쳤다는 점을 보도했으나, 각각 다른 측면에 초점을 두었다. 한국경제는 8월 1~20일 수출 데이터에서 반도체 수출 198.8% 급증과 역대 최대 증가율을 강조하며 경제 회복의 긍정적 신호로 해석했고, 매일경제는 한국은행 발표를 인용해 반도체 수출 호조가 2분기 GDP 성장률 0.6% 달성의 주요 요인이라고 중립적으로 설명했다. 동아일보는 통계청 자료를 바탕으로 반도체 호황이 충북 광공업 생산 27.8% 증가 등 지역별 생산 및 수출 증감에 미친 차별적 영향을 구체적으로 분석했다. 보도 태도 측면에서 한국경제는 '역대 최대'라는 표현을 통해 기대적 태도를 보인 반면, 매일경제는 '[속보]'라는 표현을 사용해 중립적으로 사실을 전달했고, 동아일보는 '반도체 호황에 힘입어'라는 표현을 통해 중립적으로 설명했다.",
-        "source_links": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "8월 1~20일 수출 56.0%·반도체 198.8% 증가…역대 최대",
-            "link": "https://www.hankyung.com/article/2026082138707",
-            "published_at": "Fri, 21 Aug 2026 09:02:32 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[속보] 반도체 수출 호조에…올해 2분기 GDP 성장률 0.6%",
-            "link": "https://www.mk.co.kr/news/economy/12105057",
-            "published_at": "Thu, 23 Jul 2026 08:00:00 +09:00"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "반도체 호황에 충북 광공업 생산 27.8% 증가",
-            "link": "https://www.donga.com/news/Economy/article/all/20260819/134506917/2",
-            "published_at": "Thu, 20 Aug 2026 00:30:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T01:11:48.110070+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-c55d64fca4c3b0ac": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-c55d64fca4c3b0ac",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "9ef41cab1b30f0d1eda3b2f4827474fd1e3d5c7ac25b911d9629758587047d79",
-            "title": "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\"",
-            "published_at": "Fri, 24 Jul 2026 11:18:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673137"
-          }
-        ],
-        "analysis": {
-          "article_summary": "구윤철 경제부총리가 민생물가 특별관리 관계장관 태스크포스를 주재하며 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성을 긍정적으로 전망했다.",
-          "headline_frame": "경제 성장률과 1인당 GNI 달성 가능성에 초점",
-          "main_focus": "경제 성장률 3% 달성 및 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
-          "keywords": [
-            "경제 성장률",
-            "1인당 GNI",
-            "4만달러",
-            "민생물가 특별관리",
-            "태스크포스"
-          ],
-          "main_actors": [
-            "구윤철 부총리 겸 재정경제부 장관"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "민생물가 특별관리 관계장관 태스크포스 주재"
-          ],
-          "background": [
-            "민생물가 특별관리 관계장관 태스크포스"
-          ],
-          "emphasized_effects": [
-            "올해 3% 성장 가능성",
-            "1인당 GNI 4만달러 달성 가능성"
-          ],
-          "affected_groups": [
-            "민생물가"
-          ],
-          "tone": {
-            "category": "기대",
-            "evidence": [
-              "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\""
-            ]
-          },
-          "outlook": {
-            "direction": "긍정",
-            "summary": "경제 지표 개선 가능성에 대한 긍정적 전망"
-          },
-          "less_covered_context": [
-            "구체적인 정책 수단이나 실행 계획",
-            "성장률 달성을 위한 구체적 조건"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:11:52.103619+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-c55d64fca4c3b0ac",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "46006fea45a1063b75741b1b6eb861d05037f0cfc9bbf430902f22c096dac7e8",
-            "title": "구윤철 “거제·통영 특별재난지역 선포 검토…가용수단 총동원”",
-            "published_at": "Thu, 20 Aug 2026 08:23:25 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260820/134509071/1"
-          }
-        ],
-        "analysis": {
-          "article_summary": "구윤철 경제부총리는 거제·통영 등 경남 지역의 집중호우 피해에 대응해 특별재난지역 선포 검토 및 가용수단 총동원을 통한 주민 일상회복을 지원하겠다고 밝혔다.",
-          "headline_frame": "집중호우 피해 대응을 위한 특별재난지역 선포 검토 및 가용수단 총동원",
-          "main_focus": "집중호우로 인한 경남 지역 피해 복구 및 주민 일상회복을 위한 정부의 지원 방안",
-          "keywords": [
-            "집중호우",
-            "특별재난지역",
-            "가용수단 총동원",
-            "일상회복"
-          ],
-          "main_actors": [
-            "구윤철 경제부총리 겸 재정경제부 장관",
-            "정부"
-          ],
-          "quoted_sources": [
-            "구윤철 경제부총리 겸 재정경제부 장관"
-          ],
-          "causes": [
-            "지난 연휴기간 중 기록적인 집중호우"
-          ],
-          "background": [
-            "비상경제본부 회의 겸 경제관계장관회의 겸 민생물가 특별관리 관계장관 태스크포스(TF) 주재"
-          ],
-          "emphasized_effects": [
-            "피해지역 주민들의 조속한 일상회복"
-          ],
-          "affected_groups": [
-            "거제·통영 등 경남 지역 주민들"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "구윤철 “거제·통영 특별재난지역 선포 검토…가용수단 총동원”"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "특별재난지역 선포 검토 및 가용수단 총동원을 통한 피해 복구 지원"
-          },
-          "less_covered_context": [
-            "미국-이란 간 60일의 종전 양해각서 협상 시한 만료 이후의 구체적 대응 방안"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:11:52.770953+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-c55d64fca4c3b0ac",
-      "groups": [
-        {
-          "group_id": "growth-optimism",
-          "label": "경제 성장률 및 1인당 GNI 달성 전망",
-          "summary": "SBS는 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시하며, 민생물가 특별관리 태스크포스를 통해 이를 달성할 수 있다는 기대를 표명했습니다. 동아일보도 집중호우 피해 복구 및 특별재난지역 선포를 통해 경제 지표 개선 가능성을 긍정적으로 전망했습니다.",
-          "keywords": [
-            "경제 성장률",
-            "1인당 GNI",
-            "4만달러",
-            "민생물가 특별관리",
-            "태스크포스",
-            "집중호우"
-          ],
-          "publisher_ids": [
-            "sbs",
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 2,
-          "group_evidence": [
-            "SBS는 구윤철 발언을 인용하여 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성이 매우 높아졌다고 긍정적으로 전망했습니다. 동아일보도 구윤철 발언을 인용하여 거제·통영 등 경남 지역 피해 복구를 위한 특별재난지역 선포 검토와 가용수단 총동원을 통해 경제 지표 개선 가능성을 긍정적으로 전망했습니다. 두 언론사 모두 민생물가 특별관리 관계장관 태스크포스를 언급하며 경제 지표 개선 가능성을 긍정적으로 보도했습니다."
-          ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "SBS와 동아일보 모두 경제 성장률 3% 달성 및 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 제시했습니다. SBS는 민생물가 특별관리 태스크포스를 통해 경제 지표 개선 가능성을 강조했고, 동아일보는 집중호우 피해 복구를 위한 특별재난지역 선포 검토를 통해 경제 지표 개선 가능성을 긍정적으로 전망했습니다. 두 언론사 모두 구윤철 발언을 인용하며 경제 지표 개선 가능성에 대한 긍정적 태도를 보였습니다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-08-22T01:11:55.924159+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-c55d64fca4c3b0ac",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "구윤철 경제부총리가 민생물가 특별관리 관계장관 태스크포스를 주재하며 경제 성장률과 1인당 GNI 달성 가능성에 대해 긍정적 전망을 제시했다.",
-        "overall_difference": "차이 큼",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 경제 성장률 3%와 1인당 GNI 4만달러 달성 가능성에 초점을 맞춘 반면, 동아일보는 경남 지역 집중호우 피해 대응을 위한 특별재난지역 선포 검토에 초점을 두었다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "민생물가 특별관리 태스크포스 주재와 경제 성장률 3%, 1인당 GNI 4만달러 달성 가능성 긍정적 전망",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "경남 지역 집중호우 피해 대응을 위한 특별재난지역 선포 검토 및 가용수단 총동원",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 경제 성장 목표 달성에 대한 긍정적 전망을 핵심 관점으로 삼은 반면, 동아일보는 집중호우 피해 복구 및 주민 일상회복 지원 방안을 핵심 관점으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "집중호우로 인한 경남 지역 피해 복구 및 주민 일상회복을 위한 정부 지원 방안",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 민생물가 특별관리 태스크포스 주재를 원인으로 강조한 반면, 동아일보는 지난 연휴기간 기록적인 집중호우를 원인으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "민생물가 특별관리 관계장관 태스크포스 주재",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "지난 연휴기간 중 기록적인 집중호우",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 올해 3% 성장과 1인당 GNI 4만달러 달성 가능성을 영향으로 강조한 반면, 동아일보는 거제·통영 등 경남 지역 주민들의 조속한 일상회복을 영향으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "올해 3% 성장 가능성 및 1인당 GNI 4만달러 달성 가능성",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "피해지역 주민들의 조속한 일상회복",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "차이 큼",
-            "contrast_statement": "SBS는 경제부총리의 발언을 통해 경제 성장 가능성에 대한 기대감을 강조하는 태도를 보인 반면, 동아일보는 피해 대응을 위한 정부 조치를 중립적으로 설명하는 태도를 보였다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "경제부총리의 발언을 인용해 경제 성장 가능성에 대한 기대감을 강조하는 태도",
-                "evidence": [
-                  "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\""
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "경제부총리의 발언을 인용해 피해 대응을 위한 정부 조치를 중립적으로 설명하는 태도",
-                "evidence": [
-                  "구윤철 “거제·통영 특별재난지역 선포 검토…가용수단 총동원”"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "구윤철 경제부총리가 민생물가 특별관리 관계장관 태스크포스를 주재했다는 사실"
-        ],
-        "key_differences": [
-          "SBS는 경제 성장률과 1인당 GNI 달성 가능성에 초점을 맞춘 반면, 동아일보는 경남 지역 집중호우 피해 대응과 특별재난지역 선포 검토에 초점을 두었다."
-        ],
-        "comparison_report": "SBS와 동아일보 모두 구윤철 경제부총리가 민생물가 특별관리 관계장관 태스크포스를 주재했다는 사실을 보도했으나, SBS는 경제 성장률 3% 달성과 1인당 GNI 4만달러 달성 가능성에 대한 긍정적 전망을 강조한 반면, 동아일보는 경남 지역 집중호우 피해 대응을 위한 특별재난지역 선포 검토 및 가용수단 총동원을 통한 주민 일상회복 지원 방안을 중점적으로 보도했다. SBS는 경제부총리의 발언을 통해 경제 성장 가능성에 대한 기대감을 강조하는 태도를 보인 반면, 동아일보는 피해 대응을 위한 정부 조치를 중립적으로 설명하는 태도를 보였다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "구윤철 \"올해 3% 성장·1인당 GNI 4만달러 가능성 매우 높아져\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673137",
-            "published_at": "Fri, 24 Jul 2026 11:18:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "구윤철 “거제·통영 특별재난지역 선포 검토…가용수단 총동원”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260820/134509071/1",
-            "published_at": "Thu, 20 Aug 2026 08:23:25 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T01:12:04.086019+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-2e6f25f525c8ee6c": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-2e6f25f525c8ee6c",
-        "publisher_id": "hankyung",
-        "publisher": "한국경제",
-        "articles": [
-          {
-            "article_id": "c3bb2233a2380b440d1e74a7fd8e3b348cc68b8fc1b1c90ba7648499f3eec58f",
-            "title": "민주노총, 사회적대화 복귀 추진",
-            "published_at": "Thu, 23 Jul 2026 17:53:15 +0900",
-            "link": "https://www.hankyung.com/article/2026072327381"
-          }
-        ],
-        "analysis": {
-          "article_summary": "민주노총이 사회적 대화 복귀를 추진하며 노사정 대화 재개에 대한 의지를 표명했다.",
+          "article_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며, 제9차 중앙집행위원회에서 사회적 교섭 논의 재개 방침을 결정했다.",
           "headline_frame": "민주노총의 사회적 대화 복귀 추진",
-          "main_focus": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+          "main_focus": "민주노총의 사회적 대화 복귀 추진 결정",
           "keywords": [
-            "사회적 대화",
-            "복귀",
-            "추진"
+            "사회적 대화 복귀",
+            "중앙집행위원회",
+            "사회적 교섭 논의"
           ],
           "main_actors": [
             "민주노총"
           ],
           "quoted_sources": [],
           "causes": [
-            "사회적 대화 복귀 추진"
+            "27년 만의 사회적 대화 복귀 추진"
           ],
-          "background": [],
+          "background": [
+            "민주노총의 사회적 대화 복귀 추진"
+          ],
           "emphasized_effects": [
-            "노사정 대화 재개"
+            "사회적 교섭 논의 재개"
           ],
-          "affected_groups": [
-            "민주노총"
-          ],
+          "affected_groups": [],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "민주노총, 사회적대화 복귀 추진"
+              "민주노총, 사회적 대화 복귀 추진"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "민주노총의 사회적 대화 복귀 추진으로 노사정 대화 재개 가능성 시사"
+            "summary": "민주노총의 사회적 대화 복귀 추진 방침 결정"
           },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "다른 노동단체나 사용자 단체의 반응"
-          ],
+          "less_covered_context": [],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:12:22.320401+00:00",
+        "analyzed_at": "2026-08-22T06:40:38.621471+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-2e6f25f525c8ee6c",
+        "issue_id": "issue-2416ecea5f67bb30",
         "publisher_id": "chosun",
         "publisher": "조선일보",
         "articles": [
@@ -1909,7 +1443,7 @@
         "analysis": {
           "article_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며, 9차 중앙집행위원회에서 '사회적 교섭 논의 건'을 안건으로 상정했다.",
           "headline_frame": "민주노총의 27년 만의 사회적 대화 복귀 추진",
-          "main_focus": "민주노총의 사회적 대화 복귀 추진 배경과 절차",
+          "main_focus": "민주노총의 사회적 대화 복귀 추진 결정",
           "keywords": [
             "사회적 대화 복귀",
             "민주노총",
@@ -1922,7 +1456,7 @@
           ],
           "quoted_sources": [],
           "causes": [
-            "1999년 2월 노사정위원회 탈퇴"
+            "1999년 노사정위원회 탈퇴"
           ],
           "background": [
             "1999년 2월 정부 주도의 경제사회노동위원회(경사노위) 전신인 노사정위원회 탈퇴"
@@ -1941,184 +1475,127 @@
           },
           "outlook": {
             "direction": "중립",
-            "summary": "민주노총의 사회적 대화 복귀 추진"
-          },
-          "less_covered_context": [
-            "사회적 대화 복귀의 구체적 내용 및 향후 계획"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:12:23.289384+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-2e6f25f525c8ee6c",
-        "publisher_id": "mk",
-        "publisher": "매일경제",
-        "articles": [
-          {
-            "article_id": "2389ee7bbc66e659017c675d7d30889f0f2c11246cb6ebfec18f8591fab5d1b7",
-            "title": "민주노총, 사회적 대화 복귀 추진",
-            "published_at": "Thu, 23 Jul 2026 22:46:41 +09:00",
-            "link": "https://www.mk.co.kr/news/society/12106056"
-          }
-        ],
-        "analysis": {
-          "article_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며, 제9차 중앙집행위원회에서 사회적 교섭 논의 계획을 발표했다.",
-          "headline_frame": "민주노총의 사회적 대화 복귀 추진",
-          "main_focus": "민주노총의 사회적 대화 복귀 추진 결정 및 그 배경",
-          "keywords": [
-            "사회적 대화 복귀",
-            "민주노총",
-            "중앙집행위원회",
-            "사회적 교섭 논의"
-          ],
-          "main_actors": [
-            "민주노총",
-            "전국민주노동조합총연맹"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "27년 만의 사회적 대화 복귀 추진"
-          ],
-          "background": [
-            "민주노총의 사회적 대화 복귀 추진"
-          ],
-          "emphasized_effects": [
-            "사회적 대화 복귀"
-          ],
-          "affected_groups": [
-            "민주노총"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "민주노총, 사회적 대화 복귀 추진"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
             "summary": "민주노총의 사회적 대화 복귀 추진 결정"
           },
           "less_covered_context": [],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T01:12:23.302555+00:00",
+        "analyzed_at": "2026-08-22T06:40:39.713888+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-2e6f25f525c8ee6c",
+      "issue_id": "issue-2416ecea5f67bb30",
       "groups": [
         {
-          "group_id": "group-01",
-          "label": "민주노총 사회적 대화 복귀 추진",
-          "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지를 중심으로 한 중립적 설명",
+          "group_id": "group-1",
+          "label": "사회적 대화 복귀와 경사노위법 개정 논의",
+          "summary": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있다는 점을 중심으로, 사회적 대화 복귀 추진 결정과 그 배경, 영향 등을 중립적으로 설명하는 관점",
           "keywords": [
-            "사회적 대화 복귀",
-            "노사정 대화 재개"
+            "숙의형 사회적 대화 기구",
+            "경사노위법 개정",
+            "사회적 대화 복귀"
           ],
           "publisher_ids": [
-            "hankyung",
-            "chosun",
-            "mk"
+            "hani",
+            "mk",
+            "chosun"
           ],
           "publishers": [
             {
-              "publisher_id": "hankyung",
-              "publisher": "한국경제"
-            },
-            {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
+              "publisher_id": "hani",
+              "publisher": "한겨레"
             },
             {
               "publisher_id": "mk",
               "publisher": "매일경제"
+            },
+            {
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
             }
           ],
           "publisher_count": 3,
           "group_evidence": [
-            "세 언론사 모두 민주노총의 사회적 대화 복귀 추진이라는 동일한 중심 쟁점을 다루고 있으며, 이는 노사정 대화 재개 가능성을 시사하거나 사회적 대화 복귀 자체를 설명하는 중립적 태도를 보임",
-            "핵심 관점은 '사회적 대화 복귀 추진'으로 일치하며, 해석 방향은 복귀의 의미와 가능성에 초점을 맞춘 중립적 설명임",
-            "강조된 원인과 배경, 영향, 대상 모두 민주노총의 복귀 결정과 노사정 대화 재개라는 공통된 핵심 해석을 공유함",
-            "보도 태도는 모두 '중립 설명'으로, 정책 효과나 실패를 비판하거나 옹호하는 대립적 시각이 없음"
+            "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있다는 점을 핵심 쟁점으로 다루고 있음",
+            "사회적 대화 복귀 추진 결정이라는 공통의 핵심 관점을 가지고 있으며, 경사노위법 개정과 숙의형 대화 기구라는 구체적 표현 차이는 있으나 사건의 의미와 해석 방향이 대체로 일치함",
+            "모두 중립적인 설명 태도로, 정책의 내용과 효과를 객관적으로 전달하는 데 초점을 맞추고 있음",
+            "강조된 원인, 배경, 영향 모두 사회적 대화 복귀와 관련된 내용으로, 핵심 해석을 바꾸지 않는 범위 내에서 세부 표현만 다름"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 민주노총의 사회적 대화 복귀 추진이라는 동일한 중심 쟁점을 다루며, 노사정 대화 재개 가능성을 시사하거나 복귀 결정 자체를 중립적으로 설명하는 공통된 보도 경향을 보임. 핵심 관점과 해석 방향이 일치하여 하나의 그룹으로 분류함.",
+      "grouping_summary": "3개 언론사 모두 민주노총의 사회적 대화 복귀 추진이라는 동일한 핵심 관점을 가지고 있으며, 경사노위법 개정, 숙의형 사회적 대화 기구, 중앙집행위원회 등 세부 표현 차이는 있으나 사건의 의미와 해석 방향이 대체로 일치하여 하나의 그룹으로 묶을 수 있음. 모두 중립적인 설명 태도로 정책의 내용과 효과를 객관적으로 전달하고 있음.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T01:12:26.764877+00:00",
+      "grouped_at": "2026-08-22T06:40:42.772042+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "hankyung,mk": {
-        "issue_id": "issue-2e6f25f525c8ee6c",
+      "hani,mk": {
+        "issue_id": "issue-2416ecea5f67bb30",
         "selected_publishers": [
           {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
+            "publisher_id": "hani",
+            "publisher": "한겨레"
           },
           {
             "publisher_id": "mk",
             "publisher": "매일경제"
           }
         ],
-        "common_summary": "민주노총이 사회적 대화 복귀를 추진하며 노사정 대화 재개에 대한 의지를 표명한 내용을 다루고 있다.",
-        "overall_difference": "유사함",
+        "common_summary": "민주노총이 경사노위법 개정 또는 사회적 대화 복귀를 통해 정부와의 교섭을 재개하려는 움직임을 보이고 있다.",
+        "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지를 공통적으로 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 민주노총이 정부와의 교섭을 재개하기 위해 경사노위법 개정 또는 사회적 대화 복귀를 추진하고 있음을 보도하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 지속하고 있음을 보도",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+                "summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며 제9차 중앙집행위원회에서 사회적 교섭 논의 재개 방침을 결정했음을 보도",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀 추진 결정과 그 배경을 핵심 관점으로 제시하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞춘 반면, 매일경제는 사회적 대화 복귀 자체에 초점을 두고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있다는 점",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 결정 및 그 배경",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조된 원인·배경",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 사회적 대화 복귀 추진 자체를 강조된 원인으로 제시하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정을 원인으로 제시한 반면, 매일경제는 27년 만의 사회적 대화 복귀 추진이라는 배경을 강조하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "사회적 대화 복귀 추진",
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정",
                 "evidence": []
               },
               {
@@ -2132,39 +1609,39 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀가 노사정 대화 재개에 미치는 영향을 강조하고 있다.",
+            "contrast_statement": "두 언론사 모두 정부와의 교섭 재개 또는 사회적 교섭 논의 재개를 주요 영향으로 보도하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "노사정 대화 재개",
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "정부 교섭",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사회적 대화 복귀",
+                "summary": "사회적 교섭 논의 재개",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 중립적인 설명 태도로 민주노총의 사회적 대화 복귀 추진 사실을 전달하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정과 정부 교섭이라는 구체적 표현을 사용한 반면, 매일경제는 사회적 대화 복귀 추진이라는 일반적 표현을 사용하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "사실관계를 중립적으로 전달함",
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정과 정부 교섭이라는 구체적 표현을 통해 중립적으로 사실을 전달함",
                 "evidence": [
-                  "민주노총, 사회적대화 복귀 추진"
+                  "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”"
                 ]
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달함",
+                "summary": "사회적 대화 복귀 추진이라는 표현을 통해 중립적으로 사실을 전달함",
                 "evidence": [
                   "민주노총, 사회적 대화 복귀 추진"
                 ]
@@ -2173,19 +1650,21 @@
           }
         ],
         "similarities": [
-          "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
-          "27년 만의 사회적 대화 복귀 추진",
-          "중립적인 설명 태도"
+          "민주노총이 정부와의 교섭을 재개하기 위해 경사노위법 개정 또는 사회적 대화 복귀를 추진하고 있음",
+          "제9차 중앙집행위원회에서 관련 방침을 결정함"
         ],
-        "key_differences": [],
-        "comparison_report": "한국경제와 매일경제는 모두 민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지를 중립적으로 보도하고 있다. 두 언론사 모두 27년 만의 사회적 대화 복귀라는 배경을 강조하며, 핵심 관점은 민주노총의 복귀 결정과 그 배경에 초점을 맞추고 있다. 영향 측면에서는 민주노총의 복귀가 노사정 대화 재개에 미치는 효과를 공통적으로 다루고 있으며, 보도 태도는 중립적인 설명 방식으로 유사하다.",
+        "key_differences": [
+          "한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞춘 반면, 매일경제는 사회적 대화 복귀 자체에 초점을 두고 있음",
+          "한겨레는 경사노위법 개정이라는 구체적 원인을 제시한 반면, 매일경제는 27년 만의 사회적 대화 복귀 추진이라는 배경을 강조함"
+        ],
+        "comparison_report": "한겨레와 매일경제는 모두 민주노총이 정부와의 교섭을 재개하기 위해 경사노위법 개정 또는 사회적 대화 복귀를 추진하고 있음을 보도하고 있으나, 한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞추고 구체적인 표현을 사용한 반면, 매일경제는 사회적 대화 복귀 추진이라는 일반적 표현을 사용하며 27년 만의 복귀라는 배경을 강조하고 있다.",
         "source_links": [
           {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "민주노총, 사회적대화 복귀 추진",
-            "link": "https://www.hankyung.com/article/2026072327381",
-            "published_at": "Thu, 23 Jul 2026 17:53:15 +0900"
+            "publisher_id": "hani",
+            "publisher": "한겨레",
+            "title": "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”",
+            "link": "https://www.hani.co.kr/arti/society/labor/1273922.html",
+            "published_at": "발행 시간 정보 없음"
           },
           {
             "publisher_id": "mk",
@@ -2197,58 +1676,58 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T01:12:35.255591+00:00",
+        "compared_at": "2026-08-22T06:40:50.117397+00:00",
         "model": "solar-pro3"
       },
-      "chosun,hankyung": {
-        "issue_id": "issue-2e6f25f525c8ee6c",
+      "chosun,mk": {
+        "issue_id": "issue-2416ecea5f67bb30",
         "selected_publishers": [
           {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
+            "publisher_id": "mk",
+            "publisher": "매일경제"
           },
           {
             "publisher_id": "chosun",
             "publisher": "조선일보"
           }
         ],
-        "common_summary": "민주노총이 사회적 대화 복귀를 추진하며 노사정 대화 재개에 대한 의지를 표명한 내용을 다루고 있다.",
+        "common_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며, 제9차 중앙집행위원회에서 사회적 교섭 논의 재개 방침을 결정했다는 내용을 두 언론사 모두 보도하고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지를 공통적으로 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 민주노총의 27년 만의 사회적 대화 복귀 추진 및 제9차 중앙집행위원회에서의 사회적 교섭 논의 재개 방침 결정을 공통적으로 보도하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
                 "evidence": []
               },
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+                "summary": "민주노총의 27년 만의 사회적 대화 복귀 추진 및 사회적 교섭 논의 재개 방침 결정",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 복귀 추진 자체에 초점을 맞춘 반면, 조선일보는 복귀 배경과 절차를 함께 설명하고 있다.",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀 추진 결정 자체를 핵심 관점으로 삼고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
                 "evidence": []
               },
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "민주노총의 사회적 대화 복귀 추진 배경과 절차",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
                 "evidence": []
               }
             ]
@@ -2256,18 +1735,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "한국경제는 복귀 추진 자체를 원인으로 제시한 반면, 조선일보는 1999년 노사정위원회 탈퇴를 구체적 배경으로 강조하고 있다.",
+            "contrast_statement": "매일경제는 27년 만의 복귀 추진이라는 시간적 배경을 강조한 반면, 조선일보는 1999년 노사정위원회 탈퇴라는 구체적 역사적 배경을 추가로 제시하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "사회적 대화 복귀 추진",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "27년 만의 사회적 대화 복귀 추진",
                 "evidence": []
               },
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
-                "summary": "1999년 2월 노사정위원회 탈퇴",
+                "summary": "1999년 노사정위원회 탈퇴 및 경사노위 전신 탈퇴",
                 "evidence": []
               }
             ]
@@ -2275,18 +1754,657 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 사회적 대화 복귀가 민주노총에 미치는 영향과 노사정 대화 재개 가능성을 강조하고 있다.",
+            "contrast_statement": "두 언론사 모두 사회적 대화 복귀가 사회적 교섭 논의 재개로 이어진다는 점을 강조하고 있으며, 영향 대상은 민주노총으로 동일하다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "노사정 대화 재개",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사회적 교섭 논의 재개",
                 "evidence": []
               },
               {
                 "publisher_id": "chosun",
                 "publisher": "조선일보",
                 "summary": "사회적 대화 복귀",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 중립 설명 태도를 보이며, 제목과 본문에서 사실 관계를 객관적으로 전달하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, 사회적 대화 복귀 추진"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, 27년 만에 사회적 대화 복귀 추진"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "민주노총의 27년 만의 사회적 대화 복귀 추진 및 제9차 중앙집행위원회에서의 사회적 교섭 논의 재개 방침 결정"
+        ],
+        "key_differences": [
+          "조선일보는 1999년 노사정위원회 탈퇴라는 구체적 역사적 배경을 추가로 제시한 반면, 매일경제는 27년 만의 복귀 추진이라는 시간적 배경만 언급"
+        ],
+        "comparison_report": "두 언론사 모두 민주노총의 27년 만의 사회적 대화 복귀 추진 및 제9차 중앙집행위원회에서의 사회적 교섭 논의 재개 방침 결정을 보도하고 있으나, 조선일보는 1999년 노사정위원회 탈퇴라는 구체적 역사적 배경을 추가로 제시하고 있다. 핵심 관점은 동일하며, 영향 대상도 민주노총으로 동일하다. 보도 태도는 두 언론사 모두 중립 설명 태도를 보이고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "민주노총, 사회적 대화 복귀 추진",
+            "link": "https://www.mk.co.kr/news/society/12106056",
+            "published_at": "Thu, 23 Jul 2026 22:46:41 +09:00"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "민주노총, 27년 만에 사회적 대화 복귀 추진",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/23/GM3DSNZRMFTGCODGMQ4DSM3GGY/",
+            "published_at": "Thu, 23 Jul 2026 10:11:24 +0000"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-22T06:40:51.218332+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,hani": {
+        "issue_id": "issue-2416ecea5f67bb30",
+        "selected_publishers": [
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          }
+        ],
+        "common_summary": "민주노총이 경사노위법 개정 또는 사회적 대화 복귀를 통해 정부와의 교섭을 재개하려는 움직임을 보이고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 민주노총이 정부와의 사회적 대화 및 교섭을 재개하려는 움직임을 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 지속하고 있음을 밝힘",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며 중앙집행위원회에서 사회적 교섭 논의 건을 안건으로 상정함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞춘 반면, 조선일보는 27년 만의 사회적 대화 복귀 자체에 주목함",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있다는 점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정을 원인으로 제시한 반면, 조선일보는 1999년 노사정위원회 탈퇴를 배경으로 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "1999년 2월 정부 주도의 경제사회노동위원회 전신인 노사정위원회 탈퇴",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀가 정부 교섭으로 이어질 수 있음을 시사함",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "정부 교섭",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사회적 대화 복귀",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정과 정부 교섭을 중립적으로 설명하는 반면, 조선일보는 27년 만의 복귀라는 시간적 맥락을 강조함",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, 27년 만에 사회적 대화 복귀 추진"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "민주노총이 정부와의 사회적 대화 및 교섭을 재개하려는 움직임을 보도함",
+          "사회적 대화 기구 또는 복귀라는 개념을 다룸"
+        ],
+        "key_differences": [
+          "한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞춘 반면, 조선일보는 27년 만의 사회적 대화 복귀라는 시간적 맥락을 강조함"
+        ],
+        "comparison_report": "한겨레와 조선일보는 모두 민주노총의 사회적 대화 복귀 움직임을 보도하지만, 한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞추고 조선일보는 27년 만의 복귀라는 시간적 배경과 1999년 노사정위원회 탈퇴를 강조하여 보도함. 두 언론사 모두 중립적인 설명 태도를 보이나, 조선일보는 복귀라는 표현에 더 무게를 둠.",
+        "source_links": [
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레",
+            "title": "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”",
+            "link": "https://www.hani.co.kr/arti/society/labor/1273922.html",
+            "published_at": "발행 시간 정보 없음"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "민주노총, 27년 만에 사회적 대화 복귀 추진",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/23/GM3DSNZRMFTGCODGMQ4DSM3GGY/",
+            "published_at": "Thu, 23 Jul 2026 10:11:24 +0000"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-22T06:40:51.351839+00:00",
+        "model": "solar-pro3"
+      },
+      "chosun,hani,mk": {
+        "issue_id": "issue-2416ecea5f67bb30",
+        "selected_publishers": [
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          }
+        ],
+        "common_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며, 경사노위법 개정 또는 중앙집행위원회를 통해 정부와의 교섭 및 사회적 대화 기구 논의를 재개하기로 결정했다는 점이 공통적이다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 민주노총이 27년 만에 사회적 대화 복귀를 추진하며 경사노위법 개정 또는 중앙집행위원회를 통해 정부 교섭 및 사회적 대화 기구 논의를 재개하기로 결정했다는 내용을 공통적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "민주노총이 경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 지속하고 있음을 밝힘",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며 제9차 중앙집행위원회에서 사회적 교섭 논의 재개 방침을 결정함",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며 9차 중앙집행위원회에서 '사회적 교섭 논의 건'을 안건으로 상정함",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞춘 반면, 매일경재와 조선일보는 사회적 대화 복귀 자체에 초점을 맞추고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정을 통해 정부와 교섭할 수 있는 숙의형 사회적 대화 기구 논의를 계속하고 있다는 점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "민주노총의 사회적 대화 복귀 추진 결정",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 경사노위법 개정을 원인으로 제시한 반면, 매일경재와 조선일보는 27년 만의 복귀라는 시간적 배경을 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "경사노위법 개정",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "27년 만의 사회적 대화 복귀 추진",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "1999년 노사정위원회 탈퇴",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 사회적 대화 복귀가 정부 교섭 및 사회적 교섭 논의 재개에 영향을 미친다는 점을 공통적으로 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "정부 교섭",
+                "evidence": []
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사회적 교섭 논의 재개",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사회적 대화 복귀",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 '숙의형 사회적 대화 기구'라는 용어를 사용하며 중립적으로 설명하고, 매일경재와 조선일보는 '사회적 대화 복귀'라는 표현을 사용하며 중립적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”"
+                ]
+              },
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, 사회적 대화 복귀 추진"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "민주노총, 27년 만에 사회적 대화 복귀 추진"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "민주노총이 27년 만에 사회적 대화 복귀를 추진하며 경사노위법 개정 또는 중앙집행위원회를 통해 정부와의 교섭 및 사회적 대화 기구 논의를 재개하기로 결정했다는 점"
+        ],
+        "key_differences": [
+          "한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞춘 반면, 매일경재와 조선일보는 사회적 대화 복귀 자체에 초점을 맞추고 있음"
+        ],
+        "comparison_report": "세 언론사 모두 민주노총이 27년 만에 사회적 대화 복귀를 추진하며 경사노위법 개정 또는 중앙집행위원회를 통해 정부 교섭 및 사회적 대화 기구 논의를 재개하기로 결정했다는 공통점을 가지고 있다. 한겨레는 경사노위법 개정을 통한 정부 교섭 가능성에 초점을 맞추어 '숙의형 사회적 대화 기구'라는 용어를 사용하며 중립적으로 보도한 반면, 매일경재와 조선일보는 사회적 대화 복귀 자체에 초점을 맞추어 '사회적 대화 복귀'라는 표현을 사용하며 중립적으로 보도하고 있다. 원인·배경 측면에서 한겨레는 경사노위법 개정을, 매일경재와 조선일보는 27년 만의 복귀라는 시간적 배경을 강조하고 있으며, 영향·대상 측면에서는 세 언론사 모두 사회적 대화 복귀가 정부 교섭 및 사회적 교섭 논의 재개에 영향을 미친다는 점을 공통적으로 강조하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레",
+            "title": "민주노총, ‘숙의형’ 사회적 대화 기구 논의 계속…“경사노위법 개정 정부와 교섭”",
+            "link": "https://www.hani.co.kr/arti/society/labor/1273922.html",
+            "published_at": "발행 시간 정보 없음"
+          },
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "민주노총, 사회적 대화 복귀 추진",
+            "link": "https://www.mk.co.kr/news/society/12106056",
+            "published_at": "Thu, 23 Jul 2026 22:46:41 +09:00"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "민주노총, 27년 만에 사회적 대화 복귀 추진",
+            "link": "https://www.chosun.com/economy/economy_general/2026/07/23/GM3DSNZRMFTGCODGMQ4DSM3GGY/",
+            "published_at": "Thu, 23 Jul 2026 10:11:24 +0000"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-22T06:40:53.835125+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-fbba4cf266a6532f": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-fbba4cf266a6532f",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "6600760995d792d0ecd106852f4a5c53ddcfabb0ab5b303ff7bd416cbd1665bb",
+            "title": "“민간임대 대책 부실” “10억 넘으면 초고가”… 예정시간 넘겨 3시간 13분 토론",
+            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260724/134355507/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "이재명 대통령이 주재한 부동산정책 국민 대토론회가 193분간 진행되었으며, 참석자들의 발언 요청이 쇄도해 예정 시간을 크게 초과했다.",
+          "headline_frame": "토론회의 장시간 진행과 참석자들의 발언 쇄도",
+          "main_focus": "토론회의 장시간 진행과 참석자들의 발언 쇄도",
+          "keywords": [
+            "부동산정책 국민 대토론회",
+            "민간임대 대책 부실",
+            "초고가",
+            "토론 시간 초과"
+          ],
+          "main_actors": [
+            "이재명 대통령",
+            "한국자산관리연구원장",
+            "청와대 안귀령 부대변인"
+          ],
+          "quoted_sources": [],
+          "causes": [],
+          "background": [
+            "부동산 정책을 주제로 한 대통령 주재 토론회 사상 처음"
+          ],
+          "emphasized_effects": [
+            "토론 시간 193분으로 예정 시간 100분 초과"
+          ],
+          "affected_groups": [
+            "참석자 140명"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "“민간임대 대책 부실” “10억 넘으면 초고가”… 예정시간 넘겨 3시간 13분 토론"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "토론회가 장시간 진행되었으나 향후 전망에 대한 구체적 언급은 없음"
+          },
+          "less_covered_context": [
+            "토론회에서 논의된 구체적인 부동산 정책 내용",
+            "참석자들의 구체적 발언 내용",
+            "토론 결과에 대한 후속 조치"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:40:57.517214+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-fbba4cf266a6532f",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "4cb0f69df3aa7a88c1360bfc653e549f81ad9b472e74ee8cadcc6d48253f29eb",
+            "title": "부동산 정책 향방은…마무리 발언서 \"어려움 감수\" (풀영상)",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672235"
+          }
+        ],
+        "analysis": {
+          "article_summary": "이재명 대통령이 부동산 정책 토론회를 열고 '똘똘한 한 채' 현상이 사회에 심각한 문제를 야기했다고 지적했습니다.",
+          "headline_frame": "토론회 마무리 발언에서 '어려움 감수'를 강조하며 부동산 정책 향방에 대한 입장을 표명",
+          "main_focus": "이재명 대통령의 부동산 정책 토론회 발언과 '똘똘한 한 채' 현상에 대한 지적",
+          "keywords": [
+            "부동산 정책",
+            "토론회",
+            "마무리 발언",
+            "어려움 감수",
+            "똘똘한 한 채"
+          ],
+          "main_actors": [
+            "이재명 대통령"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "'똘똘한 한 채'를 선호하는 현상"
+          ],
+          "background": [
+            "부동산 정책 토론회"
+          ],
+          "emphasized_effects": [
+            "사회에 심각한 문제 야기"
+          ],
+          "affected_groups": [],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "부동산 정책 토론회를 열었습니다",
+              "이 대통령은 '똘똘한 한 채'를 선호하는 현상이 \"사회에 심각한 문제를 야기했다\"고 지적했습니다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "토론회 마무리 발언에서 '어려움 감수'를 언급했으나 향후 구체적 정책 방향이나 전망은 제시되지 않음"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "토론회 중 다른 참석자들의 발언 내용",
+            "부동산 정책 관련 구체적 대안 제시"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:40:57.565581+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-fbba4cf266a6532f",
+      "groups": [
+        {
+          "group_id": "group-1",
+          "label": "토론회 장시간 진행과 정책 발언",
+          "summary": "두 언론사 모두 대통령 주재 부동산 정책 토론회의 진행 상황과 주요 발언을 중심으로 보도하며, 토론회 자체의 운영 문제와 정책 방향에 대한 중립적 설명을 제공함",
+          "keywords": [
+            "토론회 장시간 진행",
+            "부동산 정책 토론",
+            "대통령 발언"
+          ],
+          "publisher_ids": [
+            "donga",
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            },
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "동아일보는 토론회의 장시간 진행(193분, 예정 100분 초과)과 참석자들의 발언 쇄도를 중심으로 보도하며, 민간임대 대책 부실과 초고가 주택 문제를 언급함",
+            "SBS는 이재명 대통령의 마무리 발언에서 '똘똘한 한 채' 현상에 대한 지적과 '어려움 감수' 발언을 중심으로 보도하며, 사회에 심각한 문제를 야기했다고 설명함",
+            "두 언론사 모두 토론회 진행 상황과 정책 방향에 대한 중립적 설명을 제공하며, 핵심 쟁점은 토론회 운영 및 정책 발언 내용에 집중됨"
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 대통령 주재 부동산 정책 토론회의 진행 상황과 주요 발언을 중심으로 보도하며, 토론회 자체의 운영 문제와 정책 방향에 대한 중립적 설명을 제공함. 동아일보가 토론회 장시간 진행과 참석자들의 발언 쇄도에 초점을 맞춘 반면, SBS는 이재명 대통령의 마무리 발언에서 '똘똘한 한 채' 현상에 대한 지적과 '어려움 감수' 발언을 강조함. 그러나 두 언론사 모두 토론회의 진행 상황과 정책 방향에 대한 중립적 설명을 제공하며, 핵심 쟁점은 토론회 운영 및 정책 발언 내용에 집중됨",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-22T06:41:01.527150+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-fbba4cf266a6532f",
+        "selected_publishers": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "이재명 대통령이 주재한 부동산정책 국민 대토론회가 진행되었으며, 참석자들의 발언 요청이 많아 예정 시간을 초과했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 이재명 대통령이 주재한 부동산정책 국민 대토론회가 진행되었고, 참석자들의 발언 쇄도로 예정 시간을 초과했다는 점을 공통적으로 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "토론회의 장시간 진행과 참석자들의 발언 쇄도를 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "토론회 진행 사실과 '똘똘한 한 채' 현상 지적을 강조",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 토론회 자체의 장시간 진행과 발언 쇄도에 초점을 맞춘 반면, SBS는 이재명 대통령의 마무리 발언에서 '똘똘한 한 채' 현상 지적과 '어려움 감수' 입장을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "토론회의 장시간 진행과 참석자들의 발언 쇄도를 핵심 관점으로 제시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 대통령의 '똘똘한 한 채' 현상 지적과 '어려움 감수' 입장을 핵심 관점으로 제시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 '부동산 정책을 주제로 한 대통령 주재 토론회 사상 처음'이라는 배경을 강조한 반면, SBS는 '똘똘한 한 채'를 선호하는 현상을 원인으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "대통령 주재 부동산정책 토론회가 사상 처음이라는 점을 배경으로 강조",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "'똘똘한 한 채' 현상 선호가 부동산 정책 문제의 원인이라고 지적",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 토론회 참석자와 토론 시간 초과를 영향 대상으로 언급한 반면, SBS는 '똘똘한 한 채' 현상이 사회에 미치는 영향을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "토론 시간 193분으로 예정 시간 100분 초과 및 참석자 140명의 발언 쇄도를 영향 대상으로 제시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "'똘똘한 한 채' 현상이 사회에 심각한 문제를 야기한다는 영향을 강조",
                 "evidence": []
               }
             ]
@@ -2294,380 +2412,375 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "한국경제는 '사회적 대화 복귀 추진'이라는 간결한 제목 프레임을 사용한 반면, 조선일보는 '27년 만에'라는 시간적 맥락을 추가하여 복귀의 의미를 부각하고 있다.",
+            "contrast_statement": "동아일보는 '민간임대 대책 부실', '10억 넘으면 초고가' 등의 구체적 표현을 사용해 사실 관계를 중립적으로 전달한 반면, SBS는 '사회에 심각한 문제를 야기했다'는 표현을 사용해 다소 강한 어조로 보도했다.",
             "publisher_details": [
               {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "사실관계를 중립적으로 전달하며 복귀 추진 사실을 간결하게 설명",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "사실관계를 중립적으로 전달하며 구체적 표현('민간임대 대책 부실', '10억 넘으면 초고가')을 사용",
                 "evidence": []
               },
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "복귀의 역사적 의미를 부각하며 중립적으로 설명",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 대통령의 발언을 인용해 '사회에 심각한 문제를 야기했다'는 표현을 사용하며 보도",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지"
+          "이재명 대통령이 주재한 부동산정책 국민 대토론회 진행",
+          "참석자들의 발언 쇄도로 인한 예정 시간 초과",
+          "토론회 사상 처음이라는 점(동아일보)"
         ],
         "key_differences": [
-          "조선일보는 1999년 노사정위원회 탈퇴라는 구체적 배경을 강조한 반면, 한국경제는 복귀 추진 자체에만 초점을 맞추고 있다.",
-          "조선일보는 '27년 만에'라는 시간적 맥락을 제목에 추가하여 복귀의 역사적 의미를 부각한 반면, 한국경제는 간결한 제목 프레임을 사용하고 있다."
+          "동아일보는 토론회 자체의 진행 방식과 시간 초과에 초점을 맞춘 반면, SBS는 이재명 대통령의 마무리 발언에서 '똘똘한 한 채' 현상 지적과 '어려움 감수' 입장을 강조"
         ],
-        "comparison_report": "한국경제와 조선일보는 모두 민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지를 다루고 있으나, 조선일보는 1999년 노사정위원회 탈퇴라는 구체적 배경과 '27년 만에'라는 시간적 맥락을 강조하여 복귀의 역사적 의미를 부각하고 있다. 반면 한국경제는 복귀 추진 자체와 그 의지에 초점을 맞추어 간결하게 설명하고 있다. 두 언론사 모두 중립적인 보도 태도를 보이며, 복귀가 노사정 대화 재개에 미칠 영향을 공통적으로 언급하고 있다.",
+        "comparison_report": "동아일보와 SBS 모두 이재명 대통령이 주재한 부동산정책 국민 대토론회를 보도했으나, 동아일보가 토론회의 장시간 진행과 참석자들의 발언 쇄도, '민간임대 대책 부실' 및 '10억 넘으면 초고가' 등의 구체적 표현을 통해 사실 관계를 중립적으로 전달한 반면, SBS는 이재명 대통령의 마무리 발언에서 '똘똘한 한 채' 현상이 사회에 심각한 문제를 야기했다고 지적하며 '어려움 감수'를 강조한 점에서 차이가 있다.",
         "source_links": [
           {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "민주노총, 사회적대화 복귀 추진",
-            "link": "https://www.hankyung.com/article/2026072327381",
-            "published_at": "Thu, 23 Jul 2026 17:53:15 +0900"
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "“민간임대 대책 부실” “10억 넘으면 초고가”… 예정시간 넘겨 3시간 13분 토론",
+            "link": "https://www.donga.com/news/Politics/article/all/20260724/134355507/2",
+            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
           },
           {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "민주노총, 27년 만에 사회적 대화 복귀 추진",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/23/GM3DSNZRMFTGCODGMQ4DSM3GGY/",
-            "published_at": "Thu, 23 Jul 2026 10:11:24 +0000"
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "부동산 정책 향방은…마무리 발언서 \"어려움 감수\" (풀영상)",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008672235",
+            "published_at": "Thu, 23 Jul 2026 22:18:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T01:12:35.433073+00:00",
+        "compared_at": "2026-08-22T06:41:11.694653+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-c13b8557c585b66b": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-c13b8557c585b66b",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "660a03ce69458edb2dc8272b1ea640010924eb8f1d3f1115ebaf3be917276858",
+            "title": "4개월 연속 ‘월급 일자리’ 감소… AI 영향에 청년층 고용 타격",
+            "published_at": "Sun, 16 Aug 2026 18:56:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260816/134484927/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "임금근로자가 4개월 연속 감소했으며, AI 영향으로 정보통신 및 전문·과학·기술서비스 업종에서 청년층 고용이 위축되고 있다.",
+          "headline_frame": "임금근로자 감소와 AI 영향, 청년층 고용 타격을 중심으로 사건을 구성",
+          "main_focus": "AI 기술 확산이 청년층 고용에 미치는 부정적 영향과 임금근로자 감소의 구조적 원인 분석",
+          "keywords": [
+            "임금근로자 감소",
+            "AI 영향",
+            "청년층 고용 타격",
+            "채용 위축",
+            "1인 자영업 증가"
+          ],
+          "main_actors": [
+            "임금근로자",
+            "청년층",
+            "기업",
+            "자영업자"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "AI 기술 확산",
+            "기업의 채용 위축"
+          ],
+          "background": [
+            "코로나19 사태 이후 처음으로 4개월 연속 감소",
+            "4대 보험 등 사회 안전망 보호"
+          ],
+          "emphasized_effects": [
+            "고용 한파 장기화",
+            "취업 기회 감소"
+          ],
+          "affected_groups": [
+            "20대 등 청년층"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "AI 영향에 청년층 고용 타격",
+              "고용 한파가 장기화되고 있다는 지적"
+            ]
+          },
+          "outlook": {
+            "direction": "부정",
+            "summary": "AI 기술 확산으로 인한 고용시장 위축이 지속될 것으로 전망"
+          },
+          "less_covered_context": [
+            "임금근로자 감소의 구체적 원인 분석",
+            "정책 대응 방안"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:41:15.310716+00:00",
         "model": "solar-pro3"
       },
-      "chosun,mk": {
-        "issue_id": "issue-2e6f25f525c8ee6c",
+      {
+        "issue_id": "issue-c13b8557c585b66b",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "1c5f37cbfbc36851aac2c6be9a72ac06971e25002bcabe5b3ed1469bc23ae329",
+            "title": "임금근로자 4개월째 뚝 … '저채용 사회' 진입 우려",
+            "published_at": "Sun, 16 Aug 2026 17:55:42 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12129094"
+          }
+        ],
+        "analysis": {
+          "article_summary": "임금근로자가 코로나19 팬데믹 이후 처음으로 4개월 연속 감소한 반면, 자영업자로 대표되는 비임금근로자는 늘어나 저채용 사회가 현실화되고 있다는 내용을 담고 있다.",
+          "headline_frame": "임금근로자 감소(4개월 연속)와 비임금근로자 증가(자영업자 중심)를 대비시켜 '저채용 사회' 진입을 경고하는 프레임",
+          "main_focus": "임금근로자 감소와 비임금근로자 증가라는 고용 구조의 변화를 통해 저채용 사회 진입 우려를 강조하는 것",
+          "keywords": [
+            "임금근로자 감소",
+            "저채용 사회",
+            "고용 구조 변화",
+            "자영업자 증가",
+            "비임금근로자"
+          ],
+          "main_actors": [
+            "임금근로자",
+            "자영업자"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "코로나19 팬데믹 이후"
+          ],
+          "background": [
+            "코로나19 팬데믹 이후 고용 시장 변화"
+          ],
+          "emphasized_effects": [
+            "저채용 사회 진입 우려"
+          ],
+          "affected_groups": [
+            "임금근로자",
+            "자영업자"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "'저채용 사회' 진입 우려"
+            ]
+          },
+          "outlook": {
+            "direction": "부정",
+            "summary": "임금근로자 감소가 지속될 경우 저채용 사회가 고착화될 수 있다는 우려"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "임금근로자 감소의 구체적 원인 분석"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-22T06:41:15.435142+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-c13b8557c585b66b",
+      "groups": [
+        {
+          "group_id": "group-01",
+          "label": "AI 영향과 고용시장 위축 우려",
+          "summary": "AI 기술 확산으로 인한 청년층 고용 타격과 임금근로자 감소, 비임금근로자 증가(자영업자 중심)를 통해 저채용 사회 진입 우려를 강조하는 관점",
+          "keywords": [
+            "AI 영향",
+            "고용시장 위축",
+            "저채용 사회",
+            "청년층 고용 타격",
+            "자영업자 증가"
+          ],
+          "publisher_ids": [
+            "donga",
+            "mk"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            },
+            {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "두 언론사 모두 AI 기술 확산이 고용시장에 미치는 부정적 영향을 핵심 쟁점으로 삼고 있으며, 임금근로자 감소와 비임금근로자 증가(자영업자 중심)라는 고용 구조 변화를 통해 저채용 사회 진입 우려를 강조하고 있음",
+            "동아일보는 AI 기술 확산과 기업의 채용 위축을 원인으로 지목하며 청년층 고용 타격과 고용 한파 장기화를 우려함",
+            "매일경제는 코로나19 팬데믹 이후 고용 시장 변화를 배경으로 임금근로자 감소와 비임금근로자 증가를 대비시켜 저채용 사회 진입을 경고함",
+            "두 언론사 모두 보도 태도가 '우려·경계'로, AI 영향과 고용시장 위축이 지속될 것이라는 부정적 전망을 제시함"
+          ]
+        }
+      ],
+      "group_count": 1,
+      "group_contrasts": [],
+      "grouping_summary": "두 언론사 모두 AI 기술 확산과 고용시장 구조 변화를 핵심 쟁점으로 삼고 있으며, 임금근로자 감소와 비임금근로자 증가(자영업자 중심)를 통해 고용시장 위축과 저채용 사회 진입 우려를 강조하고 있음. 동아일보가 청년층 고용 타격에 초점을 맞춘 반면, 매일경제는 고용 구조 변화 전반을 다루었으나, 핵심 해석과 평가 방향은 대체로 일치하여 같은 그룹으로 분류함.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-22T06:41:19.609280+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,mk": {
+        "issue_id": "issue-c13b8557c585b66b",
         "selected_publishers": [
           {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
+            "publisher_id": "donga",
+            "publisher": "동아일보"
           },
           {
             "publisher_id": "mk",
             "publisher": "매일경제"
           }
         ],
-        "common_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며, 9차 중앙집행위원회에서 사회적 교섭 논의 건을 안건으로 상정했다는 내용을 두 언론사 모두 보도하고 있다.",
-        "overall_difference": "유사함",
+        "common_summary": "임금근로자가 4개월 연속 감소했으며, AI 영향으로 정보통신 및 전문·과학·기술서비스 업종에서 청년층 고용이 위축되고 있다. 코로나19 팬데믹 이후 처음으로 4개월 연속 감소한 상황에서 비임금근로자(자영업자)는 증가하고 있다.",
+        "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 민주노총이 27년 만에 사회적 대화 복귀를 추진하며 9차 중앙집행위원회에서 사회적 교섭 논의 건을 안건으로 상정했다는 사실을 공통적으로 보도하고 있다.",
+            "contrast_statement": "두 언론사 모두 임금근로자의 4개월 연속 감소와 고용 시장 변화를 다루고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "민주노총의 27년 만의 사회적 대화 복귀 추진 및 9차 중앙집행위원회 안건 상정",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "임금근로자 감소와 AI 영향으로 인한 청년층 고용 위축을 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "민주노총의 27년 만의 사회적 대화 복귀 추진 및 제9차 중앙집행위원회 사회적 교섭 논의 계획 발표",
+                "summary": "임금근로자 감소와 비임금근로자(자영업자) 증가를 대비시켜 저채용 사회 진입을 경고",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 민주노총의 사회적 대화 복귀 추진 배경과 절차에 초점을 맞추고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 AI 기술 확산이 청년층 고용에 미치는 부정적 영향에 초점을 맞춘 반면, 매일경제는 고용 구조의 변화(임금근로자 감소 vs 비임금근로자 증가)를 통해 저채용 사회 진입을 우려한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "민주노총의 사회적 대화 복귀 추진 배경과 절차",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI 기술 확산이 청년층 고용에 미치는 부정적 영향과 임금근로자 감소의 구조적 원인 분석",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 결정 및 그 배경",
+                "summary": "임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려 강조",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조된 원인·배경",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 1999년 2월 노사정위원회 탈퇴와 27년 만의 복귀라는 배경을 강조하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 AI 기술 확산과 기업의 채용 위축을 주요 원인으로 제시한 반면, 매일경제는 코로나19 팬데믹 이후를 배경으로 고용 시장 변화를 강조한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "1999년 2월 정부 주도의 경제사회노동위원회 전신인 노사정위원회 탈퇴",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI 기술 확산과 기업의 채용 위축을 청년층 고용 위축의 주요 원인으로 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "27년 만의 사회적 대화 복귀 추진",
+                "summary": "코로나19 팬데믹 이후 고용 시장 변화를 저채용 사회 진입의 배경으로 제시",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조한 영향·대상",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 사회적 대화 복귀의 영향과 대상을 민주노총으로 한정하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 20대 등 청년층을 주요 영향 대상으로 보고 고용 한파 장기화를 우려한 반면, 매일경제는 임금근로자와 자영업자 모두를 대상으로 저채용 사회 진입 우려를 강조한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사회적 대화 복귀",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "20대 등 청년층의 취업 기회 감소와 고용 한파 장기화 우려",
                 "evidence": []
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사회적 대화 복귀",
+                "summary": "임금근로자와 자영업자 모두를 대상으로 한 저채용 사회 진입 우려",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보이며, 기사 제목에서 '민주노총, 27년 만에 사회적 대화 복귀 추진'과 '민주노총, 사회적 대화 복귀 추진'으로 핵심 내용을 전달하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "두 언론사 모두 '우려·경계' 태도를 보이지만, 동아일보는 AI 영향에 대한 구체적 표현을, 매일경제는 '저채용 사회' 진입이라는 프레임을 사용한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사실관계를 중립적으로 전달하며, 27년 만의 사회적 대화 복귀 추진이라는 핵심 내용을 제목에 명시함",
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "AI 영향에 청년층 고용 타격을 우려하며 고용 한파 장기화를 경계하는 태도",
                 "evidence": [
-                  "민주노총, 27년 만에 사회적 대화 복귀 추진"
+                  "AI 영향에 청년층 고용 타격",
+                  "고용 한파가 장기화되고 있다는 지적"
                 ]
               },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며, 사회적 대화 복귀 추진이라는 핵심 내용을 제목에 명시함",
+                "summary": "'저채용 사회' 진입 우려를 경고하는 경계적 태도",
                 "evidence": [
-                  "민주노총, 사회적 대화 복귀 추진"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "민주노총의 27년 만의 사회적 대화 복귀 추진",
-          "9차/제9차 중앙집행위원회에서의 사회적 교섭 논의 안건 상정",
-          "1999년 2월 노사정위원회 탈퇴 배경",
-          "사회적 대화 복귀의 영향과 대상이 민주노총에 집중됨"
-        ],
-        "key_differences": [],
-        "comparison_report": "조선일보와 매일경제는 모두 민주노총이 27년 만에 사회적 대화 복귀를 추진하며 9차 중앙집행위원회에서 사회적 교섭 논의 건을 안건으로 상정했다는 사실을 중립적으로 보도하고 있다. 두 언론사 모두 1999년 2월 노사정위원회 탈퇴라는 배경을 강조하고 있으며, 사회적 대화 복귀의 영향과 대상을 민주노총으로 한정하고 있다. 보도 태도 측면에서 두 언론사 모두 중립적인 설명 태도를 보이며, 기사 제목에서 핵심 내용을 간결하게 전달하고 있다. 다만 조선일보가 '27년 만에'라는 표현을 더 구체적으로 사용한 반면, 매일경제는 '사회적 대화 복귀 추진'이라는 표현을 더 간결하게 사용하고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "민주노총, 27년 만에 사회적 대화 복귀 추진",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/23/GM3DSNZRMFTGCODGMQ4DSM3GGY/",
-            "published_at": "Thu, 23 Jul 2026 10:11:24 +0000"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "민주노총, 사회적 대화 복귀 추진",
-            "link": "https://www.mk.co.kr/news/society/12106056",
-            "published_at": "Thu, 23 Jul 2026 22:46:41 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T01:12:36.348691+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,hankyung,mk": {
-        "issue_id": "issue-2e6f25f525c8ee6c",
-        "selected_publishers": [
-          {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제"
-          },
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "민주노총이 27년 만에 사회적 대화 복귀를 추진하며 노사정 대화 재개에 대한 의지를 표명했다는 내용이 세 언론사 모두에서 공통적으로 확인된다.",
-        "overall_difference": "유사함",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지를 공통적으로 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지 표명",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "민주노총의 27년 만의 사회적 대화 복귀 추진 및 중앙집행위원회 안건 상정",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "민주노총의 27년 만의 사회적 대화 복귀 추진 및 중앙집행위원회 사회적 교섭 논의 계획 발표",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 민주노총의 사회적 대화 복귀 추진이라는 핵심 관점을 공유하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "민주노총의 사회적 대화 복귀 추진 배경과 절차",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "민주노총의 사회적 대화 복귀 추진 결정 및 그 배경",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 사회적 대화 복귀 추진이라는 동일한 원인을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "사회적 대화 복귀 추진",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "1999년 2월 노사정위원회 탈퇴",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "27년 만의 사회적 대화 복귀 추진",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 사회적 대화 복귀가 민주노총에 미치는 영향을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "노사정 대화 재개",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사회적 대화 복귀",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사회적 대화 복귀",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 중립적인 설명 태도를 보이며, 기사 제목과 본문에서 동일한 핵심 내용을 전달하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "hankyung",
-                "publisher": "한국경제",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "민주노총, 사회적대화 복귀 추진"
-                ]
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "민주노총, 27년 만에 사회적 대화 복귀 추진"
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "민주노총, 사회적 대화 복귀 추진"
+                  "'저채용 사회' 진입 우려"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "민주노총의 사회적 대화 복귀 추진 및 노사정 대화 재개 의지",
-          "27년 만의 복귀라는 시간적 배경",
-          "중앙집행위원회에서의 결정 또는 안건 상정"
+          "임금근로자 4개월 연속 감소",
+          "코로나19 팬데믹 이후 고용 시장 변화",
+          "고용 시장 변화에 대한 우려·경계 태도"
         ],
-        "key_differences": [],
-        "comparison_report": "한국경제, 조선일보, 매일경제는 모두 민주노총의 27년 만의 사회적 대화 복귀 추진이라는 동일한 사건을 보도하고 있다. 세 언론사 모두 중립적인 설명 태도를 보이며, 기사 제목과 본문에서 '민주노총, 사회적 대화 복귀 추진'이라는 핵심 내용을 동일하게 전달하고 있다. 차이점은 조선일보가 '1999년 2월 노사정위원회 탈퇴'라는 구체적인 배경을 추가로 언급한 반면, 한국경제와 매일경제는 복귀 추진 자체에 초점을 맞추고 있다. 그러나 이러한 차이는 크지 않으며, 전체적으로 유사한 보도 태도를 보이고 있다.",
+        "key_differences": [
+          "동아일보는 AI 기술 확산을 청년층 고용 위축의 주요 원인으로 강조하는 반면, 매일경제는 코로나19 팬데믹 이후를 배경으로 고용 구조 변화(임금근로자 감소 vs 비임금근로자 증가)를 강조"
+        ],
+        "comparison_report": "동아일보와 매일경제는 모두 임금근로자의 4개월 연속 감소와 고용 시장 변화를 보도하지만, 동아일보가 AI 기술 확산이 청년층 고용에 미치는 부정적 영향에 초점을 맞추고 '고용 한파 장기화'를 우려하는 반면, 매일경제는 임금근로자 감소와 비임금근로자(자영업자) 증가라는 고용 구조 변화를 대비시켜 '저채용 사회' 진입을 경고한다. 두 언론사 모두 우려·경계 태도를 보이지만, 동아일보는 AI 영향에 대한 구체적 표현을, 매일경제는 '저채용 사회'라는 프레임을 사용한다.",
         "source_links": [
           {
-            "publisher_id": "hankyung",
-            "publisher": "한국경제",
-            "title": "민주노총, 사회적대화 복귀 추진",
-            "link": "https://www.hankyung.com/article/2026072327381",
-            "published_at": "Thu, 23 Jul 2026 17:53:15 +0900"
-          },
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "민주노총, 27년 만에 사회적 대화 복귀 추진",
-            "link": "https://www.chosun.com/economy/economy_general/2026/07/23/GM3DSNZRMFTGCODGMQ4DSM3GGY/",
-            "published_at": "Thu, 23 Jul 2026 10:11:24 +0000"
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "4개월 연속 ‘월급 일자리’ 감소… AI 영향에 청년층 고용 타격",
+            "link": "https://www.donga.com/news/Economy/article/all/20260816/134484927/1",
+            "published_at": "Sun, 16 Aug 2026 18:56:00 +0900"
           },
           {
             "publisher_id": "mk",
             "publisher": "매일경제",
-            "title": "민주노총, 사회적 대화 복귀 추진",
-            "link": "https://www.mk.co.kr/news/society/12106056",
-            "published_at": "Thu, 23 Jul 2026 22:46:41 +09:00"
+            "title": "임금근로자 4개월째 뚝 … '저채용 사회' 진입 우려",
+            "link": "https://www.mk.co.kr/news/economy/12129094",
+            "published_at": "Sun, 16 Aug 2026 17:55:42 +09:00"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T01:12:36.879008+00:00",
+        "compared_at": "2026-08-22T06:41:27.529187+00:00",
         "model": "solar-pro3"
       }
     }
