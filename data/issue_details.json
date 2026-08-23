@@ -1,8 +1,731 @@
 {
-  "issue-07569a561e6d82db": {
+  "issue-baeccd2e73b9039d": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-07569a561e6d82db",
+        "issue_id": "issue-baeccd2e73b9039d",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "9d1bf2bf4db2e3f9948242786581c065120ddeaeaac54e5373b5b00de839aa0b",
+            "title": "국힘 중징계 4인 “정치적 숙청”…중진도 “민심까지 징계할순 없어”",
+            "published_at": "Fri, 21 Aug 2026 12:23:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260821/134518312/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "국민의힘 중앙윤리위원회가 조경태, 권영진, 서범수, 진종오 의원의 당원권을 정지하는 중징계를 의결하자, 징계 당사자들은 '정치적 숙청'이라며 법적 대응을 검토하고, 중진 의원들은 '민심까지 징계할 수 없다'며 장동혁 지도부를 비판했다.",
+          "headline_frame": "국민의힘 중앙윤리위원회의 중징계를 '정치적 숙청'으로 규정하고, 이에 대한 반발과 비판을 중심으로 사건을 조명한다.",
+          "main_focus": "국민의힘 중앙윤리위원회의 징계 결정에 대한 당내 반발과 장동혁 지도부에 대한 비판에 초점을 맞춘다.",
+          "keywords": [
+            "정치적 숙청",
+            "당원권 정지",
+            "중징계",
+            "법적 대응",
+            "재심",
+            "민심"
+          ],
+          "main_actors": [
+            "국민의힘 중앙윤리위원회",
+            "조경태",
+            "권영진",
+            "서범수",
+            "진종오",
+            "장동혁"
+          ],
+          "quoted_sources": [
+            "장동혁"
+          ],
+          "causes": [
+            "국민의힘 중앙윤리위원회의 중징계 의결"
+          ],
+          "background": [
+            "국민의힘 중앙윤리위원회의 징계 절차",
+            "당내 중진 의원들의 장동혁 지도부 비판"
+          ],
+          "emphasized_effects": [
+            "당내 반발 확산",
+            "법적 대응 가능성",
+            "재심 청구 검토"
+          ],
+          "affected_groups": [
+            "국민의힘 당원",
+            "징계 대상 의원"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "정치적 숙청의 도구로 전락했다",
+              "민심까지 징계할 수 없다",
+              "맹목적으로 장 대표와 추종세력 추종하는 호위무사로 전락했다"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "징계 당사자들의 법적 대응과 재심 청구 가능성, 당내 중진들의 지속적인 비판으로 인해 당내 갈등이 심화될 전망이다."
+          },
+          "less_covered_context": [
+            "징계 처분의 구체적인 법적 근거",
+            "장동혁 지도부의 공식 입장",
+            "징계 대상 의원들의 구체적인 법적 대응 계획"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-23T01:16:39.300197+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-baeccd2e73b9039d",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "a6f432da14abdcc60dd3b6494a4415eccd2242578a1670434493d151bdb739f3",
+            "title": "[정치쇼] 조갑제 \"장동혁, 광복절도 올공행? 대국민 사기극…동행한 의원들도 벌받을 것\"",
+            "published_at": "Mon, 17 Aug 2026 08:44:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008708115"
+          }
+        ],
+        "analysis": {
+          "article_summary": "조갑제 대표는 장동혁의 광복절 올공행(올드보이 귀환) 가능성을 비판하며, 이를 헌법 무시와 대국민 사기극으로 규정하고 동행 의원들에 대한 책임론을 제기했다.",
+          "headline_frame": "장동혁의 광복절 올공행 가능성과 동행 의원들에 대한 책임 문제를 중심으로 사건을 프레임화",
+          "main_focus": "장동혁의 정치적 행보에 대한 비판과 개헌 관련 정치적 리스크 분석",
+          "keywords": [
+            "광복절 올공행",
+            "대국민 사기극",
+            "개헌",
+            "중임·연임",
+            "내각제",
+            "공천 배제"
+          ],
+          "main_actors": [
+            "장동혁",
+            "조갑제",
+            "野(야당) 의원들",
+            "윤상현"
+          ],
+          "quoted_sources": [
+            "조갑제"
+          ],
+          "causes": [
+            "장동혁의 광복절 올공행 가능성",
+            "개헌을 통한 중임·연임 시도"
+          ],
+          "background": [
+            "대통령 중심제 문제",
+            "개헌에 대한 국민 지지 부족"
+          ],
+          "emphasized_effects": [
+            "당 깨짐",
+            "당협위원장 물갈이",
+            "당선권에서의 거리감"
+          ],
+          "affected_groups": [
+            "보수 진영",
+            "야당 의원들",
+            "당원"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "대국민 사기극",
+              "벌받을 것",
+              "당선권에선 멀어질 것"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "개헌을 통한 장동혁의 연임 가능성에 대한 우려와 동시에 내각제 전환 필요성 제기"
+          },
+          "less_covered_context": [
+            "구체적인 개헌 절차 및 법적 검토",
+            "국민 여론 조사 결과",
+            "다른 정치 전문가들의 의견"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-23T01:16:39.472977+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-baeccd2e73b9039d",
+      "groups": [
+        {
+          "group_id": "group-001",
+          "label": "정치적 숙청과 당내 갈등 비판",
+          "summary": "국민의힘 중앙윤리위원회의 중징계 결정을 '정치적 숙청'으로 규정하고, 장동혁 지도부에 대한 비판과 당내 반발, 법적 대응 가능성을 중심으로 보도하는 관점",
+          "keywords": [
+            "정치적 숙청",
+            "당원권 정지",
+            "중징계",
+            "법적 대응",
+            "재심"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "국민의힘 중앙윤리위원회의 중징계 결정을 정치적 숙청으로 규정하고, 장동혁 지도부에 대한 비판과 당내 반발, 법적 대응 가능성을 중심으로 보도함",
+            "징계 대상 의원 및 국민의힘 당원에 대한 영향과 당내 중진 의원들의 장동혁 지도부 비판을 강조함",
+            "민심까지 징계할 수 없다는 비판과 맹목적으로 장 대표와 추종세력을 추종하는 호위무사로 전락했다는 평가를 제시함"
+          ]
+        },
+        {
+          "group_id": "group-002",
+          "label": "개헌을 통한 연임 시도와 정치적 리스크 비판",
+          "summary": "장동혁의 광복절 올공행 가능성과 개헌을 통한 중임·연임 시도를 '대국민 사기극'으로 규정하고, 보수 진영과 야당 의원들에 대한 책임 문제를 중심으로 보도하는 관점",
+          "keywords": [
+            "광복절 올공행",
+            "개헌",
+            "중임·연임",
+            "내각제",
+            "공천 배제"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "장동혁의 광복절 올공행 가능성과 개헌을 통한 중임·연임 시도를 '대국민 사기극'으로 규정함",
+            "개헌에 대한 국민 지지 부족과 대통령 중심제 문제를 배경으로 지적함",
+            "당 깨짐, 당협위원장 물갈이, 당선권에서의 거리감 등 보수 진영과 야당 의원들에 대한 영향을 강조함",
+            "벌받을 것이라는 비판과 당선권에서 멀어질 것이라는 전망을 제시함"
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-001",
+            "group-002"
+          ],
+          "contrast_statement": "동아일보는 국민의힘 중앙윤리위원회의 중징계 결정을 '정치적 숙청'으로 규정하고 당내 반발과 법적 대응을 중심으로 비판하는 반면, SBS는 장동혁의 광복절 올공행 가능성과 개헌을 통한 중임·연임 시도를 '대국민 사기극'으로 규정하고 보수 진영과 야당 의원들에 대한 정치적 리스크를 비판함"
+        }
+      ],
+      "grouping_summary": "두 언론사 모두 국민의힘 장동혁 지도부에 대한 비판적인 보도를 하지만, 동아일보는 중앙윤리위원회의 중징계 결정과 당내 반발, 법적 대응 가능성에 초점을 맞춘 반면, SBS는 장동혁의 정치적 행보(올공행)와 개헌을 통한 연임 시도를 '사기극'으로 규정하고 보수 진영과 야당 의원들에 대한 영향을 강조함",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-23T01:16:43.886736+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-baeccd2e73b9039d",
+        "selected_publishers": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "두 언론사 모두 국민의힘 내 징계 사태와 장동혁 지도부에 대한 비판을 다루고 있으나, 동아일보가 중앙윤리위원회의 중징계 의결에 따른 당내 반발과 법적 대응을, SBS가 장동혁의 광복절 올공행 가능성과 개헌 시도에 대한 비판을 중심으로 보도하고 있다.",
+        "overall_difference": "차이 큼",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 국민의힘 내 징계 사태와 장동혁 지도부에 대한 비판을 다루고 있으나, 동아일보가 중앙윤리위원회의 중징계 의결에 따른 당내 반발과 법적 대응을, SBS가 장동혁의 광복절 올공행 가능성과 개헌 시도에 대한 비판을 중심으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘 중앙윤리위원회의 중징계 의결에 따른 조경태, 권영진, 서범수, 진종오 의원의 당원권 정지 조치와 이에 대한 당내 반발 및 법적 대응 가능성을 보도",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장동혁 대표의 광복절 올공행 가능성과 개헌 시도를 비판하며, 동행 의원들에 대한 책임론을 제기",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 중앙윤리위원회의 징계 결정에 대한 당내 반발과 장동혁 지도부에 대한 비판을, SBS는 장동혁의 정치적 행보(올공행, 개헌)에 대한 비판과 보수 진영의 리스크를 강조한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘 중앙윤리위원회의 중징계 의결에 대한 당내 반발과 장동혁 지도부에 대한 비판에 초점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장동혁의 광복절 올공행 가능성과 개헌 시도를 비판하며 보수 진영의 정치적 리스크를 분석",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 중앙윤리위원회의 중징계 의결을 원인으로, SBS는 장동혁의 광복절 올공행 가능성과 개헌 시도를 원인으로 강조한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘 중앙윤리위원회의 중징계 의결이 당내 반발과 법적 대응의 직접적 원인",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장동혁의 광복절 올공행 가능성과 개헌을 통한 중임·연임 시도가 비판의 핵심 원인",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 당내 반발 확산과 법적 대응 가능성을, SBS는 당 깨짐과 당선권에서의 거리감을 강조한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘 당원들의 반발 확산과 징계 대상 의원들의 법적 대응 가능성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "보수 진영의 분열(당 깨짐)과 장동혁 및 동행 의원들의 당선권에서의 거리감",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "동아일보는 '정치적 숙청'이라는 표현을 사용하며 징계 당사자들의 법적 대응을 강조하고, SBS는 '대국민 사기극'이라는 표현을 사용하며 장동혁의 정치적 행보에 대한 강한 비판을 보인다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "징계 당사자들의 '정치적 숙청' 주장과 법적 대응을 강조하며, 지도부에 대한 비판을 중립적으로 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "장동혁의 광복절 올공행과 개헌 시도를 '대국민 사기극'으로 규정하며 강한 비판적 태도를 보임",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [],
+        "key_differences": [
+          "동아일보는 중앙윤리위원회의 중징계 의결에 따른 당내 반발과 법적 대응을, SBS는 장동혁의 광복절 올공행 가능성과 개헌 시도에 대한 비판을 중심으로 보도"
+        ],
+        "comparison_report": "동아일보는 국민의힘 중앙윤리위원회의 중징계 의결에 따른 조경태, 권영진, 서범수, 진종오 의원의 당원권 정지 조치와 이에 대한 당내 반발 및 법적 대응을 중점적으로 보도하며, '정치적 숙청'이라는 표현을 사용해 징계 당사자들의 주장을 전달하고 지도부에 대한 비판을 중립적으로 서술한다. 반면 SBS는 장동혁 대표의 광복절 올공행 가능성과 개헌 시도를 비판하며, 이를 '대국민 사기극'으로 규정하고 동행 의원들에 대한 책임론을 제기한다. 두 언론사 모두 장동혁 지도부에 대한 비판을 담고 있으나, 동아일보는 당내 징계 절차의 구체적 내용과 법적 대응 가능성을, SBS는 장동혁의 정치적 행보와 보수 진영의 리스크를 강조하는 차이를 보인다.",
+        "source_links": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "국힘 중징계 4인 “정치적 숙청”…중진도 “민심까지 징계할순 없어”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260821/134518312/1",
+            "published_at": "Fri, 21 Aug 2026 12:23:00 +0900"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[정치쇼] 조갑제 \"장동혁, 광복절도 올공행? 대국민 사기극…동행한 의원들도 벌받을 것\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008708115",
+            "published_at": "Mon, 17 Aug 2026 08:44:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-23T01:16:53.153295+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-e7b2f91eef7a20aa": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-e7b2f91eef7a20aa",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "9eafa84cd60f24296341befd48297ff7d9da6fcd2aa0723fc22a777441143d89",
+            "title": "‘중징계’ 진종오 “한동훈 도왔다는 근거 대라…윤리위, 정치적 숙청도구”",
+            "published_at": "Fri, 21 Aug 2026 10:47:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260821/134517856/1"
+          }
+        ],
+        "analysis": {
+          "article_summary": "국민의힘 진종오 의원이 당원권 정지 2년 중징계를 받은 후 기자회견을 열어 징계가 정치적 숙청 도구라며 장동혁 대표 등 당권파를 비판하고, 한동훈 후보 지원 의혹에 대한 명확한 근거 제시를 요구했다.",
+          "headline_frame": "진종오 의원의 중징계 반발과 윤리위를 정치적 숙청 도구로 규정하는 주장을 중심으로 구성",
+          "main_focus": "진종오 의원의 징계가 정치적 보복 및 사당화 시도로 이루어졌다는 주장과 당권파에 대한 비판",
+          "keywords": [
+            "중징계",
+            "당원권 정지",
+            "정치적 숙청",
+            "윤리위",
+            "한동훈 후보 지원",
+            "당권파"
+          ],
+          "main_actors": [
+            "진종오",
+            "장동혁",
+            "국민의힘"
+          ],
+          "quoted_sources": [
+            "진종오"
+          ],
+          "causes": [
+            "무소속 한동훈 후보 지원 의혹"
+          ],
+          "background": [
+            "국회의원 보궐 선거"
+          ],
+          "emphasized_effects": [
+            "국민의힘의 사당화 우려",
+            "당내 갈등 심화"
+          ],
+          "affected_groups": [
+            "국민의힘 당원",
+            "진종오"
+          ],
+          "tone": {
+            "category": "비판",
+            "evidence": [
+              "윤리위를 정치적 숙청도구",
+              "사당으로 전락하는 것을 결코 좌시하지 않겠다"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "진종오 의원의 징계 철회 요구와 당권파 비판으로 당내 갈등이 지속될 전망이며, 윤리위의 정치적 중립성 문제가 부각될 것으로 보인다."
+          },
+          "less_covered_context": [
+            "징계 결정 과정의 구체적 절차",
+            "윤리위 위원들의 입장",
+            "한동훈 후보 지원 행위의 구체적 증거 여부"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-23T01:16:57.406715+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-e7b2f91eef7a20aa",
+        "publisher_id": "chosun",
+        "publisher": "조선일보",
+        "articles": [
+          {
+            "article_id": "b811325b0ddae32cd3ea9632b835a892c671fc3447bc8584db9f59dc82da9846",
+            "title": "[정치 인사이드] 한여름밤의 무더기 징계…국힘 내홍 일촉즉발",
+            "published_at": "Thu, 20 Aug 2026 12:22:12 +0000",
+            "link": "https://www.chosun.com/economy/economy_general/2026/08/20/GJSGKMTDGMYTKMJVG5TDEZTBGM/"
+          }
+        ],
+        "analysis": {
+          "article_summary": "국민의힘 중앙윤리위원회가 비당권파 현역 의원 4명에 대해 당원권 정지 중징계를 결정했으며, 이 중 1년 6개월 이상 징계받은 조경태, 진종오, 권영진 의원은 다음 총선에 국민의힘 후보로 출마할 수 없게 되었다.",
+          "headline_frame": "무더기 징계와 당내 갈등",
+          "main_focus": "국민의힘 중앙윤리위원회의 징계 결정과 이로 인한 당내 갈등 심화",
+          "keywords": [
+            "무더기 징계",
+            "당원권 정지",
+            "중징계",
+            "국민의힘 내홍"
+          ],
+          "main_actors": [
+            "국민의힘 중앙윤리위원회",
+            "조경태",
+            "진종오",
+            "권영진"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "비당권파 현역 의원 4명에 대한 징계 결정"
+          ],
+          "background": [
+            "국민의힘 중앙윤리위원회의 징계 권한"
+          ],
+          "emphasized_effects": [
+            "다음 총선 출마 불가",
+            "당내 갈등 점입가경"
+          ],
+          "affected_groups": [
+            "비당권파 현역 의원",
+            "국민의힘"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "한여름밤의 무더기 징계…국힘 내홍 일촉즉발"
+            ]
+          },
+          "outlook": {
+            "direction": "혼합",
+            "summary": "징계 철회 여부에 따라 당내 갈등이 완화될 수도 있으나, 징계 기간이 길어 총선 출마가 불가능해진 의원들의 반발로 갈등이 심화될 가능성도 있다."
+          },
+          "less_covered_context": [
+            "징계 철회 절차 및 가능성",
+            "징계받은 의원들의 구체적 반발 내용"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-23T01:17:00.547909+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-e7b2f91eef7a20aa",
+      "groups": [
+        {
+          "group_id": "group-01",
+          "label": "정치적 숙청 및 사당화 비판",
+          "summary": "국민의힘 중앙윤리위원회의 징계 결정이 진종오 의원의 무소속 한동훈 후보 지원 의혹을 빌미로 한 정치적 보복 및 사당화 시도로 규정되며, 당권파에 대한 비판과 윤리위의 정치적 도구화 주장이 강조됨",
+          "keywords": [
+            "정치적 숙청",
+            "사당화",
+            "징계 철회 요구",
+            "당권파 비판"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "진종오 의원의 중징계가 정치적 보복 및 사당화 시도로 이루어졌다는 주장과 당권파에 대한 비판",
+            "윤리위를 정치적 숙청 도구로 규정",
+            "국민의힘의 사당화 우려 및 당내 갈등 심화",
+            "진종오 의원의 징계 철회 요구와 당권파 비판으로 당내 갈등이 지속될 전망"
+          ]
+        },
+        {
+          "group_id": "group-02",
+          "label": "징계 결정 및 당내 갈등 우려",
+          "summary": "국민의힘 중앙윤리위원회의 무더기 징계 결정이 비당권파 현역 의원 4명을 대상으로 이루어졌으며, 이로 인한 총선 출마 불가와 당내 갈등 심화가 우려되고 있음",
+          "keywords": [
+            "무더기 징계",
+            "당내 갈등",
+            "총선 출마 불가",
+            "윤리위 권한"
+          ],
+          "publisher_ids": [
+            "chosun"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "국민의힘 중앙윤리위원회의 징계 결정과 이로 인한 당내 갈등 심화",
+            "비당권파 현역 의원 4명에 대한 징계 결정",
+            "다음 총선 출마 불가 및 당내 갈등 점입가경",
+            "징계 철회 여부에 따라 갈등 완화 또는 심화 가능성"
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-01",
+            "group-02"
+          ],
+          "contrast_statement": "동아일보는 진종오 의원의 징계를 정치적 숙청 및 사당화 시도로 규정하며 당권파를 비판하는 반면, 조선일보는 중앙윤리위원회의 징계 결정 자체를 무더기 징계로 규정하고 비당권파 의원들에 대한 영향과 총선 출마 불가 문제를 우려하며 당내 갈등 심화를 경계하고 있음"
+        }
+      ],
+      "grouping_summary": "두 언론사 모두 국민의힘 중앙윤리위원회의 징계 결정과 이로 인한 당내 갈등을 다루고 있으나, 동아일보는 징계를 정치적 보복 및 사당화 시도로 해석하며 당권파 비판에 초점을 맞춘 반면, 조선일보는 징계 결정 자체와 비당권파 의원들에 대한 영향, 총선 출마 불가 문제를 중심으로 당내 갈등 심화를 우려하는 보도 태도를 보임",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-08-23T01:17:08.418302+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "chosun,donga": {
+        "issue_id": "issue-e7b2f91eef7a20aa",
+        "selected_publishers": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
+          }
+        ],
+        "common_summary": "국민의힘 중앙윤리위원회가 진종오 의원을 포함한 비당권파 현역 의원 4명에 대해 당원권 정지 중징계를 결정했으며, 진종오 의원은 징계가 정치적 숙청 도구라며 장동혁 대표 등 당권파를 비판하고 한동훈 후보 지원 의혹에 대한 근거 제시를 요구했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 국민의힘 중앙윤리위원회가 진종오 의원을 포함한 비당권파 현역 의원 4명에 대해 당원권 정지 중징계를 결정했다는 사실을 공통적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "진종오 의원의 중징계 반발과 윤리위를 정치적 숙청 도구로 규정하는 주장을 중심으로 구성",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "무더기 징계와 당내 갈등 상황을 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 진종오 의원의 징계가 정치적 보복 및 사당화 시도로 이루어졌다는 주장을 강조하는 반면, 조선일보는 징계 결정 자체와 이로 인한 당내 갈등 심화에 초점을 맞추고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "진종오 의원의 징계가 정치적 보복 및 사당화 시도로 이루어졌다는 주장과 당권파에 대한 비판",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "국민의힘 중앙윤리위원회의 징계 결정과 이로 인한 당내 갈등 심화",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 진종오 의원의 무소속 한동훈 후보 지원 의혹을 징계 원인으로 강조하는 반면, 조선일보는 비당권파 현역 의원 4명에 대한 징계 결정 자체를 원인으로 제시하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "무소속 한동훈 후보 지원 의혹",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "비당권파 현역 의원 4명에 대한 징계 결정",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 국민의힘의 사당화 우려와 당내 갈등 심화를 강조하는 반면, 조선일보는 다음 총선 출마 불가와 당내 갈등 점입가경을 강조하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민의힘의 사당화 우려, 당내 갈등 심화",
+                "evidence": []
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "다음 총선 출마 불가, 당내 갈등 점입가경",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 윤리위를 정치적 숙청 도구로 규정하며 진종오 의원의 주장을 비판적으로 전달하는 반면, 조선일보는 무더기 징계에 대한 우려와 경계를 표명하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "윤리위를 정치적 숙청 도구로 규정하며 진종오 의원의 주장을 비판적으로 전달",
+                "evidence": [
+                  "윤리위를 정치적 숙청도구",
+                  "사당으로 전락하는 것을 결코 좌시하지 않겠다"
+                ]
+              },
+              {
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "한여름밤의 무더기 징계에 대한 우려와 경계 표명",
+                "evidence": [
+                  "한여름밤의 무더기 징계…국힘 내홍 일촉즉발"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "국민의힘 중앙윤리위원회의 중징계 결정",
+          "진종오 의원의 징계 대상 포함",
+          "당내 갈등 심화"
+        ],
+        "key_differences": [
+          "동아일보는 진종오 의원의 정치적 숙청 주장을 강조하는 반면, 조선일보는 징계 결정 자체에 대한 우려를 표명"
+        ],
+        "comparison_report": "동아일보와 조선일보는 모두 국민의힘 중앙윤리위원회의 진종오 의원 포함 비당권파 현역 의원 4명에 대한 당원권 정지 중징계 결정을 보도하고 있으나, 동아일보가 진종오 의원의 징계가 정치적 숙청 도구라는 주장과 당권파 비판을 강조하는 반면, 조선일보는 무더기 징계로 인한 당내 갈등 심화와 총선 출마 불가 영향에 초점을 맞추고 있다. 보도 태도 측면에서 동아일보는 윤리위를 정치적 숙청 도구로 규정하며 비판적 태도를 보이는 반면, 조선일보는 징계 결정에 대한 우려와 경계를 표명하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "‘중징계’ 진종오 “한동훈 도왔다는 근거 대라…윤리위, 정치적 숙청도구”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260821/134517856/1",
+            "published_at": "Fri, 21 Aug 2026 10:47:00 +0900"
+          },
+          {
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "[정치 인사이드] 한여름밤의 무더기 징계…국힘 내홍 일촉즉발",
+            "link": "https://www.chosun.com/economy/economy_general/2026/08/20/GJSGKMTDGMYTKMJVG5TDEZTBGM/",
+            "published_at": "Thu, 20 Aug 2026 12:22:12 +0000"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-23T01:17:17.133883+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-4730bbd128ada575": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-4730bbd128ada575",
         "publisher_id": "donga",
         "publisher": "동아일보",
         "articles": [
@@ -14,15 +737,15 @@
           }
         ],
         "analysis": {
-          "article_summary": "더불어민주당 서울시당위원장 김영배 의원이 오세훈 시장과의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며, 특히 용산공원 및 정비창 청년주택 관련 서울시 반대 입장을 확인했다.",
-          "headline_frame": "김영배 의원의 오세훈 시장 비판과 서울시의 대체부지 제안",
-          "main_focus": "서울시와 정부·여당의 주택 공급 정책 협력 필요성 및 용산공원 개발 관련 이견",
+          "article_summary": "더불어민주당 서울시당위원장 김영배 의원이 오세훈 시장과의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며, 서울시가 용산공원 개발 관련 대체부지로 탄천물재생센터 등을 제안했다고 밝혔다.",
+          "headline_frame": "김영배 의원의 오세훈 시장 비판과 서울시의 대체부지 제안을 대비시켜 갈등 구도를 강조",
+          "main_focus": "서울시와 정부·여당의 주택 공급 협력 필요성 및 용산공원 개발 관련 이견",
           "keywords": [
             "주택 공급",
-            "용산공원",
-            "청년주택",
             "재개발·재건축",
-            "서울시"
+            "용산공원",
+            "용산 정비창",
+            "청년주택"
           ],
           "main_actors": [
             "김영배",
@@ -34,146 +757,189 @@
             "김영배"
           ],
           "causes": [
-            "용산 일대 법상 문제",
-            "교통 문제"
+            "주택 공급 확대",
+            "용산공원 개발"
           ],
           "background": [
-            "주택 공급 확대",
-            "재개발·재건축 활성화"
+            "서울시 주택 공급 정책",
+            "용산 정비창 문제",
+            "그린벨트 문제"
           ],
           "emphasized_effects": [
             "주택 공급 확대 필요성",
-            "청년 주택 주거 문제"
+            "용산 일대 개발 갈등"
           ],
           "affected_groups": [
             "시민",
             "청년"
           ],
           "tone": {
-            "category": "비판",
+            "category": "갈등 강조",
             "evidence": [
-              "김영배 “吳, 용산공원 1㎝도 양보 안 된다며 자기 정치”"
-            ]
-          },
-          "outlook": {
-            "direction": "혼합",
-            "summary": "서울시는 대체부지 제안을 통해 협력 가능성을 열어두었으나, 용산공원 관련 이견으로 인해 합의 도출은 어려운 상황"
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "장기적 도시 개발 계획"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:29:45.440556+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-07569a561e6d82db",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "af68776b9e6ff5dd8909bada995c311efb34b7d6dc15d49b37405025aa2b3e16",
-            "title": "\"용산공원 전체 검토\"…이르면 9월 말 추가 발표",
-            "published_at": "Sat, 15 Aug 2026 06:14:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008706490"
-          }
-        ],
-        "analysis": {
-          "article_summary": "정부가 서울 주택 공급 물량 1천520호 발표에 이어 용산공원 전체 검토를 통해 이르면 9월 말 추가 공급 후보지를 발표할 계획임을 보도했다.",
-          "headline_frame": "용산공원 전체 검토 및 추가 발표 시점을 강조",
-          "main_focus": "서울 주택 공급 확대를 위한 용산공원 개발 검토 및 추가 발표 계획",
-          "keywords": [
-            "용산공원",
-            "주택 공급",
-            "추가 발표",
-            "9월 말"
-          ],
-          "main_actors": [
-            "정부"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "서울 주택 공급 물량 1천520호 발표"
-          ],
-          "background": [
-            "서울 주택 공급 확대 정책"
-          ],
-          "emphasized_effects": [
-            "추가 공급 후보지 발표"
-          ],
-          "affected_groups": [
-            "서울 주택 수요자"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "용산공원 전체 검토…이르면 9월 말 추가 발표"
+              "김영배 “吳, 용산공원 1㎝도 양보 안 된다며 자기 정치”",
+              "서울시 “탄천물재생센터 등 대체부지 제안”"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "이르면 9월 말 추가 공급 후보지 발표 예정"
+            "summary": "서울시와 정부·여당 간 협력 필요성에 대한 공감대는 있으나 구체적 합의 도출은 어려운 상황"
           },
           "less_covered_context": [
-            "용산공원 개발 계획의 구체적 내용",
-            "주택 공급 확대 정책의 장기적 효과"
+            "정책 시행 이후의 구체적 효과",
+            "용산공원 개발의 장기적 비전"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:29:45.675913+00:00",
+        "analyzed_at": "2026-08-23T01:17:21.198859+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-4730bbd128ada575",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "ae49a9212081efe2af0fb22cb110d7ca9261556e80c977563b430fd4780276cf",
+            "title": "[정치쇼] 권영세 \"장관과 수석…공부는 하고 용산개발 주장하나? 개발 시작하면 나중엔 껍데기만\"",
+            "published_at": "Thu, 20 Aug 2026 09:29:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008712928"
+          }
+        ],
+        "analysis": {
+          "article_summary": "권영세 의원은 정부가 추진하는 용산공원 재개발에 반대하며, 공원을 그대로 유지해야 한다고 주장하고 있다.",
+          "headline_frame": "용산공원 재개발 반대 입장을 강조하는 권영세 의원의 발언",
+          "main_focus": "용산공원 재개발 계획에 대한 반대 의견과 공원의 녹지 기능 유지 필요성",
+          "keywords": [
+            "용산공원",
+            "재개발",
+            "반대",
+            "녹지",
+            "공급주택"
+          ],
+          "main_actors": [
+            "권영세",
+            "국민의힘",
+            "정부"
+          ],
+          "quoted_sources": [
+            "권영세"
+          ],
+          "causes": [
+            "용산공원 주택공급 반대",
+            "녹지축 늘리려 했던 의도 제대로 공부했나 의문"
+          ],
+          "background": [
+            "기능 상실한 곳만? 해당 부지 녹지만든게 文 정부",
+            "용산공원 미반환·환경조합 문제로 시간 오래걸려"
+          ],
+          "emphasized_effects": [
+            "일부만 개발? 일단 시작되면 다른 곳도 덮게될 것",
+            "서울에 녹지 만들어 허파·쉼터 역할 무조건 필요"
+          ],
+          "affected_groups": [
+            "서울 시민",
+            "환경"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "개발 시작하면 나중엔 껍데기만",
+              "일단 시작되면 다른 곳도 덮게될 것"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "연내 북미회담에 대한 우려가 언급되었으나 용산공원 개발에 대한 구체적 전망은 제시되지 않음"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "이태원·후암동 대안의 구체적 실현 가능성"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-23T01:17:22.680656+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-07569a561e6d82db",
+      "issue_id": "issue-4730bbd128ada575",
       "groups": [
         {
-          "group_id": "housing-cooperation",
-          "label": "주택 공급 협력 및 용산공원 개발 검토",
-          "summary": "서울시의 주택 공급 확대 정책과 용산공원 개발 관련 협력 필요성과 이견을 중심으로, 청년 주택 문제 해결을 위한 재개발·재건축 활성화 방안을 강조하는 관점",
+          "group_id": "group-1",
+          "label": "주택 공급 협력 필요성 및 개발 갈등",
+          "summary": "서울시와 정부·여당의 주택 공급 협력 필요성과 용산공원 개발 관련 이견을 중심으로, 주택 공급 확대 필요성과 용산 일대 개발 갈등을 강조하는 관점",
           "keywords": [
             "주택 공급",
-            "용산공원",
-            "청년주택",
             "재개발·재건축",
-            "서울시"
+            "용산공원",
+            "용산 정비창",
+            "청년주택"
           ],
           "publisher_ids": [
-            "donga",
-            "sbs"
+            "donga"
           ],
           "publishers": [
             {
               "publisher_id": "donga",
               "publisher": "동아일보"
-            },
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "서울시와 정부·여당의 주택 공급 협력 필요성을 핵심 쟁점으로 삼고 있으며, 용산공원 개발 관련 이견을 갈등 구도로 강조함",
+            "주택 공급 확대의 필요성을 강조하고, 용산 일대 개발 갈등을 주요 이슈로 제시함",
+            "서울시와 정부·여당 간 협력 필요성에 대한 공감대는 있으나 구체적 합의 도출은 어려운 상황이라는 중립적 전망을 제시함"
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "용산공원 재개발 반대 및 녹지 기능 유지",
+          "summary": "용산공원 재개발 계획에 대한 반대 의견과 공원의 녹지 기능 유지 필요성을 중심으로, 개발 시작 시 확장 우려와 서울 시민의 환경권 강조",
+          "keywords": [
+            "용산공원",
+            "재개발",
+            "반대",
+            "녹지",
+            "공급주택"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
             {
               "publisher_id": "sbs",
               "publisher": "SBS"
             }
           ],
-          "publisher_count": 2,
+          "publisher_count": 1,
           "group_evidence": [
-            "서울시의 주택 공급 확대 정책과 용산공원 개발 관련 협력 필요성 및 이견을 중심으로, 청년 주택 문제 해결을 위한 재개발·재건축 활성화 방안을 강조",
-            "서울 주택 공급 확대를 위한 용산공원 개발 검토 및 추가 발표 계획을 중심으로, 주택 공급 확대 정책의 일환으로 용산공원 개발을 다룸"
+            "용산공원 재개발 계획에 대한 반대 의견을 핵심 쟁점으로 삼고, 공원의 녹지 기능 유지 필요성을 강조함",
+            "일부만 개발 시작되면 다른 곳도 덮게 될 것이라는 우려를 제기하며, 서울 시민에게 허파·쉼터 역할의 녹지가 무조건 필요하다는 입장을 보임",
+            "기능 상실한 곳만 개발해야 한다는 입장과 해당 부지 녹지만든 것이 文 정부라는 배경을 제시함"
           ]
         }
       ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 서울시의 주택 공급 확대 정책을 중심으로 용산공원 개발을 다루고 있으나, 동아일보(donga)는 김영배 의원의 오세훈 시장 비판과 서울시의 대체부지 제안을 통해 정책 협력의 필요성을 강조하는 반면, SBS(sbs)는 용산공원 전체 검토 및 추가 발표 시점을 중립적으로 전달하는 데 초점을 맞추고 있습니다. 핵심 관점은 주택 공급 확대라는 공통점을 가지나, 동아일보가 정책 간 이견과 협력 방향을 비판적으로 제시하는 반면 SBS는 정책 진행 상황을 중립적으로 설명하여 보도 태도에서 차이를 보입니다.",
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "동아일보는 서울시와 정부·여당의 주택 공급 협력 필요성과 용산공원 개발 관련 이견을 갈등 구도로 강조하는 반면, SBS는 용산공원 재개발 계획에 대한 반대 의견과 공원의 녹지 기능 유지 필요성을 강조하며 개발 시작 시 확장 우려를 제기함"
+        }
+      ],
+      "grouping_summary": "두 언론사 모두 용산공원 개발과 관련된 이슈를 다루지만, 동아일보는 주택 공급 협력 필요성과 개발 갈등 구도에 초점을 맞춘 반면, SBS는 재개발 반대와 녹지 기능 유지 필요성에 초점을 맞추어 서로 다른 핵심 해석과 평가 방향을 보임",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:29:48.526867+00:00",
+      "grouped_at": "2026-08-23T01:17:26.660260+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,sbs": {
-        "issue_id": "issue-07569a561e6d82db",
+        "issue_id": "issue-4730bbd128ada575",
         "selected_publishers": [
           {
             "publisher_id": "donga",
@@ -184,116 +950,118 @@
             "publisher": "SBS"
           }
         ],
-        "common_summary": "서울 주택 공급 정책과 관련해 용산공원 개발 및 청년주택 공급 문제를 다루고 있으나, 동아일보가 서울시당위원장 김영배 의원의 오세훈 시장 비판과 서울시 반대 입장을, SBS는 정부의 용산공원 전체 검토 및 추가 발표 계획을 각각 보도하고 있다.",
-        "overall_difference": "차이 큼",
+        "common_summary": "더불어민주당 서울시당위원장 김영배 의원과 오세훈 시장의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며, 서울시가 용산공원 개발 관련 대체부지로 탄천물재생센터 등을 제안했다는 내용이 공통적으로 확인된다.",
+        "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 서울 주택 공급 정책과 용산공원 개발 문제를 다루고 있으나, 동아일보가 서울시와 정부·여당 간 이견을, SBS는 정부의 용산공원 검토 및 추가 발표 계획을 각각 보도하고 있다.",
+            "contrast_statement": "두 언론사 모두 김영배 의원과 오세훈 시장의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며, 서울시가 용산공원 개발 관련 대체부지로 탄천물재생센터 등을 제안했다는 사실을 공통적으로 보도한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "서울시당위원장 김영배 의원의 오세훈 시장 비판과 서울시의 용산공원 청년주택 반대 입장을 보도",
+                "summary": "김영배 의원과 오세훈 시장의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며 서울시가 용산공원 개발 관련 대체부지로 탄천물재생센터 등을 제안했다는 사실을 보도",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정부의 용산공원 전체 검토 및 이르면 9월 말 추가 공급 후보지 발표 계획을 보도",
+                "summary": "권영세 의원이 용산공원 재개발에 반대하며 공원을 그대로 유지해야 한다고 주장하는 내용을 보도",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 서울시와 정부·여당의 주택 공급 정책 협력 필요성과 용산공원 개발 관련 이견을 강조하는 반면, SBS는 서울 주택 공급 확대를 위한 용산공원 개발 검토 및 추가 발표 계획에 초점을 맞추고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 서울시와 정부·여당의 주택 공급 협력 필요성과 용산공원 개발 관련 이견을 강조하는 반면, SBS는 용산공원 재개발 계획에 대한 반대 의견과 공원의 녹지 기능 유지 필요성을 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "서울시와 정부·여당 간 주택 공급 정책 협력 필요성 및 용산공원 개발 관련 이견",
+                "summary": "서울시와 정부·여당의 주택 공급 협력 필요성 및 용산공원 개발 관련 이견",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "서울 주택 공급 확대를 위한 용산공원 개발 검토 및 추가 발표 계획",
+                "summary": "용산공원 재개발 계획에 대한 반대 의견과 공원의 녹지 기능 유지 필요성",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조된 원인·배경",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 용산 일대 법상 문제와 교통 문제를 원인으로 강조하는 반면, SBS는 서울 주택 공급 물량 1천520호 발표를 배경으로 제시하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 주택 공급 확대와 용산공원 개발을 강조된 원인으로 제시하는 반면, SBS는 용산공원 주택공급 반대와 녹지축 늘리려 했던 의도 제대로 공부했나 의문을 강조된 배경으로 제시한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "용산 일대 법상 문제와 교통 문제를 주택 공급 정책 이견의 원인으로 강조",
+                "summary": "주택 공급 확대 및 용산공원 개발을 강조된 원인으로 제시",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "서울 주택 공급 물량 1천520호 발표를 용산공원 검토의 배경으로 제시",
+                "summary": "용산공원 주택공급 반대 및 녹지축 늘리려 했던 의도 제대로 공부했나 의문을 강조된 배경으로 제시",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조한 영향·대상",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 주택 공급 확대 필요성과 청년 주택 주거 문제를 강조하는 반면, SBS는 추가 공급 후보지 발표를 통해 서울 주택 수요자에게 영향을 미칠 것으로 보도하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 주택 공급 확대 필요성과 용산 일대 개발 갈등을 영향 및 대상으로 강조하는 반면, SBS는 일부만 개발 시 다른 곳도 덮게 될 우려와 서울 시민 및 환경에 대한 영향을 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "주택 공급 확대 필요성과 청년 주택 주거 문제 해결을 강조",
+                "summary": "주택 공급 확대 필요성 및 용산 일대 개발 갈등",
                 "evidence": []
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "추가 공급 후보지 발표를 통해 서울 주택 수요자에게 영향을 미칠 것으로 보도",
+                "summary": "일부만 개발 시 다른 곳도 덮게 될 우려 및 서울 시민·환경 영향",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "차이 큼",
-            "contrast_statement": "동아일보는 김영배 의원의 발언을 인용해 오세훈 시장을 비판하는 비판적 태도를 보이는 반면, SBS는 용산공원 검토 및 추가 발표 시점을 중립적으로 설명하는 태도를 보이고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "동아일보는 갈등 구도를 강조하는 태도를 보이며 김영배 의원의 비판 발언과 서울시의 대체부지 제안을 근거로 제시하는 반면, SBS는 우려·경계 태도를 보이며 개발 시작 시 껍데기만 남을 것이라는 발언을 근거로 제시한다.",
             "publisher_details": [
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "김영배 의원의 오세훈 시장 비판 발언을 인용해 비판적 태도를 보임",
+                "summary": "갈등 구도를 강조하는 보도 태도",
                 "evidence": [
-                  "김영배 “吳, 용산공원 1㎝도 양보 안 된다며 자기 정치”"
+                  "김영배 “吳, 용산공원 1㎝도 양보 안 된다며 자기 정치”",
+                  "서울시 “탄천물재생센터 등 대체부지 제안”"
                 ]
               },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "용산공원 전체 검토 및 이르면 9월 말 추가 발표 시점을 중립적으로 설명함",
+                "summary": "우려·경계하는 보도 태도",
                 "evidence": [
-                  "용산공원 전체 검토…이르면 9월 말 추가 발표"
+                  "개발 시작하면 나중엔 껍데기만",
+                  "일단 시작되면 다른 곳도 덮게될 것"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "서울 주택 공급 정책과 용산공원 개발 문제를 다루고 있음"
+          "김영배 의원과 오세훈 시장의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며 서울시가 용산공원 개발 관련 대체부지로 탄천물재생센터 등을 제안했다는 사실"
         ],
         "key_differences": [
-          "동아일보는 서울시와 정부·여당 간 이견을 비판적으로 보도하는 반면, SBS는 정부의 용산공원 검토 및 추가 발표 계획을 중립적으로 보도함"
+          "동아일보는 서울시와 정부·여당의 협력 필요성을 강조하는 반면 SBS는 용산공원 재개발 자체에 대한 반대 입장을 강조함"
         ],
-        "comparison_report": "동아일보는 더불어민주당 서울시당위원장 김영배 의원의 오세훈 시장 비판과 서울시의 용산공원 청년주택 반대 입장을 강조하며, 용산 일대 법상 문제와 교통 문제를 원인으로 제시하고 주택 공급 확대 필요성과 청년 주거 문제 해결을 강조하고 있다. 반면 SBS는 정부의 용산공원 전체 검토 및 이르면 9월 말 추가 공급 후보지 발표 계획을 중립적으로 보도하며, 서울 주택 공급 물량 1천520호 발표를 배경으로 제시하고 서울 주택 수요자에게 미칠 영향을 강조하고 있다. 두 언론사 모두 서울 주택 공급 정책과 용산공원 개발을 다루지만, 동아일보가 서울시와 정부 간 이견을 비판적으로 조명하는 반면 SBS는 정부의 정책 검토 및 발표 계획을 중립적으로 설명하는 차이를 보인다.",
+        "comparison_report": "동아일보와 SBS는 모두 김영배 의원과 오세훈 시장의 회동 결과 주택 공급 정책에서 이견을 좁히지 못했으며 서울시가 용산공원 개발 관련 대체부지로 탄천물재생센터 등을 제안했다는 사실을 보도하지만, 핵심 관점에서 차이를 보인다. 동아일보는 서울시와 정부·여당의 주택 공급 협력 필요성을 강조하는 반면 SBS는 용산공원 재개발 계획에 대한 반대 의견과 공원의 녹지 기능 유지 필요성을 강조한다. 원인·배경 측면에서도 동아일보는 주택 공급 확대를 강조된 원인으로 제시하는 반면 SBS는 용산공원 주택공급 반대와 녹지축 늘리려 했던 의도 제대로 공부했나 의문을 강조된 배경으로 제시한다. 영향·대상 측면에서 동아일보는 주택 공급 확대 필요성과 용산 일대 개발 갈등을 강조하는 반면 SBS는 일부만 개발 시 다른 곳도 덮게 될 우려와 서울 시민·환경 영향을 강조한다. 보도 태도에서는 동아일보가 갈등 구도를 강조하는 태도를 보이며 김영배 의원의 비판 발언과 서울시의 대체부지 제안을 근거로 제시하는 반면 SBS는 우려·경계 태도를 보이며 개발 시작 시 껍데기만 남을 것이라는 발언을 근거로 제시한다.",
         "source_links": [
           {
             "publisher_id": "donga",
@@ -305,851 +1073,166 @@
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "\"용산공원 전체 검토\"…이르면 9월 말 추가 발표",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008706490",
-            "published_at": "Sat, 15 Aug 2026 06:14:00 +0900"
+            "title": "[정치쇼] 권영세 \"장관과 수석…공부는 하고 용산개발 주장하나? 개발 시작하면 나중엔 껍데기만\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008712928",
+            "published_at": "Thu, 20 Aug 2026 09:29:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T18:29:57.702201+00:00",
+        "compared_at": "2026-08-23T01:17:42.196745+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-fd885997954a2648": {
+  "issue-7410593c1caa95e0": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-fd885997954a2648",
+        "issue_id": "issue-7410593c1caa95e0",
         "publisher_id": "mk",
         "publisher": "매일경제",
         "articles": [
           {
-            "article_id": "8524ae76c4f44237b2341f4249d412c3acd1d5e3218b85c326721ebeddd434c3",
-            "title": "“사법 정치꾼” vs “의회 독재”…조희대 ‘대법관 제청’ 놓고 여야 정면충돌",
-            "published_at": "Wed, 19 Aug 2026 16:37:52 +09:00",
-            "link": "https://www.mk.co.kr/news/politics/12131322"
+            "article_id": "bcf47e9b58f237ae2b643a70eb81d4adfe2a1905db1e1634d52348c6b73304dd",
+            "title": "반도체 팔아 삼겹살 사온다 … 무역의 본질은 결국 ‘이것’",
+            "published_at": "Sat, 25 Jul 2026 05:33:00 +09:00",
+            "link": "https://www.mk.co.kr/news/society/12106689"
           }
         ],
         "analysis": {
-          "article_summary": "국회 법제사법위원회가 조희대 대법원장의 국회 출석을 요구하며 대법관 후보 제청을 둘러싼 여야 공방이 정면충돌 양상으로 번지고 있다.",
-          "headline_frame": "대법관 제청 과정에서 발생한 여야 간 정치적 대립과 충돌",
-          "main_focus": "조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 여야의 정면충돌",
+          "article_summary": "반도체 수출로 얻은 수익을 통해 삼겹살 등 일상 소비재를 수입하는 사례를 통해 무역의 본질인 비교우위론을 설명하고, 국제 분업체계 속에서의 상호 의존 관계를 강조한다.",
+          "headline_frame": "반도체 수출로 얻은 수익을 삼겹살 수입에 사용하는 구체적 사례를 제시하며, 무역의 본질인 비교우위론을 중심으로 서술한다.",
+          "main_focus": "국제 분업체계 속에서의 상호 의존 관계와 무역의 기초인 비교우위론을 설명하는 데 초점을 둔다.",
           "keywords": [
-            "대법관 제청",
-            "여야 정면충돌",
-            "사법 정치꾼",
-            "의회 독재"
+            "비교우위론",
+            "국제 분업체계",
+            "상호 의존 관계",
+            "반도체 수출",
+            "삼겹살 수입"
           ],
           "main_actors": [
-            "조희대 대법원장",
-            "국회 법제사법위원회",
-            "여야"
+            "반도체 수출",
+            "삼겹살 수입"
           ],
           "quoted_sources": [],
           "causes": [
-            "대법관 후보 제청 문제",
-            "조희대 대법원장의 국회 출석 요구"
+            "국제 분업체계 속에서의 상호 의존 관계"
           ],
           "background": [
-            "국회 법제사법위원회의 전체회의"
+            "무역의 기초인 비교우위론"
           ],
           "emphasized_effects": [
-            "정면충돌 양상"
+            "일국의 경제 상황이나 정책적 변화가 타국 국민 경제 전반에 미치는 영향"
           ],
           "affected_groups": [
-            "대법원",
-            "국회"
-          ],
-          "tone": {
-            "category": "갈등 강조",
-            "evidence": [
-              "“사법 정치꾼” vs “의회 독재”…조희대 ‘대법관 제청’ 놓고 여야 정면충돌"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 법사위 전체회의에서 조 대법원장 출석 여부가 결정될 것으로 보인다."
-          },
-          "less_covered_context": [],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:30:01.414521+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-fd885997954a2648",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "8053a2fb462dcee7cba76dd6a5e2934e489dc124e66662f29eece9192b2b373e",
-            "title": "[정치사냥꾼] 대법관 '서면 제청' 파문…여야 모두 '집안싸움' 격화",
-            "published_at": "Fri, 21 Aug 2026 19:40:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716131"
-          }
-        ],
-        "analysis": {
-          "article_summary": "대법관 서면 제청 파문을 둘러싼 여야 간 갈등이 심화되고 있으며, 이 사안이 정치적 집안싸움으로 확대되고 있음을 보도한다.",
-          "headline_frame": "대법관 '서면 제청' 파문을 여야 간 '집안싸움'으로 규정하고 갈등 격화를 강조",
-          "main_focus": "대법관 제청 파문이 여야 간 정치적 갈등으로 확대되는 양상과 그 격화 과정에 초점",
-          "keywords": [
-            "대법관",
-            "서면 제청",
-            "파문",
-            "여야",
-            "집안싸움",
-            "격화"
-          ],
-          "main_actors": [
-            "대법관",
-            "여야"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "대법관 서면 제청"
-          ],
-          "background": [
-            "정치사냥꾼"
-          ],
-          "emphasized_effects": [
-            "여야 모두 집안싸움 격화"
-          ],
-          "affected_groups": [
-            "대법관",
-            "여야"
-          ],
-          "tone": {
-            "category": "갈등 강조",
-            "evidence": [
-              "대법관 '서면 제청' 파문…여야 모두 '집안싸움' 격화"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 전망이나 방향성에 대한 구체적 언급은 확인되지 않음"
-          },
-          "less_covered_context": [
-            "대법관 서면 제청의 구체적 내용이나 절차",
-            "파문의 법적·제도적 배경",
-            "관련 당사자들의 구체적 입장"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:30:01.489923+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-fd885997954a2648",
-      "groups": [
-        {
-          "group_id": "group-01",
-          "label": "대법관 제청 갈등과 사법-정치 대립",
-          "summary": "대법관 제청 문제를 둘러싼 여야 간 정면충돌과 사법부-입법부 간 권력 갈등을 강조하는 관점",
-          "keywords": [
-            "대법관 제청",
-            "여야 정면충돌",
-            "사법 정치꾼",
-            "의회 독재"
-          ],
-          "publisher_ids": [
-            "mk"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 여야의 정면충돌을 핵심 쟁점으로 보고, '사법 정치꾼'과 '의회 독재'라는 표현을 통해 사법부와 입법부 간 권력 갈등을 강조함",
-            "국회 법제사법위원회의 전체회의에서 발생한 대립 양상을 중심으로 보도하며, 향후 법사위 전체회의에서 조 대법원장 출석 여부가 결정될 것으로 전망함"
-          ]
-        },
-        {
-          "group_id": "group-02",
-          "label": "대법관 서면 제청 파문과 여야 집안싸움",
-          "summary": "대법관 서면 제청 파문을 여야 간 정치적 집안싸움으로 규정하고 갈등 격화 과정을 강조하는 관점",
-          "keywords": [
-            "대법관 서면 제청",
-            "파문",
-            "집안싸움",
-            "격화"
-          ],
-          "publisher_ids": [
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "대법관 서면 제청 파문을 여야 간 '집안싸움'으로 규정하고 갈등 격화 과정에 초점을 맞춤",
-            "정치사냥꾼이라는 표현을 통해 여야 간 정치적 대립을 강조함",
-            "향후 전망이나 방향성에 대한 구체적 언급은 없으나, 갈등 격화 양상을 중심으로 보도함"
-          ]
-        }
-      ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "group-01",
-            "group-02"
-          ],
-          "contrast_statement": "매일경제는 조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 여야의 정면충돌을 사법부와 입법부 간 권력 갈등('사법 정치꾼' vs '의회 독재')으로 해석하며, 국회 법제사법위원회의 전체회의를 배경으로 한 제도적 대립을 강조함. 반면 SBS는 대법관 서면 제청 파문을 여야 간 정치적 집안싸움으로 규정하고, 정치사냥꾼이라는 표현을 통해 정당 내부 갈등 격화 과정에 초점을 맞춤. 두 언론사 모두 갈등 강조 태도를 보이지만, 매일경제는 사법-정치 권력 대립 구조를, SBS는 정당 간 정치적 집안싸움 양상을 핵심 해석으로 삼아 평가 방향이 다름."
-        }
-      ],
-      "grouping_summary": "두 언론사 모두 대법관 제청 문제를 둘러싼 여야 간 정치적 갈등을 보도하지만, 매일경제는 사법부와 입법부 간 권력 갈등('사법 정치꾼' vs '의회 독재')을 강조하는 반면, SBS는 정당 간 정치적 집안싸움으로 규정하고 갈등 격화 과정에 초점을 맞춤. 핵심 관점이 서로 다른 평가 방향을 제시하므로 별도 그룹으로 분류함.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:30:06.798552+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "mk,sbs": {
-        "issue_id": "issue-fd885997954a2648",
-        "selected_publishers": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "대법관 후보 제청 문제를 둘러싼 여야 간 갈등이 심화되고 있으며, 국회 법제사법위원회의 출석 요구와 충돌 양상으로 번지고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 대법관 후보 제청 문제를 둘러싼 여야 간 갈등이 심화되고 있음을 보도한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "대법관 후보 제청 문제를 둘러싼 여야 간 정면충돌 양상",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법관 서면 제청 파문을 둘러싼 여야 간 집안싸움 양상",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 정면충돌에 초점을 두는 반면, SBS는 대법관 서면 제청 파문이 여야 간 정치적 집안싸움으로 확대되는 양상에 주목한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 여야 정면충돌",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법관 서면 제청 파문이 여야 간 정치적 집안싸움으로 확대되는 양상",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 대법관 후보 제청 문제와 조희대 대법원장의 국회 출석 요구를 원인으로 강조하는 반면, SBS는 대법관 서면 제청 자체를 주요 원인으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "대법관 후보 제청 문제와 조희대 대법원장의 국회 출석 요구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법관 서면 제청",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 대법원과 국회 간 정면충돌 양상을 강조하는 반면, SBS는 여야 모두 집안싸움 격화에 휘말린 것으로 보도한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "정면충돌 양상",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "여야 모두 집안싸움 격화",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 갈등 강조 태도를 보이지만, 매일경제은 '사법 정치꾼' vs '의회 독재'라는 대립적 표현을, SBS는 '집안싸움'이라는 표현을 사용하여 갈등 양상을 부각한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "대립적 표현을 통해 여야 간 갈등을 강조함",
-                "evidence": [
-                  "“사법 정치꾼” vs “의회 독재”…조희대 ‘대법관 제청’ 놓고 여야 정면충돌"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "'집안싸움'이라는 표현을 통해 여야 간 갈등을 강조함",
-                "evidence": [
-                  "대법관 '서면 제청' 파문…여야 모두 '집안싸움' 격화"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "대법관 후보 제청 문제를 둘러싼 여야 간 갈등 심화",
-          "국회 법제사법위원회의 출석 요구와 충돌 양상"
-        ],
-        "key_differences": [
-          "매일경제는 '사법 정치꾼' vs '의회 독재'라는 대립적 표현을 사용한 반면, SBS는 '집안싸움'이라는 표현을 사용하여 갈등 양상을 부각함"
-        ],
-        "comparison_report": "매일경제와 SBS 모두 대법관 후보 제청 문제를 둘러싼 여야 간 갈등이 심화되고 있음을 보도하지만, 매일경제는 조희대 대법원장의 국회 출석 요구와 대법관 후보 제청 문제를 둘러싼 정면충돌 양상에 초점을 두고 '사법 정치꾼' vs '의회 독재'라는 대립적 표현을 통해 갈등을 강조하는 반면, SBS는 대법관 서면 제청 파문이 여야 간 정치적 집안싸움으로 확대되는 양상에 주목하며 '집안싸움'이라는 표현을 사용하여 갈등 격화를 부각한다.",
-        "source_links": [
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "“사법 정치꾼” vs “의회 독재”…조희대 ‘대법관 제청’ 놓고 여야 정면충돌",
-            "link": "https://www.mk.co.kr/news/politics/12131322",
-            "published_at": "Wed, 19 Aug 2026 16:37:52 +09:00"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치사냥꾼] 대법관 '서면 제청' 파문…여야 모두 '집안싸움' 격화",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716131",
-            "published_at": "Fri, 21 Aug 2026 19:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T18:30:14.836066+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-c7050c70368573dc": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-c7050c70368573dc",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "3895946a51cdf848173dfd31cb270c1ec876c88b24d3f3e507b370e894619cf8",
-            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
-            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "2분기 한국 경제가 전년 동기 대비 3.7% 성장하며 두 개 분기 연속 3%대 성장세를 이어갔고, 반도체 수출 호조가 주요 동력으로 작용했다.",
-          "headline_frame": "반도체 수출 호조를 통한 2분기 성장률 3.7% 달성",
-          "main_focus": "반도체 수출 증가가 경제 성장에 미친 영향과 한국은행의 향후 금리 인상 전망",
-          "keywords": [
-            "반도체 수출 호조",
-            "2분기 성장률",
-            "3.7% 성장",
-            "한국은행",
-            "기준금리 인상"
-          ],
-          "main_actors": [
-            "한국은행",
-            "한국 경제"
-          ],
-          "quoted_sources": [
-            "한국은행"
-          ],
-          "causes": [
-            "반도체 수출 호조"
-          ],
-          "background": [
-            "실질 GDP는 물가 변동의 영향이 제거된 지표",
-            "수출이 급증한 덕분"
-          ],
-          "emphasized_effects": [
-            "두 개 분기 연속 3%대 성장세",
-            "시장 전망치를 웃도는 성장률"
-          ],
-          "affected_groups": [
-            "한국 경제"
+            "타국 국민 경제 전반"
           ],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”"
+              "무역의 본질은 결국 ‘이것’",
+              "일국의 경제 상황이나 정책적 변화가 타국 국민 경제 전반에"
             ]
           },
           "outlook": {
-            "direction": "긍정",
-            "summary": "한국은행이 다음 달에도 기준금리를 추가로 인상할 것이란 전망에 힘이 실리고 있다."
+            "direction": "중립",
+            "summary": "국제 분업체계 속에서의 상호 의존 관계가 지속될 것으로 보인다."
           },
           "less_covered_context": [
-            "실질 GDP와 국내총소득(GDI)이 증가세를 이어간 구체적 메커니즘",
-            "수출 증가의 세부 품목 구성"
+            "정책 변화의 구체적 영향",
+            "반도체 수출 증가의 구체적 원인"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:30:25.493491+00:00",
+        "analyzed_at": "2026-08-23T01:17:54.493098+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-c7050c70368573dc",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
+        "issue_id": "issue-7410593c1caa95e0",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
         "articles": [
           {
-            "article_id": "dfcef5dde5f73351ffe08da3a496aa9da79e19afe185746baee2368d4dde13b2",
-            "title": "KDI \"올해 성장률 전망치 3.2%, 0.7%p↑…체감경기 확산은 미진\"",
-            "published_at": "Wed, 19 Aug 2026 15:00:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008711694"
+            "article_id": "8e653a2b32fdfd9d264feb7d88b4ffe99915333d854fa5091b6ec052daceaba9",
+            "title": "KDI, 올해 성장률 3.2%로 상향…“반도체 호황, 체감경기 확산 미진”",
+            "published_at": "Wed, 19 Aug 2026 12:00:00 +0900",
+            "link": "https://www.donga.com/news/Economy/article/all/20260819/134502303/1"
           }
         ],
         "analysis": {
-          "article_summary": "국책연구기관인 한국개발연구원(KDI)이 올해 한국 경제성장률 전망치를 3.2%로 석 달 만에 0.7%포인트 상향 조정했으나, 체감경기 확산은 미진하다고 평가했다.",
-          "headline_frame": "성장률 전망치 상향 조정과 체감경기 확산의 미진이라는 두 가지 상반된 측면을 동시에 강조",
-          "main_focus": "경제성장률 전망치의 상향 조정과 함께 체감경기 확산의 한계를 지적하는 균형 잡힌 경제 진단",
+          "article_summary": "한국개발연구원(KDI)이 올해 한국 경제 성장률 전망치를 2.5%에서 3.2%로 상향 조정했으며, 이는 반도체 초호황의 영향으로 수출과 설비투자가 크게 늘어날 것으로 예상했기 때문이다. 다만 반도체 호황이 체감경기 확산으로 이어지지 못하고 있는 점도 지적되었다.",
+          "headline_frame": "반도체 호황을 중심으로 한 성장률 상향 조정과 체감경기 확산의 괴리",
+          "main_focus": "반도체 초호황이 경제 성장률과 수출에 미치는 긍정적 영향과 동시에 체감경기 확산의 미진함을 강조",
           "keywords": [
-            "성장률",
-            "전망치",
-            "상향",
-            "체감경기",
-            "확산",
-            "미진"
+            "반도체 호황",
+            "성장률 상향",
+            "수출 증가",
+            "체감경기 확산 미진",
+            "KDI 경제전망"
           ],
           "main_actors": [
             "한국개발연구원(KDI)"
           ],
           "quoted_sources": [],
           "causes": [
-            "글로벌 반도체 호황"
+            "글로벌 반도체 수요 예상보다 훨씬 강하게 이어짐"
           ],
           "background": [
-            "국책연구기관인 한국개발연구원의 경제 전망 발표"
+            "반도체 중심으로 수출과 설비투자 증가 예상"
           ],
           "emphasized_effects": [
-            "성장률 상승",
-            "체감경기 확산 미진"
+            "올해 수출 사상 처음 1조 달러 돌파 전망",
+            "내년 성장률 0.5%포인트 상승 전망",
+            "올해 소비자물가 상승률 2.7% 예상"
           ],
           "affected_groups": [
-            "한국 경제 전반"
+            "민간 소비"
           ],
           "tone": {
             "category": "중립 설명",
             "evidence": [
-              "KDI \"올해 성장률 전망치 3.2%, 0.7%p↑…체감경기 확산은 미진\""
+              "KDI가 올해 한국 경제 성장률 전망치를 기존보다 0.7%포인트 높은 3.2%로 조정했다",
+              "반도체 초호황이 예상보다 더 강하게 이어질 것을 반영한 결과다"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "성장률 전망치는 상향되었으나 체감경기 확산의 미진함을 지적하며 향후 경제 상황에 대한 균형 잡힌 전망을 제시"
+            "summary": "반도체 파급 효과가 내년까지 민간 소비로 이어져 내년 성장률도 기존보다 0.5%포인트 높은 2.2%로 전망"
           },
           "less_covered_context": [
-            "반도체 호황이 구체적으로 어떤 산업이나 기업에 미치는지에 대한 세부 분석"
+            "반도체 호황이 체감경기 확산으로 이어지지 못하는 구체적 원인",
+            "물가 상승이 가계에 미치는 구체적 영향"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:30:25.698375+00:00",
+        "analyzed_at": "2026-08-23T01:17:55.718282+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-c7050c70368573dc",
+      "issue_id": "issue-7410593c1caa95e0",
       "groups": [
         {
-          "group_id": "growth-outlook",
-          "label": "반도체 수출 호조와 성장률 전망",
-          "summary": "반도체 수출 증가가 2분기 성장률 3.7% 달성에 기여한 점과 한국은행의 향후 금리 인상 전망을 중심으로 경제 성장 동력을 분석한 관점",
+          "group_id": "group-1",
+          "label": "반도체 호황과 국제 분업체계",
+          "summary": "반도체 수출 호황이 한국 경제에 미치는 긍정적 영향과 국제 분업체계 속 상호 의존 관계를 중심으로 서술",
           "keywords": [
-            "반도체 수출 호조",
-            "2분기 성장률",
-            "한국은행",
-            "기준금리 인상"
+            "반도체 호황",
+            "성장률 상향",
+            "수출 증가",
+            "비교우위론",
+            "국제 분업체계"
           ],
           "publisher_ids": [
+            "mk",
             "donga"
           ],
           "publishers": [
             {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "반도체 수출 증가가 경제 성장에 미친 영향과 한국은행의 향후 금리 인상 전망을 핵심 쟁점으로 다룸",
-            "2분기 성장률 3.7% 달성과 한국은행의 연 3%대 예상 전망을 통해 경제 성장 동력을 긍정적으로 평가",
-            "실질 GDP와 수출 급증의 관계를 강조하며 시장 전망치를 웃도는 성장률을 보고"
-          ]
-        },
-        {
-          "group_id": "balanced-diagnosis",
-          "label": "성장률 상향과 체감경기 한계 진단",
-          "summary": "성장률 전망치 상향 조정과 체감경기 확산의 미진을 동시에 지적하며 균형 잡힌 경제 진단을 제시한 관점",
-          "keywords": [
-            "성장률 전망치 상향",
-            "체감경기 확산 미진",
-            "KDI 전망"
-          ],
-          "publisher_ids": [
-            "sbs"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "성장률 전망치의 상향 조정과 체감경기 확산의 한계를 동시에 강조하는 균형 잡힌 경제 진단",
-            "국책연구기관인 한국개발연구원의 경제 전망 발표를 근거로 성장률 상승(3.2%)과 체감경기 확산 미진을 대비",
-            "성장률 상승은 긍정적이나 체감경기 확산의 미진함을 지적하며 향후 경제 상황에 대한 중립적 전망 제시"
-          ]
-        }
-      ],
-      "group_count": 2,
-      "group_contrasts": [
-        {
-          "group_ids": [
-            "growth-outlook",
-            "balanced-diagnosis"
-          ],
-          "contrast_statement": "동아일보는 반도체 수출 호조를 통한 2분기 성장률 3.7% 달성과 한국은행의 금리 인상 전망을 중심으로 경제 성장 동력을 긍정적으로 평가하는 반면, SBS는 성장률 전망치 상향과 체감경기 확산의 미진을 동시에 지적하며 균형 잡힌 경제 진단을 제시하고 있어, 성장 동력 강조와 체감경기 한계 지적이라는 핵심 해석 방향이 대립한다."
-        }
-      ],
-      "grouping_summary": "두 언론사 모두 2분기 성장률과 관련된 경제 진단을 다루었으나, 동아일보는 반도체 수출 호조를 통한 성장 동력 강화와 한국은행의 금리 인상 전망에 초점을 맞춘 긍정적 성장 전망을 제시한 반면, SBS는 성장률 전망치 상향과 체감경기 확산의 미진을 동시에 지적하며 균형 잡힌 경제 진단을 제시하여 서로 다른 핵심 관점을 형성하였다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:30:29.556127+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-c7050c70368573dc",
-        "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "두 언론사 모두 한국 경제의 성장률과 관련된 긍정적 전망을 보도했으나, 동아일보가 2분기 성장률 3.7%를 강조한 반면 SBS는 KDI의 올해 성장률 전망치 3.2% 상향 조정을 보도했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 한국 경제의 성장률 관련 긍정적 소식을 보도했으나, 동아일보가 2분기 실적(3.7%)을, SBS는 KDI의 연간 전망치(3.2%)를 중심으로 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "2분기 한국 경제가 전년 동기 대비 3.7% 성장하며 두 개 분기 연속 3%대 성장세를 이어갔고, 반도체 수출 호조가 주요 동력으로 작용했다고 보도했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "국책연구기관인 KDI가 올해 한국 경제성장률 전망치를 3.2%로 석 달 만에 0.7%포인트 상향 조정했으나 체감경기 확산은 미진하다고 평가했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 반도체 수출 증가가 경제 성장에 미친 영향과 한국은행의 향후 금리 인상 전망에 초점을 맞춘 반면, SBS는 성장률 전망치 상향과 체감경기 확산의 한계를 동시에 강조하는 균형 잡힌 진단을 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 수출 증가가 경제 성장에 미친 영향과 한국은행의 향후 금리 인상 전망을 핵심 관점으로 제시했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "경제성장률 전망치의 상향 조정과 함께 체감경기 확산의 한계를 지적하는 균형 잡힌 경제 진단을 핵심 관점으로 제시했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 반도체 수출 호조를 직접적인 원인으로 강조한 반면, SBS는 글로벌 반도체 호황을 배경으로 KDI의 전망 발표를 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "반도체 수출 호조를 2분기 성장률 3.7%의 주요 원인으로 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "글로벌 반도체 호황을 배경으로 KDI의 경제성장률 전망치 상향 조정 배경을 설명했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 두 개 분기 연속 3%대 성장세라는 연속성에 주목한 반면, SBS는 성장률 상승과 체감경기 확산 미진이라는 상반된 영향을 동시에 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "두 개 분기 연속 3%대 성장세라는 연속성을 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "성장률 상승과 체감경기 확산 미진이라는 상반된 영향을 동시에 강조했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보이며, 경제 지표와 전망을 객관적으로 전달하려 했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며, 한국은행 발표 내용을 인용하여 보도했다.",
-                "evidence": [
-                  "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며, KDI 발표 내용을 인용하여 보도했다.",
-                "evidence": [
-                  "KDI \"올해 성장률 전망치 3.2%, 0.7%p↑…체감경기 확산은 미진\""
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "한국 경제의 성장률 관련 긍정적 소식을 보도한 점",
-          "반도체 수출 호조가 경제 성장에 기여했다는 점을 언급한 점"
-        ],
-        "key_differences": [
-          "동아일보는 2분기 성장률 3.7%라는 구체적 수치를 강조한 반면, SBS는 KDI의 연간 성장률 전망치 3.2% 상향 조정을 보도했다.",
-          "동아일보는 한국은행의 금리 인상 전망을 언급한 반면, SBS는 체감경기 확산의 미진을 강조했다."
-        ],
-        "comparison_report": "동아일보와 SBS는 모두 한국 경제의 긍정적 성장 전망을 보도했으나, 동아일보가 2분기 실적(3.7%)과 한국은행의 금리 인상 전망에 초점을 맞춘 반면, SBS는 KDI의 연간 전망치(3.2%) 상향과 체감경기 확산의 한계를 동시에 강조하는 균형 잡힌 접근을 보였다. 두 언론사 모두 반도체 수출 호조를 주요 원인으로 언급했으나, 동아일보가 수출 호조의 직접적 영향을 강조한 데 비해 SBS는 글로벌 반도체 호황을 배경으로 KDI의 전망을 설명했다. 보도 태도는 두 언론사 모두 중립적 설명 태도를 유지하며 객관적 정보를 전달하려 했다.",
-        "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "반도체 수출 호조에 2분기 성장률 3.7%… 한은 “年 3%대 예상”",
-            "link": "https://www.donga.com/news/Economy/article/all/20260724/134355183/2",
-            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "KDI \"올해 성장률 전망치 3.2%, 0.7%p↑…체감경기 확산은 미진\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008711694",
-            "published_at": "Wed, 19 Aug 2026 15:00:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T18:30:38.194623+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-708682df4009b39d": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-708682df4009b39d",
-        "publisher_id": "chosun",
-        "publisher": "조선일보",
-        "articles": [
-          {
-            "article_id": "312da3cb47bc1c4ace12a94985bbbd0511b7c54eceb53d2a7c232c6e36116155",
-            "title": "李대통령 지지율 43%…취임 후 최저[리얼미터]",
-            "published_at": "Mon, 17 Aug 2026 00:18:33 +0000",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/17/G42TSYZZMUYWKNDDHBTGCMJVMM/"
-          }
-        ],
-        "analysis": {
-          "article_summary": "리얼미터 조사 결과 이재명 대통령의 국정 지지도가 취임 이후 최저치인 43.0%를 기록했으며, 5주 연속 하락세를 보이고 있다.",
-          "headline_frame": "지지율 수치와 취임 후 최저 기록이라는 객관적 데이터에 초점을 맞추고 있다.",
-          "main_focus": "여론조사 결과를 통해 이재명 대통령의 국정 수행 평가가 취임 후 최저 수준으로 하락했음을 강조하는 데 초점을 두고 있다.",
-          "keywords": [
-            "지지율 하락",
-            "리얼미터 조사",
-            "국정 수행 평가",
-            "취임 후 최저"
-          ],
-          "main_actors": [
-            "이재명 대통령"
-          ],
-          "quoted_sources": [
-            "리얼미터"
-          ],
-          "causes": [],
-          "background": [],
-          "emphasized_effects": [
-            "지지율 5주 연속 하락"
-          ],
-          "affected_groups": [],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "리얼미터가 에너지경제신문 의뢰로 지난 10∼14일 전국 18세 이상 2511명을 대상으로 조사한 결과, 이 대통령 국정 수행에 대한 긍정 평가는 43.0%로 집계됐다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 지지율 변동 방향에 대한 구체적 전망은 제시되지 않았다."
-          },
-          "less_covered_context": [
-            "지지율 하락의 구체적 원인이나 배경에 대한 설명은 제공되지 않았다."
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:30:41.906833+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-708682df4009b39d",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "c955b4dd9293fbc09726fac04f26fec2f41ac25f5e2f7bbcc6a9d6338915d223",
-            "title": "李 긍정-부정평가 45% 동률…與 새대표 선출에도 41%로 변화없어",
-            "published_at": "Fri, 21 Aug 2026 10:39:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134517801/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이재명 대통령의 국정 지지율이 긍정 45%, 부정 45%로 동률을 기록했으며, 긍정 평가는 직전 대비 1%포인트 상승, 부정 평가는 1%포인트 하락한 것으로 나타났다.",
-          "headline_frame": "이재명 대통령의 국정 지지율 긍정-부정 평가 동률 상황을 중심으로 보도",
-          "main_focus": "여론조사 결과를 통해 이재명 대통령의 국정 수행 평가에 대한 긍정·부정 동률 현상과 그 변화 추이를 분석",
-          "keywords": [
-            "국정 지지율",
-            "긍정 평가",
-            "부정 평가",
-            "동률",
-            "여론조사"
-          ],
-          "main_actors": [
-            "이재명 대통령",
-            "한국갤럽"
-          ],
-          "quoted_sources": [
-            "한국갤럽"
-          ],
-          "causes": [
-            "부동산 정책"
-          ],
-          "background": [
-            "한국갤럽이 18~20일 전국 만 18세 이상 유권자 1004명을 대상으로 실시한 여론조사",
-            "전화면접 방식, 95% 신뢰수준에 표본오차 ±3.1%포인트"
-          ],
-          "emphasized_effects": [
-            "긍정 평가 1%포인트 상승",
-            "부정 평가 1%포인트 하락"
-          ],
-          "affected_groups": [
-            "유권자"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "이재명 대통령의 국정 지지율이 45%를 기록한 조사 결과가 21일 나왔다",
-              "긍정 평가는 직전 조사 대비 1%포인트 올랐고, 부정 응답은 1%포인트 내렸다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "긍정 평가가 소폭 상승했으나 부정 평가와 동률을 이룬 상태로, 향후 변화 여부는 불확실"
-          },
-          "less_covered_context": [
-            "긍정 평가 이유 중 '외교(19%)'와 '소통(각 7%)'에 대한 구체적 내용",
-            "부정 평가 이유 중 '국방·안보·대북(7%)'에 대한 구체적 내용",
-            "더불어민주당 새 대표 선출이 지지율 변화에 미친 구체적 영향"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:30:42.297641+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-708682df4009b39d",
-      "groups": [
-        {
-          "group_id": "group-001",
-          "label": "국정 지지율 하락 및 동률 현상",
-          "summary": "두 언론사 모두 이재명 대통령의 국정 수행 평가에 대한 여론조사 결과를 보도하며, 지지율 하락 또는 긍정·부정 동률이라는 핵심 쟁점을 다루고 있다. 조선일보가 취임 후 최저 수준 하락을 강조하는 반면, 동아일보는 긍정 평가 소폭 상승과 부정 평가 하락을 통해 동률 상황을 분석한다.",
-          "keywords": [
-            "국정 지지율",
-            "여론조사",
-            "긍정 평가",
-            "부정 평가",
-            "동률"
-          ],
-          "publisher_ids": [
-            "chosun",
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
+              "publisher_id": "mk",
+              "publisher": "매일경제"
             },
             {
               "publisher_id": "donga",
@@ -1158,107 +1241,107 @@
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "조선일보: 리얼미터 조사 결과 이재명 대통령 국정 수행 긍정 평가 43.0%로 취임 후 최저 수준 하락을 강조",
-            "동아일보: 한국갤럽 조사 결과 국정 지지율 45%, 긍정 평가 1%포인트 상승 및 부정 평가 1%포인트 하락으로 긍정·부정 동률 현상 분석"
+            "매일경제는 국제 분업체계 속 상호 의존 관계와 무역의 기초인 비교우위론을 중심으로 반도체 수출과 삼겹살 수입의 사례를 설명하며, 일국의 경제 변화가 타국 국민 경제에 미치는 영향을 강조",
+            "동아일보는 반도체 초호황이 경제 성장률과 수출에 미치는 긍정적 영향을 강조하면서, 글로벌 반도체 수요 강세와 수출·설비투자 증가를 배경으로 올해 수출 1조 달러 돌파와 내년 성장률 상승 전망을 제시"
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 이재명 대통령의 국정 수행 평가에 대한 여론조사 결과를 보도하며, 지지율 하락 또는 긍정·부정 동률이라는 핵심 쟁점을 다루고 있다. 조선일보가 취임 후 최저 수준 하락을 강조하는 반면, 동아일보는 긍정 평가 소폭 상승과 부정 평가 하락을 통해 동률 상황을 분석한다. 두 언론사 모두 중립적인 설명 태도를 유지하며, 정책의 내용이나 효과에 대한 비판 또는 옹호보다는 여론조사 결과 자체에 초점을 맞추고 있다.",
+      "grouping_summary": "두 언론사 모두 반도체 수출 호황을 중심으로 한국 경제의 긍정적 영향을 강조하지만, 매일경제는 국제 분업체계와 비교우위론을 이론적 틀로 삼아 무역의 본질을 설명하는 데 초점을 두는 반면, 동아일보는 반도체 호황이 성장률과 수출, 민간 소비 등 구체적 경제 지표에 미치는 파급 효과를 전망하는 데 중점을 둔다. 핵심 관점은 모두 반도체 호황의 긍정적 측면을 다루지만, 매일경제는 이론적·구조적 해석에, 동아일보는 실증적·전망적 분석에 초점을 두어 서로 다른 보도 경향을 보인다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:30:45.232031+00:00",
+      "grouped_at": "2026-08-23T01:18:29.470444+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "chosun,donga": {
-        "issue_id": "issue-708682df4009b39d",
+      "donga,mk": {
+        "issue_id": "issue-7410593c1caa95e0",
         "selected_publishers": [
           {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
+            "publisher_id": "mk",
+            "publisher": "매일경제"
           },
           {
             "publisher_id": "donga",
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "두 언론사 모두 이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도하고 있다.",
-        "overall_difference": "일부 차이",
+        "common_summary": "두 언론사 모두 반도체 관련 경제 현상을 다루고 있으나, 매일경제은 무역과 비교우위론에 초점을 두고, 동아일보는 KDI의 성장률 전망 상향 조정과 반도체 호황의 경제적 영향을 중심으로 서술한다.",
+        "overall_difference": "차이 큼",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도하고 있다.",
+            "contrast_statement": "두 언론사 모두 반도체 관련 경제 현상을 다루고 있으나, 매일경제는 무역과 비교우위론을, 동아일보는 KDI의 성장률 전망 조정을 중심으로 서술한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "리얼미터 조사 결과 이재명 대통령의 국정 지지도가 취임 이후 최저치인 43.0%를 기록했으며 5주 연속 하락세를 보이고 있음을 보도",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "반도체 수출 수익을 삼겹살 수입에 사용하는 사례를 통해 무역의 본질인 비교우위론을 설명",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "한국갤럽 조사 결과 이재명 대통령의 국정 지지율이 긍정 45%, 부정 45%로 동률을 기록했으며 긍정 평가는 직전 대비 1%포인트 상승, 부정 평가는 1%포인트 하락했음을 보도",
+                "summary": "KDI의 한국 경제 성장률 전망치를 2.5%에서 3.2%로 상향 조정한 내용을 보도",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 지지율 최저치 기록에 초점을 두고, 동아일보는 긍정-부정 동률 현상에 초점을 두고 있다.",
+            "difference_level": "차이 큼",
+            "contrast_statement": "매일경제는 국제 분업체계 속 상호 의존 관계와 무역의 기초인 비교우위론을 설명하는 데 초점을 두는 반면, 동아일보는 반도체 호황이 성장률과 수출에 미치는 긍정적 영향과 체감경기 확산의 미진함을 강조한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "리얼미터 조사 결과를 통해 이재명 대통령의 국정 수행 평가가 취임 후 최저 수준으로 하락했음을 강조",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "국제 분업체계 속에서의 상호 의존 관계와 무역의 기초인 비교우위론을 설명하는 데 초점",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "한국갤럽 조사 결과를 통해 이재명 대통령의 국정 수행 평가에 대한 긍정·부정 동률 현상과 그 변화 추이를 분석",
+                "summary": "반도체 초호황이 경제 성장률과 수출에 미치는 긍정적 영향과 체감경기 확산의 미진함을 강조",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 부동산 정책을 원인으로 제시한 반면, 조선일보는 구체적인 원인을 제시하지 않았다.",
+            "difference_level": "차이 큼",
+            "contrast_statement": "매일경제는 국제 분업체계 속 상호 의존 관계를 원인으로 강조하는 반면, 동아일보는 글로벌 반도체 수요 예상보다 강한 증가를 원인으로 제시한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "지지율 하락의 구체적 원인이나 배경에 대한 설명은 제공되지 않았다.",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "국제 분업체계 속에서의 상호 의존 관계",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "부동산 정책을 지지율 변화의 주요 원인으로 제시",
+                "summary": "글로벌 반도체 수요 예상보다 훨씬 강하게 이어짐",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 유권자 대상 변화를 구체적으로 분석한 반면, 조선일보는 5주 연속 하락이라는 추세만 강조했다.",
+            "difference_level": "차이 큼",
+            "contrast_statement": "매일경제는 일국의 경제 변화가 타국 국민 경제에 미치는 영향을 강조하는 반면, 동아일보는 수출 사상 처음 1조 달러 돌파, 내년 성장률 상승, 소비자물가 상승 등 구체적 경제 전망을 제시한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "지지율 5주 연속 하락이라는 추세를 강조",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "일국의 경제 상황이나 정책적 변화가 타국 국민 경제 전반에 미치는 영향",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "긍정 평가 1%포인트 상승, 부정 평가 1%포인트 하락이라는 유권자 대상 변화를 구체적으로 분석",
+                "summary": "올해 수출 사상 처음 1조 달러 돌파 전망, 내년 성장률 0.5%포인트 상승 전망, 올해 소비자물가 상승률 2.7% 예상",
                 "evidence": []
               }
             ]
@@ -1266,930 +1349,57 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보였으나, 동아일보는 부동산 정책과의 연관성을 추가로 제시했다.",
+            "contrast_statement": "매일경제는 '무역의 본질은 결국 ‘이것’’이라는 표현을 통해 중립적으로 비교우위론을 설명하는 반면, 동아일보는 'KDI가 올해 한국 경제 성장률 전망치를 기존보다 0.7%포인트 높은 3.2%로 조정했다'는 표현을 통해 공식 기관의 전망을 중립적으로 전달한다.",
             "publisher_details": [
               {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "리얼미터 조사 결과를 중립적으로 설명하며 객관적 데이터 전달에 초점",
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달하며 무역의 본질인 비교우위론을 설명",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "한국갤럽 조사 결과를 중립적으로 설명하며 부동산 정책과의 연관성을 추가로 제시",
+                "summary": "공식 기관의 경제 전망 발표를 중립적으로 전달",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도",
-          "리얼미터와 한국갤럽의 조사 결과를 인용하여 지지율 수치를 제시"
+          "반도체 관련 경제 현상을 다루고 있음"
         ],
         "key_differences": [
-          "동아일보는 부동산 정책을 지지율 변화의 원인으로 제시한 반면, 조선일보는 구체적인 원인을 제시하지 않았다.",
-          "동아일보는 긍정-부정 동률 현상에 초점을 둔 반면, 조선일보는 지지율 최저치 기록에 초점을 두었다."
+          "매일경제는 무역과 비교우위론을 중심으로 서술하는 반면, 동아일보는 KDI의 성장률 전망 상향 조정과 반도체 호황의 경제적 영향을 중심으로 서술함"
         ],
-        "comparison_report": "두 언론사 모두 이재명 대통령의 국정 지지율에 대한 여론조사 결과를 보도했으나, 조선일보는 리얼미터 조사 결과 취임 후 최저치인 43.0%를 기록하며 5주 연속 하락세를 보인다는 점을 강조한 반면, 동아일보는 한국갤럽 조사 결과 긍정 45%, 부정 45%로 동률을 기록하고 긍정 평가가 1%포인트 상승, 부정 평가가 1%포인트 하락했다는 변화 추이를 분석했다. 동아일보는 부동산 정책을 지지율 변화의 주요 원인으로 제시한 반면, 조선일보는 구체적인 원인을 제시하지 않았다. 보도 태도는 두 언론사 모두 중립적이었으나, 동아일보는 부동산 정책과의 연관성을 추가로 제시했다.",
+        "comparison_report": "매일경제는 반도체 수출 수익을 삼겹살 수입에 사용하는 구체적 사례를 통해 무역의 본질인 비교우위론과 국제 분업체계 속 상호 의존 관계를 설명하는 데 초점을 두고 있다. 반면 동아일보는 한국개발연구원(KDI)이 올해 한국 경제 성장률 전망치를 2.5%에서 3.2%로 상향 조정한 내용을 보도하며, 이는 반도체 초호황의 영향으로 수출과 설비투자가 크게 늘어날 것으로 예상했기 때문이라고 분석한다. 두 언론사 모두 반도체 호황을 다루지만, 매일경제는 무역 이론의 관점에서, 동아일보는 공식 경제 전망 기관의 발표를 통해 각각 다른 측면을 강조하고 있다.",
         "source_links": [
           {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "李대통령 지지율 43%…취임 후 최저[리얼미터]",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/17/G42TSYZZMUYWKNDDHBTGCMJVMM/",
-            "published_at": "Mon, 17 Aug 2026 00:18:33 +0000"
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "반도체 팔아 삼겹살 사온다 … 무역의 본질은 결국 ‘이것’",
+            "link": "https://www.mk.co.kr/news/society/12106689",
+            "published_at": "Sat, 25 Jul 2026 05:33:00 +09:00"
           },
           {
             "publisher_id": "donga",
             "publisher": "동아일보",
-            "title": "李 긍정-부정평가 45% 동률…與 새대표 선출에도 41%로 변화없어",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134517801/2",
-            "published_at": "Fri, 21 Aug 2026 10:39:00 +0900"
+            "title": "KDI, 올해 성장률 3.2%로 상향…“반도체 호황, 체감경기 확산 미진”",
+            "link": "https://www.donga.com/news/Economy/article/all/20260819/134502303/1",
+            "published_at": "Wed, 19 Aug 2026 12:00:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T18:30:53.415001+00:00",
+        "compared_at": "2026-08-23T01:18:38.061014+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-4329c3f9ce6f0ee5": {
+  "issue-0373cd03bf350b1d": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "publisher_id": "chosun",
-        "publisher": "조선일보",
-        "articles": [
-          {
-            "article_id": "79786be30450bf73b3919cacbd7e5c13bb4c63b7c3a2df894626a9171fffd31e",
-            "title": "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”",
-            "published_at": "Fri, 21 Aug 2026 12:09:33 +0000",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/21/GJQTMMZRMMZTSOJYGAYTQMJQGM/"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이재명 대통령은 제1차 반부패정책협의회에서 최근 헌정질서 파괴 행위가 반부패보다 더 심각하다고 지적하며, 가짜뉴스 확산과 사회적 양극화 문제를 논의해야 한다고 강조했다.",
-          "headline_frame": "헌정질서 파괴와 가짜뉴스 문제를 반부패보다 더 심각한 현안으로 제시",
-          "main_focus": "헌정질서 파괴와 가짜뉴스, 사회적 양극화에 대한 대책 논의 필요성 강조",
-          "keywords": [
-            "헌정질서 파괴",
-            "가짜뉴스",
-            "사회적 양극화",
-            "반부패정책협의회"
-          ],
-          "main_actors": [
-            "이재명 대통령",
-            "청와대"
-          ],
-          "quoted_sources": [
-            "강유정"
-          ],
-          "causes": [
-            "가짜뉴스 횡행",
-            "양극단만 있고 중간이 없어지는 사회"
-          ],
-          "background": [
-            "이재명 정부 출범 후 1년 경과"
-          ],
-          "emphasized_effects": [
-            "헌정질서 파괴 행위의 심각성",
-            "사회적 양극화 심화"
-          ],
-          "affected_groups": [
-            "중간층"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "향후 원인 및 대책 논의 지속 예정"
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "반부패 정책의 구체적 내용"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:04.576733+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "f30c10a90c9e181baf418f0f0d41a923d0c8721c78aba03f0cb03f3129e9538f",
-            "title": "이 대통령 \"정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리\"",
-            "published_at": "Fri, 21 Aug 2026 17:46:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716168"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이재명 대통령이 제1차 반부패정책협의회에서 정치권의 잔존 부패 청산과 공직사회의 청렴성 확보를 강조하며, 여야 구분 없이 엄정하게 부패를 정리해야 한다고 발언했다.",
-          "headline_frame": "정치권 부패 청산과 엄정 정리",
-          "main_focus": "반부패정책협의회를 통한 공직사회 및 민간 부문의 부패 척결과 청렴도 향상",
-          "keywords": [
-            "반부패정책협의회",
-            "정치권 부패",
-            "청렴도",
-            "공직사회",
-            "부패 청산"
-          ],
-          "main_actors": [
-            "이재명 대통령",
-            "청와대",
-            "국민"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "잔존해 있는 정치권의 부패",
-            "토착 세력의 이권 개입"
-          ],
-          "background": [
-            "대한민국의 경제적 위상이 높아졌으나 청렴도가 31위로 낮은 상황",
-            "2025년 기준 182개국 중 청렴도 31위"
-          ],
-          "emphasized_effects": [
-            "국민들의 신뢰 확보",
-            "경제 성과의 지속 가능성",
-            "공정하고 정의로운 사회 원칙 수립"
-          ],
-          "affected_groups": [
-            "공직사회",
-            "국민"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "이 대통령 \"정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리\""
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "반부패정책협의회를 통해 부패를 엄정하게 정리해 나가겠다는 정부의 방침이 제시되었으나, 구체적인 향후 전망이나 방향성은 명시되지 않았다."
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "민간 부문 부패 근절을 위한 구체적 방안"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:04.842316+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "9be80c443113595ef94cfcc9a8000eb26733c3b874ced4289bf7771a405bf2d0",
-            "title": "3대 메가프로젝트 앞… 李, 토착비리 등 ‘이권 카르텔’ 선제 차단",
-            "published_at": "Sat, 22 Aug 2026 01:40:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134522960/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이재명 대통령이 3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔을 선제적으로 차단하기 위해 반부패정책협의회를 주재하며 공직 기강 잡기에 나섰다.",
-          "headline_frame": "3대 메가프로젝트와 토착비리 등 이권 카르텔의 선제적 차단",
-          "main_focus": "3대 메가프로젝트 추진 시 토착비리 등 부패 취약 지대를 선제적으로 관리하고 집권 2년 차 공직 기강을 잡는 것",
-          "keywords": [
-            "메가프로젝트",
-            "토착비리",
-            "이권 카르텔",
-            "반부패 컨트롤타워",
-            "공직 기강"
-          ],
-          "main_actors": [
-            "이재명 대통령",
-            "정부"
-          ],
-          "quoted_sources": [
-            "이재명 대통령"
-          ],
-          "causes": [
-            "3대 메가프로젝트에 막대한 자금 투입",
-            "집권 2년 차 개혁 드라이브가 느슨해질 우려"
-          ],
-          "background": [
-            "반부패정책협의회 부활",
-            "정부 출범 이후 1년 만에 첫 회의 개최"
-          ],
-          "emphasized_effects": [
-            "토착비리 등 부패 취약 지대 선제적 관리",
-            "공직 기강 잡기"
-          ],
-          "affected_groups": [
-            "공직사회",
-            "3대 메가프로젝트 관련 이해관계자"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "명확한 원칙을 가지고 예외 없이 공정하게, 엄정하게 정리해 나가는 게 필요하다",
-              "부패 청산에는 여야, 네 편 내 편이 있을 수가 없다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "3대 메가프로젝트 추진 과정에서 부패 차단을 위한 지속적인 관리 필요성"
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "반부패 컨트롤타워의 구체적 운영 방안"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:05.269701+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-4329c3f9ce6f0ee5",
-      "groups": [
-        {
-          "group_id": "group-01",
-          "label": "반부패 정책 추진 및 사회 문제 대응",
-          "summary": "반부패정책협의회를 중심으로 헌정질서 파괴, 가짜뉴스, 사회적 양극화 등 사회 문제 대응과 공직사회 부패 척결을 강조하는 관점",
-          "keywords": [
-            "반부패정책협의회",
-            "헌정질서 파괴",
-            "가짜뉴스",
-            "사회적 양극화",
-            "토착비리",
-            "메가프로젝트"
-          ],
-          "publisher_ids": [
-            "chosun",
-            "sbs",
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
-            },
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 3,
-          "group_evidence": [
-            "세 언론사 모두 반부패정책협의회를 핵심 기구로 언급하며, 이 기구를 통해 사회 문제(헌정질서 파괴, 가짜뉴스, 사회적 양극화)와 공직사회 부패를 동시에 다루려는 관점을 제시",
-            "조선일보: 헌정질서 파괴와 가짜뉴스, 사회적 양극화에 대한 대책 논의 필요성 강조",
-            "SBS: 반부패정책협의회를 통한 공직사회 및 민간 부문의 부패 척결과 청렴도 향상",
-            "동아일보: 3대 메가프로젝트 추진 시 토착비리 등 부패 취약 지대 선제적 관리 및 공직 기강 확립",
-            "세 언론사 모두 반부패정책협의회를 통해 사회 전반의 문제(헌정질서, 가짜뉴스, 양극화)와 공직 부패를 동시에 해결하려는 포괄적 접근을 보임"
-          ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 반부패정책협의회를 중심으로 사회 문제(헌정질서 파괴, 가짜뉴스, 사회적 양극화)와 공직사회 부패를 동시에 다루는 관점을 제시. 조선일보와 SBS는 사회 문제와 반부패 정책을 병행 강조, 동아일보는 메가프로젝트와 토착비리 관리에 초점을 맞추지만 모두 반부패정책협의회를 통해 사회 전반의 문제를 해결하려는 공통점을 보임. 따라서 단일 그룹으로 분류함.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:31:08.762104+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "chosun,sbs": {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          }
-        ],
-        "common_summary": "이재명 대통령이 제1차 반부패정책협의회에서 반부패와 관련된 문제를 논의했으며, 두 언론사 모두 대통령의 발언을 중심으로 보도했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 이재명 대통령이 제1차 반부패정책협의회에서 발언한 내용을 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "이재명 대통령이 헌정질서 파괴와 가짜뉴스 문제를 반부패보다 더 심각한 현안으로 제기한 내용을 보도했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "이재명 대통령이 정치권의 잔존 부패 청산과 공직사회 청렴성 확보를 강조한 내용을 보도했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 헌정질서 파괴와 가짜뉴스 문제를, SBS는 정치권의 부패 청산과 청렴도 향상을 핵심 관점으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴와 가짜뉴스, 사회적 양극화에 대한 대책 논의 필요성을 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반부패정책협의회를 통한 공직사회 및 민간 부문의 부패 척결과 청렴도 향상을 강조했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 가짜뉴스 횡행과 양극화 사회를 원인으로, SBS는 정치권의 잔존 부패와 청렴도 31위라는 국제적 평가를 배경으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "가짜뉴스 횡행과 양극단만 있고 중간이 없어지는 사회를 원인으로 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대한민국의 경제적 위상이 높아졌으나 청렴도가 31위로 낮은 상황을 배경으로 제시했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 중간층의 사회적 양극화 심화를, SBS는 공직사회와 국민의 신뢰 확보를 영향 대상으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "중간층의 사회적 양극화 심화를 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "공직사회와 국민의 신뢰 확보 및 공정하고 정의로운 사회 원칙 수립을 강조했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 중립 설명 태도를 보였으나, 조선일보가 '헌정질서 파괴' 표현을, SBS가 '정치권 부패' 표현을 제목으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사실관계를 중립적으로 전달하며, 대통령의 발언을 직접 인용하여 보도했다.",
-                "evidence": [
-                  "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”"
-                ]
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며, 대통령의 발언을 직접 인용하여 보도했다.",
-                "evidence": [
-                  "이 대통령 \"정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리\""
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "이재명 대통령의 반부패정책협의회 발언 보도",
-          "중립 설명 태도",
-          "정책 협의회 개최 사실 전달"
-        ],
-        "key_differences": [
-          "조선일보는 헌정질서 파괴와 가짜뉴스를, SBS는 정치권의 부패 청산을 주요 이슈로 강조함"
-        ],
-        "comparison_report": "조선일보와 SBS 모두 이재명 대통령의 제1차 반부패정책협의회 발언을 보도했으나, 조선일보는 헌정질서 파괴와 가짜뉴스 문제를 반부패보다 더 심각한 현안으로 제시한 반면, SBS는 정치권의 잔존 부패 청산과 공직사회 청렴성 확보를 강조했다. 두 언론사 모두 중립 설명 태도를 보였으나, 조선일보는 '헌정질서 파괴' 표현을, SBS는 '정치권 부패' 표현을 제목으로 부각시켰다. 원인 측면에서 조선일보는 가짜뉴스 횡행과 양극화 사회를, SBS는 청렴도 31위라는 국제적 평가를 배경으로 제시했다. 영향 대상도 조선일보는 중간층의 양극화 심화를, SBS는 공직사회와 국민의 신뢰 확보를 강조했다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/21/GJQTMMZRMMZTSOJYGAYTQMJQGM/",
-            "published_at": "Fri, 21 Aug 2026 12:09:33 +0000"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "이 대통령 \"정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716168",
-            "published_at": "Fri, 21 Aug 2026 17:46:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T18:31:17.001369+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga": {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "이재명 대통령이 반부패정책협의회를 주재하며 헌정질서 파괴와 가짜뉴스 문제, 3대 메가프로젝트 추진 과정에서의 토착비리 및 이권 카르텔 차단을 논의했다는 점에서 두 언론사 모두 대통령의 반부패 정책 관련 행보를 보도했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 이재명 대통령이 반부패정책협의회를 주재하며 헌정질서 파괴와 가짜뉴스 문제, 3대 메가프로젝트 관련 토착비리 차단을 논의했다고 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴와 가짜뉴스 문제를 반부패보다 더 심각한 현안으로 제시하며, 사회적 양극화 문제를 논의해야 한다고 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔을 선제적으로 차단하기 위해 반부패정책협의회를 주재하며 공직 기강을 잡는 행보를 보도했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 헌정질서 파괴와 가짜뉴스, 사회적 양극화 대책 논의 필요성을 강조한 반면, 동아일보는 3대 메가프로젝트와 토착비리 차단을 통한 공직 기강 확립에 초점을 맞췄다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴와 가짜뉴스, 사회적 양극화에 대한 대책 논의 필요성을 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트 추진 시 토착비리 등 부패 취약 지대를 선제적으로 관리하고 집권 2년 차 공직 기강을 잡는 것을 강조했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 가짜뉴스 횡행과 양극화 사회를 원인으로, 동아일보는 3대 메가프로젝트 자금 투입과 집권 2년 차 개혁 드라이브 약화 우려를 원인으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "가짜뉴스 횡행과 양극단만 있고 중간이 없어지는 사회를 원인으로 제시했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트에 막대한 자금 투입과 집권 2년 차 개혁 드라이브가 느슨해질 우려를 배경으로 제시했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 중간층의 사회적 양극화 심화를, 동아일보는 공직사회와 3대 메가프로젝트 관련 이해관계자의 부패 취약 지대 선제적 관리를 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴 행위의 심각성과 사회적 양극화 심화가 중간층에 미치는 영향을 강조했다.",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "토착비리 등 부패 취약 지대의 선제적 관리와 공직 기강 잡기가 공직사회와 3대 메가프로젝트 관련 이해관계자에게 미치는 영향을 강조했다.",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 중립 설명 태도를 보였으나, 조선일보는 '헌정질서 파괴가 더 심각'이라는 직접적 발언을, 동아일보는 '명확한 원칙을 가지고 예외 없이 공정하게'라는 원칙적 접근을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴가 반부패보다 더 심각하다는 대통령의 발언을 중립적으로 전달하며 사실 관계를 설명했다.",
-                "evidence": [
-                  "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "명확한 원칙을 가지고 예외 없이 공정하게 엄정하게 정리해 나가는 것이 필요하다는 원칙적 접근을 중립적으로 전달했다.",
-                "evidence": [
-                  "명확한 원칙을 가지고 예외 없이 공정하게, 엄정하게 정리해 나가는 게 필요하다",
-                  "부패 청산에는 여야, 네 편 내 편이 있을 수가 없다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "이재명 대통령이 반부패정책협의회를 주재하며 헌정질서 파괴와 가짜뉴스 문제, 3대 메가프로젝트 관련 토착비리 차단을 논의했다는 공통점이 있다.",
-          "두 언론사 모두 대통령의 발언을 인용하여 보도했으며, 공직 기강 확립과 부패 방지라는 주제를 다뤘다."
-        ],
-        "key_differences": [
-          "조선일보는 헌정질서 파괴와 가짜뉴스, 사회적 양극화 문제에 초점을 맞춘 반면, 동아일보는 3대 메가프로젝트와 토착비리 차단에 초점을 맞췄다.",
-          "조선일보는 중간층의 사회적 양극화 심화를 강조한 반면, 동아일보는 공직사회와 3대 메가프로젝트 관련 이해관계자의 부패 취약 지대 관리를 강조했다."
-        ],
-        "comparison_report": "두 언론사 모두 이재명 대통령의 반부패정책협의회 주재 소식을 보도했으나, 조선일보는 헌정질서 파괴와 가짜뉴스, 사회적 양극화 문제를 반부패보다 더 심각한 현안으로 제시하며 중간층의 영향을 강조한 반면, 동아일보는 3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔을 선제적으로 차단하기 위한 공직 기강 확립에 초점을 맞췄다. 보도 태도는 두 언론사 모두 중립 설명이었으나, 조선일보는 대통령의 직접적 발언을, 동아일보는 원칙적 접근을 강조했다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/21/GJQTMMZRMMZTSOJYGAYTQMJQGM/",
-            "published_at": "Fri, 21 Aug 2026 12:09:33 +0000"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "3대 메가프로젝트 앞… 李, 토착비리 등 ‘이권 카르텔’ 선제 차단",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134522960/2",
-            "published_at": "Sat, 22 Aug 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T18:31:18.152491+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,sbs": {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "이재명 대통령이 반부패정책협의회를 주재하며 정치권의 잔존 부패 청산과 공직사회의 청렴성 확보를 강조한 내용을 공통적으로 다루고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 이재명 대통령이 반부패정책협의회를 통해 정치권의 잔존 부패 청산과 공직사회의 청렴성 확보를 강조한 내용을 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치권 부패 청산과 공직사회 청렴성 확보를 위한 반부패정책협의회 개최",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔 차단을 위한 반부패정책협의회 주재",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 반부패정책협의회를 통한 공직사회 및 민간 부문의 부패 척결과 청렴도 향상에 초점을 둔 반면, 동아일보는 3대 메가프로젝트와 토착비리 등 부패 취약 지대의 선제적 관리에 중점을 두었다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반부패정책협의회를 통한 공직사회 및 민간 부문의 부패 척결과 청렴도 향상",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트 추진 시 토착비리 등 부패 취약 지대의 선제적 관리 및 공직 기강 잡기",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 대한민국의 청렴도가 31위로 낮은 상황과 토착 세력의 이권 개입을 원인으로 강조한 반면, 동아일보는 3대 메가프로젝트에 막대한 자금 투입과 집권 2년 차 개혁 드라이브의 느슨해질 우려를 배경으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대한민국의 청렴도가 31위로 낮은 상황과 토착 세력의 이권 개입",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트에 막대한 자금 투입과 집권 2년 차 개혁 드라이브의 느슨해질 우려",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 국민들의 신뢰 확보와 경제 성과의 지속 가능성을 강조한 반면, 동아일보는 토착비리 등 부패 취약 지대의 선제적 관리와 공직 기강 잡기를 주요 영향으로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "국민들의 신뢰 확보, 경제 성과의 지속 가능성, 공정하고 정의로운 사회 원칙 수립",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "토착비리 등 부패 취약 지대의 선제적 관리, 공직 기강 잡기",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리'라는 직접적인 발언을 인용하며 중립적으로 설명했고, 동아일보는 '명확한 원칙을 가지고 예외 없이 공정하게, 엄정하게 정리해 나가는 게 필요하다'와 '부패 청산에는 여야, 네 편 내 편이 있을 수가 없다'는 발언을 통해 엄정함과 공정성을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "이재명 대통령의 발언을 중립적으로 인용하며 엄정하고 예외 없는 부패 청산을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "명확한 원칙과 공정성을 바탕으로 한 엄정하고 예외 없는 부패 청산을 강조",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "이재명 대통령이 반부패정책협의회를 주재하며 정치권의 잔존 부패 청산과 공직사회의 청렴성 확보를 강조한 점",
-          "반부패정책협의회를 통해 부패 척결과 청렴도 향상을 목표로 한 점",
-          "정치권 부패에 대한 엄정하고 예외 없는 태도를 강조한 점"
-        ],
-        "key_differences": [
-          "SBS는 대한민국의 청렴도 순위(31위)와 토착 세력의 이권 개입을 주요 원인으로 제시한 반면, 동아일보는 3대 메가프로젝트와 집권 2년 차 개혁 드라이브의 느슨해질 우려를 배경으로 제시한 점",
-          "SBS는 국민들의 신뢰 확보와 경제 성과의 지속 가능성을 강조한 반면, 동아일보는 토착비리 등 부패 취약 지대의 선제적 관리와 공직 기강 잡기를 주요 영향으로 제시한 점"
-        ],
-        "comparison_report": "SBS와 동아일보 모두 이재명 대통령이 반부패정책협의회를 통해 정치권의 잔존 부패 청산과 공직사회의 청렴성 확보를 강조한 내용을 보도하고 있으나, SBS는 대한민국의 청렴도가 31위로 낮은 상황과 토착 세력의 이권 개입을 원인으로 제시하며 국민들의 신뢰 확보와 경제 성과의 지속 가능성을 강조한 반면, 동아일보는 3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔을 선제적으로 차단하기 위한 공직 기강 잡기에 초점을 두고 있다. 두 언론사 모두 엄정하고 예외 없는 부패 청산 태도를 보였으나, SBS는 청렴도 순위라는 구체적 데이터를 제시한 데 비해 동아일보는 3대 메가프로젝트라는 특정 정책 맥락에서의 부패 취약 지대 관리에 더 중점을 두었다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "이 대통령 \"정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716168",
-            "published_at": "Fri, 21 Aug 2026 17:46:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "3대 메가프로젝트 앞… 李, 토착비리 등 ‘이권 카르텔’ 선제 차단",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134522960/2",
-            "published_at": "Sat, 22 Aug 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T18:31:18.569138+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga,sbs": {
-        "issue_id": "issue-4329c3f9ce6f0ee5",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "이재명 대통령이 제1차 반부패정책협의회에서 헌정질서 파괴, 가짜뉴스, 사회적 양극화, 정치권 부패 등 다양한 문제를 논의하며 반부패 정책의 중요성을 강조했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "세 언론사 모두 이재명 대통령이 제1차 반부패정책협의회에서 반부패 및 관련 문제를 논의했다고 보도했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴와 가짜뉴스 문제를 반부패보다 더 심각한 현안으로 제시하며 사회적 양극화 대책 논의 필요성을 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정치권 부패 청산과 공직사회 청렴성 확보를 강조하며 엄정하게 부패를 정리해야 한다고 발언",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔을 선제적으로 차단하기 위해 반부패정책협의회를 주재",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 SBS는 반부패 정책 자체에 초점을 맞췄으나, 동아일보는 3대 메가프로젝트와 토착비리 차단에 중점을 두었다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴와 가짜뉴스, 사회적 양극화 문제에 대한 대책 논의 필요성 강조",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "반부패정책협의회를 통한 공직사회 및 민간 부문의 부패 척결과 청렴도 향상",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트 추진 시 토착비리 등 부패 취약 지대를 선제적으로 관리하고 공직 기강을 잡는 것",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 SBS는 가짜뉴스 확산이나 정치권의 잔존 부패를 원인으로 제시한 반면, 동아일보는 3대 메가프로젝트와 집권 2년 차 개혁 드라이브를 배경으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "가짜뉴스 횡행과 양극단만 있고 중간이 없어지는 사회 현상",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대한민국의 경제적 위상이 높아졌으나 청렴도가 31위로 낮은 상황",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "3대 메가프로젝트에 막대한 자금 투입과 집권 2년 차 개혁 드라이브가 느슨해질 우려",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보와 SBS는 중간층이나 국민 등 광범위한 대상을 강조한 반면, 동아일보는 공직사회와 3대 메가프로젝트 관련 이해관계자를 구체적으로 지목했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "헌정질서 파괴 행위의 심각성과 사회적 양극화 심화로 인한 중간층 영향",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "국민들의 신뢰 확보와 공정하고 정의로운 사회 원칙 수립",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "토착비리 등 부패 취약 지대의 선제적 관리와 공직 기강 잡기",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "세 언론사 모두 중립적인 설명 태도를 보였으나, 조선일보와 SBS는 직접적인 발언을 인용한 반면 동아일보는 원칙적 접근을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사실관계를 중립적으로 전달하며 이재명 대통령의 발언을 직접 인용",
-                "evidence": []
-              },
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며 엄정 정리 발언을 직접 인용",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "명확한 원칙을 가지고 예외 없이 공정하게 정리해 나가는 태도를 보임",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "이재명 대통령이 제1차 반부패정책협의회에서 반부패 및 관련 문제를 논의했다는 점",
-          "반부패정책협의회를 통해 공직사회의 청렴성 확보 필요성을 강조했다는 점",
-          "정책 시행 이후의 구체적 효과나 구체적 방안에 대한 논의는 상대적으로 적게 다뤘다"
-        ],
-        "key_differences": [
-          "조선일보와 SBS는 반부패 정책 자체에 초점을 맞춘 반면, 동아일보는 3대 메가프로젝트와 토착비리 차단에 중점을 두었다",
-          "조선일보와 SBS는 가짜뉴스나 정치권의 잔존 부패를 원인으로 제시한 반면, 동아일보는 3대 메가프로젝트와 집권 2년 차 개혁 드라이브를 배경으로 강조했다",
-          "조선일보와 SBS는 중간층이나 국민 등 광범위한 대상을 강조한 반면, 동아일보는 공직사회와 3대 메가프로젝트 관련 이해관계자를 구체적으로 지목했다"
-        ],
-        "comparison_report": "세 언론사 모두 이재명 대통령의 제1차 반부패정책협의회 관련 보도를 통해 반부패 정책의 중요성을 전달했으나, 조선일보와 SBS는 반부패 정책 자체에 초점을 맞추고 가짜뉴스 확산이나 정치권의 잔존 부패를 주요 원인으로 제시한 반면, 동아일보는 3대 메가프로젝트 추진 과정에서 토착비리 등 이권 카르텔을 선제적으로 차단하기 위한 공직 기강 잡기에 중점을 두었다. 영향 대상에서도 조선일보와 SBS는 중간층이나 국민 등 광범위한 대상을 강조한 반면, 동아일보는 공직사회와 3대 메가프로젝트 관련 이해관계자를 구체적으로 지목했다. 보도 태도는 세 언론사 모두 중립적인 설명 태도를 보였으나, 조선일보와 SBS는 대통령의 직접적인 발언을 인용한 반면 동아일보는 원칙적 접근을 강조했다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "李대통령 “최근엔 반부패보다 헌정질서 파괴가 더 심각”",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/21/GJQTMMZRMMZTSOJYGAYTQMJQGM/",
-            "published_at": "Fri, 21 Aug 2026 12:09:33 +0000"
-          },
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "이 대통령 \"정치권 부패 살펴보고 청산해야…예외 없이 엄정 정리\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008716168",
-            "published_at": "Fri, 21 Aug 2026 17:46:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "3대 메가프로젝트 앞… 李, 토착비리 등 ‘이권 카르텔’ 선제 차단",
-            "link": "https://www.donga.com/news/Politics/article/all/20260821/134522960/2",
-            "published_at": "Sat, 22 Aug 2026 01:40:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-08-22T18:31:20.255201+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-c13b8557c585b66b": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-c13b8557c585b66b",
+        "issue_id": "issue-0373cd03bf350b1d",
         "publisher_id": "mk",
         "publisher": "매일경제",
         "articles": [
@@ -2203,7 +1413,7 @@
         "analysis": {
           "article_summary": "임금근로자가 코로나19 팬데믹 이후 처음으로 4개월 연속 감소한 반면, 자영업자로 대표되는 비임금근로자는 늘어나 저채용 사회가 현실화되고 있다는 내용이다.",
           "headline_frame": "임금근로자 감소(4개월 연속)와 비임금근로자 증가(자영업자)를 대비시켜 '저채용 사회' 진입을 경고하는 프레임",
-          "main_focus": "임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려를 강조하는 것",
+          "main_focus": "임금근로자 감소와 비임금근로자 증가라는 고용 구조의 변화를 통해 저채용 사회 진입 우려를 강조하는 것",
           "keywords": [
             "임금근로자 감소",
             "저채용 사회",
@@ -2235,8 +1445,8 @@
             ]
           },
           "outlook": {
-            "direction": "부정",
-            "summary": "임금근로자 감소와 비임금근로자 증가로 인해 저채용 사회가 현실화될 것이라는 부정적 전망"
+            "direction": "중립",
+            "summary": "기사 제목에서 '저채용 사회' 진입 우려를 제기했으나 구체적인 향후 전망은 제시되지 않았다."
           },
           "less_covered_context": [
             "정책 시행 이후의 구체적 효과",
@@ -2245,11 +1455,11 @@
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:23.620303+00:00",
+        "analyzed_at": "2026-08-23T01:18:41.683740+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-c13b8557c585b66b",
+        "issue_id": "issue-0373cd03bf350b1d",
         "publisher_id": "donga",
         "publisher": "동아일보",
         "articles": [
@@ -2261,73 +1471,77 @@
           }
         ],
         "analysis": {
-          "article_summary": "임금근로자가 4개월 연속 감소했으며, AI 영향으로 정보통신 및 전문·과학·기술서비스 업종에서 청년층 고용이 위축되고 있다.",
-          "headline_frame": "임금근로자 감소와 AI 영향, 청년층 고용 타격을 중심으로 사건을 구성",
-          "main_focus": "AI 기술 확산이 청년층 고용에 미치는 부정적 영향과 임금근로자 감소의 구조적 원인",
+          "article_summary": "임금근로자가 4개월 연속 감소했으며, AI 영향으로 정보통신 및 전문·과학·기술서비스 업종에서 일자리가 줄어든 반면 자영업자는 증가했다. 특히 20대 등 청년층의 채용 위축이 두드러져 고용 한파가 장기화되고 있다.",
+          "headline_frame": "임금근로자 감소와 AI 영향, 청년층 고용 타격을 중심으로 한 구조적 고용 악화",
+          "main_focus": "AI 기술 확산이 고용시장에 미치는 부정적 영향과 청년층 채용 위축 현상",
           "keywords": [
             "임금근로자 감소",
             "AI 영향",
             "청년층 고용 타격",
-            "채용 위축",
-            "1인 자영업 증가"
+            "자영업 증가",
+            "채용 위축"
           ],
           "main_actors": [
             "임금근로자",
+            "자영업자",
             "청년층",
             "기업",
-            "자영업자"
+            "정보통신 업종",
+            "전문·과학·기술서비스 업종"
           ],
           "quoted_sources": [],
           "causes": [
-            "기업의 채용 위축",
-            "AI 기술 확산에 따른 정보통신 및 전문·과학·기술서비스 업종 일자리 감소"
+            "AI가 널리 쓰이면서 정보통신, 전문·과학·기술서비스 등 AI 영향이 큰 업종에서 일자리 감소",
+            "기업의 채용 위축"
           ],
           "background": [
             "코로나19 사태 이후 처음으로 4개월 연속 임금근로자 감소",
-            "4대 보험 등 사회 안전망 보호 대상 감소"
+            "4대 보험 등 사회 안전망 보호를 받는 월급 일자리 감소"
           ],
           "emphasized_effects": [
-            "청년층 체감 고용 한파 장기화",
+            "청년층이 체감하는 ‘고용 한파’ 장기화",
             "실제 취업할 곳 감소"
           ],
           "affected_groups": [
             "20대 등 청년층",
-            "임금근로자"
+            "정보통신 및 전문·과학·기술서비스 업종 종사자"
           ],
           "tone": {
             "category": "우려·경계",
             "evidence": [
-              "AI 영향에 청년층 고용 타격",
-              "청년층이 체감하는 ‘고용 한파’가 장기화되고 있다는 지적"
+              "4개월 연속 ‘월급 일자리’ 감소",
+              "청년층 고용 타격",
+              "고용 한파가 장기화되고 있다는 지적"
             ]
           },
           "outlook": {
             "direction": "부정",
-            "summary": "AI 기술 확산으로 인한 고용시장 위축이 지속될 것으로 보이며, 청년층 고용 한파가 장기화될 전망"
+            "summary": "AI 기술 확산으로 인한 고용시장 악화가 지속될 전망이며, 청년층 채용 위축과 고용 한파 장기화 우려"
           },
           "less_covered_context": [
-            "임금근로자 감소의 구체적 산업별 분포",
-            "정부의 대응 정책 및 지원 방안"
+            "임금근로자 감소의 구체적 원인 분석",
+            "정부의 고용 정책 대응 방안",
+            "임금근로자 감소가 가계 소득 및 소비에 미치는 영향"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:24.028389+00:00",
+        "analyzed_at": "2026-08-23T01:18:42.383318+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-c13b8557c585b66b",
+      "issue_id": "issue-0373cd03bf350b1d",
       "groups": [
         {
           "group_id": "group-01",
-          "label": "저채용 사회 진입 우려",
-          "summary": "임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려를 강조하는 관점",
+          "label": "고용 구조 변화와 저채용 사회 우려",
+          "summary": "임금근로자 감소와 비임금근로자(자영업자) 증가를 대비시켜 고용 구조 변화를 강조하고, 이로 인한 저채용 사회 진입 우려를 경고하는 관점",
           "keywords": [
             "임금근로자 감소",
-            "저채용 사회",
             "자영업자 증가",
-            "고용 구조 변화"
+            "고용 구조 변화",
+            "저채용 사회"
           ],
           "publisher_ids": [
             "mk"
@@ -2340,19 +1554,20 @@
           ],
           "publisher_count": 1,
           "group_evidence": [
-            "임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려를 강조하는 것이 핵심 관점이며, 코로나19 팬데믹 이후 고용 시장 변화가 배경으로 제시됨. 향후 전망은 임금근로자 감소와 비임금근로자 증가로 인해 저채용 사회가 현실화될 것이라는 부정적 전망임."
+            "임금근로자 감소와 비임금근로자 증가라는 고용 구조의 변화를 통해 저채용 사회 진입 우려를 강조하는 것이 핵심 관점",
+            "코로나19 팬데믹 이후 고용 시장 변화를 배경으로 저채용 사회 진입 우려를 제기",
+            "임금근로자와 자영업자 모두를 영향 대상으로 하여 고용 구조 변화의 심각성을 경고"
           ]
         },
         {
           "group_id": "group-02",
-          "label": "AI 기술 확산과 청년층 고용 타격",
-          "summary": "AI 기술 확산이 청년층 고용에 미치는 부정적 영향과 임금근로자 감소의 구조적 원인을 강조하는 관점",
+          "label": "AI 확산과 청년층 고용 악화",
+          "summary": "AI 기술 확산이 정보통신 및 전문·과학·기술서비스 업종에서 일자리 감소를 유발하고, 청년층 채용 위축과 고용 한파 장기화를 초래하는 구조적 고용 악화를 강조하는 관점",
           "keywords": [
-            "임금근로자 감소",
             "AI 영향",
             "청년층 고용 타격",
             "채용 위축",
-            "1인 자영업 증가"
+            "고용 한파"
           ],
           "publisher_ids": [
             "donga"
@@ -2365,7 +1580,9 @@
           ],
           "publisher_count": 1,
           "group_evidence": [
-            "AI 기술 확산이 청년층 고용에 미치는 부정적 영향과 임금근로자 감소의 구조적 원인을 핵심 관점으로 삼으며, 기업의 채용 위축과 AI 기술 확산에 따른 정보통신 및 전문·과학·기술서비스 업종 일자리 감소를 원인으로 지목함. 20대 등 청년층과 임금근로자를 영향 대상으로 보고, 청년층이 체감하는 '고용 한파'가 장기화될 것이라는 부정적 전망을 제시함."
+            "AI 기술 확산이 정보통신, 전문·과학·기술서비스 등 특정 업종에서 일자리 감소를 유발하는 것이 핵심 원인",
+            "기업의 채용 위축으로 인해 청년층이 체감하는 고용 한파가 장기화되고 있다는 점을 강조",
+            "코로나19 사태 이후 4개월 연속 임금근로자 감소가 지속되는 구조적 문제를 지적"
           ]
         }
       ],
@@ -2376,18 +1593,18 @@
             "group-01",
             "group-02"
           ],
-          "contrast_statement": "mk는 코로나19 팬데믹 이후 고용 시장 변화를 배경으로 임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려를 강조하는 반면, donga는 AI 기술 확산과 기업의 채용 위축을 구조적 원인으로 보고 청년층 고용 타격에 초점을 맞추어 '고용 한파' 장기화를 우려함. mk는 자영업자 증가를 고용 구조 변화의 일부로 보는 반면, donga는 1인 자영업 증가를 AI 영향과 함께 청년층 고용 타격의 사례로 제시함."
+          "contrast_statement": "mk는 코로나19 팬데믹 이후 고용 구조 변화(임금근로자 감소 vs 자영업자 증가)를 통해 저채용 사회 진입 우려를 경고하는 반면, donga는 AI 기술 확산으로 인한 특정 업종 일자리 감소와 청년층 채용 위축을 강조하며 고용 한파 장기화를 우려한다. mk는 고용 구조 자체의 변화를, donga는 AI 기술 확산에 따른 구조적 고용 악화를 핵심 원인으로 지목하여 평가 방향이 다르다."
         }
       ],
-      "grouping_summary": "두 언론사 모두 임금근로자 감소를 핵심 쟁점으로 다루지만, mk는 고용 구조 변화(자영업자 증가 포함)를 통해 저채용 사회 진입 우려를 강조하는 반면, donga는 AI 기술 확산과 기업의 채용 위축을 구조적 원인으로 보고 청년층 고용 타격에 초점을 맞추어 '고용 한파' 장기화를 우려함. 핵심 관점이 서로 다르므로 별도 그룹으로 분류함.",
+      "grouping_summary": "두 언론사 모두 임금근로자 감소를 주요 이슈로 다루지만, mk는 코로나19 팬데믹 이후 고용 구조 변화(임금근로자 감소 vs 자영업자 증가)를 통해 저채용 사회 진입 우려를 경고하는 반면, donga는 AI 기술 확산이 정보통신 및 전문·과학·기술서비스 업종에서 일자리 감소를 유발하고 청년층 채용 위축과 고용 한파 장기화를 초래하는 구조적 고용 악화를 강조한다. 핵심 관점과 평가 방향이 서로 다르므로 별도 그룹으로 분류하였다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:31:28.052959+00:00",
+      "grouped_at": "2026-08-23T01:18:46.679208+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,mk": {
-        "issue_id": "issue-c13b8557c585b66b",
+        "issue_id": "issue-0373cd03bf350b1d",
         "selected_publishers": [
           {
             "publisher_id": "mk",
@@ -2398,24 +1615,24 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "임금근로자가 코로나19 팬데믹 이후 처음으로 4개월 연속 감소한 반면, 자영업자로 대표되는 비임금근로자는 늘어나 저채용 사회가 현실화되고 있다는 고용 구조 변화에 대한 우려가 공통적으로 제기되었다.",
+        "common_summary": "임금근로자가 코로나19 팬데믹 이후 처음으로 4개월 연속 감소한 반면, 자영업자로 대표되는 비임금근로자는 늘어나 저채용 사회가 현실화되고 있다는 고용 구조 변화를 다루고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 임금근로자의 4개월 연속 감소와 비임금근로자 증가를 통해 고용 시장의 구조적 변화를 지적하고 있다.",
+            "contrast_statement": "두 언론사 모두 임금근로자의 4개월 연속 감소와 자영업자의 증가를 통해 고용 시장의 구조적 변화를 지적하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "임금근로자 감소와 비임금근로자 증가를 대비시켜 저채용 사회 진입을 경고하는 고용 구조 변화",
+                "summary": "임금근로자 감소와 비임금근로자 증가를 대비시켜 저채용 사회 진입을 경고",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "임금근로자 감소와 AI 영향으로 인한 청년층 고용 타격을 중심으로 한 고용 시장 변화",
+                "summary": "임금근로자 감소와 AI 영향, 청년층 고용 타격을 중심으로 구조적 고용 악화 지적",
                 "evidence": []
               }
             ]
@@ -2423,18 +1640,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 저채용 사회 진입 우려를 강조한 반면, 동아일보는 AI 기술 확산이 청년층 고용에 미치는 부정적 영향에 초점을 두었다.",
+            "contrast_statement": "매일경제는 고용 구조 변화 자체에 초점을 맞춘 반면, 동아일보는 AI 기술 확산과 청년층 고용 위축을 주요 관점으로 제시했다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려를 강조",
+                "summary": "임금근로자 감소와 비임금근로자 증가라는 고용 구조 변화를 통해 저채용 사회 진입 우려 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "AI 기술 확산이 청년층 고용에 미치는 부정적 영향과 임금근로자 감소의 구조적 원인을 강조",
+                "summary": "AI 기술 확산이 고용시장에 미치는 부정적 영향과 청년층 채용 위축 현상 강조",
                 "evidence": []
               }
             ]
@@ -2442,18 +1659,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 코로나19 팬데믹 이후를 주요 배경으로 제시한 반면, 동아일보는 AI 영향과 코로나19 사태 이후를 복합적으로 제시하였다.",
+            "contrast_statement": "매일경제는 코로나19 팬데믹 이후를 원인으로 제시한 반면, 동아일보는 AI 영향과 기업의 채용 위축을 추가로 강조했다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "코로나19 팬데믹 이후 고용 시장 변화를 저채용 사회 진입의 주요 배경으로 강조",
+                "summary": "코로나19 팬데믹 이후 고용 시장 변화를 배경으로 임금근로자 감소와 비임금근로자 증가 발생",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "기업의 채용 위축과 AI 기술 확산에 따른 정보통신 및 전문·과학·기술서비스 업종 일자리 감소를 주요 원인으로 제시",
+                "summary": "AI가 널리 쓰이면서 정보통신, 전문·과학·기술서비스 업종에서 일자리 감소와 기업의 채용 위축을 원인으로 제시",
                 "evidence": []
               }
             ]
@@ -2461,57 +1678,52 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 저채용 사회 진입 우려를 전반적으로 강조한 반면, 동아일보는 청년층 체감 고용 한파 장기화에 초점을 두었다.",
+            "contrast_statement": "매일경제는 저채용 사회 진입 우려를 전반적으로 강조한 반면, 동아일보는 청년층과 특정 업종 종사자에 대한 구체적 영향을 부각했다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "저채용 사회 진입 우려로 인한 전반적인 고용 시장 악화 가능성 강조",
+                "summary": "저채용 사회 진입 우려를 전반적인 영향으로 제시",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "청년층이 체감하는 고용 한파 장기화와 실제 취업할 곳 감소를 주요 영향으로 제시",
+                "summary": "청년층이 체감하는 고용 한파 장기화와 정보통신 및 전문·과학·기술서비스 업종 종사자의 취업 기회 감소를 영향 대상으로 강조",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 우려·경계 태도를 보였으나, 매일경제은 '저채용 사회' 진입을, 동아일보는 '청년층 고용 한파' 장기화를 각각 강조했다.",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "두 언론사 모두 우려·경계 태도를 보였으나, 동아일보는 '4개월 연속 월급 일자리 감소'와 '고용 한파 장기화' 표현을 통해 더 강한 경계감을 나타냈다.",
             "publisher_details": [
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하면서 저채용 사회 진입 우려를 경고하는 경계적 태도",
-                "evidence": [
-                  "'저채용 사회' 진입 우려"
-                ]
+                "summary": "저채용 사회 진입을 경고하는 우려·경계 태도",
+                "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "AI 영향에 따른 청년층 고용 타격을 지적하며 고용 한파 장기화를 우려하는 경계적 태도",
-                "evidence": [
-                  "AI 영향에 청년층 고용 타격",
-                  "청년층이 체감하는 ‘고용 한파’가 장기화되고 있다는 지적"
-                ]
+                "summary": "4개월 연속 월급 일자리 감소와 고용 한파 장기화를 지적하는 우려·경계 태도",
+                "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "임금근로자 4개월 연속 감소",
-          "비임금근로자 증가",
-          "저채용 사회 또는 고용 한파 우려",
-          "코로나19 팬데믹 이후 고용 시장 변화"
+          "임금근로자 4개월 연속 감소와 자영업자 증가라는 고용 구조 변화",
+          "저채용 사회 또는 고용 한파 진입 우려",
+          "코로나19 팬데믹 이후 고용 시장 변화 배경"
         ],
         "key_differences": [
-          "동아일보는 AI 기술 확산을 주요 원인으로 제시한 반면, 매일경제는 코로나19 팬데믹 이후를 주요 배경으로 제시"
+          "동아일보는 AI 기술 확산을 주요 원인으로 제시한 반면, 매일경제는 코로나19 팬데믹 이후를 배경으로 언급",
+          "동아일보는 청년층과 정보통신·전문·과학·기술서비스 업종 종사자를 구체적 영향 대상으로 강조한 반면, 매일경제는 전반적인 저채용 사회 진입 우려를 강조"
         ],
-        "comparison_report": "두 언론사 모두 임금근로자의 4개월 연속 감소와 비임금근로자 증가를 통해 고용 시장의 구조적 변화를 경고하고 있으나, 매일경제는 코로나19 팬데믹 이후를 배경으로 저채용 사회 진입을 강조한 반면, 동아일보는 AI 기술 확산이 청년층 고용에 미치는 부정적 영향을 주요 원인으로 제시하며 청년층 체감 고용 한파 장기화를 우려하고 있다.",
+        "comparison_report": "두 언론사 모두 임금근로자의 4개월 연속 감소와 자영업자의 증가를 통해 고용 시장의 구조적 변화를 경고하고 있으나, 매일경제는 코로나19 팬데믹 이후를 배경으로 저채용 사회 진입을 우려하는 반면, 동아일보는 AI 기술 확산과 청년층 고용 타격을 주요 관점으로 제시하며 '4개월 연속 월급 일자리 감소'와 '고용 한파 장기화' 표현을 통해 더 강한 경계감을 나타냈다.",
         "source_links": [
           {
             "publisher_id": "mk",
@@ -2530,15 +1742,66 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T18:31:36.538108+00:00",
+        "compared_at": "2026-08-23T01:18:55.041254+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-68ad56e44cc4d798": {
+  "issue-6a0757ed4f6909ad": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-68ad56e44cc4d798",
+        "issue_id": "issue-6a0757ed4f6909ad",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "f58c586e02f6b1cad8961a146dac3d01b54130e017069f71c5f8e188df12919f",
+            "title": "[속보] 여당 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "published_at": "Fri, 24 Jul 2026 15:45:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673579"
+          }
+        ],
+        "analysis": {
+          "article_summary": "여당이 사회적 약자 대상 범죄에 대해 중수청에서 보완수사를 실시하도록 법 개정을 추진한다고 발표했다.",
+          "headline_frame": "법 개정 추진",
+          "main_focus": "사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화",
+          "keywords": [
+            "사회적 약자 대상 범죄",
+            "중수청",
+            "보완수사",
+            "법 개정"
+          ],
+          "main_actors": [
+            "여당"
+          ],
+          "quoted_sources": [],
+          "causes": [],
+          "background": [],
+          "emphasized_effects": [
+            "보완수사 실시"
+          ],
+          "affected_groups": [
+            "사회적 약자"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "[속보] 여당 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\""
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "법 개정 추진 발표"
+          },
+          "less_covered_context": [],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-08-23T01:19:14.928312+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-6a0757ed4f6909ad",
         "publisher_id": "hani",
         "publisher": "한겨레",
         "articles": [
@@ -2550,14 +1813,14 @@
           }
         ],
         "analysis": {
-          "article_summary": "더불어민주당이 보완수사권 폐지 당론을 추인하면서도 사회적 약자 대상 범죄에 대해서는 중수청이 보완수사를 할 수 있도록 예외를 두었다는 내용을 담고 있다.",
-          "headline_frame": "보완수사권 폐지 당론 추인과 사회적 약자 대상 범죄에 대한 중수청 보완수사 예외 조치를 동시에 강조",
-          "main_focus": "보완수사권 폐지 당론 추인과 동시에 사회적 약자 대상 범죄에 대한 보완수사 예외 조항을 마련한 점을 중점적으로 보도",
+          "article_summary": "더불어민주당이 사회적 약자 대상 범죄에 대한 중수청의 보완수사권 폐지를 당론으로 추인했다는 내용을 보도하고 있다.",
+          "headline_frame": "보완수사권 폐지라는 정책 결정과 사회적 약자 대상 범죄라는 특정 범죄 유형을 중심으로 사건을 구성",
+          "main_focus": "더불어민주당의 당론 추인 과정과 중수청 보완수사권 폐지 결정에 초점",
           "keywords": [
             "보완수사권 폐지",
-            "당론 추인",
             "사회적 약자 대상 범죄",
-            "중수청 보완수사"
+            "중수청",
+            "당론 추인"
           ],
           "main_actors": [
             "더불어민주당",
@@ -2565,13 +1828,13 @@
           ],
           "quoted_sources": [],
           "causes": [
-            "보완수사권 폐지 당론"
+            "사회적 약자 대상 범죄에 대한 중수청 보완수사"
           ],
           "background": [
-            "보완수사권 폐지 당론"
+            "보완수사권 폐지"
           ],
           "emphasized_effects": [
-            "사회적 약자 대상 범죄에 대한 보완수사 가능"
+            "보완수사권 폐지"
           ],
           "affected_groups": [
             "사회적 약자"
@@ -2584,98 +1847,115 @@
           },
           "outlook": {
             "direction": "중립",
-            "summary": "보완수사권 폐지 당론 추인과 사회적 약자 대상 범죄에 대한 보완수사 예외 조치가 동시에 이루어진 상황을 설명"
+            "summary": ""
           },
-          "less_covered_context": [
-            "보완수사권 폐지 당론 추인의 구체적인 논의 과정",
-            "보완수사권 폐지가 수사 체계에 미칠 구체적인 영향"
-          ],
+          "less_covered_context": [],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:40.190188+00:00",
+        "analyzed_at": "2026-08-23T01:19:15.115624+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-68ad56e44cc4d798",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
+        "issue_id": "issue-6a0757ed4f6909ad",
+        "publisher_id": "hankyung",
+        "publisher": "한국경제",
         "articles": [
           {
-            "article_id": "d8c0f5496b68c130981b9e33c99933572f0df9a0dd9ab8b8889c28d0f915f86e",
-            "title": "與 ‘보완수사권 존치’ 토론회 4명만 참석… “참담”",
-            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260724/134355570/2"
+            "article_id": "f307cdba86d99905a50543669697a0c4777e1bc89d4487a4df4f5ba3fe4fce5f",
+            "title": "[속보] 與 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "published_at": "Fri, 24 Jul 2026 15:38:24 +0900",
+            "link": "https://www.hankyung.com/article/2026072445797"
           }
         ],
         "analysis": {
-          "article_summary": "더불어민주당이 검사 보완수사권 전면 폐지 방침을 밝힌 후 형사소송법 개정안 당론 마련을 위한 속도전에 돌입했으며, 국회 법사위 소위에서 보완수사권 폐지 시 수사 공백 방지 방안과 사회적 약자 대상 범죄에 대한 중수청 보완수사 허용 방안 등을 논의했다.",
-          "headline_frame": "민주당의 보완수사권 폐지 강행 방침과 이에 대한 속도전, 그리고 토론회 참석 인원 부족을 통한 당 내 의견 분열 및 참담함을 강조",
-          "main_focus": "민주당의 보완수사권 폐지 강행 방침과 당론 마련 과정에서의 속도전, 그리고 사회적 약자 대상 범죄에 대한 보완수사권 존치 방안 검토",
+          "article_summary": "국민의힘이 사회적 약자 대상 범죄에 대해 중수청에서 보완수사를 실시하도록 법 개정을 추진한다는 소식을 속보로 전한다.",
+          "headline_frame": "법 개정 추진",
+          "main_focus": "국민의힘의 법 개정 추진",
           "keywords": [
-            "보완수사권 폐지",
-            "형사소송법 개정안",
-            "속도전",
-            "수사 공백",
-            "중수청 보완수사",
-            "사회적 약자"
+            "사회적 약자 대상 범죄",
+            "중수청",
+            "보완수사",
+            "법 개정"
           ],
           "main_actors": [
-            "더불어민주당",
-            "국회 법제사법위원회",
-            "김승원 의원",
-            "홍기원 의원"
+            "국민의힘"
           ],
-          "quoted_sources": [
-            "김승원 의원"
-          ],
+          "quoted_sources": [],
           "causes": [
-            "민주당 지도부의 검사 보완수사권 전면 폐지 강행 방침"
+            "사회적 약자 대상 범죄"
           ],
           "background": [
-            "형사소송법 개정안 당론 마련을 위한 심사 진행",
-            "사회적 약자 대상 범죄에 대한 중대범죄수사청(중수청) 보완수사 허용 방안 검토"
+            "중수청"
           ],
           "emphasized_effects": [
-            "수사 공백 발생 우려",
-            "보완수사권 존치 방안 검토"
+            "보완수사 실시"
           ],
           "affected_groups": [
             "사회적 약자"
           ],
           "tone": {
-            "category": "비판",
+            "category": "중립 설명",
             "evidence": [
-              "참담"
+              "[속보] 與 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\""
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "민주당은 이르면 30일 형소법 개정안 처리에 나설 것으로 보이며, 보완수사권 폐지 시 수사 공백 방지 방안에 대한 논의가 지속될 전망"
+            "summary": "법 개정 추진 소식이 속보로 전달되었으나 향후 전망이나 구체적 내용은 제시되지 않았다."
           },
           "less_covered_context": [
-            "보완수사권 폐지 이후 구체적인 수사 절차 변화",
-            "검찰과 경찰 간 권한 재조정 세부 내용"
+            "법 개정 추진의 구체적 내용",
+            "보완수사 실시의 구체적 절차",
+            "법 개정 추진의 찬반 의견"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-08-22T18:31:40.618121+00:00",
+        "analyzed_at": "2026-08-23T01:19:18.869024+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-68ad56e44cc4d798",
+      "issue_id": "issue-6a0757ed4f6909ad",
       "groups": [
         {
           "group_id": "group-1",
-          "label": "보완수사권 폐지와 사회적 약자 예외 조치",
-          "summary": "민주당의 보완수사권 폐지 당론 추인과 동시에 사회적 약자 대상 범죄에 대한 보완수사 예외 조항을 마련한 점을 중점적으로 보도",
+          "label": "법 개정 추진 및 보완수사 제도화",
+          "summary": "사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화를 위한 법 개정 추진",
+          "keywords": [
+            "사회적 약자 대상 범죄",
+            "중수청",
+            "보완수사",
+            "법 개정"
+          ],
+          "publisher_ids": [
+            "sbs",
+            "hankyung"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            },
+            {
+              "publisher_id": "hankyung",
+              "publisher": "한국경제"
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "SBS와 한국경제 모두 사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화를 위한 법 개정 추진을 핵심 쟁점으로 다루고 있으며, 보완수사 실시를 통해 사회적 약자를 보호하려는 정책 방향을 제시하고 있습니다. 두 언론사 모두 중립적인 설명 태도를 보이며, 법 개정 추진이라는 동일한 정책 내용을 중심으로 보도하고 있습니다."
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "보완수사권 폐지 결정 및 당론 추인",
+          "summary": "더불어민주당의 보완수사권 폐지 결정과 당론 추인 과정",
           "keywords": [
             "보완수사권 폐지",
             "당론 추인",
-            "사회적 약자 대상 범죄",
-            "중수청 보완수사"
+            "더불어민주당"
           ],
           "publisher_ids": [
             "hani"
@@ -2688,36 +1968,7 @@
           ],
           "publisher_count": 1,
           "group_evidence": [
-            "보완수사권 폐지 당론을 추인하면서 사회적 약자 대상 범죄에 대한 보완수사 예외 조항을 동시에 마련한 점을 핵심 쟁점으로 보도",
-            "보완수사권 폐지로 인한 수사 공백 우려를 사회적 약자 대상 범죄에 대한 보완수사 가능으로 상쇄하려는 해석",
-            "보완수사권 폐지 당론 추인과 사회적 약자 대상 범죄에 대한 보완수사 예외 조치가 동시에 이루어진 상황을 설명"
-          ]
-        },
-        {
-          "group_id": "group-2",
-          "label": "보완수사권 폐지 강행과 당 내 분열",
-          "summary": "민주당의 보완수사권 폐지 강행 방침과 당론 마련 과정의 속도전, 당 내 의견 분열 및 참담함을 비판적으로 보도",
-          "keywords": [
-            "보완수사권 폐지",
-            "형사소송법 개정안",
-            "속도전",
-            "수사 공백",
-            "중수청 보완수사"
-          ],
-          "publisher_ids": [
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "민주당 지도부가 보완수사권 전면 폐지를 강행하는 방침을 당론으로 추인하는 과정에서 속도전을 벌였다고 비판",
-            "당론 마련 과정에서 토론회 참석 인원 부족을 통해 당 내 의견 분열과 참담함을 강조",
-            "보완수사권 폐지 시 수사 공백 발생 우려를 제기하며 당 내 비판적 시각을 보도"
+            "한겨레는 더불어민주당의 보완수사권 폐지 결정과 당론 추인 과정에 초점을 맞추고 있습니다. 사회적 약자 대상 범죄를 배경으로 보완수사권 폐지를 강조하며, 이 결정이 중수청의 보완수사권 폐지로 이어진다는 점을 보도하고 있습니다. 다른 언론사들과 달리 보완수사권 폐지라는 정책 방향을 제시하고 있어 핵심 해석이 다릅니다."
           ]
         }
       ],
@@ -2728,103 +1979,103 @@
             "group-1",
             "group-2"
           ],
-          "contrast_statement": "한겨레는 보완수사권 폐지와 동시에 사회적 약자 대상 범죄에 대한 보완수사 예외 조치를 마련한 점을 긍정적으로 설명하며 중립적인 보도 태도를 보인 반면, 동아일보는 민주당의 보완수사권 폐지 강행 방침과 당론 마련 과정의 속도전, 당 내 의견 분열을 비판적으로 보도하며 수사 공백 우려를 강조했다."
+          "contrast_statement": "SBS와 한국경제는 사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화를 위한 법 개정 추진을 중립적으로 설명하는 반면, 한겨레는 더불어민주당의 보완수사권 폐지 결정과 당론 추인 과정에 초점을 맞추어 보완수사권 폐지를 보도하고 있습니다. SBS와 한국경제는 보완수사 실시를 통한 사회적 약자 보호를 강조하는 반면, 한겨레는 보완수사권 폐지라는 정책 방향을 제시하고 있어 핵심 해석과 평가 방향이 대립합니다."
         }
       ],
-      "grouping_summary": "두 언론사 모두 보완수사권 폐지와 사회적 약자 대상 범죄에 대한 보완수사 허용이라는 동일한 정책 내용을 다루었으나, 한겨레는 당론 추인과 예외 조치 마련을 중심으로 중립적으로 설명한 반면, 동아일보는 강행 방침과 당 내 분열, 수사 공백 우려를 비판적으로 보도하여 서로 다른 핵심 관점을 형성했다.",
+      "grouping_summary": "3개 언론사는 동일한 법 개정 이슈를 다루지만, SBS와 한국경제는 사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화를 위한 법 개정 추진을 중립적으로 설명하는 반면, 한겨레는 더불어민주당의 보완수사권 폐지 결정과 당론 추인 과정에 초점을 맞추어 보완수사권 폐지를 보도하고 있습니다. SBS와 한국경제는 보완수사 실시를 통한 사회적 약자 보호를 강조하는 반면, 한겨레는 보완수사권 폐지라는 정책 방향을 제시하고 있어 핵심 해석과 평가 방향이 대립합니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-08-22T18:31:44.580895+00:00",
+      "grouped_at": "2026-08-23T01:19:24.083375+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "donga,hani": {
-        "issue_id": "issue-68ad56e44cc4d798",
+      "hankyung,sbs": {
+        "issue_id": "issue-6a0757ed4f6909ad",
         "selected_publishers": [
           {
-            "publisher_id": "hani",
-            "publisher": "한겨레"
+            "publisher_id": "sbs",
+            "publisher": "SBS"
           },
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
+            "publisher_id": "hankyung",
+            "publisher": "한국경제"
           }
         ],
-        "common_summary": "더불어민주당이 보완수사권 폐지 당론을 추인하면서 사회적 약자 대상 범죄에 대해서는 중수청이 보완수사를 할 수 있도록 예외를 두었다는 내용을 공통적으로 다루고 있다.",
-        "overall_difference": "일부 차이",
+        "common_summary": "여당이 사회적 약자 대상 범죄에 대해 중수청에서 보완수사를 실시하도록 법 개정을 추진한다는 소식을 속보로 전한다.",
+        "overall_difference": "유사함",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 더불어민주당이 보완수사권 폐지 당론을 추인하고 사회적 약자 대상 범죄에 대한 중수청 보완수사 예외 조항을 마련했다는 사실을 공통적으로 보도하고 있다.",
+            "contrast_statement": "두 언론사 모두 여당이 사회적 약자 대상 범죄에 대한 중수청 보완수사 제도화를 위해 법 개정을 추진한다는 사실을 보도한다.",
             "publisher_details": [
               {
-                "publisher_id": "hani",
-                "publisher": "한겨레",
-                "summary": "보완수사권 폐지 당론 추인과 사회적 약자 대상 범죄에 대한 중수청 보완수사 예외 조치를 동시에 강조",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "여당의 법 개정 추진 소식을 속보로 전달",
                 "evidence": []
               },
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지 당론 추인과 사회적 약자 대상 범죄에 대한 중수청 보완수사 허용 방안 검토",
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "국민의힘의 법 개정 추진 소식을 속보로 전달",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한겨레는 보완수사권 폐지와 예외 조항 마련에 초점을 맞춘 반면, 동아일보는 당론 마련 과정의 속도전과 당 내 의견 분열을 추가로 강조하고 있다.",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 사회적 약자 대상 범죄에 대한 중수청 보완수사 제도화를 핵심 관점으로 제시한다.",
             "publisher_details": [
               {
-                "publisher_id": "hani",
-                "publisher": "한겨레",
-                "summary": "보완수사권 폐지 당론 추인과 동시에 사회적 약자 대상 범죄에 대한 보완수사 예외 조항을 마련한 점을 중점적으로 보도",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사회적 약자 대상 범죄에 대한 중수청 보완수사 제도화",
                 "evidence": []
               },
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지 강행 방침과 당론 마련 과정에서의 속도전, 그리고 당 내 의견 분열을 비판적으로 보도",
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "국민의힘의 법 개정 추진",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한겨레는 보완수사권 폐지 당론을 주요 원인으로 제시한 반면, 동아일보는 당론 마련 과정의 속도전과 사회적 약자 대상 범죄 보완수사 허용 방안 검토를 배경으로 강조하고 있다.",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 사회적 약자 대상 범죄를 강조하지만, SBS는 원인을 별도로 제시하지 않고, 한국경제은 중수청을 배경으로 언급한다.",
             "publisher_details": [
               {
-                "publisher_id": "hani",
-                "publisher": "한겨레",
-                "summary": "보완수사권 폐지 당론을 주요 원인으로 강조",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사회적 약자 대상 범죄",
                 "evidence": []
               },
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "민주당 지도부의 보완수사권 전면 폐지 강행 방침과 형사소송법 개정안 당론 마련을 위한 심사 진행을 배경으로 강조",
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "중수청",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "한겨레는 사회적 약자에 대한 보완수사 가능이라는 긍정적 영향을 강조한 반면, 동아일보는 수사 공백 발생 우려와 당 내 의견 분열이라는 부정적 영향을 강조하고 있다.",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 보완수사 실시를 영향으로, 사회적 약자를 대상으로 강조한다.",
             "publisher_details": [
               {
-                "publisher_id": "hani",
-                "publisher": "한겨레",
-                "summary": "사회적 약자 대상 범죄에 대한 보완수사 가능",
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "보완수사 실시",
                 "evidence": []
               },
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "수사 공백 발생 우려와 당 내 의견 분열",
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "보완수사 실시",
                 "evidence": []
               }
             ]
@@ -2832,34 +2083,174 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "한겨레는 중립적으로 사실을 설명하는 태도를 보인 반면, 동아일보는 '참담'이라는 표현을 통해 비판적 태도를 보이고 있다.",
+            "contrast_statement": "두 언론사 모두 속보 형식으로 중립적으로 사실을 전달하며, SBS는 '여당', 한국경제는 '與(국민의힘)'을 사용한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "속보 형식으로 중립적으로 사실을 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "속보 형식으로 중립적으로 사실을 전달",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "여당이 사회적 약자 대상 범죄에 대해 중수청에서 보완수사를 실시하도록 법 개정을 추진한다는 소식을 속보로 전한다."
+        ],
+        "key_differences": [],
+        "comparison_report": "SBS와 한국경제는 모두 여당이 사회적 약자 대상 범죄에 대한 중수청 보완수사 제도화를 위해 법 개정을 추진한다는 소식을 속보로 보도한다. SBS는 '여당'이라는 표현을 사용하고, 한국경제는 '與(국민의힘)'이라는 표현을 사용하여 동일한 정치적 주체를 지칭한다. 두 언론사 모두 사회적 약자 대상 범죄를 핵심 이슈로 강조하며, 중수청에서의 보완수사 실시를 영향과 대상으로 제시한다. 보도 태도는 중립 설명 형식으로 유사하며, SBS는 '법 개정 추진'을, 한국경제는 '법 개정 추진'을 제목 프레임으로 사용한다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[속보] 여당 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673579",
+            "published_at": "Fri, 24 Jul 2026 15:45:00 +0900"
+          },
+          {
+            "publisher_id": "hankyung",
+            "publisher": "한국경제",
+            "title": "[속보] 與 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "link": "https://www.hankyung.com/article/2026072445797",
+            "published_at": "Fri, 24 Jul 2026 15:38:24 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-23T01:19:32.237048+00:00",
+        "model": "solar-pro3"
+      },
+      "hani,hankyung": {
+        "issue_id": "issue-6a0757ed4f6909ad",
+        "selected_publishers": [
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레"
+          },
+          {
+            "publisher_id": "hankyung",
+            "publisher": "한국경제"
+          }
+        ],
+        "common_summary": "더불어민주당과 국민의힘이 각각 사회적 약자 대상 범죄에 대한 중수청 보완수사권 폐지 또는 보완수사 실시를 위한 법 개정을 추진한다는 내용을 보도하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 사회적 약자 대상 범죄에 대한 중수청의 보완수사권 폐지 또는 보완수사 실시를 다루고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "hani",
                 "publisher": "한겨레",
-                "summary": "보완수사권 폐지와 예외 조치를 중립적으로 설명",
+                "summary": "더불어민주당이 중수청 보완수사권 폐지를 당론으로 추인했다는 사실을 보도",
                 "evidence": []
               },
               {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "보완수사권 폐지 강행과 당 내 의견 분열에 대해 비판적 태도를 보임",
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "국민의힘이 사회적 약자 대상 범죄 중수청 보완수사를 위한 법 개정을 추진한다는 소식을 속보로 전달",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 더불어민주당의 당론 추인 과정에 초점을 맞추고, 한국경제는 국민의힘의 법 개정 추진 자체에 초점을 둔다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "더불어민주당의 당론 추인 과정과 중수청 보완수사권 폐지 결정에 초점",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "국민의힘의 법 개정 추진",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 보완수사권 폐지를 원인으로 강조하고, 한국경제는 사회적 약자 대상 범죄를 원인으로 강조한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "사회적 약자 대상 범죄에 대한 중수청 보완수사권 폐지",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "사회적 약자 대상 범죄",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 보완수사권 폐지 자체를 강조하고, 한국경제는 보완수사 실시를 강조한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "보완수사권 폐지",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "보완수사 실시",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "일부 차이",
+            "contrast_statement": "한겨레는 당론 추인이라는 정책 결정 과정을 중립적으로 설명하고, 한국경제는 법 개정 추진이라는 소식을 속보로 전달한다.",
+            "publisher_details": [
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "당론 추인이라는 정책 결정 과정을 중립적으로 설명",
                 "evidence": [
-                  "참담"
+                  "민주, ‘보완수사권 폐지’ 당론 추인…‘사회적 약자 대상 범죄’ 중수청 보완수사"
+                ]
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "법 개정 추진이라는 소식을 속보로 전달",
+                "evidence": [
+                  "[속보] 與 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\""
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "더불어민주당의 보완수사권 폐지 당론 추인",
-          "사회적 약자 대상 범죄에 대한 중수청 보완수사 예외/허용 방안",
-          "보완수사권 폐지로 인한 수사 공백 방지 필요성"
+          "사회적 약자 대상 범죄에 대한 중수청의 보완수사권 폐지 또는 보완수사 실시를 다루고 있다.",
+          "중수청이 관련된 정책 변화를 보도하고 있다."
         ],
         "key_differences": [
-          "동아일보는 보완수사권 폐지 당론 추인 과정의 속도전과 당 내 의견 분열을 비판적으로 보도한 반면, 한겨레는 중립적으로 예외 조항 마련에 초점을 맞춤"
+          "더불어민주당의 당론 추인 vs 국민의힘의 법 개정 추진",
+          "보완수사권 폐지 vs 보완수사 실시",
+          "당론 추인 과정 설명 vs 속보 형식의 법 개정 추진 소식 전달"
         ],
-        "comparison_report": "두 언론사 모두 더불어민주당의 보완수사권 폐지 당론 추인과 사회적 약자 대상 범죄에 대한 중수청 보완수사 예외 조항을 다루고 있으나, 한겨레는 보완수사권 폐지와 예외 조치 마련에 중점을 둔 중립적 설명을 제공하는 반면, 동아일보는 당론 마련 과정의 속도전과 당 내 의견 분열을 비판적으로 보도하며 '참담'이라는 표현을 사용해 부정적 태도를 보이고 있다.",
+        "comparison_report": "한겨레는 더불어민주당이 사회적 약자 대상 범죄에 대한 중수청 보완수사권 폐지를 당론으로 추인했다는 정책 결정 과정을 중립적으로 설명하며, 한국경제는 국민의힘이 사회적 약자 대상 범죄 중수청 보완수사를 위한 법 개정을 추진한다는 소식을 속보로 전달한다. 두 언론사 모두 사회적 약자 대상 범죄와 중수청의 보완수사권 문제를 다루지만, 한겨레는 당론 추인이라는 정치적 결정 과정에 초점을 맞추고, 한국경제는 법 개정 추진이라는 정책적 조치에 초점을 둔다. 또한 한겨레는 보완수사권 폐지를, 한국경제는 보완수사 실시를 강조하여 영향 측면에서 차이를 보인다.",
         "source_links": [
           {
             "publisher_id": "hani",
@@ -2869,16 +2260,338 @@
             "published_at": "발행 시간 정보 없음"
           },
           {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "與 ‘보완수사권 존치’ 토론회 4명만 참석… “참담”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260724/134355570/2",
-            "published_at": "Fri, 24 Jul 2026 04:30:00 +0900"
+            "publisher_id": "hankyung",
+            "publisher": "한국경제",
+            "title": "[속보] 與 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "link": "https://www.hankyung.com/article/2026072445797",
+            "published_at": "Fri, 24 Jul 2026 15:38:24 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-08-22T18:31:52.376381+00:00",
+        "compared_at": "2026-08-23T01:19:32.760277+00:00",
+        "model": "solar-pro3"
+      },
+      "hani,sbs": {
+        "issue_id": "issue-6a0757ed4f6909ad",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레"
+          }
+        ],
+        "common_summary": "여당과 더불어민주당이 각각 사회적 약자 대상 범죄에 대한 중수청의 보완수사 관련 법 개정 또는 폐지를 추진하고 있다는 내용을 보도하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "SBS는 여당의 법 개정 추진, 한겨레는 더불어민주당의 당론 추인을 보도하여 사회적 약자 대상 범죄에 대한 중수청 보완수사 제도 변화를 다루고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "여당이 사회적 약자 대상 범죄에 대한 중수청 보완수사 실시를 위한 법 개정을 추진한다고 발표",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "더불어민주당이 사회적 약자 대상 범죄에 대한 중수청 보완수사권 폐지를 당론으로 추인했다고 보도",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 법 개정을 통한 보완수사 제도화에 초점을 맞춘 반면, 한겨레는 당론 추인 과정과 보완수사권 폐지 결정에 초점을 두고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화를 위한 법 개정 추진",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "더불어민주당의 당론 추인 과정과 중수청 보완수사권 폐지 결정",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS는 법 개정 추진이라는 정책 방향을, 한겨레는 보완수사권 폐지라는 정책 결정을 각각 강조하여 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사회적 약자 대상 범죄에 대한 중수청 보완수사 제도화를 위한 법 개정 추진",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "보완수사권 폐지라는 정책 결정",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 보완수사 실시 또는 폐지로 인해 사회적 약자가 영향을 받을 수 있다는 점을 언급하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "보완수사 실시로 사회적 약자에 대한 범죄 대응 강화",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "보완수사권 폐지로 사회적 약자 대상 범죄 대응 방식 변화",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "SBS는 법 개정 추진이라는 정책 방향을, 한겨레는 당론 추인이라는 정치적 결정 과정을 각각 중립적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "법 개정 추진이라는 정책 방향을 중립적으로 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "당론 추인이라는 정치적 결정 과정을 중립적으로 전달",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "사회적 약자 대상 범죄에 대한 중수청 보완수사 제도 변화",
+          "보완수사 실시 또는 폐지로 인한 사회적 약자 영향 가능성"
+        ],
+        "key_differences": [
+          "SBS는 여당의 법 개정 추진, 한겨레는 더불어민주당의 당론 추인이라는 서로 다른 정치적 주체 강조",
+          "SBS는 보완수사 제도화, 한겨레는 보완수사권 폐지라는 서로 다른 정책 방향 강조"
+        ],
+        "comparison_report": "SBS와 한겨레는 사회적 약자 대상 범죄에 대한 중수청 보완수사 제도 변화를 다루고 있으나, SBS는 여당의 법 개정 추진이라는 정책 방향을, 한겨레는 더불어민주당의 당론 추인이라는 정치적 결정 과정을 각각 중립적으로 보도하고 있다. 두 언론사 모두 보완수사 실시 또는 폐지로 인한 사회적 약자 영향 가능성을 언급하고 있으나, SBS는 제도화를 통한 범죄 대응 강화를, 한겨레는 정책 결정 과정을 통한 정치적 변화를 강조하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[속보] 여당 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673579",
+            "published_at": "Fri, 24 Jul 2026 15:45:00 +0900"
+          },
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레",
+            "title": "민주, ‘보완수사권 폐지’ 당론 추인…‘사회적 약자 대상 범죄’ 중수청 보완수사",
+            "link": "https://www.hani.co.kr/arti/politics/politics_general/1269833.html",
+            "published_at": "발행 시간 정보 없음"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-23T01:19:32.974301+00:00",
+        "model": "solar-pro3"
+      },
+      "hani,hankyung,sbs": {
+        "issue_id": "issue-6a0757ed4f6909ad",
+        "selected_publishers": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          },
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레"
+          },
+          {
+            "publisher_id": "hankyung",
+            "publisher": "한국경제"
+          }
+        ],
+        "common_summary": "여당과 더불어민주당이 각각 사회적 약자 대상 범죄에 대한 중수청 보완수사 관련 법 개정 또는 폐지를 추진하고 있다는 내용을 보도하고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "SBS와 한국경제는 여당이 법 개정을 추진한다고 보도한 반면, 한겨레는 더불어민주당이 보완수사권 폐지를 당론으로 추인했다고 보도하여, 법 개정 추진 주체와 내용에 차이가 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "여당이 사회적 약자 대상 범죄에 대해 중수청에서 보완수사를 실시하도록 법 개정을 추진한다고 발표",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "국민의힘이 사회적 약자 대상 범죄에 대해 중수청에서 보완수사를 실시하도록 법 개정을 추진한다는 소식",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "더불어민주당이 사회적 약자 대상 범죄에 대한 중수청 보완수사권 폐지를 당론으로 추인",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS와 한국경제는 법 개정 추진에 초점을 맞춘 반면, 한겨레는 보완수사권 폐지라는 정책 결정과 당론 추인 과정에 초점을 맞추고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사회적 약자 대상 범죄에 대한 중수청의 보완수사 제도화",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "국민의힘의 법 개정 추진",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "더불어민주당의 당론 추인 과정과 중수청 보완수사권 폐지 결정",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "SBS와 한국경제는 사회적 약자 대상 범죄 자체를 원인으로 강조한 반면, 한겨레는 보완수사권 폐지라는 정책 결정을 배경으로 제시하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사회적 약자 대상 범죄",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "사회적 약자 대상 범죄",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "보완수사권 폐지",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "유사함",
+            "contrast_statement": "세 언론사 모두 보완수사 실시와 사회적 약자 대상 범죄를 영향 및 대상으로 언급하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "보완수사 실시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "보완수사 실시",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "보완수사권 폐지",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "판단 어려움",
+            "contrast_statement": "SBS와 한국경제는 속보 형식으로 법 개정 추진을 중립적으로 전달한 반면, 한겨레는 당론 추인이라는 정치적 결정 과정을 중립적으로 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "법 개정 추진을 중립적으로 설명",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hankyung",
+                "publisher": "한국경제",
+                "summary": "법 개정 추진을 중립적으로 설명",
+                "evidence": []
+              },
+              {
+                "publisher_id": "hani",
+                "publisher": "한겨레",
+                "summary": "보완수사권 폐지 당론 추인 과정을 중립적으로 설명",
+                "evidence": []
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "사회적 약자 대상 범죄에 대한 중수청 보완수사 관련 내용을 보도",
+          "보완수사 실시 또는 보완수사권 폐지를 영향 및 대상으로 언급"
+        ],
+        "key_differences": [
+          "법 개정 추진 주체(여당 vs 국민의힘)와 내용(보완수사 실시 vs 보완수사권 폐지)의 차이"
+        ],
+        "comparison_report": "SBS와 한국경제는 여당이 사회적 약자 대상 범죄에 대한 중수청 보완수사를 실시하도록 법 개정을 추진한다고 보도한 반면, 한겨레는 더불어민주당이 보완수사권 폐지를 당론으로 추인했다고 보도하여, 법 개정 추진 주체와 내용에 차이가 있다. SBS와 한국경제는 법 개정 추진에 초점을 맞추고 사회적 약자 대상 범죄를 원인으로 강조한 반면, 한겨레는 보완수사권 폐지라는 정책 결정과 당론 추인 과정에 초점을 맞추고 있다. 세 언론사 모두 보완수사 실시와 사회적 약자 대상 범죄를 영향 및 대상으로 언급하고 있으며, 속보 형식으로 중립적으로 보도하고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[속보] 여당 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008673579",
+            "published_at": "Fri, 24 Jul 2026 15:45:00 +0900"
+          },
+          {
+            "publisher_id": "hani",
+            "publisher": "한겨레",
+            "title": "민주, ‘보완수사권 폐지’ 당론 추인…‘사회적 약자 대상 범죄’ 중수청 보완수사",
+            "link": "https://www.hani.co.kr/arti/politics/politics_general/1269833.html",
+            "published_at": "발행 시간 정보 없음"
+          },
+          {
+            "publisher_id": "hankyung",
+            "publisher": "한국경제",
+            "title": "[속보] 與 \"사회적약자 대상 범죄 중수청서 보완수사하도록 법 개정\"",
+            "link": "https://www.hankyung.com/article/2026072445797",
+            "published_at": "Fri, 24 Jul 2026 15:38:24 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-08-23T01:19:33.091425+00:00",
         "model": "solar-pro3"
       }
     }
