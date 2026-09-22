@@ -1,9 +1,9 @@
 {
   "issues": [
     {
-      "issue_id": "issue-91497c1cd97e0554",
+      "issue_id": "issue-9a0f04c406f66a20",
       "issue_title": "메가특구 노동특례 사회적 대화",
-      "summary": "정부가 메가특구특별법에 담길 노동 규제 완화를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 경영계는 고소득 전문직 노동시간 규제 제외를 요구하고 노동계는 주4일제 도입을 주장하는 등 다양한 의견이 제시되었다.",
+      "summary": "정부가 메가특구특별법에 담길 노동 규제 완화를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 노동계는 주4일제 요구를, 경영계는 고소득 전문직 노동시간 규제 제외를 주장하고 있다.",
       "query": "사회",
       "keyword": "메가특구 노동특례 사회적 대화",
       "expanded_queries": [],
@@ -73,14 +73,96 @@
               "score": 19.24
             }
           ]
+        },
+        {
+          "publisher_id": "chosun",
+          "publisher": "조선일보",
+          "articles": [
+            {
+              "article_id": "f9d119928a7e6848d32b03d024a1fdf918a9e5036eaff8c779e984a52e2fa463",
+              "publisher_id": "chosun",
+              "publisher": "조선일보",
+              "category": "경제",
+              "title": "與, 발달장애 치료센터 방문…“예산 지연 없도록 안정적 지급장치 마련”",
+              "description": "더불어민주당이 18일 중증 발달장애 아동의 치료·돌봄 현장을 살펴본 가운데, 장애 아동에 대한 서비스 수요 증가에 따라 공급 여건을 체계적으로 파악하고 안정적인 서비스를 제공하는 기반을 마련해야 한다는 목소리가 나왔다. 더불어민주당 보건의료특별위원회와 전국사회적경제위원회는 경기 수원시의 꿈틀협동조합 아동발달센터를 방문해 학부모와 종사자들이 현장에서 겪는",
+              "content": "더불어민주당이 18일 중증 발달장애 아동의 치료·돌봄 현장을 살펴본 가운데, 장애 아동에 대한 서비스 수요 증가에 따라 공급 여건을 체계적으로 파악하고 안정적인 서비스를 제공하는 기반을 마련해야 한다는 목소리가 나왔다. 더불어민주당 보건의료특별위원회와 전국사회적경제위원회는 경기 수원시의 꿈틀협동조합 아동발달센터를 방문해 학부모와 종사자들이 현장에서 겪는",
+              "published_at": "Fri, 18 Sep 2026 07:18:43 +0000",
+              "updated_at": "2026-09-18T10:39:07.769547+00:00",
+              "link": "https://www.chosun.com/economy/economy_general/2026/09/18/GU3WKNBQG43DQZJWGBRWGYLDGY/",
+              "distance": 0.745684,
+              "similarity_score": 0.254316,
+              "matched_query": "사회 복지",
+              "score": 10.09
+            }
+          ]
         }
       ],
       "category": "사회",
       "keywords": [
         "메가특구 노동특례 사회적 대화"
       ],
-      "publisher_count": 3,
-      "article_count": 9
+      "publisher_count": 4,
+      "article_count": 14
+    },
+    {
+      "issue_id": "issue-3d36be3338eb63b0",
+      "issue_title": "김승원 사퇴 및 인사 논란",
+      "summary": "김승원 법무부 장관 후보자가 인사청문회에서 코로나19 신약 임상시험 승인 청탁 의혹을 반박하고 사퇴했으며, 더불어민주당은 이를 '인사 참사'로 평가하고 한동훈과의 '정면충돌' 및 '사법검찰 잔존세력' 논란을 제기했습니다.",
+      "query": "정치",
+      "keyword": "김승원 사퇴 및 인사 논란",
+      "expanded_queries": [],
+      "publishers": [
+        {
+          "publisher_id": "sbs",
+          "publisher": "SBS",
+          "articles": [
+            {
+              "article_id": "2852075491168eef7b9feb087b44bd97ac210db9f84d206c0f3b4e6ebd1dcad5",
+              "publisher_id": "sbs",
+              "publisher": "SBS",
+              "category": "정치",
+              "title": "박지원 \"김민석, 집권여당 대표로서 사과해야…김승원도 한동훈도 수사받아라\" [정치쇼]",
+              "description": "-李 대통령, 진지하게 대국민 사과...잘했다-여기까지 온 데 당도 책임, 중진으로서 사과-김민석도 집권여당 대표로서 사과해야-국힘, 꼬투리 잡지 말고 이제 개헌 동참해야-조작기소 특검법, 공소취소 권한 안 담길 것-\"재판 받겠다\" 왜 해야 하나, 없다고 하면 그만-김승원 추가 의혹? 몰랐다, 알았으면 반대-무마 시도했다면 잘못, 수사기관서 밝혀야-한동훈도 수사받아야...큰 범죄 저지른 현행범-성남 라인 개입설? 의혹일 뿐 현실 아냐 ■ 김태현의 정치쇼 (FM 103.5 MHz 7:00 ~ 9:00)■ 일자 : 2026년 9월 21일 ■ 진행 : 김태현 변호사■ 출연 : 박지원 더불어민주당 의원 ▷김태현 : 격주로 만나보는 분입니다.",
+              "content": "-李 대통령, 진지하게 대국민 사과...잘했다-여기까지 온 데 당도 책임, 중진으로서 사과-김민석도 집권여당 대표로서 사과해야-국힘, 꼬투리 잡지 말고 이제 개헌 동참해야-조작기소 특검법, 공소취소 권한 안 담길 것-\"재판 받겠다\" 왜 해야 하나, 없다고 하면 그만-김승원 추가 의혹? 몰랐다, 알았으면 반대-무마 시도했다면 잘못, 수사기관서 밝혀야-한동훈도 수사받아야...큰 범죄 저지른 현행범-성남 라인 개입설? 의혹일 뿐 현실 아냐 ■ 김태현의 정치쇼 (FM 103.5 MHz 7:00 ~ 9:00)■ 일자 : 2026년 9월 21일 ■ 진행 : 김태현 변호사■ 출연 : 박지원 더불어민주당 의원 ▷김태현 : 격주로 만나보는 분입니다.",
+              "published_at": "Mon, 21 Sep 2026 09:45:00 +0900",
+              "updated_at": "2026-09-21T03:31:45.785359+00:00",
+              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008762919",
+              "distance": 0.730951,
+              "similarity_score": 0.269049,
+              "matched_query": "정치",
+              "score": 20.38
+            }
+          ]
+        },
+        {
+          "publisher_id": "donga",
+          "publisher": "동아일보",
+          "articles": [
+            {
+              "article_id": "3fe57636a834724d2b8e455ec6fcff06c0655da5e8257bb89fa0dc80d4a80bac",
+              "publisher_id": "donga",
+              "publisher": "동아일보",
+              "category": "정치",
+              "title": "김승원, 한동훈 겨냥 “정치검찰 잔존세력이 여론 호도…민주주의의 적”",
+              "description": "김승원 법무부 장관 후보자가 인사청문회에서 코로나19 신약 임상시험 승인 청탁 의혹에 대해 “정치 검사의 논리”라며 정면으로 반박했다. 야권이 검찰 수사 자료를 토대로 공세를 펴는 것에 대해선 “민주주의의 큰 적”이라며 장관에 임명되면 감찰하겠다고 밝혔다. 청문회가 여당 반대로 증인과 참고인이 1명도 없이 진행된 가운데 김 후보자도 요구 자료의 3분의 2를 제출하지 않으면서 검증 기회를 차단했다는 비판이 나왔다.국민의힘 곽규택 의원은 15일 국회 법제사법위원회가 주관한 청문회에서 신약 청탁 의혹을 ‘더불어민주당 독약 게이트’로 규정하며 “국정감사하고 특검해야 하는데, 그 중심에 있는 인물이 법무부 장관을 하고 있겠다는 게 말이 되느냐”고 따졌다. 이에 김 후보자는 “당시 수사팀 정치검사의 논리”라고 받아쳤다. 검찰이 자신을 기소유예 처분한 데 대해선 “한동훈 휘하 검찰이 했던 쪼개기 기소”라며 “사람을 말려 죽이는 일”이라고 했다.김 후보자는 국민의힘 김민전 의원이 “후보자가 식",
+              "content": "김승원 법무부 장관 후보자가 인사청문회에서 코로나19 신약 임상시험 승인 청탁 의혹에 대해 “정치 검사의 논리”라며 정면으로 반박했다. 야권이 검찰 수사 자료를 토대로 공세를 펴는 것에 대해선 “민주주의의 큰 적”이라며 장관에 임명되면 감찰하겠다고 밝혔다. 청문회가 여당 반대로 증인과 참고인이 1명도 없이 진행된 가운데 김 후보자도 요구 자료의 3분의 2를 제출하지 않으면서 검증 기회를 차단했다는 비판이 나왔다.국민의힘 곽규택 의원은 15일 국회 법제사법위원회가 주관한 청문회에서 신약 청탁 의혹을 ‘더불어민주당 독약 게이트’로 규정하며 “국정감사하고 특검해야 하는데, 그 중심에 있는 인물이 법무부 장관을 하고 있겠다는 게 말이 되느냐”고 따졌다. 이에 김 후보자는 “당시 수사팀 정치검사의 논리”라고 받아쳤다. 검찰이 자신을 기소유예 처분한 데 대해선 “한동훈 휘하 검찰이 했던 쪼개기 기소”라며 “사람을 말려 죽이는 일”이라고 했다.김 후보자는 국민의힘 김민전 의원이 “후보자가 식",
+              "published_at": "Tue, 15 Sep 2026 16:58:00 +0900",
+              "updated_at": "2026-09-15T20:54:31.997446+00:00",
+              "link": "https://www.donga.com/news/Politics/article/all/20260915/134673277/1",
+              "distance": 0.744463,
+              "similarity_score": 0.255537,
+              "matched_query": "정치",
+              "score": 20.11
+            }
+          ]
+        }
+      ],
+      "category": "정치",
+      "keywords": [
+        "김승원 사퇴 및 인사 논란"
+      ],
+      "publisher_count": 2,
+      "article_count": 7
     },
     {
       "issue_id": "issue-2c64667aac78b4af",
@@ -105,8 +187,8 @@
               "published_at": "Mon, 24 Aug 2026 14:59:00 +0900",
               "updated_at": "2026-08-24T06:56:38.359644+00:00",
               "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008718068",
-              "distance": 0.671602,
-              "similarity_score": 0.328398,
+              "distance": 0.671696,
+              "similarity_score": 0.328304,
               "matched_query": "정치",
               "score": 21.57
             }
@@ -143,11 +225,11 @@
       "article_count": 3
     },
     {
-      "issue_id": "issue-3ed35a261d41c4cb",
-      "issue_title": "이재명 기자회견",
-      "summary": "이재명 대통령이 18일 청와대 영빈관에서 7번째 기자회견을 열어 연임 개헌 논란, 공소 취소 등에 대한 입장을 밝혔으나 국민의힘은 '전형적 책임 회피'라고 비판했습니다.",
+      "issue_id": "issue-a81bd1f09b1045da",
+      "issue_title": "이재명 대통령 기자회견",
+      "summary": "이재명 대통령이 7번째 대국민 기자회견을 열어 연임 개헌, 공소 취소, 개각 관련 논란에 대해 입장을 밝혔으나, 국민의힘은 '전형적 책임 회피'라며 비판했고, 지지율 하락(30%대)에 대한 대응 방안을 제시했습니다.",
       "query": "정치",
-      "keyword": "이재명 기자회견",
+      "keyword": "이재명 대통령 기자회견",
       "expanded_queries": [],
       "publishers": [
         {
@@ -165,8 +247,8 @@
               "published_at": "Tue, 15 Sep 2026 15:59:00 +0900",
               "updated_at": "2026-09-15T20:54:31.997446+00:00",
               "link": "https://www.donga.com/news/Politics/article/all/20260915/134672790/2",
-              "distance": 0.733634,
-              "similarity_score": 0.266366,
+              "distance": 0.73356,
+              "similarity_score": 0.26644,
               "matched_query": "정책 발표",
               "score": 10.33
             }
@@ -187,8 +269,8 @@
               "published_at": "Tue, 15 Sep 2026 18:30:00 +0900",
               "updated_at": "2026-09-15T20:54:31.997446+00:00",
               "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008751588",
-              "distance": 0.768268,
-              "similarity_score": 0.231732,
+              "distance": 0.76833,
+              "similarity_score": 0.23167,
               "matched_query": "정치",
               "score": 9.63
             }
@@ -197,15 +279,75 @@
       ],
       "category": "정치",
       "keywords": [
-        "이재명 기자회견"
+        "이재명 대통령 기자회견"
       ],
       "publisher_count": 2,
       "article_count": 3
     },
     {
+      "issue_id": "issue-f7ebc57cc24e8739",
+      "issue_title": "생산자물가 한 달 만에 반등",
+      "summary": "8월 생산자물가는 폭염과 유가상승 등의 영향으로 한 달 만에 반등했으며, 8월 기준 생산자물가는 129.64로 전월 대비 0.2% 상승했다.",
+      "query": "경제",
+      "keyword": "생산자물가 한 달 만에 반등",
+      "expanded_queries": [],
+      "publishers": [
+        {
+          "publisher_id": "mk",
+          "publisher": "매일경제",
+          "articles": [
+            {
+              "article_id": "067d62ca874d013ba72d3f22c73139f30837568f2c59240b34bfd2b03114e7ac",
+              "publisher_id": "mk",
+              "publisher": "매일경제",
+              "category": "경제",
+              "title": "시금치 51.9%↑·돼지고기 5.4%↑…생산자물가 한 달 만에 반등",
+              "description": "지난달 국내 생산자물가가 폭염과 유가상승 등의 영향으로 한 달 만에 반등한 것으로 나타났다. 18일 한은에 따르면 올해 8월 생산자물가는 129.64로 전월(129.43) 대비 0..",
+              "content": "지난달 국내 생산자물가가 폭염과 유가상승 등의 영향으로 한 달 만에 반등한 것으로 나타났다. 18일 한은에 따르면 올해 8월 생산자물가는 129.64로 전월(129.43) 대비 0..",
+              "published_at": "Fri, 18 Sep 2026 08:32:30 +09:00",
+              "updated_at": "2026-09-18T10:39:07.769547+00:00",
+              "link": "https://www.mk.co.kr/news/economy/12156060",
+              "distance": 0.641167,
+              "similarity_score": 0.358833,
+              "matched_query": "소비자 물가",
+              "score": 7.18
+            }
+          ]
+        },
+        {
+          "publisher_id": "sbs",
+          "publisher": "SBS",
+          "articles": [
+            {
+              "article_id": "725e38e4bb7fd3b4b2b2bfa365601df6b4c8708ac8ae866ea3da63a337a2d22f",
+              "publisher_id": "sbs",
+              "publisher": "SBS",
+              "category": "경제",
+              "title": "생산자물가 한 달 만에 반등…8월 폭염·유가 상승에 0.2%↑",
+              "description": "▲ 서울의 한 대형마트에서 판매되고 있는 시금치지난달 국내 생산자물가가 폭염과 유가 상승 등의 영향으로 한 달 만에 반등했습니다.오늘…",
+              "content": "▲ 서울의 한 대형마트에서 판매되고 있는 시금치지난달 국내 생산자물가가 폭염과 유가 상승 등의 영향으로 한 달 만에 반등했습니다.오늘…",
+              "published_at": "Fri, 18 Sep 2026 10:55:00 +0900",
+              "updated_at": "2026-09-18T10:39:07.769547+00:00",
+              "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008759939",
+              "distance": 0.656087,
+              "similarity_score": 0.343913,
+              "matched_query": "소비자 물가",
+              "score": 6.88
+            }
+          ]
+        }
+      ],
+      "category": "경제",
+      "keywords": [
+        "생산자물가 한 달 만에 반등"
+      ],
+      "publisher_count": 2,
+      "article_count": 2
+    },
+    {
       "issue_id": "issue-85e68bd20d6b8876",
       "issue_title": "사회적가치 페스타",
-      "summary": "대한상공회의소가 주최하는 '제3회 대한민국 사회적가치 페스타'가 서울 코엑스에서 열렸으며, 최태원 회장이 AI 기술을 사회문제 해결 도구로 활용하는 방안을 제시했다.",
+      "summary": "대한상공회의소가 주최하는 '제3회 대한민국 사회적가치 페스타'가 9월 21일부터 22일까지 서울 코엑스에서 열리며, 최태원 회장이 AI을 강력한 사회문제 해결사로 소개했다.",
       "query": "사회",
       "keyword": "사회적가치 페스타",
       "expanded_queries": [],
@@ -260,38 +402,16 @@
         "사회적가치 페스타"
       ],
       "publisher_count": 2,
-      "article_count": 3
+      "article_count": 2
     },
     {
       "issue_id": "issue-e52f777bbf7966c5",
       "issue_title": "사회주택 전세사기 피해",
-      "summary": "공공기관을 믿고 사회주택에 입주한 청년들이 전세사기 피해를 호소했으며, 보증금 보호 제도의 빈틈이 지적되었다.",
+      "summary": "사회주택 전세사기 피해 청년들이 보증금을 돌려받지 못하고 있으며, 땅은 공공 소유이지만 건물은 민간 소유인 사회주택 제도의 보증금 보호 빈틈이 문제로 지적되고 있다.",
       "query": "사회",
       "keyword": "사회주택 전세사기 피해",
       "expanded_queries": [],
       "publishers": [
-        {
-          "publisher_id": "hani",
-          "publisher": "한겨레",
-          "articles": [
-            {
-              "article_id": "279df8edf9f1e2b015e61dcd8047f6141f0b327e0e42794d72cb99451b56a770",
-              "publisher_id": "hani",
-              "publisher": "한겨레",
-              "category": "사회",
-              "title": "땅은 공공, 건물은 민간…사회주택 보증금 보호의 빈틈",
-              "description": "",
-              "content": "",
-              "published_at": "",
-              "updated_at": "2026-09-21T21:44:12.368212+00:00",
-              "link": "https://www.hani.co.kr/arti/society/society_general/1278971.html",
-              "distance": 0.764174,
-              "similarity_score": 0.235826,
-              "matched_query": "사회 정책",
-              "score": 14.72
-            }
-          ]
-        },
         {
           "publisher_id": "chosun",
           "publisher": "조선일보",
@@ -311,6 +431,28 @@
               "similarity_score": 0.235757,
               "matched_query": "사회 문제",
               "score": 14.72
+            }
+          ]
+        },
+        {
+          "publisher_id": "hani",
+          "publisher": "한겨레",
+          "articles": [
+            {
+              "article_id": "279df8edf9f1e2b015e61dcd8047f6141f0b327e0e42794d72cb99451b56a770",
+              "publisher_id": "hani",
+              "publisher": "한겨레",
+              "category": "사회",
+              "title": "땅은 공공, 건물은 민간…사회주택 보증금 보호의 빈틈",
+              "description": "",
+              "content": "",
+              "published_at": "",
+              "updated_at": "2026-09-21T21:44:12.368212+00:00",
+              "link": "https://www.hani.co.kr/arti/society/society_general/1278971.html",
+              "distance": 0.764304,
+              "similarity_score": 0.235696,
+              "matched_query": "사회 정책",
+              "score": 14.71
             }
           ]
         }
