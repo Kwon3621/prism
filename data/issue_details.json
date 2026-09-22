@@ -1,8 +1,8 @@
 {
-  "issue-4ed2652da02d4a7c": {
+  "issue-2c64667aac78b4af": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-4ed2652da02d4a7c",
+        "issue_id": "issue-2c64667aac78b4af",
         "publisher_id": "sbs",
         "publisher": "SBS",
         "articles": [
@@ -14,15 +14,16 @@
           }
         ],
         "analysis": {
-          "article_summary": "박지원 의원은 조희대 대법원장의 탄핵 가능성을 검토하고 사퇴를 촉구하며, 제주 경찰의 실종 사건 허위 종결 문제를 지적했다.",
-          "headline_frame": "조희대 대법원장의 탄핵 검토 및 사퇴 촉구",
-          "main_focus": "조희대 대법원장의 탄핵 가능성과 사퇴 요구, 제주 경찰의 실종 사건 처리 문제",
+          "article_summary": "박지원 의원은 조희대 대법원장의 재제청 거부와 관련해 탄핵 검토 및 사퇴를 촉구하며, 제주 경찰의 실종 사건 허위종결 문제도 함께 지적했다.",
+          "headline_frame": "조희대 대법원장의 재제청 거부와 탄핵 검토, 제주 경찰의 실종 사건 허위종결 문제를 동시에 부각",
+          "main_focus": "조희대 대법원장의 재제청 거부와 사퇴 촉구, 제주 경찰의 실종 사건 처리 문제",
           "keywords": [
+            "재제청 거부",
             "탄핵 검토",
             "사퇴 촉구",
-            "대법원장",
             "제주 경찰",
-            "실종 사건"
+            "실종 사건",
+            "허위종결"
           ],
           "main_actors": [
             "조희대",
@@ -33,1011 +34,149 @@
             "박지원"
           ],
           "causes": [
-            "대법관 논의 관습 돌연변이식으로 어김"
+            "대법관 논의 관습 돌연변이식으로 어김",
+            "의견 안 맞아도 끝까지 조율해야"
           ],
           "background": [
-            "재제청으로 해결...의견 안 맞아도 끝까지 조율해야"
+            "정책과정 공개 후 의견 받는 李스타일 적응 필요",
+            "고시원에 욕조설치 지적받고 고쳐야"
           ],
           "emphasized_effects": [
             "탄핵 검토",
-            "사퇴"
+            "사퇴 촉구",
+            "실종 염려 현실로 드러남"
           ],
           "affected_groups": [
-            "대법원장",
+            "조희대 명예",
             "제주 경찰"
           ],
           "tone": {
             "category": "비판",
             "evidence": [
-              "희대의 대법원장",
-              "탄핵도 검토",
-              "사퇴해야",
-              "제주암장경찰? 염려가 현실로 나타나"
+              "희대의 대법원장 조희대",
+              "재제청으로 해결...의견 안 맞아도 끝까지 조율해야",
+              "조희대 명예 위해서라도 사퇴해야...탄핵 검토도"
             ]
           },
           "outlook": {
             "direction": "혼합",
-            "summary": "조희대 사퇴 여부에 따라 탄핵 가능성 검토, 제주 경찰 문제 해결을 위한 시스템 강화 필요"
+            "summary": "조희대 사퇴 촉구(부정적)와 탄핵 검토(부정적) 및 제주 경찰 문제 지적(부정적)이 혼재"
           },
           "less_covered_context": [
-            "정책과정 공개 후 의견 받는 李스타일 적응",
-            "고시원에 욕조설치",
-            "노웅래 무죄",
-            "다음 총선때 복권"
+            "정책과정 공개 후 의견 받는 李스타일 적응 필요",
+            "고시원에 욕조설치 지적받고 고쳐야"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:44:36.371634+00:00",
+        "analyzed_at": "2026-09-22T16:22:18.642556+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-4ed2652da02d4a7c",
-        "publisher_id": "chosun",
-        "publisher": "조선일보",
-        "articles": [
-          {
-            "article_id": "bf47e7cded768b1699341bb39dd2d2c1cb5723c4bce32bbcb624d85e92df3627",
-            "title": "“정치 9단도 못 풀겠다”…조희대 묘안 못 찾는 與",
-            "published_at": "Mon, 24 Aug 2026 06:35:49 +0000",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/24/MM4DIZDFHA4DOM3DHE3DCMLBMU/"
-          }
-        ],
-        "analysis": {
-          "article_summary": "청와대와 더불어민주당이 조희대 대법관 후보 서면 제청 사태에 대한 대응책을 고심하고 있으나, 탄핵 추진 근거가 부족해 묘안을 찾지 못하고 있다.",
-          "headline_frame": "조희대 묘안 못 찾는 與",
-          "main_focus": "대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민",
-          "keywords": [
-            "대법관 후보 서면 제청",
-            "탄핵 추진",
-            "위법 사항",
-            "묘안",
-            "정치적 부담"
-          ],
-          "main_actors": [
-            "청와대",
-            "더불어민주당",
-            "조희대"
-          ],
-          "quoted_sources": [
-            "청와대 관계자"
-          ],
-          "causes": [
-            "대법관 후보 서면 제청 사태",
-            "탄핵 추진 근거 부족"
-          ],
-          "background": [
-            "대법관 공백 사태 장기화",
-            "청와대 패싱에 대한 분노"
-          ],
-          "emphasized_effects": [
-            "대법관 공백 사태 장기화",
-            "청와대의 정치적 부담 증가"
-          ],
-          "affected_groups": [
-            "대법관",
-            "청와대"
-          ],
-          "tone": {
-            "category": "우려·경계",
-            "evidence": [
-              "대법관 공백 사태가 길어질수록 청와대의 정치적 부담도 커진다"
-            ]
-          },
-          "outlook": {
-            "direction": "부정",
-            "summary": "대법관 공백 사태 장기화로 청와대의 정치적 부담이 커질 것으로 전망"
-          },
-          "less_covered_context": [
-            "대법관 공백 사태 이후 사법부 운영에 미칠 구체적 영향",
-            "대법관 후보 서면 제청 사태의 법적 근거 및 절차"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:44:36.839738+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-4ed2652da02d4a7c",
+        "issue_id": "issue-2c64667aac78b4af",
         "publisher_id": "donga",
         "publisher": "동아일보",
         "articles": [
           {
-            "article_id": "fc9f8c1444d850043533a6a6f630dd4887fc81e4424a0f99ccd1f1f195e50bc3",
-            "title": "與 “정치 플레이어 된 조희대, 탄핵 당할 충분한 자격…사퇴해야”",
-            "published_at": "Sun, 23 Aug 2026 12:51:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260823/134524834/2"
+            "article_id": "c15bc3a0b2473fe6ed346db73970ab2d202248322d49301e1bfa10969b14c764",
+            "title": "법사위서 與 주도 ‘국감 증인’ 조희대 신청…국힘, 반발하며 회의 불참",
+            "published_at": "Mon, 21 Sep 2026 16:02:20 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260921/134711216/1"
           }
         ],
         "analysis": {
-          "article_summary": "더불어민주당은 조희대 대법원장이 사법부 수장의 품격과 존엄을 잃고 정치화되었다고 비판하며 자진 사퇴와 탄핵을 요구하고 있다.",
-          "headline_frame": "조희대 대법원장의 정치 플레이어 전락과 사퇴·탄핵 요구",
-          "main_focus": "조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판, 사퇴 및 탄핵 촉구",
+          "article_summary": "더불어민주당이 2026년도 법제사법위원회 국정감사에 조희대 대법원장을 증인으로 신청하자 국민의힘이 반발하며 전체회의에 전원 불참했다.",
+          "headline_frame": "국민의힘의 반발과 회의 불참",
+          "main_focus": "대법원장 증인 신청에 대한 삼권분립 및 사법부 독립성 침해 우려",
           "keywords": [
-            "사법부 정치화",
-            "사퇴 촉구",
-            "탄핵 자격",
-            "대법관 후보자 제청",
-            "사법 정의"
+            "국감 증인 신청",
+            "삼권분립",
+            "사법부 독립성",
+            "대법원장 출석",
+            "국민의힘 반발"
           ],
           "main_actors": [
-            "조희대 대법원장",
             "더불어민주당",
-            "박성준 수석대변인"
+            "국민의힘",
+            "조희대 대법원장",
+            "박형수 의원"
           ],
           "quoted_sources": [
-            "박성준 수석대변인"
+            "박형수 의원"
           ],
           "causes": [
-            "이재명 대통령과 면담 없이 대법관 후보자 2명을 서면 제청"
+            "더불어민주당의 조희대 대법원장 증인 신청"
           ],
           "background": [
-            "사법부 독립이라는 헌법적 가치",
-            "대법원장의 제청권"
+            "2026년도 법제사법위원회 국정감사"
           ],
           "emphasized_effects": [
-            "무너진 사법 정의",
-            "국민 신뢰 훼손"
+            "삼권분립 형해화",
+            "사법부 독립 및 정치적 중립성 훼손"
           ],
           "affected_groups": [
-            "국민"
+            "국민의힘 의원들",
+            "사법부"
           ],
           "tone": {
             "category": "비판",
             "evidence": [
-              "조 대법원장은 사법부의 수장으로 마땅히 지켜야 할 품격과 존엄을 스스로 내던진 채 말 그대로 ‘희대의 대법원장’으로 전락했다",
-              "정치 판사들은 사법의 정치화를 정당화하기 위해 사법부 독립이라는 헌법적 가치를 자신들의 방패막이로 악용하고 있다"
+              "국민의힘, 반발하며 회의 불참",
+              "대법원장을 증인으로 출석시키는 것에 대해 결단코 반대한다",
+              "삼권분립 형해화",
+              "사법부 독립, 정치적 중립성을 완전히 허물어뜨리는 것"
             ]
           },
           "outlook": {
-            "direction": "부정",
-            "summary": "조 대법원장의 사퇴 없이는 사법 정의 회복이 불가능하다는 입장"
+            "direction": "중립",
+            "summary": "향후 국정감사 증인 선정 과정에서 여야 간 갈등이 지속될 가능성이 있음"
           },
           "less_covered_context": [
-            "조 대법원장의 구체적 입장이나 반박 내용",
-            "대법관 후보자 제청의 법적 절차 및 정당성 검토",
-            "탄핵 절차의 구체적 진행 상황"
+            "조희대 대법원장의 구체적 입장",
+            "국정감사 증인 선정 절차의 구체적 규정",
+            "대법원장 증인 출석이 실제 국정감사에 미칠 구체적 영향"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:44:37.166138+00:00",
+        "analyzed_at": "2026-09-22T16:22:19.725880+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-4ed2652da02d4a7c",
+      "issue_id": "issue-2c64667aac78b4af",
       "groups": [
         {
-          "group_id": "group-001",
-          "label": "대법원장 탄핵·사퇴 요구와 사법부 정치화 비판",
-          "summary": "조희대 대법원장의 탄핵 가능성과 사퇴 요구, 사법부 수장으로서의 품격 상실 및 정치화 비판, 제주 경찰 실종 사건 처리 문제를 중심으로 한 비판적 보도",
+          "group_id": "group-1",
+          "label": "대법원장 재제청 거부와 경찰 실종 사건 문제",
+          "summary": "SBS는 조희대 대법원장의 재제청 거부와 사퇴 촉구, 제주 경찰의 실종 사건 허위종결 문제를 동시에 부각하며 두 사안에 대한 비판적인 태도를 보이고 있습니다.",
           "keywords": [
-            "탄핵 검토",
+            "재제청 거부",
             "사퇴 촉구",
-            "사법부 정치화",
-            "대법관 제청권",
-            "사법 정의 훼손"
+            "실종 사건 허위종결"
           ],
           "publisher_ids": [
-            "sbs",
-            "chosun",
-            "donga"
+            "sbs"
           ],
           "publishers": [
             {
               "publisher_id": "sbs",
               "publisher": "SBS"
-            },
-            {
-              "publisher_id": "chosun",
-              "publisher": "조선일보"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
             }
           ],
-          "publisher_count": 3,
+          "publisher_count": 1,
           "group_evidence": [
-            "조희대 대법원장의 탄핵 가능성과 사퇴 요구, 제주 경찰 실종 사건 처리 문제를 핵심 쟁점으로 다룸",
-            "대법관 후보 서면 제청 사태를 위법 사항으로 규정하고 탄핵 추진 근거 부족을 지적",
-            "사법부 수장으로서의 품격 상실과 정치화 비판, 사법 정의 훼손을 강조",
-            "대법관 제청권 행사와 사법부 독립이라는 헌법적 가치 위반을 지적",
-            "대법관 공백 사태 장기화와 청와대의 정치적 부담 증가를 우려"
+            "조희대 대법원장의 재제청 거부와 사퇴 촉구, 제주 경찰의 실종 사건 처리 문제를 동시에 부각하며, 두 사안 모두 비판적인 태도로 보도하고 있습니다. 핵심 쟁점은 대법원장의 거부에 대한 사퇴 요구와 경찰의 실종 사건 처리 부실입니다."
           ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 조희대 대법원장의 탄핵 가능성과 사퇴 요구를 핵심 쟁점으로 삼고 있으며, 사법부 수장으로서의 품격 상실 및 정치화 비판, 대법관 제청권 행사와 사법부 독립 가치 위반, 제주 경찰 실종 사건 처리 문제 등을 공통적으로 다루고 있습니다. 다만 SBS는 제주 경찰 실종 사건 처리에 초점을 두고, 조선일보는 청와대와 더불어민주당의 정치적 부담에, 동아일보는 사법 정의 훼손과 국민 신뢰 문제에 각각 강조점을 두고 있으나, 핵심 해석과 평가 방향은 대체로 일치하여 하나의 그룹으로 묶을 수 있습니다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-09-21T21:44:40.378955+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,sbs": {
-        "issue_id": "issue-4ed2652da02d4a7c",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "박지원 의원과 더불어민주당이 조희대 대법원장의 탄핵 가능성을 검토하고 사퇴를 촉구하며, 제주 경찰의 실종 사건 허위 종결 문제를 지적하고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 조희대 대법원장의 탄핵 검토 및 사퇴 촉구와 제주 경찰의 실종 사건 처리 문제를 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 가능성과 사퇴 요구, 제주 경찰의 실종 사건 허위 종결 문제를 지적함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조희대 대법원장의 사법부 수장 품격 상실과 정치화 비판, 사퇴 및 탄핵 요구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 조희대 대법원장의 탄핵 가능성과 사퇴 요구를, 동아일보는 사법부 수장으로서의 품격 상실과 정치화를 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 가능성과 사퇴 요구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조희대 대법원장의 사법부 수장 품격 상실과 정치화 비판",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 대법관 논의 관습 위반을, 동아일보는 대법관 후보자 서면 제청을 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법관 논의 관습 돌연변이식으로 어김",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "이재명 대통령과 면담 없이 대법관 후보자 2명을 서면 제청",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 대법원장과 제주 경찰에 대한 영향을, 동아일보는 국민에 대한 영향을 강조함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법원장의 탄핵 검토 및 사퇴, 제주 경찰의 실종 사건 처리 문제",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "무너진 사법 정의와 국민 신뢰 훼손",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '희대의 대법원장'과 '제주암장경찰?' 표현을, 동아일보는 '희대의 대법원장'과 '정치 판사' 표현을 사용하며 비판함",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장을 '희대의 대법원장'으로 표현하며 탄핵 검토와 사퇴 촉구, 제주 경찰의 실종 사건 처리 문제를 비판적으로 보도함",
-                "evidence": [
-                  "희대의 대법원장",
-                  "탄핵도 검토",
-                  "사퇴해야",
-                  "제주암장경찰? 염려가 현실로 나타나"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조희대 대법원장을 '희대의 대법원장'으로 표현하며 사법부 수장 품격 상실과 정치화를 비판하고, 정치 판사의 사법 정치화 악용을 지적함",
-                "evidence": [
-                  "조 대법원장은 사법부의 수장으로 마땅히 지켜야 할 품격과 존엄을 스스로 내던진 채 말 그대로 ‘희대의 대법원장’으로 전락했다",
-                  "정치 판사들은 사법의 정치화를 정당화하기 위해 사법부 독립이라는 헌법적 가치를 자신들의 방패막이로 악용하고 있다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "조희대 대법원장의 탄핵 가능성 검토 및 사퇴 촉구",
-          "제주 경찰의 실종 사건 허위 종결 문제 지적"
-        ],
-        "key_differences": [
-          "SBS는 제주 경찰의 실종 사건 처리에 초점을 맞춘 반면, 동아일보는 대법관 후보자 제청 절차에 초점을 맞춤",
-          "SBS는 대법원장과 제주 경찰을 영향 대상으로, 동아일보는 국민을 영향 대상으로 강조함"
-        ],
-        "comparison_report": "SBS와 동아일보 모두 조희대 대법원장의 탄핵 검토 및 사퇴 촉구와 제주 경찰의 실종 사건 처리 문제를 보도했으나, SBS는 대법관 논의 관습 위반을 원인으로, 동아일보는 대법관 후보자 서면 제청을 원인으로 제시하며, SBS는 대법원장과 제주 경찰에 대한 영향을, 동아일보는 국민에 대한 영향을 강조했다. 두 언론사 모두 '희대의 대법원장'이라는 표현을 사용하며 비판적인 태도를 보였으나, SBS는 '제주암장경찰?'이라는 표현을, 동아일보는 '정치 판사'라는 표현을 추가로 사용하며 사법부 정치화 문제를 더 부각시켰다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 박지원 \"희대의 대법원장 조희대, 탄핵도 검토…제주암장경찰? 염려가 현실로 나타나\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008718068",
-            "published_at": "Mon, 24 Aug 2026 14:59:00 +0900"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "與 “정치 플레이어 된 조희대, 탄핵 당할 충분한 자격…사퇴해야”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260823/134524834/2",
-            "published_at": "Sun, 23 Aug 2026 12:51:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-09-21T21:44:48.936562+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga": {
-        "issue_id": "issue-4ed2652da02d4a7c",
-        "selected_publishers": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "조희대 대법관 후보 서면 제청 사태를 둘러싸고 청와대와 더불어민주당이 대응책을 고심하고 있으며, 탄핵 추진 근거 부족과 정치적 부담 증가 문제가 공통적으로 제기되고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 조희대 대법관 후보 서면 제청 사태를 다루며, 청와대와 더불어민주당의 대응 고민 및 탄핵 추진 근거 부족을 공통적으로 언급하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "대법관 후보 서면 제청 사태에 대한 더불어민주당의 비판과 사퇴·탄핵 요구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 청와대와 더불어민주당의 대응 고민을, 동아일보는 조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판을 핵심 관점으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판, 사퇴 및 탄핵 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 탄핵 추진 근거 부족을 원인으로 강조하지만, 조선일보는 '대법관 공백 사태 장기화'를, 동아일보는 '사법부 독립이라는 헌법적 가치'를 배경으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 후보 서면 제청 사태와 탄핵 추진 근거 부족",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "이재명 대통령과 면담 없이 대법관 후보자 2명을 서면 제청한 행위",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 '대법관 공백 사태 장기화'와 '청와대의 정치적 부담 증가'를, 동아일보는 '무너진 사법 정의'와 '국민 신뢰 훼손'을 영향 및 대상으로 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 공백 사태 장기화와 청와대의 정치적 부담 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "무너진 사법 정의와 국민 신뢰 훼손",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "조선일보는 '우려·경계' 태도로 대법관 공백 사태의 정치적 부담을, 동아일보는 '비판' 태도로 조 대법원장의 품격 상실과 사법부 정치화를 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 공백 사태가 길어질수록 청와대의 정치적 부담도 커진다는 우려·경계 태도",
-                "evidence": [
-                  "대법관 공백 사태가 길어질수록 청와대의 정치적 부담도 커진다"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조 대법원장은 사법부의 수장으로 마땅히 지켜야 할 품격과 존엄을 스스로 내던진 채 말 그대로 ‘희대의 대법원장’으로 전락했다는 비판 태도",
-                "evidence": [
-                  "조 대법원장은 사법부의 수장으로 마땅히 지켜야 할 품격과 존엄을 스스로 내던진 채 말 그대로 ‘희대의 대법원장’으로 전락했다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "조희대 대법관 후보 서면 제청 사태",
-          "탄핵 추진 근거 부족",
-          "대법관 공백 사태 장기화",
-          "청와대의 정치적 부담 증가"
-        ],
-        "key_differences": [
-          "조선일보는 청와대와 더불어민주당의 대응 고민을, 동아일보는 조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판을 핵심 관점으로 제시",
-          "조선일보는 '우려·경계' 태도를, 동아일보는 '비판' 태도를 보임",
-          "조선일보는 '대법관 공백 사태 장기화'를, 동아일보는 '무너진 사법 정의'를 강조"
-        ],
-        "comparison_report": "두 언론사 모두 조희대 대법관 후보 서면 제청 사태를 다루지만, 조선일보는 청와대와 더불어민주당의 대응 고민 및 대법관 공백 사태의 정치적 부담에 초점을 맞춘 반면, 동아일보는 조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화를 비판하며 사퇴와 탄핵을 촉구하는 태도를 보이고 있다. 공통적으로는 탄핵 추진 근거 부족과 대법관 공백 사태 장기화 문제를 제기하지만, 동아일보는 '사법부 독립'이라는 헌법적 가치를 배경으로 강조하는 반면 조선일보는 '대법관 공백 사태 장기화'를 직접적인 배경으로 제시하고 있다. 영향 측면에서는 조선일보는 '대법관'과 '청와대'를, 동아일보는 '국민'을 주요 대상으로 삼고 있으며, 보도 태도에서도 조선일보는 우려·경계의 중립적 시각을, 동아일보는 강한 비판의 시각을 보이고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "“정치 9단도 못 풀겠다”…조희대 묘안 못 찾는 與",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/24/MM4DIZDFHA4DOM3DHE3DCMLBMU/",
-            "published_at": "Mon, 24 Aug 2026 06:35:49 +0000"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "與 “정치 플레이어 된 조희대, 탄핵 당할 충분한 자격…사퇴해야”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260823/134524834/2",
-            "published_at": "Sun, 23 Aug 2026 12:51:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-09-21T21:44:50.075105+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,sbs": {
-        "issue_id": "issue-4ed2652da02d4a7c",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          }
-        ],
-        "common_summary": "조희대 대법원장의 탄핵 가능성과 사퇴 촉구, 제주 경찰의 실종 사건 허위 종결 문제를 다루고 있으나, SBS는 박지원 의원의 발언을 중심으로 비판하고, 조선일보는 청와대와 더불어민주당의 대응 고민을 우려하며 경계하는 태도를 보인다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 조희대 대법원장의 탄핵 가능성과 사퇴 촉구, 제주 경찰의 실종 사건 허위 종결 문제를 다루고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 검토 및 사퇴 촉구, 제주 경찰의 실종 사건 허위 종결 문제를 비판적으로 보도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "조희대 대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민을 우려하며 보도",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 조희대 대법원장의 탄핵 가능성과 사퇴 요구를 핵심 관점으로 삼는 반면, 조선일보는 대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민을 핵심 관점으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 가능성과 사퇴 촉구",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 대법관 논의 관습 돌연변이식으로 어긴 것을 원인으로 강조하는 반면, 조선일보는 탄핵 추진 근거 부족과 대법관 공백 사태 장기화, 청와대 패싱에 대한 분노를 배경으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법관 논의 관습 돌연변이식으로 어긴 것",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "탄핵 추진 근거 부족, 대법관 공백 사태 장기화, 청와대 패싱에 대한 분노",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 대법원장과 제주 경찰을 영향 대상으로 강조하는 반면, 조선일보는 대법관과 청와대를 영향 대상으로 제시한다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법원장 탄핵 검토 및 사퇴, 제주 경찰 실종 사건 허위 종결",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 공백 사태 장기화, 청와대의 정치적 부담 증가",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '희대의 대법원장', '탄핵도 검토', '사퇴해야' 등의 표현을 통해 비판적인 태도를 보이는 반면, 조선일보는 '대법관 공백 사태가 길어질수록 청와대의 정치적 부담도 커진다'는 우려를 표명하며 경계하는 태도를 보인다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 검토 및 사퇴 촉구를 비판적으로 보도",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 공백 사태 장기화에 따른 청와대의 정치적 부담 증가를 우려하며 경계하는 보도",
-                "evidence": []
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "조희대 대법원장의 탄핵 가능성과 사퇴 촉구",
-          "제주 경찰의 실종 사건 허위 종결 문제"
-        ],
-        "key_differences": [
-          "SBS는 박지원 의원의 발언을 중심으로 조희대 대법원장을 직접 비판하는 반면, 조선일보는 청와대와 더불어민주당의 대응 고민을 우려하며 간접적으로 보도"
-        ],
-        "comparison_report": "SBS는 박지원 의원의 발언을 인용하여 조희대 대법원장의 탄핵 가능성과 사퇴를 촉구하고 제주 경찰의 실종 사건 허위 종결 문제를 비판적으로 보도한 반면, 조선일보는 대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민을 우려하며 경계하는 태도를 보였다. 두 언론사 모두 조희대 대법원장의 탄핵 가능성을 다루지만, SBS는 직접적인 비판과 사퇴 촉구를 강조하는 반면, 조선일보는 탄핵 추진 근거 부족과 대법관 공백 사태 장기화에 따른 정치적 부담을 우려하며 보도하였다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 박지원 \"희대의 대법원장 조희대, 탄핵도 검토…제주암장경찰? 염려가 현실로 나타나\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008718068",
-            "published_at": "Mon, 24 Aug 2026 14:59:00 +0900"
-          },
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "“정치 9단도 못 풀겠다”…조희대 묘안 못 찾는 與",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/24/MM4DIZDFHA4DOM3DHE3DCMLBMU/",
-            "published_at": "Mon, 24 Aug 2026 06:35:49 +0000"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-09-21T21:44:51.713675+00:00",
-        "model": "solar-pro3"
-      },
-      "chosun,donga,sbs": {
-        "issue_id": "issue-4ed2652da02d4a7c",
-        "selected_publishers": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          }
-        ],
-        "common_summary": "조희대 대법원장의 탄핵 가능성 및 사퇴 촉구, 제주 경찰의 실종 사건 허위 종결 문제 지적이 공통적으로 다뤄졌다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "SBS는 조희대 대법원장의 탄핵 검토 및 사퇴 촉구와 제주 경찰의 실종 사건 허위 종결 문제를 동시에 보도한 반면, 조선일보와 동아일보는 조희대 대법원장의 탄핵 및 사퇴 요구에 초점을 맞추고 제주 경찰 사건은 다루지 않았다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 검토 및 사퇴 촉구, 제주 경찰의 실종 사건 허위 종결 문제 지적",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "조희대 대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판, 사퇴 및 탄핵 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 조희대 대법원장의 탄핵 가능성과 사퇴 요구, 제주 경찰 문제를 강조한 반면, 조선일보와 동아일보는 조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판에 초점을 맞췄다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "조희대 대법원장의 탄핵 가능성과 사퇴 요구, 제주 경찰의 실종 사건 처리 문제",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판, 사퇴 및 탄핵 촉구",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 대법관 논의 관습 돌연변이식으로 어긴 점을 원인으로 제시한 반면, 조선일보와 동아일보는 대법관 후보 서면 제청 사태와 탄핵 추진 근거 부족을 원인으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "대법관 논의 관습 돌연변이식으로 어김",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 후보 서면 제청 사태, 탄핵 추진 근거 부족",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "이재명 대통령과 면담 없이 대법관 후보자 2명을 서면 제청",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 탄핵 검토와 사퇴 영향을 대법원장 및 제주 경찰에 미친 것으로 본 반면, 조선일보와 동아일보는 대법관 공백 사태 장기화와 사법부 정치화로 인한 국민 신뢰 훼손을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "탄핵 검토, 사퇴",
-                "evidence": []
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "대법관 공백 사태 장기화, 청와대의 정치적 부담 증가",
-                "evidence": []
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "무너진 사법 정의, 국민 신뢰 훼손",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '희대의 대법원장', '제주암장경찰' 등 비판적 표현을 사용한 반면, 조선일보와 동아일보는 '사법부 정치화', '희대의 대법원장' 등 비판적 표현을 사용했으나, 동아일보는 '사법부 독립이라는 헌법적 가치'를 방패막이로 악용한다는 표현을 추가로 제시했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "희대의 대법원장",
-                  "탄핵도 검토",
-                  "사퇴해야",
-                  "제주암장경찰? 염려가 현실로 나타나"
-                ]
-              },
-              {
-                "publisher_id": "chosun",
-                "publisher": "조선일보",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "대법관 공백 사태가 길어질수록 청와대의 정치적 부담도 커진다"
-                ]
-              },
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "조 대법원장은 사법부의 수장으로 마땅히 지켜야 할 품격과 존엄을 스스로 내던진 채 말 그대로 ‘희대의 대법원장’으로 전락했다",
-                  "정치 판사들은 사법의 정치화를 정당화하기 위해 사법부 독립이라는 헌법적 가치를 자신들의 방패막이로 악용하고 있다"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "조희대 대법원장의 탄핵 가능성 및 사퇴 촉구"
-        ],
-        "key_differences": [
-          "SBS는 제주 경찰의 실종 사건 허위 종결 문제를 추가로 보도한 반면, 조선일보와 동아일보는 조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판에 초점을 맞췄다."
-        ],
-        "comparison_report": "SBS는 조희대 대법원장의 탄핵 검토 및 사퇴 촉구와 함께 제주 경찰의 실종 사건 허위 종결 문제를 지적했으며, '희대의 대법원장', '제주암장경찰' 등 비판적 표현을 사용했다. 조선일보는 조희대 대법관 후보 서면 제청 사태에 대한 청와대와 더불어민주당의 대응 고민을 다루며 '대법관 공백 사태 장기화'와 '청와대의 정치적 부담 증가'를 강조했다. 동아일보는 조희대 대법원장의 사법부 수장으로서의 품격 상실과 정치화 비판을 중심으로 '무너진 사법 정의'와 '국민 신뢰 훼손'을 지적했으며, '사법부 독립이라는 헌법적 가치'를 방패막이로 악용한다는 표현을 추가로 제시했다.",
-        "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[정치쇼] 박지원 \"희대의 대법원장 조희대, 탄핵도 검토…제주암장경찰? 염려가 현실로 나타나\"",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008718068",
-            "published_at": "Mon, 24 Aug 2026 14:59:00 +0900"
-          },
-          {
-            "publisher_id": "chosun",
-            "publisher": "조선일보",
-            "title": "“정치 9단도 못 풀겠다”…조희대 묘안 못 찾는 與",
-            "link": "https://www.chosun.com/economy/economy_general/2026/08/24/MM4DIZDFHA4DOM3DHE3DCMLBMU/",
-            "published_at": "Mon, 24 Aug 2026 06:35:49 +0000"
-          },
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "與 “정치 플레이어 된 조희대, 탄핵 당할 충분한 자격…사퇴해야”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260823/134524834/2",
-            "published_at": "Sun, 23 Aug 2026 12:51:00 +0900"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-09-21T21:44:54.050601+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-984ad6ea1e2311d0": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-984ad6ea1e2311d0",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "614b047efafce170f852186e5a7c2197952711d5c3c2705c584c2363dd70ac98",
-            "title": "이형일, 과천 아파트 비거주 논란에 “국민 눈높이에 미흡, 송구”",
-            "published_at": "Tue, 15 Sep 2026 11:32:00 +0900",
-            "link": "https://www.donga.com/news/Politics/article/all/20260915/134670675/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이형일 부총리 겸 재정경제부 장관 후보자가 국회 인사청문회에서 과천 아파트 비거주 논란에 대해 국민 눈높이에 미흡했다며 송구함을 표명하고, 갭 투자와 정책 간 모순을 지적하는 질의에 답변했다.",
-          "headline_frame": "이형일 후보자의 과천 아파트 비거주 논란과 송구 표명",
-          "main_focus": "청문회에서의 논란 인정 및 갭 투자와 정책 간 모순에 대한 질의 응답",
-          "keywords": [
-            "비거주 1주택자",
-            "갭 투자",
-            "청문회",
-            "소신",
-            "정책 규제"
-          ],
-          "main_actors": [
-            "이형일",
-            "박수영"
-          ],
-          "quoted_sources": [
-            "국민의힘 박수영 의원"
-          ],
-          "causes": [
-            "전세 끼고 매매하는 갭 투자",
-            "실거주 기간 부족"
-          ],
-          "background": [
-            "17년간 보유",
-            "약 4개월 실거주",
-            "현 정부의 과세 강화 정책"
-          ],
-          "emphasized_effects": [
-            "국민 눈높이에 미흡",
-            "송구함"
-          ],
-          "affected_groups": [
-            "국민"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "이형일 부총리 겸 재정경제부 장관 후보자가 15일 경기 과천 아파트 비거주 1주택자 논란에 대해 “이유 여하를 막론하고 제 주택 비거주로 인한 논란과 국민들의 눈높이에 미흡한 부분에 대해 송구하다”고 고개를 숙였다"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "청문회에서의 논란 인정과 송구 표명, 갭 투자와 정책 간 모순에 대한 질의 응답이 다뤄졌으나 향후 전망은 제시되지 않음"
-          },
-          "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "다른 언론사의 보도 비교",
-            "후보자 사퇴 여부"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
-        "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:45:17.246229+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-984ad6ea1e2311d0",
-        "publisher_id": "mk",
-        "publisher": "매일경제",
-        "articles": [
-          {
-            "article_id": "b44e4cb6d131d5ac2fa1f756f212dcd033c9ffbbb423ce5e9c80914a210d44d3",
-            "title": "[장관 인사청문회] 이형일 “경제팀 원팀 이끌겠다”...이소영 “‘국가창업시대 열겠다’",
-            "published_at": "Tue, 15 Sep 2026 16:00:53 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12153212"
-          }
-        ],
-        "analysis": {
-          "article_summary": "이형일 부총리 후보자가 인사청문회에서 경제팀 원팀 운영 의지를 밝히고, 이소영 후보자가 국가창업시대 개막을 언급했으나, 이형일 후보자의 아파트 장기 보유 및 단기 거주 문제가 증인 채택 불발과 함께 여야 간 신경전으로 부각되었다.",
-          "headline_frame": "인사청문회에서의 경제 정책 방향 제시와 주택 비거주 논란",
-          "main_focus": "이형일 후보자의 경제 정책 방향 제시와 함께 주택 비거주 논란에 대한 여야 간 신경전",
-          "keywords": [
-            "경제팀 원팀",
-            "3% 성장",
-            "소득 4만달러",
-            "우주항공",
-            "첨단기술",
-            "아파트 17년 보유"
-          ],
-          "main_actors": [
-            "이형일",
-            "이소영",
-            "여야"
-          ],
-          "quoted_sources": [
-            "이형일",
-            "이소영"
-          ],
-          "causes": [
-            "아파트 17년 보유, 4개월 거주"
-          ],
-          "background": [
-            "장관 인사청문회"
-          ],
-          "emphasized_effects": [
-            "여야 신경전"
-          ],
-          "affected_groups": [
-            "이형일 부총리 후보자"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "이형일 경제부총리 후보자 “올 3% 성장, 소득 4만달러” 자신감",
-              "우주항공 등 7대 첨단기술 기반 마련",
-              "아파트 17년 보유, 4개월 거주 지적 증인 채택 불발 청문회서 여야 신경.."
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "인사청문회 진행 상황에 대한 구체적 전망 제시 없음"
-          },
-          "less_covered_context": [
-            "이소영 후보자의 구체적 정책 내용",
-            "증인 채택 불발에 대한 구체적 사유",
-            "아파트 비거주 논란의 구체적 근거"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:45:17.298507+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-984ad6ea1e2311d0",
-      "groups": [
         {
-          "group_id": "group-1",
-          "label": "청문회 논란 인정 및 송구 표명",
-          "summary": "이형일 후보자의 청문회에서 갭 투자와 정책 간 모순을 인정하고 국민 눈높이에 미흡한 부분에 대해 송구함을 표명한 내용을 중심으로 보도",
+          "group_id": "group-2",
+          "label": "대법원장 증인 신청과 삼권분립 침해 우려",
+          "summary": "동아일보는 더불어민주당의 대법원장 증인 신청에 대해 삼권분립 및 사법부 독립성 침해 우려를 제기하며, 국민의힘의 반발과 회의 불참을 보도하고 있습니다.",
           "keywords": [
-            "청문회",
-            "갭 투자",
-            "비거주 1주택자",
-            "소신",
-            "송구"
+            "국감 증인 신청",
+            "삼권분립",
+            "사법부 독립성"
           ],
           "publisher_ids": [
             "donga"
@@ -1050,38 +189,7 @@
           ],
           "publisher_count": 1,
           "group_evidence": [
-            "이형일 후보자가 청문회에서 갭 투자와 정책 간 모순을 인정하고, 비거주로 인한 논란과 국민 눈높이에 미흡한 부분에 대해 송구함을 표명했다는 점을 중심으로 보도",
-            "핵심 쟁점은 청문회에서 제기된 갭 투자와 정책 간 모순에 대한 질의 응답",
-            "해석 방향은 후보자의 논란을 인정하고 송구함을 표명하는 중립적 설명"
-          ]
-        },
-        {
-          "group_id": "group-2",
-          "label": "경제 정책 방향 제시 및 여야 신경전",
-          "summary": "이형일 후보자의 경제 정책 방향 제시와 함께 주택 비거주 논란에 대한 여야 간 신경전을 중심으로 보도",
-          "keywords": [
-            "경제팀 원팀",
-            "3% 성장",
-            "소득 4만달러",
-            "우주항공",
-            "첨단기술",
-            "여야 신경전"
-          ],
-          "publisher_ids": [
-            "mk"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
-            }
-          ],
-          "publisher_count": 1,
-          "group_evidence": [
-            "이형일 후보자가 경제팀 원팀, 3% 성장, 소득 4만달러, 우주항공 등 7대 첨단기술 기반 마련을 제시하며 경제 정책 방향을 설명",
-            "주택 비거주 논란에 대한 여야 간 신경전을 강조",
-            "핵심 쟁점은 경제 정책 방향 제시와 주택 비거주 논란에 대한 여야 신경전",
-            "해석 방향은 경제 정책 방향 제시와 여야 신경전을 중립적으로 설명"
+            "더불어민주당의 대법원장 증인 신청에 대해 삼권분립 형해화와 사법부 독립 훼손 우려를 제기하며, 국민의힘의 반발과 회의 불참을 보도하고 있습니다. 핵심 쟁점은 국정감사 증인 선정 과정에서의 정치적 갈등과 사법부 독립성 침해 문제입니다."
           ]
         }
       ],
@@ -1092,344 +200,18 @@
             "group-1",
             "group-2"
           ],
-          "contrast_statement": "동아일보는 청문회에서 이형일 후보자가 갭 투자와 정책 간 모순을 인정하고 국민 눈높이에 미흡한 부분에 대해 송구함을 표명한 점을 중심으로 보도한 반면, 매일경제는 경제팀 원팀, 3% 성장, 소득 4만달러, 우주항공 등 7대 첨단기술 기반 마련 등 경제 정책 방향 제시와 함께 주택 비거주 논란에 대한 여야 간 신경전을 강조하여 보도했습니다."
+          "contrast_statement": "SBS는 조희대 대법원장의 재제청 거부와 사퇴 촉구, 제주 경찰의 실종 사건 허위종결 문제를 비판적으로 보도하는 반면, 동아일보는 더불어민주당의 대법원장 증인 신청에 따른 삼권분립 및 사법부 독립성 침해 우려를 제기하며 국민의힘의 반발을 보도하고 있습니다. 두 언론사 모두 대법원장을 다루지만, SBS는 대법원장의 개인적 거부에 대한 사퇴 요구와 경찰의 실종 사건 처리 문제를, 동아일보는 국정감사 증인 신청 과정에서의 정치적 갈등과 사법부 독립성 문제를 중심으로 보도하고 있습니다."
         }
       ],
-      "grouping_summary": "두 언론사 모두 이형일 후보자의 인사청문회를 다루었으나, 동아일보는 청문회에서 제기된 갭 투자와 정책 간 모순에 대한 논란 인정과 송구 표명을 중심으로 보도한 반면, 매일경제는 경제 정책 방향 제시와 주택 비거주 논란에 대한 여야 간 신경전을 중심으로 보도하여 서로 다른 핵심 관점을 보였습니다.",
+      "grouping_summary": "두 언론사는 동일한 대법원장을 다루지만, SBS는 대법원장의 재제청 거부와 사퇴 촉구, 제주 경찰의 실종 사건 허위종결 문제를 비판적으로 보도하고, 동아일보는 더불어민주당의 대법원장 증인 신청에 따른 삼권분립 및 사법부 독립성 침해 우려를 제기하며 국민의힘의 반발을 보도하고 있습니다. 핵심 쟁점과 해석 방향이 서로 다르므로 별도의 그룹으로 분류했습니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-09-21T21:45:21.875987+00:00",
-      "model": "solar-pro3"
-    },
-    "comparisons": {
-      "donga,mk": {
-        "issue_id": "issue-984ad6ea1e2311d0",
-        "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "이형일 부총리 겸 재정경제부 장관 후보자가 국회 인사청문회에서 과천 아파트 비거주 논란에 대해 국민 눈높이에 미흡했다며 송구함을 표명하고, 갭 투자와 정책 간 모순을 지적하는 질의에 답변했다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 이형일 후보자의 과천 아파트 비거주 논란과 송구 표명을 보도하며, 청문회에서 갭 투자와 정책 간 모순에 대한 질의가 있었음을 공통적으로 확인했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "이형일 후보자의 과천 아파트 비거주 논란과 송구 표명",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "이형일 후보자의 아파트 장기 보유 및 단기 거주 문제와 여야 간 신경전",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 청문회에서의 논란 인정 및 갭 투자와 정책 간 모순에 대한 질의 응답을 핵심으로 본 반면, 매일경제는 경제 정책 방향 제시와 주택 비거주 논란에 대한 여야 간 신경전을 함께 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "청문회에서의 논란 인정 및 갭 투자와 정책 간 모순에 대한 질의 응답",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "이형일 후보자의 경제 정책 방향 제시와 함께 주택 비거주 논란에 대한 여야 간 신경전",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 이형일 후보자의 아파트 장기 보유(17년)와 단기 거주(약 4개월)를 원인으로 제시했으나, 동아일보는 전세 끼고 매매하는 갭 투자를 구체적으로 언급한 반면 매일경제는 증인 채택 불발과 청문회 상황을 배경으로 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "전세 끼고 매매하는 갭 투자와 실거주 기간 부족",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "아파트 17년 보유, 4개월 거주 지적과 증인 채택 불발 청문회",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 국민 눈높이에 미흡함을 강조한 반면, 매일경제는 여야 간 신경전을 부각시켜 이형일 부총리 후보자 본인에게 미친 영향을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "국민 눈높이에 미흡함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "여야 간 신경전",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "두 언론사 모두 중립 설명 태도를 보였으나, 동아일보는 '고개를 숙였다'는 표현을 통해 송구함을 구체적으로 전달한 반면 매일경제는 '신경전'이라는 표현을 사용해 갈등 상황을 강조했다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며 송구함을 구체적으로 표현함",
-                "evidence": [
-                  "이형일 부총리 겸 재정경제부 장관 후보자가 15일 경기 과천 아파트 비거주 1주택자 논란에 대해 “이유 여하를 막론하고 제 주택 비거주로 인한 논란과 국민들의 눈높이에 미흡한 부분에 대해 송구하다”고 고개를 숙였다"
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며 여야 간 신경전을 강조함",
-                "evidence": [
-                  "이형일 경제부총리 후보자 “올 3% 성장, 소득 4만달러” 자신감",
-                  "우주항공 등 7대 첨단기술 기반 마련",
-                  "아파트 17년 보유, 4개월 거주 지적 증인 채택 불발 청문회서 여야 신경.."
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "이형일 후보자의 과천 아파트 비거주 논란과 송구 표명",
-          "청문회에서 갭 투자와 정책 간 모순에 대한 질의",
-          "이형일 후보자의 아파트 장기 보유(17년)와 단기 거주(약 4개월) 사실"
-        ],
-        "key_differences": [
-          "동아일보는 국민 눈높이에 미흡함을 강조한 반면 매일경제는 여야 간 신경전을 부각시킴",
-          "동아일보는 갭 투자를 구체적으로 언급한 반면 매일경제는 증인 채택 불발 상황을 강조함"
-        ],
-        "comparison_report": "동아일보와 매일경제는 이형일 부총리 후보자의 과천 아파트 비거주 논란과 송구 표명을 공통적으로 보도했으나, 동아일보가 청문회에서 갭 투자와 정책 간 모순에 대한 질의 응답을 핵심으로 다룬 반면 매일경제는 경제 정책 방향 제시와 함께 주택 비거주 논란에 대한 여야 간 신경전을 강조했다. 두 언론사 모두 아파트 장기 보유(17년)와 단기 거주(약 4개월)를 원인으로 제시했으나, 동아일보는 전세 끼고 매매하는 갭 투자를 구체적으로 언급한 반면 매일경제는 증인 채택 불발 청문회 상황을 배경으로 부각시켰다. 영향 측면에서는 동아일보가 국민 눈높이에 미흡함을 강조한 반면 매일경제는 여야 간 신경전을 부각시켜 이형일 후보자 본인에게 미친 영향을 강조했다. 보도 태도에서는 두 언론사 모두 중립 설명 태도를 보였으나, 동아일보는 '고개를 숙였다'는 표현을 통해 송구함을 구체적으로 전달한 반면 매일경제는 '신경전'이라는 표현을 사용해 갈등 상황을 강조했다.",
-        "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "이형일, 과천 아파트 비거주 논란에 “국민 눈높이에 미흡, 송구”",
-            "link": "https://www.donga.com/news/Politics/article/all/20260915/134670675/2",
-            "published_at": "Tue, 15 Sep 2026 11:32:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "[장관 인사청문회] 이형일 “경제팀 원팀 이끌겠다”...이소영 “‘국가창업시대 열겠다’",
-            "link": "https://www.mk.co.kr/news/economy/12153212",
-            "published_at": "Tue, 15 Sep 2026 16:00:53 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-09-21T21:45:31.598927+00:00",
-        "model": "solar-pro3"
-      }
-    }
-  },
-  "issue-7cbae401e950158c": {
-    "publisher_analyses": [
-      {
-        "issue_id": "issue-7cbae401e950158c",
-        "publisher_id": "sbs",
-        "publisher": "SBS",
-        "articles": [
-          {
-            "article_id": "fedf69edd814e4c55cb8fb57c48db52dedf6bffdde083001fa1b8c666125d79f",
-            "title": "2024년 한국 경제, 수출 비중 커지고 부가가치율 상승",
-            "published_at": "Mon, 21 Sep 2026 14:41:00 +0900",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008763838"
-          }
-        ],
-        "analysis": {
-          "article_summary": "2024년 반도체 경기 회복으로 한국 경제에서 수출 비중이 확대되고 부가가치율이 상승한 것으로 나타났다.",
-          "headline_frame": "반도체 경기 회복을 한국 경제의 수출 비중 확대와 부가가치율 상승이라는 긍정적 경제 지표 변화에 초점을 맞추고 있다.",
-          "main_focus": "반도체 경기 호황이 한국 경제의 수출 구조와 부가가치 창출에 미친 긍정적 영향을 분석하는 데 중점을 둔다.",
-          "keywords": [
-            "반도체 경기",
-            "수출 비중",
-            "부가가치율",
-            "한국 경제"
-          ],
-          "main_actors": [
-            "한국 경제"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "반도체 경기 부진에서 벗어남"
-          ],
-          "background": [
-            "2024년"
-          ],
-          "emphasized_effects": [
-            "수출 비중 커짐",
-            "부가가치율 상승"
-          ],
-          "affected_groups": [
-            "한국 경제"
-          ],
-          "tone": {
-            "category": "기대",
-            "evidence": [
-              "수출 비중 커지고 부가가치율 상승"
-            ]
-          },
-          "outlook": {
-            "direction": "긍정",
-            "summary": "반도체 경기 호황이 지속될 경우 한국 경제의 수출 주도 성장이 이어질 것으로 전망된다."
-          },
-          "less_covered_context": [
-            "반도체 경기 호황의 구체적인 원인 분석",
-            "수출 증가가 내수 경제에 미치는 영향"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:45:35.035108+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-7cbae401e950158c",
-        "publisher_id": "donga",
-        "publisher": "동아일보",
-        "articles": [
-          {
-            "article_id": "05dabc89fa3ba3902537deed8b43d13d435ffed10bac334e7fdb35f7fbf11714",
-            "title": "[애널리스트의 마켓뷰]반도체 기업 주주 환원, 한국 증시 우상향 이끌 것",
-            "published_at": "Tue, 25 Aug 2026 00:30:00 +0900",
-            "link": "https://www.donga.com/news/Economy/article/all/20260824/134535321/2"
-          }
-        ],
-        "analysis": {
-          "article_summary": "반도체 가격 상승과 AI 투자 둔화 우려 속에서도 한국 증시는 상반기 101% 상승률을 기록했으며, 반도체 흑자로 인해 경상수지 흑자 규모가 3600억 달러에 달할 것으로 예상된다.",
-          "headline_frame": "반도체 기업의 주주 환원 정책이 한국 증시의 상승 추세를 이끌 것이라는 전망",
-          "main_focus": "반도체 기업의 주주 환원 정책이 한국 증시 상승에 미치는 영향과 반도체 호황이 경상수지 흑자 확대에 기여하는 경제적 효과",
-          "keywords": [
-            "반도체 기업",
-            "주주 환원",
-            "한국 증시",
-            "경상수지",
-            "반도체 흑자"
-          ],
-          "main_actors": [
-            "반도체 기업",
-            "한국 증시",
-            "경상수지"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "반도체 가격 상승",
-            "AI 투자 둔화 우려"
-          ],
-          "background": [
-            "올해 상반기 코스피 상승률 101%",
-            "역대 최대 규모의 반도체 흑자",
-            "2026년 한국 경상수지 흑자 세계 2위 가능성"
-          ],
-          "emphasized_effects": [
-            "한국 증시 우상향",
-            "경상수지 흑자 3600억 달러 달성",
-            "2026년 세계 2위 경상수지 흑자"
-          ],
-          "affected_groups": [
-            "한국 증시",
-            "반도체 기업"
-          ],
-          "tone": {
-            "category": "기대",
-            "evidence": [
-              "한국 증시 우상향 이끌 것",
-              "역대 최대 규모의 반도체 흑자",
-              "2026년 한국의 경상수지 흑자 규모는 3600억 달러 수준을 달성할 것으로 예상한다"
-            ]
-          },
-          "outlook": {
-            "direction": "긍정",
-            "summary": "반도체 호황이 지속될 경우 한국 증시의 추가 상승과 경상수지 흑자 확대가 기대된다."
-          },
-          "less_covered_context": [
-            "AI 투자 둔화의 구체적 원인",
-            "반도체 가격 상승의 지속 가능성",
-            "글로벌 주식 시장 시가총액에서 한국 비중 2.5%의 구체적 의미"
-          ],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:45:35.759623+00:00",
-        "model": "solar-pro3"
-      }
-    ],
-    "publisher_grouping": {
-      "issue_id": "issue-7cbae401e950158c",
-      "groups": [
-        {
-          "group_id": "group-semiconductor-economic-impact",
-          "label": "반도체 경기 호황의 경제적 파급 효과",
-          "summary": "두 언론사 모두 반도체 경기 호황이 한국 경제에 미치는 긍정적 영향을 중심으로 보도하고 있다. SBS는 반도체 경기 회복이 수출 비중 확대와 부가가치율 상승을 통해 한국 경제의 구조적 개선에 기여한다는 점을 강조하며, 동아일보는 반도체 기업의 주주 환원 정책이 증시 상승을 이끌고 반도체 호황이 경상수지 흑자 확대에 기여한다는 점을 강조한다. 두 언론사 모두 반도체 호황을 한국 경제의 긍정적 전환점으로 해석하고 있으며, 핵심 쟁점과 해석 방향이 대체로 일치한다.",
-          "keywords": [
-            "반도체 경기 호황",
-            "한국 경제 긍정적 영향",
-            "수출 구조 개선",
-            "증시 상승",
-            "경상수지 흑자"
-          ],
-          "publisher_ids": [
-            "sbs",
-            "donga"
-          ],
-          "publishers": [
-            {
-              "publisher_id": "sbs",
-              "publisher": "SBS"
-            },
-            {
-              "publisher_id": "donga",
-              "publisher": "동아일보"
-            }
-          ],
-          "publisher_count": 2,
-          "group_evidence": [
-            "SBS: 반도체 경기 호황이 한국 경제의 수출 구조와 부가가치 창출에 미친 긍정적 영향을 분석",
-            "Donga: 반도체 기업의 주주 환원 정책이 한국 증시 상승에 미치는 영향과 반도체 호황이 경상수지 흑자 확대에 기여하는 경제적 효과"
-          ]
-        }
-      ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 반도체 경기 호황을 한국 경제의 긍정적 전환점으로 해석하고 있으며, SBS는 수출 비중 확대와 부가가치율 상승을 통한 구조적 개선을, 동아일보는 증시 상승과 경상수지 흑자 확대를 강조하고 있다. 핵심 관점이 대체로 일치하므로 하나의 그룹으로 묶었다.",
-      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-      "grouping_status": "success",
-      "grouped_at": "2026-09-21T21:45:39.058945+00:00",
+      "grouped_at": "2026-09-22T16:22:25.098219+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
       "donga,sbs": {
-        "issue_id": "issue-7cbae401e950158c",
+        "issue_id": "issue-2c64667aac78b4af",
         "selected_publishers": [
           {
             "publisher_id": "sbs",
@@ -1440,24 +222,24 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "2024년 반도체 경기 회복으로 한국 경제에서 수출 비중이 확대되고 부가가치율이 상승한 것으로 나타났다.",
+        "common_summary": "조희대 대법원장의 재제청 거부와 관련된 정치적 갈등 및 제주 경찰의 실종 사건 허위종결 문제가 두 언론사에서 모두 다뤄졌으나, SBS는 박지원 의원의 탄핵 검토 및 사퇴 촉구를 중심으로, 동아일보는 국민의힘의 반발과 삼권분립 침해 우려를 중심으로 보도하였다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 2024년 반도체 경기 회복을 한국 경제의 수출 비중 확대와 부가가치율 상승이라는 긍정적 경제 지표 변화와 연결지어 보도한다.",
+            "contrast_statement": "두 언론사 모두 조희대 대법원장의 재제청 거부와 관련된 정치적 갈등을 보도했으나, SBS는 박지원 의원의 탄핵 검토 및 사퇴 촉구를, 동아일보는 국민의힘의 반발과 삼권분립 침해 우려를 중심으로 다루었다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "반도체 경기 회복으로 인한 수출 비중 확대와 부가가치율 상승을 한국 경제의 긍정적 변화로 강조",
+                "summary": "조희대 대법원장의 재제청 거부와 관련해 박지원 의원이 탄핵 검토 및 사퇴를 촉구한 내용을 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "반도체 경기 회복을 한국 경제의 수출 비중 확대와 부가가치율 상승이라는 긍정적 지표 변화와 연결지어 보도",
+                "summary": "더불어민주당의 대법원장 증인 신청에 대한 국민의힘의 반발과 삼권분립 침해 우려를 강조",
                 "evidence": []
               }
             ]
@@ -1465,18 +247,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 반도체 경기 호황이 한국 경제의 수출 구조와 부가가치 창출에 미친 긍정적 영향에 초점을 두는 반면, 동아일보는 반도체 기업의 주주 환원 정책이 한국 증시 상승과 경상수지 흑자 확대에 미치는 경제적 효과에 주목한다.",
+            "contrast_statement": "SBS는 조희대 대법원장의 재제청 거부와 사퇴 촉구에 초점을 맞춘 반면, 동아일보는 대법원장 증인 신청과 삼권분립 침해 우려를 핵심 관점으로 제시하였다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "반도체 경기 호황이 한국 경제의 수출 구조와 부가가치 창출에 미친 긍정적 영향 분석",
+                "summary": "조희대 대법원장의 재제청 거부와 사퇴 촉구, 제주 경찰의 실종 사건 허위종결 문제를 비판적으로 조명",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "반도체 기업의 주주 환원 정책이 한국 증시 상승과 경상수지 흑자 확대에 미치는 경제적 효과 전망",
+                "summary": "대법원장 증인 신청에 대한 삼권분립 및 사법부 독립성 침해 우려를 강조",
                 "evidence": []
               }
             ]
@@ -1484,18 +266,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 반도체 경기 부진에서 벗어난 것을 주요 원인으로 제시하는 반면, 동아일보는 반도체 가격 상승과 AI 투자 둔화 우려를 배경으로 제시한다.",
+            "contrast_statement": "SBS는 대법관 논의 관습 돌연변이식과 의견 조율 필요성을 원인으로 제시한 반면, 동아일보는 더불어민주당의 증인 신청 자체를 원인으로 강조하였다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "반도체 경기 부진에서 벗어난 것을 2024년 한국 경제 수출 비중 확대와 부가가치율 상승의 주요 원인으로 강조",
+                "summary": "대법관 논의 관습 돌연변이식으로 어김, 의견 안 맞아도 끝까지 조율해야 한다는 점을 원인으로 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "반도체 가격 상승과 AI 투자 둔화 우려를 한국 증시 상승 및 경상수지 흑자 확대의 배경으로 제시",
+                "summary": "더불어민주당의 조희대 대법원장 증인 신청이 삼권분립 형해화의 원인으로 제시",
                 "evidence": []
               }
             ]
@@ -1503,18 +285,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 한국 경제 전체를 대상으로 수출 비중 확대와 부가가치율 상승을 강조하는 반면, 동아일보는 한국 증시와 반도체 기업을 대상으로 증시 우상향과 경상수지 흑자 3600억 달러 달성을 전망한다.",
+            "contrast_statement": "SBS는 조희대 명예 훼손과 사퇴 촉구를, 동아일보는 삼권분립 형해화와 사법부 독립성 훼손을 주요 영향으로 제시하였다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "한국 경제 전체의 수출 비중 확대와 부가가치율 상승을 긍정적 영향으로 강조",
+                "summary": "조희대 명예 훼손 및 사퇴 촉구, 제주 경찰의 실종 염려 현실화를 영향 및 대상으로 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "한국 증시의 우상향 추세와 반도체 기업의 경상수지 흑자 3600억 달러 달성을 주요 영향으로 전망",
+                "summary": "삼권분립 형해화 및 사법부 독립·정치적 중립성 훼손을 영향 및 대상으로 강조",
                 "evidence": []
               }
             ]
@@ -1522,55 +304,474 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 수출 비중 확대와 부가가치율 상승을 긍정적 경제 지표로 기대하며 보도하는 반면, 동아일보는 반도체 기업의 주주 환원 정책이 한국 증시 상승을 이끌 것이라는 기대감과 역대 최대 규모의 반도체 흑자 전망을 근거로 제시한다.",
+            "contrast_statement": "SBS는 '희대의 대법원장 조희대'라는 표현을 사용하며 비판적인 태도를 보인 반면, 동아일보는 '삼권분립 형해화'라는 표현을 통해 사법부 독립성 침해 우려를 비판적으로 전달하였다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "수출 비중 확대와 부가가치율 상승을 긍정적 경제 지표로 기대하며 보도",
+                "summary": "조희대 대법원장의 재제청 거부와 제주 경찰의 실종 사건 허위종결을 비판적으로 보도하며 사퇴 촉구를 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "반도체 기업의 주주 환원 정책이 한국 증시 상승을 이끌 것이라는 기대감과 역대 최대 규모의 반도체 흑자 전망을 근거로 제시",
+                "summary": "더불어민주당의 대법원장 증인 신청이 삼권분립과 사법부 독립성을 훼손한다는 비판적 태도를 보임",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "2024년 반도체 경기 회복을 한국 경제의 수출 비중 확대와 부가가치율 상승이라는 긍정적 경제 지표 변화와 연결지어 보도"
+          "조희대 대법원장의 재제청 거부와 관련된 정치적 갈등 보도",
+          "제주 경찰의 실종 사건 허위종결 문제 언급"
         ],
         "key_differences": [
-          "SBS는 반도체 경기 회복 자체를 한국 경제 전반의 긍정적 변화로 보는 반면, 동아일보는 반도체 기업의 주주 환원 정책이 한국 증시 상승과 경상수지 흑자 확대에 미치는 영향에 초점을 맞춤"
+          "SBS는 박지원 의원의 탄핵 검토 및 사퇴 촉구를, 동아일보는 국민의힘의 반발과 삼권분립 침해 우려를 주요 초점으로 삼음"
         ],
-        "comparison_report": "SBS와 동아일보 모두 2024년 반도체 경기 회복을 한국 경제의 긍정적 변화와 연결지어 보도하지만, SBS는 반도체 경기 회복으로 인한 수출 비중 확대와 부가가치율 상승을 한국 경제 전반의 지표로 강조하는 반면, 동아일보는 반도체 기업의 주주 환원 정책이 한국 증시 상승을 이끌 것이라는 전망과 함께 경상수지 흑자 3600억 달러 달성 가능성을 제시한다. SBS는 반도체 경기 부진에서 벗어난 것을 주요 원인으로 보는 데 비해 동아일보는 반도체 가격 상승과 AI 투자 둔화 우려를 배경으로 제시하며, 두 언론사 모두 한국 경제에 대한 긍정적 기대를 담고 있으나 SBS는 수출 구조 개선에, 동아일보는 증시 상승과 경상수지 확대에 각각 초점을 둔다.",
+        "comparison_report": "SBS와 동아일보 모두 조희대 대법원장의 재제청 거부와 관련된 정치적 갈등을 보도했으나, SBS는 박지원 의원의 탄핵 검토 및 사퇴 촉구를 중심으로 비판적인 태도를 보인 반면, 동아일보는 더불어민주당의 대법원장 증인 신청에 대한 국민의힘의 반발과 삼권분립 및 사법부 독립성 침해 우려를 강조하였다. 두 언론사 모두 비판적 보도 태도를 보였으나, SBS는 조희대 개인의 명예와 사퇴에 초점을 맞춘 반면, 동아일보는 제도적 차원의 삼권분립 훼손을 주요 논점으로 제시하였다.",
         "source_links": [
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
-            "title": "2024년 한국 경제, 수출 비중 커지고 부가가치율 상승",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008763838",
-            "published_at": "Mon, 21 Sep 2026 14:41:00 +0900"
+            "title": "[정치쇼] 박지원 \"희대의 대법원장 조희대, 탄핵도 검토…제주암장경찰? 염려가 현실로 나타나\"",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008718068",
+            "published_at": "Mon, 24 Aug 2026 14:59:00 +0900"
           },
           {
             "publisher_id": "donga",
             "publisher": "동아일보",
-            "title": "[애널리스트의 마켓뷰]반도체 기업 주주 환원, 한국 증시 우상향 이끌 것",
-            "link": "https://www.donga.com/news/Economy/article/all/20260824/134535321/2",
-            "published_at": "Tue, 25 Aug 2026 00:30:00 +0900"
+            "title": "법사위서 與 주도 ‘국감 증인’ 조희대 신청…국힘, 반발하며 회의 불참",
+            "link": "https://www.donga.com/news/Politics/article/all/20260921/134711216/1",
+            "published_at": "Mon, 21 Sep 2026 16:02:20 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-09-21T21:45:50.793526+00:00",
+        "compared_at": "2026-09-22T16:22:36.835868+00:00",
+        "model": "solar-pro3"
+      }
+    }
+  },
+  "issue-3ed35a261d41c4cb": {
+    "publisher_analyses": [
+      {
+        "issue_id": "issue-3ed35a261d41c4cb",
+        "publisher_id": "donga",
+        "publisher": "동아일보",
+        "articles": [
+          {
+            "article_id": "af64f0808932bc8043ca5aae089e606270e4d8495deed5625a998ac67cdc0223",
+            "title": "李, 18일 7번째 기자회견…靑 “국민 댓글 실시간 소개”",
+            "published_at": "Tue, 15 Sep 2026 15:59:00 +0900",
+            "link": "https://www.donga.com/news/Politics/article/all/20260915/134672790/2"
+          }
+        ],
+        "analysis": {
+          "article_summary": "이재명 대통령이 18일 청와대 영빈관에서 취임 후 7번째 기자회견을 개최하며, 국민 댓글 실시간 소개와 함께 개각 관련 논란 및 외교 현안에 대한 입장을 밝힐 예정이다.",
+          "headline_frame": "기자회견 일정 및 국민 소통 방식",
+          "main_focus": "기자회견의 진행 방식(국민 댓글 실시간 소개)과 다룰 주요 현안(개각 논란, 외교 압박)",
+          "keywords": [
+            "기자회견",
+            "국민 댓글",
+            "실시간 소통",
+            "개각 논란",
+            "외교 현안"
+          ],
+          "main_actors": [
+            "이재명 대통령",
+            "청와대",
+            "성기홍 홍보소통수석"
+          ],
+          "quoted_sources": [
+            "성기홍 청와대 홍보소통수석"
+          ],
+          "causes": [
+            "개각 관련 용혜인 김승원 논란",
+            "미국의 호르무즈 파병 압박"
+          ],
+          "background": [
+            "취임 후 7번째 기자회견",
+            "정치외교와 정책경제 두 분야로 나눠 진행"
+          ],
+          "emphasized_effects": [
+            "국민 목소리 경청",
+            "실시간 댓글 소개"
+          ],
+          "affected_groups": [
+            "국민"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "이재명 대통령이 18일 청와대 영빈관에서 기자회견을 연다",
+              "취임 후 7번째다",
+              "기자회견은 이 대통령의 모두발언과 질의응답, 마무리 발언까지 약 90분 동안 진행될 예정이다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "기자회견에서 대통령이 직접 답변하고 국민 댓글을 소개할 예정이며, 내외신 기자 150여 명이 참석한다."
+          },
+          "less_covered_context": [
+            "기자회견의 구체적인 질문 내용이나 답변 내용은 확인되지 않는다",
+            "개각 논란의 구체적 배경이나 외교 압박의 세부 내용은 제시되지 않았다"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-09-22T16:22:41.414595+00:00",
+        "model": "solar-pro3"
+      },
+      {
+        "issue_id": "issue-3ed35a261d41c4cb",
+        "publisher_id": "sbs",
+        "publisher": "SBS",
+        "articles": [
+          {
+            "article_id": "fffbd2e782885606d211165e75308ba0da36fefff5dde610a764d34995a9b3a1",
+            "title": "[지식의 발견] \"더 까먹을 지지율이 없다\"…대국민 기자회견에서 이재명 대통령이 해야 할 것은 (ft. 윤태곤 실장)",
+            "published_at": "Tue, 15 Sep 2026 18:30:00 +0900",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008751588"
+          }
+        ],
+        "analysis": {
+          "article_summary": "이재명 대통령의 지지율이 취임 이후 최저치를 경신하며 9주 연속 하락세를 보이고 있으며, SBS에 출연한 윤태곤 정치분석실장은 정부 여당의 방화벽이 무너졌다고 진단했다.",
+          "headline_frame": "이재명 대통령의 지지율 최저치 경신 및 9주 연속 하락세에 초점을 맞추고, 대국민 기자회견을 통한 해결 방안을 제시함",
+          "main_focus": "이재명 대통령의 지지율 하락 원인과 대국민 기자회견을 통한 대응 방안에 대한 분석",
+          "keywords": [
+            "지지율 하락",
+            "대국민 기자회견",
+            "정부 여당 방화벽",
+            "정치 분석"
+          ],
+          "main_actors": [
+            "이재명 대통령",
+            "윤태곤 더모아 정치분석실장"
+          ],
+          "quoted_sources": [
+            "윤태곤 더모아 정치분석실장"
+          ],
+          "causes": [
+            "정부 여당의 방화벽 붕괴"
+          ],
+          "background": [
+            "취임 이후 지지율 추이",
+            "9주 연속 하락세"
+          ],
+          "emphasized_effects": [
+            "지지율 최저치 경신"
+          ],
+          "affected_groups": [
+            "정부 여당"
+          ],
+          "tone": {
+            "category": "우려·경계",
+            "evidence": [
+              "정부 여당의 방화벽이 다 무너져있다"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "대국민 기자회견을 통해 지지율 하락 문제를 해결할 수 있을지에 대한 전망"
+          },
+          "less_covered_context": [
+            "구체적인 정책 대안",
+            "지지율 하락의 구체적 원인 분석",
+            "국제적 영향"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-09-22T16:22:42.432391+00:00",
+        "model": "solar-pro3"
+      }
+    ],
+    "publisher_grouping": {
+      "issue_id": "issue-3ed35a261d41c4cb",
+      "groups": [
+        {
+          "group_id": "group-001",
+          "label": "기자회견 진행 방식과 현안 설명",
+          "summary": "이재명 대통령의 기자회견 진행 방식(국민 댓글 실시간 소개)과 다룰 주요 현안(개각 논란, 외교 압박)을 중심으로 한 보도",
+          "keywords": [
+            "기자회견",
+            "국민 댓글",
+            "실시간 소통",
+            "개각 논란",
+            "외교 현안"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "donga",
+              "publisher": "동아일보"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "기자회견의 진행 방식(국민 댓글 실시간 소개)과 다룰 주요 현안(개각 논란, 외교 압박)을 중심으로 보도",
+            "개각 관련 용혜인 김승원 논란과 미국의 호르무즈 파병 압박을 주요 현안으로 제시",
+            "취임 후 7번째 기자회견으로 정치외교와 정책경제 두 분야로 나눠 진행한다는 배경 설명",
+            "국민 목소리 경청과 실시간 댓글 소개를 통해 국민과의 소통을 강조"
+          ]
+        },
+        {
+          "group_id": "group-002",
+          "label": "지지율 하락과 정부 여당 비판",
+          "summary": "이재명 대통령의 지지율 최저치 경신과 9주 연속 하락세, 정부 여당의 방화벽 붕괴를 중심으로 한 보도",
+          "keywords": [
+            "지지율 하락",
+            "대국민 기자회견",
+            "정부 여당 방화벽",
+            "정치 분석"
+          ],
+          "publisher_ids": [
+            "sbs"
+          ],
+          "publishers": [
+            {
+              "publisher_id": "sbs",
+              "publisher": "SBS"
+            }
+          ],
+          "publisher_count": 1,
+          "group_evidence": [
+            "이재명 대통령의 지지율 하락 원인과 대국민 기자회견을 통한 대응 방안에 대한 분석",
+            "정부 여당의 방화벽 붕괴를 지지율 하락의 주요 원인으로 지목",
+            "취임 이후 지지율 추이와 9주 연속 하락세를 강조",
+            "지지율 최저치 경신을 통해 정부 여당의 위기 상황을 부각"
+          ]
+        }
+      ],
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-001",
+            "group-002"
+          ],
+          "contrast_statement": "동아일보는 이재명 대통령의 기자회견 진행 방식(국민 댓글 실시간 소개)과 다룰 주요 현안(개각 논란, 외교 압박)을 중심으로 중립적으로 보도한 반면, SBS는 이재명 대통령의 지지율 최저치 경신과 9주 연속 하락세, 정부 여당의 방화벽 붕괴를 우려·경계하는 태도로 보도하여 핵심 쟁점과 평가 방향이 대립합니다."
+        }
+      ],
+      "grouping_summary": "동아일보는 이재명 대통령의 기자회견 진행 방식과 다룰 현안에 초점을 맞춘 반면, SBS는 지지율 하락과 정부 여당의 위기 상황을 중심으로 비판적인 태도를 보였습니다. 두 언론사는 동일한 기자회견을 다루지만, 핵심 쟁점과 해석 방향이 달라 별도의 그룹으로 분류되었습니다.",
+      "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+      "grouping_status": "success",
+      "grouped_at": "2026-09-22T16:22:46.797896+00:00",
+      "model": "solar-pro3"
+    },
+    "comparisons": {
+      "donga,sbs": {
+        "issue_id": "issue-3ed35a261d41c4cb",
+        "selected_publishers": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "이재명 대통령의 기자회견 개최와 관련된 내용을 다루고 있으나, 동아일보는 기자회견 일정 및 진행 방식에 초점을 맞춘 반면 SBS는 지지율 하락과 그 대응 방안에 초점을 맞추고 있다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 이재명 대통령의 기자회견 개최를 보도하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "18일 청와대 영빈관에서 취임 후 7번째 기자회견을 개최한다는 사실",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 대통령의 지지율 최저치 경신 및 9주 연속 하락세 속에서 기자회견을 통한 대응 필요성",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 기자회견의 진행 방식(국민 댓글 실시간 소개)과 다룰 현안(개각 논란, 외교 압박)을 강조하는 반면, SBS는 지지율 하락 원인과 대국민 기자회견을 통한 대응 방안에 초점을 맞추고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "기자회견의 진행 방식(국민 댓글 실시간 소개)과 다룰 주요 현안(개각 논란, 외교 압박)",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "이재명 대통령의 지지율 하락 원인과 대국민 기자회견을 통한 대응 방안",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 개각 관련 용혜인·김승원 논란과 미국의 호르무즈 파병 압박을 원인으로 제시하는 반면, SBS는 정부 여당의 방화벽 붕괴를 지지율 하락의 원인으로 진단하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "개각 관련 용혜인·김승원 논란과 미국의 호르무즈 파병 압박",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정부 여당의 방화벽 붕괴",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 국민 목소리 경청과 실시간 댓글 소개를 강조하는 반면, SBS는 지지율 최저치 경신이 정부 여당에 미치는 영향을 우려하고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "국민 목소리 경청과 실시간 댓글 소개",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "지지율 최저치 경신이 정부 여당에 미치는 영향",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "차이 큼",
+            "contrast_statement": "동아일보는 중립적으로 기자회견 일정과 진행 방식을 설명하는 반면, SBS는 지지율 하락에 대한 우려를 경계하는 태도를 보이고 있다.",
+            "publisher_details": [
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "사실관계를 중립적으로 전달하며 기자회견 일정과 진행 방식을 설명",
+                "evidence": [
+                  "이재명 대통령이 18일 청와대 영빈관에서 기자회견을 연다",
+                  "취임 후 7번째다",
+                  "기자회견은 이 대통령의 모두발언과 질의응답, 마무리 발언까지 약 90분 동안 진행될 예정이다"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "지지율 하락에 대한 우려를 경계하는 태도",
+                "evidence": [
+                  "정부 여당의 방화벽이 다 무너져있다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "이재명 대통령의 기자회견 개최"
+        ],
+        "key_differences": [
+          "동아일보는 기자회견의 진행 방식과 다룰 현안에 초점을 맞춘 반면, SBS는 지지율 하락과 그 대응 방안에 초점을 맞추고 있다."
+        ],
+        "comparison_report": "동아일보는 이재명 대통령의 18일 청와대 영빈관 기자회견을 중립적으로 보도하며 국민 댓글 실시간 소개와 개각 논란, 외교 압박 등 다룰 현안을 강조하고 있다. 반면 SBS는 이재명 대통령의 지지율이 취임 이후 최저치를 경신하며 9주 연속 하락세를 보이고 있다는 점을 우려하며, 정부 여당의 방화벽 붕괴를 원인으로 진단하고 대국민 기자회견을 통한 대응 방안을 제시하고 있다. 두 언론사 모두 기자회견을 다루지만, 동아일보는 사실 전달에 중점을 둔 반면 SBS는 분석적이고 우려 섞인 태도를 보이고 있다.",
+        "source_links": [
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "李, 18일 7번째 기자회견…靑 “국민 댓글 실시간 소개”",
+            "link": "https://www.donga.com/news/Politics/article/all/20260915/134672790/2",
+            "published_at": "Tue, 15 Sep 2026 15:59:00 +0900"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[지식의 발견] \"더 까먹을 지지율이 없다\"…대국민 기자회견에서 이재명 대통령이 해야 할 것은 (ft. 윤태곤 실장)",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008751588",
+            "published_at": "Tue, 15 Sep 2026 18:30:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-09-22T16:22:56.662834+00:00",
         "model": "solar-pro3"
       }
     }
   },
   "issue-91497c1cd97e0554": {
     "publisher_analyses": [
+      {
+        "issue_id": "issue-91497c1cd97e0554",
+        "publisher_id": "mk",
+        "publisher": "매일경제",
+        "articles": [
+          {
+            "article_id": "c2519e716d67ee64b1ce29b23474a901da0de4c97f71ec3e8f2ec169fd8845b1",
+            "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
+            "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00",
+            "link": "https://www.mk.co.kr/news/economy/12153423"
+          }
+        ],
+        "analysis": {
+          "article_summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 경영계는 고소득 전문직을 노동시간 규제에서 제외하는 방안을 제시했다.",
+          "headline_frame": "메가특구 노동 특례를 논의하기 위한 '원포인트 사회적 대화' 제안",
+          "main_focus": "메가특구특별법에 담길 노동 특례를 논의하기 위한 사회적 대화 제안",
+          "keywords": [
+            "메가특구",
+            "노동 특례",
+            "52시간 예외",
+            "원포인트 사회적 대화",
+            "노사정"
+          ],
+          "main_actors": [
+            "정부",
+            "경영계",
+            "고소득 전문직"
+          ],
+          "quoted_sources": [],
+          "causes": [
+            "메가특구특별법에 담길 노동 특례 논의"
+          ],
+          "background": [
+            "메가특구특별법"
+          ],
+          "emphasized_effects": [
+            "노동시간 규제에서 고소득 전문직 제외"
+          ],
+          "affected_groups": [
+            "고소득 전문직"
+          ],
+          "tone": {
+            "category": "중립 설명",
+            "evidence": [
+              "메가특구 '52시간 예외' 결국 사회적 대화로"
+            ]
+          },
+          "outlook": {
+            "direction": "중립",
+            "summary": "사회적 대화를 통해 노동 특례 방안이 논의될 예정"
+          },
+          "less_covered_context": [
+            "정책 시행 이후의 구체적 효과",
+            "노동계 입장"
+          ],
+          "evidence_limit": "기사 제목과 RSS 설명 기준"
+        },
+        "analysis_status": "success",
+        "analyzed_at": "2026-09-22T16:23:42.624673+00:00",
+        "model": "solar-pro3"
+      },
       {
         "issue_id": "issue-91497c1cd97e0554",
         "publisher_id": "sbs",
@@ -1584,8 +785,8 @@
           }
         ],
         "analysis": {
-          "article_summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했으며, 반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 움직임을 보이고 있다.",
-          "headline_frame": "사회적 대화 제안을 통한 접점 모색",
+          "article_summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했으며, 반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 움직임이 나타났다.",
+          "headline_frame": "사회적 대화 제안과 접점 모색",
           "main_focus": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
           "keywords": [
             "메가특구",
@@ -1601,16 +802,13 @@
           ],
           "quoted_sources": [],
           "causes": [
-            "메가특구 특별법 추진",
-            "노동 규제 특례 필요성"
+            "메가특구 특별법의 노동 규제 특례"
           ],
           "background": [
-            "반도체와 AI 등 첨단산업 거점 조성",
-            "메가특구 특별법"
+            "반도체와 AI 등 첨단산업 거점 조성"
           ],
           "emphasized_effects": [
-            "접점 모색",
-            "사회적 대화"
+            "접점 모색"
           ],
           "affected_groups": [
             "노동자",
@@ -1624,16 +822,17 @@
           },
           "outlook": {
             "direction": "중립",
-            "summary": "사회적 대화를 통해 접점을 찾을 수 있을지 주목"
+            "summary": "사회적 대화를 통해 접점을 찾을 수 있을지 여부가 주목됨"
           },
           "less_covered_context": [
             "정책 시행 이후의 구체적 효과",
-            "사회적 대화의 구체적 진행 방식"
+            "사회적 대화의 구체적 진행 방식",
+            "노동 특례의 구체적 내용"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:01.827691+00:00",
+        "analyzed_at": "2026-09-22T16:23:44.484657+00:00",
         "model": "solar-pro3"
       },
       {
@@ -1649,112 +848,60 @@
           }
         ],
         "analysis": {
-          "article_summary": "주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다.",
-          "headline_frame": "주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화",
-          "main_focus": "메가특구특별법에 담길 노동 규제 완화 논의",
+          "article_summary": "주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐으며, 민노총까지 참여하는 사회적 대화가 성사되었으나 노동계의 강한 반대로 최종 합의 여부는 불투명하다.",
+          "headline_frame": "주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화의 시작",
+          "main_focus": "메가특구특별법에 담길 노동 규제 완화(주 52시간제 예외 등)를 논의하기 위한 노사정 사회적 대화의 진행 상황과 노동계의 반대 입장을 강조",
           "keywords": [
             "메가특구특별법",
             "노동 규제 완화",
             "주 52시간제 예외",
-            "노사정 사회적 대화"
+            "노사정 사회적 대화",
+            "한국노총",
+            "민노총"
           ],
           "main_actors": [
             "고용노동부",
             "한국노동조합총연맹(한국노총)",
             "전국민주노동조합총연맹(민노총)",
             "한국경영자총협회",
-            "대한상공회의소"
+            "대한상공회의소",
+            "경제사회노동위원회"
           ],
           "quoted_sources": [
             "한국노총"
           ],
           "causes": [
-            "메가특구특별법에 담길 노동 규제 완화"
+            "메가특구특별법에 담길 노동 특례"
           ],
           "background": [
             "2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화"
           ],
           "emphasized_effects": [
+            "노동계의 강한 반대",
             "최종 합의 불투명"
           ],
           "affected_groups": [
             "노동계"
           ],
           "tone": {
-            "category": "중립 설명",
+            "category": "우려·경계",
             "evidence": [
-              "주 52시간제 예외 등 ‘메가특구특별법’에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다"
+              "노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 이뤄질지는 불투명하다"
             ]
           },
           "outlook": {
-            "direction": "전망 없음",
-            "summary": ""
+            "direction": "혼합",
+            "summary": "민노총까지 참여하는 사회적 대화가 성사되었으나 노동계의 강한 반대로 최종 합의 여부는 불투명한 상황"
           },
           "less_covered_context": [
-            "노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 이뤄질지는 불투명하다"
+            "정책 시행 이후의 구체적 효과",
+            "메가특구의 구체적 범위 및 선정 기준",
+            "노동 특례의 구체적 내용과 적용 방식"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:02.112445+00:00",
-        "model": "solar-pro3"
-      },
-      {
-        "issue_id": "issue-91497c1cd97e0554",
-        "publisher_id": "mk",
-        "publisher": "매일경제",
-        "articles": [
-          {
-            "article_id": "c2519e716d67ee64b1ce29b23474a901da0de4c97f71ec3e8f2ec169fd8845b1",
-            "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
-            "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12153423"
-          }
-        ],
-        "analysis": {
-          "article_summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 경영계는 고소득 전문직을 노동시간 규제에서 제외하는 방안을 제시했다.",
-          "headline_frame": "메가특구의 '52시간 예외' 조치를 사회적 대화를 통해 해결하려는 정부의 제안",
-          "main_focus": "메가특구특별법에 포함될 노동 특례를 논의하기 위한 원포인트 사회적 대화의 제안과 경영계의 고소득 전문직 노동시간 규제 제외 방안",
-          "keywords": [
-            "메가특구",
-            "노동 특례",
-            "52시간 예외",
-            "사회적 대화",
-            "노사정"
-          ],
-          "main_actors": [
-            "정부",
-            "경영계",
-            "고소득 전문직"
-          ],
-          "quoted_sources": [],
-          "causes": [
-            "메가특구특별법에 담길 노동 특례 논의 필요성"
-          ],
-          "background": [
-            "메가특구특별법에 담길 노동 특례 논의"
-          ],
-          "emphasized_effects": [
-            "고소득 전문직의 노동시간 규제 제외"
-          ],
-          "affected_groups": [
-            "고소득 전문직"
-          ],
-          "tone": {
-            "category": "중립 설명",
-            "evidence": [
-              "메가특구 '52시간 예외' 결국 사회적 대화로"
-            ]
-          },
-          "outlook": {
-            "direction": "중립",
-            "summary": "사회적 대화를 통해 노동 특례 방안이 결정될 예정"
-          },
-          "less_covered_context": [],
-          "evidence_limit": "기사 제목과 RSS 설명 기준"
-        },
-        "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:02.366924+00:00",
+        "analyzed_at": "2026-09-22T16:23:44.565263+00:00",
         "model": "solar-pro3"
       }
     ],
@@ -1763,79 +910,112 @@
       "groups": [
         {
           "group_id": "group-1",
-          "label": "메가특구 노동 특례와 사회적 대화",
-          "summary": "메가특구 특별법의 노동 규제 특례를 중심으로 노사 간 사회적 대화를 통해 접점을 모색하거나 규제 완화 방안을 논의하는 관점",
+          "label": "메가특구 노동 특례 사회적 대화 제안",
+          "summary": "메가특구특별법에 담길 노동 특례(주 52시간 예외 등)를 논의하기 위한 사회적 대화 제안 및 진행 상황을 중립적으로 설명하는 관점",
           "keywords": [
             "메가특구",
             "노동 특례",
-            "사회적 대화"
+            "사회적 대화",
+            "주 52시간 예외"
           ],
           "publisher_ids": [
-            "sbs",
-            "donga",
-            "mk"
+            "mk",
+            "sbs"
           ],
           "publishers": [
             {
+              "publisher_id": "mk",
+              "publisher": "매일경제"
+            },
+            {
               "publisher_id": "sbs",
               "publisher": "SBS"
-            },
+            }
+          ],
+          "publisher_count": 2,
+          "group_evidence": [
+            "메가특구특별법에 담길 노동 특례를 논의하기 위한 사회적 대화 제안",
+            "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
+            "사회적 대화를 통해 노동 특례 방안이 논의될 예정",
+            "사회적 대화를 통해 접점을 찾을 수 있을지 여부가 주목됨"
+          ]
+        },
+        {
+          "group_id": "group-2",
+          "label": "노동계 반대와 합의 불투명성 강조",
+          "summary": "메가특구특별법의 노동 규제 완화(주 52시간 예외 등)를 논의하기 위한 노사정 사회적 대화의 진행 상황과 노동계의 강한 반대 입장을 우려·경계하는 관점",
+          "keywords": [
+            "메가특구특별법",
+            "노동 규제 완화",
+            "주 52시간 예외",
+            "노사정 사회적 대화",
+            "노동계 반대",
+            "최종 합의 불투명"
+          ],
+          "publisher_ids": [
+            "donga"
+          ],
+          "publishers": [
             {
               "publisher_id": "donga",
               "publisher": "동아일보"
-            },
-            {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
             }
           ],
-          "publisher_count": 3,
+          "publisher_count": 1,
           "group_evidence": [
-            "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
-            "메가특구특별법에 담길 노동 규제 완화 논의",
-            "메가특구특별법에 포함될 노동 특례를 논의하기 위한 원포인트 사회적 대화 제안"
+            "메가특구특별법에 담길 노동 규제 완화(주 52시간제 예외 등)를 논의하기 위한 노사정 사회적 대화의 진행 상황과 노동계의 반대 입장을 강조",
+            "노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 이뤄질지는 불투명하다",
+            "민노총까지 참여하는 사회적 대화가 성사되었으나 노동계의 강한 반대로 최종 합의 여부는 불투명한 상황"
           ]
         }
       ],
-      "group_count": 1,
-      "group_contrasts": [],
-      "grouping_summary": "세 언론사 모두 메가특구 특별법의 노동 규제 특례를 중심으로 사회적 대화를 통한 해결 방안을 다루고 있으며, 핵심 쟁점과 해석 방향이 대체로 일치하여 하나의 그룹으로 묶을 수 있습니다.",
+      "group_count": 2,
+      "group_contrasts": [
+        {
+          "group_ids": [
+            "group-1",
+            "group-2"
+          ],
+          "contrast_statement": "group-1은 메가특구특별법의 노동 특례(주 52시간 예외 등)를 논의하기 위한 사회적 대화 제안과 진행 상황을 중립적으로 설명하는 반면, group-2는 동일한 사회적 대화의 진행 상황과 함께 노동계의 강한 반대 입장을 강조하며 최종 합의의 불투명성을 우려·경계하는 관점을 보인다. 두 그룹 모두 메가특구특별법의 노동 규제 완화를 위한 사회적 대화를 다루지만, group-1은 대화 자체의 제안과 전망에 초점을 맞추고, group-2는 노동계의 반발과 합의 가능성에 대한 부정적 평가를 강조한다."
+        }
+      ],
+      "grouping_summary": "3개 언론사는 모두 메가특구특별법의 노동 규제 특례(주 52시간 예외 등)를 논의하기 위한 사회적 대화 제안 및 진행 상황을 다루지만, 매일경제와 SBS는 대화 제안과 중립적 전망을 강조하는 반면, 동아일보는 노동계의 강한 반대와 최종 합의의 불투명성을 우려·경계하는 태도를 보인다. 따라서 2개 그룹으로 분류하였다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-09-21T21:46:04.683856+00:00",
+      "grouped_at": "2026-09-22T16:23:50.320139+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "mk,sbs": {
+      "donga,mk": {
         "issue_id": "issue-91497c1cd97e0554",
         "selected_publishers": [
           {
-            "publisher_id": "sbs",
-            "publisher": "SBS"
-          },
-          {
             "publisher_id": "mk",
             "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보"
           }
         ],
-        "common_summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했으며, 반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 움직임을 보이고 있다.",
+        "common_summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 경영계는 고소득 전문직을 노동시간 규제에서 제외하는 방안을 제시했다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실을 공통적으로 보도하고 있다.",
+            "contrast_statement": "두 언론사 모두 정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했다는 점을 공통적으로 보도했다.",
             "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실을 중립적으로 전달",
-                "evidence": []
-              },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사정이 참여하는 원포인트 사회적 대화를 제안했다는 사실을 중립적으로 전달",
+                "summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안한 사실을 전달",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정 사회적 대화를 제안한 사실을 전달",
                 "evidence": []
               }
             ]
@@ -1843,18 +1023,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 메가특구 특별법의 노동 규제 특례 자체에 초점을 맞춘 반면, 매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 추가로 강조하고 있다.",
+            "contrast_statement": "매일경제는 '원포인트 사회적 대화' 제안 자체에 초점을 맞춘 반면, 동아일보는 사회적 대화의 진행 상황과 노동계의 반대 입장을 강조했다.",
             "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
-                "evidence": []
-              },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "메가특구특별법에 담길 노동 특례 논의와 경영계의 고소득 전문직 노동시간 규제 제외 방안",
+                "summary": "메가특구특별법에 담길 노동 특례를 논의하기 위한 사회적 대화 제안",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "메가특구특별법에 담길 노동 규제 완화(주 52시간제 예외 등)를 논의하기 위한 노사정 사회적 대화의 진행 상황과 노동계의 반대 입장",
                 "evidence": []
               }
             ]
@@ -1862,18 +1042,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 메가특구 특별법 추진과 노동 규제 특례 필요성을 원인으로 제시한 반면, 매일경제는 메가특구특별법에 담길 노동 특례 논의 필요성을 원인으로 제시하고 있다.",
+            "contrast_statement": "매일경제는 메가특구특별법 자체를 배경으로 언급한 반면, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 배경을 강조했다.",
             "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "메가특구 특별법 추진과 노동 규제 특례 필요성",
-                "evidence": []
-              },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "메가특구특별법에 담길 노동 특례 논의 필요성",
+                "summary": "메가특구특별법에 담길 노동 특례 논의",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화",
                 "evidence": []
               }
             ]
@@ -1881,70 +1061,220 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 접점 모색과 사회적 대화를 영향 및 대상으로 제시한 반면, 매일경제는 고소득 전문직의 노동시간 규제 제외를 영향 및 대상으로 제시하고 있다.",
+            "contrast_statement": "매일경제는 고소득 전문직이 노동시간 규제에서 제외될 수 있다는 영향을 강조한 반면, 동아일보는 노동계의 강한 반대로 최종 합의가 불투명하다는 영향을 강조했다.",
             "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "접점 모색과 사회적 대화",
-                "evidence": []
-              },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "고소득 전문직의 노동시간 규제 제외",
+                "summary": "노동시간 규제에서 고소득 전문직 제외",
+                "evidence": []
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "노동계의 강한 반대와 최종 합의 불투명",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했습니다'라는 중립적 설명을 제시한 반면, 매일경제는 '메가특구 '52시간 예외' 결국 사회적 대화로'라는 제목 프레임을 통해 사회적 대화 해결 방식을 강조하고 있다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '메가특구 '52시간 예외' 결국 사회적 대화로'라는 제목으로 중립적으로 사실을 전달했으나, 동아일보는 '노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 이뤄질지는 불투명하다'는 우려를 담은 제목으로 보도했다.",
             "publisher_details": [
-              {
-                "publisher_id": "sbs",
-                "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며 정부의 공식 제안을 설명",
-                "evidence": []
-              },
               {
                 "publisher_id": "mk",
                 "publisher": "매일경제",
-                "summary": "사회적 대화를 통한 해결 방식을 강조하는 중립적 설명",
-                "evidence": []
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "메가특구 '52시간 예외' 결국 사회적 대화로"
+                ]
+              },
+              {
+                "publisher_id": "donga",
+                "publisher": "동아일보",
+                "summary": "노동계의 강한 반대와 최종 합의 불투명에 대한 우려를 경계하는 태도",
+                "evidence": [
+                  "노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 이뤄질지는 불투명하다"
+                ]
               }
             ]
           }
         ],
         "similarities": [
-          "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실",
-          "반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반 마련 움직임"
+          "메가특구특별법에 담길 노동 특례 논의",
+          "노사정 사회적 대화 제안",
+          "고소득 전문직 노동시간 규제 예외 방안"
         ],
         "key_differences": [
-          "매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 추가로 강조하고 있음",
-          "매일경제는 '52시간 예외'라는 구체적 표현을 통해 사회적 대화 해결 방식을 부각시킴"
+          "동아일보는 민노총 참여 배경과 노동계 반대 입장을 구체적으로 보도한 반면, 매일경제는 경영계 제안과 고소득 전문직 제외에 초점을 맞춤"
         ],
-        "comparison_report": "SBS와 매일경제는 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 공통점을 가지고 있으나, SBS는 메가특구 특별법 추진과 노동 규제 특례 필요성에 초점을 맞춘 반면, 매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 추가로 강조하며 '52시간 예외'라는 표현을 통해 사회적 대화를 통한 해결 방식을 부각시키고 있다. 두 언론사 모두 중립적 설명 태도를 보이지만, 매일경제는 제목 프레임을 통해 사회적 대화 해결 방식을 더 강조하는 차이를 보인다.",
+        "comparison_report": "두 언론사 모두 정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했다는 공통점을 가지고 있으나, 매일경제는 경영계의 고소득 전문직 노동시간 규제 예외 방안을 중심으로 중립적으로 보도한 반면, 동아일보는 2020년 코로나 팬데믹 이후 6년 만에 민노총까지 참여하는 사회적 대화의 진행 상황과 노동계의 강한 반대, 최종 합의 불투명에 대한 우려를 경계하는 태도로 보도했다.",
         "source_links": [
-          {
-            "publisher_id": "sbs",
-            "publisher": "SBS",
-            "title": "[D리포트] '메가특구 노동 특례' 사회적 대화 제안…접점 찾을까",
-            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008754018",
-            "published_at": "Tue, 15 Sep 2026 14:12:00 +0900"
-          },
           {
             "publisher_id": "mk",
             "publisher": "매일경제",
             "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
             "link": "https://www.mk.co.kr/news/economy/12153423",
             "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00"
+          },
+          {
+            "publisher_id": "donga",
+            "publisher": "동아일보",
+            "title": "‘주52시간 예외’ 메가특구 사회적 대화 오늘 첫 회의",
+            "link": "https://www.donga.com/news/Society/article/all/20260922/134714980/2",
+            "published_at": "Tue, 22 Sep 2026 04:30:00 +0900"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-09-21T21:46:13.248122+00:00",
+        "compared_at": "2026-09-22T16:23:58.513110+00:00",
+        "model": "solar-pro3"
+      },
+      "mk,sbs": {
+        "issue_id": "issue-91497c1cd97e0554",
+        "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS"
+          }
+        ],
+        "common_summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 경영계는 고소득 전문직을 노동시간 규제에서 제외하는 방안을 제시했다.",
+        "overall_difference": "일부 차이",
+        "comparisons": [
+          {
+            "dimension": "공통 내용",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 정부가 메가특구특별법의 노동 특례 논의를 위해 사회적 대화를 제안했다는 점을 공통적으로 보도했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위한 '원포인트 사회적 대화' 제안",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "핵심 관점",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '메가특구 노동 특례' 자체에 초점을 맞춘 반면, SBS는 '반도체·AI 등 첨단산업 거점 조성'이라는 더 넓은 정책적 배경을 강조했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "메가특구특별법에 담길 노동 특례를 논의하기 위한 사회적 대화 제안",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조된 원인·배경",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '메가특구특별법'을 직접적인 배경으로 언급한 반면, SBS는 '반도체와 AI 등 첨단산업 거점 조성'을 더 구체적인 배경으로 제시했다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "메가특구특별법에 담길 노동 특례 논의",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "반도체와 AI 등 첨단산업 거점 조성을 위한 제도적 기반 마련",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "강조한 영향·대상",
+            "difference_level": "일부 차이",
+            "contrast_statement": "매일경제는 '고소득 전문직'을 노동시간 규제에서 제외되는 특정 대상으로 강조한 반면, SBS는 '노동자'와 '사용자' 양측을 포괄하는 접점 모색에 초점을 맞췄다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "노동시간 규제에서 고소득 전문직 제외",
+                "evidence": []
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "노사 간 접점 모색",
+                "evidence": []
+              }
+            ]
+          },
+          {
+            "dimension": "보도 태도·근거",
+            "difference_level": "유사함",
+            "contrast_statement": "두 언론사 모두 중립적인 설명 태도를 보였으며, 제목과 본문에서 사실 전달에 중점을 두었다.",
+            "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "메가특구 '52시간 예외' 결국 사회적 대화로"
+                ]
+              },
+              {
+                "publisher_id": "sbs",
+                "publisher": "SBS",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했습니다"
+                ]
+              }
+            ]
+          }
+        ],
+        "similarities": [
+          "정부가 메가특구특별법의 노동 특례 논의를 위해 사회적 대화를 제안했다는 점",
+          "노동시간 규제에서 고소득 전문직 또는 특정 직군이 제외될 수 있다는 점",
+          "정책 시행 이후의 구체적 효과나 사회적 대화의 구체적 진행 방식에 대한 심층 분석은 상대적으로 적게 다룸"
+        ],
+        "key_differences": [
+          "매일경제는 경영계의 '고소득 전문직' 제외 방안을 구체적으로 언급한 반면, SBS는 '노동자'와 '사용자' 양측을 포괄하는 접점 모색에 초점을 맞춤",
+          "매일경제는 '메가특구특별법'을 직접적인 배경으로 제시한 반면, SBS는 '반도체·AI 등 첨단산업 거점 조성'이라는 더 넓은 정책적 맥락을 강조함"
+        ],
+        "comparison_report": "매일경제와 SBS 모두 정부가 메가특구특별법의 노동 특례 논의를 위해 사회적 대화를 제안했다는 사실을 중립적으로 보도했으나, 매일경제은 경영계가 제시한 '고소득 전문직' 제외 방안에 초점을 맞춘 반면 SBS는 '반도체·AI 등 첨단산업 거점 조성'이라는 더 넓은 정책적 배경과 노사 간 접점 모색에 중점을 두었다. 두 언론사 모두 중립적인 설명 태도를 보였으나, 매일경제은 '메가특구 '52시간 예외' 결국 사회적 대화로'라는 제목에서 구체적인 정책 내용을 암시하는 반면 SBS는 '정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했습니다'라는 제목에서 사실 전달에 더 집중했다.",
+        "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
+            "link": "https://www.mk.co.kr/news/economy/12153423",
+            "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00"
+          },
+          {
+            "publisher_id": "sbs",
+            "publisher": "SBS",
+            "title": "[D리포트] '메가특구 노동 특례' 사회적 대화 제안…접점 찾을까",
+            "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008754018",
+            "published_at": "Tue, 15 Sep 2026 14:12:00 +0900"
+          }
+        ],
+        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
+        "comparison_status": "success",
+        "compared_at": "2026-09-22T16:23:59.332961+00:00",
         "model": "solar-pro3"
       },
       "donga,sbs": {
@@ -1959,13 +1289,13 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했으며, 반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 움직임을 보이고 있다.",
+        "common_summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했으며, 반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 움직임이 나타났다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실을 공통적으로 보도하고 있다.",
+            "contrast_statement": "SBS와 동아일보 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 점을 공통적으로 보도하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
@@ -1976,7 +1306,7 @@
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "정부가 메가특구 특별법의 노동 규제 완화를 논의하기 위한 노사정 사회적 대화를 사전 협의로 시작했다는 사실을 중립적으로 전달",
+                "summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실을 전달",
                 "evidence": []
               }
             ]
@@ -1984,18 +1314,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안'을, 동아일보는 '메가특구특별법에 담길 노동 규제 완화 논의'를 핵심 관점으로 제시하고 있다.",
+            "contrast_statement": "SBS는 메가특구 특별법의 노동 규제 특례 자체에 초점을 맞춘 반면, 동아일보는 주 52시간제 예외 등 구체적인 노동 규제 완화 내용과 노동계의 반대 입장을 강조하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안을 핵심 관점으로 제시",
+                "summary": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "메가특구특별법에 담길 노동 규제 완화 논의를 위한 노사정 사회적 대화를 핵심 관점으로 제시",
+                "summary": "메가특구특별법에 담길 노동 규제 완화(주 52시간제 예외 등)를 논의하기 위한 노사정 사회적 대화의 진행 상황과 노동계의 반대 입장",
                 "evidence": []
               }
             ]
@@ -2003,18 +1333,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '메가특구 특별법 추진'과 '노동 규제 특례 필요성'을 원인으로 강조한 반면, 동아일보는 '메가특구특별법에 담길 노동 규제 완화'를 원인으로 제시하고 있다.",
+            "contrast_statement": "SBS는 반도체·AI 등 첨단산업 거점 조성을 배경으로 제시한 반면, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 역사적 맥락을 강조하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "메가특구 특별법 추진과 노동 규제 특례 필요성을 강조",
+                "summary": "반도체와 AI 등 첨단산업 거점 조성을 위한 제도적 기반 마련",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "메가특구특별법에 담길 노동 규제 완화 논의를 강조",
+                "summary": "2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화",
                 "evidence": []
               }
             ]
@@ -2022,18 +1352,18 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '접점 모색'과 '노동자·사용자'를 영향 대상으로 강조한 반면, 동아일보는 '최종 합의 불투명'과 '노동계'를 영향 대상으로 제시하고 있다.",
+            "contrast_statement": "SBS는 접점 모색이라는 긍정적 전망을 제시한 반면, 동아일보는 노동계의 강한 반대와 최종 합의 불투명으로 인한 우려를 강조하고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "접점 모색을 통한 사회적 대화 가능성을 영향으로서 강조",
+                "summary": "접점 모색",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 불투명하다는 점을 영향으로서 강조",
+                "summary": "노동계의 강한 반대와 최종 합의 불투명",
                 "evidence": []
               }
             ]
@@ -2041,32 +1371,34 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "판단 어려움",
-            "contrast_statement": "SBS는 '정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했습니다'라는 중립적 설명을, 동아일보는 '주 52시간제 예외 등 ‘메가특구특별법’에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다'라는 중립적 설명을 제시하고 있다.",
+            "contrast_statement": "SBS는 정부의 제안을 중립적으로 설명하는 태도를 보인 반면, 동아일보는 노동계의 반대 입장을 우려·경계하는 태도를 보이고 있다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "사실관계를 중립적으로 전달하며 정부의 공식 제안을 설명",
+                "summary": "사실관계를 중립적으로 전달",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며 노사정 사회적 대화의 시작을 설명",
+                "summary": "노동계의 강한 반대와 최종 합의 불투명에 대한 우려·경계",
                 "evidence": []
               }
             ]
           }
         ],
         "similarities": [
-          "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실",
+          "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 점",
           "반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반 마련이라는 배경",
-          "사회적 대화를 통한 접점 모색이라는 긍정적 전망"
+          "접점 모색이라는 긍정적 전망"
         ],
         "key_differences": [
-          "SBS는 '접점 모색'을 긍정적 영향으로 강조한 반면, 동아일보는 '최종 합의 불투명'을 부정적 영향으로 강조"
+          "SBS는 노동 규제 특례 자체에 초점을 맞춘 반면, 동아일보는 주 52시간제 예외 등 구체적인 노동 규제 완화 내용과 노동계의 반대 입장을 강조",
+          "SBS는 반도체·AI 등 첨단산업 거점 조성을 배경으로 제시한 반면, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 역사적 맥락을 강조",
+          "SBS는 접점 모색이라는 긍정적 전망을 제시한 반면, 동아일보는 노동계의 강한 반대와 최종 합의 불투명으로 인한 우려를 강조"
         ],
-        "comparison_report": "SBS와 동아일보 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실을 보도하고 있으나, SBS는 '접점 모색'을 통해 긍정적 전망을 제시하는 반면 동아일보는 '최종 합의 불투명'을 강조하며 노동계의 강한 반대 가능성을 부각하고 있다. SBS는 '메가특구 특별법 추진'과 '노동 규제 특례 필요성'을 원인으로 제시한 데 비해 동아일보는 '메가특구특별법에 담길 노동 규제 완화'를 원인으로 제시하고 있으며, 영향 대상에서도 SBS는 '노동자·사용자'를, 동아일보는 '노동계'를 강조하고 있다. 두 언론사 모두 중립적 설명 태도를 보이고 있으나, 동아일보는 '주 52시간제 예외'라는 구체적 규제 완화 내용을 제목에 포함시켜 보다 구체적인 정책 내용을 전달하고 있다.",
+        "comparison_report": "SBS와 동아일보 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 점을 공통적으로 보도하고 있으나, SBS는 중립적으로 제도적 기반 마련에 초점을 맞춘 반면, 동아일보는 구체적인 노동 규제 완화 내용과 노동계의 반대 입장을 우려·경계하는 태도로 보도하고 있다. SBS는 반도체·AI 등 첨단산업 거점 조성을 배경으로 제시한 데 비해, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 역사적 맥락을 강조하고 있으며, SBS는 접점 모색이라는 긍정적 전망을 제시한 반면 동아일보는 최종 합의 불투명으로 인한 우려를 강조하고 있다.",
         "source_links": [
           {
             "publisher_id": "sbs",
@@ -2085,156 +1417,16 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-09-21T21:46:13.737398+00:00",
-        "model": "solar-pro3"
-      },
-      "donga,mk": {
-        "issue_id": "issue-91497c1cd97e0554",
-        "selected_publishers": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
-          }
-        ],
-        "common_summary": "주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗀 것으로, 두 언론사 모두 메가특구특별법과 관련된 노동 규제 완화 논의를 다루고 있다.",
-        "overall_difference": "일부 차이",
-        "comparisons": [
-          {
-            "dimension": "공통 내용",
-            "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 시작되었다는 점을 공통적으로 보도하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗀 사실을 중립적으로 전달함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "메가특구특별법에 담길 노동 특례를 논의하기 위한 원포인트 사회적 대화가 시작되었다는 점을 중립적으로 전달함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "핵심 관점",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 메가특구특별법에 담길 노동 규제 완화 논의에 초점을 맞춘 반면, 매일경제는 원포인트 사회적 대화 제안과 경영계의 고소득 전문직 노동시간 규제 제외 방안을 함께 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "메가특구특별법에 담길 노동 규제 완화 논의를 중심으로 한 사회적 대화의 시작을 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "메가특구특별법에 포함될 노동 특례 논의를 위한 원포인트 사회적 대화 제안과 경영계의 고소득 전문직 노동시간 규제 제외 방안을 강조함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조된 원인·배경",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 배경을 강조하는 반면, 매일경제는 메가특구특별법에 담길 노동 특례 논의 자체를 원인으로 제시하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 배경을 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "메가특구특별법에 담길 노동 특례 논의 필요성을 강조함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "강조한 영향·대상",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 노동계 전반의 최종 합의 불투명성을 우려하는 반면, 매일경제는 고소득 전문직의 노동시간 규제 제외라는 구체적 영향을 강조하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "노동계의 최종 합의 불투명성을 우려함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "고소득 전문직의 노동시간 규제 제외라는 구체적 영향을 강조함",
-                "evidence": []
-              }
-            ]
-          },
-          {
-            "dimension": "보도 태도·근거",
-            "difference_level": "일부 차이",
-            "contrast_statement": "동아일보는 '주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다'는 중립적 설명을, 매일경제는 '메가특구 '52시간 예외' 결국 사회적 대화로'라는 중립적 설명을 사용하고 있다.",
-            "publisher_details": [
-              {
-                "publisher_id": "donga",
-                "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달하며, 주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗀 사실을 설명함",
-                "evidence": [
-                  "주 52시간제 예외 등 ‘메가특구특별법’에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다"
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며, 메가특구 '52시간 예외' 결국 사회적 대화로 해결하려는 정부의 제안을 설명함",
-                "evidence": [
-                  "메가특구 '52시간 예외' 결국 사회적 대화로"
-                ]
-              }
-            ]
-          }
-        ],
-        "similarities": [
-          "메가특구특별법에 담길 노동 규제 완화 논의를 위한 노사정 사회적 대화가 시작되었다는 점",
-          "사회적 대화의 시작을 중립적으로 보도하고 있다는 점"
-        ],
-        "key_differences": [
-          "동아일보는 민노총 참여라는 배경과 노동계 전반의 합의 불투명성을 강조하는 반면, 매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 구체적으로 제시하고 있음"
-        ],
-        "comparison_report": "동아일보와 매일경제는 모두 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 시작되었다는 공통점을 가지고 있으나, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화라는 배경과 노동계 전반의 최종 합의 불투명성을 강조하는 반면, 매일경제는 원포인트 사회적 대화 제안과 경영계의 고소득 전문직 노동시간 규제 제외 방안을 구체적으로 제시하고 있다. 두 언론사 모두 중립적인 보도 태도를 보이며, 동아일보는 '주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다'는 표현을, 매일경제는 '메가특구 '52시간 예외' 결국 사회적 대화로'라는 표현을 사용하여 사실을 전달하고 있다.",
-        "source_links": [
-          {
-            "publisher_id": "donga",
-            "publisher": "동아일보",
-            "title": "‘주52시간 예외’ 메가특구 사회적 대화 오늘 첫 회의",
-            "link": "https://www.donga.com/news/Society/article/all/20260922/134714980/2",
-            "published_at": "Tue, 22 Sep 2026 04:30:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
-            "link": "https://www.mk.co.kr/news/economy/12153423",
-            "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00"
-          }
-        ],
-        "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
-        "comparison_status": "success",
-        "compared_at": "2026-09-21T21:46:16.982517+00:00",
+        "compared_at": "2026-09-22T16:24:02.704105+00:00",
         "model": "solar-pro3"
       },
       "donga,mk,sbs": {
         "issue_id": "issue-91497c1cd97e0554",
         "selected_publishers": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제"
+          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS"
@@ -2242,36 +1434,32 @@
           {
             "publisher_id": "donga",
             "publisher": "동아일보"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
           }
         ],
-        "common_summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했으며, 반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 움직임을 보이고 있다.",
+        "common_summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안했으며, 경영계는 고소득 전문직을 노동시간 규제에서 제외하는 방안을 제시했다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "SBS, 동아일보, 매일경제 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 점을 공통적으로 보도하고 있다.",
+            "contrast_statement": "세 언론사 모두 정부가 메가특구특별법의 노동 특례 논의를 위해 사회적 대화를 제안했다는 점을 공통적으로 보도하고 있다.",
             "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 '원포인트 사회적 대화'를 제안한 내용을 보도",
+                "evidence": []
+              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 사실을 중립적으로 전달함",
+                "summary": "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안한 내용을 보도",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "정부가 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화를 사전 협의로 시작했다는 점을 중립적으로 전달함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 노사정이 참여하는 원포인트 사회적 대화를 제안했다는 사실을 중립적으로 전달함",
+                "summary": "주 52시간제 예외 등 메가특구특별법에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화의 시작을 보도",
                 "evidence": []
               }
             ]
@@ -2279,24 +1467,24 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '메가특구 노동 특례'에 대한 사회적 대화 제안을, 동아일보와 매일경제는 '메가특구특별법에 담길 노동 규제 완화' 논의를 핵심 관점으로 제시하고 있다.",
+            "contrast_statement": "매일경제는 경영계의 고소득 전문직 제외 방안을, SBS는 반도체·AI 등 첨단산업 거점 조성을, 동아일보는 노동계의 반대와 합의 불투명성을 각각 강조했다.",
             "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "메가특구특별법에 담길 노동 특례를 논의하기 위한 사회적 대화 제안",
+                "evidence": []
+              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안을 핵심 관점으로 제시함",
+                "summary": "메가특구 특별법의 노동 규제 특례에 대한 노사 간 사회적 대화 제안",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "메가특구특별법에 담길 노동 규제 완화 논의를 위한 노사정 사회적 대화 시작을 핵심 관점으로 제시함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "메가특구특별법에 포함될 노동 특례를 논의하기 위한 원포인트 사회적 대화 제안과 경영계의 고소득 전문직 노동시간 규제 제외 방안을 핵심 관점으로 제시함",
+                "summary": "메가특구특별법에 담길 노동 규제 완화(주 52시간제 예외 등)를 논의하기 위한 노사정 사회적 대화의 진행 상황과 노동계의 반대 입장을 강조",
                 "evidence": []
               }
             ]
@@ -2304,24 +1492,24 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS와 동아일보는 메가특구 특별법 추진 자체를 강조하지만, 매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 별도로 강조하고 있다.",
+            "contrast_statement": "매일경제와 SBS는 메가특구특별법 자체를 배경으로 언급한 반면, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 점을 추가로 강조했다.",
             "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "메가특구특별법에 담길 노동 특례 논의",
+                "evidence": []
+              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "메가특구 특별법 추진과 노동 규제 특례 필요성을 강조함",
+                "summary": "메가특구 특별법의 노동 규제 특례",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "메가특구특별법에 담길 노동 규제 완화 논의와 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화 배경을 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "메가특구특별법에 담길 노동 특례 논의 필요성을 강조함",
+                "summary": "2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화",
                 "evidence": []
               }
             ]
@@ -2329,24 +1517,24 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS와 동아일보는 사회적 대화를 통한 접점 모색을 강조하지만, 매일경제는 고소득 전문직의 노동시간 규제 제외라는 구체적 영향을 강조하고 있다.",
+            "contrast_statement": "매일경제와 SBS는 고소득 전문직 또는 노동자와 사용자 등 광범위한 대상을 언급한 반면, 동아일보는 노동계의 강한 반대와 최종 합의 불투명을 강조했다.",
             "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "노동시간 규제에서 고소득 전문직 제외",
+                "evidence": []
+              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "사회적 대화를 통한 접점 모색을 강조함",
+                "summary": "접점 모색",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "최종 합의 불투명이라는 부정적 영향을 강조함",
-                "evidence": []
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "고소득 전문직의 노동시간 규제 제외라는 구체적 영향을 강조함",
+                "summary": "노동계의 강한 반대, 최종 합의 불투명",
                 "evidence": []
               }
             ]
@@ -2354,8 +1542,16 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 '정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했습니다'라는 중립적 설명을, 동아일보는 '주 52시간제 예외 등 ‘메가특구특별법’에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다'는 중립적 설명을, 매일경제는 '메가특구 '52시간 예외' 결국 사회적 대화로'라는 중립적 설명을 사용하고 있다.",
+            "contrast_statement": "매일경제는 중립 설명, SBS는 중립 설명, 동아일보는 우려·경계 태도를 보였다.",
             "publisher_details": [
+              {
+                "publisher_id": "mk",
+                "publisher": "매일경제",
+                "summary": "사실관계를 중립적으로 전달함",
+                "evidence": [
+                  "메가특구 '52시간 예외' 결국 사회적 대화로"
+                ]
+              },
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
@@ -2367,31 +1563,32 @@
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "사실관계를 중립적으로 전달함",
+                "summary": "우려·경계",
                 "evidence": [
-                  "주 52시간제 예외 등 ‘메가특구특별법’에 담길 노동 규제 완화를 논의하기 위한 노사정 사회적 대화가 사전 협의를 시작으로 첫발을 뗐다"
-                ]
-              },
-              {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달함",
-                "evidence": [
-                  "메가특구 '52시간 예외' 결국 사회적 대화로"
+                  "노동계가 특별법에 담길 노동 특례를 강하게 반대하고 있어 최종 합의가 이뤄질지는 불투명하다"
                 ]
               }
             ]
           }
         ],
         "similarities": [
-          "정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 점",
-          "반도체·AI 등 첨단산업 거점 조성을 위한 제도적 기반을 마련하려는 정부의 움직임"
+          "정부가 메가특구특별법에 담길 노동 특례를 논의하기 위해 사회적 대화를 제안한 점",
+          "메가특구특별법이 노동 규제 특례와 관련되어 있다는 점",
+          "사회적 대화가 노사정 또는 노사 간 협의로 진행된다는 점"
         ],
         "key_differences": [
-          "매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 별도로 강조하고 있으며, 동아일보는 2020년 코로나 팬데믹 극복을 위한 원포인트 노사정 대화 이후 6년 만에 민노총까지 참여하는 사회적 대화 배경을 강조하고 있다."
+          "동아일보가 노동계의 반대와 합의 불투명을 강조한 반면, 매일경제와 SBS는 경영계 또는 노사 간 접점 모색에 초점을 맞췄다",
+          "동아일보가 민노총 참여 배경을 추가로 보도한 반면, 매일경제와 SBS는 첨단산업 거점 조성에 초점을 맞췄다"
         ],
-        "comparison_report": "SBS, 동아일보, 매일경제는 모두 정부가 메가특구 특별법의 노동 규제 특례에 대해 노사가 참여하는 사회적 대화를 공식 제안했다는 공통점을 가지고 있으나, SBS는 '메가특구 노동 특례'에 대한 사회적 대화 제안을, 동아일보와 매일경제는 '메가특구특별법에 담길 노동 규제 완화' 논의를 핵심 관점으로 제시하고 있다. SBS와 동아일보는 메가특구 특별법 추진 자체를 강조하지만, 매일경제는 경영계의 고소득 전문직 노동시간 규제 제외 방안을 별도로 강조하고 있다. 영향 측면에서는 SBS와 동아일보는 사회적 대화를 통한 접점 모색을 강조하지만, 매일경제는 고소득 전문직의 노동시간 규제 제외라는 구체적 영향을 강조하고 있다. 보도 태도는 세 언론사 모두 중립적 설명을 사용하고 있으나, 동아일보는 민노총 참여라는 구체적 맥락을, 매일경제는 경영계의 제안을 별도로 언급하고 있다.",
+        "comparison_report": "세 언론사 모두 정부가 메가특구특별법의 노동 특례 논의를 위해 사회적 대화를 제안한 사실을 보도했으나, 매일경제와 SBS는 경영계의 고소득 전문직 제외 방안이나 반도체·AI 등 첨단산업 거점 조성을 중심으로 중립적으로 전달한 반면, 동아일보는 민노총 참여 배경과 노동계의 강한 반대, 최종 합의 불투명을 우려·경계하는 태도로 강조했다.",
         "source_links": [
+          {
+            "publisher_id": "mk",
+            "publisher": "매일경제",
+            "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
+            "link": "https://www.mk.co.kr/news/economy/12153423",
+            "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00"
+          },
           {
             "publisher_id": "sbs",
             "publisher": "SBS",
@@ -2405,18 +1602,11 @@
             "title": "‘주52시간 예외’ 메가특구 사회적 대화 오늘 첫 회의",
             "link": "https://www.donga.com/news/Society/article/all/20260922/134714980/2",
             "published_at": "Tue, 22 Sep 2026 04:30:00 +0900"
-          },
-          {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "메가특구 '52시간 예외' 결국 사회적 대화로",
-            "link": "https://www.mk.co.kr/news/economy/12153423",
-            "published_at": "Tue, 15 Sep 2026 17:37:35 +09:00"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-09-21T21:46:17.951595+00:00",
+        "compared_at": "2026-09-22T16:24:05.930371+00:00",
         "model": "solar-pro3"
       }
     }
@@ -2436,9 +1626,9 @@
           }
         ],
         "analysis": {
-          "article_summary": "제3회 대한민국 사회적가치 페스타가 개막했으며, 최태원 대한상공회의소 회장이 개회사에서 AI를 사회문제 해결의 강력한 도구로 강조했다.",
-          "headline_frame": "AI를 사회문제 해결의 핵심 수단으로 제시하는 최태원 회장의 발언을 중심으로 한 행사 개막 소식",
-          "main_focus": "사회적가치 페스타 개막과 최태원 회장의 AI 활용 사회문제 해결 강조",
+          "article_summary": "제3회 대한민국 사회적가치 페스타가 개막했으며, 최태원 대한상공회의소 회장이 AI 기술을 사회문제 해결의 핵심 도구로 강조했다.",
+          "headline_frame": "AI를 사회문제 해결의 강력한 수단으로 제시하는 최태원 회장의 발언을 중심으로 행사 개막 소식을 전달",
+          "main_focus": "AI 기술을 활용한 사회적가치 창출 방안과 최태원 회장의 개회사 내용",
           "keywords": [
             "사회적가치 페스타",
             "AI",
@@ -2457,13 +1647,14 @@
             "AI 기술의 발전"
           ],
           "background": [
-            "제3회 대한민국 사회적가치 페스타"
+            "제3회 대한민국 사회적가치 페스타 개최",
+            "서울 강남구 코엑스에서 열린 행사"
           ],
           "emphasized_effects": [
             "AI를 통한 사회문제 해결 가능성"
           ],
           "affected_groups": [
-            "사회문제 해결을 위한 기업 및 기관"
+            "사회문제 해결을 필요로 하는 집단"
           ],
           "tone": {
             "category": "기대",
@@ -2473,17 +1664,16 @@
           },
           "outlook": {
             "direction": "긍정",
-            "summary": "AI를 활용한 사회적 가치 창출 가능성에 대한 긍정적 전망"
+            "summary": "AI 기술을 활용한 사회적가치 창출 가능성에 대한 긍정적 전망 제시"
           },
           "less_covered_context": [
-            "행사 기간 및 구체적 프로그램 내용",
-            "다른 연사들의 발언 내용",
-            "참가 기업 및 기관의 구체적 사례"
+            "행사 세부 프로그램 및 참여 기업 정보",
+            "AI 기술 적용 사례의 구체적 내용"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:21.519973+00:00",
+        "analyzed_at": "2026-09-22T16:24:09.848345+00:00",
         "model": "solar-pro3"
       },
       {
@@ -2507,7 +1697,7 @@
             "사회문제 해결",
             "체험 행사",
             "대한상공회의소",
-            "코엑스"
+            "서울 코엑스"
           ],
           "main_actors": [
             "대한상공회의소"
@@ -2521,8 +1711,7 @@
             "사회 문제 해결 과정을 직접 보고 체험할 수 있는 기회 제공"
           ],
           "affected_groups": [
-            "기업 및 기관 400여 곳",
-            "행사 참관객"
+            "기업 및 기관 400여 곳"
           ],
           "tone": {
             "category": "중립 설명",
@@ -2533,17 +1722,16 @@
           },
           "outlook": {
             "direction": "중립",
-            "summary": "행사 개최 일정 및 사전등록 정보를 안내하며, 향후 행사에 대한 구체적 전망은 제시하지 않음"
+            "summary": "행사 참관객 사전등록이 9월 18일까지 가능하며, 공식 홈페이지를 통해 등록해야 한다는 정보만 제공"
           },
           "less_covered_context": [
-            "행사 프로그램의 구체적 내용",
-            "참여 기업들의 구체적 사례",
-            "사회적가치 페스타의 장기적 비전이나 성과 평가"
+            "행사 프로그램의 구체적인 내용이나 체험 가능한 사회 문제 유형에 대한 상세 설명 부족",
+            "참여 기업들의 구체적인 사례나 성과 소개 미흡"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:22.500713+00:00",
+        "analyzed_at": "2026-09-22T16:24:11.513854+00:00",
         "model": "solar-pro3"
       }
     ],
@@ -2552,12 +1740,12 @@
       "groups": [
         {
           "group_id": "group-1",
-          "label": "AI를 통한 사회문제 해결 가능성 강조",
-          "summary": "두 언론사 모두 사회적가치 페스타에서 AI를 사회문제 해결의 핵심 수단으로 활용하는 방안을 강조하며, AI 기술의 발전이 사회문제 해결에 기여할 수 있다는 긍정적 전망을 제시하고 있습니다.",
+          "label": "AI를 통한 사회적가치 창출 가능성",
+          "summary": "두 언론사 모두 사회적가치 페스타에서 AI 기술을 활용한 사회문제 해결 방안에 초점을 맞추고 있으며, SBS는 최태원 회장의 발언을 통해 AI의 강력한 해결사 역할을 강조하고, 동아일보는 행사 개최를 통해 사회문제 해결 과정을 체험할 수 있는 기회를 제공한다는 점에서 AI 기반 사회적가치 창출이라는 공통된 핵심 관점을 보여줍니다.",
           "keywords": [
             "AI",
-            "사회문제 해결",
-            "사회적가치 페스타"
+            "사회적가치 페스타",
+            "사회문제 해결"
           ],
           "publisher_ids": [
             "sbs",
@@ -2575,16 +1763,17 @@
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "SBS는 최태원 회장의 발언을 통해 AI를 '강력한 사회문제 해결사'로 제시하며 사회문제 해결을 위한 기업 및 기관의 AI 활용 가능성을 강조했습니다. 동아일보도 행사 개최를 통해 사회문제 해결 과정을 직접 보고 체험할 수 있는 기회를 제공하며, AI를 통한 사회문제 해결 가능성을 간접적으로 시사하고 있습니다. 두 언론사 모두 AI 기술의 발전이 사회문제 해결에 기여할 수 있다는 긍정적 전망을 제시하고 있습니다."
+            "SBS는 최태원 회장의 발언을 중심으로 AI 기술을 활용한 사회적가치 창출 방안과 개회사 내용을 핵심 관점으로 제시하며, AI를 강력한 사회문제 해결사로 보고 긍정적 전망을 제시합니다.",
+            "동아일보는 사회적가치 페스타의 개최 일정, 장소, 참여 규모 및 사전등록 정보를 객관적으로 전달하면서, AI를 통한 사회문제 해결 가능성을 간접적으로 언급하며 행사 참관객에게 사회 문제 해결 과정을 직접 보고 체험할 수 있는 기회를 제공한다는 점을 강조합니다."
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "SBS와 동아일보 모두 사회적가치 페스타에서 AI를 사회문제 해결의 핵심 수단으로 활용하는 방안을 강조하며, AI 기술의 발전이 사회문제 해결에 기여할 수 있다는 긍정적 전망을 제시하고 있습니다. SBS는 최태원 회장의 발언을 중심으로 AI의 강력한 해결사 역할을 구체적으로 제시한 반면, 동아일보는 행사 개최를 통해 사회문제 해결 과정을 직접 체험할 수 있는 기회를 제공하는 데 초점을 맞췄습니다. 두 언론사 모두 AI 기술의 발전이 사회문제 해결에 기여할 수 있다는 긍정적 전망을 제시하고 있으며, 핵심 관점과 해석 방향이 대체로 일치하여 같은 그룹으로 묶을 수 있습니다.",
+      "grouping_summary": "SBS와 동아일보 모두 제3회 대한민국 사회적가치 페스타를 다루지만, SBS는 최태원 회장의 발언을 통해 AI 기술을 활용한 사회적가치 창출 방안과 AI의 강력한 사회문제 해결사 역할에 초점을 맞춘 반면, 동아일보는 행사 개최 사실과 참관객 체험 기회에 초점을 맞춘 중립적 보도 태도를 보입니다. 두 언론사 모두 AI 기술을 통한 사회문제 해결이라는 공통된 핵심 관점을 가지고 있으나, SBS는 이를 최태원 회장의 리더십과 미래 전망으로 강조하는 반면, 동아일보는 행사 자체의 객관적 정보와 체험 기회를 중심으로 보도합니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-09-21T21:46:25.809346+00:00",
+      "grouped_at": "2026-09-22T16:24:16.728111+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
@@ -2600,24 +1789,24 @@
             "publisher": "동아일보"
           }
         ],
-        "common_summary": "제3회 대한민국 사회적가치 페스타가 개막했으며, 최태원 대한상공회의소 회장이 개회사에서 AI를 사회문제 해결의 강력한 도구로 강조했다.",
+        "common_summary": "제3회 대한민국 사회적가치 페스타가 서울 코엑스에서 개최되며, 최태원 대한상공회의소 회장이 AI 기술을 사회문제 해결의 핵심 도구로 강조했다는 점이 두 언론사 모두에서 확인된다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 제3회 대한민국 사회적가치 페스타의 개막 소식을 전하며, 최태원 대한상공회의소 회장의 개회사를 언급한다.",
+            "contrast_statement": "두 언론사 모두 제3회 대한민국 사회적가치 페스타가 서울 코엑스에서 개최되고 최태원 대한상공회의소 회장이 AI 기술을 사회문제 해결의 핵심 도구로 강조했다는 점을 공통적으로 보도한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "행사 개막과 최태원 회장의 AI 활용 사회문제 해결 강조",
+                "summary": "행사 개막과 최태원 회장의 AI 강조 발언을 중심으로 사회적가치 페스타 소식을 전달",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "행사 개최 일정, 장소, 참여 규모 및 사전등록 정보 전달",
+                "summary": "행사 개최 일정, 장소, 주최 기관 및 참여 규모를 객관적으로 알리는 데 초점",
                 "evidence": []
               }
             ]
@@ -2625,18 +1814,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 최태원 회장의 AI 활용 사회문제 해결 강조에 초점을 맞춘 반면, 동아일보는 행사 일정, 장소, 참여 규모 등 객관적 정보 전달에 중점을 둔다.",
+            "contrast_statement": "SBS는 AI 기술을 활용한 사회적가치 창출 방안과 최태원 회장의 개회사 내용에 초점을 맞춘 반면, 동아일보는 행사 개최 일정, 장소, 참여 규모 및 사전등록 정보를 객관적으로 알리는 데 초점을 둔다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "사회적가치 페스타 개막과 최태원 회장의 AI 활용 사회문제 해결 강조",
+                "summary": "AI 기술을 활용한 사회적가치 창출 방안과 최태원 회장의 개회사 내용",
                 "evidence": []
               },
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "행사 개최 일정, 장소, 참여 규모 및 사전등록 정보 객관적 전달",
+                "summary": "행사 개최 일정, 장소, 참여 규모 및 사전등록 정보를 객관적으로 알리는 것",
                 "evidence": []
               }
             ]
@@ -2644,12 +1833,12 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 AI 기술 발전을 사회문제 해결의 원인으로 강조한 반면, 동아일보는 제3회 행사라는 배경을 중심으로 보도한다.",
+            "contrast_statement": "SBS는 AI 기술의 발전을 사회문제 해결의 핵심 원인으로 강조한 반면, 동아일보는 '올해로 3회째를 맞이하는 대한민국 사회적가치 페스타'라는 행사 자체의 배경을 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "AI 기술 발전을 사회문제 해결의 핵심 원인으로 제시",
+                "summary": "AI 기술의 발전",
                 "evidence": []
               },
               {
@@ -2663,12 +1852,12 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 AI를 통한 사회문제 해결 가능성에 주목한 반면, 동아일보는 기업 및 기관 400여 곳의 체험 기회 제공에 초점을 둔다.",
+            "contrast_statement": "SBS는 AI를 통한 사회문제 해결 가능성에 초점을 둔 반면, 동아일보는 사회 문제 해결 과정을 직접 보고 체험할 수 있는 기회를 제공한다는 점을 강조한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "AI를 통한 사회문제 해결 가능성 제시",
+                "summary": "AI를 통한 사회문제 해결 가능성",
                 "evidence": []
               },
               {
@@ -2682,12 +1871,12 @@
           {
             "dimension": "보도 태도·근거",
             "difference_level": "일부 차이",
-            "contrast_statement": "SBS는 최태원 회장의 발언을 긍정적으로 기대하며 보도한 반면, 동아일보는 행사 정보를 중립적으로 설명하는 태도를 보인다.",
+            "contrast_statement": "SBS는 'AI, 강력한 사회문제 해결사'라는 표현을 통해 AI 기술에 대한 기대감을 드러내는 반면, 동아일보는 '사회문제 해결 과정 직접 체험… 내달 21일 ‘사회적가치 페스타’’와 같은 중립적 설명 어조를 사용한다.",
             "publisher_details": [
               {
                 "publisher_id": "sbs",
                 "publisher": "SBS",
-                "summary": "최태원 회장의 AI 발언을 긍정적으로 기대하며 보도",
+                "summary": "AI를 사회문제 해결의 강력한 수단으로 제시하는 최태원 회장의 발언을 중심으로 기대감을 드러내는 보도 태도",
                 "evidence": [
                   "\"AI, 강력한 사회문제 해결사\""
                 ]
@@ -2695,7 +1884,7 @@
               {
                 "publisher_id": "donga",
                 "publisher": "동아일보",
-                "summary": "행사 일정, 장소, 참여 규모 등을 중립적으로 설명",
+                "summary": "행사 개최 일정과 장소, 참여 규모를 객관적으로 알리는 중립적 설명 태도",
                 "evidence": [
                   "사회문제 해결 과정 직접 체험… 내달 21일 ‘사회적가치 페스타’",
                   "9월 21일부터 22일까지 서울 코엑스에서 ‘제3회 대한민국 사회적가치 페스타’가 열린다"
@@ -2705,14 +1894,17 @@
           }
         ],
         "similarities": [
-          "제3회 대한민국 사회적가치 페스타 개최",
-          "최태원 대한상공회의소 회장의 개회사 언급",
-          "AI를 사회문제 해결 도구로 제시"
+          "제3회 대한민국 사회적가치 페스타가 서울 코엑스에서 개최된다는 점",
+          "최태원 대한상공회의소 회장이 AI 기술을 사회문제 해결의 핵심 도구로 강조했다는 점",
+          "사회적가치 페스타라는 행사 명칭"
         ],
         "key_differences": [
-          "SBS는 최태원 회장의 AI 발언을 중심으로 사회문제 해결 가능성을 강조한 반면, 동아일보는 행사 일정, 장소, 참여 규모 등 객관적 정보 전달에 초점을 둠"
+          "SBS는 AI 기술을 사회문제 해결의 핵심 도구로 강조하는 반면, 동아일보는 행사 개최 일정과 참여 규모에 초점을 맞춤",
+          "SBS는 AI 기술의 발전을 원인으로 강조하는 반면, 동아일보는 행사 자체의 배경을 강조함",
+          "SBS는 AI를 통한 사회문제 해결 가능성을 강조하는 반면, 동아일보는 사회 문제 해결 과정 체험 기회를 강조함",
+          "SBS는 AI 기술에 대한 기대감을 드러내는 보도 태도를 보인 반면, 동아일보는 중립적 설명 태도를 보임"
         ],
-        "comparison_report": "SBS와 동아일보 모두 제3회 대한민국 사회적가치 페스타의 개막 소식을 보도했으나, SBS는 최태원 대한상공회의소 회장의 개회사에서 AI를 사회문제 해결의 강력한 도구로 강조한 점을 중심으로 행사의 의미와 가능성을 부각시킨 반면, 동아일보는 행사 일정(9월 21일~22일), 장소(서울 코엑스), 참여 규모(400여 곳) 등 객관적 정보를 중립적으로 전달하는 데 초점을 두었다. 두 언론사 모두 AI를 사회문제 해결 도구로 언급했으나, SBS는 AI 기술 발전을 원인으로 강조한 데 비해 동아일보는 행사 자체의 체험적 측면에 주목했다.",
+        "comparison_report": "SBS와 동아일보 모두 제3회 대한민국 사회적가치 페스타가 서울 코엑스에서 개최되고 최태원 대한상공회의소 회장이 AI 기술을 사회문제 해결의 핵심 도구로 강조했다는 공통점을 가지고 있다. 그러나 SBS는 AI 기술을 활용한 사회적가치 창출 방안과 최태원 회장의 개회사 내용에 초점을 맞추며 AI 기술의 발전을 사회문제 해결의 핵심 원인으로 강조하고 AI를 통한 사회문제 해결 가능성을 부각시키는 반면, 동아일보는 행사 개최 일정, 장소, 참여 규모 및 사전등록 정보를 객관적으로 알리는 데 초점을 두고 '올해로 3회째를 맞이하는 대한민국 사회적가치 페스타'라는 행사 자체의 배경을 강조하며 사회 문제 해결 과정을 직접 보고 체험할 수 있는 기회를 제공하는 중립적 설명 태도를 보인다.",
         "source_links": [
           {
             "publisher_id": "sbs",
@@ -2731,149 +1923,163 @@
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-09-21T21:46:33.535620+00:00",
+        "compared_at": "2026-09-22T16:24:27.293792+00:00",
         "model": "solar-pro3"
       }
     }
   },
-  "issue-d43f3807f830d119": {
+  "issue-e52f777bbf7966c5": {
     "publisher_analyses": [
       {
-        "issue_id": "issue-d43f3807f830d119",
-        "publisher_id": "mk",
-        "publisher": "매일경제",
+        "issue_id": "issue-e52f777bbf7966c5",
+        "publisher_id": "chosun",
+        "publisher": "조선일보",
         "articles": [
           {
-            "article_id": "d51fd2b816e6147fd4c38d132b8ed8ccb289faffaaca42dbc77a7a8647526c12",
-            "title": "\"회사에 올인하면, 은퇴 후 고독\"… 중장년층 가치관 '일→가정' 변화",
-            "published_at": "Mon, 21 Sep 2026 17:40:24 +09:00",
-            "link": "https://www.mk.co.kr/news/economy/12158502"
+            "article_id": "d62a955b1947a9a21abd3cad8db595aac8abb7ca7b3a34617f0d81eab6e9aeae",
+            "title": "“공공기관 믿은 게 죄”...사회주택 전세사기 청년들 피해 호소",
+            "published_at": "Tue, 22 Sep 2026 08:21:01 +0000",
+            "link": "https://www.chosun.com/national/national_general/2026/09/22/IELYSU3SEVGO7DEFXLUCOZNFVE/"
           }
         ],
         "analysis": {
-          "article_summary": "40~64세 중장년층의 인생 가치관이 '일'에서 '가정'으로 이동했으며, 부모 부양과 가사 책임을 가족과 사회가 함께 공동 책임으로 인식하는 변화가 나타났다.",
-          "headline_frame": "중장년층의 인생 가치관 변화를 '일'에서 '가정'으로의 이동으로 규정",
-          "main_focus": "중장년층의 가치관 변화와 가족·사회 공동 책임 인식",
+          "article_summary": "사회주택 전세사기 피해 청년들이 공공기관을 믿고 계약한 것이 오히려 피해를 키웠다고 호소하며, 피해 상황과 제도적 허점을 지적하고 있다.",
+          "headline_frame": "공공기관을 믿은 것이 오히려 피해를 초래했다는 청년들의 호소",
+          "main_focus": "사회주택 전세사기 피해 청년들의 피해 호소와 공공기관 신뢰에 대한 문제 제기",
           "keywords": [
-            "중장년층",
-            "가치관 변화",
-            "일→가정",
-            "부모 부양",
-            "가사 책임",
-            "공동 책임"
+            "사회주택",
+            "전세사기",
+            "청년",
+            "피해",
+            "공공기관"
           ],
           "main_actors": [
-            "중장년층"
+            "청년들",
+            "사회주택"
           ],
-          "quoted_sources": [],
+          "quoted_sources": [
+            "청년들"
+          ],
           "causes": [
-            "회사 중심 생활 방식"
+            "공공기관을 믿고 계약한 것"
           ],
           "background": [
-            "40~64세 중장년층"
+            "사회주택 전세사기"
           ],
           "emphasized_effects": [
-            "은퇴 후 고독"
+            "피해 호소"
           ],
           "affected_groups": [
-            "중장년층"
+            "청년들"
           ],
           "tone": {
-            "category": "중립 설명",
+            "category": "우려·경계",
             "evidence": [
-              "회사에 올인하면, 은퇴 후 고독",
-              "중장년층의 인생 가치관이 '일'에서 '가정'으로 이동한 것으로 나타났다"
+              "“공공기관 믿은 게 죄”"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "가치관 변화가 사회 전반에 미칠 영향에 대한 전망 제시 없음"
+            "summary": "피해 청년들의 호소와 제도적 허점에 대한 문제 제기"
           },
           "less_covered_context": [
-            "정책 시행 이후의 구체적 효과",
-            "가치관 변화의 경제적 영향"
+            "구체적인 피해 금액",
+            "사기 사건의 구체적 경위",
+            "향후 제도 개선 방안"
           ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:36.858614+00:00",
+        "analyzed_at": "2026-09-22T16:24:31.471124+00:00",
         "model": "solar-pro3"
       },
       {
-        "issue_id": "issue-d43f3807f830d119",
+        "issue_id": "issue-e52f777bbf7966c5",
         "publisher_id": "hani",
         "publisher": "한겨레",
         "articles": [
           {
-            "article_id": "24591c15a61785d4e2c9b1b6a138359cb938df6f93975b68b88237951e45ff74",
-            "title": "중장년층 “부모 부양, 가족·정부·사회가 함께”…10년 새 49%→65%로",
+            "article_id": "279df8edf9f1e2b015e61dcd8047f6141f0b327e0e42794d72cb99451b56a770",
+            "title": "땅은 공공, 건물은 민간…사회주택 보증금 보호의 빈틈",
             "published_at": "발행 시간 정보 없음",
-            "link": "https://www.hani.co.kr/arti/economy/economy_general/1278799.html"
+            "link": "https://www.hani.co.kr/arti/society/society_general/1278971.html"
           }
         ],
         "analysis": {
-          "article_summary": "중장년층의 부모 부양 책임 인식이 가족 중심에서 가족·정부·사회 공동 책임으로 변화했으며, 10년 사이 49%에서 65%로 증가한 것으로 나타났다.",
-          "headline_frame": "중장년층의 부모 부양 책임 인식 변화",
-          "main_focus": "중장년층의 부모 부양 책임 인식 변화 추이",
+          "article_summary": "사회주택에서 토지는 공공이 소유하고 건물은 민간이 소유하는 구조에서 발생하는 보증금 보호 제도의 허점을 지적하고 있다.",
+          "headline_frame": "사회주택 보증금 보호의 제도적 빈틈",
+          "main_focus": "사회주택에서 토지와 건물의 소유 구조가 보증금 보호에 미치는 영향과 제도적 허점",
           "keywords": [
-            "부모 부양",
-            "가족·정부·사회 공동 책임",
-            "인식 변화",
-            "10년 추이"
+            "사회주택",
+            "보증금 보호",
+            "토지 공공 소유",
+            "건물 민간 소유",
+            "제도적 빈틈"
           ],
           "main_actors": [
-            "중장년층"
+            "공공",
+            "민간"
           ],
           "quoted_sources": [],
-          "causes": [],
-          "background": [],
+          "causes": [
+            "토지와 건물의 소유 분리",
+            "보증금 보호 제도의 한계"
+          ],
+          "background": [
+            "사회주택 제도",
+            "공공 토지 소유",
+            "민간 건물 소유"
+          ],
           "emphasized_effects": [
-            "가족·정부·사회 공동 책임 인식 증가"
+            "보증금 반환 위험",
+            "임차인 피해 가능성"
           ],
           "affected_groups": [
-            "중장년층"
+            "사회주택 임차인"
           ],
           "tone": {
-            "category": "중립 설명",
+            "category": "우려·경계",
             "evidence": [
-              "중장년층 “부모 부양, 가족·정부·사회가 함께”…10년 새 49%→65%로"
+              "보증금 보호의 빈틈"
             ]
           },
           "outlook": {
             "direction": "중립",
-            "summary": "향후 부모 부양 책임 인식 변화 추이"
+            "summary": "제도적 보완 필요성 제기"
           },
-          "less_covered_context": [],
+          "less_covered_context": [
+            "구체적인 피해 사례",
+            "정책 개선 방안"
+          ],
           "evidence_limit": "기사 제목과 RSS 설명 기준"
         },
         "analysis_status": "success",
-        "analyzed_at": "2026-09-21T21:46:37.408017+00:00",
+        "analyzed_at": "2026-09-22T16:24:31.603441+00:00",
         "model": "solar-pro3"
       }
     ],
     "publisher_grouping": {
-      "issue_id": "issue-d43f3807f830d119",
+      "issue_id": "issue-e52f777bbf7966c5",
       "groups": [
         {
           "group_id": "group-1",
-          "label": "중장년층 가치관 변화와 공동 책임 인식",
-          "summary": "중장년층이 '일'에서 '가정'으로의 가치관 변화를 보이며, 부모 부양과 가사 책임을 가족·정부·사회가 함께 분담해야 한다는 공동 책임 인식이 증가하고 있음을 중립적으로 설명함",
+          "label": "사회주택 전세사기 피해와 제도적 허점",
+          "summary": "사회주택 전세사기 피해 청년들의 호소와 제도적 허점을 중심으로 한 보도 경향",
           "keywords": [
-            "중장년층",
-            "가치관 변화",
-            "일→가정",
-            "부모 부양",
-            "가사 책임",
-            "공동 책임"
+            "사회주택",
+            "전세사기",
+            "청년 피해",
+            "보증금 보호",
+            "제도적 빈틈"
           ],
           "publisher_ids": [
-            "mk",
+            "chosun",
             "hani"
           ],
           "publishers": [
             {
-              "publisher_id": "mk",
-              "publisher": "매일경제"
+              "publisher_id": "chosun",
+              "publisher": "조선일보"
             },
             {
               "publisher_id": "hani",
@@ -2882,52 +2088,49 @@
           ],
           "publisher_count": 2,
           "group_evidence": [
-            "중장년층의 인생 가치관이 '일'에서 '가정'으로 이동한 것으로 나타남",
-            "중장년층 '부모 부양, 가족·정부·사회가 함께' 인식 증가",
-            "회사 중심 생활 방식이 가치관 변화의 원인으로 지목됨",
-            "은퇴 후 고독이 가치관 변화의 영향으로 언급됨"
+            "두 언론사 모두 사회주택 전세사기 피해 문제를 다루고 있으며, 조선일보가 '공공기관을 믿은 것이 오히려 피해를 초래했다는 청년들의 호소'를, 한겨레가 '사회주택 보증금 보호의 제도적 빈틈'을 핵심 관점으로 제시하고 있습니다. 두 기사 모두 사회주택 전세사기 피해 청년들의 상황을 중심으로 보도하고 있으며, 피해 원인과 제도적 허점을 지적하고 있습니다. 조선일보의 '공공기관 신뢰 문제 제기'와 한겨레의 '토지 공공 소유·건물 민간 소유로 인한 보증금 보호 한계'는 서로 보완 가능한 해석으로, 사회주택 전세사기 피해라는 동일한 핵심 쟁점을 공유하고 있습니다. 두 언론사 모두 '우려·경계'의 보도 태도를 보이며, 피해 청년들의 호소와 제도적 보완 필요성을 제기하고 있습니다."
           ]
         }
       ],
       "group_count": 1,
       "group_contrasts": [],
-      "grouping_summary": "두 언론사 모두 중장년층의 가치관 변화를 '일'에서 '가정'으로의 이동으로 규정하고, 부모 부양과 가사 책임을 가족·정부·사회가 함께 분담해야 한다는 공동 책임 인식이 증가하고 있음을 중립적으로 보도함. 매일경제(mk)는 회사 중심 생활 방식과 은퇴 후 고독을 강조하며, 한겨레(hani)는 10년 추이(49%→65%)를 구체적으로 제시하지만, 핵심 쟁점과 해석 방향은 동일하여 하나의 그룹으로 묶음",
+      "grouping_summary": "조선일보와 한겨레는 모두 사회주택 전세사기 피해 문제를 다루고 있으나, 조선일보가 공공기관 신뢰에 대한 청년들의 문제 제기를 중심으로 보도하고, 한겨레는 토지 공공 소유와 건물 민간 소유로 인한 보증금 보호 제도의 허점을 중심으로 보도하고 있습니다. 두 언론사 모두 피해 청년들의 상황을 중심으로 '우려·경계'의 태도를 보이며, 제도적 보완 필요성을 제기하고 있습니다. 핵심 관점은 서로 다른 표현이지만 사회주택 전세사기 피해라는 동일한 쟁점을 공유하고 있으며, 해석 방향이 대립하지 않아 하나의 그룹으로 묶을 수 있습니다.",
       "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
       "grouping_status": "success",
-      "grouped_at": "2026-09-21T21:46:40.059093+00:00",
+      "grouped_at": "2026-09-22T16:24:40.660950+00:00",
       "model": "solar-pro3"
     },
     "comparisons": {
-      "hani,mk": {
-        "issue_id": "issue-d43f3807f830d119",
+      "chosun,hani": {
+        "issue_id": "issue-e52f777bbf7966c5",
         "selected_publishers": [
           {
-            "publisher_id": "mk",
-            "publisher": "매일경제"
+            "publisher_id": "chosun",
+            "publisher": "조선일보"
           },
           {
             "publisher_id": "hani",
             "publisher": "한겨레"
           }
         ],
-        "common_summary": "40~64세 중장년층의 인생 가치관이 '일'에서 '가정'으로 이동했으며, 부모 부양과 가사 책임을 가족과 사회가 함께 공동 책임으로 인식하는 변화가 나타났다.",
+        "common_summary": "사회주택 전세사기 피해 청년들이 공공기관을 믿고 계약한 것이 오히려 피해를 키웠다고 호소하며, 피해 상황과 제도적 허점을 지적하고 있다.",
         "overall_difference": "일부 차이",
         "comparisons": [
           {
             "dimension": "공통 내용",
             "difference_level": "유사함",
-            "contrast_statement": "두 언론사 모두 40~64세 중장년층의 가치관 변화와 부모 부양 및 가사 책임에 대한 공동 책임 인식 변화를 다루고 있다.",
+            "contrast_statement": "두 언론사 모두 사회주택 전세사기 피해 청년들이 공공기관을 믿고 계약한 것이 오히려 피해를 키웠다고 호소하며, 피해 상황과 제도적 허점을 지적하고 있다.",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "중장년층의 인생 가치관이 '일'에서 '가정'으로 이동했으며, 부모 부양과 가사 책임을 가족과 사회가 함께 공동 책임으로 인식하는 변화를 보도",
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "청년들이 공공기관을 믿고 계약한 것이 오히려 피해를 초래했다는 호소와 함께 피해 상황 및 제도적 허점을 지적함",
                 "evidence": []
               },
               {
                 "publisher_id": "hani",
                 "publisher": "한겨레",
-                "summary": "중장년층의 부모 부양 책임 인식이 가족 중심에서 가족·정부·사회 공동 책임으로 변화했으며, 10년 사이 49%에서 65%로 증가한 추이를 보도",
+                "summary": "사회주택에서 토지와 건물의 소유 구조가 보증금 보호에 미치는 영향과 제도적 허점을 지적함",
                 "evidence": []
               }
             ]
@@ -2935,18 +2138,18 @@
           {
             "dimension": "핵심 관점",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 중장년층의 가치관 변화와 가족·사회 공동 책임 인식을, 한겨레는 부모 부양 책임 인식 변화 추이를 핵심 관점으로 제시했다.",
+            "contrast_statement": "조선일보는 청년들의 피해 호소와 공공기관 신뢰 문제를 강조하는 반면, 한겨레는 토지와 건물의 소유 구조가 보증금 보호에 미치는 영향에 초점을 맞춤",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "중장년층의 인생 가치관 변화와 가족·사회 공동 책임 인식",
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사회주택 전세사기 피해 청년들의 피해 호소와 공공기관 신뢰에 대한 문제 제기",
                 "evidence": []
               },
               {
                 "publisher_id": "hani",
                 "publisher": "한겨레",
-                "summary": "중장년층의 부모 부양 책임 인식 변화 추이",
+                "summary": "사회주택에서 토지와 건물의 소유 구조가 보증금 보호에 미치는 영향과 제도적 허점",
                 "evidence": []
               }
             ]
@@ -2954,18 +2157,18 @@
           {
             "dimension": "강조된 원인·배경",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 회사 중심 생활 방식을 원인으로, 한겨레는 10년 추이를 배경으로 강조했다.",
+            "contrast_statement": "조선일보는 '공공기관을 믿고 계약한 것'을 원인으로 강조하는 반면, 한겨레는 '토지와 건물의 소유 분리'를 원인으로 강조함",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "회사 중심 생활 방식이 중장년층의 가치관 변화를 유발한 원인으로 제시",
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "공공기관을 믿고 계약한 것이 오히려 피해를 키웠다는 점을 원인으로 강조",
                 "evidence": []
               },
               {
                 "publisher_id": "hani",
                 "publisher": "한겨레",
-                "summary": "10년 사이 49%에서 65%로 증가한 추이를 배경으로 강조",
+                "summary": "토지와 건물의 소유 분리로 인한 보증금 보호 제도의 한계를 원인으로 강조",
                 "evidence": []
               }
             ]
@@ -2973,68 +2176,72 @@
           {
             "dimension": "강조한 영향·대상",
             "difference_level": "일부 차이",
-            "contrast_statement": "매일경제는 은퇴 후 고독을, 한겨레는 가족·정부·사회 공동 책임 인식 증가를 주요 영향으로 강조했다.",
+            "contrast_statement": "조선일보는 피해 청년들의 직접적인 피해 호소를 강조하는 반면, 한겨레는 보증금 반환 위험과 임차인 피해 가능성을 강조함",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "은퇴 후 고독을 중장년층의 주요 영향으로 강조",
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사회주택 전세사기 피해 청년들의 피해 호소",
                 "evidence": []
               },
               {
                 "publisher_id": "hani",
                 "publisher": "한겨레",
-                "summary": "가족·정부·사회 공동 책임 인식 증가를 주요 영향으로 강조",
+                "summary": "사회주택 임차인 대상 보증금 반환 위험 및 피해 가능성",
                 "evidence": []
               }
             ]
           },
           {
             "dimension": "보도 태도·근거",
-            "difference_level": "판단 어려움",
-            "contrast_statement": "두 언론사 모두 중립 설명 태도를 보였으나, 매일경제은 '회사에 올인하면, 은퇴 후 고독'이라는 표현을, 한겨레는 '중장년층 “부모 부양, 가족·정부·사회가 함께”…10년 새 49%→65%로'라는 제목을 근거로 제시했다.",
+            "difference_level": "일부 차이",
+            "contrast_statement": "두 언론사 모두 우려·경계의 태도를 보이지만, 조선일보는 '공공기관 믿은 게 죄'라는 표현을, 한겨레는 '보증금 보호의 빈틈'이라는 표현을 사용하여 제도적 허점을 지적함",
             "publisher_details": [
               {
-                "publisher_id": "mk",
-                "publisher": "매일경제",
-                "summary": "사실관계를 중립적으로 전달하며, '회사에 올인하면, 은퇴 후 고독'이라는 표현을 근거로 중장년층의 가치관 변화를 설명",
-                "evidence": []
+                "publisher_id": "chosun",
+                "publisher": "조선일보",
+                "summary": "사실관계를 중립적으로 전달하며 우려·경계의 태도를 보임",
+                "evidence": [
+                  "“공공기관 믿은 게 죄”"
+                ]
               },
               {
                 "publisher_id": "hani",
                 "publisher": "한겨레",
-                "summary": "사실관계를 중립적으로 전달하며, '중장년층 “부모 부양, 가족·정부·사회가 함께”…10년 새 49%→65%로'라는 제목을 근거로 부모 부양 책임 인식 변화를 설명",
-                "evidence": []
+                "summary": "제도적 허점을 지적하며 우려·경계의 태도를 보임",
+                "evidence": [
+                  "보증금 보호의 빈틈"
+                ]
               }
             ]
           }
         ],
         "similarities": [
-          "40~64세 중장년층의 가치관 변화와 부모 부양 및 가사 책임에 대한 공동 책임 인식 변화"
+          "사회주택 전세사기 피해 청년들이 공공기관을 믿고 계약한 것이 오히려 피해를 키웠다고 호소하며, 피해 상황과 제도적 허점을 지적하고 있음"
         ],
         "key_differences": [
-          "매일경제는 회사 중심 생활 방식을 원인으로, 은퇴 후 고독을 영향으로 강조한 반면, 한겨레는 10년 추이를 배경으로, 가족·정부·사회 공동 책임 인식 증가를 영향으로 강조"
+          "조선일보는 청년들의 피해 호소와 공공기관 신뢰 문제를 강조하는 반면, 한겨레는 토지와 건물의 소유 구조가 보증금 보호에 미치는 영향에 초점을 맞춤"
         ],
-        "comparison_report": "두 언론사 모두 40~64세 중장년층의 가치관 변화와 부모 부양 및 가사 책임에 대한 공동 책임 인식 변화를 보도했으나, 매일경제는 회사 중심 생활 방식을 원인으로 제시하고 은퇴 후 고독을 주요 영향으로 강조한 반면, 한겨레는 10년 사이 49%에서 65%로 증가한 추이를 배경으로 제시하며 가족·정부·사회 공동 책임 인식 증가를 주요 영향으로 강조했다. 두 언론사 모두 중립 설명 태도를 보였으나, 매일경제은 '회사에 올인하면, 은퇴 후 고독'이라는 표현을, 한겨레는 '중장년층 “부모 부양, 가족·정부·사회가 함께”…10년 새 49%→65%로'라는 제목을 근거로 제시했다.",
+        "comparison_report": "두 언론사 모두 사회주택 전세사기 피해 청년들이 공공기관을 믿고 계약한 것이 오히려 피해를 키웠다고 호소하며 제도적 허점을 지적하고 있으나, 조선일보는 피해 청년들의 직접적인 호소와 '공공기관 믿은 게 죄'라는 표현을 통해 신뢰 문제를 강조하는 반면, 한겨레는 '땅은 공공, 건물은 민간'이라는 소유 구조에서 발생하는 보증금 보호의 제도적 빈틈을 지적하며 임차인 피해 가능성에 초점을 맞추고 있다.",
         "source_links": [
           {
-            "publisher_id": "mk",
-            "publisher": "매일경제",
-            "title": "\"회사에 올인하면, 은퇴 후 고독\"… 중장년층 가치관 '일→가정' 변화",
-            "link": "https://www.mk.co.kr/news/economy/12158502",
-            "published_at": "Mon, 21 Sep 2026 17:40:24 +09:00"
+            "publisher_id": "chosun",
+            "publisher": "조선일보",
+            "title": "“공공기관 믿은 게 죄”...사회주택 전세사기 청년들 피해 호소",
+            "link": "https://www.chosun.com/national/national_general/2026/09/22/IELYSU3SEVGO7DEFXLUCOZNFVE/",
+            "published_at": "Tue, 22 Sep 2026 08:21:01 +0000"
           },
           {
             "publisher_id": "hani",
             "publisher": "한겨레",
-            "title": "중장년층 “부모 부양, 가족·정부·사회가 함께”…10년 새 49%→65%로",
-            "link": "https://www.hani.co.kr/arti/economy/economy_general/1278799.html",
+            "title": "땅은 공공, 건물은 민간…사회주택 보증금 보호의 빈틈",
+            "link": "https://www.hani.co.kr/arti/society/society_general/1278971.html",
             "published_at": "발행 시간 정보 없음"
           }
         ],
         "evidence_limit": "기사 제목과 RSS 설명을 기반으로 생성된 언론사별 분석 결과 기준",
         "comparison_status": "success",
-        "compared_at": "2026-09-21T21:46:47.819228+00:00",
+        "compared_at": "2026-09-22T16:24:57.239811+00:00",
         "model": "solar-pro3"
       }
     }
